@@ -13,9 +13,8 @@
     
 
     
-        <meta name="description" content="123
-
-456888888"/>
+        <meta name="description" content="What data types does JavaScript have and how do they differ?
+JavaScript has eight data types: Undefined, Null, Boolean, Number, String, Object, Symbol"/>
     
 
     <!--Author-->
@@ -25,14 +24,13 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="test"/>
+        <meta property="og:title" content="JavaScript Data Types"/>
     
 
     <!--Open Graph Description-->
     
-        <meta property="og:description" content="123
-
-456888888"/>
+        <meta property="og:description" content="What data types does JavaScript have and how do they differ?
+JavaScript has eight data types: Undefined, Null, Boolean, Number, String, Object, Symbol"/>
     
 
     <!--Open Graph Site Name-->
@@ -59,7 +57,7 @@
 
     <!-- Title -->
     
-    <title>test - Tech Blog</title>
+    <title>JavaScript Data Types - Tech Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -171,13 +169,13 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>test</h1>
+                    <h1>JavaScript Data Types</h1>
                     
                     <span class="meta">
                         <!-- Date and Author -->
                         
                         
-                            2025-02-21
+                            2025-02-20
                         
                     </span>
                 </div>
@@ -193,15 +191,76 @@
 
             <!-- Tags and categories -->
            
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/javascript/">#javascript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/javascript/">javascript</a>
+
+                    
+                </div>
+            
 
             <!-- Gallery -->
             
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p>123</p>
-<p><img src="/my-tech-blog/images/test/images.jpg"><br><img src="/my-tech-blog/images/test/images1.jpg"></p>
-<p>456888888</p>
+                <p><strong>What data types does JavaScript have and how do they differ?</strong></p>
+<p>JavaScript has eight data types: Undefined, Null, Boolean, Number, String, Object, Symbol, and BigInt.</p>
+<p>Where Symbol and BigInt are new data types in ES6:</p>
+<ul>
+<li><strong>Symbol</strong> represents a unique and immutable data type created to resolve possible global variable conflicts.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> symbolVar = <span class="title class_">Symbol</span>(<span class="string">&#x27;unique&#x27;</span>); <span class="comment">// symbol</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>BigInt</strong> is a numeric type of data that can represent integers in any precision format. BigInt can be used to safely store and manipulate large integers, even if the Number is outside the range of safe integers that number can represent.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> bigIntVar = <span class="title class_">BigInt</span>(<span class="number">123456789012345678901234567890</span>); <span class="comment">// BigInt</span></span><br></pre></td></tr></table></figure>
+
+<p>These data can be divided into primitive data types and reference data types:</p>
+<ul>
+<li><strong>Stack</strong>: primitive data types (Undefined, Null, Boolean, Number, String)</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> undefinedVar; <span class="comment">// undefined</span></span><br><span class="line"><span class="keyword">let</span> nullVar = <span class="literal">null</span>; <span class="comment">// null</span></span><br><span class="line"><span class="keyword">let</span> boolVar = <span class="literal">true</span>; <span class="comment">// boolean</span></span><br><span class="line"><span class="keyword">let</span> numberVar = <span class="number">42</span>; <span class="comment">// number</span></span><br><span class="line"><span class="keyword">let</span> stringVar = <span class="string">&quot;Hello, world!&quot;</span>; <span class="comment">// string</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>Heap</strong>: Reference data types (objects, arrays, and functions)</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> objectVar = &#123; <span class="attr">name</span>: <span class="string">&quot;Alice&quot;</span> &#125;; <span class="comment">// object</span></span><br><span class="line"><span class="keyword">let</span> arrayVar = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]; <span class="comment">// array</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">funcVar</span>(<span class="params"></span>) &#123; <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Hello&quot;</span>); &#125; <span class="comment">// function</span></span><br></pre></td></tr></table></figure>
+
+<p>The difference between the two types is the storage location:</p>
+<ul>
+<li>The original data type is a simple data segment directly stored in the stack, which occupies a small space and has a fixed size, and belongs to the frequently used data, so it is stored in the stack.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">let</span> b = a;</span><br><span class="line">b = <span class="number">20</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">// 10 (original value in stack is unchanged)</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>An object whose data type is stored in the heap, occupying a large space and having an unfixed size. If stored in the stack, it will affect the performance of the program. The reference data type stores a pointer on the stack that points to the starting address of the entity in the heap. When the interpreter looks for a reference value, it first retrieves its address in the stack and then retrieves the entity from the heap.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj1 = &#123; <span class="attr">value</span>: <span class="number">10</span> &#125;;</span><br><span class="line"><span class="keyword">let</span> obj2 = obj1;</span><br><span class="line">obj2.<span class="property">value</span> = <span class="number">20</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj1.<span class="property">value</span>); <span class="comment">// 20 (both references point to the same object in heap)</span></span><br></pre></td></tr></table></figure>
+
+<p>The concepts of heap and stack exist in data structures and operating system memory:</p>
+<ul>
+<li>In the data structure, the access mode of the data in the stack is first in, last out.</li>
+<li>The heap is a priority queue that is sorted by priority, which can be specified by size.</li>
+</ul>
+<p>In operating systems, memory is divided into stack and heap areas:</p>
+<ul>
+<li>The stack memory is automatically allocated and released by the compiler to store the parameter values of functions and the values of local variables. It operates like a stack in a data structure.</li>
+<li>Heap area memory is usually freed by the developer allocation, and if the developer does not free it, it may be reclaimed by the garbage collection mechanism at the end of the program.</li>
+</ul>
 
 
                 
