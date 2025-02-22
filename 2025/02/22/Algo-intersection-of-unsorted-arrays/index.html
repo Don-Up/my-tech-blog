@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Intersection of unsorted arrays
+This question requires the implementation of a function getIntersection to find the intersection of two arrays (i.e., "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Intersection of unsorted arrays"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Intersection of unsorted arrays
+This question requires the implementation of a function getIntersection to find the intersection of two arrays (i.e., "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Intersection of unsorted arrays - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Intersection of unsorted arrays</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-02-22
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/algorithm/">#algorithm</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/Algorithm/">Algorithm</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h2 id="Intersection-of-unsorted-arrays"><a href="#Intersection-of-unsorted-arrays" class="headerlink" title="Intersection of unsorted arrays"></a><a target="_blank" rel="noopener" href="https://bigfrontend.dev/problem/array-intersect">Intersection of unsorted arrays</a></h2><p><audio src="../../../../../Downloads/2024年12月25日08点26分.mp3"></audio></p>
+<p>This question requires the implementation of a function <code>getIntersection</code> to find the intersection of two arrays (i.e., the elements that exist in both arrays). The input is two arrays, <code>arr1</code> and <code>arr2</code>, which may be unsorted and may contain duplicate elements, and the output is an array containing the elements in the intersection, which is required to be free of duplicates and in any order.</p>
+<p>The solution uses the <code>Set</code> data structure to remove duplicates and find elements efficiently. First, the two arrays are converted to sets <code>a</code> and <code>b</code>, so that duplicates are naturally removed from the elements in the sets. Then, by filtering, each element in set <code>a</code> is checked to see if it exists in set <code>b</code>, retaining those elements that exist in <code>b</code>, and returning the intersection as an array.</p>
+<p>Translated with DeepL.com (free version)</p>
+<h3 id="Implementation-Code"><a href="#Implementation-Code" class="headerlink" title="Implementation Code"></a>Implementation Code</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">any[]</span>&#125; <span class="variable">arr1</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">any[]</span>&#125; <span class="variable">arr2</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns</span> &#123;<span class="type">any[]</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">getIntersection</span>(<span class="params">arr1, arr2</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> a = <span class="keyword">new</span> <span class="title class_">Set</span>(arr1);</span><br><span class="line">  <span class="keyword">let</span> b = <span class="keyword">new</span> <span class="title class_">Set</span>(arr2);</span><br><span class="line">  <span class="keyword">return</span> [...a].<span class="title function_">filter</span>(<span class="function"><span class="params">n</span> =&gt;</span> b.<span class="title function_">has</span>(n));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="Step-by-Step"><a href="#Step-by-Step" class="headerlink" title="Step by Step"></a>Step by Step</h3><hr>
+<h4 id="1-Converting-the-First-Array-to-a-Set"><a href="#1-Converting-the-First-Array-to-a-Set" class="headerlink" title="1. Converting the First Array to a Set"></a>1. Converting the First Array to a Set</h4><p><strong>Concept:</strong><br>To remove duplicates from the first array (<code>arr1</code>), we convert it to a <code>Set</code>. This data structure automatically ensures that each element is unique.</p>
+<p><strong>Code Snippet:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="keyword">new</span> <span class="title class_">Set</span>(arr1);</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="2-Converting-the-Second-Array-to-a-Set"><a href="#2-Converting-the-Second-Array-to-a-Set" class="headerlink" title="2. Converting the Second Array to a Set"></a>2. Converting the Second Array to a Set</h4><p><strong>Concept:</strong><br>Similarly, convert the second array (<code>arr2</code>) to a <code>Set</code> to remove any duplicate elements and allow efficient lookup operations.</p>
+<p><strong>Code Snippet:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> b = <span class="keyword">new</span> <span class="title class_">Set</span>(arr2);</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="3-Finding-the-Intersection-of-the-Two-Sets"><a href="#3-Finding-the-Intersection-of-the-Two-Sets" class="headerlink" title="3. Finding the Intersection of the Two Sets"></a>3. Finding the Intersection of the Two Sets</h4><p><strong>Concept:</strong><br>To find the common elements between the two sets, we iterate over the elements of the first set and use the <code>has</code> method on the second set to check if the element exists there. The filter operation ensures that only elements present in both sets are kept.</p>
+<p><strong>Code Snippet:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> [...a].<span class="title function_">filter</span>(<span class="function"><span class="params">n</span> =&gt;</span> b.<span class="title function_">has</span>(n));</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="Explanation"><a href="#Explanation" class="headerlink" title="Explanation"></a>Explanation</h3><ul>
+<li><strong>Removing Duplicates:</strong><br>By converting the arrays into sets (<code>a</code> and <code>b</code>), all duplicate elements are automatically removed.</li>
+<li><strong>Filtering for Intersection:</strong><br>The spread operator (<code>[...a]</code>) converts the set back into an array. The <code>filter</code> method then creates a new array that includes only the elements that are also present in set <code>b</code>.</li>
+<li><strong>No Order Requirement:</strong><br>Since the output order is not specified, using sets is ideal as it simplifies the logic by focusing solely on the presence of elements, not their order.</li>
+</ul>
+<p>This approach efficiently computes the intersection of the two arrays while ensuring that the result contains no duplicate elements.</p>
+<hr>
+<h2 id="Self-Review"><a href="#Self-Review" class="headerlink" title="Self-Review"></a>Self-Review</h2><ol>
+<li>Remove duplicates by converting <code>arr1</code> and <code>arr2</code> into <code>set1</code> and <code>set2</code>.</li>
+<li>Iterate over <code>set1</code> and filter elements that are not present in <code>set2</code>.</li>
+</ol>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

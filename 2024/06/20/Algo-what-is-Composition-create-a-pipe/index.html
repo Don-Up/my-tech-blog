@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="what is Composition? create a pipe() | BFE.dev - prepare for Front-End job interviews.The problem requires us to implement a pipe function that takes "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What is Composition? create a pipe()"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="what is Composition? create a pipe() | BFE.dev - prepare for Front-End job interviews.The problem requires us to implement a pipe function that takes "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What is Composition? create a pipe() - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What is Composition? create a pipe()</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-06-20
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/algorithm/">#algorithm</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/Algorithm/">Algorithm</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h2 id="what-is-Composition-create-a-pipe-BFE-dev-prepare-for-Front-End-job-interviews"><a href="#what-is-Composition-create-a-pipe-BFE-dev-prepare-for-Front-End-job-interviews" class="headerlink" title="what is Composition? create a pipe() | BFE.dev - prepare for Front-End job interviews."></a><a target="_blank" rel="noopener" href="https://bigfrontend.dev/problem/what-is-composition-create-a-pipe">what is Composition? create a pipe() | BFE.dev - prepare for Front-End job interviews.</a></h2><p>The problem requires us to implement a <code>pipe</code> function that takes an array of functions and returns a new function. This new function, when called with an argument, applies the functions in the array sequentially from left to right.</p>
+<h3 id="Implementation-Code"><a href="#Implementation-Code" class="headerlink" title="Implementation Code"></a><strong>Implementation Code</strong></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">Function[]</span>&#125; <span class="variable">funcs</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns</span> &#123;<span class="type">Function</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">pipe</span>(<span class="params">...funcs</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params">arg</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> funcs.<span class="title function_">reduce</span>(<span class="function">(<span class="params">acc, fn</span>) =&gt;</span> <span class="title function_">fn</span>(acc), arg);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Example Usage:</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">times</span> = (<span class="params">x</span>) =&gt; <span class="function">(<span class="params">y</span>) =&gt;</span> x * y;</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">plus</span> = (<span class="params">x</span>) =&gt; <span class="function">(<span class="params">y</span>) =&gt;</span> x + y;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> fn = <span class="title function_">pipe</span>(<span class="title function_">times</span>(<span class="number">2</span>), <span class="title function_">plus</span>(<span class="number">3</span>), <span class="title function_">times</span>(<span class="number">4</span>));</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">fn</span>(<span class="number">1</span>)); <span class="comment">// Output: ((1 * 2) + 3) * 4 = 20</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="Step-by-Step-Explanation"><a href="#Step-by-Step-Explanation" class="headerlink" title="Step by Step Explanation"></a><strong>Step by Step Explanation</strong></h3><hr>
+<h3 id="1-Understanding-Function-Composition"><a href="#1-Understanding-Function-Composition" class="headerlink" title="1. Understanding Function Composition"></a><strong>1. Understanding Function Composition</strong></h3><p><strong>Concept:</strong><br>Function composition is the process of combining multiple functions into a single function. The output of one function is passed as the input to the next function in sequence.</p>
+<p>In this problem, we are implementing a <strong>left-to-right composition</strong>, meaning that:</p>
+<ul>
+<li>The first function processes the initial input.</li>
+<li>The result of the first function is passed to the second function.</li>
+<li>This continues until all functions are applied.</li>
+</ul>
+<p>For example, if we have:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fn = <span class="title function_">pipe</span>(f1, f2, f3);</span><br><span class="line"><span class="title function_">fn</span>(x); <span class="comment">// Equivalent to f3(f2(f1(x)))</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="2-Using-reduce-for-Function-Application"><a href="#2-Using-reduce-for-Function-Application" class="headerlink" title="2. Using reduce() for Function Application"></a><strong>2. Using <code>reduce()</code> for Function Application</strong></h3><p><strong>Concept:</strong><br>The <code>reduce()</code> method is used to sequentially apply each function in the array to the accumulated result.</p>
+<p><strong>Code Snippet:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> funcs.<span class="title function_">reduce</span>(<span class="function">(<span class="params">acc, fn</span>) =&gt;</span> <span class="title function_">fn</span>(acc), arg);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>acc</code> starts as the initial argument (<code>arg</code>).</li>
+<li>Each function <code>fn</code> is applied to <code>acc</code>, updating it with the new result.</li>
+<li>The final value of <code>acc</code> is returned.</li>
+</ul>
+<hr>
+<h3 id="3-Handling-Multiple-Functions"><a href="#3-Handling-Multiple-Functions" class="headerlink" title="3. Handling Multiple Functions"></a><strong>3. Handling Multiple Functions</strong></h3><p><strong>Concept:</strong><br>The <code>pipe</code> function should accept multiple functions as arguments and return a new composed function.</p>
+<p><strong>Code Snippet:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">pipe</span>(<span class="params">...funcs</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params">arg</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> funcs.<span class="title function_">reduce</span>(<span class="function">(<span class="params">acc, fn</span>) =&gt;</span> <span class="title function_">fn</span>(acc), arg);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>...funcs</code> collects all passed functions into an array.</li>
+<li>The returned function takes an argument (<code>arg</code>) and processes it through the function chain.</li>
+</ul>
+<hr>
+<h3 id="4-Example-Execution"><a href="#4-Example-Execution" class="headerlink" title="4. Example Execution"></a><strong>4. Example Execution</strong></h3><p>Let’s analyze an example step by step:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">times</span> = (<span class="params">x</span>) =&gt; <span class="function">(<span class="params">y</span>) =&gt;</span> x * y;</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">plus</span> = (<span class="params">x</span>) =&gt; <span class="function">(<span class="params">y</span>) =&gt;</span> x + y;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> fn = <span class="title function_">pipe</span>(<span class="title function_">times</span>(<span class="number">2</span>), <span class="title function_">plus</span>(<span class="number">3</span>), <span class="title function_">times</span>(<span class="number">4</span>));</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">fn</span>(<span class="number">1</span>)); </span><br></pre></td></tr></table></figure>
+
+<h4 id="Breakdown-of-Execution"><a href="#Breakdown-of-Execution" class="headerlink" title="Breakdown of Execution:"></a><strong>Breakdown of Execution:</strong></h4><ol>
+<li><code>times(2)(1) → 1 * 2 = 2</code></li>
+<li><code>plus(3)(2) → 2 + 3 = 5</code></li>
+<li><code>times(4)(5) → 5 * 4 = 20</code></li>
+<li><strong>Final Output:</strong> <code>20</code></li>
+</ol>
+<hr>
+<h3 id="Key-Takeaways"><a href="#Key-Takeaways" class="headerlink" title="Key Takeaways"></a><strong>Key Takeaways</strong></h3><ul>
+<li><strong>Function composition</strong> allows chaining multiple functions dynamically.</li>
+<li><strong><code>reduce()</code> is used</strong> to iteratively apply each function to the result of the previous function.</li>
+<li><strong>The approach is flexible</strong>, allowing any number of functions to be passed to <code>pipe</code>.</li>
+</ul>
+<p>This implementation provides an efficient and clean way to compose functions in a <strong>left-to-right</strong> order. 🚀</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

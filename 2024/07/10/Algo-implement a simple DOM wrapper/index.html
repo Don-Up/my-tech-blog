@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="implement a simple DOM wrapper to support method chaining like jQueryThe problem requires us to implement a basic $ function that wraps an HTML elemen"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Implement a simple DOM wrapper"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="implement a simple DOM wrapper to support method chaining like jQueryThe problem requires us to implement a basic $ function that wraps an HTML elemen"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Implement a simple DOM wrapper - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Implement a simple DOM wrapper</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-07-10
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/algorithm/">#algorithm</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/Algorithm/">Algorithm</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h2 id="implement-a-simple-DOM-wrapper-to-support-method-chaining-like-jQuery"><a href="#implement-a-simple-DOM-wrapper-to-support-method-chaining-like-jQuery" class="headerlink" title="implement a simple DOM wrapper to support method chaining like jQuery"></a><a target="_blank" rel="noopener" href="https://bigfrontend.dev/problem/implement-a-simple-DOM-wrapper-to-support-method-chaining-like-jQuery">implement a simple DOM wrapper to support method chaining like jQuery</a></h2><p>The problem requires us to implement a basic <code>$</code> function that wraps an HTML element and provides a <code>css</code> method for setting styles. The key feature is <strong>method chaining</strong>, meaning that calling <code>css</code> should return the wrapper object itself.</p>
+<hr>
+<h3 id="Implementation-Code"><a href="#Implementation-Code" class="headerlink" title="Implementation Code"></a><strong>Implementation Code</strong></h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">HTMLElement</span>&#125; <span class="variable">el</span> - element to be wrapped</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">$</span>(<span class="params">el</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="title function_">css</span>(<span class="params">property, value</span>) &#123;</span><br><span class="line">      el.<span class="property">style</span>[property] = value;</span><br><span class="line">      <span class="keyword">return</span> <span class="variable language_">this</span>; <span class="comment">// Enable chaining</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Example Usage:</span></span><br><span class="line"><span class="keyword">const</span> div = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;div&#x27;</span>);</span><br><span class="line"><span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">appendChild</span>(div);</span><br><span class="line"></span><br><span class="line">$(div)</span><br><span class="line">  .<span class="title function_">css</span>(<span class="string">&#x27;width&#x27;</span>, <span class="string">&#x27;100px&#x27;</span>)</span><br><span class="line">  .<span class="title function_">css</span>(<span class="string">&#x27;height&#x27;</span>, <span class="string">&#x27;100px&#x27;</span>)</span><br><span class="line">  .<span class="title function_">css</span>(<span class="string">&#x27;backgroundColor&#x27;</span>, <span class="string">&#x27;red&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="Step-by-Step-Explanation"><a href="#Step-by-Step-Explanation" class="headerlink" title="Step by Step Explanation"></a><strong>Step by Step Explanation</strong></h3><hr>
+<h3 id="1-Understanding-Method-Chaining"><a href="#1-Understanding-Method-Chaining" class="headerlink" title="1. Understanding Method Chaining"></a><strong>1. Understanding Method Chaining</strong></h3><p><strong>Concept:</strong><br>Method chaining allows multiple method calls on the same object in a single expression.<br>For example, using our implementation:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(div).<span class="title function_">css</span>(<span class="string">&#x27;width&#x27;</span>, <span class="string">&#x27;100px&#x27;</span>).<span class="title function_">css</span>(<span class="string">&#x27;height&#x27;</span>, <span class="string">&#x27;100px&#x27;</span>).<span class="title function_">css</span>(<span class="string">&#x27;backgroundColor&#x27;</span>, <span class="string">&#x27;red&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>Each <code>css</code> call modifies the element’s styles and returns the wrapper object, allowing further method calls.</p>
+<hr>
+<h3 id="2-Creating-the-Wrapper-Object"><a href="#2-Creating-the-Wrapper-Object" class="headerlink" title="2. Creating the Wrapper Object"></a><strong>2. Creating the Wrapper Object</strong></h3><p><strong>Concept:</strong><br>The function <code>$</code> returns an object instead of modifying the element directly. This object contains the <code>css</code> method.</p>
+<p><strong>Code Snippet:</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> &#123;</span><br><span class="line">  <span class="title function_">css</span>(<span class="params">property, value</span>) &#123;</span><br><span class="line">    el.<span class="property">style</span>[property] = value;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>el.style[property] = value;</code> → Dynamically sets the CSS property.</li>
+<li><code>return this;</code> → Returns the wrapper object to allow chaining.</li>
+</ul>
+<hr>
+<h3 id="3-Handling-Dynamic-CSS-Properties"><a href="#3-Handling-Dynamic-CSS-Properties" class="headerlink" title="3. Handling Dynamic CSS Properties"></a><strong>3. Handling Dynamic CSS Properties</strong></h3><p><strong>Concept:</strong><br>CSS properties in JavaScript use camelCase (<code>backgroundColor</code> instead of <code>background-color</code>).<br>The <code>style</code> object allows dynamic property setting using bracket notation:</p>
+<p><strong>Code Snippet:</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">el.<span class="property">style</span>[property] = value;</span><br></pre></td></tr></table></figure>
+
+<p>This ensures that any valid CSS property can be set dynamically.</p>
+<hr>
+<h3 id="4-Example-Execution-Breakdown"><a href="#4-Example-Execution-Breakdown" class="headerlink" title="4. Example Execution Breakdown"></a><strong>4. Example Execution Breakdown</strong></h3><p>Let’s analyze the execution of:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(div)</span><br><span class="line">  .<span class="title function_">css</span>(<span class="string">&#x27;width&#x27;</span>, <span class="string">&#x27;100px&#x27;</span>)</span><br><span class="line">  .<span class="title function_">css</span>(<span class="string">&#x27;height&#x27;</span>, <span class="string">&#x27;100px&#x27;</span>)</span><br><span class="line">  .<span class="title function_">css</span>(<span class="string">&#x27;backgroundColor&#x27;</span>, <span class="string">&#x27;red&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="Step-by-Step-Execution"><a href="#Step-by-Step-Execution" class="headerlink" title="Step-by-Step Execution:"></a><strong>Step-by-Step Execution:</strong></h4><ol>
+<li><code>$(div)</code> → Returns the wrapper object.</li>
+<li><code>.css(&#39;width&#39;, &#39;100px&#39;)</code> → Sets <code>div.style.width = &#39;100px&#39;</code> and returns the wrapper.</li>
+<li><code>.css(&#39;height&#39;, &#39;100px&#39;)</code> → Sets <code>div.style.height = &#39;100px&#39;</code> and returns the wrapper.</li>
+<li><code>.css(&#39;backgroundColor&#39;, &#39;red&#39;)</code> → Sets <code>div.style.backgroundColor = &#39;red&#39;</code> and returns the wrapper.</li>
+</ol>
+<p>The final result is a <code>div</code> element with:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line"><span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line"><span class="attribute">background-color</span>: red;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="Key-Takeaways"><a href="#Key-Takeaways" class="headerlink" title="Key Takeaways"></a><strong>Key Takeaways</strong></h3><ul>
+<li><strong>Method chaining is enabled</strong> by returning <code>this</code> from <code>css()</code>.</li>
+<li><strong>Dynamic property setting</strong> allows flexibility in applying styles.</li>
+<li><strong>Simple and efficient implementation</strong> with <code>O(1)</code> complexity per call.</li>
+</ul>
+<p>This is a fundamental concept behind jQuery-style DOM manipulation, showcasing the power of method chaining in JavaScript. 🚀</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

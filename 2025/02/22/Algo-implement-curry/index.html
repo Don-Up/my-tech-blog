@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Here is the extracted English part from the provided content:
+
+implement curry()This problem requires implementing a curry function that takes a norma"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Implement curry"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Here is the extracted English part from the provided content:
+
+implement curry()This problem requires implementing a curry function that takes a norma"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Implement curry - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Implement curry</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-02-22
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/algorithm/">#algorithm</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/Algorithm/">Algorithm</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>Here is the extracted English part from the provided content:</p>
+<hr>
+<h2 id="implement-curry"><a href="#implement-curry" class="headerlink" title="implement curry()"></a><a target="_blank" rel="noopener" href="https://bigfrontend.dev/problem/implement-curry">implement curry()</a></h2><p>This problem requires implementing a <code>curry</code> function that takes a normal function as an argument and returns a curried version of it. Currying is a technique in functional programming where a function with multiple arguments is transformed into a sequence of nested unary functions. This allows the function to be called by passing arguments step-by-step. The curried function can either be called by passing all arguments at once or by passing some arguments first and the rest later, ultimately returning the same result as the original function.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type"> (...args: any[]) =&gt; any </span>&#125; <span class="variable">fn</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns</span> &#123;<span class="type"> (...args: any[]) =&gt; any </span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">curry</span>(<span class="params">fn</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> <span class="title function_">curryInner</span>(<span class="params">...args</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (args.<span class="property">length</span> &gt;= fn.<span class="property">length</span>) <span class="keyword">return</span> <span class="title function_">fn</span>(...args);</span><br><span class="line">    <span class="keyword">return</span> <span class="function">(<span class="params">...args2</span>) =&gt;</span> <span class="title function_">curryInner</span>(...args, ...args2);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Explanation"><a href="#Explanation" class="headerlink" title="Explanation"></a><strong>Explanation</strong></h3><h4 id="1-What-is-Currying"><a href="#1-What-is-Currying" class="headerlink" title="1. What is Currying?"></a>1. <strong>What is Currying?</strong></h4><p>Currying is a functional programming technique where a function with multiple arguments is transformed into a sequence of nested functions, each accepting a single argument. The curried version of a function can be called in two ways:</p>
+<ul>
+<li>By providing all arguments at once (normal function invocation).</li>
+<li>By providing arguments one (or a few) at a time (partial application).</li>
+</ul>
+<h4 id="Example-of-Currying"><a href="#Example-of-Currying" class="headerlink" title="Example of Currying"></a><strong>Example of Currying</strong></h4><p>Consider a function <code>add</code>:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">add</span>(<span class="params">a, b, c</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> a + b + c;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>A curried version of <code>add</code>:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> curriedAdd = <span class="title function_">curry</span>(add);</span><br><span class="line"></span><br><span class="line"><span class="title function_">curriedAdd</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>); <span class="comment">// Output: 6 (all arguments at once)</span></span><br><span class="line"><span class="title function_">curriedAdd</span>(<span class="number">1</span>)(<span class="number">2</span>, <span class="number">3</span>); <span class="comment">// Output: 6 (partial application)</span></span><br><span class="line"><span class="title function_">curriedAdd</span>(<span class="number">1</span>)(<span class="number">2</span>)(<span class="number">3</span>); <span class="comment">// Output: 6 (one argument at a time)</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="2-How-Does-Currying-Work"><a href="#2-How-Does-Currying-Work" class="headerlink" title="2. How Does Currying Work?"></a>2. <strong>How Does Currying Work?</strong></h4><p>To implement <code>curry</code>, we need to achieve the following:</p>
+<ul>
+<li>Accept a normal function <code>fn</code> as input.</li>
+<li>Return a new function that collects arguments until the number of arguments matches the original function’s arity (i.e., <code>fn.length</code>).</li>
+<li>Once enough arguments are collected, invoke the original function <code>fn</code> with all the collected arguments.</li>
+</ul>
+<hr>
+<h4 id="3-Key-Concepts-for-Implementation"><a href="#3-Key-Concepts-for-Implementation" class="headerlink" title="3. Key Concepts for Implementation"></a>3. <strong>Key Concepts for Implementation</strong></h4><ol>
+<li><p><strong>Function Arity</strong>:</p>
+<ul>
+<li><code>fn.length</code> gives the number of parameters a function expects.</li>
+<li>For example:<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">add</span>(<span class="params">a, b, c</span>) &#123;&#125;</span><br><span class="line">add.<span class="property">length</span>; <span class="comment">// 3</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>Using Rest Parameters</strong>:</p>
+<ul>
+<li>Rest parameters allow us to collect an arbitrary number of arguments.</li>
+</ul>
+</li>
+<li><p><strong>Recursion</strong>:</p>
+<ul>
+<li>If the number of provided arguments is less than <code>fn.length</code>, return a new function that collects additional arguments.</li>
+<li>Combine the previously collected arguments with newly provided arguments and continue the process.</li>
+</ul>
+</li>
+<li><p><strong>Base Case</strong>:</p>
+<ul>
+<li>Once the number of collected arguments is equal to or greater than <code>fn.length</code>, invoke the original function <code>fn</code> with the collected arguments.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h4 id="4-Code-Implementation"><a href="#4-Code-Implementation" class="headerlink" title="4. Code Implementation"></a>4. <strong>Code Implementation</strong></h4><p>Here’s the implementation of the <code>curry</code> function:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Curries a function</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type"> (...args: any[]) =&gt; any </span>&#125; <span class="variable">fn</span> - The function to curry</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns</span> &#123;<span class="type"> (...args: any[]) =&gt; any </span>&#125; - The curried function</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">curry</span>(<span class="params">fn</span>) &#123;</span><br><span class="line">  <span class="comment">// Inner function to handle recursion and argument collection</span></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> <span class="title function_">curryInner</span>(<span class="params">...args</span>) &#123;</span><br><span class="line">    <span class="comment">// Base case: If we have enough arguments, call the original function</span></span><br><span class="line">    <span class="keyword">if</span> (args.<span class="property">length</span> &gt;= fn.<span class="property">length</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="title function_">fn</span>(...args);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// Otherwise, return a new function that collects more arguments</span></span><br><span class="line">    <span class="keyword">return</span> <span class="function">(<span class="params">...args2</span>) =&gt;</span> <span class="title function_">curryInner</span>(...args, ...args2);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="5-How-It-Works"><a href="#5-How-It-Works" class="headerlink" title="5. How It Works"></a>5. <strong>How It Works</strong></h4><p>Let’s break it down step by step:</p>
+<p><strong>1. Outer Function</strong>:</p>
+<ul>
+<li>The <code>curry</code> function takes a function <code>fn</code> as input and returns the inner function <code>curryInner</code>.</li>
+</ul>
+<p><strong>2. Inner Function</strong>:</p>
+<ul>
+<li><code>curryInner</code> handles argument collection. It:<ul>
+<li>Checks if the number of collected arguments (<code>args</code>) is greater than or equal to <code>fn.length</code>.</li>
+<li>If yes, it invokes <code>fn</code> with all collected arguments.</li>
+<li>Otherwise, it returns a new function that collects additional arguments.</li>
+</ul>
+</li>
+</ul>
+<p><strong>3. Recursive Argument Collection</strong>:</p>
+<ul>
+<li>The returned function (<code>(...args2) =&gt; curryInner(...args, ...args2)</code>) combines previously collected arguments (<code>args</code>) with newly provided arguments (<code>args2</code>) and recursively calls <code>curryInner</code>.</li>
+</ul>
+<hr>
+<h4 id="6-Examples"><a href="#6-Examples" class="headerlink" title="6. Examples"></a>6. <strong>Examples</strong></h4><h5 id="Example-1-Simple-Addition-Function"><a href="#Example-1-Simple-Addition-Function" class="headerlink" title="Example 1: Simple Addition Function"></a>Example 1: Simple Addition Function</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">add</span>(<span class="params">a, b, c</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> a + b + c;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> curriedAdd = <span class="title function_">curry</span>(add);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">curriedAdd</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)); <span class="comment">// Output: 6</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">curriedAdd</span>(<span class="number">1</span>)(<span class="number">2</span>, <span class="number">3</span>)); <span class="comment">// Output: 6</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">curriedAdd</span>(<span class="number">1</span>)(<span class="number">2</span>)(<span class="number">3</span>)); <span class="comment">// Output: 6</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Explanation</strong>:</p>
+<ul>
+<li>The curried version collects arguments until there are 3 arguments (since <code>add.length === 3</code>).</li>
+<li>Once all arguments are collected, it invokes <code>add(1, 2, 3)</code>.</li>
+</ul>
+<hr>
+<h5 id="Example-2-Logging-Function-with-Multiple-Arguments"><a href="#Example-2-Logging-Function-with-Multiple-Arguments" class="headerlink" title="Example 2: Logging Function with Multiple Arguments"></a>Example 2: Logging Function with Multiple Arguments</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">log</span>(<span class="params">a, b, c, d</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;a&#125;</span> <span class="subst">$&#123;b&#125;</span> <span class="subst">$&#123;c&#125;</span> <span class="subst">$&#123;d&#125;</span>`</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> curriedLog = <span class="title function_">curry</span>(log);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">curriedLog</span>(<span class="string">&#x27;Hello&#x27;</span>)(<span class="string">&#x27;World&#x27;</span>)(<span class="string">&#x27;from&#x27;</span>)(<span class="string">&#x27;Currying!&#x27;</span>)); <span class="comment">// Output: &quot;Hello World from Currying!&quot;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">curriedLog</span>(<span class="string">&#x27;Hello&#x27;</span>, <span class="string">&#x27;World&#x27;</span>)(<span class="string">&#x27;from&#x27;</span>, <span class="string">&#x27;Currying!&#x27;</span>)); <span class="comment">// Output: &quot;Hello World from Currying!&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Explanation</strong>:</p>
+<ul>
+<li>The curried function continues collecting arguments until all 4 arguments are provided.</li>
+</ul>
+<hr>
+<h5 id="Example-3-Edge-Case-with-Zero-Arguments"><a href="#Example-3-Edge-Case-with-Zero-Arguments" class="headerlink" title="Example 3: Edge Case with Zero Arguments"></a>Example 3: Edge Case with Zero Arguments</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">noArgs</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">&#x27;No arguments&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> curriedNoArgs = <span class="title function_">curry</span>(noArgs);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">curriedNoArgs</span>()); <span class="comment">// Output: &quot;No arguments&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Explanation</strong>:</p>
+<ul>
+<li>If the function takes no arguments (<code>fn.length === 0</code>), it immediately invokes the function without waiting.</li>
+</ul>
+<hr>
+<h4 id="7-Complexity-Analysis"><a href="#7-Complexity-Analysis" class="headerlink" title="7. Complexity Analysis"></a>7. <strong>Complexity Analysis</strong></h4><ol>
+<li><p><strong>Time Complexity</strong>:</p>
+<ul>
+<li>Argument collection involves constant-time operations, and invoking the function is dependent on the function itself.</li>
+<li>Hence, the time complexity is <strong>O(1)</strong> for each level of recursion plus the time to execute the original function.</li>
+</ul>
+</li>
+<li><p><strong>Space Complexity</strong>:</p>
+<ul>
+<li>The recursive calls create a new function at each step, but since each function only holds references to arguments, the space complexity is <strong>O(n)</strong>, where <code>n</code> is the number of arguments collected.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h4 id="8-Summary"><a href="#8-Summary" class="headerlink" title="8. Summary"></a>8. <strong>Summary</strong></h4><ul>
+<li><p><strong>What It Does</strong>:</p>
+<ul>
+<li>Converts a regular function into a curried version that can accept arguments incrementally.</li>
+<li>Supports both full application (all arguments at once) and partial application (one or more arguments at a time).</li>
+</ul>
+</li>
+<li><p><strong>Key Techniques</strong>:</p>
+<ul>
+<li>Use recursion to collect arguments incrementally.</li>
+<li>Use <code>fn.length</code> to determine when enough arguments have been collected.</li>
+</ul>
+</li>
+<li><p><strong>Advantages</strong>:</p>
+<ul>
+<li>Promotes function reusability and partial application.</li>
+<li>Simplifies handling of complex functional logic in a modular manner.</li>
+</ul>
+</li>
+</ul>
+<p>This implementation is a clean and efficient way to handle currying in JavaScript!</p>
+<hr>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

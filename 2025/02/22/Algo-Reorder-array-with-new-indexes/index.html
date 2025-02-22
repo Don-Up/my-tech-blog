@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Reorder array with new indexesThis problem requires the array items to be rearranged according to an index array newOrder such that items[i] is moved "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Reorder array with new indexes"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Reorder array with new indexesThis problem requires the array items to be rearranged according to an index array newOrder such that items[i] is moved "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Reorder array with new indexes - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Reorder array with new indexes</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-02-22
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/algorithm/">#algorithm</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/Algorithm/">Algorithm</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h2 id="Reorder-array-with-new-indexes"><a href="#Reorder-array-with-new-indexes" class="headerlink" title="Reorder array with new indexes"></a><a target="_blank" rel="noopener" href="https://bigfrontend.dev/problem/reorder-array-with-new-indexes">Reorder array with new indexes</a></h2><p>This problem requires the array <code>items</code> to be rearranged according to an index array <code>newOrder</code> such that <code>items[i]</code> is moved to the new index location specified by <code>newOrder[i]</code>. The input consists of two arrays: <code>items</code> is the array to be reordered, and <code>newOrder</code> is the target index array, both of the same length, and the input is always valid (no boundary cases need to be handled). The function does not return the result, but directly modifies’ items’ in place. For example, <code>items = [&#39; A &#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;, &#39;E&#39;, &#39;F&#39;]</code> and <code>newOrder = [1, 5, 4, 3, 2, 0]</code>, After sorting, ‘items’ strain to’ [‘F’, ‘A’, ‘E’, ‘D’, ‘C’, ‘B’] ‘.</p>
+<h3 id="Implementation-Code"><a href="#Implementation-Code" class="headerlink" title="Implementation Code"></a>Implementation Code</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type"> any[] </span>&#125; <span class="variable">items</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type"> number[] </span>&#125; <span class="variable">newOrder</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns</span> &#123;<span class="type">void</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">sort</span>(<span class="params">items, newOrder</span>) &#123;</span><br><span class="line">  <span class="comment">// keep swapping until all elements are updated</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; newOrder.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">while</span> (newOrder[i] !== i) &#123;</span><br><span class="line">      <span class="keyword">const</span> to = newOrder[i];</span><br><span class="line">      [newOrder[i], newOrder[to]] = [newOrder[to], newOrder[i]];</span><br><span class="line">      [items[i], items[to]] = [items[to], items[i]];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Step-by-Step"><a href="#Step-by-Step" class="headerlink" title="Step by Step"></a>Step by Step</h3><p><strong>Concept:</strong><br>The goal is to reorder the array <code>items</code> based on the target indices provided by the <code>newOrder</code> array. For each index <code>i</code>, the element <code>items[i]</code> should be moved to index <code>newOrder[i]</code>. Both arrays have the same length, and the input is guaranteed to be valid.</p>
+<p><strong>Code Snippet:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Given:</span></span><br><span class="line"><span class="comment">// items = [&#x27;A&#x27;, &#x27;B&#x27;, &#x27;C&#x27;, &#x27;D&#x27;, &#x27;E&#x27;, &#x27;F&#x27;]</span></span><br><span class="line"><span class="comment">// newOrder = [1, 5, 4, 3, 2, 0]</span></span><br><span class="line"><span class="comment">// After sorting, items should be: [&#x27;F&#x27;, &#x27;A&#x27;, &#x27;E&#x27;, &#x27;D&#x27;, &#x27;C&#x27;, &#x27;B&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="2-Iterating-Through-the-newOrder-Array"><a href="#2-Iterating-Through-the-newOrder-Array" class="headerlink" title="2. Iterating Through the newOrder Array"></a>2. Iterating Through the newOrder Array</h4><p><strong>Concept:</strong><br>The function iterates through each index of the <code>newOrder</code> array. For each index <code>i</code>, if the value at <code>newOrder[i]</code> does not match <code>i</code>, it means that the element at <code>items[i]</code> is not in its correct position according to <code>newOrder</code>.</p>
+<p><strong>Code Snippet:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; newOrder.<span class="property">length</span>; i++) &#123;</span><br><span class="line">  <span class="comment">// Check if the element at index i is already in the correct position.</span></span><br><span class="line">  <span class="keyword">while</span> (newOrder[i] !== i) &#123;</span><br><span class="line">    <span class="comment">// If not, we need to swap.</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="3-Swapping-the-newOrder-Array"><a href="#3-Swapping-the-newOrder-Array" class="headerlink" title="3. Swapping the newOrder Array"></a>3. Swapping the newOrder Array</h4><p><strong>Concept:</strong><br>To reflect the change in positions, the algorithm swaps the values in the <code>newOrder</code> array. This operation ensures that once an element is moved to its correct position, the <code>newOrder</code> array is updated accordingly.</p>
+<p><strong>Code Snippet:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (newOrder[i] !== i) &#123;</span><br><span class="line">  <span class="keyword">const</span> to = newOrder[i];</span><br><span class="line">  <span class="comment">// Swap the indices in newOrder to move the target index into place.</span></span><br><span class="line">  [newOrder[i], newOrder[to]] = [newOrder[to], newOrder[i]];</span><br><span class="line">  <span class="comment">// Continue swapping until newOrder[i] equals i.</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="4-Swapping-the-Items-Array"><a href="#4-Swapping-the-Items-Array" class="headerlink" title="4. Swapping the Items Array"></a>4. Swapping the Items Array</h4><p><strong>Concept:</strong><br>Simultaneously, the corresponding swap is performed on the <code>items</code> array. This ensures that as the indices in <code>newOrder</code> are corrected, the elements in <code>items</code> are also moved to their correct target positions.</p>
+<p><strong>Code Snippet:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (newOrder[i] !== i) &#123;</span><br><span class="line">  <span class="keyword">const</span> to = newOrder[i];</span><br><span class="line">  <span class="comment">// Swap the values in newOrder.</span></span><br><span class="line">  [newOrder[i], newOrder[to]] = [newOrder[to], newOrder[i]];</span><br><span class="line">  <span class="comment">// Swap the values in items to mirror the change.</span></span><br><span class="line">  [items[i], items[to]] = [items[to], items[i]];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="Practical-Example"><a href="#Practical-Example" class="headerlink" title="Practical Example"></a>Practical Example</h3><p><strong>Given:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> items = [<span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>, <span class="string">&#x27;D&#x27;</span>, <span class="string">&#x27;E&#x27;</span>, <span class="string">&#x27;F&#x27;</span>];</span><br><span class="line"><span class="keyword">let</span> newOrder = [<span class="number">1</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">0</span>];</span><br></pre></td></tr></table></figure>
+
+<p><strong>Resolution Process:</strong></p>
+<ol>
+<li>Iteration:<ul>
+<li>Start with <code>i = 0</code>, <code>newOrder[0]</code> is <code>1</code> (not <code>0</code>), so enter the <code>while</code> loop.</li>
+</ul>
+</li>
+<li>Swapping:<ul>
+<li>Swap <code>newOrder[0]</code> with <code>newOrder[1]</code> and <code>items[0]</code> with <code>items[1]</code>.</li>
+<li>Continue this process until <code>newOrder[0]</code> becomes <code>0</code>.</li>
+</ul>
+</li>
+<li>Final Order:<ul>
+<li>After processing all indices, <code>items</code> is rearranged to <code>[&#39;F&#39;, &#39;A&#39;, &#39;E&#39;, &#39;D&#39;, &#39;C&#39;, &#39;B&#39;]</code> as required.</li>
+</ul>
+</li>
+</ol>
+<p>This step-by-step approach ensures that each element in <code>items</code> is moved to its target position based on the <code>newOrder</code> array through in-place swaps.</p>
+<hr>
+<h2 id="Self-Review"><a href="#Self-Review" class="headerlink" title="Self-Review"></a>Self-Review</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">items = [<span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>, <span class="string">&#x27;D&#x27;</span>, <span class="string">&#x27;E&#x27;</span>, <span class="string">&#x27;F&#x27;</span>];</span><br><span class="line">newOrder = [<span class="number">1</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">0</span>];</span><br></pre></td></tr></table></figure>
+
+<h3 id="Understanding-the-Meaning-of-newOrder"><a href="#Understanding-the-Meaning-of-newOrder" class="headerlink" title="Understanding the Meaning of newOrder"></a>Understanding the Meaning of <code>newOrder</code></h3><ul>
+<li><strong>1</strong>: Indicates that the first element (“A”) should move to index 1.</li>
+<li><strong>5</strong>: Indicates that the second element (“B”) should move to index 5.</li>
+<li><strong>…</strong> (Continue similarly for the rest.)</li>
+</ul>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
+<li>Iterate over <code>newOrder</code>.</li>
+<li>Retrieve the variable <code>to</code> (<code>newOrder[i]</code>), which represents the target index for the current element.</li>
+<li><strong>If <code>to</code> is not equal to <code>i</code></strong>, swap <code>i</code> and <code>to</code> in both <code>newOrder</code> and <code>items</code>. (<strong>Don’t forget to append a semicolon at the end.</strong>)</li>
+</ol>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
