@@ -193,6 +193,25 @@ PostgreSQL: A powerful, open-s"/>
 
             <!-- Tags and categories -->
            
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/Prisma/">#Prisma</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/Next-js/">Next.js</a>
+
+                    
+                </div>
+            
 
             <!-- Gallery -->
             
@@ -267,6 +286,8 @@ PostgreSQL: A powerful, open-s"/>
 <h4 id="Additional-Step-Generate-Prisma-Client"><a href="#Additional-Step-Generate-Prisma-Client" class="headerlink" title="Additional Step: Generate Prisma Client"></a>Additional Step: Generate Prisma Client</h4><p>After applying the migration, you should generate the Prisma Client to reflect the changes:</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx prisma generate</span><br></pre></td></tr></table></figure>
 
+<p>This will update the Prisma Client with the new <code>Event</code> model.</p>
+<p>By following these steps, you will have successfully updated your Prisma schema and synchronized the changes with your database.</p>
 <hr>
 <h2 id="Step-5-Set-Up-Prisma-Client"><a href="#Step-5-Set-Up-Prisma-Client" class="headerlink" title="Step 5: Set Up Prisma Client"></a>Step 5: Set Up Prisma Client</h2><p>To use Prisma in your app, create a reusable Prisma Client instance.</p>
 <p>Create <code>lib/prisma.js</code> (or <code>lib/prisma.ts</code> if using TypeScript):</p>
