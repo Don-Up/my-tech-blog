@@ -13,7 +13,7 @@
     
 
     
-        <meta name="description" content="Certainly! Below is a draft for a tech blog post that combines the page.js and products.json files to explain how to implement Static Site Generation "/>
+        <meta name="description" content="Static Site Generation (SSG) is a powerful technique for building fast and scalable web applications. It involves generating HTML pages at build time,"/>
     
 
     <!--Author-->
@@ -28,7 +28,7 @@
 
     <!--Open Graph Description-->
     
-        <meta property="og:description" content="Certainly! Below is a draft for a tech blog post that combines the page.js and products.json files to explain how to implement Static Site Generation "/>
+        <meta property="og:description" content="Static Site Generation (SSG) is a powerful technique for building fast and scalable web applications. It involves generating HTML pages at build time,"/>
     
 
     <!--Open Graph Site Name-->
@@ -214,9 +214,7 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p>Certainly! Below is a draft for a tech blog post that combines the <code>page.js</code> and <code>products.json</code> files to explain how to implement Static Site Generation (SSG) in a React application.</p>
-<hr>
-<p>Static Site Generation (SSG) is a powerful technique for building fast and scalable web applications. It involves generating HTML pages at build time, which can then be served to users quickly and efficiently. In this blog post, we will walk through the process of implementing SSG in a React application using Next.js, a popular React framework that supports SSG out of the box.</p>
+                <p>Static Site Generation (SSG) is a powerful technique for building fast and scalable web applications. It involves generating HTML pages at build time, which can then be served to users quickly and efficiently. In this blog post, we will walk through the process of implementing SSG in a React application using Next.js, a popular React framework that supports SSG out of the box.</p>
 <h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>We will create a simple product listing page that fetches product data from a JSON file and generates static pages at build time. This example will demonstrate how to use Next.js’s <code>getStaticProps</code> function to fetch data and generate static pages.</p>
 <h2 id="Project-Structure"><a href="#Project-Structure" class="headerlink" title="Project Structure"></a>Project Structure</h2><p>Here is the structure of our project:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">routing-rendering/</span><br><span class="line">├── app/</span><br><span class="line">│   └── page.js</span><br><span class="line">├── data/</span><br><span class="line">│   └── products.json</span><br><span class="line">└── package.json</span><br></pre></td></tr></table></figure>
@@ -240,12 +238,7 @@
 <li><strong>getProducts Function</strong>: This function reads the <code>products.json</code> file and parses the JSON data. It uses the <code>cache</code> function from <code>react</code> to cache the results for better performance.</li>
 <li><strong>HomePage Component</strong>: This is an asynchronous component that fetches the products using <code>getProducts</code> and renders them as a list.</li>
 </ol>
-<h2 id="Step-4-Build-and-Run-Your-Application"><a href="#Step-4-Build-and-Run-Your-Application" class="headerlink" title="Step 4: Build and Run Your Application"></a>Step 4: Build and Run Your Application</h2><p>To generate the static pages, you need to build your application. Run the following command:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run build</span><br></pre></td></tr></table></figure>
 
-
-<p>This command will generate static pages in the <code>.next</code> directory. You can then start your application in production mode:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm start</span><br></pre></td></tr></table></figure>
 
                 
             </div>
