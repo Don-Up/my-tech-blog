@@ -253,6 +253,20 @@ PostgreSQL: A powerful, open-s"/>
 <li>Creates the Event table in your PostgreSQL database.</li>
 <li>Generates the Prisma Client in <code>node_modules/@prisma/client</code>.</li>
 </ul>
+<p>or:</p>
+<h4 id="Step-1-Create-a-Migration"><a href="#Step-1-Create-a-Migration" class="headerlink" title="Step 1: Create a Migration"></a>Step 1: Create a Migration</h4><p>Run the following command to create a migration:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx prisma migrate dev --name add_event_model</span><br></pre></td></tr></table></figure>
+
+
+<p>This command will create a new migration file in the <code>prisma/migrations</code> directory and apply it to your database.</p>
+<h4 id="Step-2-Apply-the-Migration"><a href="#Step-2-Apply-the-Migration" class="headerlink" title="Step 2: Apply the Migration"></a>Step 2: Apply the Migration</h4><p>If you have already created the migration, you can apply it using:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx prisma migrate dev</span><br></pre></td></tr></table></figure>
+
+
+<p>This command will apply the migration to your database and update the Prisma Client.</p>
+<h4 id="Additional-Step-Generate-Prisma-Client"><a href="#Additional-Step-Generate-Prisma-Client" class="headerlink" title="Additional Step: Generate Prisma Client"></a>Additional Step: Generate Prisma Client</h4><p>After applying the migration, you should generate the Prisma Client to reflect the changes:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx prisma generate</span><br></pre></td></tr></table></figure>
+
 <hr>
 <h2 id="Step-5-Set-Up-Prisma-Client"><a href="#Step-5-Set-Up-Prisma-Client" class="headerlink" title="Step 5: Set Up Prisma Client"></a>Step 5: Set Up Prisma Client</h2><p>To use Prisma in your app, create a reusable Prisma Client instance.</p>
 <p>Create <code>lib/prisma.js</code> (or <code>lib/prisma.ts</code> if using TypeScript):</p>
