@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="API Routes in Next.js allow you to create backend endpoints directly inside your Next.js application. These routes run on the server and can handle re"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="API Routes in Next.js"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="API Routes in Next.js allow you to create backend endpoints directly inside your Next.js application. These routes run on the server and can handle re"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>API Routes in Next.js - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>API Routes in Next.js</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-01-03
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/API-Routes/">#API-Routes</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/Next-js/">Next.js</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>API Routes in Next.js allow you to <strong>create backend endpoints</strong> directly inside your Next.js application. These routes run on the <strong>server</strong> and can handle requests like a traditional API.</p>
+<hr>
+<h2 id="1-How-to-Create-an-API-Route"><a href="#1-How-to-Create-an-API-Route" class="headerlink" title="1. How to Create an API Route"></a><strong>1. How to Create an API Route</strong></h2><p>API routes are stored inside the <strong><code>/pages/api/</code></strong> directory (for the <strong>Pages Router</strong>).</p>
+<h3 id="Example-Create-pages-api-hello-js"><a href="#Example-Create-pages-api-hello-js" class="headerlink" title="Example: Create /pages/api/hello.js"></a><strong>Example: Create <code>/pages/api/hello.js</code></strong></h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">handler</span>(<span class="params">req, res</span>) &#123;</span><br><span class="line">  res.<span class="title function_">status</span>(<span class="number">200</span>).<span class="title function_">json</span>(&#123; <span class="attr">message</span>: <span class="string">&quot;Hello from Next.js API!&quot;</span> &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>🔹 This creates an API route at <strong><code>/api/hello</code></strong>.<br>🔹 When you visit <strong><code>http://localhost:3000/api/hello</code></strong>, it returns:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span> <span class="attr">&quot;message&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Hello from Next.js API!&quot;</span> <span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="2-Handling-Different-HTTP-Methods"><a href="#2-Handling-Different-HTTP-Methods" class="headerlink" title="2. Handling Different HTTP Methods"></a><strong>2. Handling Different HTTP Methods</strong></h2><p>API routes support <strong>GET, POST, PUT, DELETE, etc.</strong>.<br>Use <code>req.method</code> to check the request type.</p>
+<h3 id="Example-Handling-GET-POST-Requests"><a href="#Example-Handling-GET-POST-Requests" class="headerlink" title="Example: Handling GET &amp; POST Requests"></a><strong>Example: Handling GET &amp; POST Requests</strong></h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">handler</span>(<span class="params">req, res</span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (req.<span class="property">method</span> === <span class="string">&quot;GET&quot;</span>) &#123;</span><br><span class="line">    res.<span class="title function_">status</span>(<span class="number">200</span>).<span class="title function_">json</span>(&#123; <span class="attr">message</span>: <span class="string">&quot;This is a GET request.&quot;</span> &#125;);</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (req.<span class="property">method</span> === <span class="string">&quot;POST&quot;</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> data = req.<span class="property">body</span>; <span class="comment">// Get data from request body</span></span><br><span class="line">    res.<span class="title function_">status</span>(<span class="number">201</span>).<span class="title function_">json</span>(&#123; <span class="attr">message</span>: <span class="string">&quot;Data received!&quot;</span>, data &#125;);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    res.<span class="title function_">status</span>(<span class="number">405</span>).<span class="title function_">json</span>(&#123; <span class="attr">message</span>: <span class="string">&quot;Method Not Allowed&quot;</span> &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>🔹 <strong>GET request:</strong> Returns a simple message.<br>🔹 <strong>POST request:</strong> Accepts JSON data in <code>req.body</code>.<br>🔹 <strong>Returns <code>405</code></strong> if the HTTP method is not supported.</p>
+<hr>
+<h2 id="3-Handling-Query-Parameters"><a href="#3-Handling-Query-Parameters" class="headerlink" title="3. Handling Query Parameters"></a><strong>3. Handling Query Parameters</strong></h2><p>You can retrieve query parameters using <strong><code>req.query</code></strong>.</p>
+<h3 id="Example-pages-api-user-js"><a href="#Example-pages-api-user-js" class="headerlink" title="Example: /pages/api/user.js"></a><strong>Example: <code>/pages/api/user.js</code></strong></h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">handler</span>(<span class="params">req, res</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; id &#125; = req.<span class="property">query</span>; <span class="comment">// Get query param ?id=123</span></span><br><span class="line">  res.<span class="title function_">status</span>(<span class="number">200</span>).<span class="title function_">json</span>(&#123; <span class="attr">userId</span>: id || <span class="string">&quot;No ID provided&quot;</span> &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>🔹 <strong>Request:</strong> <code>GET /api/user?id=123</code><br>🔹 <strong>Response:</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span> <span class="attr">&quot;userId&quot;</span><span class="punctuation">:</span> <span class="string">&quot;123&quot;</span> <span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="4-Handling-Dynamic-API-Routes"><a href="#4-Handling-Dynamic-API-Routes" class="headerlink" title="4. Handling Dynamic API Routes"></a><strong>4. Handling Dynamic API Routes</strong></h2><p>For dynamic routes, create files inside <code>/pages/api/[param].js</code>.</p>
+<h3 id="Example-pages-api-user-id-js"><a href="#Example-pages-api-user-id-js" class="headerlink" title="Example: /pages/api/user/[id].js"></a><strong>Example: <code>/pages/api/user/[id].js</code></strong></h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">handler</span>(<span class="params">req, res</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; id &#125; = req.<span class="property">query</span>; <span class="comment">// Get dynamic route param</span></span><br><span class="line">  res.<span class="title function_">status</span>(<span class="number">200</span>).<span class="title function_">json</span>(&#123; <span class="attr">userId</span>: id &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>🔹 <strong>Request:</strong> <code>GET /api/user/42</code><br>🔹 <strong>Response:</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span> <span class="attr">&quot;userId&quot;</span><span class="punctuation">:</span> <span class="string">&quot;42&quot;</span> <span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="5-Using-API-Routes-in-a-Frontend-Component"><a href="#5-Using-API-Routes-in-a-Frontend-Component" class="headerlink" title="5. Using API Routes in a Frontend Component"></a><strong>5. Using API Routes in a Frontend Component</strong></h2><p>You can <strong>fetch API routes</strong> in your React components using <code>fetch()</code>.</p>
+<h3 id="Example-Fetching-API-Data-in-a-Component"><a href="#Example-Fetching-API-Data-in-a-Component" class="headerlink" title="Example: Fetching API Data in a Component"></a><strong>Example: Fetching API Data in a Component</strong></h3><figure class="highlight tsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useEffect, useState &#125; <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">Home</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [data, setData] = <span class="title function_">useState</span>(<span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">  <span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="title function_">fetch</span>(<span class="string">&quot;/api/hello&quot;</span>) <span class="comment">// Call API</span></span><br><span class="line">      .<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> res.<span class="title function_">json</span>())</span><br><span class="line">      .<span class="title function_">then</span>(<span class="function">(<span class="params">data</span>) =&gt;</span> <span class="title function_">setData</span>(data.<span class="property">message</span>));</span><br><span class="line">  &#125;, []);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;data || &quot;Loading...&quot;&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>🔹 Fetches data from <strong><code>/api/hello</code></strong> and displays it.</p>
+<hr>
+<h2 id="6-API-Routes-Do-NOT-Work-in-the-App-Router-app"><a href="#6-API-Routes-Do-NOT-Work-in-the-App-Router-app" class="headerlink" title="6. API Routes Do NOT Work in the App Router (app/)"></a><strong>6. API Routes Do NOT Work in the App Router (<code>app/</code>)</strong></h2><ul>
+<li><strong>API Routes (<code>/pages/api/</code>) work only in the Pages Router.</strong></li>
+<li>If you’re using the <strong>App Router (<code>app/</code> directory)</strong>, use <strong>Route Handlers (<code>app/api/route.ts</code>)</strong> instead.</li>
+</ul>
+<p>🔹 <strong>For App Router:</strong><br>Use a <strong>Route Handler</strong> like this:</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">GET</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="title class_">Response</span>.<span class="title function_">json</span>(&#123; <span class="attr">message</span>: <span class="string">&quot;Hello from API!&quot;</span> &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Summary-Why-Use-API-Routes"><a href="#Summary-Why-Use-API-Routes" class="headerlink" title="Summary: Why Use API Routes?"></a><strong>Summary: Why Use API Routes?</strong></h2><table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>API Routes (<code>/pages/api/</code>)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Server-side code (backend logic)</strong></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>Handles GET, POST, PUT, DELETE</strong></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>Access query params (<code>req.query</code>)</strong></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>Dynamic API routes (<code>/api/user/[id]</code>)</strong></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>Works in Pages Router (<code>pages/</code>)</strong></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>Works in App Router (<code>app/</code>)</strong></td>
+<td>❌ No (Use Route Handlers instead)</td>
+</tr>
+</tbody></table>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Nest.js is a progressive Node.js framework for building efficient, scalable, and maintainable server-side applications. A well-organized project struc"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Nest.js Project Structure and Naming Conventions"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Nest.js is a progressive Node.js framework for building efficient, scalable, and maintainable server-side applications. A well-organized project struc"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Nest.js Project Structure and Naming Conventions - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Nest.js Project Structure and Naming Conventions</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-09-07
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/Nest-js/">#Nest.js</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/Nest-js/">Nest.js</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>Nest.js is a progressive Node.js framework for building efficient, scalable, and maintainable server-side applications. A well-organized project structure and consistent naming conventions play a crucial role in maintaining readability and scalability. In this blog, we will explore the recommended Nest.js project structure and best practices for naming conventions.</p>
+<h2 id="Recommended-Project-Structure"><a href="#Recommended-Project-Structure" class="headerlink" title="Recommended Project Structure"></a>Recommended Project Structure</h2><p>A typical Nest.js project follows a modular architecture, ensuring separation of concerns and code reusability.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">my-nest-project/</span><br><span class="line">|-- src/</span><br><span class="line">|   |-- modules/</span><br><span class="line">|   |   |-- users/</span><br><span class="line">|   |   |   |-- dto/</span><br><span class="line">|   |   |   |   |-- create-user.dto.ts</span><br><span class="line">|   |   |   |   |-- update-user.dto.ts</span><br><span class="line">|   |   |   |-- entities/</span><br><span class="line">|   |   |   |   |-- user.entity.ts</span><br><span class="line">|   |   |   |-- users.controller.ts</span><br><span class="line">|   |   |   |-- users.service.ts</span><br><span class="line">|   |   |   |-- users.module.ts</span><br><span class="line">|   |-- common/</span><br><span class="line">|   |   |-- decorators/</span><br><span class="line">|   |   |-- filters/</span><br><span class="line">|   |   |-- interceptors/</span><br><span class="line">|   |   |-- middlewares/</span><br><span class="line">|   |   |-- pipes/</span><br><span class="line">|   |-- app.controller.ts</span><br><span class="line">|   |-- app.module.ts</span><br><span class="line">|   |-- app.service.ts</span><br><span class="line">|-- test/</span><br><span class="line">|-- config/</span><br><span class="line">|-- dist/</span><br><span class="line">|-- node_modules/</span><br><span class="line">|-- package.json</span><br><span class="line">|-- tsconfig.json</span><br><span class="line">|-- .eslintrc.js</span><br><span class="line">|-- .prettierrc</span><br></pre></td></tr></table></figure>
+
+<h3 id="Folder-Breakdown"><a href="#Folder-Breakdown" class="headerlink" title="Folder Breakdown"></a>Folder Breakdown</h3><ul>
+<li><strong>src&#x2F;</strong>: Contains the main source code of the application.<ul>
+<li><strong>modules&#x2F;</strong>: Each feature is encapsulated within its module, following a modular design pattern.</li>
+<li><strong>common&#x2F;</strong>: Houses reusable utilities such as decorators, filters, interceptors, middlewares, and pipes.</li>
+<li><strong>app.controller.ts</strong>: Root application controller.</li>
+<li><strong>app.module.ts</strong>: Root module where other modules are imported.</li>
+<li><strong>app.service.ts</strong>: Global application service.</li>
+</ul>
+</li>
+<li><strong>test&#x2F;</strong>: Contains unit and end-to-end tests.</li>
+<li><strong>config&#x2F;</strong>: Stores configuration files for environment settings.</li>
+<li><strong>dist&#x2F;</strong>: Compiled output directory (ignored in version control).</li>
+<li><strong>node_modules&#x2F;</strong>: Dependencies.</li>
+<li><strong>package.json</strong>: Project dependencies and scripts.</li>
+<li><strong>tsconfig.json</strong>: TypeScript configuration.</li>
+<li><strong>.eslintrc.js, .prettierrc</strong>: Linting and formatting configuration.</li>
+</ul>
+<h2 id="Naming-Conventions"><a href="#Naming-Conventions" class="headerlink" title="Naming Conventions"></a>Naming Conventions</h2><p>A consistent naming convention ensures clarity and predictability in code structure.</p>
+<h3 id="File-Naming"><a href="#File-Naming" class="headerlink" title="File Naming"></a>File Naming</h3><ul>
+<li><strong>Modules</strong>: Use lowercase and hyphen-separated names, e.g., <code>users.module.ts</code>.</li>
+<li><strong>Controllers</strong>: Use plural form and include <code>controller</code>, e.g., <code>users.controller.ts</code>.</li>
+<li><strong>Services</strong>: Use singular form and include <code>service</code>, e.g., <code>users.service.ts</code>.</li>
+<li><strong>Entities</strong>: Singular PascalCase, e.g., <code>User.entity.ts</code>.</li>
+<li><strong>DTOs (Data Transfer Objects)</strong>: Use <code>dto</code> suffix, e.g., <code>create-user.dto.ts</code>.</li>
+<li><strong>Middleware</strong>: Use <code>middleware</code> suffix, e.g., <code>auth.middleware.ts</code>.</li>
+<li><strong>Interceptors</strong>: Use <code>interceptor</code> suffix, e.g., <code>logging.interceptor.ts</code>.</li>
+<li><strong>Pipes</strong>: Use <code>pipe</code> suffix, e.g., <code>validation.pipe.ts</code>.</li>
+<li><strong>Guards</strong>: Use <code>guard</code> suffix, e.g., <code>auth.guard.ts</code>.</li>
+<li><strong>Filters</strong>: Use <code>filter</code> suffix, e.g., <code>exception.filter.ts</code>.</li>
+</ul>
+<h3 id="Class-Naming"><a href="#Class-Naming" class="headerlink" title="Class Naming"></a>Class Naming</h3><ul>
+<li><strong>Modules</strong>: PascalCase, e.g., <code>UsersModule</code>.</li>
+<li><strong>Controllers</strong>: PascalCase, e.g., <code>UsersController</code>.</li>
+<li><strong>Services</strong>: PascalCase, e.g., <code>UsersService</code>.</li>
+<li><strong>Entities</strong>: PascalCase, e.g., <code>User</code>.</li>
+<li><strong>DTOs</strong>: PascalCase, e.g., <code>CreateUserDto</code>.</li>
+<li><strong>Middleware</strong>: PascalCase, e.g., <code>AuthMiddleware</code>.</li>
+<li><strong>Interceptors</strong>: PascalCase, e.g., <code>LoggingInterceptor</code>.</li>
+<li><strong>Pipes</strong>: PascalCase, e.g., <code>ValidationPipe</code>.</li>
+<li><strong>Guards</strong>: PascalCase, e.g., <code>AuthGuard</code>.</li>
+<li><strong>Filters</strong>: PascalCase, e.g., <code>ExceptionFilter</code>.</li>
+</ul>
+<h2 id="Best-Practices"><a href="#Best-Practices" class="headerlink" title="Best Practices"></a>Best Practices</h2><ol>
+<li><strong>Use Modules for Separation of Concerns</strong>: Keep each feature encapsulated within its module.</li>
+<li><strong>Follow Consistent Naming Conventions</strong>: This improves readability and maintainability.</li>
+<li><strong>Group Related Files</strong>: Keep DTOs, entities, and related files within the respective module directory.</li>
+<li><strong>Use DTOs for Data Validation</strong>: Ensure input validation using DTOs and class-validator.</li>
+<li><strong>Utilize Nest.js Built-in Features</strong>: Use decorators, pipes, interceptors, and guards effectively.</li>
+<li><strong>Write Unit and Integration Tests</strong>: Keep tests organized in the <code>test/</code> directory.</li>
+</ol>
+<p>By following these conventions, your Nest.js project will be well-structured, scalable, and easier to maintain. Happy coding!</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Step 1: Create a New Nest.js ProjectUse the Nest.js CLI to create a new project:
+123456npx @nestjs/cli new nest-prisma-projectornpm install -g @nestjs"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How to integrate Prisma with PostgreSQL"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Step 1: Create a New Nest.js ProjectUse the Nest.js CLI to create a new project:
+123456npx @nestjs/cli new nest-prisma-projectornpm install -g @nestjs"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How to integrate Prisma with PostgreSQL - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How to integrate Prisma with PostgreSQL</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-06-25
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/Nest-js/">#Nest.js</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/Nest-js/">Nest.js</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h3 id="Step-1-Create-a-New-Nest-js-Project"><a href="#Step-1-Create-a-New-Nest-js-Project" class="headerlink" title="Step 1: Create a New Nest.js Project"></a><strong>Step 1: Create a New Nest.js Project</strong></h3><p>Use the Nest.js CLI to create a new project:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">npx @nestjs/cli new nest-prisma-project</span><br><span class="line"></span><br><span class="line">or</span><br><span class="line"></span><br><span class="line">npm install -g @nestjs/cli</span><br><span class="line">nest new nest-prisma-project</span><br></pre></td></tr></table></figure>
+<p>Follow the prompts to set up a new project (e.g., choose npm&#x2F;yarn as your package manager).</p>
+<hr>
+<h3 id="Step-2-Install-Prisma"><a href="#Step-2-Install-Prisma" class="headerlink" title="Step 2: Install Prisma"></a><strong>Step 2: Install Prisma</strong></h3><p>Install the Prisma CLI and client:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install prisma --save-dev</span><br><span class="line">npm install @prisma/client</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="Step-3-Initialize-Prisma"><a href="#Step-3-Initialize-Prisma" class="headerlink" title="Step 3: Initialize Prisma"></a><strong>Step 3: Initialize Prisma</strong></h3><p>Run the following command to initialize Prisma in your project:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx prisma init</span><br></pre></td></tr></table></figure>
+<p>This creates:</p>
+<ol>
+<li>A <code>prisma/schema.prisma</code> file to define your database schema.</li>
+<li>A <code>.env</code> file to configure the database connection.</li>
+</ol>
+<hr>
+<h3 id="Step-4-Configure-PostgreSQL-Database"><a href="#Step-4-Configure-PostgreSQL-Database" class="headerlink" title="Step 4: Configure PostgreSQL Database"></a><strong>Step 4: Configure PostgreSQL Database</strong></h3><p>Update the <code>.env</code> file with your PostgreSQL connection string. For example:</p>
+<figure class="highlight plaintext"><figcaption><span>Text</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">DATABASE_URL=&quot;postgresql://&lt;username&gt;:&lt;password&gt;@&lt;host&gt;:&lt;port&gt;/&lt;database&gt;?schema=public&quot;</span><br><span class="line"></span><br><span class="line">For example:</span><br><span class="line">1.local: postgresql://postgres:123456@localhost:5432/mydb</span><br><span class="line">2.remote: postgresql://postgres.ozpfakbnndyylwjtujah:yida9456388@aws-0-ap-southeast-1.pooler.supabase.com:5432/postgres</span><br></pre></td></tr></table></figure>
+<p>Replace <code>&lt;username&gt;</code>, <code>&lt;password&gt;</code>, <code>&lt;host&gt;</code>, <code>&lt;port&gt;</code>, and <code>&lt;database&gt;</code> with your database details.</p>
+<hr>
+<h3 id="Step-5-Define-the-User-Model"><a href="#Step-5-Define-the-User-Model" class="headerlink" title="Step 5: Define the User Model"></a><strong>Step 5: Define the User Model</strong></h3><p>Edit the <code>prisma/schema.prisma</code> file to define the <code>User</code> model:</p>
+<figure class="highlight plaintext"><figcaption><span>Text</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">generator client &#123;</span><br><span class="line">  provider = &quot;prisma-client-js&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">datasource db &#123;</span><br><span class="line">  provider = &quot;postgresql&quot;</span><br><span class="line">  url      = env(&quot;DATABASE_URL&quot;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">model User &#123;</span><br><span class="line">  id    Int    @id @default(autoincrement())</span><br><span class="line">  email String @unique</span><br><span class="line">  name  String</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>This defines a <code>User</code> table with:</p>
+<ul>
+<li><code>id</code>: A unique identifier.</li>
+<li><code>email</code>: A unique email address.</li>
+<li><code>name</code>: The user’s name.</li>
+</ul>
+<hr>
+<h3 id="Step-6-Apply-the-Database-Schema"><a href="#Step-6-Apply-the-Database-Schema" class="headerlink" title="Step 6: Apply the Database Schema"></a><strong>Step 6: Apply the Database Schema</strong></h3><p>Run the following command to create the database schema and generate the Prisma Client:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npx prisma migrate dev --name init</span><br><span class="line">npx prisma generate</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>migrate dev</code> applies the schema to the database and creates a migration file.</li>
+<li><code>generate</code> creates the Prisma Client to interact with the database.</li>
+</ul>
+<hr>
+<h3 id="Step-7-Create-a-Prisma-Module"><a href="#Step-7-Create-a-Prisma-Module" class="headerlink" title="Step 7: Create a Prisma Module"></a><strong>Step 7: Create a Prisma Module</strong></h3><p>Generate a Prisma module and service to manage the database connection.</p>
+<h4 id="a-Generate-the-Prisma-Module-and-Service"><a href="#a-Generate-the-Prisma-Module-and-Service" class="headerlink" title="a. Generate the Prisma Module and Service"></a>a. Generate the Prisma Module and Service</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npx nest generate module prisma</span><br><span class="line">npx nest generate service prisma</span><br></pre></td></tr></table></figure>
+<h4 id="b-Set-Up-the-Prisma-Service"><a href="#b-Set-Up-the-Prisma-Service" class="headerlink" title="b. Set Up the Prisma Service"></a>b. Set Up the Prisma Service</h4><p>Edit the <strong>prisma.service.ts</strong> to extend the <code>PrismaClient</code>:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Injectable</span>, <span class="title class_">OnModuleInit</span>, <span class="title class_">OnModuleDestroy</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/common&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">PrismaClient</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;@prisma/client&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Injectable</span>()</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> <span class="title class_">PrismaService</span> <span class="keyword">extends</span> <span class="title class_ inherited__">PrismaClient</span> <span class="keyword">implements</span> <span class="title class_">OnModuleInit</span>, <span class="title class_">OnModuleDestroy</span> &#123;</span><br><span class="line">  <span class="keyword">async</span> <span class="title function_">onModuleInit</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      <span class="keyword">await</span> <span class="variable language_">this</span>.$connect();</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Database connection successful&#x27;</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">&#x27;Database connection failed&#x27;</span>, error);</span><br><span class="line">      <span class="keyword">throw</span> error;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">async</span> <span class="title function_">onModuleDestroy</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">await</span> <span class="variable language_">this</span>.$disconnect();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>This ensures the database connection is initialized when the module starts and disconnected when it shuts down.</p>
+<h4 id="c-Export-the-Prisma-Service"><a href="#c-Export-the-Prisma-Service" class="headerlink" title="c. Export the Prisma Service"></a>c. Export the Prisma Service</h4><p>Edit the <strong>prisma.module.ts</strong> to export the Prisma service:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Global</span>, <span class="title class_">Module</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/common&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">PrismaService</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;./prisma.service&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Global</span>() <span class="comment">// Makes the PrismaModule globally available</span></span><br><span class="line"><span class="meta">@Module</span>(&#123;</span><br><span class="line">  <span class="attr">providers</span>: [<span class="title class_">PrismaService</span>],</span><br><span class="line">  <span class="attr">exports</span>: [<span class="title class_">PrismaService</span>],</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> <span class="title class_">PrismaModule</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="Step-8-Create-a-User-Module"><a href="#Step-8-Create-a-User-Module" class="headerlink" title="Step 8: Create a User Module"></a><strong>Step 8: Create a User Module</strong></h3><p>Generate the User module, controller, and service:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npx nest generate module user</span><br><span class="line">npx nest generate controller user</span><br><span class="line">npx nest generate service user</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="Step-9-Implement-User-Query-and-Creation"><a href="#Step-9-Implement-User-Query-and-Creation" class="headerlink" title="Step 9: Implement User Query and Creation"></a><strong>Step 9: Implement User Query and Creation</strong></h3><h4 id="a-Implement-the-UserService"><a href="#a-Implement-the-UserService" class="headerlink" title="a. Implement the UserService"></a>a. Implement the <code>UserService</code></h4><p>Edit the <strong>user.service.ts</strong> to add methods for fetching and creating users:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Injectable</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/common&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">PrismaService</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;../prisma/prisma.service&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Injectable</span>()</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> <span class="title class_">UserService</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params"><span class="keyword">private</span> <span class="keyword">readonly</span> <span class="attr">prisma</span>: <span class="title class_">PrismaService</span></span>) &#123;&#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Fetch all users</span></span><br><span class="line">  <span class="keyword">async</span> <span class="title function_">getUsers</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">prisma</span>.<span class="property">user</span>.<span class="title function_">findMany</span>();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Create a new user</span></span><br><span class="line">  <span class="keyword">async</span> <span class="title function_">createUser</span>(<span class="params"><span class="attr">data</span>: &#123; email: <span class="built_in">string</span>; name: <span class="built_in">string</span> &#125;</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">prisma</span>.<span class="property">user</span>.<span class="title function_">create</span>(&#123; data &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="b-Implement-the-UserController"><a href="#b-Implement-the-UserController" class="headerlink" title="b. Implement the UserController"></a>b. Implement the <code>UserController</code></h4><p>Edit the <strong>user.controller.ts</strong> to define the API endpoints:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Body</span>, <span class="title class_">Controller</span>, <span class="title class_">Get</span>, <span class="title class_">Post</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/common&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">UserService</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;./user.service&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Controller</span>(<span class="string">&#x27;user&#x27;</span>) <span class="comment">// Base route: /user</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> <span class="title class_">UserController</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params"><span class="keyword">private</span> <span class="keyword">readonly</span> <span class="attr">userService</span>: <span class="title class_">UserService</span></span>) &#123;&#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// GET /user</span></span><br><span class="line">  <span class="meta">@Get</span>()</span><br><span class="line">  <span class="keyword">async</span> <span class="title function_">getAllUsers</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">userService</span>.<span class="title function_">getUsers</span>();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// POST /user</span></span><br><span class="line">  <span class="meta">@Post</span>()</span><br><span class="line">  <span class="keyword">async</span> <span class="title function_">createUser</span>(<span class="params"><span class="meta">@Body</span>() <span class="attr">createUserDto</span>: &#123; email: <span class="built_in">string</span>; name: <span class="built_in">string</span> &#125;</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">userService</span>.<span class="title function_">createUser</span>(createUserDto);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Module</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/common&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">UserController</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;./user.controller&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">UserService</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;./user.service&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">PrismaService</span> &#125; <span class="keyword">from</span> <span class="string">&quot;../prisma/prisma.service&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Module</span>(&#123;</span><br><span class="line">  <span class="attr">imports</span>: [<span class="title class_">PrismaModule</span>],</span><br><span class="line">  <span class="attr">controllers</span>: [<span class="title class_">UserController</span>],</span><br><span class="line">  <span class="attr">providers</span>: [<span class="title class_">UserService</span>]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> <span class="title class_">UserModule</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="Step-10-Register-Modules-in-AppModule"><a href="#Step-10-Register-Modules-in-AppModule" class="headerlink" title="Step 10: Register Modules in AppModule"></a><strong>Step 10: Register Modules in AppModule</strong></h3><p>Edit the <strong>app.module.ts</strong> to import the required modules:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Module</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/common&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">UserModule</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;./user/user.module&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">PrismaModule</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;./prisma/prisma.module&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Module</span>(&#123;</span><br><span class="line">  <span class="attr">imports</span>: [<span class="title class_">UserModule</span>, <span class="title class_">PrismaModule</span>], <span class="comment">// Register UserModule and PrismaModule</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> <span class="title class_">AppModule</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="Step-11-Enable-Validation-Optional"><a href="#Step-11-Enable-Validation-Optional" class="headerlink" title="Step 11: Enable Validation (Optional)"></a><strong>Step 11: Enable Validation (Optional)</strong></h3><p>To validate the data sent to the POST request, install <strong>class-validator</strong> and <strong>class-transformer</strong>:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install class-validator class-transformer</span><br></pre></td></tr></table></figure>
+<p>Create a <strong>DTO</strong> for user creation:</p>
+<h4 id="dto-create-user-dto-ts"><a href="#dto-create-user-dto-ts" class="headerlink" title="dto/create-user.dto.ts"></a><code>dto/create-user.dto.ts</code></h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">IsEmail</span>, <span class="title class_">IsNotEmpty</span>, <span class="title class_">IsString</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;class-validator&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> <span class="title class_">CreateUserDto</span> &#123;</span><br><span class="line">  <span class="meta">@IsEmail</span>()</span><br><span class="line">  <span class="attr">email</span>: <span class="built_in">string</span>;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@IsString</span>()</span><br><span class="line">  <span class="meta">@IsNotEmpty</span>()</span><br><span class="line">  <span class="attr">name</span>: <span class="built_in">string</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Update the <code>UserController</code> to use the DTO:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Body</span>, <span class="title class_">Controller</span>, <span class="title class_">Get</span>, <span class="title class_">Post</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/common&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">UserService</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;./user.service&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">CreateUserDto</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;./dto/create-user.dto&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Controller</span>(<span class="string">&#x27;user&#x27;</span>)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> <span class="title class_">UserController</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params"><span class="keyword">private</span> <span class="keyword">readonly</span> <span class="attr">userService</span>: <span class="title class_">UserService</span></span>) &#123;&#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Get</span>()</span><br><span class="line">  <span class="keyword">async</span> <span class="title function_">getAllUsers</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">userService</span>.<span class="title function_">getUsers</span>();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Post</span>()</span><br><span class="line">  <span class="keyword">async</span> <span class="title function_">createUser</span>(<span class="params"><span class="meta">@Body</span>() <span class="attr">createUserDto</span>: <span class="title class_">CreateUserDto</span></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">userService</span>.<span class="title function_">createUser</span>(createUserDto);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Enable global validation in <code>main.ts</code>:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">ValidationPipe</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/common&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">NestFactory</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/core&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">AppModule</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;./app.module&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">bootstrap</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> app = <span class="keyword">await</span> <span class="title class_">NestFactory</span>.<span class="title function_">create</span>(<span class="title class_">AppModule</span>);</span><br><span class="line">  app.<span class="title function_">useGlobalPipes</span>(<span class="keyword">new</span> <span class="title class_">ValidationPipe</span>());</span><br><span class="line">  <span class="keyword">await</span> app.<span class="title function_">listen</span>(<span class="number">3000</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">bootstrap</span>();</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="Step-12-Test-the-Application"><a href="#Step-12-Test-the-Application" class="headerlink" title="Step 12: Test the Application"></a><strong>Step 12: Test the Application</strong></h3><h4 id="a-GET-user"><a href="#a-GET-user" class="headerlink" title="a. GET /user"></a>a. GET <code>/user</code></h4><ul>
+<li><strong>URL:</strong> <code>http://localhost:3000/user</code></li>
+<li><strong>Method:</strong> <code>GET</code></li>
+<li><strong>Response:</strong> <code>[]</code> (empty array if no users exist).</li>
+</ul>
+<h4 id="b-POST-user"><a href="#b-POST-user" class="headerlink" title="b. POST /user"></a>b. POST <code>/user</code></h4><ul>
+<li><strong>URL:</strong> <code>http://localhost:3000/user</code></li>
+<li><strong>Method:</strong> <code>POST</code></li>
+<li><strong>Request Body:</strong></li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;email&quot;</span><span class="punctuation">:</span> <span class="string">&quot;johndoe@example.com&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;John Doe&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>Response:</strong></li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;email&quot;</span><span class="punctuation">:</span> <span class="string">&quot;johndoe@example.com&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;John Doe&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="Common-Issues-and-Fixes"><a href="#Common-Issues-and-Fixes" class="headerlink" title="Common Issues and Fixes"></a><strong>Common Issues and Fixes</strong></h2><h3 id="1-Nest-can’t-resolve-dependencies-Error"><a href="#1-Nest-can’t-resolve-dependencies-Error" class="headerlink" title="1. Nest can’t resolve dependencies Error"></a><strong>1. <strong><strong>Nest can’t resolve dependencies</strong></strong> Error</strong></h3><ul>
+<li>Ensure the <code>PrismaModule</code> is decorated as global or exports the <code>PrismaService</code> and is imported into the <code>UserModule</code>:</li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// user.module.ts</span></span><br><span class="line"><span class="meta">@Module</span>(&#123;</span><br><span class="line">  <span class="attr">imports</span>: [<span class="title class_">PrismaModule</span>], <span class="comment">// here</span></span><br><span class="line">  <span class="attr">controllers</span>: [<span class="title class_">UserController</span>],</span><br><span class="line">  <span class="attr">providers</span>: [<span class="title class_">UserService</span>],</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> <span class="title class_">UserModule</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-404-Not-Found-Error-for-user"><a href="#2-404-Not-Found-Error-for-user" class="headerlink" title="2. 404 Not Found Error for &#x2F;user"></a><strong>2. 404 Not Found Error for &#x2F;user</strong></h3><ul>
+<li>Verify the <code>@Controller(&#39;user&#39;)</code> decorator is applied in <code>UserController</code>.</li>
+</ul>
+<h3 id="3-Database-Connection-Fails"><a href="#3-Database-Connection-Fails" class="headerlink" title="3. Database Connection Fails"></a><strong>3. Database Connection Fails</strong></h3><ul>
+<li>Ensure the <code>DATABASE_URL</code> in <code>.env</code> is valid.</li>
+<li>Check the <code>PrismaService</code> logs for connection issues.</li>
+</ul>
+<hr>
+<p>With this setup, you’ve successfully integrated <strong>Prisma</strong> with <strong>PostgreSQL</strong>, implemented user querying, creation, and validation, and addressed common errors you might face. Let me know if you have further questions!</p>
+<h3 id="4-prisma-client-did-not-initialize-yet-Please-run-“prisma-generate”-and-try-to-import-it-again-Error-prisma-client-did-not-initialize-yet-Please-run-“prisma-generate”-and-try-to-import-it-again"><a href="#4-prisma-client-did-not-initialize-yet-Please-run-“prisma-generate”-and-try-to-import-it-again-Error-prisma-client-did-not-initialize-yet-Please-run-“prisma-generate”-and-try-to-import-it-again" class="headerlink" title="4. @prisma&#x2F;client did not initialize yet. Please run “prisma generate” and try to import it again. Error: @prisma&#x2F;client did not initialize yet. Please run “prisma generate” and try to import it again."></a>4. @prisma&#x2F;client did not initialize yet. Please run “prisma generate” and try to import it again. Error: @prisma&#x2F;client did not initialize yet. Please run “prisma generate” and try to import it again.</h3><hr>
+<h4 id="Fix-the-output-Path-in-schema-prisma"><a href="#Fix-the-output-Path-in-schema-prisma" class="headerlink" title="Fix the output Path in schema.prisma"></a>Fix the <code>output</code> Path in <code>schema.prisma</code></h4><p>The <code>output</code> path in your <code>schema.prisma</code> (<code>../generated/prisma</code>) is relative to the <code>schema.prisma</code> file. If the <code>generated/prisma</code> directory is not being created, the path might be incorrect or inaccessible.</p>
+<p>To simplify, you can use a path relative to the project root or inside the <code>node_modules</code> (default behavior). For example, change the <code>output</code> to a directory within your project:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">generator client &#123;</span><br><span class="line">  provider = &quot;prisma-client-js&quot;</span><br><span class="line">  output   = &quot;./generated/prisma&quot; // Relative to schema.prisma</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Or, use the default location (inside <code>node_modules</code>):</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">generator client &#123;</span><br><span class="line">  provider = &quot;prisma-client-js&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>If you remove the <code>output</code> field, Prisma will generate the client in <code>node_modules/@prisma/client</code>, which is the default and often easier to work with. Update your <code>schema.prisma</code> to:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">generator client &#123;</span><br><span class="line">  provider = &quot;prisma-client-js&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">datasource db &#123;</span><br><span class="line">  provider = &quot;postgresql&quot;</span><br><span class="line">  url      = env(&quot;DATABASE_URL&quot;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">model User &#123;</span><br><span class="line">  id    Int    @id @default(autoincrement())</span><br><span class="line">  email String @unique</span><br><span class="line">  name  String</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Then, run:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx prisma generate</span><br></pre></td></tr></table></figure>
+
+<p>This will generate the client in <code>node_modules/@prisma/client</code>. Update your <code>PrismaService</code> import to use this default location (no changes needed if already using <code>import &#123; PrismaClient &#125; from &#39;@prisma/client&#39;;</code>).</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

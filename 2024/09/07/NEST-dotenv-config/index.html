@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Managing environment variables properly is crucial for maintaining security and flexibility in a Nest.js application. This blog details how to configu"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Configuring Environment Variables in a Nest.js Project with dotenv and config"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Managing environment variables properly is crucial for maintaining security and flexibility in a Nest.js application. This blog details how to configu"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Configuring Environment Variables in a Nest.js Project with dotenv and config - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Configuring Environment Variables in a Nest.js Project with dotenv and config</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-09-07
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/Nest-js/">#Nest.js</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/Nest-js/">Nest.js</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>Managing environment variables properly is crucial for maintaining security and flexibility in a Nest.js application. This blog details how to configure environment variables using <code>dotenv</code> and Nest.js’s built-in <code>@nestjs/config</code> module.</p>
+<h2 id="Why-Use-Environment-Variables"><a href="#Why-Use-Environment-Variables" class="headerlink" title="Why Use Environment Variables?"></a>Why Use Environment Variables?</h2><p>Environment variables help manage sensitive information (e.g., database credentials, API keys) and configuration settings without hardcoding them into the source code. This improves security and allows different configurations for development, testing, and production environments.</p>
+<h2 id="Installing-Required-Packages"><a href="#Installing-Required-Packages" class="headerlink" title="Installing Required Packages"></a>Installing Required Packages</h2><p>Nest.js supports environment variables natively using the <code>@nestjs/config</code> package, which integrates with <code>dotenv</code>. Install both packages:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install @nestjs/config dotenv</span><br></pre></td></tr></table></figure>
+
+<h2 id="Setting-Up-Environment-Files"><a href="#Setting-Up-Environment-Files" class="headerlink" title="Setting Up Environment Files"></a>Setting Up Environment Files</h2><p>Create an <code>.env</code> file in the root of your project:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># .env</span><br><span class="line">PORT=3000</span><br><span class="line">DATABASE_URL=mongodb://localhost:27017/mydb</span><br><span class="line">JWT_SECRET=mysecretkey</span><br><span class="line">NODE_ENV=development</span><br></pre></td></tr></table></figure>
+
+<p>You can also create separate environment files for different environments:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.env.development</span><br><span class="line">.env.production</span><br><span class="line">.env.test</span><br></pre></td></tr></table></figure>
+
+<h2 id="Configuring-nestjs-config"><a href="#Configuring-nestjs-config" class="headerlink" title="Configuring @nestjs/config"></a>Configuring <code>@nestjs/config</code></h2><p>Modify <code>app.module.ts</code> to load environment variables using <code>ConfigModule</code>:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Module</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/common&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">ConfigModule</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/config&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Module</span>(&#123;</span><br><span class="line">  <span class="attr">imports</span>: [</span><br><span class="line">    <span class="title class_">ConfigModule</span>.<span class="title function_">forRoot</span>(&#123;</span><br><span class="line">      <span class="attr">isGlobal</span>: <span class="literal">true</span>, <span class="comment">// Makes configuration accessible throughout the app</span></span><br><span class="line">      <span class="attr">envFilePath</span>: [<span class="string">`.env.<span class="subst">$&#123;process.env.NODE_ENV&#125;</span>`</span>, <span class="string">&#x27;.env&#x27;</span>], <span class="comment">// Load specific environment file first</span></span><br><span class="line">    &#125;),</span><br><span class="line">  ],</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> <span class="title class_">AppModule</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Accessing-Environment-Variables"><a href="#Accessing-Environment-Variables" class="headerlink" title="Accessing Environment Variables"></a>Accessing Environment Variables</h2><p>To use environment variables inside a service, inject <code>ConfigService</code>:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Injectable</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/common&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">ConfigService</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/config&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Injectable</span>()</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> <span class="title class_">AppService</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params"><span class="keyword">private</span> <span class="attr">configService</span>: <span class="title class_">ConfigService</span></span>) &#123;&#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">getDatabaseUrl</span>(): <span class="built_in">string</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">configService</span>.<span class="property">get</span>&lt;<span class="built_in">string</span>&gt;(<span class="string">&#x27;DATABASE_URL&#x27;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Validating-Environment-Variables"><a href="#Validating-Environment-Variables" class="headerlink" title="Validating Environment Variables"></a>Validating Environment Variables</h2><p>To ensure required variables are set and properly formatted, use <code>Joi</code> for validation.</p>
+<h3 id="Install-Joi"><a href="#Install-Joi" class="headerlink" title="Install Joi:"></a>Install Joi:</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install joi</span><br></pre></td></tr></table></figure>
+
+<h3 id="Create-a-Configuration-Validation-Schema"><a href="#Create-a-Configuration-Validation-Schema" class="headerlink" title="Create a Configuration Validation Schema:"></a>Create a Configuration Validation Schema:</h3><p>Create <code>config.validation.ts</code>:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> <span class="title class_">Joi</span> <span class="keyword">from</span> <span class="string">&#x27;joi&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> validationSchema = <span class="title class_">Joi</span>.<span class="title function_">object</span>(&#123;</span><br><span class="line">  <span class="attr">PORT</span>: <span class="title class_">Joi</span>.<span class="title function_">number</span>().<span class="title function_">default</span>(<span class="number">3000</span>),</span><br><span class="line">  <span class="attr">DATABASE_URL</span>: <span class="title class_">Joi</span>.<span class="title function_">string</span>().<span class="title function_">required</span>(),</span><br><span class="line">  <span class="attr">JWT_SECRET</span>: <span class="title class_">Joi</span>.<span class="title function_">string</span>().<span class="title function_">required</span>(),</span><br><span class="line">  <span class="attr">NODE_ENV</span>: <span class="title class_">Joi</span>.<span class="title function_">string</span>().<span class="title function_">valid</span>(<span class="string">&#x27;development&#x27;</span>, <span class="string">&#x27;production&#x27;</span>, <span class="string">&#x27;test&#x27;</span>).<span class="title function_">default</span>(<span class="string">&#x27;development&#x27;</span>),</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="Apply-Validation-in-ConfigModule"><a href="#Apply-Validation-in-ConfigModule" class="headerlink" title="Apply Validation in ConfigModule:"></a>Apply Validation in <code>ConfigModule</code>:</h3><p>Modify <code>app.module.ts</code>:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">ConfigModule</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/config&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; validationSchema &#125; <span class="keyword">from</span> <span class="string">&#x27;./config.validation&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="title class_">ConfigModule</span>.<span class="title function_">forRoot</span>(&#123;</span><br><span class="line">  <span class="attr">isGlobal</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">envFilePath</span>: [<span class="string">`.env.<span class="subst">$&#123;process.env.NODE_ENV&#125;</span>`</span>, <span class="string">&#x27;.env&#x27;</span>],</span><br><span class="line">  validationSchema,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="Using-Configuration-Files-for-Modular-Config"><a href="#Using-Configuration-Files-for-Modular-Config" class="headerlink" title="Using Configuration Files for Modular Config"></a>Using Configuration Files for Modular Config</h2><p>Instead of accessing environment variables directly, create organized configuration files.</p>
+<h3 id="Create-config-database-config-ts"><a href="#Create-config-database-config-ts" class="headerlink" title="Create config/database.config.ts:"></a>Create <code>config/database.config.ts</code>:</h3><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="title function_">default</span> () =&gt; (&#123;</span><br><span class="line">  <span class="attr">database</span>: &#123;</span><br><span class="line">    <span class="attr">url</span>: process.<span class="property">env</span>.<span class="property">DATABASE_URL</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="Register-Configurations-in-app-module-ts"><a href="#Register-Configurations-in-app-module-ts" class="headerlink" title="Register Configurations in app.module.ts:"></a>Register Configurations in <code>app.module.ts</code>:</h3><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> databaseConfig <span class="keyword">from</span> <span class="string">&#x27;./config/database.config&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="title class_">ConfigModule</span>.<span class="title function_">forRoot</span>(&#123;</span><br><span class="line">  <span class="attr">load</span>: [databaseConfig],</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="Access-Configuration-in-a-Service"><a href="#Access-Configuration-in-a-Service" class="headerlink" title="Access Configuration in a Service:"></a>Access Configuration in a Service:</h3><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">ConfigService</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/config&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">configService</span>.<span class="title function_">get</span>(<span class="string">&#x27;database.url&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="Best-Practices"><a href="#Best-Practices" class="headerlink" title="Best Practices"></a>Best Practices</h2><ol>
+<li><strong>Use <code>.env</code> Files for Local Development</strong>: Keep secrets out of source control.</li>
+<li><strong>Use <code>ConfigModule.forRoot(&#123; isGlobal: true &#125;)</code></strong>: Ensures all modules can access configuration.</li>
+<li><strong>Use <code>validationSchema</code> to Validate Environment Variables</strong>: Prevents missing or incorrect values.</li>
+<li><strong>Avoid Directly Accessing <code>process.env</code></strong>: Always use <code>ConfigService</code> to ensure consistency.</li>
+<li><strong>Use Different <code>.env</code> Files per Environment</strong>: Helps manage configurations separately.</li>
+</ol>
+<p>By following these steps, you ensure a clean, modular, and secure approach to handling environment variables in your Nest.js application. Happy coding! 🚀</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
