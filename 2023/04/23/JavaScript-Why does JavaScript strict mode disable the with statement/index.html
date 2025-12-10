@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Why does JavaScript strict mode disable the with statementForewordin JavaScript, with is a syntax construct considered “dangerous” that allows you to "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Why does JavaScript strict mode disable the with statement"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Why does JavaScript strict mode disable the with statementForewordin JavaScript, with is a syntax construct considered “dangerous” that allows you to "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Why does JavaScript strict mode disable the with statement - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Why does JavaScript strict mode disable the with statement</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-04-23
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Why-does-JavaScript-strict-mode-disable-the-with-statement"><a href="#Why-does-JavaScript-strict-mode-disable-the-with-statement" class="headerlink" title="Why does JavaScript strict mode disable the with statement"></a>Why does JavaScript strict mode disable the with statement</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in JavaScript, <code>with </code>is a syntax construct considered “dangerous” that allows you to temporarily extend the scope chain, and was often used in some early code to simplify object property access. However, in the strict mode of ES5, <code>with </code>it was completely disabled. This disabling reflects JavaScript’s trade-off between syntax predictability, security and performance. This article will be in-depth analysis <code>with </code>the nature of the, the problems caused by its use, and why it is incompatible with strict mode.</p>
+<h2 id="What-is"><a href="#What-is" class="headerlink" title="What is?"></a>What is?</h2><p><code>with </code>is a syntax structure provided by JavaScript to temporarily add an object to the scope chain so that the prefix can be omitted when accessing the object’s properties.</p>
+<p>Example:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123; <span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span> &#125;;</span><br><span class="line"><span class="title function_">with</span> (obj) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">// 输出 1，相当于 obj.a</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>it seems convenient, <code>with </code>statement will <strong>dynamically modify the scope chain</strong> this leads to a series of unpredictable problems.</p>
+<h2 id="Core-reasons-for-disabling"><a href="#Core-reasons-for-disabling" class="headerlink" title="Core reasons for disabling"></a>Core reasons for disabling</h2><h3 id="first-destroy-the-scope-of-static-analysis"><a href="#first-destroy-the-scope-of-static-analysis" class="headerlink" title="first, destroy the scope of static analysis."></a>first, destroy the scope of static analysis.</h3><p>The JavaScript engine does static scope analysis during the compilation phase, such as whether variables are declared, scope binding, etc. And<code>with </code>introduced is <strong>dynamic Scope Extension</strong> , making variable lookups ambiguous.</p>
+<p>The following code:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">test</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> a = <span class="number">2</span>;</span><br><span class="line">  <span class="title function_">with</span> (obj) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(a);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>in the end the output is <code>obj.a </code>or within the scope of the function <code>a </code>what? This answer needs to wait until runtime to confirm, depending entirely on whether the object contains <code>a </code>. This seriously undermines the possibilities of static analysis.</p>
+<h3 id="Second-bring-performance-overhead"><a href="#Second-bring-performance-overhead" class="headerlink" title="Second, bring performance overhead"></a>Second, bring performance overhead</h3><p>modern JS engines do various optimizations to the scope chain, such as scope promotion, variable caching, etc., <code>with </code>the dynamic introduction of new scopes can invalidate the optimization mechanism. The engine cannot predict the variable lookup path, which affects execution efficiency.</p>
+<p>For security and performance considerations, V8 and other engines use <code>with </code>the code execution path is treated conservatively, resulting in poor performance of these codes.</p>
+<h3 id="Third-the-code-readability-is-poor"><a href="#Third-the-code-readability-is-poor" class="headerlink" title="Third, the code readability is poor."></a>Third, the code readability is poor.</h3><p><code>with </code>making the source of the variable reference unclear can easily lead to misjudgment or implicit errors. For example:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">with</span> (obj) &#123;</span><br><span class="line">  foo = <span class="number">42</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>foo </code>yes <code>obj.foo </code>or global variables? It depends on<code>obj </code>whether defined <code>foo </code>, and this behavior is not explicit, increasing the difficulty of maintenance.</p>
+<h3 id="IV-Contrary-to-strict-model-objectives"><a href="#IV-Contrary-to-strict-model-objectives" class="headerlink" title="IV. Contrary to strict model objectives"></a>IV. Contrary to strict model objectives</h3><p>the goal of strict mode is to make code behavior clearer, more standardized, and more secure. <code>with </code>it is precisely the opposite direction. To prevent confusion and uncertainty, strict mode directly prohibits the use <code>with </code>.</p>
+<p>If you use in strict mode <code>with </code>, JavaScript will report an error directly during the syntax parsing phase to prevent code execution.</p>
+<hr>
+<h2 id="Interview-answer-demonstration"><a href="#Interview-answer-demonstration" class="headerlink" title="Interview answer demonstration"></a>Interview answer demonstration</h2><p><strong>question: Why is the use of</strong> <code>with </code><strong>what?</strong></p>
+<p>Example answer:</p>
+<p>“Strict mode prohibits the use <code>with </code>, Mainly because it breaks the static nature of the scope chain, making variable lookup unpredictable at runtime. This will interfere with the optimization logic of the JavaScript engine and make the code less readable and maintainable.</p>
+<p>The goal of strict mode is to make code behavior clearer and more controllable, while <code>with </code>the uncertainty is just the opposite, so it is completely disabled. I wouldn’t use it in actual development either.<code>with </code>because it increases the probability of code errors.”</p>
+<hr>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p><code>with </code>seemingly convenient, it is actually a “trap” level syntax in JavaScript, which blurs the scope boundary, causes ambiguity in variable parsing, and affects performance and readability. Because of this, strict mode chose to disable it in order to promote a more standardized and safe development approach. In modern JavaScript development, we should avoid using <code>with </code>not even in strict mode.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
