@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What are the ways of inheritance in JavaScriptForewordinheritance is one of the core concepts of object-oriented programming, JavaScript as a prototyp"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What are the ways of inheritance in JavaScript"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What are the ways of inheritance in JavaScriptForewordinheritance is one of the core concepts of object-oriented programming, JavaScript as a prototyp"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What are the ways of inheritance in JavaScript - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What are the ways of inheritance in JavaScript</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-07-08
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-are-the-ways-of-inheritance-in-JavaScript"><a href="#What-are-the-ways-of-inheritance-in-JavaScript" class="headerlink" title="What are the ways of inheritance in JavaScript"></a>What are the ways of inheritance in JavaScript</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>inheritance is one of the core concepts of object-oriented programming, JavaScript as a prototype-based language, inheritance mechanism is different from traditional class inheritance. Understanding the various inheritance methods of JavaScript will help you write more flexible and efficient code. This article will systematically introduce the common inheritance methods in JavaScript and their advantages and disadvantages.</p>
+<h2 id="Analysis-of-Common-Inheritance-Methods"><a href="#Analysis-of-Common-Inheritance-Methods" class="headerlink" title="Analysis of Common Inheritance Methods"></a>Analysis of Common Inheritance Methods</h2><h3 id="prototype-Chain-Inheritance"><a href="#prototype-Chain-Inheritance" class="headerlink" title="prototype Chain Inheritance"></a>prototype Chain Inheritance</h3><p>by having the prototype of the child class point to an instance of the parent class, the implementation inherits the parent class properties and methods.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function Parent() &#123;</span><br><span class="line">  this.name = &#x27;parent&#x27;;</span><br><span class="line">&#125;</span><br><span class="line">Parent.prototype.say = function () &#123;</span><br><span class="line">  console.log(this.name);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">function Child() &#123;&#125;</span><br><span class="line">Child.prototype = new Parent();</span><br><span class="line"></span><br><span class="line">const c = new Child();</span><br><span class="line">c.say(); // &#x27;parent&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>Advantages: Simple, able to inherit all properties and methods of the parent class.</p>
+<p>Disadvantages: Reference type properties are shared by all instances.</p>
+<h3 id="Borrowing-constructor-inheritance-classic-inheritance"><a href="#Borrowing-constructor-inheritance-classic-inheritance" class="headerlink" title="Borrowing constructor inheritance (classic inheritance)"></a>Borrowing constructor inheritance (classic inheritance)</h3><p>the parent constructor is called inside the child constructor, borrowing its scope.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function Parent(name) &#123;</span><br><span class="line">  this.name = name;</span><br><span class="line">&#125;</span><br><span class="line">function Child(name) &#123;</span><br><span class="line">  Parent.call(this, name);</span><br><span class="line">&#125;</span><br><span class="line">const c = new Child(&#x27;child&#x27;);</span><br><span class="line">console.log(c.name); // &#x27;child&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>Advantages: Solves the problem of reference type sharing and can pass parameters.</p>
+<p>Disadvantages: The methods are defined in the constructor and cannot be reused.</p>
+<h3 id="Combined-inheritance"><a href="#Combined-inheritance" class="headerlink" title="Combined inheritance"></a>Combined inheritance</h3><p>combining the advantages of prototype chain inheritance and borrowing constructor inheritance.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function Parent(name) &#123;</span><br><span class="line">  this.name = name;</span><br><span class="line">&#125;</span><br><span class="line">Parent.prototype.say = function () &#123;</span><br><span class="line">  console.log(this.name);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">function Child(name, age) &#123;</span><br><span class="line">  Parent.call(this, name);</span><br><span class="line">  this.age = age;</span><br><span class="line">&#125;</span><br><span class="line">Child.prototype = new Parent();</span><br><span class="line">Child.prototype.constructor = Child;</span><br></pre></td></tr></table></figure>
+
+<p>Advantages: Avoid reference sharing, method reuse.</p>
+<p>Disadvantages: The parent class constructor will be called twice, which slightly affects performance.</p>
+<h3 id="Original-type-inheritance"><a href="#Original-type-inheritance" class="headerlink" title="Original type inheritance"></a>Original type inheritance</h3><p>based on <code>Object.create()</code>Creates a new object as a prototype.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const parent = &#123;</span><br><span class="line">  name: &#x27;parent&#x27;,</span><br><span class="line">  say() &#123;</span><br><span class="line">    console.log(this.name);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">const child = Object.create(parent);</span><br><span class="line">child.name = &#x27;child&#x27;;</span><br><span class="line">child.say(); // &#x27;child&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>Advantage: Simple way to implement inheritance.</p>
+<p>Disadvantages: Cannot implement constructor parameter transfer.</p>
+<h3 id="Parasitic-inheritance"><a href="#Parasitic-inheritance" class="headerlink" title="Parasitic inheritance"></a>Parasitic inheritance</h3><p>based on the original style inheritance, the creation of objects based on enhanced functionality.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function createChild(parent) &#123;</span><br><span class="line">  const child = Object.create(parent);</span><br><span class="line">  child.sayHello = function () &#123;</span><br><span class="line">    console.log(&#x27;hello&#x27;);</span><br><span class="line">  &#125;;</span><br><span class="line">  return child;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Parasitic-combination-inheritance"><a href="#Parasitic-combination-inheritance" class="headerlink" title="Parasitic combination inheritance"></a>Parasitic combination inheritance</h3><p>optimize combination inheritance to avoid calling the parent constructor twice.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function inheritPrototype(child, parent) &#123;</span><br><span class="line">  child.prototype = Object.create(parent.prototype);</span><br><span class="line">  child.prototype.constructor = child;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>This is the optimal scheme inherited in es5.</p>
+<h3 id="ES6-class-inheritance"><a href="#ES6-class-inheritance" class="headerlink" title="ES6 class inheritance"></a>ES6 class inheritance</h3><p>use <code>class </code>and <code>extends </code>keyword syntax, the underlying is still prototype chain inheritance.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Parent &#123;</span><br><span class="line">  constructor(name) &#123;</span><br><span class="line">    this.name = name;</span><br><span class="line">  &#125;</span><br><span class="line">  say() &#123;</span><br><span class="line">    console.log(this.name);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Child extends Parent &#123;</span><br><span class="line">  constructor(name, age) &#123;</span><br><span class="line">    super(name);</span><br><span class="line">    this.age = age;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Syntax is simple, easy to read, and supports <code>super </code>call.</p>
+<hr>
+<h2 id="Interview-answer-demonstration"><a href="#Interview-answer-demonstration" class="headerlink" title="Interview answer demonstration"></a>Interview answer demonstration</h2><p><strong>question: What are the inheritance methods in JavaScript? What’s the difference between them?</strong></p>
+<p>Example answer:</p>
+<p>“Inheritance in JavaScript mainly includes prototype chain inheritance, borrowing constructor inheritance, combination inheritance, original type inheritance, parasitic inheritance, parasitic combination inheritance and ES6 class inheritance. Prototype chain inheritance is simple but will lead to the problem of reference type sharing. Borrowing constructor inheritance can solve the sharing problem but the method cannot be reused. Combined inheritance combines the advantages of both but calls the parent constructor twice. Parasitic combined inheritance optimizes the number of combined inheritance calls. ES6 class inheritance syntax is simpler and more powerful.”</p>
+<hr>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>understanding the principles and advantages and disadvantages of various inheritance methods helps to choose the most appropriate inheritance scheme to deal with different business scenarios. The ES6 syntax greatly simplifies the writing and understanding of inheritance, but the underlying mechanism is still the prototype chain mechanism. Familiarity with traditional inheritance can also help us better understand JavaScript’s object model.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

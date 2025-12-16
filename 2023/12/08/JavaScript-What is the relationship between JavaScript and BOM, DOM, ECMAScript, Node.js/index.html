@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What is the relationship between JavaScript and BOM, DOM, ECMAScript, Node.jsforewordin the process of learning JavaScript or interviewing front-end p"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What is the relationship between JavaScript and BOM, DOM, ECMAScript, Node.js"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What is the relationship between JavaScript and BOM, DOM, ECMAScript, Node.jsforewordin the process of learning JavaScript or interviewing front-end p"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What is the relationship between JavaScript and BOM, DOM, ECMAScript, Node.js - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What is the relationship between JavaScript and BOM, DOM, ECMAScript, Node.js</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-12-08
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-is-the-relationship-between-JavaScript-and-BOM-DOM-ECMAScript-Node-js"><a href="#What-is-the-relationship-between-JavaScript-and-BOM-DOM-ECMAScript-Node-js" class="headerlink" title="What is the relationship between JavaScript and BOM, DOM, ECMAScript, Node.js"></a>What is the relationship between JavaScript and BOM, DOM, ECMAScript, Node.js</h1><h2 id="foreword"><a href="#foreword" class="headerlink" title="foreword"></a>foreword</h2><p>in the process of learning JavaScript or interviewing front-end positions, one often encounters such a question: What is the relationship between JavaScript, BOM, DOM, ECMAScript and Node.js? They seem interrelated, but the specific boundaries and responsibilities are confusing. Behind these nouns, in fact, hidden in the JavaScript technology system of the historical evolution and standard division of labor. This article will take you to clarify the relationship between them and understand the positioning and role of each concept in front-end development.</p>
+<h2 id="Difference-and-connection"><a href="#Difference-and-connection" class="headerlink" title="Difference and connection"></a>Difference and connection</h2><h3 id="first-ECMAScript-language-standards"><a href="#first-ECMAScript-language-standards" class="headerlink" title="first, ECMAScript: language standards"></a>first, ECMAScript: language standards</h3><p>ECMAScript (ES for short) is a set of standards developed by ECMA International organization <strong>scripting Language Standards</strong> it is JavaScript. <strong>Fundamentals of Syntax Specification</strong> . JavaScript is an implementation based on ECMAScript, but not the only implementation of ECMAScript (e. G. ActionScript is also based on ECMAScript).</p>
+<p>ECMAScript defines:</p>
+<ul>
+<li>language infrastructure such as variables, data types, functions, scopes, prototype chains, etc.</li>
+<li>Syntax rules such as various control structures, operators, exception handling mechanisms, etc.</li>
+<li>Custom objects, built-in objects such <code>Array</code>, <code>Object </code>, <code>Math </code>, <code>Date </code>the canonical implementation</li>
+</ul>
+<p>the ES5, ES6, and ES2020 we often hear are different versions of ECMAScript, corresponding to the functional evolution of JavaScript in different years.</p>
+<p>Summary: <strong>ECMAScript is the skeleton of the language, defining the syntax and core functionality, but not the ability to interact with the browser or operating system.</strong></p>
+<hr>
+<h3 id="Second-JavaScript-language-implementation-based-on-ECMAScript"><a href="#Second-JavaScript-language-implementation-based-on-ECMAScript" class="headerlink" title="Second, JavaScript: language implementation based on ECMAScript"></a>Second, JavaScript: language implementation based on ECMAScript</h3><p>originally developed by Netscape, JavaScript is a scripting language based on ECMAScript. In addition to implementing all the language features of ECMAScript, JavaScript also binds DOM and BOM in the browser environment to enable page manipulation and browser interaction.</p>
+<p>In other words: <strong>JavaScript &#x3D; ECMAScript + Web APIs (e. G. DOM, BOM)</strong></p>
+<p>this means that the functionality of JavaScript includes not only the basic syntax (such as variables, functions, array operations, etc.), but also the ability to manipulate pages and control browser behavior in the browser environment.</p>
+<hr>
+<h3 id="3-DOM-Document-Object-Model-Operating-web-page-content"><a href="#3-DOM-Document-Object-Model-Operating-web-page-content" class="headerlink" title="3. DOM(Document Object Model): Operating web page content"></a>3. DOM(Document Object Model): Operating web page content</h3><p>DOM is a set of standards developed by W3C that specifies how to access and manipulate the content and structure of HTML or XML documents through scripting languages. DOM sees the web as a <strong>object Model of Tree Structure</strong> , developers can perform various operations on it through JavaScript:</p>
+<ul>
+<li>modify page elements (such <code>document.getElementById() </code>)</li>
+<li>dynamically add or remove nodes</li>
+<li>manipulation element properties, styles, event bindings, and more</li>
+</ul>
+<p>DOM is not a part of ECMAScript, but an API provided by the browser, a “long arm tool” for JavaScript in the browser environment “.</p>
+<hr>
+<h3 id="4-BOM-Browser-Object-Model-operate-the-Browser-window"><a href="#4-BOM-Browser-Object-Model-operate-the-Browser-window" class="headerlink" title="4. BOM(Browser Object Model): operate the Browser window"></a>4. BOM(Browser Object Model): operate the Browser window</h3><p>BOM is the browser object model that defines a collection of objects that interact with the browser window, such:</p>
+<ul>
+<li><code>window </code>object (global scope)</li>
+<li><code>location </code>(Address bar)</li>
+<li><code>history </code>(Browsing history)</li>
+<li><code>navigator </code>(Browser Information)</li>
+<li><code>screen </code>(Screen information)</li>
+</ul>
+<p>These objects allow JavaScript to control browser behavior, such as jump pages, get user browser information, etc. BOM is also not the content of ECMAScript, but a set of Web API provided by browser manufacturers.</p>
+<hr>
+<h3 id="Five-Node-js-JavaScript-server-side-running-environment"><a href="#Five-Node-js-JavaScript-server-side-running-environment" class="headerlink" title="Five, Node.js:JavaScript server-side running environment"></a>Five, Node.js:JavaScript server-side running environment</h3><p>Node.js is a JavaScript runtime environment built on the Chrome V8 engine. It allows JavaScript to run in non-browser environments such as servers, command-line tools, and desktop applications.</p>
+<p>In Node.js, although the ECMAScript language specification is still used, there is no DOM and BOM provided by the browser. Instead:</p>
+<ul>
+<li>file System (fs module)</li>
+<li>network request capability (http Module)</li>
+<li>process control, event loops, modular mechanisms, etc.</li>
+</ul>
+<p>Node.js extends the application scenario of JavaScript, making it a unified development language for front and back ends.</p>
+<hr>
+<h3 id="VI-Summary-of-the-relationship-between-them"><a href="#VI-Summary-of-the-relationship-between-them" class="headerlink" title="VI. Summary of the relationship between them"></a>VI. Summary of the relationship between them</h3><ol>
+<li><strong>ECMAScript</strong> is standard and defines only the core syntax of the language.</li>
+<li><strong>JavaScript</strong> it is an implementation of ECMAScript and combines DOM and BOM to enable web page operation and browser interaction.</li>
+<li><strong>DOM and BOM</strong>It is the API provided by the browser, which enables JavaScript to operate the page and the browser.</li>
+<li><strong>Node.js</strong> it is a platform that runs JavaScript in a non-browser environment and replaces DOM and BOM with its own API.</li>
+</ol>
+<p>From the technical composition point of view:</p>
+<ul>
+<li>JavaScript runs in the browser: ECMAScript + DOM + BOM</li>
+<li>JavaScript running in Node.js: ECMAScript + Node API</li>
+</ul>
+<hr>
+<h2 id="interview-answer-demonstration"><a href="#interview-answer-demonstration" class="headerlink" title="interview answer demonstration"></a>interview answer demonstration</h2><p><strong>what is the relationship between JavaScript and BOM, DOM, ECMAScript, and Node.js?</strong></p>
+<p>Example answer:</p>
+<p>“JavaScript is a scripting language based on the ECMAScript specification. ECMAScript mainly defines language syntax and basic functions, such as variables, functions, and objects. When JavaScript runs in a browser, it combines API provided by two types of browsers: DOM, which is used to operate page content; The other is BOM, which is used to interact with the browser window, such as accessing the address bar and browsing history.</p>
+<p>Node.js is the JavaScript runtime, which allows JavaScript to run on the server side. Node.js still uses the syntax specification of ECMAScript, but does not have DOM and BOM, but provides its own modules and API, such as file system, network module, etc.</p>
+<p>So it can be understood as follows: JavaScript is the language, ECMAScript is the standard, DOM and BOM are the environmental capabilities provided by the browser, and Node.js is the runtime platform that allows JavaScript to run outside the browser.”</p>
+<hr>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>these terms in the JavaScript technology stack actually represent different levels of concepts:</p>
+<ul>
+<li>ECMAScript is the standard language</li>
+<li>JavaScript is a language implementation.</li>
+<li>DOM and BOM are browser extensions</li>
+<li>Node.js is the runtime of JavaScript in a non-browser environment.</li>
+</ul>
+<p>Understanding the boundaries and relationships between them not only helps to build a clear knowledge system, but also reflects the understanding of the nature of technology in the interview. Mastering these foundational concepts is an important step toward advanced JavaScript development.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

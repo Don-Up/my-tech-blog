@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Determine if an object is empty-Does it contain custom properties or methods on the prototype chainForewordin JavaScript, determining whether an objec"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Determine if an object is empty-Does it contain custom properties or methods on the prototype chain"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Determine if an object is empty-Does it contain custom properties or methods on the prototype chainForewordin JavaScript, determining whether an objec"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Determine if an object is empty-Does it contain custom properties or methods on the prototype chain - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Determine if an object is empty-Does it contain custom properties or methods on the prototype chain</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-05-03
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Determine-if-an-object-is-empty-Does-it-contain-custom-properties-or-methods-on-the-prototype-chain"><a href="#Determine-if-an-object-is-empty-Does-it-contain-custom-properties-or-methods-on-the-prototype-chain" class="headerlink" title="Determine if an object is empty-Does it contain custom properties or methods on the prototype chain"></a>Determine if an object is empty-Does it contain custom properties or methods on the prototype chain</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in JavaScript, determining whether an object is “empty” is not just checking whether it has properties. In some business scenarios, we also need to determine whether its prototype chain contains custom properties or methods. For example, this determination is particularly critical when implementing functions such as deep copy, cache management, configuration merge, etc. This article will fully explain: how to determine whether an object is “completely empty”, that is, there are neither its own properties nor custom properties or methods on the prototype chain.</p>
+<h2 id="What-is-an-“empty-object”"><a href="#What-is-an-“empty-object”" class="headerlink" title="What is an “empty object”?"></a>What is an “empty object”?</h2><p>In general, an “empty object” is an object that does not have any enumerable properties of its own. For example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const obj = &#123;&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>but if you consider a prototype chain, for example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const obj = &#123;&#125;;</span><br><span class="line">console.log(obj.toString); // [Function: toString]</span><br></pre></td></tr></table></figure>
+
+<p><code>toString </code>is not <code>obj </code>own attributes, but rather from <code>Object.prototype </code>of. This shows that the object’s property access is not limited to itself, but may also involve the prototype chain.</p>
+<p>Then the question arises: if there is a custom attribute on the prototype chain, should we treat it as “non-empty”? It depends on business needs. If we want to judge “the object is completely clean”, we must analyze its prototype chain.</p>
+<h2 id="How-to-determine-whether-the-object-itself-is-empty"><a href="#How-to-determine-whether-the-object-itself-is-empty" class="headerlink" title="How to determine whether the object itself is empty?"></a>How to determine whether the object itself is empty?</h2><p>The most common methods are:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Object.keys(obj).length === 0</span><br></pre></td></tr></table></figure>
+
+<p>you can also use:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JSON.stringify(obj) === &#x27;&#123;&#125;&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>or:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Object.getOwnPropertyNames(obj).length === 0</span><br></pre></td></tr></table></figure>
+
+<p>these methods only check the properties of the object itself and do not involve the prototype chain.</p>
+<h2 id="How-can-I-check-if-the-prototype-chain-has-custom-properties"><a href="#How-can-I-check-if-the-prototype-chain-has-custom-properties" class="headerlink" title="How can I check if the prototype chain has custom properties?"></a>How can I check if the prototype chain has custom properties?</h2><p>The properties on the prototype chain include inherited methods and fields. We need to recursively traverse the prototype chain of objects, with property checks at each level.</p>
+<p>The sample code is as follows:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function isCompletelyEmpty(obj) &#123;</span><br><span class="line">  let current = obj;</span><br><span class="line"></span><br><span class="line">  while (current !== null) &#123;</span><br><span class="line">    if (Object.getOwnPropertyNames(current).length &gt; 0) &#123;</span><br><span class="line">      return false;</span><br><span class="line">    &#125;</span><br><span class="line">    current = Object.getPrototypeOf(current);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>this function checks all the way down the prototype chain <code>null </code>so far. An object is considered “non-null” if any level of the object has custom properties, including non-enumerable properties “.</p>
+<p>Note, however, that this method will put <code>Object.prototype </code>own attributes are also taken into account. If you only care about “user-defined” prototypes, you can filter them.</p>
+<h2 id="Dealing-with-special-objects"><a href="#Dealing-with-special-objects" class="headerlink" title="Dealing with special objects"></a>Dealing with special objects</h2><p>for <code>Object.create(null) </code>create the object, it has no prototype:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const pure = Object.create(null);</span><br><span class="line">console.log(Object.getPrototypeOf(pure)); // null</span><br></pre></td></tr></table></figure>
+
+<p>this kind of object naturally has no prototype chain, and it is easier to judge whether it is empty.</p>
+<hr>
+<h2 id="Interview-answer-demonstration"><a href="#Interview-answer-demonstration" class="headerlink" title="Interview answer demonstration"></a>Interview answer demonstration</h2><p><strong>question: How can I tell if an object is empty (including the judgment of the prototype chain)?</strong></p>
+<p>Example answer:</p>
+<p>“If you only judge whether the object itself is empty, you can use <code>Object.keys(obj).length === 0 </code>or <code>Object.getOwnPropertyNames(obj).length === 0</code>.</p>
+<p>However, if you still need to determine whether the prototype chain has custom attributes, you can use a loop or recursion to check each layer of prototype objects for the existence of attributes. For example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function isCompletelyEmpty(obj) &#123;</span><br><span class="line">  let current = obj;</span><br><span class="line">  while (current !== null) &#123;</span><br><span class="line">    if (Object.getOwnPropertyNames(current).length &gt; 0) return false;</span><br><span class="line">    current = Object.getPrototypeOf(current);</span><br><span class="line">  &#125;</span><br><span class="line">  return true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>this code determines whether the object itself and all prototype chain levels have no custom attributes.”</p>
+<hr>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>determining whether an object is empty should not be limited to its own properties. In some security-sensitive or architecturally rigorous scenarios, custom attributes on the prototype chain must also be considered. By walking through the prototype chain layer by layer and checking whether each layer contains custom fields, we can more accurately evaluate whether an object is “completely empty”. Understanding this is critical to writing more robust, maintainable JavaScript code.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

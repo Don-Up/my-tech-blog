@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="How do I detect if an object has a circular referenceForewordin JavaScript, circular references (circular dependencies) refer to the existence of mutu"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How do I detect if an object has a circular reference"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="How do I detect if an object has a circular referenceForewordin JavaScript, circular references (circular dependencies) refer to the existence of mutu"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How do I detect if an object has a circular reference - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How do I detect if an object has a circular reference</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-04-17
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="How-do-I-detect-if-an-object-has-a-circular-reference"><a href="#How-do-I-detect-if-an-object-has-a-circular-reference" class="headerlink" title="How do I detect if an object has a circular reference"></a>How do I detect if an object has a circular reference</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in JavaScript, circular references (circular dependencies) refer to the existence of mutual references within objects, forming a closed loop. For example, object A refers to object B, and object B refers to object A, which will lead to infinite recursion problems and bring difficulties to serialization (such as JSON.stringify), deep copy and other operations. Accurate detection of circular references is an important part of avoiding program crashes and memory leaks. This article will detail the ideas and methods of detecting circular references.</p>
+<h2 id="Causes-and-hazards-of-circular-references"><a href="#Causes-and-hazards-of-circular-references" class="headerlink" title="Causes and hazards of circular references"></a>Causes and hazards of circular references</h2><p>circular references usually occur in complex data structures, such as tree or graph structures, or in parent-child objects that hold references to each other. Its main problems:</p>
+<ul>
+<li><code>JSON.stringify </code>will throw an exception <code>TypeError: Converting circular structure to JSON </code></li>
+<li>deep copy can cause dead loops or stack overflow if it does not handle loops</li>
+<li>memory leak, causing garbage collection to fail to properly reclaim related objects</li>
+</ul>
+<h2 id="the-basic-idea-of-detecting-circular-references"><a href="#the-basic-idea-of-detecting-circular-references" class="headerlink" title="the basic idea of detecting circular references"></a>the basic idea of detecting circular references</h2><p>the core is to record the Accessed object reference when traversing the object properties, and if the recorded object is accessed again, it means that there is a circular reference.</p>
+<h2 id="Examples-of-common-detection-implementations"><a href="#Examples-of-common-detection-implementations" class="headerlink" title="Examples of common detection implementations"></a>Examples of common detection implementations</h2><p>the following detection functions are implemented based on recursion and WeakSet (collection of weak references):</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">function hasCircularReference(obj, seen = new WeakSet()) &#123;</span><br><span class="line">  if (obj &amp;&amp; typeof obj === &#x27;object&#x27;) &#123;</span><br><span class="line">    if (seen.has(obj)) &#123;</span><br><span class="line">      return true; // 找到循环引用</span><br><span class="line">    &#125;</span><br><span class="line">    seen.add(obj);</span><br><span class="line">    for (const key in obj) &#123;</span><br><span class="line">      if (Object.prototype.hasOwnProperty.call(obj, key)) &#123;</span><br><span class="line">        if (hasCircularReference(obj[key], seen)) &#123;</span><br><span class="line">          return true;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  return false;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>example of use:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const a = &#123;&#125;;</span><br><span class="line">const b = &#123; a &#125;;</span><br><span class="line">a.b = b;</span><br><span class="line"></span><br><span class="line">console.log(hasCircularReference(a)); // true</span><br></pre></td></tr></table></figure>
+
+<p>This method recursively traverses all object properties and uses the WeakSet to record the visited objects to avoid memory leaks.</p>
+<h2 id="Other-detection-schemes"><a href="#Other-detection-schemes" class="headerlink" title="Other detection schemes"></a>Other detection schemes</h2><ul>
+<li><strong>non-recursive way</strong> : Use stack or queue traversal, but with higher logic complexity.</li>
+<li><strong>Third-party libraries</strong> : such <code>circular-json </code>, <code>flatted </code>can automatically handle the serialization of circular references.</li>
+<li><strong>Deep Copy Tool</strong> for example, lodash’s <code>cloneDeepWith </code>also built-in circular reference detection.</li>
+</ul>
+<h2 id="Attention-point"><a href="#Attention-point" class="headerlink" title="Attention point"></a>Attention point</h2><ul>
+<li>A WeakSet can only store object references, not primitive types.</li>
+<li>Detection performance is related to object size and depth, and recursion is slower for large objects.</li>
+<li>Function, Symbol type properties can usually be ignored or treated as specific business.</li>
+</ul>
+<hr>
+<h2 id="Interview-answer-demonstration"><a href="#Interview-answer-demonstration" class="headerlink" title="Interview answer demonstration"></a>Interview answer demonstration</h2><p><strong>question: How do I detect if an object has a circular reference?</strong></p>
+<p>Example answer:</p>
+<p>“The key to circular reference detection is to recursively traverse object properties, using a data structure (such as WeakSet) to record the object references that have been accessed. If the visited object is encountered again during recursion, a circular reference is present.</p>
+<p>In concrete implementation, a recursive function can be written, passed in as auxiliary storage, added to the WeakSet every time an object is traversed, and true is returned if it is found to exist when traversing its properties.”</p>
+<hr>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>circular references are a common problem in complex object structures, and proper detection can avoid errors in serialization and deep copy. Using recursive traversal combined with WeakSet to record the Accessed objects is a simple and efficient detection method that does not cause memory leaks. Understanding this mechanism helps to improve code robustness and debugging efficiency.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

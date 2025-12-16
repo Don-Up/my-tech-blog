@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Relationship between prototype, constructor, instance, prototype chainforewordJavaScript is a prototype-based language with an object system that diff"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Relationship between prototype, constructor, instance, prototype chain"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Relationship between prototype, constructor, instance, prototype chainforewordJavaScript is a prototype-based language with an object system that diff"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Relationship between prototype, constructor, instance, prototype chain - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Relationship between prototype, constructor, instance, prototype chain</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-09-22
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Relationship-between-prototype-constructor-instance-prototype-chain"><a href="#Relationship-between-prototype-constructor-instance-prototype-chain" class="headerlink" title="Relationship between prototype, constructor, instance, prototype chain"></a>Relationship between prototype, constructor, instance, prototype chain</h1><h2 id="foreword"><a href="#foreword" class="headerlink" title="foreword"></a>foreword</h2><p>JavaScript is a prototype-based language with an object system that differs from traditional class-based languages such as Java or C ++. Many developers are confused by the terms “prototype,” “constructor,” “instance,” “prototype chain,” and so on. These concepts are related to each other and have clear responsibilities, which is the key to understanding the object-oriented mechanism of JS. This article will use as popular as possible to clarify the essential relationship between them.</p>
+<h2 id="Understand-the-nature-and-connections-of-these-key-concepts"><a href="#Understand-the-nature-and-connections-of-these-key-concepts" class="headerlink" title="Understand the nature and connections of these key concepts"></a>Understand the nature and connections of these key concepts</h2><h3 id="Constructor-Constructor"><a href="#Constructor-Constructor" class="headerlink" title="Constructor (Constructor)"></a>Constructor (Constructor)</h3><p>the constructor is essentially an ordinary function, <strong>when used</strong> <code>new </code><strong>keyword when it is called</strong> , it creates a new object and puts the function inside. <code>this </code>point to this new object.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Person</span>(<span class="params">name</span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">name</span> = name;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Here. <code>Person </code>is the Constructor used to create the object.</p>
+<h3 id="The-Instance-Instance"><a href="#The-Instance-Instance" class="headerlink" title="The Instance (Instance)"></a>The Instance (Instance)</h3><p>use <code>new </code>the object generated after calling the constructor is called <strong>examples</strong> . It is an entity built from a constructor and has properties and methods defined by the constructor.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> p1 = <span class="keyword">new</span> <span class="title class_">Person</span>(<span class="string">&#x27;Alice&#x27;</span>); <span class="comment">// p1 就是实例</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Prototype-Prototype"><a href="#Prototype-Prototype" class="headerlink" title="Prototype (Prototype)"></a>Prototype (Prototype)</h3><p>In JavaScript, every function (including constructors) has a default <code>prototype </code>property, pointing to an object called <strong>prototype object</strong> . It is used to share methods or properties:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Person</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">sayHello</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Hello, my name is &#x27;</span> + <span class="variable language_">this</span>.<span class="property">name</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>all through <code>new Person() </code>the instance objects created are implicitly linked internally ( <code>[[Prototype] or__proto__ </code>) point <code>Person.prototype </code>.</p>
+<h3 id="Prototype-Chain"><a href="#Prototype-Chain" class="headerlink" title="Prototype Chain"></a>Prototype Chain</h3><p>when you access a property of an object, the JavaScript engine first looks to see if the property exists on the object itself, and if not, follows its <code>[[Prototype]] </code>(I. E. <code>__Proto__ </code>) Look up. This search path is called <strong>prototype chain</strong> .</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p1.<span class="title function_">sayHello</span>(); <span class="comment">// 找不到 sayHello，会到 p1.__proto__（即 Person.prototype）上查找</span></span><br></pre></td></tr></table></figure>
+
+<p>The end of the final prototype chain is <code>Object.prototype </code>, further up is <code>Object.prototype.__proto __</code>, it is <code>null </code>.</p>
+<h3 id="Visual-relationship-arrangement"><a href="#Visual-relationship-arrangement" class="headerlink" title="Visual relationship arrangement"></a>Visual relationship arrangement</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Person</span>(<span class="params">name</span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">name</span> = name;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Person</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">sayHi</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Hi!&#x27;</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> p1 = <span class="keyword">new</span> <span class="title class_">Person</span>(<span class="string">&#x27;Alice&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>p1 </code>is an instance, its <code>__Proto__ </code>point <code>Person.prototype </code></li>
+<li><code>Person.prototype </code>is a prototype object with shared methods <code>sayHi </code></li>
+<li><code>Person </code>is a constructor that has <code>prototype </code>property</li>
+<li><code>Person.prototype.__proto __ </code>yes <code>Object.prototype </code></li>
+<li><code>Object.prototype.__proto__ === null </code></li>
+</ul>
+<hr>
+<h2 id="interview-answer-demonstration"><a href="#interview-answer-demonstration" class="headerlink" title="interview answer demonstration"></a>interview answer demonstration</h2><p><strong>question: Explain the relationship between prototype, constructor, instance, prototype chain?</strong></p>
+<p>Example answer:</p>
+<p>“In JavaScript, the constructor is a way to pass. <code>new </code>to create a function of the instance object. When we use <code>new</code>When the constructor is called, an instance is generated, and the instance’s <code>__Proto__ </code>pointing to the constructor <code>prototype </code>property. This <code>prototype </code>objects are called prototypes.</p>
+<p>If we cannot find a property or method in the instance itself when we access it, we will go to it. <code>__Proto__ </code>find, that is, search up the prototype chain until you find or reach it. <code>Object.prototype.__proto __ </code>so far. This mechanism is the prototype chain.</p>
+<p>To sum up: The constructor creates an instance, the instance points to the prototype object of the constructor through an internal prototype link, and the prototype chain is the path structure for object Property lookup.”</p>
+<hr>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>understanding the relationship between objects and prototypes in JavaScript is the basis for a deep grasp of its object-oriented characteristics. Constructors are responsible for creating objects, instances share methods through prototype objects, and prototype chains are the mechanism for connecting all objects to find behavior. Mastering the connection between these four can help you more flexibly implement inheritance, extend object functionality, and understand the underlying operating principles of JavaScript.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

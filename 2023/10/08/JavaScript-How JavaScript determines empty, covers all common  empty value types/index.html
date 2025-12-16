@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="How JavaScript determines empty, covers all common  empty value typesForewordin daily development, “empty” is one of the most common operations perfor"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How JavaScript determines empty, covers all common  empty value types"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="How JavaScript determines empty, covers all common  empty value typesForewordin daily development, “empty” is one of the most common operations perfor"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How JavaScript determines empty, covers all common  empty value types - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How JavaScript determines empty, covers all common  empty value types</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-10-08
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="How-JavaScript-determines-empty-covers-all-common-empty-value-types"><a href="#How-JavaScript-determines-empty-covers-all-common-empty-value-types" class="headerlink" title="How JavaScript determines empty, covers all common  empty value types"></a>How JavaScript determines empty, covers all common  empty value types</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in daily development, “empty” is one of the most common operations performed by almost every JavaScript developer. The seemingly simple task actually hides many details behind it, because the meaning of “empty” in JavaScript can be very broad: not only includes <code>null </code>and <code>undefined </code>may also include empty strings, empty arrays, empty objects, numbers <code>0 </code>, NaN, even empty <code>Set </code>, <code>Map </code>, <code>WeakMap </code>and other structures. This article will systematically explain how to correctly judge “null values” under various semantics “.</p>
+<h2 id="Common-Null-Type-Classification"><a href="#Common-Null-Type-Classification" class="headerlink" title="Common Null Type Classification"></a>Common Null Type Classification</h2><p>in JavaScript, we usually think of the following values as “empty:</p>
+<ul>
+<li><code>undefined </code>: undefined value</li>
+<li><code>null </code>: Null value (explicitly null)</li>
+<li><code>&#39;&#39; </code>(Empty string): a string of length 0</li>
+<li><code>[] </code>(Empty array): Array length is 0</li>
+<li><code>&#123;&#125; </code>(Empty object): an object with no own attributes</li>
+<li><code>0 </code>(Numeric Zero): Null for numeric type”</li>
+<li><code>NaN </code>illegal Numbers</li>
+<li><code>false </code>: Boolean “false value”</li>
+<li><code>new Set() </code>&#x2F; <code>new Map() </code>A collection or mapping with no elements</li>
+</ul>
+<h2 id="general-empty-judgment-method"><a href="#general-empty-judgment-method" class="headerlink" title="general empty judgment method"></a>general empty judgment method</h2><h3 id="simple-data-type-null"><a href="#simple-data-type-null" class="headerlink" title="simple data type null"></a>simple data type null</h3><p>logical NOT operator available for simple types such as string, number, Boolean, null, undefined <code>! </code>Quick Judgment:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function isEmptySimple(val) &#123;</span><br><span class="line">  return !val;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>this writing returns <code>true </code>:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">isEmptySimple(null)        // true</span><br><span class="line">isEmptySimple(undefined)   // true</span><br><span class="line">isEmptySimple(&#x27;&#x27;)          // true</span><br><span class="line">isEmptySimple(0)           // true</span><br><span class="line">isEmptySimple(NaN)         // true</span><br><span class="line">isEmptySimple(false)       // true</span><br></pre></td></tr></table></figure>
+
+<p>note that this method does not determine empty arrays, empty objects, and empty collections, because they are “true” in a Boolean environment “.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">![]        // false</span><br><span class="line">!&#123;&#125;        // false</span><br><span class="line">!new Set() // false</span><br></pre></td></tr></table></figure>
+
+<h3 id="Judge-empty-array"><a href="#Judge-empty-array" class="headerlink" title="Judge empty array"></a>Judge empty array</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function isEmptyArray(arr) &#123;</span><br><span class="line">  return Array.isArray(arr) &amp;&amp; arr.length === 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="judge-Empty-Object"><a href="#judge-Empty-Object" class="headerlink" title="judge Empty Object"></a>judge Empty Object</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function isEmptyObject(obj) &#123;</span><br><span class="line">  return obj </span><br><span class="line">    &amp;&amp; typeof obj === &#x27;object&#x27;</span><br><span class="line">    &amp;&amp; !Array.isArray(obj)</span><br><span class="line">    &amp;&amp; Object.keys(obj).length === 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>you can also use:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Object.getOwnPropertyNames(obj).length === 0</span><br></pre></td></tr></table></figure>
+
+<h3 id="determine-empty-Map-Set"><a href="#determine-empty-Map-Set" class="headerlink" title="determine empty Map &#x2F; Set"></a>determine empty Map &#x2F; Set</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function isEmptyMap(map) &#123;</span><br><span class="line">  return map instanceof Map &amp;&amp; map.size === 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function isEmptySet(set) &#123;</span><br><span class="line">  return set instanceof Set &amp;&amp; set.size === 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="comprehensive-null-function"><a href="#comprehensive-null-function" class="headerlink" title="comprehensive null function"></a>comprehensive null function</h3><p>here’s a generic function that handles all the common cases:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">function isTrulyEmpty(val) &#123;</span><br><span class="line">  if (val == null) return true; // covers null and undefined</span><br><span class="line"></span><br><span class="line">  if (typeof val === &#x27;string&#x27; &amp;&amp; val.trim() === &#x27;&#x27;) return true;</span><br><span class="line"></span><br><span class="line">  if (typeof val === &#x27;number&#x27; &amp;&amp; (val === 0 || isNaN(val))) return true;</span><br><span class="line"></span><br><span class="line">  if (typeof val === &#x27;boolean&#x27; &amp;&amp; val === false) return true;</span><br><span class="line"></span><br><span class="line">  if (Array.isArray(val) &amp;&amp; val.length === 0) return true;</span><br><span class="line"></span><br><span class="line">  if (val instanceof Map || val instanceof Set) return val.size === 0;</span><br><span class="line"></span><br><span class="line">  if (typeof val === &#x27;object&#x27;) &#123;</span><br><span class="line">    return Object.keys(val).length === 0;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return false;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>This function can basically cover all the definitions of “empty” in daily business.</p>
+<hr>
+<h2 id="Interview-answer-demonstration"><a href="#Interview-answer-demonstration" class="headerlink" title="Interview answer demonstration"></a>Interview answer demonstration</h2><p><strong>question: How to tell if a value is empty in JS? Please override common types such as array, object, string, null, undefined, empty collection, etc.</strong></p>
+<p>Example answer:</p>
+<p>“‘Null’ in JavaScript is a broad concept, including null, undefined, empty string, empty array, empty object, number 0, NaN, false, empty Map, empty Set, etc.</p>
+<p>We can use different ways to judge empty:</p>
+<ul>
+<li>simple type <code>! val </code>judgment</li>
+<li>empty array <code>Array.isArray(val) &amp;&amp; val.length === 0 </code></li>
+<li>empty object <code>Object.keys(val).length === 0 </code></li>
+<li>empty Map &#x2F; Set <code>val.size === 0 </code></li>
+</ul>
+<p>comprehensive judgment can be written as a unified function, combined with type and structure judgment to achieve full coverage.”</p>
+<hr>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>in JavaScript, judging empty is not only a grammatical judgment, but also a manifestation of the cognition of data structure. Different data types have different “null” performance and need to be used flexibly. <code>typeof</code>, <code>Array.isArray </code>, <code>Object.keys </code>, <code>val.size </code>and other methods to judge. Only by understanding these differences can we write robust and reliable null logic in real projects to avoid logical loopholes and runtime exceptions.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

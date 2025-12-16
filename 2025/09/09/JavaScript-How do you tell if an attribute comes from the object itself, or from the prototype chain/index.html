@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="How do you tell if an attribute comes from the object itself, or from the prototype chainForewordin JavaScript, the properties of an object can be def"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How do you tell if an attribute comes from the object itself, or from the prototype chain"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="How do you tell if an attribute comes from the object itself, or from the prototype chainForewordin JavaScript, the properties of an object can be def"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How do you tell if an attribute comes from the object itself, or from the prototype chain - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How do you tell if an attribute comes from the object itself, or from the prototype chain</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-09-09
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="How-do-you-tell-if-an-attribute-comes-from-the-object-itself-or-from-the-prototype-chain"><a href="#How-do-you-tell-if-an-attribute-comes-from-the-object-itself-or-from-the-prototype-chain" class="headerlink" title="How do you tell if an attribute comes from the object itself, or from the prototype chain"></a>How do you tell if an attribute comes from the object itself, or from the prototype chain</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in JavaScript, the properties of an object can be defined directly in the object itself, or inherited through the prototype chain. When we access a property, the engine looks in the object itself, and then looks along the prototype chain. Understanding the “attribution” of properties is important for debugging code, avoiding property overrides, and determining inheritance relationships. This article will make it clear how to distinguish whether a property is defined in the object itself or inherited from its prototype chain.</p>
+<h2 id="Review-of-Attribute-Access-Mechanisms"><a href="#Review-of-Attribute-Access-Mechanisms" class="headerlink" title="Review of Attribute Access Mechanisms"></a>Review of Attribute Access Mechanisms</h2><p>when accessing an object’s properties, the JavaScript engine follows the following lookup path:</p>
+<ol>
+<li>first check whether the object itself has this property (that is, the object’s own property)</li>
+<li>if not, look at the object’s <code>[[Prototype]] </code>which is its prototype object</li>
+<li>check again whether the prototype object has the property</li>
+<li>if not, continue to look up <code>Object.prototype </code></li>
+<li>if the entire prototype chain does not have this property, return <code>undefined </code></li>
+</ol>
+<p>this search path is the so-called “prototype chain”.</p>
+<p>Examples:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Person</span>(<span class="params">name</span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">name</span> = name;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title class_">Person</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">sayHello</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Hello&#x27;</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> p = <span class="keyword">new</span> <span class="title class_">Person</span>(<span class="string">&#x27;Alice&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p><code>p.name </code>is a property of the instance itself, and, <code>p.sayHello </code>is inherited from the prototype.</p>
+<h2 id="How-to-determine-attribute-source"><a href="#How-to-determine-attribute-source" class="headerlink" title="How to determine attribute source"></a>How to determine attribute source</h2><h3 id="using-hasOwnProperty"><a href="#using-hasOwnProperty" class="headerlink" title="using hasOwnProperty"></a>using hasOwnProperty</h3><p>the most common and authoritative way is to use <code>hasOwnProperty() </code>method to determine whether a property is a property of the object itself.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p.<span class="title function_">hasOwnProperty</span>(<span class="string">&#x27;name&#x27;</span>); <span class="comment">// true</span></span><br><span class="line">p.<span class="title function_">hasOwnProperty</span>(<span class="string">&#x27;sayHello&#x27;</span>); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+<p>This method only returns the object “own properties” and does not check the prototype chain.</p>
+<h3 id="Use-the-in-operator-with-hasOwnProperty"><a href="#Use-the-in-operator-with-hasOwnProperty" class="headerlink" title="Use the in operator with hasOwnProperty"></a>Use the in operator with hasOwnProperty</h3><p><code>in </code>you can determine whether the attribute exists in the object itself or in the prototype chain.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;name&#x27;</span> <span class="keyword">in</span> p;       <span class="comment">// true</span></span><br><span class="line"><span class="string">&#x27;sayHello&#x27;</span> <span class="keyword">in</span> p;   <span class="comment">// true</span></span><br><span class="line"><span class="string">&#x27;toString&#x27;</span> <span class="keyword">in</span> p;   <span class="comment">// true</span></span><br><span class="line"><span class="string">&#x27;age&#x27;</span> <span class="keyword">in</span> p;        <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+<p>But if you want to determine whether an attribute is “present” and “from itself”, you must combine it at the same time:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="string">&#x27;sayHello&#x27;</span> <span class="keyword">in</span> p &amp;&amp; !p.<span class="title function_">hasOwnProperty</span>(<span class="string">&#x27;sayHello&#x27;</span>)) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;sayHello 来自原型&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="points-for-attention-during-Traverse"><a href="#points-for-attention-during-Traverse" class="headerlink" title="points for attention during Traverse"></a>points for attention during Traverse</h3><p>use <code>for...in </code>when traversing an object, enumerable properties on the prototype chain are included by default. Can be used <code>Object.keys() </code>or <code>Object.getOwnPropertyNames() </code>gets only its own properties.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> key <span class="keyword">in</span> p) &#123;</span><br><span class="line">  <span class="keyword">if</span> (p.<span class="title function_">hasOwnProperty</span>(key)) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(key + <span class="string">&#x27; 是自身属性&#x27;</span>);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(key + <span class="string">&#x27; 是继承属性&#x27;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Interview-answer-demonstration"><a href="#Interview-answer-demonstration" class="headerlink" title="Interview answer demonstration"></a>Interview answer demonstration</h2><p><strong>question: How do I tell if an attribute comes from the object itself or the prototype chain?</strong></p>
+<p>Example answer:</p>
+<p>“Can be used <code>hasOwnProperty()</code>Method to determine whether a property belongs to the object itself, it will only return the properties directly owned by the object without checking the prototype chain. If returning <code>false </code>, indicating that this property may come from an object in the prototype chain.</p>
+<p>For example:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">obj.<span class="title function_">hasOwnProperty</span>(<span class="string">&#x27;prop&#x27;</span>) <span class="comment">// true 表示是自身属性，false 表示可能是继承来的</span></span><br></pre></td></tr></table></figure>
+
+<p>if you also want to determine whether the attribute exists but is inherited, you can combine <code>in </code>operators are judged together.”</p>
+<hr>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>mastering the method of determining the source of attributes is an important step in understanding the JavaScript prototype mechanism. Whether it is to avoid attribute conflicts or to optimize code structure, we should be skilled in using <code>hasOwnProperty() </code>to identify attribute attribution. Further, it can be combined. <code>in </code>operators and property traversal tools to build more robust object processing logic.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
