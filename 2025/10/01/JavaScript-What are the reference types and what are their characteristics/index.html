@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What are the reference types and what are their characteristicsForewordin JavaScript, reference types are an important part of variable storage and pa"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What are the reference types and what are their characteristics"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What are the reference types and what are their characteristicsForewordin JavaScript, reference types are an important part of variable storage and pa"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What are the reference types and what are their characteristics - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What are the reference types and what are their characteristics</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-10-01
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-are-the-reference-types-and-what-are-their-characteristics"><a href="#What-are-the-reference-types-and-what-are-their-characteristics" class="headerlink" title="What are the reference types and what are their characteristics"></a>What are the reference types and what are their characteristics</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in JavaScript, reference types are an important part of variable storage and passing, and understanding them is critical to mastering memory management and data manipulation. The reference type is different from the value type, and the operation is more of a reference to the memory address. This article will systematically explain the common reference types in JavaScript and their core characteristics.</p>
+<h2 id="Reference-Types-in-JavaScript"><a href="#Reference-Types-in-JavaScript" class="headerlink" title="Reference Types in JavaScript"></a>Reference Types in JavaScript</h2><p>reference types are essentially objects. They include:</p>
+<ul>
+<li>ordinary Object</li>
+<li>Array (Array)</li>
+<li>Function (Function)</li>
+<li>Date Object (Date)</li>
+<li>regular Expression Object (RegExp)</li>
+<li>new ES6 data structures such as Map, Set, WeakMap, and WeakSet</li>
+<li>user-defined object</li>
+</ul>
+<p>these types are objects and have properties and methods.</p>
+<h2 id="Core-features-of-reference-types"><a href="#Core-features-of-reference-types" class="headerlink" title="Core features of reference types"></a>Core features of reference types</h2><ol>
+<li><strong>storage mode</strong><br>reference type variables store the address (reference) of the object in heap memory, not the value of the object itself.</li>
+<li><strong>Variability</strong><br>reference types are mutable. Even if the variable is a constant (const) declaration, internal object properties can still be modified.</li>
+<li><strong>Assignment is a copy reference</strong><br>The assignment operation copies the memory address, multiple variables point to the same object, and any modification will be reflected in all variables that refer to the object.</li>
+<li><strong>Function parameter passing is to pass the reference address.</strong><br>When a reference type is passed in as a function parameter, the reference address of the object is passed, and the content of the object can be modified inside the function, and changes can be observed outside.</li>
+<li><strong>Has a prototype chain</strong><br>reference types inherit from <code>Object.prototype </code>has a prototype chain that supports inheritance and method sharing.</li>
+</ol>
+<h2 id="Reference-Types-and-Garbage-Collection"><a href="#Reference-Types-and-Garbage-Collection" class="headerlink" title="Reference Types and Garbage Collection"></a>Reference Types and Garbage Collection</h2><p>because reference types occupy heap memory, the JavaScript engine uses a garbage collection mechanism to reclaim objects that are no longer referenced to avoid memory leaks.</p>
+<h2 id="Example-Description"><a href="#Example-Description" class="headerlink" title="Example Description"></a>Example Description</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">const obj1 = &#123; a: 1 &#125;;</span><br><span class="line">const obj2 = obj1;</span><br><span class="line">obj2.a = 2;</span><br><span class="line">console.log(obj1.a); // 2，因为 obj1 和 obj2 引用同一个对象</span><br><span class="line"></span><br><span class="line">function modify(o) &#123;</span><br><span class="line">  o.a = 3;</span><br><span class="line">&#125;</span><br><span class="line">modify(obj1);</span><br><span class="line">console.log(obj2.a); // 3，函数内部修改影响外部</span><br></pre></td></tr></table></figure>
+
+<h2 id="details-that-need-attention"><a href="#details-that-need-attention" class="headerlink" title="details that need attention"></a>details that need attention</h2><ul>
+<li>reference types can produce new copies of objects through shallow or deep copies, avoiding direct sharing of references.</li>
+<li>Functions are special objects that can be called to execute.</li>
+<li><code>null </code>is a special value type, not a reference type.</li>
+</ul>
+<hr>
+<h2 id="Interview-answer-demonstration"><a href="#Interview-answer-demonstration" class="headerlink" title="Interview answer demonstration"></a>Interview answer demonstration</h2><p><strong>question: What are the reference types in JavaScript and what are their characteristics?</strong></p>
+<p>Example answer:</p>
+<p>“The reference types in JavaScript are basically objects, including ordinary objects, arrays, functions, dates, regular expressions, and ES6 Map, Set, etc. They store the reference address of the object in heap memory, not the actual value. The reference type is variable, the reference address is copied when assigning, multiple variables will point to the same object, and modifying one of the variables will affect the other variables. When a function passes a parameter, it passes a reference to the object, and internal changes to the function are reflected to the outside. Reference types have prototype chains to support inheritance and sharing methods, and memory management is handled automatically by the garbage collection mechanism.”</p>
+<hr>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>mastering the types and characteristics of reference types helps to understand the memory model and data manipulation behavior of JavaScript. Reasonable use of reference types, combined with copy technology, can effectively avoid data pollution and potential performance problems, improve the robustness of the code.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
