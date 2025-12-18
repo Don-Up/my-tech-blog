@@ -13,6 +13,8 @@
     
 
     
+        <meta name="description" content="What is the result of typeof null and whyForewordtypeof it is the basic operator in JavaScript to determine the type of a variable, but its performanc"/>
+    
 
     <!--Author-->
     
@@ -21,10 +23,12 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Tech Blog"/>
+        <meta property="og:title" content="What is the result of typeof null and why"/>
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What is the result of typeof null and whyForewordtypeof it is the basic operator in JavaScript to determine the type of a variable, but its performanc"/>
     
 
     <!--Open Graph Site Name-->
@@ -32,7 +36,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website"/>
+        <meta property="og:type" content="article"/>
     
 
     <!--Page Cover-->
@@ -51,7 +55,7 @@
 
     <!-- Title -->
     
-    <title>Archives: 2023/1 - Tech Blog</title>
+    <title>What is the result of typeof null and why - Tech Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -155,62 +159,106 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>2023/1</h1>
+                <div class="post-heading">
+                    <h1>What is the result of typeof null and why</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-03-04
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/my-tech-blog/2023/01/26/JavaScript-In the global scope, the variables declared with const and let are not on window, so where are they-How to get it/">
-        <h1 class="post-title archive">
-            In the global scope, the variables declared with const and let are not on window, so where are they-How to get it
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-01-26
-    </p>
-</div>
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/my-tech-blog/2023/01/15/JavaScript-Difference between typeof and instanceof/">
-        <h1 class="post-title archive">
-            Difference between typeof and instanceof
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-01-15
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-is-the-result-of-typeof-null-and-why"><a href="#What-is-the-result-of-typeof-null-and-why" class="headerlink" title="What is the result of typeof null and why"></a>What is the result of typeof null and why</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p><code>typeof </code>it is the basic operator in JavaScript to determine the type of a variable, but its performance in some cases is misleading, especially <code>typeof null </code>return <code>&quot;object&quot; </code>this seemingly contradictory result often confuses developers. This article will explain in detail <code>typeof null </code>return <code>&quot;object&quot; </code>reasons and the historical background behind it.</p>
+<h2 id="Why-typeof-null-returns-“object”"><a href="#Why-typeof-null-returns-“object”" class="headerlink" title="Why typeof null returns “object”"></a>Why typeof null returns “object”</h2><p>according to intuition, <code>null </code>represents “no value” or “null value”, which should be recognized as a separate type. But in JavaScript, <code>typeof null </code>return is <code>&quot;object&quot; </code>.</p>
+<p>This is because when JavaScript was originally designed, the type of the underlying value was identified by a single binary bit. <code>null</code>The internal representation of is a null pointer, which is a tagged pointer of the object type. In earlier implementations, all values pointing to objects were marked <code>&quot;object&quot; </code>, and <code>null </code>as an object pointer to a null, it is also classified <code>&quot;object&quot; </code>.</p>
+<p>This design has become a historical problem. Subsequent versions of the language have not corrected this behavior and continue to retain it for compatibility.</p>
+<h2 id="Type-classification-of-the-typeof-operator"><a href="#Type-classification-of-the-typeof-operator" class="headerlink" title="Type classification of the typeof operator"></a>Type classification of the typeof operator</h2><p><code>typeof </code>the following strings can be returned:</p>
+<ul>
+<li><code>&quot;undefined&quot; </code></li>
+<li><code>&quot;boolean&quot; </code></li>
+<li><code>&quot;number&quot; </code></li>
+<li><code>&quot;string&quot; </code></li>
+<li><code>&quot;symbol&quot; </code></li>
+<li><code>&quot;bigint&quot; </code></li>
+<li><code>&quot;function&quot; </code></li>
+<li><code>&quot;object&quot; </code></li>
 </ul>
+<p><code>null </code>for historical reasons, it is classified. <code>&quot;object&quot; </code>.</p>
+<h2 id="How-to-correctly-determine-null"><a href="#How-to-correctly-determine-null" class="headerlink" title="How to correctly determine null?"></a>How to correctly determine null?</h2><p>Due <code>typeof null </code>return<code>&quot;object&quot; </code>to determine whether the variable is null, you cannot simply rely on it. <code>typeof </code>, and strict equality judgment should be used:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">value === null</span><br></pre></td></tr></table></figure>
+
+<p>or combined with type judgment:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">typeof value === &#x27;object&#x27; &amp;&amp; value === null</span><br></pre></td></tr></table></figure>
+
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p><code>typeof null </code>return <code>&quot;object&quot; </code>it is a legacy of JavaScript design and has become part of the language specification. Understanding this helps to avoid misunderstandings and errors in type judgment.</p>
+<hr>
+<h2 id="Interview-answer-demonstration"><a href="#Interview-answer-demonstration" class="headerlink" title="Interview answer demonstration"></a>Interview answer demonstration</h2><p><strong>question: What is the result of typeof null and why?</strong></p>
+<p>Example answer:</p>
+<p>“ <code>typeof null </code>return is <code>&quot;object&quot; </code>this is a historical legacy of the early design of the JavaScript language. Since the type label was used internally at the time to identify the data type, <code>null </code>is represented as a pointer to a null object and is therefore classified as an object type. Although this is not intuitively expected, this behavior has been retained for compatibility. So judge whether it is <code>null </code>when, should not simply use <code>typeof </code>, but to use strict equal to judgment.”</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>understanding <code>typeof null </code>return <code>&quot;object&quot; </code>the reason for this is to help developers use type judgment correctly and avoid logical errors, which is an important part of mastering the JavaScript type system.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />
