@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What is the difference between Object.is() and the comparison operators ‘&amp;#x3D;&amp;#x3D;&amp;#x3D;’, ‘&amp;#x3D; &amp;#x3D;‘forewordwhen comparing values in JavaScri"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What is the difference between Object.is() and the comparison operators &#39;===&#39;, &#39;= =‘"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What is the difference between Object.is() and the comparison operators ‘&amp;#x3D;&amp;#x3D;&amp;#x3D;’, ‘&amp;#x3D; &amp;#x3D;‘forewordwhen comparing values in JavaScri"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What is the difference between Object.is() and the comparison operators &#39;===&#39;, &#39;= =‘ - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What is the difference between Object.is() and the comparison operators '===', '= =‘</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-02-11
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-is-the-difference-between-Object-is-and-the-comparison-operators-‘-’-‘-‘"><a href="#What-is-the-difference-between-Object-is-and-the-comparison-operators-‘-’-‘-‘" class="headerlink" title="What is the difference between Object.is() and the comparison operators ‘&#x3D;&#x3D;&#x3D;’, ‘&#x3D; &#x3D;‘"></a>What is the difference between Object.is() and the comparison operators ‘&#x3D;&#x3D;&#x3D;’, ‘&#x3D; &#x3D;‘</h1><h2 id="foreword"><a href="#foreword" class="headerlink" title="foreword"></a>foreword</h2><p>when comparing values in JavaScript, common operators are the strict equality operator ( <code>=== </code>), abstract equality operator ( <code>= = </code>), and the introduction of ES6 <code>Object.is() </code>methods. They are ostensibly used for comparison, but there are subtle differences in specific behavior and semantics. This paper analyzes the differences between the three and their respective application scenarios.</p>
+<h2 id="The-basic-difference-between-the-three"><a href="#The-basic-difference-between-the-three" class="headerlink" title="The basic difference between the three"></a>The basic difference between the three</h2><h3 id="1-Abstract-equality-operator"><a href="#1-Abstract-equality-operator" class="headerlink" title="1. = = (Abstract equality operator)"></a>1. <code>= = </code>(Abstract equality operator)</h3><p><code>= = </code>A type conversion (type casting) is performed during the comparison, and then the values are compared. Because it will be converted automatically, it may lead to some unexpected results.</p>
+<p>Example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">0 == false;           // true</span><br><span class="line">&#x27;&#x27; == 0;              // true</span><br><span class="line">null == undefined;    // true</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-Strict-equality-operator"><a href="#2-Strict-equality-operator" class="headerlink" title="2. === (Strict equality operator)"></a>2. <code>=== </code>(Strict equality operator)</h3><p><code>=== </code>no type conversion, required type and value are the same before returning <code>true </code>.</p>
+<p>Example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">0 === false;          // false</span><br><span class="line">&#x27;&#x27; === 0;             // false</span><br><span class="line">null === undefined;   // false</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-Object-is"><a href="#3-Object-is" class="headerlink" title="3. Object.is()"></a>3. <code>Object.is()</code></h3><p><code>Object.is() </code>used to determine whether two values are strictly equal, similar <code>=== </code>but there are two special ones:</p>
+<ul>
+<li>distinction <code>+0 </code>and <code>-0 </code>, <code>Object.is(+0, -0) </code>return <code>false </code>, and <code>+0 === -0 </code>return <code>true </code>.</li>
+<li>Think <code>NaN </code>and <code>NaN </code>are equal, <code>Object.is(NaN, NaN) </code>return <code>true </code>, and <code>NaN === NaN </code>return <code>false </code>.</li>
+</ul>
+<p>Example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Object.is(+0, -0);    // false</span><br><span class="line">+0 === -0;            // true</span><br><span class="line"></span><br><span class="line">Object.is(NaN, NaN);  // true</span><br><span class="line">NaN === NaN;          // false</span><br></pre></td></tr></table></figure>
+
+<h2 id="summarize-the-difference"><a href="#summarize-the-difference" class="headerlink" title="summarize the difference"></a>summarize the difference</h2><ul>
+<li><code>= =</code>Allows conversion comparison between different types, which is prone to implicit type conversion errors and is not recommend in strict code.</li>
+<li><code>=== </code>requires the type and value to be exactly the same, but put <code>+0 </code>and <code>-0 </code>treated as equal <code>NaN </code>regarded as unequal.</li>
+<li><code>Object.is() </code>suitable for the need to distinguish <code>+0 </code>, <code>-0 </code>, and correct judgment <code>NaN </code>the same scene.</li>
+</ul>
+<hr>
+<h2 id="Interview-answer-demonstration"><a href="#Interview-answer-demonstration" class="headerlink" title="Interview answer demonstration"></a>Interview answer demonstration</h2><p><strong>question: What is the difference between Object.is() and “&#x3D;&#x3D;&#x3D;”, “&#x3D; &#x3D;?</strong></p>
+<p>Example answer:</p>
+<p>“ <code>= = </code>is abstract equality and will be converted before comparison, so unexpected results may occur and are generally not recommended. <code>=== </code>is strictly equal, does not do type conversion, only type and value are the same to return true, but it put. <code>+0 </code>and <code>-0 </code>treated as equal, while<code>NaN </code>and <code>NaN </code>regarded as unequal. <code>Object.is() </code>similar in behavior <code>=== </code>but the difference is that it distinguishes <code>+0 </code>and <code>-0 </code>, and think <code>NaN </code>and <code>NaN </code>it is equal and suitable for use when there are strict requirements for these two special situations.”</p>
+<hr>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>understanding the differences between the three can help developers choose the correct comparison method, avoid the errors caused by implicit type conversion, and improve the reliability and accuracy of the code.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

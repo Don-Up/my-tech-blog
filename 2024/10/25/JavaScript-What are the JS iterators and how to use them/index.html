@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What are the JS iterators and how to use themForewordsince ES6, JavaScript has introduced iterators and iterable protocols, greatly enriching the abil"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What are the JS iterators and how to use them"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What are the JS iterators and how to use themForewordsince ES6, JavaScript has introduced iterators and iterable protocols, greatly enriching the abil"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What are the JS iterators and how to use them - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What are the JS iterators and how to use them</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-10-25
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-are-the-JS-iterators-and-how-to-use-them"><a href="#What-are-the-JS-iterators-and-how-to-use-them" class="headerlink" title="What are the JS iterators and how to use them"></a>What are the JS iterators and how to use them</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>since ES6, JavaScript has introduced iterators and iterable protocols, greatly enriching the ability to manipulate collection types. Our commonly used structures such as arrays, strings, Map, Set, etc., all implement built-in iterators. Understanding the behavior and usage of these iterators allows us to process data structures more efficiently and write more elegant code.</p>
+<h2 id="Iterable-objects-with-built-in-iterators"><a href="#Iterable-objects-with-built-in-iterators" class="headerlink" title="Iterable objects with built-in iterators"></a>Iterable objects with built-in iterators</h2><p>in JavaScript, as long as an object implements <code>Symbol.iterator </code>method, which returns a <code>next() </code>the object of the method, which is iterable.</p>
+<p>The following are common built-in iterable objects and their iterator behavior:</p>
+<p><strong>Array (Array)</strong><br>the array returns the value of each item in order by default:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const arr = [1, 2, 3];</span><br><span class="line">const it = arr[Symbol.iterator]();</span><br><span class="line">console.log(it.next()); // &#123; value: 1, done: false &#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>String (String)</strong><br>the string iterator traverses the string in character units:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const str = &#x27;hi&#x27;;</span><br><span class="line">for (const char of str) &#123;</span><br><span class="line">  console.log(char); // h i</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Map</strong><br>Map provides three iterator methods:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const map = new Map([[&#x27;a&#x27;, 1], [&#x27;b&#x27;, 2]]);</span><br><span class="line">map.keys();     // 键的迭代器</span><br><span class="line">map.values();   // 值的迭代器</span><br><span class="line">map.entries();  // 键值对的迭代器</span><br></pre></td></tr></table></figure>
+
+<p>these methods all return iterator objects that can be used <code>for...of </code>:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for (const [key, val] of map.entries()) &#123;</span><br><span class="line">  console.log(key, val);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Set</strong><br>iterators for Set are similar to arrays, returning values in the order they are inserted:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const set = new Set([10, 20]);</span><br><span class="line">for (const val of set) &#123;</span><br><span class="line">  console.log(val);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>TypedArray (e. G. Uint8Array)</strong><br>also realized <code>Symbol.iterator </code>, can be used <code>for...of </code>traversal.</p>
+<p><strong>arguments object</strong><br>although not an array, but supports the iterator protocol, you can. <code>for...of </code>traversal.</p>
+<p><strong>DOM collections such as NodeList</strong><br>in modern browsers <code>NodeList </code>implements the iterator interface:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const nodes = document.querySelectorAll(&#x27;div&#x27;);</span><br><span class="line">for (const node of nodes) &#123;</span><br><span class="line">  console.log(node);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="the-case-of-non-iterative-objects"><a href="#the-case-of-non-iterative-objects" class="headerlink" title="the case of non-iterative objects"></a>the case of non-iterative objects</h2><p>some objects are not iterable by default, such:</p>
+<ul>
+<li>ordinary Object</li>
+<li>custom classes (unless manually implemented <code>Symbol.iterator </code>)</li>
+</ul>
+<p>you can manually add iterators to these objects:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">const obj = &#123;</span><br><span class="line">  data: [1, 2, 3],</span><br><span class="line">  [Symbol.iterator]() &#123;</span><br><span class="line">    let i = 0;</span><br><span class="line">    return &#123;</span><br><span class="line">      next: () =&gt; (&#123;</span><br><span class="line">        value: this.data[i++],</span><br><span class="line">        done: i &gt; this.data.length</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">for (const val of obj) &#123;</span><br><span class="line">  console.log(val);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="typical-Use-Summary"><a href="#typical-Use-Summary" class="headerlink" title="typical Use Summary"></a>typical Use Summary</h2><p>these built-in iterators are commonly used in:</p>
+<ul>
+<li><code>for...of </code>traversal</li>
+<li>the expansion operator ( <code>it&#39;s... </code>)</li>
+<li>Deconstructed assignment</li>
+<li>build a new collection object, such <code>new Set(arr) </code>or <code>Array.from(map.keys()) </code></li>
+</ul>
+<hr>
+<h2 id="interview-answer-demonstration"><a href="#interview-answer-demonstration" class="headerlink" title="interview answer demonstration"></a>interview answer demonstration</h2><p><strong>question: What iterators does JS have and how do I use them?</strong></p>
+<p>Example answer:</p>
+<p>“Common iterable objects in JavaScript include arrays, strings, maps, sets, typedarrays, <code>arguments </code>and DOM’s NodeList, both of which implement <code>Symbol.iterator </code>methods. Each call to this method returns an iterator object containing <code>next() </code>methods. We can use <code>for...of </code>use these iterators, such as extended operators, to simplify traversal operations. If it is a normal object, it can be implemented manually. <code>Symbol.iterator </code>the method makes it iterative.”</p>
+<hr>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>JavaScript provides several built-in iterators, most of which are related to the collection data type. Mastering their use not only allows you to write cleaner code, but also plays an important role in dealing with advanced scenarios such as data conversion and lazy computing.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
