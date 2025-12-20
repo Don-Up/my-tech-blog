@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What are the characteristics of an iterator objectForewordafter the introduction of iterators and iterable protocols in ES6, many native constructs in"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What are the characteristics of an iterator object"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What are the characteristics of an iterator objectForewordafter the introduction of iterators and iterable protocols in ES6, many native constructs in"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What are the characteristics of an iterator object - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What are the characteristics of an iterator object</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-06-02
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-are-the-characteristics-of-an-iterator-object"><a href="#What-are-the-characteristics-of-an-iterator-object" class="headerlink" title="What are the characteristics of an iterator object"></a>What are the characteristics of an iterator object</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>after the introduction of iterators and iterable protocols in ES6, many native constructs in JavaScript are iterable, such as arrays, strings, sets, maps, etc. Master the characteristics and working mechanism of iterator, for us to understand <code>for...of </code>underlying implementations of syntactic behaviors such as, deconstructed assignment, and extension operators go a long way. This article will systematically introduce the characteristics, structural composition and practical significance of the iterator object, and explain the relevant mechanism in combination with the code case.</p>
+<h2 id="Basic-characteristics-of-iterator"><a href="#Basic-characteristics-of-iterator" class="headerlink" title="Basic characteristics of iterator"></a>Basic characteristics of iterator</h2><p>an Iterator is an interface mechanism that provides uniform access to various data structures. As long as an object implements <code>Symbol.iterator </code>method and returns a <code>next() </code>method, we call it an “iterable object”.</p>
+<p>The Iterator object is essentially a <strong>objects with specific interface conventions</strong> the core features are as follows:</p>
+<h3 id="1-Must-have-next-method"><a href="#1-Must-have-next-method" class="headerlink" title="1. Must have next() method"></a>1. Must have <code>next() </code>method</h3><p>each call to this method will return a result object <code>&#123;value, done&#125; </code>:</p>
+<ul>
+<li><code>value </code>the value returned by the current iteration.</li>
+<li><code>done </code>: A Boolean value that indicates whether the iteration has completed.</li>
+</ul>
+<h3 id="2-Each-iterator-is-state-persistent"><a href="#2-Each-iterator-is-state-persistent" class="headerlink" title="2. Each iterator is state-persistent."></a>2. Each iterator is state-persistent.</h3><p>The iterator remembers the current traversal position, unlike the traditional for loop that starts from the beginning each time, the iterator is. <strong>One-time consumption</strong> it cannot be reset.</p>
+<h3 id="3-Can-be-adopted-for-of-traversal"><a href="#3-Can-be-adopted-for-of-traversal" class="headerlink" title="3. Can be adopted for...of traversal"></a>3. Can be adopted <code>for...of </code>traversal</h3><p>as long as the object implements <code>Symbol.iterator </code>method, it can be <code>for...of </code>ES6 syntax support, extension operators, and destructured assignment.</p>
+<h3 id="4-It-is-“inert-evaluation”"><a href="#4-It-is-“inert-evaluation”" class="headerlink" title="4. It is “inert evaluation”."></a>4. It is “inert evaluation”.</h3><p>Even an infinite sequence (such as a Fibonacci sequence) can be expressed by an iterator because it only calls each time. <code>next() </code>when generating values.</p>
+<h2 id="Example-of-a-custom-iterator"><a href="#Example-of-a-custom-iterator" class="headerlink" title="Example of a custom iterator"></a>Example of a custom iterator</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> myIterable = &#123;</span><br><span class="line">  <span class="attr">data</span>: [<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>],</span><br><span class="line">  [<span class="title class_">Symbol</span>.<span class="property">iterator</span>]() &#123;</span><br><span class="line">    <span class="keyword">let</span> index = <span class="number">0</span></span><br><span class="line">    <span class="keyword">const</span> data = <span class="variable language_">this</span>.<span class="property">data</span></span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="title function_">next</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (index &lt; data.<span class="property">length</span>) &#123;</span><br><span class="line">          <span class="keyword">return</span> &#123; <span class="attr">value</span>: data[index++], <span class="attr">done</span>: <span class="literal">false</span> &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="keyword">return</span> &#123; <span class="attr">value</span>: <span class="literal">undefined</span>, <span class="attr">done</span>: <span class="literal">true</span> &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> item <span class="keyword">of</span> myIterable) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(item)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 输出：10 20 30</span></span><br></pre></td></tr></table></figure>
+
+<p>this object <code>myIterable </code>self-Realization <code>Symbol.iterator</code>Therefore, it has the characteristics of iterator and can be <code>for...of </code>traversal.</p>
+<h2 id="Relationships-with-built-in-iterable-objects"><a href="#Relationships-with-built-in-iterable-objects" class="headerlink" title="Relationships with built-in iterable objects"></a>Relationships with built-in iterable objects</h2><p>many of the built-in structures in JavaScript have the iterator interface built in:</p>
+<ul>
+<li>array <code>[Symbol.iterator] </code>returns an ArrayIterator object</li>
+<li>Map and Set also have their own built-in iterators.</li>
+<li>String, TypedArray, and DOM NodeList also support iteration</li>
+</ul>
+<p>the behavior of these iterators is automatically defined, and we can call <code>obj[Symbol.iterator]() </code>gets their iterator object.</p>
+<h2 id="Relationship-with-generators"><a href="#Relationship-with-generators" class="headerlink" title="Relationship with generators"></a>Relationship with generators</h2><p>A generator is actually a higher-level syntactic sugar form of creating an iterator. Any generator function (using <code>function* </code>definition) returns an object that conforms to the iterator protocol.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span>* <span class="title function_">generator</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">yield</span> <span class="number">1</span></span><br><span class="line">  <span class="keyword">yield</span> <span class="number">2</span></span><br><span class="line">  <span class="keyword">yield</span> <span class="number">3</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> iter = <span class="title function_">generator</span>()</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(iter.<span class="title function_">next</span>()) <span class="comment">// &#123; value: 1, done: false &#125;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(iter.<span class="title function_">next</span>()) <span class="comment">// &#123; value: 2, done: false &#125;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(iter.<span class="title function_">next</span>()) <span class="comment">// &#123; value: 3, done: false &#125;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(iter.<span class="title function_">next</span>()) <span class="comment">// &#123; value: undefined, done: true &#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>In this example <code>iter </code>is a standard iterator object with all the behavior.</p>
+<h2 id="Interview-answer-demonstration-colloquial"><a href="#Interview-answer-demonstration-colloquial" class="headerlink" title="Interview answer demonstration (colloquial)"></a>Interview answer demonstration (colloquial)</h2><p><strong>The interviewer asks: What are the characteristics of the iterator object?</strong></p>
+<p>I would answer this:</p>
+<p>“iterator is an interface protocol introduced by ES6, which is mainly used to support things like <code>for...of </code>new syntaxes such as the extension operator allow us to traverse different data structures in a uniform way. It has several key features:</p>
+<p>first, it must have a <code>next() </code>method, each call returns an object, which has two properties: <code>value </code>represents the current value, <code>done </code>indicates whether the traversal ends.</p>
+<p>Second, the iterator is stateful, every time <code>next() </code>the call will advance the internal traversal pointer, which means that it is a one-time consumption and will not be reset.</p>
+<p>Third, the iterator is generally and <code>Symbol.iterator </code>method, as long as an object implements the method and returns an iterator, it can be considered “iterable” and can be <code>for...of </code>traversal.</p>
+<p>Fourth, it is lazy and does not generate all values at once, a feature that is useful for working with streaming or infinite data.</p>
+<p>In addition, I will also mention that structures such as arrays, Set, Map, strings, NodeList, etc. have built-in iterator interfaces, which means they can be used directly. <code>for...of </code>to traverse.</p>
+<p>If you need to customize the iterator, we can implement it manually. <code>Symbol.iterator </code>method, or use the generator function to simplify the process.”</p>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>the core characteristic of an iterator object is that it has <code>next() </code>method, able to return a method that contains <code>value </code>and <code>done </code>the result object, and has the advantages of inertia, state persistence and so on. Understanding iterators is the foundation for a deep understanding of new ES6 + features such as iterable protocols, asynchronous programming (such as async iterators), and generators. In actual development, although we often use <code>for...of </code>or extend operators to consume iterators, but a deeper understanding of how it works will make us more handy when dealing with data structures or custom class behavior.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="How to make an object iterable so that it supports for…of iterationforewordin day-to-day development, for...of is a very common and semantically clear"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How to make an object iterable so that it supports for...of iteration"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="How to make an object iterable so that it supports for…of iterationforewordin day-to-day development, for...of is a very common and semantically clear"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How to make an object iterable so that it supports for...of iteration - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How to make an object iterable so that it supports for...of iteration</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2022-12-29
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="How-to-make-an-object-iterable-so-that-it-supports-for…of-iteration"><a href="#How-to-make-an-object-iterable-so-that-it-supports-for…of-iteration" class="headerlink" title="How to make an object iterable so that it supports for…of iteration"></a>How to make an object iterable so that it supports for…of iteration</h1><h2 id="foreword"><a href="#foreword" class="headerlink" title="foreword"></a>foreword</h2><p>in day-to-day development, <code>for...of </code>is a very common and semantically clear traversal syntax, especially for traversing arrays, strings, Map, Set, and other built-in iterable objects. But many people don’t know that ordinary JavaScript objects don’t support it by default. <code>for...of </code>this is because they are not iterable objects. Then can we make ordinary objects also support <code>for...of </code>what? The answer is yes, as long as we understand the iterative protocol and implement it correctly. This article will fully explain how to make an object iterable and demonstrate the operation process with actual code.</p>
+<h2 id="How-to-make-objects-support-for…of-Understanding-the-iterator-protocol"><a href="#How-to-make-objects-support-for…of-Understanding-the-iterator-protocol" class="headerlink" title="How to make objects support for…of: Understanding the iterator protocol"></a>How to make objects support for…of: Understanding the iterator protocol</h2><p><code>for...of </code>it depends on JavaScript. <strong>Iterable protocol</strong> (iterable protocol), which requires the object to implement a special method <code>Symbol.iterator </code>and returns a <strong>iterator Protocol</strong> (iterator protocol).</p>
+<p>We start with two key points:</p>
+<ol>
+<li><strong>Object must have a method named Symbol.iterator</strong></li>
+<li><strong>the iterator object returned by this method must have a next() method, and each call returns.</strong> <code>&#123;value, done&#125; </code><strong>structure of objects</strong></li>
+</ol>
+<p>let’s look at an example of how to make a normal object <code>&#123;a: 1, B: 2&#125; </code>support <code>for...of </code>:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">  <span class="attr">a</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="attr">b</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="attr">c</span>: <span class="number">3</span>,</span><br><span class="line">  [<span class="title class_">Symbol</span>.<span class="property">iterator</span>]() &#123;</span><br><span class="line">    <span class="keyword">const</span> keys = <span class="title class_">Object</span>.<span class="title function_">keys</span>(<span class="variable language_">this</span>)</span><br><span class="line">    <span class="keyword">let</span> index = <span class="number">0</span></span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="attr">next</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (index &lt; keys.<span class="property">length</span>) &#123;</span><br><span class="line">          <span class="keyword">const</span> key = keys[index++]</span><br><span class="line">          <span class="keyword">return</span> &#123; <span class="attr">value</span>: [key, <span class="variable language_">this</span>[key]], <span class="attr">done</span>: <span class="literal">false</span> &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="keyword">return</span> &#123; <span class="attr">value</span>: <span class="literal">undefined</span>, <span class="attr">done</span>: <span class="literal">true</span> &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> [key, value] <span class="keyword">of</span> obj) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(key, value)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>here we define a custom <code>Symbol.iterator </code>method, so that each time <code>next() </code>returns a key-value pair in order. When all the properties have been traversed, <code>done </code>becomes <code>true </code>, the iteration ends.</p>
+<h2 id="Symbol-iterator-can-also-be-extracted-as-an-independent-generator"><a href="#Symbol-iterator-can-also-be-extracted-as-an-independent-generator" class="headerlink" title="Symbol.iterator can also be extracted as an independent generator"></a>Symbol.iterator can also be extracted as an independent generator</h2><p>if you want to make the implementation more concise, you can use es6’s generator function to automatically create iterator objects:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">  <span class="attr">x</span>: <span class="number">10</span>,</span><br><span class="line">  <span class="attr">y</span>: <span class="number">20</span>,</span><br><span class="line">  *[<span class="title class_">Symbol</span>.<span class="property">iterator</span>]() &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> key <span class="keyword">of</span> <span class="title class_">Object</span>.<span class="title function_">keys</span>(<span class="variable language_">this</span>)) &#123;</span><br><span class="line">      <span class="keyword">yield</span> [key, <span class="variable language_">this</span>[key]]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> [k, v] <span class="keyword">of</span> obj) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(k, v)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>just add <code>* </code>declare the generator function, <code>yield </code>the logic of the iterator protocol is automatically handled, which is very convenient.</p>
+<h2 id="Precautions"><a href="#Precautions" class="headerlink" title="Precautions"></a>Precautions</h2><p>not all objects are suitable to become iterable directly. If the internal structure of the object is complex, does not have ordered enumerable properties, or the property value involves asynchronous, it may not be appropriate to implement it directly. <code>Symbol.iterator </code>.</p>
+<p>At the same time, can not <code>Symbol.iterator </code>for <code>for...in </code>, the two use scenarios are different: <code>for...in </code>used to enumerate property names (including inherited properties), <code>for...of </code>is used to traverse “iterable values”.</p>
+<h2 id="Interview-answer-demonstration-colloquial"><a href="#Interview-answer-demonstration-colloquial" class="headerlink" title="Interview answer demonstration (colloquial)"></a>Interview answer demonstration (colloquial)</h2><p>this question is actually testing my understanding of iterable protocols. If I want a normal object to support <code>for...of </code>and I need to implement for it <code>Symbol.iterator </code>methods.</p>
+<p>This method returns an object that conforms to the iterator protocol, which means that there is a <code>next() </code>method, which returns a <code>&#123;value, done&#125;</code>Of the object. As long as I can define such logic myself, the JavaScript engine can pass <code>for...of </code>to constantly call <code>next() </code>.</p>
+<p>For example, I can pass <code>Object.keys(this) </code>get all enumerable property names, and then in <code>next() </code>return one by one. The advantage of this is that I can completely customize the iteration behavior, for example, I want to iterate only certain properties, or do some transformations on the property values.</p>
+<p>Of course, I can also use generators to simplify writing, such as writing one <code>*[Symbol.iterator]() </code>function, and then use it inside <code>yield </code>to return the value I want step by step, this will be more elegant and conform to modern grammar.</p>
+<p>So in conclusion, as long as I achieve <code>Symbol.iterator </code>and make sure that the return value meets the iterator protocol, I can make any object become supported. <code>for...of </code>the iterable.</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>let an object support <code>for...of </code>the key is to achieve it.<code>Symbol.iterator </code>method and returns an object that conforms to the iterator protocol. This object must have <code>next() </code>method, and can return <code>&#123;value, done&#125; </code>of the structure. You can implement the logic manually, or you can simplify the operation through generators.</p>
+<p>Mastering this ability will not only allow you to write more elegant traversal logic, but also deepen your understanding of the internal iteration mechanism of JavaScript. In the interview, this kind of question is often a high-frequency test site, which belongs to the advanced Foundation. Mastering it can help you stand out from the candidates.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

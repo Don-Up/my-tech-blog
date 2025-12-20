@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What does an iterator have to do with an arrayForewordin JavaScript, arrays are one of the most frequently used data structures in our daily developme"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What does an iterator have to do with an array"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What does an iterator have to do with an arrayForewordin JavaScript, arrays are one of the most frequently used data structures in our daily developme"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What does an iterator have to do with an array - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What does an iterator have to do with an array</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-03-19
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-does-an-iterator-have-to-do-with-an-array"><a href="#What-does-an-iterator-have-to-do-with-an-array" class="headerlink" title="What does an iterator have to do with an array"></a>What does an iterator have to do with an array</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in JavaScript, arrays are one of the most frequently used data structures in our daily development. You’re probably used to it. <code>for </code>, <code>forEach </code>, <code>map </code>to traverse the array, but have you thought about how the mechanism behind it is implemented? Why can arrays be <code>for...of </code>circulating? In fact, this is behind <strong>iterator (iterator) protocol</strong> in play. This article will explain the relationship between iterators and arrays in depth, from the underlying protocol to the actual usage scenario, and take you to really understand the iterative mechanism of JavaScript.</p>
+<hr>
+<h2 id="Arrays-are-“inherently-iterable”-objects"><a href="#Arrays-are-“inherently-iterable”-objects" class="headerlink" title="Arrays are “inherently iterable” objects"></a>Arrays are “inherently iterable” objects</h2><p>in ES6 a concept was introduced called <strong>iterable object (iterable)</strong> . As long as an object implements <code>[Symbol.iterator]() </code>method and returns a <code>next() </code>method, then it is iterable and can be <code>for...of </code>, expansion operator <code>it&#39;s...</code>And deconstructed assignment syntax.</p>
+<p>Arrays are inherently implemented <code>[Symbol.iterator]() </code>methods, so they are “built-in iterable objects”. You can call this method directly on the array:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const arr = [1, 2, 3];</span><br><span class="line">const iterator = arr[Symbol.iterator]();</span><br><span class="line"></span><br><span class="line">console.log(iterator.next()); // &#123; value: 1, done: false &#125;</span><br><span class="line">console.log(iterator.next()); // &#123; value: 2, done: false &#125;</span><br><span class="line">console.log(iterator.next()); // &#123; value: 3, done: false &#125;</span><br><span class="line">console.log(iterator.next()); // &#123; value: undefined, done: true &#125;</span><br></pre></td></tr></table></figure>
+
+<p>this return value is a <strong>iterator Object (iterator)</strong> , each call <code>next() </code>both return one. <code>&#123;value, done&#125; </code>structure until the traversal is complete.</p>
+<hr>
+<h2 id="Essential-association-between-iterator-and-array"><a href="#Essential-association-between-iterator-and-array" class="headerlink" title="Essential association between iterator and array"></a>Essential association between iterator and array</h2><p>the relationship between them can be understood in several ways:</p>
+<ol>
+<li><strong>arrays automatically implement the iterator protocol</strong><br>on each array instance. <code>[Symbol.iterator] </code>method, which internally maintains a “cursor” that returns each element in the array from beginning to end.</li>
+<li><strong>The syntax of array for…of, deconstruction, etc. depends on the iterator protocol.</strong><br>When you use <code>for...of arr </code>or <code>[...arr] </code>the JavaScript engine automatically calls<code>arr[Symbol.iterator]() </code>to get the iterator object, and then call its <code>next() </code>methods.</li>
+<li><strong>Arrays can interoperate with objects of other iterable protocols</strong><br>for example, Set, Map, string, etc. all implement the iterator interface, so you can use these objects with arrays, such <code>Array.from(set) </code>it is the iterator that reads the elements one by one and converts them into an array.</li>
+<li><strong>Some methods of an array also return an iterator</strong><br>such <code>arr.entries() </code>, <code>arr.keys() </code>, <code>arr.values() </code>both return an iterator object instead of a normal array.</li>
+</ol>
+<hr>
+<h2 id="Review-of-the-standard-form-of-the-iterator-protocol"><a href="#Review-of-the-standard-form-of-the-iterator-protocol" class="headerlink" title="Review of the standard form of the iterator protocol"></a>Review of the standard form of the iterator protocol</h2><p>an iterator object must have a <code>next() </code>method, which returns a shape such <code>&#123;value: any, done: boolean&#125; </code>of the object.</p>
+<p>And the iterable object must implement<code>Symbol.iterator </code>method, and the method returns an iterator.</p>
+<p>So arrays can be <code>for...of </code>iteration, because it satisfies <strong>iterable protocol</strong> , returned in line <strong>iterator protocol</strong> of the object.</p>
+<hr>
+<h2 id="Interview-answer-demonstration-colloquial-structured"><a href="#Interview-answer-demonstration-colloquial-structured" class="headerlink" title="Interview answer demonstration (colloquial + structured)"></a>Interview answer demonstration (colloquial + structured)</h2><p><strong>the interviewer asked</strong> what is the relationship between an iterator and an array?</p>
+<p><strong>Answer Reference</strong> :</p>
+<p>this problem can be explained from the point of view of the agreement. The iterator is a protocol, and the array is the built-in implementer of the protocol. In ES6, as long as an object implements <code>[Symbol.iterator]() </code>method and returns a <code>next() </code>method, which is an iterable. Arrays implement this method by default, so arrays are “natural” iterable.</p>
+<p>That is, when we use the array. <code>for...of </code>, <code>... Extender </code>, or like<code>[...arr] </code>when such a deconstruct syntax is actually called behind it. <code>arr[Symbol.iterator]() </code>, get an iterator object, and then call it continuously. <code>next() </code>to iterate through the array.</p>
+<p>For example, if we call this interface manually, we can write as follows:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const arr = [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;];</span><br><span class="line">const it = arr[Symbol.iterator]();</span><br><span class="line">console.log(it.next()); // &#123; value: &#x27;a&#x27;, done: false &#125;</span><br></pre></td></tr></table></figure>
+
+<p>this iterator is different from the subscript access of an array. It “spits out” one value at a time, and each call can remember the last position.</p>
+<p>In addition, some methods of arrays like <code>arr.values() </code>, <code>arr.entries() </code>returns are also iterator objects, which can be matched <code>for...of </code>or used manually.</p>
+<p>In short, arrays are the native implementers of the iterator protocol, which is the underlying mechanism that supports the ability of arrays to iterate. Understanding this protocol allows us to customize our iterable object to be traversed like an array.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>the relationship between arrays and iterators is: <strong>array is the implementer of the iterator protocol</strong> . Thanks to this, arrays can be manipulated by many modern syntax structures, such <code>for...of</code>Extension, deconstruction assignment, etc. By understanding the principles of the iterator protocol, you can not only better understand the behavior of arrays, but also customize more advanced usage, such as constructing array-like objects, lazy sequences, generators, and other functional modules.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
