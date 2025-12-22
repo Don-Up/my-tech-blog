@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Can you explain what a scope chain is-What is its roleForewordscope chain is a core concept in the execution of JavaScript functions, which is directl"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Can you explain what a scope chain is-What is its role"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Can you explain what a scope chain is-What is its roleForewordscope chain is a core concept in the execution of JavaScript functions, which is directl"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Can you explain what a scope chain is-What is its role - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Can you explain what a scope chain is-What is its role</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-10-04
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Can-you-explain-what-a-scope-chain-is-What-is-its-role"><a href="#Can-you-explain-what-a-scope-chain-is-What-is-its-role" class="headerlink" title="Can you explain what a scope chain is-What is its role"></a>Can you explain what a scope chain is-What is its role</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>scope chain is a core concept in the execution of JavaScript functions, which is directly related to the understanding of variable lookup and closure behavior. Many front-end developers may just “write variables” at the beginning of the project, but when the project becomes more complex, the mastery of the scope chain directly affects the debugging efficiency and code quality. This paper will analyze the nature, formation mechanism and practical application of Scope chain in depth, and give colloquial answers to high-frequency questions in interviews.</p>
+<h2 id="What-is-a-scope-chain"><a href="#What-is-a-scope-chain" class="headerlink" title="What is a scope chain"></a>What is a scope chain</h2><p>JavaScript is a Lexical Scope language, which means that Scope is determined when the code is defined, rather than dynamically changing at runtime. When accessing a variable inside a function, the JS engine looks for the variable along a chain, which is the “scope chain”.</p>
+<p>Simple understanding: when accessing variables in the current scope, first look up from your current scope, and if you cannot find it, look up to the next level of scope until the global scope. If you still can’t find it in the end, report an error. <code>ReferenceError </code>.</p>
+<p>Example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">let a = 1;</span><br><span class="line">function outer() &#123;</span><br><span class="line">  let b = 2;</span><br><span class="line">  function inner() &#123;</span><br><span class="line">    let c = 3;</span><br><span class="line">    console.log(a, b, c);</span><br><span class="line">  &#125;</span><br><span class="line">  inner();</span><br><span class="line">&#125;</span><br><span class="line">outer(); // 输出 1 2 3</span><br></pre></td></tr></table></figure>
+
+<p>in <code>inner </code>accessing variables in a function <code>a </code>and <code>B </code>, in fact, from the scope chain. <code>inner → outer → global </code>I found it layer by layer.</p>
+<h2 id="The-Structure-and-Generation-Mechanism-of-Scope-Chain"><a href="#The-Structure-and-Generation-Mechanism-of-Scope-Chain" class="headerlink" title="The Structure and Generation Mechanism of Scope Chain"></a>The Structure and Generation Mechanism of Scope Chain</h2><p>when a function is defined, its scope chain is determined-this chain consists of the variable objects of the current function and the variable objects of all its parent functions.</p>
+<p>That is, the scope chain is not created at function execution time, but is captured at function definition time. This point explains why closures can “remember” variables at the time of definition.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function outer() &#123;</span><br><span class="line">  let count = 0;</span><br><span class="line">  return function inner() &#123;</span><br><span class="line">    count++;</span><br><span class="line">    console.log(count);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line">const fn = outer();</span><br><span class="line">fn(); // 1</span><br><span class="line">fn(); // 2</span><br></pre></td></tr></table></figure>
+
+<p>In this example, <code>inner </code>although the function has been separated <code>outer </code>but because of the structure of the scope chain, it can still access <code>outer </code>in <code>count </code>variable.</p>
+<h2 id="The-Efficiency-of-Scope-Chain-and-Variable-Lookup"><a href="#The-Efficiency-of-Scope-Chain-and-Variable-Lookup" class="headerlink" title="The Efficiency of Scope Chain and Variable Lookup"></a>The Efficiency of Scope Chain and Variable Lookup</h2><p>in the scope chain, the lookup of variables is carried out layer by layer from the inside to the outside. This does not mean that variable lookups will be a performance bottleneck, because modern JS engines (such as V8) optimize the scope chain and find them very fast.</p>
+<p>However, when writing code, try to avoid too deep scope nesting or relying on too many variables in the outer scope, which helps the code to be readable and maintainable.</p>
+<h2 id="Relationship-between-global-scope-function-scope-and-block-scope"><a href="#Relationship-between-global-scope-function-scope-and-block-scope" class="headerlink" title="Relationship between global scope, function scope and block scope"></a>Relationship between global scope, function scope and block scope</h2><p>there are three main scopes in JavaScript:</p>
+<ul>
+<li>global scope: the outermost environment in which all variables defined globally belong.</li>
+<li>Function scope: Each function call creates a new scope</li>
+<li>Block-level scope (ES6): <code>let </code>, <code>const </code>variables declared in blocks such <code>&#123;&#125; </code>valid in</li>
+</ul>
+<p>the introduction of block-level scope makes the scope chain structure clearer and can effectively avoid variable promotion and naming conflicts:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  let temp = &#x27;inner&#x27;;</span><br><span class="line">&#125;</span><br><span class="line">// console.log(temp); // ReferenceError</span><br></pre></td></tr></table></figure>
+
+<h2 id="interview-answer"><a href="#interview-answer" class="headerlink" title="interview answer"></a>interview answer</h2><p><strong>question: Can you explain what a scope chain is? What is its role?</strong></p>
+<p>Answer demonstration:</p>
+<p>scope chains are a mechanism for functions in JavaScript to look up variables. When each function is defined, it records the external environment in which it is located, that is, the scope chain. When a function executes, if it wants to access a variable, it will first look in its own scope, and if it cannot be found, it will look up until the global scope. This mechanism ensures that the function can access the variables at the time of its definition, even if the function is returned or delayed. A closure is a typical application scenario for a scope chain. In actual development, I have encountered scenarios where state is preserved through closures and private variables are implemented, and I have successfully located variable overrides by understanding the scope chain.</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>scope chains are fundamental to understanding JavaScript function execution mechanisms, closure behavior, and variable lookup paths. By mastering scope chains, we can not only better design variable scopes and avoid naming conflicts, but also clearly and professionally explain code behavior in interviews. If you want to write high-quality JS code, understanding the scope chain is an inevitable step.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

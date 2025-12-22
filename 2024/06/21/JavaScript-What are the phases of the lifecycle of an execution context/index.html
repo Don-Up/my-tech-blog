@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What are the phases of the lifecycle of an execution contextForewordunderstanding the life cycle of the execution context is the key to a deep underst"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What are the phases of the lifecycle of an execution context"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What are the phases of the lifecycle of an execution contextForewordunderstanding the life cycle of the execution context is the key to a deep underst"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What are the phases of the lifecycle of an execution context - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What are the phases of the lifecycle of an execution context</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-06-21
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-are-the-phases-of-the-lifecycle-of-an-execution-context"><a href="#What-are-the-phases-of-the-lifecycle-of-an-execution-context" class="headerlink" title="What are the phases of the lifecycle of an execution context"></a>What are the phases of the lifecycle of an execution context</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>understanding the life cycle of the execution context is the key to a deep understanding of the JavaScript code execution process. The execution context is not only the execution environment of the code, but also changes in multiple stages, affecting variable initialization, function declaration, and scope chain construction. This article will disassemble the various stages of the execution context life cycle in detail to help you better understand how the JS engine executes code, and also provide professional answer reference for interviews.</p>
+<h2 id="Lifecycle-phase-of-the-execution-context"><a href="#Lifecycle-phase-of-the-execution-context" class="headerlink" title="Lifecycle phase of the execution context"></a>Lifecycle phase of the execution context</h2><p>the life cycle of an execution context can be roughly divided into two main phases: the creation phase and the execution phase.</p>
+<h3 id="1-The-creation-phase-also-known-as-the-“variable-object-initialization-phase”"><a href="#1-The-creation-phase-also-known-as-the-“variable-object-initialization-phase”" class="headerlink" title="1. The creation phase (also known as the “variable object initialization phase”)"></a>1. The creation phase (also known as the “variable object initialization phase”)</h3><p>at this stage, the JavaScript engine does several things:</p>
+<ul>
+<li>create a Variable Object (VO) to store variables declared within a function and function declarations</li>
+<li>parsing function declarations, binding function names to variable objects</li>
+<li>variable declaration promotion, the variable is declared but unassigned, initialized <code>undefined </code></li>
+<li>establish a scope chain, through which the execution context points to the current variable object and the variable object of the external context.</li>
+<li>Determine <code>this </code>point</li>
+</ul>
+<p>at this stage, variable promotion and function promotion occur here, so that function declarations and variable declarations can be called before the code.</p>
+<h3 id="2-Implementation-phase"><a href="#2-Implementation-phase" class="headerlink" title="2. Implementation phase"></a>2. Implementation phase</h3><p>After the creation is complete, the execution context enters the execution phase, and the code is executed line by line:</p>
+<ul>
+<li>the variable assignment takes effect, and the assignment of the function expression is completed at this stage.</li>
+<li>The function body in the code starts executing</li>
+<li>variables and functions are gradually initialized to concrete values for subsequent code use.</li>
+</ul>
+<h3 id="3-Destruction-of-the-execution-context"><a href="#3-Destruction-of-the-execution-context" class="headerlink" title="3. Destruction of the execution context"></a>3. Destruction of the execution context</h3><p>when the function is executed or the global code is executed, the corresponding execution context is popped from the execution context stack, and the life cycle ends.</p>
+<p>Note that closures cause some variable objects in the execution context to not be destroyed immediately because they are still referenced.</p>
+<h2 id="The-relationship-between-variable-promotion-and-execution-context"><a href="#The-relationship-between-variable-promotion-and-execution-context" class="headerlink" title="The relationship between variable promotion and execution context"></a>The relationship between variable promotion and execution context</h2><p>variable promotion is essentially part of the creation phase. Variable and function declarations are registered in advance in the variable object, but variable declarations are only declared unassigned, and function declarations are fully registered.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function test() &#123;</span><br><span class="line">  console.log(a); // undefined</span><br><span class="line">  console.log(foo()); // 3</span><br><span class="line"></span><br><span class="line">  var a = 1;</span><br><span class="line">  function foo() &#123;</span><br><span class="line">    return 3;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">test();</span><br></pre></td></tr></table></figure>
+
+<p>Here. <code>a </code>is that the variable declaration is promoted and the initial value is <code>undefined </code>; And the function <code>foo </code>complete promotion, can be called directly.</p>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p><strong>question: What are the phases of the life cycle of an execution context?</strong></p>
+<p>Answer demonstration:</p>
+<p>The life cycle of an execution context is divided into two phases, the creation phase and the execution phase. When creating the phase, JavaScript creates the variable object, promotes the function declaration and variable declaration into the variable object, establishes the scope chain, and determines the this point. The execution phase is where the code is executed line by line, the variable assignment takes effect, and the function body is executed. When execution completes, the execution context is popped from the call stack. Understanding these two phases helps you understand variable promotion, Scope chain formation, and code execution order.</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>the lifecycle of the execution context directly affects JavaScript variable promotion, Scope chain construction, and code execution flow. Mastering the two stages of creation and execution will help you understand the operating mechanism of JS and troubleshoot complex scopes or variables. Expressing these concepts clearly in the interview demonstrates your professionalism.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

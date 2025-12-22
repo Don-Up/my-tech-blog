@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Symbol data type characteristics and actual use casesforewordES6 introduces the Symbol type as the seventh primitive data type for JavaScript, which b"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Symbol data type characteristics and actual use cases"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Symbol data type characteristics and actual use casesforewordES6 introduces the Symbol type as the seventh primitive data type for JavaScript, which b"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Symbol data type characteristics and actual use cases - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Symbol data type characteristics and actual use cases</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-11-01
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Symbol-data-type-characteristics-and-actual-use-cases"><a href="#Symbol-data-type-characteristics-and-actual-use-cases" class="headerlink" title="Symbol data type characteristics and actual use cases"></a>Symbol data type characteristics and actual use cases</h1><h2 id="foreword"><a href="#foreword" class="headerlink" title="foreword"></a>foreword</h2><p>ES6 introduces the Symbol type as the seventh primitive data type for JavaScript, which breaks the previous restriction that object property names can only be strings. Although it does not appear frequently in daily development, Symbol plays a unique role in some scenarios where private attributes need to be built, attribute naming conflicts need to be avoided, and meta-programming capabilities need to be implemented.</p>
+<p>This article will start with the basic characteristics of Symbol, in-depth analysis of its application scenarios, and combined with common interview questions to provide standardized colloquial answers to help you understand and apply this feature.</p>
+<h2 id="Text"><a href="#Text" class="headerlink" title="Text"></a>Text</h2><h3 id="what-is-Symbol"><a href="#what-is-Symbol" class="headerlink" title="what is Symbol?"></a>what is Symbol?</h3><p>A Symbol is a primitive data type used to create unique values. Its biggest feature is that each call <code>Symbol() </code>generates a unique Symbol value.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const s1 = Symbol(&#x27;desc&#x27;);</span><br><span class="line">const s2 = Symbol(&#x27;desc&#x27;);</span><br><span class="line">console.log(s1 === s2); // false</span><br></pre></td></tr></table></figure>
+
+<p>Even if two Symbol description strings are the same, they are essentially different. This “uniqueness” guarantee makes it ideal for use as an object property name.</p>
+<h3 id="Second-the-advantages-of-Symbol-as-an-object-attribute-name"><a href="#Second-the-advantages-of-Symbol-as-an-object-attribute-name" class="headerlink" title="Second, the advantages of Symbol as an object attribute name."></a>Second, the advantages of Symbol as an object attribute name.</h3><p>Traditional object property names are strings and are prone to naming conflicts with other properties. Symbol, because of its uniqueness, avoids this conflict and is especially suitable for adding “private” attributes.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const name = Symbol(&#x27;name&#x27;);</span><br><span class="line">const obj = &#123;</span><br><span class="line">  [name]: &#x27;luxin&#x27;,</span><br><span class="line">  age: 25</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">console.log(obj[name]); // luxin</span><br><span class="line">console.log(obj.name);  // undefined</span><br></pre></td></tr></table></figure>
+
+<p>Properties defined with Symbol do not appear in the regular traversal method:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for (let key in obj) &#123;</span><br><span class="line">  console.log(key); // 只会打印 age</span><br><span class="line">&#125;</span><br><span class="line">console.log(Object.keys(obj)); // [&quot;age&quot;]</span><br><span class="line">console.log(Object.getOwnPropertySymbols(obj)); // [Symbol(name)]</span><br></pre></td></tr></table></figure>
+
+<p>this makes the Symbol property logically “private”.</p>
+<h3 id="Third-the-built-in-Symbol-value-the-key-to-expanding-language-capabilities"><a href="#Third-the-built-in-Symbol-value-the-key-to-expanding-language-capabilities" class="headerlink" title="Third, the built-in Symbol value: the key to expanding language capabilities."></a>Third, the built-in Symbol value: the key to expanding language capabilities.</h3><p>ES6 has multiple Symbol values built into it to extend JavaScript’s object behavior. For example:</p>
+<ul>
+<li><code>Symbol.iterator </code>defines the default iterator for an object</li>
+<li><code>Symbol.toStringTag </code>: Custom <code>Object.prototype.toString.call() </code>the return value</li>
+<li><code>Symbol.hasInstance </code>: Control <code>instanceof </code>behavior</li>
+<li><code>Symbol.toPrimitive </code>: Defines the behavior when an object is converted to the original type.</li>
+</ul>
+<p>Example: Making an object traversable by for…</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">const iterableObj = &#123;</span><br><span class="line">  *[Symbol.iterator]() &#123;</span><br><span class="line">    yield 1;</span><br><span class="line">    yield 2;</span><br><span class="line">    yield 3;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">for (let value of iterableObj) &#123;</span><br><span class="line">  console.log(value); // 1 2 3</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-Symbol-and-global-registry-Symbol-for"><a href="#4-Symbol-and-global-registry-Symbol-for" class="headerlink" title="4. Symbol and global registry Symbol.for()"></a>4. Symbol and global registry Symbol.for()</h3><p>although each <code>Symbol() </code>the generated values are all unique, but sometimes we want multiple places to share the same Symbol. This can be done through <code>Symbol.for() </code>implementation:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const s1 = Symbol.for(&#x27;key&#x27;);</span><br><span class="line">const s2 = Symbol.for(&#x27;key&#x27;);</span><br><span class="line">console.log(s1 === s2); // true</span><br></pre></td></tr></table></figure>
+
+<p><code>Symbol.for</code>It will look for an existing Symbol in the global registry and create a new one if it does not exist. There are also supporting the use <code>Symbol.keyFor() </code>used to check the key.</p>
+<p>This mechanism is often used to share the same identifier across modules, such as middleware implementations in Redux.</p>
+<h3 id="V-Summary-of-Practical-Application-Scenarios"><a href="#V-Summary-of-Practical-Application-Scenarios" class="headerlink" title="V. Summary of Practical Application Scenarios"></a>V. Summary of Practical Application Scenarios</h3><ol>
+<li>creating “private” attributes with symbols that are not easily overridden</li>
+<li>implement custom behaviors (e. G. Iterators, object transformations) with built-in symbols</li>
+<li>intermodule communication using global registration symbols</li>
+<li>avoid Magic Strings and improve the semantics and robustness of the code.</li>
+</ol>
+<p>For example, the reactive system of Vue3 uses a lot of symbols to manage internal identities and lifecycle hooks to avoid naming conflicts.</p>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p><strong>question: Do you know about symbols? Which scenes is it mainly used?</strong></p>
+<p>Answer demonstration:</p>
+<p>Symbol is a primitive data type introduced by ES6, the main feature is uniqueness, commonly used in object attribute names, to avoid naming conflicts. Properties defined with Symbol will not be regular <code>for...in </code>or <code>Object.keys </code>traversed to, which somehow achieves the effect of a “private” variable. In addition, Symbol has some built-in values, such<code>Symbol.iterator </code>you can let the object customize the iterable behavior. In the actual project, I used Symbol to design the constant identification of communication between modules. When reading the source code, I also saw that frameworks such as Vue and Redux used Symbol extensively to enhance the encapsulation and semantic clarity of logic.</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Symbol provides a way to resolve naming conflicts, build encapsulation, and implement metaprogramming capabilities in JavaScript. Although not commonly used in day-to-day development, it plays an important role in the design of low-level frameworks and high-quality code. If you can cite the actual use of the scene or source code to read the application, will greatly enhance your professional degree.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
