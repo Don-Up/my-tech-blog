@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="How much do you know about closures and what are the usage scenarios, please give examplesforewordclosures are a very important and powerful concept i"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How much do you know about closures and what are the usage scenarios, please give examples"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="How much do you know about closures and what are the usage scenarios, please give examplesforewordclosures are a very important and powerful concept i"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How much do you know about closures and what are the usage scenarios, please give examples - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How much do you know about closures and what are the usage scenarios, please give examples</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-11-09
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="How-much-do-you-know-about-closures-and-what-are-the-usage-scenarios-please-give-examples"><a href="#How-much-do-you-know-about-closures-and-what-are-the-usage-scenarios-please-give-examples" class="headerlink" title="How much do you know about closures and what are the usage scenarios, please give examples"></a>How much do you know about closures and what are the usage scenarios, please give examples</h1><h2 id="foreword"><a href="#foreword" class="headerlink" title="foreword"></a>foreword</h2><p>closures are a very important and powerful concept in JavaScript. It allows the function to “remember” and access the scope of the definition, even if the outer function has completed execution. Understanding closures is essential for mastering variable scope, asynchronous programming, functional programming, and more. This article will explain in detail the nature of closures, the reasons for their formation, and practical application scenarios to help you fully grasp this key knowledge point.</p>
+<h2 id="What-is-a-closure"><a href="#What-is-a-closure" class="headerlink" title="What is a closure"></a>What is a closure</h2><p>A closure means that a function can access a variable in its outer scope, even if the outer function has returned. In other words, closures enable a function to “remember” and have continuous access to the lexical environment in which it was created.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function outer() &#123;</span><br><span class="line">  let count = 0;</span><br><span class="line">  return function inner() &#123;</span><br><span class="line">    count++;</span><br><span class="line">    console.log(count);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line">const fn = outer();</span><br><span class="line">fn(); // 1</span><br><span class="line">fn(); // 2</span><br></pre></td></tr></table></figure>
+
+<p>Here, <code>inner </code>function forms a closure, preserving <code>outer </code>function in <code>count </code>A reference to a variable that has not been destroyed.</p>
+<h2 id="Formation-Mechanism-of-Closure"><a href="#Formation-Mechanism-of-Closure" class="headerlink" title="Formation Mechanism of Closure"></a>Formation Mechanism of Closure</h2><p>when a function is defined, its scope chain contains the variable objects of the outer function. Even if the outer function completes execution, the scope chain is not destroyed immediately, and the outer variables are kept in memory as long as the closure is still referenced.</p>
+<h2 id="Typical-use-scenarios-for-closures"><a href="#Typical-use-scenarios-for-closures" class="headerlink" title="Typical use scenarios for closures"></a>Typical use scenarios for closures</h2><h3 id="1-Data-encapsulation-and-private-variables"><a href="#1-Data-encapsulation-and-private-variables" class="headerlink" title="1. Data encapsulation and private variables."></a>1. Data encapsulation and private variables.</h3><p>Closures can simulate private variables, avoid direct external access, and protect data security.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">function createCounter() &#123;</span><br><span class="line">  let count = 0;</span><br><span class="line">  return &#123;</span><br><span class="line">    increment() &#123;</span><br><span class="line">      count++;</span><br><span class="line">      return count;</span><br><span class="line">    &#125;,</span><br><span class="line">    decrement() &#123;</span><br><span class="line">      count--;</span><br><span class="line">      return count;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line">const counter = createCounter();</span><br><span class="line">console.log(counter.increment()); // 1</span><br><span class="line">console.log(counter.decrement()); // 0</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-Function-Factory"><a href="#2-Function-Factory" class="headerlink" title="2. Function Factory"></a>2. Function Factory</h3><p>use closures to generate functions with fixed parameters or states.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function multiply(factor) &#123;</span><br><span class="line">  return function (num) &#123;</span><br><span class="line">    return num * factor;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line">const double = multiply(2);</span><br><span class="line">console.log(double(5)); // 10</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-Delayed-execution-and-asynchronous-programming"><a href="#3-Delayed-execution-and-asynchronous-programming" class="headerlink" title="3. Delayed execution and asynchronous programming."></a>3. Delayed execution and asynchronous programming.</h3><p>Closures are used to hold the context data needed for asynchronous operations.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">for (let i = 0; i &lt; 3; i++) &#123;</span><br><span class="line">  setTimeout(function () &#123;</span><br><span class="line">    console.log(i);</span><br><span class="line">  &#125;, 100);</span><br><span class="line">&#125;</span><br><span class="line">// 输出 0 1 2，因为 let 声明的变量在每次循环有独立作用域</span><br></pre></td></tr></table></figure>
+
+<p>If you use <code>var </code>, you need closures to solve the variable capture problem.</p>
+<h3 id="4-State-preservation-in-event-processing"><a href="#4-State-preservation-in-event-processing" class="headerlink" title="4. State preservation in event processing."></a>4. State preservation in event processing.</h3><p>Avoid polluting global variables by storing the private state of event processing through closures.</p>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p><strong>question: Do you know anything about closures? What are its functions and application scenarios?</strong></p>
+<p>Answer demonstration:</p>
+<p>A closure is a function that can access and “remember” the outer-scope variable at the time of its definition, even if the outer function has finished executing. Closures keep variables from being destroyed and are often used to privatize data and encapsulate state, such as the design of counters. Closures can also generate customized functions to facilitate function reuse and Curry. In asynchronous programming, closures are used to keep the data needed for asynchronous callbacks, avoiding variable sharing and conflicts. Understanding closures helps you write high-quality code and avoid scope and lifecycle errors.</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>closure is a unique and powerful feature of JavaScript language, which can realize data encapsulation, function factory, asynchronous control and other functions. In-depth understanding of the formation mechanism and application of closures is helpful to improve the level of code design and solve the problem of variable scope in complex scenarios. The interview can clearly express the closure concept and examples, can fully demonstrate the mastery of the essence of the JavaScript language.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

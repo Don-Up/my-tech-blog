@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Scenario analysis of this in JavaScriptforewordthis an extremely important keyword in JavaScript, it represents an object in the current execution con"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Scenario analysis of this in JavaScript"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Scenario analysis of this in JavaScriptforewordthis an extremely important keyword in JavaScript, it represents an object in the current execution con"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Scenario analysis of this in JavaScript - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Scenario analysis of this in JavaScript</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-04-29
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Scenario-analysis-of-this-in-JavaScript"><a href="#Scenario-analysis-of-this-in-JavaScript" class="headerlink" title="Scenario analysis of this in JavaScript"></a>Scenario analysis of this in JavaScript</h1><h2 id="foreword"><a href="#foreword" class="headerlink" title="foreword"></a>foreword</h2><p><code>this </code>an extremely important keyword in JavaScript, it represents an object in the current execution context. Different usage scenarios can lead <code>this </code>point to different objects, so understand and use <code>this </code>, can make the code more concise and flexible, while avoiding common errors. This article will be combined with the actual development of typical scenarios, detailed analysis <code>this </code>application and attention points.</p>
+<h2 id="The-main-usage-scenarios-of-this"><a href="#The-main-usage-scenarios-of-this" class="headerlink" title="The main usage scenarios of this"></a>The main usage scenarios of this</h2><h3 id="1-Access-its-own-properties-in-the-object’s-method"><a href="#1-Access-its-own-properties-in-the-object’s-method" class="headerlink" title="1. Access its own properties in the object’s method."></a>1. Access its own properties in the object’s method.</h3><p>The most common scenario is through the object method. <code>this </code>access or modify the properties of the object itself.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const user = &#123;</span><br><span class="line">  name: &#x27;Alice&#x27;,</span><br><span class="line">  greet() &#123;</span><br><span class="line">    console.log(&#x27;Hello, &#x27; + this.name);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">user.greet(); // Hello, Alice</span><br></pre></td></tr></table></figure>
+
+<p>This usage embodies <code>this </code>role in object-oriented programming.</p>
+<h3 id="2-The-constructor-binds-properties-and-methods-to-the-instance"><a href="#2-The-constructor-binds-properties-and-methods-to-the-instance" class="headerlink" title="2. The constructor binds properties and methods to the instance."></a>2. The constructor binds properties and methods to the instance.</h3><p>In the constructor, use <code>this </code>bind instance properties and methods to ensure that each instance has an independent state.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function Person(name) &#123;</span><br><span class="line">  this.name = name;</span><br><span class="line">  this.sayName = function() &#123;</span><br><span class="line">    console.log(this.name);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line">const p = new Person(&#x27;Bob&#x27;);</span><br><span class="line">p.sayName(); // Bob</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-The-instance-property-is-referenced-in-the-instance-method-of-the-class"><a href="#3-The-instance-property-is-referenced-in-the-instance-method-of-the-class" class="headerlink" title="3. The instance property is referenced in the instance method of the class."></a>3. The instance property is referenced in the instance method of the class.</h3><p>The instance methods in the ES6 class are passed by default.<code>this </code>access instance properties.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class Animal &#123;</span><br><span class="line">  constructor(name) &#123;</span><br><span class="line">    this.name = name;</span><br><span class="line">  &#125;</span><br><span class="line">  speak() &#123;</span><br><span class="line">    console.log(this.name + &#x27; makes a noise.&#x27;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">const dog = new Animal(&#x27;Dog&#x27;);</span><br><span class="line">dog.speak(); // Dog makes a noise.</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-In-the-event-handler-function-this"><a href="#4-In-the-event-handler-function-this" class="headerlink" title="4. In the event handler function. this "></a>4. In the event handler function. <code>this </code></h3><p>in the DOM Event handler, <code>this </code>the DOM element that points to the bound event.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">button.addEventListener(&#x27;click&#x27;, function() &#123;</span><br><span class="line">  console.log(this); // 输出触发事件的按钮元素</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>Note that using the arrow function results in <code>this </code>points to the outer scope, not the event target.</p>
+<h3 id="5-In-the-callback-function-this-binding"><a href="#5-In-the-callback-function-this-binding" class="headerlink" title="5. In the callback function. this binding"></a>5. In the callback function. <code>this </code>binding</h3><p>in the callback function <code>this </code>often not as expected, commonly used arrow functions or explicit binding resolve.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function Timer() &#123;</span><br><span class="line">  this.seconds = 0;</span><br><span class="line">  setInterval(() =&gt; &#123;</span><br><span class="line">    this.seconds++;</span><br><span class="line">    console.log(this.seconds);</span><br><span class="line">  &#125;, 1000);</span><br><span class="line">&#125;</span><br><span class="line">new Timer();</span><br></pre></td></tr></table></figure>
+
+<p>Here the arrow function makes <code>this </code>points to a Timer instance.</p>
+<h3 id="6-Explicit-binding-scenarios"><a href="#6-Explicit-binding-scenarios" class="headerlink" title="6. Explicit binding scenarios."></a>6. Explicit binding scenarios.</h3><p>By <code>call </code>, <code>apply </code>, <code>bind </code>, the developer has the flexibility to change <code>this </code>, to implement function reuse or borrowing.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function sayHello() &#123;</span><br><span class="line">  console.log(&#x27;Hello, &#x27; + this.name);</span><br><span class="line">&#125;</span><br><span class="line">const obj = &#123; name: &#x27;Carol&#x27; &#125;;</span><br><span class="line">sayHello.call(obj); // Hello, Carol</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-Inherit-the-outer-layer-of-this-in-the-Arrow-function"><a href="#7-Inherit-the-outer-layer-of-this-in-the-Arrow-function" class="headerlink" title="7. Inherit the outer layer of this in the Arrow function."></a>7. Inherit the outer layer of this in the Arrow function.</h3><p>Arrow functions do not bind their own <code>this </code>which is suitable for scenarios where context needs to be maintained, such as callbacks for array methods.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const obj = &#123;</span><br><span class="line">  value: 42,</span><br><span class="line">  method() &#123;</span><br><span class="line">    [1, 2, 3].forEach(n =&gt; &#123;</span><br><span class="line">      console.log(this.value + n);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">obj.method(); // 43 44 45</span><br></pre></td></tr></table></figure>
+
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p><strong>question: What are the main usage scenarios of this in JavaScript?</strong></p>
+<p>Answer demonstration:</p>
+<p><code>this </code>in JavaScript, it is mainly used for object methods to access their own properties, binding instance properties in Constructors, referencing instance data in class instance methods, binding event elements in DOM Event handling functions, maintaining context in callback functions, explicitly binding function execution context, and inheriting the outer layer of arrow functions. <code>this </code>. These scenes embody <code>this </code>flexible and dynamic pointing rules. Proficiency and reasonable use <code>this </code>can effectively avoid scope and context errors, improve the maintainability of the code.</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p><code>this </code>JavaScript programming is an indispensable keyword, throughout the object operation, function calls, event handling and asynchronous programming and other fields. A deep understanding of its usage scenarios can help developers write clearer, simpler, and more efficient code. In the interview <code>this </code>if you can combine specific scenarios and examples to illustrate the problem, you will be able to demonstrate a solid foundation and practical experience.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
