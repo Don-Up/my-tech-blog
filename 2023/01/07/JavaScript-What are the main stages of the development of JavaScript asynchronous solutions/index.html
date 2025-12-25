@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What are the main stages of the development of JavaScript asynchronous solutionsForewordJavaScript asynchronous programming has evolved from callbacks"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What are the main stages of the development of JavaScript asynchronous solutions"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What are the main stages of the development of JavaScript asynchronous solutionsForewordJavaScript asynchronous programming has evolved from callbacks"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What are the main stages of the development of JavaScript asynchronous solutions - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What are the main stages of the development of JavaScript asynchronous solutions</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-01-07
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-are-the-main-stages-of-the-development-of-JavaScript-asynchronous-solutions"><a href="#What-are-the-main-stages-of-the-development-of-JavaScript-asynchronous-solutions" class="headerlink" title="What are the main stages of the development of JavaScript asynchronous solutions"></a>What are the main stages of the development of JavaScript asynchronous solutions</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>JavaScript asynchronous programming has evolved from callbacks to promises to async&#x2F;await. This development not only reflects the maturity of the language itself, but also reflects the increasing demand for code readability, exception handling capabilities, and business complexity management. Understanding this evolution will help us gain a deeper understanding of the underlying principles of asynchronous mechanisms and the design intent of each generation of solutions.</p>
+<h2 id="JavaScript-asynchronous-solution-development-stage"><a href="#JavaScript-asynchronous-solution-development-stage" class="headerlink" title="JavaScript asynchronous solution development stage"></a>JavaScript asynchronous solution development stage</h2><h3 id="phase-1-Callback-function"><a href="#phase-1-Callback-function" class="headerlink" title="phase 1: Callback function"></a>phase 1: Callback function</h3><p>the original way to handle asynchronous tasks in early JavaScript was with callback functions. By passing a function as a parameter to another function, the callback is called after the asynchronous task is completed.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fs.readFile(&#x27;./data.json&#x27;, &#x27;utf-8&#x27;, (err, data) =&gt; &#123;</span><br><span class="line">  if (err) throw err;</span><br><span class="line">  console.log(data);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>The problem with this approach is that when multiple asynchronous operations are nested, a “Callback Hell” is formed, the code structure is chaotic, the readability is extremely poor, and the exception handling is not centralized.</p>
+<h3 id="Phase-2-Event-Listening-and-Publish-Subscribe-Mechanism"><a href="#Phase-2-Event-Listening-and-Publish-Subscribe-Mechanism" class="headerlink" title="Phase 2: Event Listening and Publish&#x2F;Subscribe Mechanism"></a>Phase 2: Event Listening and Publish&#x2F;Subscribe Mechanism</h3><p>in order to manage asynchronous state more flexibly, the event mechanism is widely used. In Node.js <code>EventEmitter </code>and DOM events in the browser are typical examples. This mechanism controls asynchronous processes by listening to and triggering events, achieving some degree of decoupling.</p>
+<p>However, the disadvantage is that there is no explicit sequential logic between events, multiple events need to be manually managed when executed in series, and the code is prone to become complex.</p>
+<h3 id="Stage-3-Promise-ES6"><a href="#Stage-3-Promise-ES6" class="headerlink" title="Stage 3: Promise(ES6)"></a>Stage 3: Promise(ES6)</h3><p>ES6 introduces promises, which brings a huge improvement to asynchronous process control. Promise through <code>.then() </code>chain call, which organizes asynchronous tasks in a logical order and supports <code>.catch() </code>uniform handling of errors.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fetch(&#x27;/api/user&#x27;)</span><br><span class="line">  .then(res =&gt; res.json())</span><br><span class="line">  .then(data =&gt; console.log(data))</span><br><span class="line">  .catch(err =&gt; console.error(err));</span><br></pre></td></tr></table></figure>
+
+<p>Promise solves the problem of callback nesting and improves code readability. Its State Management Mechanism (pending, fullfilled, rejected) makes asynchronous operations more explicit.</p>
+<p>However, it is still cumbersome when multiple asynchronous tasks are executed sequentially, especially in scenarios with complex try&#x2F;catch logic, which makes debugging more difficult.</p>
+<h3 id="Phase-4-Generator-co-transition-phase"><a href="#Phase-4-Generator-co-transition-phase" class="headerlink" title="Phase 4: Generator + co (transition phase)"></a>Phase 4: Generator + co (transition phase)</h3><p>Generator function is another asynchronous scheme provided by ES6, through <code>yield </code>pauses function execution. With the co Library, the generator process can be automatically advanced to achieve near-synchronous writing.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const co = require(&#x27;co&#x27;);</span><br><span class="line"></span><br><span class="line">co(function* () &#123;</span><br><span class="line">  const res = yield fetch(&#x27;/api/user&#x27;);</span><br><span class="line">  const data = yield res.json();</span><br><span class="line">  console.log(data);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>This stage is the predecessor of async&#x2F;await, but it is not as intuitive and stable as the latter.</p>
+<h3 id="Phase-5-async-await-ES8"><a href="#Phase-5-async-await-ES8" class="headerlink" title="Phase 5: async&#x2F;await(ES8)"></a>Phase 5: async&#x2F;await(ES8)</h3><p>async&#x2F;await is the current mainstream asynchronous programming method, which is based on promises and uses synchronous writing to implement asynchronous logic.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">async function getData() &#123;</span><br><span class="line">  try &#123;</span><br><span class="line">    const res = await fetch(&#x27;/api/user&#x27;);</span><br><span class="line">    const data = await res.json();</span><br><span class="line">    console.log(data);</span><br><span class="line">  &#125; catch (err) &#123;</span><br><span class="line">    console.error(err);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>The advantage is that the code structure is clear, error capture is natural, and debugging costs are low. The disadvantage is that concurrency control still needs to be handled with methods such as Promise.all.</p>
+<p>At present, async&#x2F;await has become the standard of almost all new projects and is one of the ultimate forms of asynchronous programming solutions.</p>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p>asynchronous programming in JavaScript goes through five typical stages. The first is the callback function, which is simple but easy to nest too deeply, readability is poor, and exception handling is scattered. To avoid callback hell, ES6 introduces promises, which support chain calls and centralized error handling, greatly improving code clarity.</p>
+<p>After the Promise, the community appeared the way of Generator cooperating with co Library, and wrote asynchronous code in synchronous style through yield. Although the structure is clearer, the writing method is biased and functional, which is not intuitive enough.</p>
+<p>ES8 introduces async&#x2F;await, which encapsulates asynchronous operations into a writing method similar to Synchronous processes. It still relies on promises at the bottom, but the use experience is more friendly, especially suitable for sequential execution scenarios, which is currently the most recommend method.</p>
+<p>In addition to these, there are mechanisms such as event listening, publish and subscribe, which are more used to handle user interaction or module communication, but are also part of asynchronous processing.</p>
+<p>Generally speaking, the development direction of asynchronous scheme is to improve readability, centralize error handling and reduce mental burden. async&#x2F;await is the most mature form at present.</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>the development of JavaScript asynchronous programming solutions has evolved from callback functions and event mechanisms to promises, Generator + co, and then to async&#x2F;await. Each stage attempts to address the readability, exception handling, and code structure issues of the previous stage. Mastering this development will not only help us choose asynchronous solutions more rationally, but also show a deep understanding of the evolution of the JavaScript language in the interview.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

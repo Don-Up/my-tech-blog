@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Is the Promise constructor executed synchronously or asynchronously-What about the then methodForewordunderstanding the timing of Promise execution is"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Is the Promise constructor executed synchronously or asynchronously-What about the then method"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Is the Promise constructor executed synchronously or asynchronously-What about the then methodForewordunderstanding the timing of Promise execution is"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Is the Promise constructor executed synchronously or asynchronously-What about the then method - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Is the Promise constructor executed synchronously or asynchronously-What about the then method</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-12-11
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Is-the-Promise-constructor-executed-synchronously-or-asynchronously-What-about-the-then-method"><a href="#Is-the-Promise-constructor-executed-synchronously-or-asynchronously-What-about-the-then-method" class="headerlink" title="Is the Promise constructor executed synchronously or asynchronously-What about the then method"></a>Is the Promise constructor executed synchronously or asynchronously-What about the then method</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>understanding the timing of Promise execution is key to mastering asynchronous programming. In actual development, we often encounter the question: Why do some codes execute first and some codes execute later? Many people mistakenly think that as long as Promise is used, the code inside is executed asynchronously. But the truth is not. This article will focus on the Promise constructor and <code>then </code>the timing of the execution of the method is analyzed in depth to help you clarify the boundary between synchronous and asynchronous.</p>
+<h2 id="The-Promise-constructor-is-executed-synchronously"><a href="#The-Promise-constructor-is-executed-synchronously" class="headerlink" title="The Promise constructor is executed synchronously"></a>The Promise constructor is executed synchronously</h2><p>when you create a Promise instance, the callback passed into the constructor is <strong>immediate execution</strong> and does not delay asynchronously.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const p = new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">  console.log(&#x27;执行 Promise 内部&#x27;);</span><br><span class="line">  resolve(&#x27;ok&#x27;);</span><br><span class="line">&#125;);</span><br><span class="line">console.log(&#x27;外部逻辑&#x27;);</span><br></pre></td></tr></table></figure>
+
+<p>The output is as follows:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">执行 Promise 内部</span><br><span class="line">外部逻辑</span><br></pre></td></tr></table></figure>
+
+<p>as you can see, the contents of the Promise’s constructor are <strong>synchronously executed</strong> , will not be placed in the event queue to wait.</p>
+<p>This synchronous execution behavior is critical, it means that when you create a Promise, you already start executing the logic it encapsulates.</p>
+<h2 id="then-method-is-asynchronous-microtask"><a href="#then-method-is-asynchronous-microtask" class="headerlink" title="then method is asynchronous (microtask)"></a>then method is asynchronous (microtask)</h2><p>unlike constructors, <code>then </code>the callback function of the method is pushed into the microtask queue and executed after the current macro task is completed.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const p = new Promise((resolve) =&gt; &#123;</span><br><span class="line">  resolve(&#x27;ok&#x27;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">p.then((res) =&gt; &#123;</span><br><span class="line">  console.log(&#x27;then 回调&#x27;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">console.log(&#x27;同步逻辑&#x27;);</span><br></pre></td></tr></table></figure>
+
+<p>The output is:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">同步逻辑</span><br><span class="line">then 回调</span><br></pre></td></tr></table></figure>
+
+<p>This shows <code>then </code>is asynchronous, even if the Promise is already resolved, <code>then </code>the registered callback will not be executed immediately, but will wait for the current synchronization code to be executed before entering the microtask stage.</p>
+<h2 id="Comparison-of-execution-order-between-setTimeout-and-then"><a href="#Comparison-of-execution-order-between-setTimeout-and-then" class="headerlink" title="Comparison of execution order between setTimeout and then"></a>Comparison of execution order between setTimeout and then</h2><p>further, it can be compared. <code>setTimeout </code>with <code>then </code>order of execution, deepen the understanding of micro tasks and macro tasks.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Promise.resolve().then(() =&gt; &#123;</span><br><span class="line">  console.log(&#x27;微任务&#x27;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">setTimeout(() =&gt; &#123;</span><br><span class="line">  console.log(&#x27;宏任务&#x27;);</span><br><span class="line">&#125;, 0);</span><br><span class="line"></span><br><span class="line">console.log(&#x27;同步任务&#x27;);</span><br></pre></td></tr></table></figure>
+
+<p>Output result:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">同步任务</span><br><span class="line">微任务</span><br><span class="line">宏任务</span><br></pre></td></tr></table></figure>
+
+<p>description:</p>
+<ul>
+<li>synchronization task executes first</li>
+<li>microtasks (such as Promise then) take precedence over macro tasks (such as setTimeout)</li>
+</ul>
+<h2 id="impacts-and-Misunderstandings-in-Practice"><a href="#impacts-and-Misunderstandings-in-Practice" class="headerlink" title="impacts and Misunderstandings in Practice"></a>impacts and Misunderstandings in Practice</h2><p>many beginners mistakenly think that the constructor of Promise is asynchronous. After writing the following code, they find that the result is not as expected:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">let data;</span><br><span class="line">new Promise((resolve) =&gt; &#123;</span><br><span class="line">  resolve(100);</span><br><span class="line">&#125;).then((res) =&gt; &#123;</span><br><span class="line">  data = res;</span><br><span class="line">&#125;);</span><br><span class="line">console.log(data); // 不是 100，而是 undefined</span><br></pre></td></tr></table></figure>
+
+<p>the problem here is <code>then </code>is asynchronous, <code>console.log(data) </code>in <code>then </code>the callback has been executed before.</p>
+<p>The correct approach is to write the logical<code>then </code>callback or use async&#x2F;await.</p>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p>the Promise constructor is executed synchronously, which means that when you create a Promise instance, the function you pass in will be executed immediately. This is a place that is easy to misunderstand. Many people think that as long as the Promise is asynchronous, it is actually wrong.</p>
+<p>What’s really asynchronous is <code>then </code>method of the callback, that is, you call <code>promise.then(() =&gt; &#123;&#125;) </code>after that, the logic inside will not be executed immediately, but will be put into the microtask queue and will not be executed until the current synchronization code and synchronization task are completed.</p>
+<p>This is also why you call in your code. <code>then </code>immediately behind. <code>console.log() </code>will see first. <code>console.log </code>the result, see again <code>then </code>the output of the callback.</p>
+<p>To sum up, the constructor of Promise is synchronous, then is asynchronous, and its callback is arranged in the micro task queue, which takes precedence over macro tasks (like setTimeout).</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>The Promise constructor is executed synchronously, which means that the moment the Promise is created, the internal logic is already running. The callback of the then method is asynchronous, belongs to the microtask queue, and will be executed after the current call stack is empty. Mastering this distinction is essential for understanding how promises work, writing correct asynchronous logic, and avoiding common logic errors.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
