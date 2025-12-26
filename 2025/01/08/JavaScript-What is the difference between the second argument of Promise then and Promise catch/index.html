@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What is the difference between the second argument of Promise then and Promise catchForewordin JavaScript’s Promise, there are two main ways to handle"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What is the difference between the second argument of Promise then and Promise catch"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What is the difference between the second argument of Promise then and Promise catchForewordin JavaScript’s Promise, there are two main ways to handle"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What is the difference between the second argument of Promise then and Promise catch - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What is the difference between the second argument of Promise then and Promise catch</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-01-08
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-is-the-difference-between-the-second-argument-of-Promise-then-and-Promise-catch"><a href="#What-is-the-difference-between-the-second-argument-of-Promise-then-and-Promise-catch" class="headerlink" title="What is the difference between the second argument of Promise then and Promise catch"></a>What is the difference between the second argument of Promise then and Promise catch</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in JavaScript’s Promise, there are two main ways to handle errors: through <code>then </code>the second parameter of the method or use a separate <code>catch </code>methods. Many beginners are prone to confusion about the differences and best practices. This article will analyze the differences and connections between the two in detail to help you better understand and use the error handling mechanism of promises.</p>
+<h2 id="The-second-parameter-of-then-and-the-basic-usage-of-catch"><a href="#The-second-parameter-of-then-and-the-basic-usage-of-catch" class="headerlink" title="The second parameter of then and the basic usage of catch"></a>The second parameter of then and the basic usage of catch</h2><p><code>then </code>method accepts two parameters:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">promise.<span class="title function_">then</span>(onFulfilled, onRejected);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>onFulfilled </code>the callback to execute when the Promise succeeds</li>
+<li><code>onRejected </code>: The callback executed when the Promise fails.</li>
+</ul>
+<p>And <code>catch </code>yes <code>then </code>syntactic sugar, specifically used to catch errors:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">promise.<span class="title function_">then</span>(onFulfilled).<span class="title function_">catch</span>(onRejected);</span><br></pre></td></tr></table></figure>
+
+<p><code>catch(onRejected) </code>equivalent to calling <code>then(null, onRejected) </code>.</p>
+<h2 id="Difference-1-Error-capture-range-in-chain-call"><a href="#Difference-1-Error-capture-range-in-chain-call" class="headerlink" title="Difference 1: Error capture range in chain call"></a>Difference 1: Error capture range in chain call</h2><p>use <code>then </code>the second parameter of can only catch errors of the current Promise, and errors in subsequent chains will not be caught.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Promise</span>.<span class="title function_">resolve</span>()</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&#x27;错误A&#x27;</span>);</span><br><span class="line">  &#125;, <span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;捕获错误A:&#x27;</span>, err.<span class="property">message</span>);</span><br><span class="line">  &#125;)</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&#x27;错误B&#x27;</span>);</span><br><span class="line">  &#125;)</span><br><span class="line">  .<span class="title function_">catch</span>(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;捕获错误B:&#x27;</span>, err.<span class="property">message</span>);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<p>Output result:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">捕获错误A: 错误A</span><br><span class="line">捕获错误B: 错误B</span><br></pre></td></tr></table></figure>
+
+<p>and if you use <code>catch </code>trapping errors can catch uncaught errors in the entire chain.</p>
+<h2 id="Difference-two-abnormal-propagation-mechanism"><a href="#Difference-two-abnormal-propagation-mechanism" class="headerlink" title="Difference two: abnormal propagation mechanism"></a>Difference two: abnormal propagation mechanism</h2><p>when <code>then </code>after the second parameter of is executed, the error is “eaten” and the subsequent <code>catch </code>will not receive this error.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Promise</span>.<span class="title function_">reject</span>(<span class="string">&#x27;error&#x27;</span>)</span><br><span class="line">  .<span class="title function_">then</span>(<span class="literal">null</span>, <span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;处理错误:&#x27;</span>, err);</span><br><span class="line">    <span class="comment">// 不抛出错误，错误不会继续传递</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .<span class="title function_">catch</span>(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;这里不会执行&#x27;</span>);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<p>If you want the error to continue to pass, you need <code>then </code>the error callback explicitly throws an exception or returns a rejected Promise.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Promise</span>.<span class="title function_">reject</span>(<span class="string">&#x27;error&#x27;</span>)</span><br><span class="line">  .<span class="title function_">then</span>(<span class="literal">null</span>, <span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;处理错误:&#x27;</span>, err);</span><br><span class="line">    <span class="keyword">throw</span> err; <span class="comment">// 或 return Promise.reject(err);</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .<span class="title function_">catch</span>(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;这里会执行:&#x27;</span>, err);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="Difference-3-Separation-of-code-readability-and-error-handling"><a href="#Difference-3-Separation-of-code-readability-and-error-handling" class="headerlink" title="Difference 3: Separation of code readability and error handling"></a>Difference 3: Separation of code readability and error handling</h2><p>use <code>catch </code>error handling can be uniformly placed at the end of the chain, making the business logic and error handling separate and the code clearer.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">doSomething</span>()</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 业务逻辑</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 业务逻辑</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .<span class="title function_">catch</span>(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 统一捕获所有错误</span></span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<p>And <code>then </code>the second parameter is suitable for specific handling of errors at a certain step.</p>
+<h2 id="Other-details"><a href="#Other-details" class="headerlink" title="Other details"></a>Other details</h2><ul>
+<li><code>catch</code>Is actually <code>then(null, onRejected) </code>of syntactic sugar, but can catch more positional anomalies when used on the chain.</li>
+<li>If in <code>then </code>the success callback throws an error, only <code>catch </code>can capture, <code>then </code>the second parameter does not catch the error thrown by the success callback.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Promise</span>.<span class="title function_">resolve</span>()</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&#x27;异常&#x27;</span>);</span><br><span class="line">  &#125;, <span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;不会捕获这里的异常&#x27;</span>);</span><br><span class="line">  &#125;)</span><br><span class="line">  .<span class="title function_">catch</span>(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;catch 捕获:&#x27;</span>, err.<span class="property">message</span>);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p><code>then </code>the second parameter of the method and <code>catch </code>are used to handle Promise exceptions. Their main differences are:</p>
+<p>first, <code>then </code>the second parameter can only capture the reject of the current Promise, while <code>catch </code>unhandled exceptions throughout the chain can be caught.</p>
+<p>Second, if in <code>then </code>an exception is thrown in the success callback, <code>then </code>the second parameter cannot be captured, only the following <code>catch </code>can capture.</p>
+<p>Third, use<code>catch </code>error handling can be placed at the end of the chain to make the code logic clearer and more in line with the needs of “centralized handling of exceptions” in real-world development.</p>
+<p>Therefore, the actual work recommend use <code>.then(onFulfilled).catch(onRejected) </code>the way to write, and avoid in. <code>then </code>write the second parameter as error handling, unless you need to do special handling for a step error.</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Promise error handling mechanisms are available in a variety of ways, <code>then </code>the second parameter and <code>catch </code>both can catch errors, but their capture scope and behavior are different. Reasonable choice of error handling, can make the code more concise, more clear logic, but also to avoid hidden errors. Understanding their differences helps you write asynchronous code that is robust and easy to maintain.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

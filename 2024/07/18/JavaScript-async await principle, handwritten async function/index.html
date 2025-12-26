@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="async await principle, handwritten async functionForewordasync&amp;#x2F;await is a sharp weapon for complex asynchronous processes in modern JavaScript pr"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="async await principle, handwritten async function"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="async await principle, handwritten async functionForewordasync&amp;#x2F;await is a sharp weapon for complex asynchronous processes in modern JavaScript pr"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>async await principle, handwritten async function - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>async await principle, handwritten async function</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-07-18
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="async-await-principle-handwritten-async-function"><a href="#async-await-principle-handwritten-async-function" class="headerlink" title="async await principle, handwritten async function"></a>async await principle, handwritten async function</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>async&#x2F;await is a sharp weapon for complex asynchronous processes in modern JavaScript processing. It is based on promises and uses synchronous writing to represent asynchronous operations, greatly improving the readability and maintainability of the code. An in-depth understanding of the principles of async&#x2F;await and the process of writing async functions will help you fully grasp the underlying mechanisms of asynchronous programming.</p>
+<h2 id="Basic-principles-of-async-await"><a href="#Basic-principles-of-async-await" class="headerlink" title="Basic principles of async&#x2F;await"></a>Basic principles of async&#x2F;await</h2><p>the async function returns a Promise, and The await expression pauses the async function execution, waits for the Promise to be resolved, resumes execution, and returns the result.</p>
+<p>In essence, an async function is a combination of a Generator function and a Promise. The JavaScript engine converts the async function into a Generator function, and then uses an actuator to automatically drive the Generator to manage asynchronous processes.</p>
+<p>Specific performance is:</p>
+<ul>
+<li>async function execution returns a Promise immediately</li>
+<li>the expression after await is wrapped by Promise.resolve</li>
+<li>the function pauses and waits for the Promise to be resolved. When it resumes, it gets the result and continues to execute.</li>
+<li>If await’s Promise is rejected, an exception will be thrown, which can be caught with try&#x2F;catch.</li>
+</ul>
+<h2 id="Ideas-for-Handwriting-async-Functions"><a href="#Ideas-for-Handwriting-async-Functions" class="headerlink" title="Ideas for Handwriting async Functions"></a>Ideas for Handwriting async Functions</h2><p>To implement async&#x2F;await with Generator, an “actuator” that automatically executes the Generator is required to drive the Generator to execute each time. <code>next() </code>and process the returned Promise and wait for it to resolve before continuing.</p>
+<p>An example handwriting implementation is as follows:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">function asyncToGenerator(genFn) &#123;</span><br><span class="line">  return function (...args) &#123;</span><br><span class="line">    const gen = genFn.apply(this, args);</span><br><span class="line"></span><br><span class="line">    return new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">      function step(key, arg) &#123;</span><br><span class="line">        let info;</span><br><span class="line">        try &#123;</span><br><span class="line">          info = gen[key](arg);</span><br><span class="line">        &#125; catch (error) &#123;</span><br><span class="line">          reject(error);</span><br><span class="line">          return;</span><br><span class="line">        &#125;</span><br><span class="line">        const &#123; value, done &#125; = info;</span><br><span class="line">        if (done) &#123;</span><br><span class="line">          resolve(value);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">          // 将 value 包装为 Promise，等待解决后继续执行</span><br><span class="line">          Promise.resolve(value).then(</span><br><span class="line">            val =&gt; step(&#x27;next&#x27;, val),</span><br><span class="line">            err =&gt; step(&#x27;throw&#x27;, err)</span><br><span class="line">          );</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      step(&#x27;next&#x27;);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>this <code>asyncToGenerator </code>the function receives a Generator function, returns a Promise after the function is executed, executes the code in the Generator asynchronously, and simulates the behavior of the async function.</p>
+<h2 id="Example-Comparison"><a href="#Example-Comparison" class="headerlink" title="Example Comparison"></a>Example Comparison</h2><p>the following is an example comparison between async&#x2F;await and handwriting Generator:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// async/await 版本</span><br><span class="line">async function fetchData() &#123;</span><br><span class="line">  const res = await fetch(&#x27;/api/data&#x27;);</span><br><span class="line">  const data = await res.json();</span><br><span class="line">  return data;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 手写 Generator + 执行器</span><br><span class="line">function* fetchDataGen() &#123;</span><br><span class="line">  const res = yield fetch(&#x27;/api/data&#x27;);</span><br><span class="line">  const data = yield res.json();</span><br><span class="line">  return data;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const fetchDataManual = asyncToGenerator(fetchDataGen);</span><br><span class="line">fetchDataManual().then(console.log);</span><br></pre></td></tr></table></figure>
+
+<p>this shows that behind the async function is the combination of Generator + Promise, which automatically drives the asynchronous process through the actuator.</p>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p>the async function is syntactic sugar, essentially a combination of a Generator function and a Promise. When the async function is executed, a Promise is returned. await is used to pause execution in the function body and wait for the Promise to be resolved.</p>
+<p>The key to handwriting async is to implement an executor. This executor automatically calls the Generator’s next method, gets a Promise at a time, then waits for it to resolve, and then continues to call next until the Generator is executed and finally returns a Promise.</p>
+<p>This executor implementation should be able to handle exceptions, catch errors during Generator execution through try&#x2F;catch, and pass them through Promise’s reject.</p>
+<p>Understanding the principles of async&#x2F;await helps you gain a deeper understanding of asynchronous programming, especially debugging complex asynchronous code and optimizing asynchronous processes.</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>async&#x2F;await greatly improves the readability of asynchronous code, which is essentially a combination of Generator functions and promises. The handwritten async function needs to implement a function that automatically executes the Generator, recursively processing the Promise of each step. An in-depth understanding of its principles can help you better use and debug asynchronous code, as well as facilitate understanding of the underlying execution mechanism.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="How did the Promise finally come aboutForewordin the process of using promises to handle asynchronous tasks, we often need to perform some clean-up op"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How did the Promise finally come about"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="How did the Promise finally come aboutForewordin the process of using promises to handle asynchronous tasks, we often need to perform some clean-up op"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How did the Promise finally come about - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How did the Promise finally come about</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-10-02
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="How-did-the-Promise-finally-come-about"><a href="#How-did-the-Promise-finally-come-about" class="headerlink" title="How did the Promise finally come about"></a>How did the Promise finally come about</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in the process of using promises to handle asynchronous tasks, we often need to perform some clean-up operations after the task is completed, such as closing loading, releasing resources, and resetting the state. Whether the Promise ultimately succeeds or fails, we want the closing logic to be implemented. This is exactly <code>Promise.prototype.finally() </code>the purpose of.</p>
+<p>This article will provide an in-depth explanation of the behavioral characteristics of finally, the underlying implementation principles, and practical usage scenarios to help you fully understand the value of this approach in asynchronous programming.</p>
+<h2 id="Function-and-characteristics-of-finally"><a href="#Function-and-characteristics-of-finally" class="headerlink" title="Function and characteristics of finally"></a>Function and characteristics of finally</h2><p><code>finally </code>the method can execute a callback function without parameters after the Promise is resolved or rejected, without affecting the value passing of the chain call.</p>
+<p>Example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fetch(&#x27;/api/data&#x27;)</span><br><span class="line">  .then(res =&gt; res.json())</span><br><span class="line">  .catch(err =&gt; console.error(&#x27;请求出错&#x27;, err))</span><br><span class="line">  .finally(() =&gt; &#123;</span><br><span class="line">    console.log(&#x27;请求完成，关闭 loading&#x27;);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<p>whether the above request succeeds or fails, finally will be executed. It is more like a “bottom end”, but it will not receive <code>then </code>or <code>catch </code>and does not change the value of subsequent chain calls.</p>
+<h2 id="The-execution-timing-and-return-value-of-finally"><a href="#The-execution-timing-and-return-value-of-finally" class="headerlink" title="The execution timing and return value of finally"></a>The execution timing and return value of finally</h2><ul>
+<li>finally is triggered after the previous then or catch execution completes.</li>
+<li>The return value of finally does not affect the subsequent Promise chain.</li>
+<li>If finally throws an exception or returns a Promise in the reject state, the final chain Call will enter the reject branch.</li>
+</ul>
+<p>Example 1: Normal Execution</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Promise.resolve(&#x27;ok&#x27;)</span><br><span class="line">  .finally(() =&gt; &#123;</span><br><span class="line">    console.log(&#x27;finally&#x27;);</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(res =&gt; &#123;</span><br><span class="line">    console.log(&#x27;then:&#x27;, res);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<p>the output is:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">finally</span><br><span class="line">then: ok</span><br></pre></td></tr></table></figure>
+
+<p>example 2:finally throw an exception</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Promise.resolve(&#x27;ok&#x27;)</span><br><span class="line">  .finally(() =&gt; &#123;</span><br><span class="line">    throw new Error(&#x27;出错了&#x27;);</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(res =&gt; &#123;</span><br><span class="line">    console.log(&#x27;then:&#x27;, res);</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(err =&gt; &#123;</span><br><span class="line">    console.log(&#x27;catch:&#x27;, err.message);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<p>the output is:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">catch: 出错了</span><br></pre></td></tr></table></figure>
+
+<p>explain that finally itself may also break the Promise chain.</p>
+<h2 id="The-underlying-implementation-principle-of-finally-simplified-simulation"><a href="#The-underlying-implementation-principle-of-finally-simplified-simulation" class="headerlink" title="The underlying implementation principle of finally (simplified simulation)"></a>The underlying implementation principle of finally (simplified simulation)</h2><p>when there is no finally, we usually write like this:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">promise</span><br><span class="line">  .then(res =&gt; &#123;</span><br><span class="line">    // 处理结果</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(err =&gt; &#123;</span><br><span class="line">    // 处理错误</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(() =&gt; &#123;</span><br><span class="line">    // 相当于 finally</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<p>finally is essentially a chain package, which can be simulated as follows:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Promise.prototype.myFinally = function (callback) &#123;</span><br><span class="line">  return this.then(</span><br><span class="line">    value =&gt; Promise.resolve(callback()).then(() =&gt; value),</span><br><span class="line">    reason =&gt; Promise.resolve(callback()).then(() =&gt; &#123; throw reason &#125;)</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>the core idea of this implementation is: whether the current Promise succeeds or fails, it will be executed first. <code>callback() </code>, and then continue to pass the original value or reason.</p>
+<h2 id="Actual-use-scenario"><a href="#Actual-use-scenario" class="headerlink" title="Actual use scenario"></a>Actual use scenario</h2><ol>
+<li>loading shutdown after interface request:</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">this.loading = true;</span><br><span class="line">axios.get(&#x27;/api&#x27;)</span><br><span class="line">  .then(res =&gt; &#123;</span><br><span class="line">    this.data = res.data;</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(() =&gt; &#123;</span><br><span class="line">    this.error = true;</span><br><span class="line">  &#125;)</span><br><span class="line">  .finally(() =&gt; &#123;</span><br><span class="line">    this.loading = false;</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>reset button state after form submission regardless of success or failure:</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">submitForm()</span><br><span class="line">  .finally(() =&gt; &#123;</span><br><span class="line">    this.isSubmitting = false;</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>resource release scenarios such as clearing temporary files and closing file handles after data upload is complete.</li>
+</ol>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p>finally is a method provided by the Promise to execute a callback after the task succeeds or fails. This callback does not receive any parameters and is mainly used to do some finishing actions, such as closing loading or clearing temporary data.</p>
+<p>The timing of its execution is after the execution of then or catch, regardless of whether the previous is resolve or reject,finally will be called. And finally does not affect the value passing of subsequent Promise chains. For example, if the Promise was originally resolve(‘OK’), after executing finally, the’ OK ‘will still be passed to the following then.</p>
+<p>However, there is one point to note: If finally throws an exception inside itself or returns a rejected Promise, the whole chain will be interrupted and the catch branch will be entered. This is the actual development of special attention.</p>
+<p>In addition, finally can also be implemented by then + catch simulation. The principle is to execute callback in both successful and failed branches, and then continue to pass the original value or error.</p>
+<p>In actual work, the scene where I use finally most is to close the loading state after the asynchronous request ends. Whether the request succeeds or fails, finally will be called, which is very suitable for cleaning up the loading state.</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>The finally method of Promise is a small but powerful tool in asynchronous programming. It can make the code more concise and clear, especially suitable for unified resource cleaning and UI update operations after the completion of asynchronous tasks. It does not by itself change the value-passing logic of the Promise, but it can also affect the error handling flow if used incorrectly. Understanding its principles and behavioral characteristics will help you write more robust and maintainable asynchronous logic.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

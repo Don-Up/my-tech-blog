@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Should I add try catch to async await functionsForewordexception handling is a concern when writing asynchronous code using async&amp;#x2F;await. Many dev"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Should I add try catch to async await functions"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Should I add try catch to async await functionsForewordexception handling is a concern when writing asynchronous code using async&amp;#x2F;await. Many dev"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Should I add try catch to async await functions - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Should I add try catch to async await functions</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-06-28
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Should-I-add-try-catch-to-async-await-functions"><a href="#Should-I-add-try-catch-to-async-await-functions" class="headerlink" title="Should I add try catch to async await functions"></a>Should I add try catch to async await functions</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>exception handling is a concern when writing asynchronous code using async&#x2F;await. Many developers struggle with whether to use try&#x2F;catch inside async functions or rely on outer error handling mechanisms. A good understanding of when to use try&#x2F;catch helps you write robust, maintainable code. This article will focus on the analysis of async&#x2F;await exception capture mechanism and practice recommendations.</p>
+<h2 id="Principle-of-catching-async-await-exceptions"><a href="#Principle-of-catching-async-await-exceptions" class="headerlink" title="Principle of catching async&#x2F;await exceptions"></a>Principle of catching async&#x2F;await exceptions</h2><p>the async function essentially returns a Promise, and an exception thrown inside the function causes the returned Promise to be rejected. Therefore, there are two common ways of exception handling:</p>
+<ol>
+<li>use try&#x2F;catch inside async functions to catch exceptions for local handling.</li>
+<li>Where the async function is called, pass the Promise’s <code>.catch() </code>method to catch the exception.</li>
+</ol>
+<p>The choice of these two methods depends on the exception handling requirements and context.</p>
+<h2 id="When-to-add-try-catch-inside-async-function"><a href="#When-to-add-try-catch-inside-async-function" class="headerlink" title="When to add try&#x2F;catch inside async function?"></a>When to add try&#x2F;catch inside async function?</h2><ul>
+<li>When you need to handle exceptions locally, such as logging, cleaning, retry logic, etc.</li>
+<li>You want custom handling of certain errors without affecting the outer call.</li>
+<li>Prevent abnormal penetration from causing application crashes or poor user experience.</li>
+</ul>
+<p>Example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">async function fetchData() &#123;</span><br><span class="line">  try &#123;</span><br><span class="line">    const res = await fetch(&#x27;/api/data&#x27;);</span><br><span class="line">    if (!res.ok) throw new Error(&#x27;网络错误&#x27;);</span><br><span class="line">    const data = await res.json();</span><br><span class="line">    return data;</span><br><span class="line">  &#125; catch (err) &#123;</span><br><span class="line">    console.error(&#x27;fetchData 异常:&#x27;, err);</span><br><span class="line">    return null; // 兜底返回</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="when-to-rely-on-outer-capture-not-try-catch-inside-function"><a href="#when-to-rely-on-outer-capture-not-try-catch-inside-function" class="headerlink" title="when to rely on outer capture (not try&#x2F;catch inside function)?"></a>when to rely on outer capture (not try&#x2F;catch inside function)?</h2><ul>
+<li>The function itself does not care about exception handling and is handled by the caller.</li>
+<li>Facilitate chained calls and centralized exception management.</li>
+<li>The code is more concise and the logic is separated.</li>
+</ul>
+<p>Example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">async function fetchData() &#123;</span><br><span class="line">  const res = await fetch(&#x27;/api/data&#x27;);</span><br><span class="line">  const data = await res.json();</span><br><span class="line">  return data;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fetchData()</span><br><span class="line">  .then(data =&gt; console.log(data))</span><br><span class="line">  .catch(err =&gt; console.error(&#x27;统一异常处理:&#x27;, err));</span><br></pre></td></tr></table></figure>
+
+<h2 id="considerations-for-using-try-catch"><a href="#considerations-for-using-try-catch" class="headerlink" title="considerations for using try&#x2F;catch"></a>considerations for using try&#x2F;catch</h2><ul>
+<li>after catching an exception with try&#x2F;catch inside an async function, if no error is thrown or returned, the outer layer will not perceive the error and may mask the problem.</li>
+<li>It is recommended that after handling the exception, choose whether to throw an error or return a special value, depending on the situation.</li>
+<li>For multiple asynchronous operations, try&#x2F;catch can be nested to control exception handling in a fine-grained manner.</li>
+</ul>
+<h2 id="Use-with-finally"><a href="#Use-with-finally" class="headerlink" title="Use with finally"></a>Use with finally</h2><p>finally is used to perform cleanup operations regardless of exceptions, such as closing the loading state and releasing resources.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">async function fetchData() &#123;</span><br><span class="line">  try &#123;</span><br><span class="line">    const res = await fetch(&#x27;/api/data&#x27;);</span><br><span class="line">    return await res.json();</span><br><span class="line">  &#125; catch (err) &#123;</span><br><span class="line">    console.error(err);</span><br><span class="line">    throw err; // 继续抛出，交给调用方</span><br><span class="line">  &#125; finally &#123;</span><br><span class="line">    console.log(&#x27;请求结束，关闭 loading&#x27;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p>whether or not try&#x2F;catch is added to async functions depends on exception handling requirements. If the function needs to do local processing of exceptions, such as logging and bottom-up processing, try&#x2F;catch should be added.</p>
+<p>If the function itself does not handle exceptions, but lets the caller catch them uniformly, you can use Promise’s <code>.catch() </code>centralized processing.</p>
+<p>It should be noted that after try&#x2F;catch catches the exception, if no error is thrown or returned, the outer call may not be aware of the exception, resulting in the problem being covered up.</p>
+<p>Therefore, when writing async functions, it is recommended to use try&#x2F;catch reasonably, clarify the exception handling boundary, ensure that exceptions will not be swallowed, and do necessary cleanup operations in combination with finally.</p>
+<p>In general, adding try&#x2F;catch is a common and recommend exception handling method, but whether to add or not depends on the specific business scenario and exception handling strategy.</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>async&#x2F;await is essentially syntactic sugar for promises, and exception handling relies on the Promise’s reject mechanism. Whether try&#x2F;catch is added to async functions depends on whether local exception handling is required. Reasonable use of try&#x2F;catch combined with uniform capture of the outer layer can write robust and clear asynchronous code. Exception handling should not be ignored, otherwise it may lead to error hiding and affect program stability.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
