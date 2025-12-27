@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Event Loop PrincipleForewordJavaScript is a single-threaded language, but the key to its ability to handle asynchronous tasks efficiently is the event"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Event Loop Principle"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Event Loop PrincipleForewordJavaScript is a single-threaded language, but the key to its ability to handle asynchronous tasks efficiently is the event"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Event Loop Principle - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Event Loop Principle</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-01-09
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Event-Loop-Principle"><a href="#Event-Loop-Principle" class="headerlink" title="Event Loop Principle"></a>Event Loop Principle</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>JavaScript is a single-threaded language, but the key to its ability to handle asynchronous tasks efficiently is the event loop mechanism. Event Loop (Event Loop) coordinates the call stack and task queue to ensure the execution order of asynchronous tasks. An in-depth understanding of the event loop helps to accurately grasp asynchronous programming, performance optimization, and debugging techniques.</p>
+<p>This article explains in detail how the event loop works, the classification of task queues, and its impact on code execution.</p>
+<h2 id="The-basic-structure-of-the-event-loop"><a href="#The-basic-structure-of-the-event-loop" class="headerlink" title="The basic structure of the event loop"></a>The basic structure of the event loop</h2><p>the event loop involves several core concepts:</p>
+<ul>
+<li><strong>Call Stack</strong> : Store the currently executed function, following the first-in-last-out principle.</li>
+<li><strong>Task Queue</strong> stores asynchronous callback tasks waiting to be executed.</li>
+<li><strong>Message Queue</strong> A type of task queue that holds callbacks from asynchronous events.</li>
+<li><strong>Microtask Queue</strong> : Stores the callback of the Promise and the callback of the MutationObserver.</li>
+<li><strong>Event Loop</strong> : Continuously check whether the call stack is empty, and if it is empty, fetch the task from the task queue for execution.</li>
+</ul>
+<h2 id="Event-Loop-Execution-Process"><a href="#Event-Loop-Execution-Process" class="headerlink" title="Event Loop Execution Process"></a>Event Loop Execution Process</h2><ol>
+<li>the main thread executes synchronous code, and the call stack is constantly on and off the stack.</li>
+<li>When an asynchronous operation is encountered (such as a timer or a network request), the asynchronous task is processed by the browser or the background environment of Node.js, and the main thread continues to execute the synchronous code.</li>
+<li>After the asynchronous operation is completed, put the corresponding callback into the task queue or microtask queue.</li>
+<li>When the current call stack is empty, the event loop preferentially executes tasks in the microtask queue until the queue is empty.</li>
+<li>After the Microtask is emptied, the event loop takes out a Task execution from the macro Task Queue.</li>
+<li>After the task is completed, repeat the above process.</li>
+</ol>
+<p>This loop ensures the orderly execution of asynchronous tasks while maintaining the non-blocking of the main thread.</p>
+<h2 id="Difference-between-macro-task-and-micro-task"><a href="#Difference-between-macro-task-and-micro-task" class="headerlink" title="Difference between macro task and micro task"></a>Difference between macro task and micro task</h2><ul>
+<li><strong>Macro Tasks (Macrotask)</strong> includes: <code>setTimeout </code>, <code>setInterval </code>, <code>setImmediate </code>(Node.js), I&#x2F;O, UI rendering, etc.</li>
+<li><strong>Microtasks (microtasks)</strong> includes: <code>Promise.then/catch/finally </code>, <code>process.nextTick </code>(Node.js), <code>MutationObserver</code>.</li>
+</ul>
+<p>In the event loop, the priority of microtasks is higher than that of macro tasks, that is, each round of event loop executes all microtasks first, and then executes a macro task.</p>
+<h2 id="Example-Description"><a href="#Example-Description" class="headerlink" title="Example Description"></a>Example Description</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">console.log(&#x27;script start&#x27;);</span><br><span class="line"></span><br><span class="line">setTimeout(() =&gt; &#123;</span><br><span class="line">  console.log(&#x27;setTimeout&#x27;);</span><br><span class="line">&#125;, 0);</span><br><span class="line"></span><br><span class="line">Promise.resolve().then(() =&gt; &#123;</span><br><span class="line">  console.log(&#x27;promise1&#x27;);</span><br><span class="line">&#125;).then(() =&gt; &#123;</span><br><span class="line">  console.log(&#x27;promise2&#x27;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">console.log(&#x27;script end&#x27;);</span><br></pre></td></tr></table></figure>
+
+<p>output order:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">script start</span><br><span class="line">script end</span><br><span class="line">promise1</span><br><span class="line">promise2</span><br><span class="line">setTimeout</span><br></pre></td></tr></table></figure>
+
+<p>explanation:</p>
+<ul>
+<li>the synchronization code is executed first.</li>
+<li>The callback of the Promise enters the microtask queue and is executed first.</li>
+<li><code>setTimeout </code>the callback enters the macro task queue, and the micro task is executed only after it has been executed.</li>
+</ul>
+<h2 id="Rendering-in-event-loops"><a href="#Rendering-in-event-loops" class="headerlink" title="Rendering in event loops"></a>Rendering in event loops</h2><p>the browser event loop also involves page rendering, and the browser triggers a rendering refresh after each round of macro task execution. Blocking the main thread for a long time will cause the interface to become stuck.</p>
+<p>Reasonable use of the event loop mechanism can avoid blocking and improve user experience.</p>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p>the event loop is the core mechanism by which JavaScript handles asynchrony. It coordinates the call stack and task queue to ensure that the code is executed in order.</p>
+<p>When synchronous code is executed, the call stack continuously executes the function. When an asynchronous operation is encountered, the main thread continues to execute, and the asynchronous task is processed by the browser or Node.js, and the callback is put into the task queue after completion.</p>
+<p>The event loop continuously checks the call stack and, if empty, executes all tasks in the microtask queue first before executing one task in the macro task queue. Macro tasks include <code>setTimeout </code>, I&#x2F;O, microtasks include Promise callbacks.</p>
+<p>This mechanism ensures that microtasks are executed before macro tasks, that asynchronous operations are executed in the expected order, and that the main thread is not blocked.</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>the event loop is the cornerstone of JavaScript’s asynchronous model. It works through the call stack, macro task queue and micro task queue to realize the orderly execution of asynchronous tasks. Mastering the principle of event loop is conducive to optimizing asynchronous code, improving performance and user experience.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
