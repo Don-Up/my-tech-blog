@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Common array sorting algorithms and their characteristicsforewordsorting is one of the most basic and common operations in programming. Sorting plays "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Common array sorting algorithms and their characteristics"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Common array sorting algorithms and their characteristicsforewordsorting is one of the most basic and common operations in programming. Sorting plays "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Common array sorting algorithms and their characteristics - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Common array sorting algorithms and their characteristics</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-04-13
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Common-array-sorting-algorithms-and-their-characteristics"><a href="#Common-array-sorting-algorithms-and-their-characteristics" class="headerlink" title="Common array sorting algorithms and their characteristics"></a>Common array sorting algorithms and their characteristics</h1><h2 id="foreword"><a href="#foreword" class="headerlink" title="foreword"></a>foreword</h2><p>sorting is one of the most basic and common operations in programming. Sorting plays an important role in both front-end data presentation and back-end data processing. Understanding the principles and characteristics of various sorting algorithms can help you choose the right algorithm according to the data size and performance requirements in actual development. This article will introduce several common array sorting algorithms, including their core ideas, time complexity, and application scenarios.</p>
+<h2 id="Analysis-of-Common-Sorting-Algorithms"><a href="#Analysis-of-Common-Sorting-Algorithms" class="headerlink" title="Analysis of Common Sorting Algorithms"></a>Analysis of Common Sorting Algorithms</h2><ol>
+<li><strong>Bubble Sort</strong><br>bubble sort “bubbles” the largest (or smallest) element to the end of the array by constantly comparing adjacent elements. It is simple to implement, but inefficient, with an average and worst-case time complexity of O(n&sup2;), and is not suitable for large-scale data sorting.</li>
+<li><strong>Selection Sort</strong><br>the selection sort selects the smallest element from the unsorted section each time and puts it at the end of the sorted section. The time complexity is still O(n), but compared with bubble sorting, the number of exchanges is less, which is suitable for scenarios with high exchange operation cost.</li>
+<li><strong>Insertion Sort</strong><br>insertion sort inserts unsorted elements into the appropriate position by constructing an ordered sequence. It performs very well when the data is nearly ordered, and the average and worst time complexity is still O(n&sup2;), and the best case is O(n).</li>
+<li><strong>Merge Sort</strong><br>merge sort using the idea of divide and conquer, the array is divided into sub-arrays are sorted, and then merged. The time complexity is O(n log n) and the space complexity is O(n). Suitable for scenarios that require stable sorting and large amounts of data.</li>
+<li><strong>Quick Sort</strong><br>quick sort is also a divide-and-conquer method, selecting the base element, partitioning the array, and sorting recursively. The average time complexity is O(n log n), but the worst case degenerates to O(n&sup2;). With low space complexity and excellent performance, it is one of the most commonly used sorting algorithms in practical applications.</li>
+<li><strong>Heap Sort</strong><br>heap sorting uses a heap structure (usually a binary heap) to sort, with a time complexity of O(n log n) and unstable sorting. Suitable for scenes that require high space and do not require stability.</li>
+<li><strong>Counting Sort</strong><br>counting sort is suitable for arrays with integer and small range, and sorting is realized by counting the number of occurrences of elements. The time complexity is close to O(n + k), and the space complexity is high. Suitable for sorting integers with a limited range.</li>
+<li><strong>Bucket Sort and Radix Sort</strong><br>these two types of non-comparison sorting are suitable for specific scenarios, such as uniform data distribution or multi-digit sorting, which is efficient but strict on data requirements.</li>
+</ol>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><ul>
+<li>small, almost ordered data: Insertion sort is efficient.</li>
+<li>Need stable sorting and large amount of data: merge sort.</li>
+<li>Most of the actual scene, the overall performance is good: quick sorting.</li>
+<li>Constrained space, non-stable: Heap sort.</li>
+<li>Special data types and ranges: Count sort, bucket sort, radix sort.</li>
+</ul>
+<h2 id="Interview-answer-demonstration"><a href="#Interview-answer-demonstration" class="headerlink" title="Interview answer demonstration"></a>Interview answer demonstration</h2><p>Q: “What are the common array sorting algorithms? What are their characteristics and applicable scenarios?”</p>
+<p>“Common sorting algorithms are bubble sort, selection sort, insertion sort, merge sort, quick sort, and heap sort.</p>
+<p>Bubble sort and selection sort are more intuitive, both are O(n) complexity, suitable for small-scale data or learning to understand the principle of the algorithm. Insertion sort performs very well when the data is nearly ordered, and is more efficient than bubbling and selection sort.</p>
+<p>The merge sort adopts the divide-and-conquer strategy, and the time complexity is stable at O(n log n), which is suitable for scenarios that require sort stability and large data volume. The average performance of quick sort is good, which is also O(n log n), but the performance will be degraded in the worst case, and the selection of benchmark elements needs to be done well.</p>
+<p>Heap sort is also O(n log n), but it is a non-stable sort, which has the advantage of not requiring much additional space.</p>
+<p>In addition, there are non-comparative sorts for specific scenarios, such as counting sort and radix sort, suitable for integer range limited or multi-digit sorting.</p>
+<p>In actual development, if you use the JavaScript built-in sort method, because the underlying implementation is usually a combination of quick sort and insertion sort, you can meet most of the needs. But understanding the advantages and disadvantages of these algorithms can help make more reasonable choices in special situations.” </p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

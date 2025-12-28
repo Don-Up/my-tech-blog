@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Difference and Application of splice and sliceforewordin JavaScript, splice and slice are two very common methods in array operations. Their names are"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Difference and Application of splice and slice"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Difference and Application of splice and sliceforewordin JavaScript, splice and slice are two very common methods in array operations. Their names are"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Difference and Application of splice and slice - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Difference and Application of splice and slice</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-05-01
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Difference-and-Application-of-splice-and-slice"><a href="#Difference-and-Application-of-splice-and-slice" class="headerlink" title="Difference and Application of splice and slice"></a>Difference and Application of splice and slice</h1><h2 id="foreword"><a href="#foreword" class="headerlink" title="foreword"></a>foreword</h2><p>in JavaScript, <code>splice </code>and <code>slice </code>are two very common methods in array operations. Their names are similar, but their functions and behaviors are very different. Understanding their differences will not only help you avoid common mistakes, but also make your array operations more efficient and accurate. This article will compare in detail <code>splice </code>and <code>slice </code>to parse their usage, return values, impact on the original array, and typical application scenarios.</p>
+<h2 id="splice-vs-slice-Function-and-Usage-Comparison"><a href="#splice-vs-slice-Function-and-Usage-Comparison" class="headerlink" title="splice vs. slice: Function and Usage Comparison"></a>splice vs. slice: Function and Usage Comparison</h2><h3 id="splice-method"><a href="#splice-method" class="headerlink" title="splice method"></a>splice method</h3><p><code>splice </code>method is used to modify the array itself, adding, removing, or replacing elements from the array. Its syntax is:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array.splice(start, deleteCount, item1, item2, ...)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>start </code>start position (a negative number means counting from the end).</li>
+<li><code>deleteCount </code>the number of elements to be deleted.</li>
+<li>Subsequent parameter (optional): New element for insertion.</li>
+</ul>
+<p><code>splice </code>A new array of deleted elements is returned, and the original array is modified.</p>
+<p>Example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const arr = [1, 2, 3, 4, 5];</span><br><span class="line">const removed = arr.splice(1, 2, &#x27;a&#x27;, &#x27;b&#x27;);</span><br><span class="line">console.log(arr); // [1, &#x27;a&#x27;, &#x27;b&#x27;, 4, 5]</span><br><span class="line">console.log(removed); // [2, 3]</span><br></pre></td></tr></table></figure>
+
+<h3 id="The-slice-method"><a href="#The-slice-method" class="headerlink" title="The slice method"></a>The slice method</h3><p><code>slice </code>method is used to extract a portion from an array and return a new array without modifying the original array. Its syntax is:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array.slice(start, end)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>start </code>the start position of the fetch, including the index.</li>
+<li><code>end </code>(Optional): The end position of the extraction (excluding the index), which defaults to the end of the array.</li>
+</ul>
+<p>Example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const arr = [1, 2, 3, 4, 5];</span><br><span class="line">const newArr = arr.slice(1, 4);</span><br><span class="line">console.log(newArr); // [2, 3, 4]</span><br><span class="line">console.log(arr); // [1, 2, 3, 4, 5] 原数组未变</span><br></pre></td></tr></table></figure>
+
+<h3 id="summary-of-key-differences"><a href="#summary-of-key-differences" class="headerlink" title="summary of key differences"></a>summary of key differences</h3><ul>
+<li><strong>whether to modify the original array</strong> : <code>splice </code>will modify the original array, <code>slice </code>no modification.</li>
+<li><strong>Functional positioning</strong> : <code>splice </code>it’s a comprehensive approach to adding, deleting and modifying, <code>slice </code>is to intercept the subarray.</li>
+<li><strong>Return Value</strong> : <code>splice </code>returns an array of deleted elements, <code>slice </code>returns a new array of intercepts.</li>
+<li><strong>Meaning of parameters</strong> : <code>splice</code>The second parameter is the number of elements removed, <code>slice </code>the second parameter is the end position Index.</li>
+</ul>
+<h2 id="When-to-use-splice-when-to-use-slice"><a href="#When-to-use-splice-when-to-use-slice" class="headerlink" title="When to use splice, when to use slice"></a>When to use splice, when to use slice</h2><ul>
+<li>need <strong>modify the original array</strong> , used when adding, deleting and modifying elements <code>splice </code>.</li>
+<li>Need <strong>get a copy of a portion of an array</strong> , when the original array is not changed <code>slice </code>.</li>
+<li>In function parameter passing or chaining, to avoid side effects, it is common to use <code>slice </code>creates a new array.</li>
+</ul>
+<h2 id="Interview-answer-demonstration"><a href="#Interview-answer-demonstration" class="headerlink" title="Interview answer demonstration"></a>Interview answer demonstration</h2><p>q: What’s the difference between splice and slice? What are their respective roles and applicable scenarios?”</p>
+<p>“ <code>splice </code>and <code>slice </code>both are common methods for arrays, but their roles and behaviors vary greatly. <code>splice </code>used to modify the original array, you can delete, replace, or insert elements. It receives the starting position and the number of deleted elements, and can also pass in new elements and return an array of deleted elements. The length and content of the array will change after the operation.</p>
+<p>And <code>slice </code>is used to intercept part of an array and return a new array, <strong>does not change the original array</strong> . Its parameters are the start Index and the end Index (not included), which can be used to obtain a subset of the array or clone the array.</p>
+<p>In short, if you want to add, delete and change the original array, use <code>splice </code>; If you want to take a piece of data for processing without affecting the original array, use <code>slice </code>.</p>
+<p>In development, considering side effects and code safety, it is commonly used. <code>slice </code>copying the array avoids modifying the original array, while <code>splice </code>it is suitable for scenarios that require direct manipulation of the original array.”</p>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p><code>splice </code>and <code>slice </code>are the two most basic tools when manipulating arrays. <code>splice </code>is a modified operation, powerful but has side effects; <code>slice </code>non-modifying operations, suitable for extracting and copying arrays. Mastering their differences and usage is an important basis for avoiding array manipulation errors and improving code quality.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

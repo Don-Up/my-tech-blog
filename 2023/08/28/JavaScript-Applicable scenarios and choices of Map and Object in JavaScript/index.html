@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Applicable scenarios and choices of Map and Object in JavaScriptforewordin JavaScript, Object and Map both are common data structures used to store ke"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Applicable scenarios and choices of Map and Object in JavaScript"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Applicable scenarios and choices of Map and Object in JavaScriptforewordin JavaScript, Object and Map both are common data structures used to store ke"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Applicable scenarios and choices of Map and Object in JavaScript - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Applicable scenarios and choices of Map and Object in JavaScript</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-08-28
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Applicable-scenarios-and-choices-of-Map-and-Object-in-JavaScript"><a href="#Applicable-scenarios-and-choices-of-Map-and-Object-in-JavaScript" class="headerlink" title="Applicable scenarios and choices of Map and Object in JavaScript"></a>Applicable scenarios and choices of Map and Object in JavaScript</h1><h2 id="foreword"><a href="#foreword" class="headerlink" title="foreword"></a>foreword</h2><p>in JavaScript, <code>Object </code>and <code>Map </code>both are common data structures used to store key-value pairs, but they differ significantly in design philosophy, performance characteristics, and usage scenarios. Understanding their differences and applicable scenarios helps us choose the most appropriate structure for development and write code with good performance and clear logic. This article will analyze the characteristics of the two in detail to help you sort out the choice of ideas.</p>
+<h2 id="Core-Differences-and-Features-Between-Object-and-Map"><a href="#Core-Differences-and-Features-Between-Object-and-Map" class="headerlink" title="Core Differences and Features Between Object and Map"></a>Core Differences and Features Between Object and Map</h2><h3 id="features-of-Object"><a href="#features-of-Object" class="headerlink" title="features of Object"></a>features of Object</h3><ul>
+<li><strong>key name type restrictions</strong> : The key name of an object can only be a string or symbol. Non-strings are automatically converted to strings.</li>
+<li><strong>Prototype Chain Properties</strong> : object inherits from <code>Object.prototype </code>, there is a prototype chain, which may bring some inheritance property interference.</li>
+<li><strong>Order of keys</strong> after: ES6, the traversal order of common object properties is more clear, but there are still special rules, especially when numeric keys and string keys are mixed.</li>
+<li><strong>Performance</strong> : The object is suitable for scenes with fixed structure and determined key name, and has good performance.</li>
+</ul>
+<h3 id="Features-of-Map"><a href="#Features-of-Map" class="headerlink" title="Features of Map"></a>Features of Map</h3><ul>
+<li><strong>rich Key Types</strong>The key of: Map can be of any type, including object, function, and basic type.</li>
+<li><strong>No prototype chain interference</strong> : Map is a pure collection of key-value pairs, without the interference of inherited properties.</li>
+<li><strong>Insertion sequence guarantee</strong> : Map ensures that the traversal order is consistent with the insertion order.</li>
+<li><strong>Method rich</strong> : Map provides information such <code>set </code>, <code>get </code>, <code>has </code>, <code>delete </code>and other convenient methods.</li>
+<li><strong>Performance advantages</strong> : Map performs better when frequently adding and deleting key-value pairs.</li>
+</ul>
+<h2 id="Comparison-of-applicable-scenarios"><a href="#Comparison-of-applicable-scenarios" class="headerlink" title="Comparison of applicable scenarios"></a>Comparison of applicable scenarios</h2><h3 id="suitable-for-scenarios-with-Object"><a href="#suitable-for-scenarios-with-Object" class="headerlink" title="suitable for scenarios with Object"></a>suitable for scenarios with Object</h3><ul>
+<li>configuration objects with fixed structure and key names are strings (or symbols), such as component configuration and style objects.</li>
+<li>JSON serialization is required, because Map does not support direct serialization to JSON.</li>
+<li>Compatible with older JavaScript environments or frameworks.</li>
+</ul>
+<h3 id="Suitable-for-Map-Scenarios"><a href="#Suitable-for-Map-Scenarios" class="headerlink" title="Suitable for Map Scenarios"></a>Suitable for Map Scenarios</h3><ul>
+<li>if you need to use a non-string type as a key, for example, if you use an Object as a key, the Object cannot uniquely identify the key.</li>
+<li>When you need to add or delete key-value pairs frequently, Map performance is better and the interface is more convenient.</li>
+<li>Key insertion order needs to be guaranteed.</li>
+<li>It is hoped to avoid the influence of object prototype chain attributes and ensure the unique security of keys.</li>
+</ul>
+<h2 id="How-to-choose"><a href="#How-to-choose" class="headerlink" title="How to choose"></a>How to choose</h2><p>in actual development, the choice of Map or Object mainly depends on the following points:</p>
+<ul>
+<li><strong>key Type</strong> required if the key is a complex type (such as an object).</li>
+<li><strong>Operating frequency</strong> : Map is preferred when frequent additions, deletions and changes are made.</li>
+<li><strong>Data structure form</strong> : if it is a pure data structure and simple to configure objects, using Object is simple and intuitive.</li>
+<li><strong>Serialization requirements</strong> : Object is used when JSON serialization is required or old code is compatible.</li>
+<li><strong>Ergodic order</strong> : Map is more suitable when a clear order is required.</li>
+</ul>
+<h2 id="Interview-answer-demonstration"><a href="#Interview-answer-demonstration" class="headerlink" title="Interview answer demonstration"></a>Interview answer demonstration</h2><p>q: “What are the applicable scenarios for Map and Object in JavaScript? How to choose in development?”</p>
+<p>“Both Object and Map can store key-value pairs, but they have significant differences. The key of Object can only be a string or symbol, and there is a prototype chain attribute, which is suitable for configuration objects or data with fixed structure. Map, on the other hand, supports any type as a key, including objects, without the interference of prototype chains, and performs better when key values are frequently added or deleted.</p>
+<p>If your keys are complex objects, or you need to ensure the insertion order of key-value pairs, Map is a better choice. At the same time, the API Design of Map is clearer and convenient. <code>set </code>, <code>get </code>, <code>has </code>and <code>delete </code>operation.</p>
+<p>However, if the data structure is simple, the key is a string, and you need to interact with JSON, Object is still preferred. In actual development, the choice will be weighed according to the type of key, the frequency of operation and whether serialization is required.”</p>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>Map and Object have their own advantages, and the key to choosing the right data structure lies in the requirements. Objects are simple and compatible, and are suitable for simple key-value storage and Configuration Scenarios. Map is flexible and has excellent performance, and is suitable for scenarios with complex key types and frequent operations. Understanding the difference between the two, combined with business needs, can improve code robustness and performance.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

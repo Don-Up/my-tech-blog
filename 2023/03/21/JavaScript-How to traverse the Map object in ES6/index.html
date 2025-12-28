@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="How to traverse the Map object in ES6forewordin ES6, Map is a new key-value data structure, which has more flexible key type support and richer built-"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How to traverse the Map object in ES6"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="How to traverse the Map object in ES6forewordin ES6, Map is a new key-value data structure, which has more flexible key type support and richer built-"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How to traverse the Map object in ES6 - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How to traverse the Map object in ES6</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-03-21
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="How-to-traverse-the-Map-object-in-ES6"><a href="#How-to-traverse-the-Map-object-in-ES6" class="headerlink" title="How to traverse the Map object in ES6"></a>How to traverse the Map object in ES6</h1><h2 id="foreword"><a href="#foreword" class="headerlink" title="foreword"></a>foreword</h2><p>in ES6, Map is a new key-value data structure, which has more flexible key type support and richer built-in methods than traditional objects. Traversal Map is also a requirement often encountered in daily development. Understanding how to effectively traverse Map objects can help us better manipulate data and improve code readability and performance. This article will introduce the traversal method of Map and its application scenarios in detail.</p>
+<h2 id="Multiple-Ways-and-Details-of-Map-Traversal"><a href="#Multiple-Ways-and-Details-of-Map-Traversal" class="headerlink" title="Multiple Ways and Details of Map Traversal"></a>Multiple Ways and Details of Map Traversal</h2><p>the Map maintains the insertion order of the key-value pairs, which makes the order during the pass deterministic and reliable. The main traversal methods include:</p>
+<ol>
+<li><strong>for…of loop</strong><br>Map itself is iterable, directly using the for…of loop can traverse each key-value pair, resulting in an array form. <code>[key, value] </code>.</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for (const [key, value] of myMap) &#123;</span><br><span class="line">  console.log(key, value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><strong>Map.prototype.forEach()</strong><br>Map provides a built-in forEach method, similar in syntax to arrays. The callback parameter order for forEach is <code>(value, key, map) </code>.</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">myMap.forEach((value, key) =&gt; &#123;</span><br><span class="line">  console.log(key, value);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><strong>The keys(), values(), and entries() methods</strong><br>Map provides specialized traversal methods that return an iterator containing all keys, all values, or all key-value pairs, respectively.</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// 遍历键</span><br><span class="line">for (const key of myMap.keys()) &#123;</span><br><span class="line">  console.log(key);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 遍历值</span><br><span class="line">for (const value of myMap.values()) &#123;</span><br><span class="line">  console.log(value);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 遍历键值对</span><br><span class="line">for (const [key, value] of myMap.entries()) &#123;</span><br><span class="line">  console.log(key, value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Among them, <code>entries()</code>Is equivalent to using for…of directly on Map.</p>
+<h3 id="Sequence-and-performance-considerations-for-traversals"><a href="#Sequence-and-performance-considerations-for-traversals" class="headerlink" title="Sequence and performance considerations for traversals"></a>Sequence and performance considerations for traversals</h3><ul>
+<li>Map maintains the insertion order, and the key-value pairs are returned in the order they are added.</li>
+<li>Iterator performance of Map is usually better than using <code>Object.keys </code>iterate through ordinary objects, especially if the key type is complex.</li>
+<li>Use Map.forEach to express traversal intent more clearly, but it cannot be used. <code>break </code>or <code>return </code>exit the loop, for…of supports the use <code>break </code>ended early.</li>
+</ul>
+<h2 id="Interview-answer-demonstration"><a href="#Interview-answer-demonstration" class="headerlink" title="Interview answer demonstration"></a>Interview answer demonstration</h2><p>q: “How should Map objects in ES6 be traversed? What traversal methods does it have and what scenarios are suitable?”</p>
+<p>“ES6’s Map object provides several ways to traverse. The most common is to use <code>for...of </code>loop, traversing the Map directly, returning <code>[key, value] </code>the array structure is very intuitive. In addition, the Map has built-in <code>forEach </code>method, accepts a callback function, and the order of parameters is the value, key, and Map itself, which is similar to an array.</p>
+<p>Map also provides <code>keys() </code>, <code>values() </code>and <code>entries() </code>method, which returns the key iterator, the value iterator, and the key-value pair iterator, respectively, which can be combined with <code>for...of </code>traversal. When traversing, Map maintains the insertion order, which is different from ordinary objects.</p>
+<p>In general, if you need to do a unified operation on key-value pairs, use it directly <code>for...of </code>it is very convenient to traverse the Map. If you need to exit early in the middle of traversal, you can choose <code>for...of </code>. And if you want to write more semantic code, <code>forEach </code>it fits, too. For scenarios that only want to get the key or value, <code>keys() </code>and <code>values() </code>very practical.”</p>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>as an important data structure introduced by ES6, Map has a clear and rich traversal interface. It not only supports the adoption <code>for...of </code>traversing key-value pairs directly, also provides specialized iterator methods and. <code>forEach</code>Callback. Mastering these methods will allow you to be more efficient and flexible when dealing with key-value pairs that are of diverse key types or require sequential guarantees. Choosing different traversal methods according to requirements can make the code more readable and maintainable.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What is the data structure of WeakSet and its application scenarioforewordin JavaScript, WeakSet is a special collection type introduced by ES6. It is"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What is the data structure of WeakSet and its application scenario"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What is the data structure of WeakSet and its application scenarioforewordin JavaScript, WeakSet is a special collection type introduced by ES6. It is"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What is the data structure of WeakSet and its application scenario - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What is the data structure of WeakSet and its application scenario</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-08-21
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-is-the-data-structure-of-WeakSet-and-its-application-scenario"><a href="#What-is-the-data-structure-of-WeakSet-and-its-application-scenario" class="headerlink" title="What is the data structure of WeakSet and its application scenario"></a>What is the data structure of WeakSet and its application scenario</h1><h2 id="foreword"><a href="#foreword" class="headerlink" title="foreword"></a>foreword</h2><p>in JavaScript, WeakSet is a special collection type introduced by ES6. It is obviously different from ordinary Set in function and internal mechanism. It is mainly used to manage object references and help solve memory leak problems. Understanding how WeakSet works and how it works helps us write more robust and efficient code. This article provides an in-depth analysis of the features, usage limitations, and practical applications of WeakSet.</p>
+<h2 id="Core-features-and-working-mechanism-of-WeakSet"><a href="#Core-features-and-working-mechanism-of-WeakSet" class="headerlink" title="Core features and working mechanism of WeakSet"></a>Core features and working mechanism of WeakSet</h2><h3 id="structure-and-Content"><a href="#structure-and-Content" class="headerlink" title="structure and Content"></a>structure and Content</h3><p>A WeakSet can only store values of an object type, not primitive types (such as strings, numbers, Boolean values). It internally holds a weak reference to the stored object.</p>
+<h3 id="Meaning-of-weak-references"><a href="#Meaning-of-weak-references" class="headerlink" title="Meaning of weak references"></a>Meaning of weak references</h3><p>A weak reference means that an object in a WeakSet can be reclaimed by the garbage collection mechanism if no other strong reference points to it. That is, WeakSet does not prevent the object from being garbage collected.</p>
+<h3 id="Non-enumerable"><a href="#Non-enumerable" class="headerlink" title="Non-enumerable"></a>Non-enumerable</h3><p>WeakSet has no way to traverse, nor <code>size </code>property, because its contents may be garbage collected at any time, preserving the unpredictability of the internal state.</p>
+<h3 id="Common-method"><a href="#Common-method" class="headerlink" title="Common method"></a>Common method</h3><ul>
+<li><code>add(obj) </code>: Adds an object to the WeakSet.</li>
+<li><code>delete(obj) </code>removes the object from the WeakSet.</li>
+<li><code>has(obj) </code>: Determines whether the object exists in the WeakSet.</li>
+</ul>
+<p>There is no traversal of the interface, and no emptying method.</p>
+<h2 id="Typical-application-scenarios-of-WeakSet"><a href="#Typical-application-scenarios-of-WeakSet" class="headerlink" title="Typical application scenarios of WeakSet"></a>Typical application scenarios of WeakSet</h2><ol>
+<li><strong>object State Management</strong><br>A WeakSet can be used to keep track of the state of certain objects, for example to mark which objects have been processed and avoid duplicate processing.</li>
+<li><strong>Caching and anti-duplicate operations</strong><br>in cache design, use WeakSet to save objects that have been cached, and garbage collection can automatically clean up useless objects and save memory.</li>
+<li><strong>DOM node management</strong><br>in front-end development, use WeakSet to track the state of some DOM nodes, such as event binding, to prevent memory leaks.</li>
+<li><strong>Avoid memory leaks</strong><br>because the WeakSet does not prevent garbage collection, it reduces the risk of memory leaks when managing object references, especially when managing a large number of short-lived objects.</li>
+</ol>
+<h2 id="Use-restrictions-and-precautions"><a href="#Use-restrictions-and-precautions" class="headerlink" title="Use restrictions and precautions"></a>Use restrictions and precautions</h2><ul>
+<li>only objects can be stored, not original values.</li>
+<li>Cannot traverse, getting size is not supported.</li>
+<li>Not suitable for scenarios where you need to traverse a collection or count the number of elements.</li>
+<li>Relying on the garbage collection mechanism, there is no way to determine when an object will be reclaimed.</li>
+</ul>
+<h2 id="Interview-answer-demonstration"><a href="#Interview-answer-demonstration" class="headerlink" title="Interview answer demonstration"></a>Interview answer demonstration</h2><p>q: What is a WeakSet? What are its characteristics and application scenarios?”</p>
+<p>“WeakSet is a special collection provided by ES6 that can only store objects and hold weak references to these objects internally. Its weak reference nature means that if the object is not referenced by other variables, the garbage collection mechanism can automatically reclaim the object, thus avoiding memory leaks.</p>
+<p>The WeakSet cannot be traversed and does not have a size attribute, which is related to its internal structure and garbage collection mechanism. It is often used to manage object state, such as marking which objects have been processed, or as a cache to prevent duplicate operations, especially in scenarios where memory needs to be dynamically reclaimed.</p>
+<p>However, since primitive types cannot be stored and there is no traversal interface, WeakSet is suitable for tracking object lifecycle and state, rather than storing ordinary collection data.”</p>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>A WeakSet is a collection of weak references specifically designed to manage object references. It helps developers better control memory and avoid unnecessary memory leaks. Although limited in use, it is useful in object state management and cache optimization. The proper use of WeakSet can make JavaScript applications more robust and efficient.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
