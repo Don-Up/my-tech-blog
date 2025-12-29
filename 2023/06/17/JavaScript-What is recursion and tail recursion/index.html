@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What is recursion and tail recursionForewordrecursion is a classic concept in computer science that exhibits elegance and simplicity in solving many p"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What is recursion and tail recursion"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What is recursion and tail recursionForewordrecursion is a classic concept in computer science that exhibits elegance and simplicity in solving many p"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What is recursion and tail recursion - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What is recursion and tail recursion</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-06-17
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-is-recursion-and-tail-recursion"><a href="#What-is-recursion-and-tail-recursion" class="headerlink" title="What is recursion and tail recursion"></a>What is recursion and tail recursion</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>recursion is a classic concept in computer science that exhibits elegance and simplicity in solving many problems. As a special form of recursion, tail recursion is important for performance optimization and Stack Overflow avoidance. Understanding the difference between recursion and tail recursion helps you write efficient and safe code. This article will introduce these two concepts and their differences in detail.</p>
+<h2 id="Basic-concepts-of-recursion"><a href="#Basic-concepts-of-recursion" class="headerlink" title="Basic concepts of recursion"></a>Basic concepts of recursion</h2><p>recursion refers to the programming technique in which a function directly or indirectly calls itself to break down complex problems. A recursive function generally consists of two parts:</p>
+<ul>
+<li><strong>baseline conditions</strong> the condition that terminates the recursion, preventing infinite calls.</li>
+<li><strong>Recursive condition</strong> : Break the big problem into small problems and call itself recursively.</li>
+</ul>
+<p>For example to calculate the factorial:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function factorial(n) &#123;</span><br><span class="line">  if (n &lt;= 1) return 1;</span><br><span class="line">  return n * factorial(n - 1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="what-is-tail-recursion"><a href="#what-is-tail-recursion" class="headerlink" title="what is tail recursion"></a>what is tail recursion</h2><p>tail recursion means that when the function calls itself, the recursive call is the last step of function execution and there is no subsequent operation.</p>
+<p>That is, the return value of the recursive call is returned directly as the return value of the function, and there is no other calculation.</p>
+<p>For example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function tailFactorial(n, acc = 1) &#123;</span><br><span class="line">  if (n &lt;= 1) return acc;</span><br><span class="line">  return tailFactorial(n - 1, n * acc);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>here the recursive call <code>tailFactorial </code>is the last step, the returned value is returned directly.</p>
+<h2 id="Advantages-of-tail-recursion"><a href="#Advantages-of-tail-recursion" class="headerlink" title="Advantages of tail recursion"></a>Advantages of tail recursion</h2><ul>
+<li><strong>support Tail Call Optimization (TCO)</strong> : Functions that conform to tail recursion can be optimized to reuse the current function stack frame to avoid stack space growth and Stack Overflow.</li>
+<li><strong>Improve performance</strong> : Reduce stack memory usage, and the effect is obvious when the number of recursive calls is large.</li>
+</ul>
+<h2 id="Summary-of-the-difference-between-recursion-and-tail-recursion"><a href="#Summary-of-the-difference-between-recursion-and-tail-recursion" class="headerlink" title="Summary of the difference between recursion and tail recursion"></a>Summary of the difference between recursion and tail recursion</h2><table>
+<thead>
+<tr>
+<th>aspects</th>
+<th>recursion</th>
+<th>tail recursion</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>call Location</td>
+<td>there are subsequent operations after the recursive call</td>
+<td>recursive call is the last step of the function</td>
+</tr>
+<tr>
+<td>can be optimized</td>
+<td>cannot be optimized by most JS engines</td>
+<td>support tail call optimization (Environment Support)</td>
+</tr>
+<tr>
+<td>stack space</td>
+<td>call stack increases layer by layer</td>
+<td>call stack reusable, no growth</td>
+</tr>
+</tbody></table>
+<h2 id="interview-answer-demonstration"><a href="#interview-answer-demonstration" class="headerlink" title="interview answer demonstration"></a>interview answer demonstration</h2><p>q: “Please explain the concept of recursion and tail recursion. What is the difference between them?”</p>
+<p>“Recursion is the process by which a function calls itself and is often used to break down complex problems. Recursive functions must have baseline conditions to prevent infinite calls. Tail recursion is a special form of recursion, where a recursive call is the last step in the execution of a function, with no subsequent computation. Tail recursion can be optimized by JavaScript engines that support tail call optimization, reusing the current call stack to avoid stack overflow.</p>
+<p>Simply put, there are operations after ordinary recursive calls, and tail recursive calls return directly, supporting better performance and security.”</p>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>although both recursion and tail recursion are self-invoking functions, tail recursion has more advantages in execution order, supports optimization, and avoids Stack Overflow. Mastering the difference between the two helps to write efficient and robust recursive code.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

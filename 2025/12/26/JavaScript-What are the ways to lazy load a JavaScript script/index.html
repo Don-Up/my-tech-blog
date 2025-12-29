@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What are the ways to lazy load a JavaScript scriptForewordin modern Web development, optimizing page load performance is critical. Reasonable delay lo"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What are the ways to lazy load a JavaScript script"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What are the ways to lazy load a JavaScript scriptForewordin modern Web development, optimizing page load performance is critical. Reasonable delay lo"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What are the ways to lazy load a JavaScript script - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What are the ways to lazy load a JavaScript script</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-12-26
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-are-the-ways-to-lazy-load-a-JavaScript-script"><a href="#What-are-the-ways-to-lazy-load-a-JavaScript-script" class="headerlink" title="What are the ways to lazy load a JavaScript script"></a>What are the ways to lazy load a JavaScript script</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in modern Web development, optimizing page load performance is critical. Reasonable delay loading of JavaScript scripts can reduce the first screen loading time and improve user experience. This article will systematically introduce a variety of common JS script delay loading methods, principles and applicable scenarios to help you design high-performance front-end loading strategies.</p>
+<h2 id="Common-JavaScript-lazy-loading-methods"><a href="#Common-JavaScript-lazy-loading-methods" class="headerlink" title="Common JavaScript lazy loading methods"></a>Common JavaScript lazy loading methods</h2><h3 id="1-Use-defer-property"><a href="#1-Use-defer-property" class="headerlink" title="1. Use defer property"></a>1. Use <code>defer </code>property</h3><p>will <code>&lt;script&gt;</code>of the label <code>defer </code>property is set to true, the browser will download the script asynchronously, but the script execution will be delayed until the HTML parsing is completed, and the execution order is the same as the order of appearance.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;app.js&quot;</span> <span class="attr">defer</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Suitable for all DOM-dependent scripts.</p>
+<h3 id="2-Use-async-property"><a href="#2-Use-async-property" class="headerlink" title="2. Use async property"></a>2. Use <code>async </code>property</h3><p><code>async </code>property causes the script to be downloaded asynchronously and executed immediately after the download is complete, the order of execution is not guaranteed, and may be earlier or later than DOM resolution completes.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;app.js&quot;</span> <span class="attr">async</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Suitable for scripts that do not rely on DOM and are independent of each other.</p>
+<h3 id="3-Dynamically-create-script-tags"><a href="#3-Dynamically-create-script-tags" class="headerlink" title="3. Dynamically create script tags."></a>3. Dynamically create script tags.</h3><p>Dynamically created via JavaScript <code>script</code>Tag and insert the DOM, and the script is loaded and executed asynchronously.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const script = document.createElement(&#x27;script&#x27;);</span><br><span class="line">script.src = &#x27;app.js&#x27;;</span><br><span class="line">document.head.appendChild(script);</span><br></pre></td></tr></table></figure>
+
+<p>Suitable for loading function modules on demand.</p>
+<h3 id="4-Use-a-module-loader-e-G-RequireJS-Webpack-dynamic-import"><a href="#4-Use-a-module-loader-e-G-RequireJS-Webpack-dynamic-import" class="headerlink" title="4. Use a module loader (e. G. RequireJS, Webpack dynamic import)"></a>4. Use a module loader (e. G. RequireJS, Webpack dynamic import)</h3><p>modern module Packer support dynamic import module, load on demand, reduce the initial load volume.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import(&#x27;./module.js&#x27;).then(module =&gt; &#123;</span><br><span class="line">  module.doSomething();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>Supports code splitting and lazy loading.</p>
+<h3 id="5-Delay-execution-of-scripts"><a href="#5-Delay-execution-of-scripts" class="headerlink" title="5. Delay execution of scripts"></a>5. Delay execution of scripts</h3><p>binding <code>setTimeout </code>and other mechanisms to delay the insertion or execution of scripts to reduce the first screen blocking.</p>
+<h3 id="6-Use-the-Intersection-Observer-to-load-the-script-lazily"><a href="#6-Use-the-Intersection-Observer-to-load-the-script-lazily" class="headerlink" title="6. Use the Intersection Observer to load the script lazily."></a>6. Use the Intersection Observer to load the script lazily.</h3><p>Combined with whether the element enters the viewport, determine when to load the relevant script to achieve on-demand loading.</p>
+<h2 id="Comparison-of-applicable-scenarios-in-various-ways"><a href="#Comparison-of-applicable-scenarios-in-various-ways" class="headerlink" title="Comparison of applicable scenarios in various ways"></a>Comparison of applicable scenarios in various ways</h2><ul>
+<li><code>defer </code>suitable for all scripts that rely on DOM, good compatibility.</li>
+<li><code>async </code>suitable for third-party statistics, advertising and other scripts that do not rely on the order.</li>
+<li>Dynamic loading is suitable for lazy loading of functional modules to improve performance.</li>
+<li>Module dynamic import is suitable for modern projects to achieve code segmentation.</li>
+<li>Delayed execution is suitable for non-critical scripts to delay loading.</li>
+<li>Intersection Observer is suitable for dynamically loading resources based on user scrolling behavior.</li>
+</ul>
+<h2 id="Interview-answer-demonstration"><a href="#Interview-answer-demonstration" class="headerlink" title="Interview answer demonstration"></a>Interview answer demonstration</h2><p>Q: “What are the common JavaScript lazy loading methods? What scenes are suitable for each?”</p>
+<p>“JavaScript script delay loading mainly in the following ways:</p>
+<p>first, give <code>&lt;script&gt; </code>tag Add <code>defer </code>property, allowing scripts to be executed in sequence after HTML parsing, suitable for scripts that depend on DOM.</p>
+<p>Second, use <code>async </code>property, the script is loaded asynchronously and executed immediately after the download is completed, suitable for independent scripts that do not depend on the order.</p>
+<p>Third, dynamically create script tags to load on demand and flexibly control the loading timing.</p>
+<p>Fourth, modern modular tools support dynamic import, code segmentation and lazy loading.</p>
+<p>In addition, timers or Intersection observers can be used to delay execution or lazy loading to improve performance.</p>
+<p>Choose the right way to ensure fast page rendering and interactive response based on Script dependencies and performance requirements.”</p>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>rational Utilization <code>defer </code>, <code>async </code>dynamic loading and modular dynamic import can effectively delay the loading and execution of JavaScript scripts, reduce the loading pressure of the first screen, and improve the user experience. Understanding their principles and differences helps to design efficient front-end loading schemes.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
