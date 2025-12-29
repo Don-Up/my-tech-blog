@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What is the relationship between a Proxy and a ReflectForewordES6 introduces two very important features: Proxy and Reflect. They are often used toget"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What is the relationship between a Proxy and a Reflect"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What is the relationship between a Proxy and a ReflectForewordES6 introduces two very important features: Proxy and Reflect. They are often used toget"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What is the relationship between a Proxy and a Reflect - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What is the relationship between a Proxy and a Reflect</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-11-26
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-is-the-relationship-between-a-Proxy-and-a-Reflect"><a href="#What-is-the-relationship-between-a-Proxy-and-a-Reflect" class="headerlink" title="What is the relationship between a Proxy and a Reflect"></a>What is the relationship between a Proxy and a Reflect</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>ES6 introduces two very important features: Proxy and Reflect. They are often used together, especially when intercepting and manipulating object behavior. Understanding the relationship between Proxy and Reflect and their respective roles helps us to better control object operations and improve code flexibility and security. This paper will introduce their design concept, relationship and application in development in detail.</p>
+<h2 id="Basic-concepts-and-design-intentions-of-Proxy-and-Reflect"><a href="#Basic-concepts-and-design-intentions-of-Proxy-and-Reflect" class="headerlink" title="Basic concepts and design intentions of Proxy and Reflect"></a>Basic concepts and design intentions of Proxy and Reflect</h2><h3 id="Proxy"><a href="#Proxy" class="headerlink" title="Proxy"></a>Proxy</h3><p>A Proxy is a Proxy object that defines custom behavior for basic operations such as property lookups, assignments, enumerations, function calls, and so on. It receives a target object and a handler, intercepts the operation of the target object through various trap functions of the handler.</p>
+<p>The role of Proxy is to allow us to monitor and customize various behaviors of objects. Common uses include data hijacking, permission control, logging, etc.</p>
+<h3 id="Reflect"><a href="#Reflect" class="headerlink" title="Reflect"></a>Reflect</h3><p>Reflect is a built-in object that provides a set of methods corresponding to object operations, such <code>Reflect.get </code>, <code>Reflect.set </code>, <code>Reflect.has </code>wait. The functions of these methods correspond to the trap of the Proxy, which encapsulates the underlying operations of the JavaScript language.</p>
+<p>Reflect’s design objectives include:</p>
+<ul>
+<li>unify and simplify the invocation of the underlying operations.</li>
+<li>Provides a default behavior implementation that makes it easy to call the original operation in Proxy.</li>
+<li>Make up for the defect that some language operations cannot be called as functions.</li>
+</ul>
+<h2 id="Relationship-between-Proxy-and-Reflect"><a href="#Relationship-between-Proxy-and-Reflect" class="headerlink" title="Relationship between Proxy and Reflect"></a>Relationship between Proxy and Reflect</h2><p>the trap function in the handler of the Proxy usually calls the corresponding method in the Reflect to implement the default behavior, thus maintaining the original semantics of the operation. This allows the flexibility to retain or extend the original functionality of the object based on the custom behavior.</p>
+<p>Example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const target = &#123; name: &#x27;Alice&#x27; &#125;;</span><br><span class="line">const proxy = new Proxy(target, &#123;</span><br><span class="line">  get(target, prop, receiver) &#123;</span><br><span class="line">    console.log(`获取属性 $&#123;prop&#125;`);</span><br><span class="line">    return Reflect.get(target, prop, receiver);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">console.log(proxy.name); // 控制台先打印提示，再输出 &#x27;Alice&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>in this example, <code>Reflect.get </code>used to invoke the default property access behavior of the target object.</p>
+<h2 id="Application-Scenarios"><a href="#Application-Scenarios" class="headerlink" title="Application Scenarios"></a>Application Scenarios</h2><ul>
+<li><strong>data Hijacking and Responsive Systems</strong><br>in frameworks such as Vue, Proxy is used to intercept data access and modification, and Reflect ensures the correct execution of data operations.</li>
+<li><strong>Permission Control and Security Proxy</strong><br>Proxy allows you to restrict access to object properties. Reflect provides basic operation support.</li>
+<li><strong>Logging and Debugging</strong><br>when intercepting object operations, log records are implemented through Proxy and Reflect, and the original behavior is maintained.</li>
+<li><strong>Default behavior call</strong><br>Calling the Reflect method in the trap function of the Proxy can easily enhance or modify the behavior of the target object.</li>
+</ul>
+<h2 id="Interview-answer-demonstration"><a href="#Interview-answer-demonstration" class="headerlink" title="Interview answer demonstration"></a>Interview answer demonstration</h2><p>q: What is the relationship between Proxy and Reflect? Why do they often use it together?”</p>
+<p>“Proxy is a Proxy mechanism used to intercept and customize the behavior of objects, while Reflect provides a set of functions corresponding to the underlying operations of objects. They are often used together, because the trap function of the Proxy usually needs to call Reflect to execute the default behavior of the object, which can not only customize the behavior, but also ensure the original semantics of the operation.</p>
+<p>For example, when we intercept the property access of an object through Proxy, it is usually in <code>get </code>call in trap <code>Reflect.get </code>to obtain property values, which avoids direct manipulation of the target object and facilitates the correct behavior of inheritance and proxy chains.</p>
+<p>Therefore, Reflect can be regarded as an auxiliary tool for Proxy, providing a clean and unified way to invoke default behavior, enhancing the flexibility and security of Proxy.”</p>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>Proxy and Reflect are two closely related features in ES6. Proxy is responsible for intercepting and customizing various operations of objects, while Reflect provides the corresponding low-level operation interfaces. Together, developers can flexibly control object behavior while maintaining the integrity of default operations. Mastering the relationship and usage of the two is an important foundation for a deep understanding of modern JavaScript programming.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

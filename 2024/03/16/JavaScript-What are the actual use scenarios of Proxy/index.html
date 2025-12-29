@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What are the actual use scenarios of ProxyforewordProxy is a powerful metaprogramming tool introduced by ES6, which can intercept and customize variou"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What are the actual use scenarios of Proxy"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What are the actual use scenarios of ProxyforewordProxy is a powerful metaprogramming tool introduced by ES6, which can intercept and customize variou"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What are the actual use scenarios of Proxy - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What are the actual use scenarios of Proxy</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-03-16
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-are-the-actual-use-scenarios-of-Proxy"><a href="#What-are-the-actual-use-scenarios-of-Proxy" class="headerlink" title="What are the actual use scenarios of Proxy"></a>What are the actual use scenarios of Proxy</h1><h2 id="foreword"><a href="#foreword" class="headerlink" title="foreword"></a>foreword</h2><p>Proxy is a powerful metaprogramming tool introduced by ES6, which can intercept and customize various operations of objects. It greatly improves the ability of JavaScript to control object behavior, and is widely used in reactive programming, permission control, data validation and other fields. This article will focus on the typical practical use scenarios of Proxy to help you better understand and apply Proxy.</p>
+<h2 id="Main-usage-scenarios-of-Proxy"><a href="#Main-usage-scenarios-of-Proxy" class="headerlink" title="Main usage scenarios of Proxy"></a>Main usage scenarios of Proxy</h2><h3 id="1-Data-response-and-two-way-binding"><a href="#1-Data-response-and-two-way-binding" class="headerlink" title="1. Data response and two-way binding."></a>1. Data response and two-way binding.</h3><p>The most widely Zhi use of Proxy is to implement reactive data in modern front-end frameworks, such as Vue 3. By intercepting the access and modification of objects, the framework can automatically update the view when the data changes, reducing manual DOM operations.</p>
+<h3 id="2-Data-Checksum-Constraints"><a href="#2-Data-Checksum-Constraints" class="headerlink" title="2. Data Checksum Constraints"></a>2. Data Checksum Constraints</h3><p>Proxy can be used to verify the assignment of object properties to prevent invalid or illegal data writing. For example, restrict the type and range of attribute values, or prevent the deletion of certain key attributes.</p>
+<h3 id="3-Access-Control"><a href="#3-Access-Control" class="headerlink" title="3. Access Control"></a>3. Access Control</h3><p>Proxy can control the access permission of object attributes, implement read-only or private fields, intercept illegal access or modification requests, and enhance security.</p>
+<h3 id="4-Logging-and-Debugging"><a href="#4-Logging-and-Debugging" class="headerlink" title="4. Logging and Debugging"></a>4. Logging and Debugging</h3><p>by intercepting object operations, Proxy can help developers record attribute access and modification logs to facilitate debugging and performance monitoring.</p>
+<h3 id="5-Virtualization-and-lazy-loading"><a href="#5-Virtualization-and-lazy-loading" class="headerlink" title="5. Virtualization and lazy loading"></a>5. Virtualization and lazy loading</h3><p>Proxy can be used to implement virtual objects or delay loading data, and perform specific operations only when they are actually accessed, improving performance and resource utilization.</p>
+<h3 id="6-Automatic-expansion-and-default-value-processing"><a href="#6-Automatic-expansion-and-default-value-processing" class="headerlink" title="6. Automatic expansion and default value processing."></a>6. Automatic expansion and default value processing.</h3><p>When accessing properties that do not exist, the Proxy can dynamically return the default value or automatically generate the required data, improving the flexibility and robustness of the code.</p>
+<h3 id="7-Function-proxy-and-interception-call"><a href="#7-Function-proxy-and-interception-call" class="headerlink" title="7. Function proxy and interception call."></a>7. Function proxy and interception call.</h3><p>Proxy can also Proxy functions, intercept function calls, and implement advanced functions such as function enhancement, caching, or current limiting.</p>
+<h2 id="Interview-answer-demonstration"><a href="#Interview-answer-demonstration" class="headerlink" title="Interview answer demonstration"></a>Interview answer demonstration</h2><p>q: “Please talk about the actual application scenarios of Proxy.”</p>
+<p>“Proxy is widely used in modern JavaScript development. The most typical is the two-way data binding and automatic View update through Proxy in the responsive framework. In addition, Proxy can also be used for data verification, limit the validity of attribute values, or control access rights to prevent illegal operations.</p>
+<p>During debugging, you can record the access and modification of object properties through Proxy to help analyze problems. The Proxy also supports lazy loading and dynamic extension, such as returning the default value when accessing a non-existent attribute, which improves code flexibility.</p>
+<p>Function proxy is another common scenario, which can intercept function calls and optimize caching and throttling. In summary, Proxy allows us to control object behavior with fine-grained, improving code security and flexibility.”</p>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>as a powerful meta-programming tool, Proxy is suitable for scenarios such as data response, permission control, data verification, debugging, lazy loading, and function proxies. The flexible use of Proxy can greatly improve the maintainability, security and performance of the code, and is suitable for modern front-end and full-stack development.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

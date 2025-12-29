@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Can Proxy listen to reference changes of nested objects in objectsforewordProxy is a powerful Proxy mechanism provided by ES6 that can intercept vario"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Can Proxy listen to reference changes of nested objects in objects"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Can Proxy listen to reference changes of nested objects in objectsforewordProxy is a powerful Proxy mechanism provided by ES6 that can intercept vario"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Can Proxy listen to reference changes of nested objects in objects - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Can Proxy listen to reference changes of nested objects in objects</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-01-21
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/JavaScript/">#JavaScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/JavaScript/">JavaScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Can-Proxy-listen-to-reference-changes-of-nested-objects-in-objects"><a href="#Can-Proxy-listen-to-reference-changes-of-nested-objects-in-objects" class="headerlink" title="Can Proxy listen to reference changes of nested objects in objects"></a>Can Proxy listen to reference changes of nested objects in objects</h1><h2 id="foreword"><a href="#foreword" class="headerlink" title="foreword"></a>foreword</h2><p>Proxy is a powerful Proxy mechanism provided by ES6 that can intercept various operations on objects. Many developers are concerned about a question: when the attribute value of an object is another object, can Proxy automatically listen to changes in this nested object? Understanding This is especially critical for building responsive systems. This article will analyze in detail the ability and implementation of Proxy to listen to nested objects.</p>
+<h2 id="Proxy’s-ability-to-listen-to-nested-objects"><a href="#Proxy’s-ability-to-listen-to-nested-objects" class="headerlink" title="Proxy’s ability to listen to nested objects"></a>Proxy’s ability to listen to nested objects</h2><h3 id="the-Proxy-itself-only-represents-one-layer-of-objects"><a href="#the-Proxy-itself-only-represents-one-layer-of-objects" class="headerlink" title="the Proxy itself only represents one layer of objects."></a>the Proxy itself only represents one layer of objects.</h3><p>When the Proxy is created, the Proxy is performed on the incoming target object and the operation of its direct properties is intercepted. But by default, it does not recursively automatically proxy child objects in that object property. In other words, if the property value itself is another object, Proxy does not automatically create a Proxy for that child object.</p>
+<h3 id="Listening-for-nested-objects-requires-a-manual-recursive-proxy"><a href="#Listening-for-nested-objects-requires-a-manual-recursive-proxy" class="headerlink" title="Listening for nested objects requires a manual recursive proxy"></a>Listening for nested objects requires a manual recursive proxy</h3><p>to implement deep listening for nested objects, you usually need to manually or automatically create a new Proxy for a child object when it is accessed. This is the concept of a deep proxy or recursive proxy.</p>
+<p>For example, when accessing a property through Proxy, if the property is an object, you can use <code>get </code>trap detects and returns its proxy version, thus implementing listening for nested objects.</p>
+<h3 id="Example-implementation-of-deep-proxy"><a href="#Example-implementation-of-deep-proxy" class="headerlink" title="Example implementation of deep proxy"></a>Example implementation of deep proxy</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">function deepProxy(obj) &#123;</span><br><span class="line">  return new Proxy(obj, &#123;</span><br><span class="line">    get(target, prop, receiver) &#123;</span><br><span class="line">      const value = Reflect.get(target, prop, receiver);</span><br><span class="line">      if (value &amp;&amp; typeof value === &#x27;object&#x27;) &#123;</span><br><span class="line">        return deepProxy(value);</span><br><span class="line">      &#125;</span><br><span class="line">      return value;</span><br><span class="line">    &#125;,</span><br><span class="line">    set(target, prop, value, receiver) &#123;</span><br><span class="line">      const result = Reflect.set(target, prop, value, receiver);</span><br><span class="line">      console.log(`属性 $&#123;prop&#125; 被设置为 $&#123;value&#125;`);</span><br><span class="line">      return result;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const data = &#123; nested: &#123; a: 1 &#125; &#125;;</span><br><span class="line">const proxyData = deepProxy(data);</span><br><span class="line">proxyData.nested.a = 2;  // 会被监听并打印</span><br></pre></td></tr></table></figure>
+
+<p>in this way, the properties of nested objects can also be listened.</p>
+<h2 id="Need-to-pay-attention-to-the-point"><a href="#Need-to-pay-attention-to-the-point" class="headerlink" title="Need to pay attention to the point"></a>Need to pay attention to the point</h2><ul>
+<li>Recursive proxies incur additional performance overhead and require tradeoffs between performance and demand.</li>
+<li>Circular reference objects need special treatment, otherwise recursive proxies may cause stack overflow.</li>
+<li>Some responsive frameworks, such as Vue 3, implement deep proxies internally to support nested responses.</li>
+</ul>
+<h2 id="Interview-answer-demonstration"><a href="#Interview-answer-demonstration" class="headerlink" title="Interview answer demonstration"></a>Interview answer demonstration</h2><p>q: “Can a Proxy listen for reference changes to nested objects in an object? How to achieve?”</p>
+<p>“The Proxy itself only proxies the first-level properties of the incoming object, and does not automatically proxies nested sub-objects by default. If you want to listen to changes in nested objects, you need to manually recursively create a Proxy for each child object, which is a deep Proxy.</p>
+<p>The implementation method is usually in <code>get </code>trap detects whether the return value is an object, and if so, returns its proxy version. In this way, when accessing or modifying the properties of nested objects, Proxy interception is also triggered.</p>
+<p>It is important to note that deep proxies add performance overhead and avoid the problems caused by circular references. Frameworks like Vue 3 use deep proxy technology to achieve full monitoring of responsive data.”</p>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>by default, Proxy can only listen to the first-layer properties of objects. Recursive Proxy is required to listen to nested objects. Through deep proxy technology, you can achieve reactive complex data structures, but you need to pay attention to performance and circular reference issues. Mastering this will help you understand the underlying principles of modern responsive frameworks.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2025 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
