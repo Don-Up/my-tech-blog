@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="The key differences between JSX and HTMLForewordin the process of learning and using React, beginners often confuse JSX with HTML. They look very simi"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="The key differences between JSX and HTML"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="The key differences between JSX and HTMLForewordin the process of learning and using React, beginners often confuse JSX with HTML. They look very simi"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>The key differences between JSX and HTML - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>The key differences between JSX and HTML</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-04-23
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="The-key-differences-between-JSX-and-HTML"><a href="#The-key-differences-between-JSX-and-HTML" class="headerlink" title="The key differences between JSX and HTML"></a>The key differences between JSX and HTML</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in the process of learning and using React, beginners often confuse JSX with HTML. They look very similar, the grammar is almost the same, and the structural content is written in the form of labels. But JSX is essentially a syntax extension of JavaScript, while HTML is a markup language. Understanding the essential differences between the two is critical to using React correctly and writing high-quality components.</p>
+<p>This article will analyze the key differences between JSX and HTML in depth from the aspects of grammatical structure, operation mechanism, attribute naming, expression ability, translation principle, etc., to help you establish accurate cognition.</p>
+<hr>
+<h2 id="The-core-differences-between-JSX-and-HTML"><a href="#The-core-differences-between-JSX-and-HTML" class="headerlink" title="The core differences between JSX and HTML"></a>The core differences between JSX and HTML</h2><h3 id="first-the-syntax-level-JSX-is-the-syntax-sugar-of-JavaScript"><a href="#first-the-syntax-level-JSX-is-the-syntax-sugar-of-JavaScript" class="headerlink" title="first, the syntax level: JSX is the syntax sugar of JavaScript."></a>first, the syntax level: JSX is the syntax sugar of JavaScript.</h3><p>JSX is part of JavaScript and will eventually be translated <code>React.createElement </code>the form. For example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> element = <span class="language-xml"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">className</span>=<span class="string">&quot;title&quot;</span>&gt;</span>Hello, world!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>will be compiled:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const element = React.createElement(</span><br><span class="line">  &#x27;h1&#x27;,</span><br><span class="line">  &#123; className: &#x27;title&#x27; &#125;,</span><br><span class="line">  &#x27;Hello, world!&#x27;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>HTML, on the other hand, is a pure markup language that is parsed directly by the browser without translation. This also means that JSX cannot exist outside of JavaScript, it must appear in <code>.js </code>or <code>.jsx </code>file, while HTML can be written directly in <code>.html </code>file and run.</p>
+<hr>
+<h3 id="Second-the-attributes-are-named-differently-class-vs-className-for-vs-htmlFor"><a href="#Second-the-attributes-are-named-differently-class-vs-className-for-vs-htmlFor" class="headerlink" title="Second, the attributes are named differently: class vs className,for vs htmlFor"></a>Second, the attributes are named differently: class vs className,for vs htmlFor</h3><p>since JSX is an expression of JavaScript Object syntax, some properties in HTML will conflict with JavaScript reserved words. Typical examples are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>HTML property name</th>
+<th>JSX corresponding name</th>
+<th>reason Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>class </code></td>
+<td><code>className </code></td>
+<td>avoid with JS <code>class </code>keyword conflict</td>
+</tr>
+<tr>
+<td><code>for </code></td>
+<td><code>htmlFor </code></td>
+<td>avoid with JS <code>for </code>cyclic conflict</td>
+</tr>
+<tr>
+<td><code>tabindex </code></td>
+<td><code>tabIndex </code></td>
+<td>hump naming rule uniform attribute name</td>
+</tr>
+</tbody></table>
+<p>when developing JSX, you should always follow camel-humped naming, which is different from the lowercase naming style in HTML.</p>
+<hr>
+<h3 id="Third-expression-ability-JSX-can-embed-any-JavaScript-expression"><a href="#Third-expression-ability-JSX-can-embed-any-JavaScript-expression" class="headerlink" title="Third, expression ability: JSX can embed any JavaScript expression"></a>Third, expression ability: JSX can embed any JavaScript expression</h3><p>the power of JSX is that it can embed any JavaScript expression using <code>&#123;&#125; </code>encased form:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> name = <span class="string">&#x27;React&#x27;</span></span><br><span class="line"><span class="keyword">const</span> element = <span class="language-xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, &#123;name&#125;!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>This means you can dynamically render variables, call functions, execute conditional statements, and even use ternary expressions in JSX:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">  &#123;isLoggedIn ? <span class="language-xml"><span class="tag">&lt;<span class="name">LogoutButton</span> /&gt;</span></span> : <span class="language-xml"><span class="tag">&lt;<span class="name">LoginButton</span> /&gt;</span></span>&#125;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>HTML does not have this capability, and everything must be static.</p>
+<hr>
+<h3 id="Four-close-the-label-JSX-must-all-labels-are-closed"><a href="#Four-close-the-label-JSX-must-all-labels-are-closed" class="headerlink" title="Four, close the label: JSX must all labels are closed"></a>Four, close the label: JSX must all labels are closed</h3><p>in HTML, some tags (such. <code>&lt;img&gt;</code>, <code>&lt;input&gt;</code>) You can not write a closing tag; But in JSX, all tags must be explicitly closed:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 正确</span></span><br><span class="line">&lt;img src=<span class="string">&quot;avatar.png&quot;</span> /&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 错误</span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;avatar.png&quot;</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>this stems from the fact that the syntax of JSX must conform to the rules of XML.</p>
+<hr>
+<h3 id="Five-JSX-is-an-expression-while-HTML-is-a-declaration-structure"><a href="#Five-JSX-is-an-expression-while-HTML-is-a-declaration-structure" class="headerlink" title="Five, JSX is an expression, while HTML is a declaration structure."></a>Five, JSX is an expression, while HTML is a declaration structure.</h3><p>In HTML, you declare a piece of page structure, which is static and non-programmable.</p>
+<p>In JSX, each component or label is an expression, meaning that you can return JSX in a function or assign it to a variable and pass it as an argument:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> content = <span class="language-xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Hello JSX<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;content&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>the programmable nature of JSX brings a powerful ability to combine components, while HTML cannot achieve this flexibility.</p>
+<hr>
+<h3 id="VI-Different-ways-of-handling-events"><a href="#VI-Different-ways-of-handling-events" class="headerlink" title="VI. Different ways of handling events"></a>VI. Different ways of handling events</h3><p>events in HTML are named in lowercase and the callback function is represented by a string:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">&quot;handleClick()&quot;</span>&gt;</span>Click<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>while JSX uses the hump name and passes in the function reference:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button onClick=&#123;handleClick&#125;&gt;<span class="title class_">Click</span>&lt;/button&gt;</span><br></pre></td></tr></table></figure>
+
+<p>at the same time, JSX’s event system is a synthetic event, a cross-browser compatible event system built by React itself, with higher performance and consistency.</p>
+<hr>
+<h2 id="What-is-the-difference-between-JSX-and-HTML"><a href="#What-is-the-difference-between-JSX-and-HTML" class="headerlink" title="What is the difference between JSX and HTML?"></a>What is the difference between JSX and HTML?</h2><p>Can be clearly answered from several typical angles:</p>
+<p>answer:</p>
+<p>JSX and HTML look similar, but there are essential differences. JSX is a syntax extension of JavaScript that will eventually be translated into React.createElement calls, while HTML is the markup language parsed directly by the browser.</p>
+<p>The two are also different in attribute naming, such as HTML. <code>class </code>, JSX to write <code>className </code>with HTML. <code>for </code>, JSX to write <code>htmlFor </code>.</p>
+<p>JSX allows embedding JavaScript expressions in tags, supports Conditional rendering, function calls, etc., while HTML only supports static content.</p>
+<p>In addition, JSX must close all labels, and events are written differently, such <code>onClick=&#123;handleClick&#125; </code>, can’t write string form like HTML.</p>
+<p>To sum up, JSX is an expression, dynamic, and programmable; HTML is a structure description language, static and non-executable.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>While JSX and HTML are highly similar in form, they are significantly different in nature. JSX is the core of React to build UI. It is part of JavaScript and has more expressive power and flexibility. Understanding the key differences between JSX and HTML helps to better understand the design philosophy of React, and also helps to improve development efficiency and code quality.</p>
+<p>Understanding JSX is not only a grammatical adaptation, but also a cognitive transformation of the programming model from static to dynamic, from templates to expressions. I hope that through the explanation of this article, you have a deeper understanding of the essential differences between JSX and HTML.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

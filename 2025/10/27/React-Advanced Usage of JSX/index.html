@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Advanced Usage of JSXForewordJSX is an indispensable syntax extension In React development, and beginners tend to focus on its basic usage, such as ta"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Advanced Usage of JSX"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Advanced Usage of JSXForewordJSX is an indispensable syntax extension In React development, and beginners tend to focus on its basic usage, such as ta"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Advanced Usage of JSX - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Advanced Usage of JSX</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-10-27
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Advanced-Usage-of-JSX"><a href="#Advanced-Usage-of-JSX" class="headerlink" title="Advanced Usage of JSX"></a>Advanced Usage of JSX</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>JSX is an indispensable syntax extension In React development, and beginners tend to focus on its basic usage, such as tag syntax, expression embedding, and conditional rendering. However, as project complexity increases, mastering the advanced usage of JSX becomes even more important. These advanced uses not only help developers write more concise, flexible, and maintainable code, but also improve the reusability and performance of components.</p>
+<p>This article provides a systematic introduction to common and practical advanced usage of JSX, including conditional rendering, list rendering, dynamic components, Fragment usage, functions as subcomponents, JSX transfer functions, and style processing, to help you improve your overall understanding and mastery of JSX.</p>
+<hr>
+<h2 id="Various-writing-methods-of-Conditional-rendering"><a href="#Various-writing-methods-of-Conditional-rendering" class="headerlink" title="Various writing methods of Conditional rendering"></a>Various writing methods of Conditional rendering</h2><p>conditional rendering is the most common requirement for advanced JSX usage, and there are multiple implementations in addition to basic ternary expressions.</p>
+<p>Example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">StatusMessage</span>(<span class="params">&#123; status &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      &#123;status === &quot;loading&quot; &amp;&amp; <span class="tag">&lt;<span class="name">p</span>&gt;</span>加载中...<span class="tag">&lt;/<span class="name">p</span>&gt;</span>&#125;</span></span><br><span class="line"><span class="language-xml">      &#123;status === &quot;success&quot; ? (</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>加载成功！<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      ) : status === &quot;error&quot; ? (</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>加载失败！<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      ) : null&#125;</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>logic and <code>&amp; &amp; </code>for simple conditional judgment</li>
+<li>ternary expression for multi-branch judgment</li>
+<li>combine functions to encapsulate complex conditional logic to improve readability</li>
+</ul>
+<hr>
+<h2 id="advanced-application-of-list-rendering-and-Key"><a href="#advanced-application-of-list-rendering-and-Key" class="headerlink" title="advanced application of list rendering and Key"></a>advanced application of list rendering and Key</h2><p>list rendering <code>map </code>it is the foundation, but it is critical to optimize security and performance in complex scenarios.</p>
+<p>Example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> items = [&#123; <span class="attr">id</span>: <span class="number">1</span>, <span class="attr">name</span>: <span class="string">&quot;苹果&quot;</span> &#125;, &#123; <span class="attr">id</span>: <span class="number">2</span>, <span class="attr">name</span>: <span class="string">&quot;香蕉&quot;</span> &#125;];</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">ItemList</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      &#123;items.map(item =&gt; (</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">key</span>=<span class="string">&#123;item.id&#125;</span>&gt;</span>&#123;item.name&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      ))&#125;</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>key points:</p>
+<ul>
+<li>use stable and unique <code>key</code>, avoid using indexes to prevent rendering exceptions caused by rearrangement</li>
+<li>ensure that the list is dynamically added, deleted and modified. <code>key </code>unchanged, improve the efficiency of React Diff algorithm</li>
+<li>complex list items can be split into sub-components to reduce repeated rendering</li>
+</ul>
+<hr>
+<h2 id="Fragment-and-the-use-of-empty-tags"><a href="#Fragment-and-the-use-of-empty-tags" class="headerlink" title="Fragment and the use of empty tags"></a>Fragment and the use of empty tags</h2><p>when JSX needs to return multiple child elements, but does not want to add additional DOM nodes, you can use React.Fragment or shorthand empty tags.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">List</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>第一项<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>第二项<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Advantages:</p>
+<ul>
+<li>reduce meaningless DOM wrap</li>
+<li>improve rendering performance and avoid CSS cascading effects</li>
+<li>keep the semantics clear and the structure simple</li>
+</ul>
+<hr>
+<h2 id="dynamic-components-and-JSX-expressions"><a href="#dynamic-components-and-JSX-expressions" class="headerlink" title="dynamic components and JSX expressions"></a>dynamic components and JSX expressions</h2><p>you can assign the component name to a variable, and then call it in the form of JSX to achieve dynamic component rendering.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Button</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">button</span>&gt;</span>按钮<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Link</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>链接<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">DynamicComponent</span>(<span class="params">&#123; type &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> <span class="title class_">Component</span> = type === <span class="string">&quot;button&quot;</span> ? <span class="title class_">Button</span> : <span class="title class_">Link</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">Component</span> /&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Application Scenarios:</p>
+<ul>
+<li>switch between different components according to status</li>
+<li>improve component reuse and configuration flexibility</li>
+</ul>
+<hr>
+<h2 id="function-as-a-subcomponent-with-Render-Props"><a href="#function-as-a-subcomponent-with-Render-Props" class="headerlink" title="function as a subcomponent with Render Props"></a>function as a subcomponent with Render Props</h2><p>JSX supports transfer functions as subcomponents, which provides a Render Props mode for component reuse.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">List</span>(<span class="params">&#123; items, children &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">ul</span>&gt;</span>&#123;items.map(item =&gt; children(item))&#125;<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">App</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> data = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">List</span> <span class="attr">items</span>=<span class="string">&#123;data&#125;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      &#123;item =&gt; <span class="tag">&lt;<span class="name">li</span> <span class="attr">key</span>=<span class="string">&#123;item&#125;</span>&gt;</span>&#123;item * 2&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span>&#125;</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">List</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Features:</p>
+<ul>
+<li>flexible Logic reuse and UI combination</li>
+<li>supports highly customized rendering</li>
+</ul>
+<hr>
+<h2 id="dynamic-Handling-of-styles-in-JSX"><a href="#dynamic-Handling-of-styles-in-JSX" class="headerlink" title="dynamic Handling of styles in JSX"></a>dynamic Handling of styles in JSX</h2><p>Except ordinary. <code>className </code>, also supports a variety of dynamic style writing.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> isActive = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">StyledButton</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">button</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      <span class="attr">className</span>=<span class="string">&#123;isActive</span> ? &quot;<span class="attr">btn-active</span>&quot; <span class="attr">:</span> &quot;<span class="attr">btn-inactive</span>&quot;&#125;</span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      <span class="attr">style</span>=<span class="string">&#123;&#123;</span> <span class="attr">color:</span> <span class="attr">isActive</span> ? &quot;<span class="attr">green</span>&quot; <span class="attr">:</span> &quot;<span class="attr">gray</span>&quot; &#125;&#125;</span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    &gt;</span></span></span><br><span class="line"><span class="language-xml">      点击我</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Can be combined with class libraries:</p>
+<ul>
+<li><code>classnames </code>dynamic management className</li>
+<li>CSS-in-JS schemes (styled-components, emotion) for dynamic style injection</li>
+</ul>
+<hr>
+<h2 id="JSX-code-optimization-skills"><a href="#JSX-code-optimization-skills" class="headerlink" title="JSX code optimization skills"></a>JSX code optimization skills</h2><ul>
+<li>avoid unnecessary inline functions or objects to prevent duplicate rendering of components</li>
+<li>simplify code using conditional rendering with short-circuiting expressions</li>
+<li>improve readability by deconstructing props and using helper functions</li>
+<li>use Fragment to reduce redundant node levels</li>
+</ul>
+<hr>
+<h2 id="interview-answer-Please-tell-us-what-are-the-advanced-usage-of-JSX"><a href="#interview-answer-Please-tell-us-what-are-the-advanced-usage-of-JSX" class="headerlink" title="interview answer: Please tell us what are the advanced usage of JSX?"></a>interview answer: Please tell us what are the advanced usage of JSX?</h2><p>The advanced usage of JSX includes various techniques of Conditional rendering (such as logical and and ternary operation), reasonable use of unique key in list rendering, use of Fragment to reduce DOM Level, dynamic component rendering, Render Props mode transfer function subcomponent, and dynamic style processing, etc. Proper use of these uses can improve code simplicity, maintainability, and performance.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>JSX is not only a simple tag syntax, it has built-in rich expression capabilities and flexible composition mechanism, providing powerful support for the development of React components. Mastering advanced usage such as conditional rendering, list rendering, Fragment, dynamic component, Render Props, and style dynamic control enables developers to write more concise, efficient, and maintainable code, improving the user experience and development efficiency of applications.</p>
+<p>Continuously exploring and practicing the advanced techniques of JSX is an important step towards becoming a good React developer.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

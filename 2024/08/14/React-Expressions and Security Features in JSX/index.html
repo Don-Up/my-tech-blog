@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Expressions and Security Features in JSXForewordJSX is the core syntax for defining UI structures in React. It allows developers to write HTML-like ta"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Expressions and Security Features in JSX"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Expressions and Security Features in JSXForewordJSX is the core syntax for defining UI structures in React. It allows developers to write HTML-like ta"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Expressions and Security Features in JSX - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Expressions and Security Features in JSX</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-08-14
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Expressions-and-Security-Features-in-JSX"><a href="#Expressions-and-Security-Features-in-JSX" class="headerlink" title="Expressions and Security Features in JSX"></a>Expressions and Security Features in JSX</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>JSX is the core syntax for defining UI structures in React. It allows developers to write HTML-like tag structures in JavaScript code and supports embedding expressions in tags to achieve dynamic content rendering.</p>
+<p>As the complexity of Web applications increases, security becomes a problem that cannot be ignored. JSX is designed with multiple security mechanisms, especially during expression parsing and rendering, which greatly reduces the risk of XSS (cross-site scripting attacks).</p>
+<p>This article will delve into the features of expressions in JSX and its built-in security design to help developers understand how to use JSX to build dynamic pages safely and efficiently.</p>
+<hr>
+<h2 id="Expression-attributes-in-JSX"><a href="#Expression-attributes-in-JSX" class="headerlink" title="Expression attributes in JSX"></a>Expression attributes in JSX</h2><p>the expression in JSX is in curly braces. <code>&#123;&#125; </code>wrapped JavaScript code snippets that support any legal JavaScript expression, including variables, function calls, ternary operators, etc.</p>
+<p>For example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> name = <span class="string">&quot;Alice&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> isLoggedIn = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Greeting</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, &#123;name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;isLoggedIn ? &quot;Welcome back!&quot; : &quot;Please log in.&quot;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>in the above code, <code>&#123;name&#125; </code>and <code>&#123;isLoggedIn? &quot;Welcome back! &quot; : &quot;Please log in.&quot;&#125; </code>both are JSX expressions that allow dynamic rendering of different content.</p>
+<p>Expressions can return strings, numbers, booleans, null, undefined, or even React elements or arrays, and React automatically handles rendering based on type.</p>
+<hr>
+<h2 id="JSX-expressions-and-XSS-defense"><a href="#JSX-expressions-and-XSS-defense" class="headerlink" title="JSX expressions and XSS defense"></a>JSX expressions and XSS defense</h2><p>one of the common security risks of Web applications is cross-site scripting (XSS) attacks. Attackers destroy page security and steal user information by injecting malicious scripts.</p>
+<p>React’s JSX has a built-in defense mechanism when rendering expressions:</p>
+<ol>
+<li><strong>auto-escape</strong></li>
+</ol>
+<p>React automatically escapes any string expressions inserted in JSX to prevent malicious scripts from executing as HTML code.</p>
+<p>For example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> userInput = <span class="string">&#x27;&lt;img src=x onerror=alert(1) /&gt;&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">ShowInput</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;userInput&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>the string inserted here is escaped as plain text instead of being rendered as an image tag, thus preventing script execution.</p>
+<ol>
+<li><strong>Avoid direct DOM manipulation</strong></li>
+</ol>
+<p>JSX’s rendering mechanism prevents developers from directly manipulating the DOM, reducing the possibility of injecting unsafe code.</p>
+<ol>
+<li><strong>Secure handling of Element attributes</strong></li>
+</ol>
+<p>React filters most properties to avoid inserting dangerous event handlers or inline scripts.</p>
+<hr>
+<h2 id="When-is-there-a-security-risk"><a href="#When-is-there-a-security-risk" class="headerlink" title="When is there a security risk?"></a>When is there a security risk?</h2><p>Although JSX is secure by default, the following situations require special attention:</p>
+<ul>
+<li><strong>using dangerouslySetInnerHTML</strong></li>
+</ul>
+<p>this is the interface provided by React to allow the insertion of raw HTML strings, bypassing automatic escaping.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">RawHtml</span>(<span class="params">&#123; html &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">dangerouslySetInnerHTML</span>=<span class="string">&#123;&#123;</span> <span class="attr">__html:</span> <span class="attr">html</span> &#125;&#125; /&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>If the incoming <code>html </code>contains a malicious script, an XSS attack may result. Therefore, you must ensure that incoming content is strictly filtered and validated.</p>
+<ul>
+<li><strong>Third-party libraries directly manipulate DOM</strong></li>
+</ul>
+<p>if you directly use the DOM API to operate the page and bypass the React rendering process, security risks may arise.</p>
+<hr>
+<h2 id="JSX-expression-rendering-process-brief"><a href="#JSX-expression-rendering-process-brief" class="headerlink" title="JSX expression rendering process brief"></a>JSX expression rendering process brief</h2><p>when React renders JSX, it converts the data in the expression into virtual DOM nodes. For strings, HTML escaping is performed; For elements, a corresponding React element tree is constructed.</p>
+<p>This ensures that dynamic content is always securely embedded in the page, avoiding injection attacks.</p>
+<hr>
+<h2 id="Table-of-Comparison-of-Expressions-and-Safety-Features"><a href="#Table-of-Comparison-of-Expressions-and-Safety-Features" class="headerlink" title="Table of Comparison of Expressions and Safety Features"></a>Table of Comparison of Expressions and Safety Features</h2><table>
+<thead>
+<tr>
+<th>characteristics</th>
+<th>description</th>
+<th>impact</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>auto-escape</td>
+<td>JSX inserts strings to automatically escape special characters</td>
+<td>prevent script code execution</td>
+</tr>
+<tr>
+<td>dangerouslySetInnerHTML</td>
+<td>allows insertion of raw HTML strings, but requires manual security</td>
+<td>may cause XSS, use caution</td>
+</tr>
+<tr>
+<td>React attribute filtering</td>
+<td>security filtering for most attributes to prevent dangerous events or attribute injection</td>
+<td>enhanced property security</td>
+</tr>
+<tr>
+<td>expressions support multiple data types</td>
+<td>can render strings, numbers, booleans, Nulls, arrays, React elements, and more</td>
+<td>flexible and secure</td>
+</tr>
+<tr>
+<td>Non-direct DOM operations</td>
+<td>manage DOM by React to avoid security risks caused by direct DOM operations</td>
+<td>reduce operational errors and injection risk</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="interview-answer-How-are-expressions-in-JSX-safe"><a href="#interview-answer-How-are-expressions-in-JSX-safe" class="headerlink" title="interview answer: How are expressions in JSX safe?"></a>interview answer: How are expressions in JSX safe?</h2><p>Expressions in JSX encode the inserted string content through React’s automatic escape mechanism to avoid parsing user input directly into HTML, thus preventing XSS attacks. At the same time, React filters the DOM attribute and prohibits dangerous attribute injection.</p>
+<p>The only exception is the use <code>dangerouslySetInnerHTML </code>directly insert the original HTML, the developer needs to ensure the security of the content. Under normal circumstances, the JSX expression itself is safe and can help developers effectively prevent cross-site scripting risks.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>as the core syntax of React, the expression mechanism of JSX not only greatly enhances the development flexibility, but also has strong built-in security features. Automatically escaping user input, filtering dangerous attributes, and avoiding direct DOM operations are important security guarantees for React.</p>
+<p>Understanding the security design of JSX expressions helps developers to use React to build secure and stable dynamic Web applications, and also reminds developers to use React in special scenarios (such <code>dangerouslySetInnerHTML </code>) must be extra cautious, do a good job of input filtering and safety verification.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

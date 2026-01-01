@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="The essence of JSX and the compilation processForewordJSX is a widely used syntax extension In React that looks a lot like HTML, but is actually a way"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="The essence of JSX and the compilation process"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="The essence of JSX and the compilation processForewordJSX is a widely used syntax extension In React that looks a lot like HTML, but is actually a way"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>The essence of JSX and the compilation process - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>The essence of JSX and the compilation process</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-12-10
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="The-essence-of-JSX-and-the-compilation-process"><a href="#The-essence-of-JSX-and-the-compilation-process" class="headerlink" title="The essence of JSX and the compilation process"></a>The essence of JSX and the compilation process</h1><h3 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h3><p>JSX is a widely used syntax extension In React that looks a lot like HTML, but is actually a way to write UI structures in JavaScript code.</p>
+<p>Understanding the nature of JSX and its compilation process is important for in-depth understanding of React’s working mechanism and optimization of application performance. This article will analyze the nature of JSX in detail, explore how it is compiled into JavaScript, and the key technical details behind this.</p>
+<hr>
+<h3 id="The-nature-of-JSX"><a href="#The-nature-of-JSX" class="headerlink" title="The nature of JSX"></a>The nature of JSX</h3><p>JSX(JavaScript XML) is essentially the syntactic sugar of JavaScript, an expression used to describe the structure of the UI. It allows developers to write XML&#x2F;HTML-like tags directly in JavaScript code to build interfaces declaratively.</p>
+<p>However, JSX is not a native supported syntax for browsers, and browsers cannot directly execute JSX. It must be compiled into pure JavaScript code, usually called. <code>React.createElement </code>method to describe the React element.</p>
+<p>For example, the JSX code:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> element = <span class="language-xml"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">className</span>=<span class="string">&quot;title&quot;</span>&gt;</span>Hello, world!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>after compilation will become:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const element = React.createElement(</span><br><span class="line">  &#x27;h1&#x27;,</span><br><span class="line">  &#123; className: &#x27;title&#x27; &#125;,</span><br><span class="line">  &#x27;Hello, world!&#x27;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>here. <code>React.createElement </code>returns an object describing the node, which is the virtual DOM node of React.</p>
+<hr>
+<h3 id="JSX-compilation-process"><a href="#JSX-compilation-process" class="headerlink" title="JSX compilation process"></a>JSX compilation process</h3><ol>
+<li><strong>lexical Analysis and Grammatical Analysis</strong></li>
+</ol>
+<p>The JSX code is first Lexical analyzed by Babel or a similar compiler, which divides the code into Lexical units (tokens), and then parsed to organize the tokens into an Abstract Syntax Tree (AST,Abstract Syntax Tree).</p>
+<ol>
+<li><strong>AST conversion</strong></li>
+</ol>
+<p>the compiler recognizes the syntax nodes of JSX and converts them into ordinary JavaScript function calls. The default is to convert JSX <code>React.createElement </code>call. This process involves:</p>
+<ul>
+<li>convert tag name to first argument (string or component reference)</li>
+<li>converts the property to the object of the second parameter</li>
+<li>pass in child nodes as subsequent parameters</li>
+</ul>
+<ol>
+<li><strong>code generation</strong></li>
+</ol>
+<p>the converted AST is regenerated into standard JavaScript code for the browser or Node.js to execute.</p>
+<hr>
+<h3 id="JSX-compilation-configuration-example"><a href="#JSX-compilation-configuration-example" class="headerlink" title="JSX compilation configuration example"></a>JSX compilation configuration example</h3><p>take Babel as an example, the common configuration is as follows:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;presets&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;@babel/preset-react&quot;</span><span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>this preset will automatically process JSX and convert it <code>React.createElement </code>.</p>
+<hr>
+<h3 id="React-17-JSX-compilation-after-the-new-changes"><a href="#React-17-JSX-compilation-after-the-new-changes" class="headerlink" title="React 17 JSX compilation after the new changes"></a>React 17 JSX compilation after the new changes</h3><p>Starting with React 17, a new JSX conversion mechanism was introduced. Previously every JSX was automatically introduced <code>React </code>variable (because of the need to call <code>React.createElement </code>), the new version introduces the so-called “Automatic Runtime”, which only imports auxiliary functions when necessary.</p>
+<p>For example, the code:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> element = <span class="language-xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>compiled:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import &#123; jsx as _jsx &#125; from &#x27;react/jsx-runtime&#x27;;</span><br><span class="line"></span><br><span class="line">const element = _jsx(&#x27;h1&#x27;, &#123; children: &#x27;Hello&#x27; &#125;);</span><br></pre></td></tr></table></figure>
+
+<p>this can reduce unnecessary React introduction and optimize the packing volume.</p>
+<hr>
+<h3 id="JSX-code-examples-and-analysis"><a href="#JSX-code-examples-and-analysis" class="headerlink" title="JSX code examples and analysis"></a>JSX code examples and analysis</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> list = [<span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> element = (</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    &#123;list.map(item =&gt; (</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">li</span> <span class="attr">key</span>=<span class="string">&#123;item&#125;</span>&gt;</span>&#123;item&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    ))&#125;</span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>after this JSX is compiled, it will become:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const element = React.createElement(</span><br><span class="line">  &#x27;ul&#x27;,</span><br><span class="line">  null,</span><br><span class="line">  list.map(item =&gt;</span><br><span class="line">    React.createElement(&#x27;li&#x27;, &#123; key: item &#125;, item)</span><br><span class="line">  )</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>here’s <code>React.createElement </code>the call clearly expresses the type, attributes, and child nodes of each node.</p>
+<hr>
+<h3 id="JSX-and-Virtual-DOM-combination"><a href="#JSX-and-Virtual-DOM-combination" class="headerlink" title="JSX and Virtual DOM combination"></a>JSX and Virtual DOM combination</h3><p>compilation generated <code>React.createElement </code>the returned object is the virtual DOM node of React. React compares the difference between the virtual DOM before and after, and finally updates the real DOM to a minimum. JSX is actually a syntactic means of describing Virtual DOM trees.</p>
+<hr>
+<h3 id="Summary-Table"><a href="#Summary-Table" class="headerlink" title="Summary Table"></a>Summary Table</h3><table>
+<thead>
+<tr>
+<th>key Points</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>JSX essence</td>
+<td>JavaScript syntactic sugar, declarative UI description</td>
+</tr>
+<tr>
+<td>compile Target</td>
+<td>turn into React.createElement function call</td>
+</tr>
+<tr>
+<td>compile steps</td>
+<td>lexical Analysis-&gt; Syntax Analysis-&gt; AST Transformation-&gt; Code Generation</td>
+</tr>
+<tr>
+<td>React 17 changes</td>
+<td>when the new automatic runs, reduce the introduction of explicit React.</td>
+</tr>
+<tr>
+<td>Relationship with Virtual DOM</td>
+<td>JSX compilation product is a description of the Virtual DOM node</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="the-interview-answer"><a href="#the-interview-answer" class="headerlink" title="the interview answer"></a>the interview answer</h3><p><strong>question: What is the essence of JSX? What is its compilation process?</strong></p>
+<p>Answer:</p>
+<p>JSX is the syntactic sugar of JavaScript and is used to declaratively describe the UI structure, which looks like XML&#x2F;HTML, but cannot be directly executed by the browser. It is converted by a compiler (such as Babel) into pairs. <code>React.createElement </code>to generate a virtual DOM object. The compilation process includes lexical analysis, syntax analysis to generate AST, then the JSX node is converted to the corresponding function call, and finally the standard JavaScript code is generated. After React 17, automatic runtime was introduced to optimize the React introduction method. The role of JSX is to allow developers to build UI with a more intuitive syntax, while the bottom layer is to achieve efficient rendering based on virtual DOM.</p>
+<hr>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>JSX is essentially a syntax extension that facilitates developers to describe the Interface Structure. It is not the native syntax of the browser and needs to be compiled and converted into JavaScript function calls. Understanding the compilation process of JSX helps us understand the working principle of React, and helps us better debug and optimize React applications.</p>
+<p>With the evolution of the React version, JSX compilation methods are continuously optimized to improve the development experience and application performance. As a React developer, being familiar with the nature of JSX and the transformation process is an important foundation for building high-quality projects.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
