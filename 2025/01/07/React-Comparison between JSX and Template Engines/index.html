@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Comparison between JSX and Template EnginesForewordin front-end development, dynamic generation of HTML is the core requirement for building user inte"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Comparison between JSX and Template Engines"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Comparison between JSX and Template EnginesForewordin front-end development, dynamic generation of HTML is the core requirement for building user inte"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Comparison between JSX and Template Engines - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Comparison between JSX and Template Engines</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-01-07
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Comparison-between-JSX-and-Template-Engines"><a href="#Comparison-between-JSX-and-Template-Engines" class="headerlink" title="Comparison between JSX and Template Engines"></a>Comparison between JSX and Template Engines</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in front-end development, dynamic generation of HTML is the core requirement for building user interfaces. Traditionally, template engines (such as Handlebars, EJS, Mustache) are widely used to combine data with templates and render them into the final HTML. With the rise of modern frameworks such as React, JSX has become a new declarative UI description method, which deeply integrates templates and logic, bringing a new development paradigm.</p>
+<p>This article will compare the design concept, syntax, performance, flexibility, and security of JSX and traditional template engines in depth to help developers fully understand the differences and applicable scenarios between the two, so as to make more reasonable technical selection in the project.</p>
+<hr>
+<h2 id="Design-concept-of-JSX-and-template-engine"><a href="#Design-concept-of-JSX-and-template-engine" class="headerlink" title="Design concept of JSX and template engine"></a>Design concept of JSX and template engine</h2><h3 id="template-Engine"><a href="#template-Engine" class="headerlink" title="template Engine"></a>template Engine</h3><p>the main responsibility of the template engine is to bind data to static templates, realize conditional judgment, loop and other functions through specific syntax, and finally generate pure HTML strings. Templates and logic are usually separated, templates focus on structure and style, and logic is written in JS code.</p>
+<p>This Separation facilitates collaboration between designers and developers with a low learning curve. The template engine is mostly used for server-side rendering or simple front-end pages.</p>
+<h3 id="JSX"><a href="#JSX" class="headerlink" title="JSX"></a>JSX</h3><p>JSX is a syntax extension to JavaScript that allows writing XML&#x2F;HTML-like structures in JS code. It blends View structure and component logic, translated through Babel. <code>React.createElement </code>call, and finally build a virtual DOM to drive efficient UI updates.</p>
+<p>JSX breaks the traditional boundaries between templates and logic, emphasizing declarative UI design and componentized development, and is suitable for building complex interactive applications.</p>
+<hr>
+<h2 id="Comparison-of-Grammar-and-Expression-Ability"><a href="#Comparison-of-Grammar-and-Expression-Ability" class="headerlink" title="Comparison of Grammar and Expression Ability"></a>Comparison of Grammar and Expression Ability</h2><table>
+<thead>
+<tr>
+<th>aspects</th>
+<th>template Engine</th>
+<th>JSX</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>grammatical style</td>
+<td>independent template language with specific syntax (such <code>&#123;&#123;&#125;&#125; </code>, <code>&#123;% %&#125; </code>)</td>
+<td>javaScript-based syntax extension, using curly braces <code>&#123;&#125; </code>embedded expression</td>
+</tr>
+<tr>
+<td>expression ability</td>
+<td>only supports limited expressions and logic judgment, usually does not support complex JS code</td>
+<td>supports all JavaScript expressions and syntax, high flexibility</td>
+</tr>
+<tr>
+<td>componentization</td>
+<td>relying on manual splitting of templates and scripts, component reuse is usually weak</td>
+<td>native support for components and composition, facilitating reuse and encapsulation</td>
+</tr>
+<tr>
+<td>conditions and cycles</td>
+<td>use template syntax to implement, such <code>&#123;% if %&#125; </code>, <code>&#123;&#123;#each&#125;&#125; </code>wait</td>
+<td>use JavaScript syntax such as ternary operators,<code>map </code>function implementation</td>
+</tr>
+<tr>
+<td>dynamic Styles</td>
+<td>it needs to be implemented in the template through string stitching or inline styles.</td>
+<td>Can be used directly in the form of object style, support JS variable dynamic control</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="performance-and-Rendering-Mechanism-Differences"><a href="#performance-and-Rendering-Mechanism-Differences" class="headerlink" title="performance and Rendering Mechanism Differences"></a>performance and Rendering Mechanism Differences</h2><p>the rendering process of the template engine usually renders the data binding into an HTML string and then inserts it into the DOM. As a result, each update may trigger the replacement of the entire DOM, resulting in high performance overhead.</p>
+<p>JSX uses React Virtual DOM Technology to form a virtual node tree, and uses Diff algorithm to compare the front and back states and accurately update the changed parts, thus realizing efficient incremental rendering.</p>
+<p>This difference makes JSX more suitable for complex interactive, multi-frequency update front-end applications, while the template engine is suitable for static pages or initial rendering.</p>
+<hr>
+<h2 id="Safety-comparison"><a href="#Safety-comparison" class="headerlink" title="Safety comparison"></a>Safety comparison</h2><p>the template engine generally escapes the output content to prevent direct insertion of malicious code and prevent XSS attacks. However, if used manually improperly, it may still cause safety hazards.</p>
+<p>React JSX naturally prevents most XSS attacks by automatically escaping all inserted content, ensuring that the string inserted into the page will not be executed as HTML code. Use only <code>dangerouslySetInnerHTML </code>the developer needs to ensure the security of the content.</p>
+<hr>
+<h2 id="Development-Experience-and-Maintenance"><a href="#Development-Experience-and-Maintenance" class="headerlink" title="Development Experience and Maintenance"></a>Development Experience and Maintenance</h2><p>The separate structure of the template engine makes the division of labor between designers and developers clear, but when the logic is complex, collaboration and debugging between templates and code becomes difficult.</p>
+<p>JSX integrates templates with logic to facilitate component encapsulation and state management, allowing developers to manage them centrally within a file or module. IDE supports JavaScript syntax for easier debugging and refactoring.</p>
+<hr>
+<h2 id="Comparison-of-applicable-scenarios"><a href="#Comparison-of-applicable-scenarios" class="headerlink" title="Comparison of applicable scenarios"></a>Comparison of applicable scenarios</h2><p>the template engine is suitable:</p>
+<ul>
+<li>server-side rendering (SSR)</li>
+<li>pages with less static content and less interaction</li>
+<li>projects that need to be closely integrated with back-end template technology</li>
+</ul>
+<p>JSX is suitable:</p>
+<ul>
+<li>complex interactive, state-driven single-page application (SPA)</li>
+<li>projects with high demand for component-based development</li>
+<li>front-end applications that require high-performance dynamic updates</li>
+</ul>
+<hr>
+<h2 id="code-sample-comparison"><a href="#code-sample-comparison" class="headerlink" title="code sample comparison"></a>code sample comparison</h2><h3 id="template-Engine-Handlebars"><a href="#template-Engine-Handlebars" class="headerlink" title="template Engine (Handlebars)"></a>template Engine (Handlebars)</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">  &#123;&#123;#each items&#125;&#125;</span><br><span class="line">    &lt;li&gt;&#123;&#123;this&#125;&#125;&lt;/li&gt;</span><br><span class="line">  &#123;&#123;/each&#125;&#125;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="JSX-1"><a href="#JSX-1" class="headerlink" title="JSX"></a>JSX</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">ItemList</span>(<span class="params">&#123; items &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      &#123;items.map(item =&gt; (</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">key</span>=<span class="string">&#123;item&#125;</span>&gt;</span>&#123;item&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      ))&#125;</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>JSX can directly use JavaScript logic, more flexible.</p>
+<hr>
+<h2 id="Interview-answer-please-briefly-describe-the-difference-between-JSX-and-template-engine"><a href="#Interview-answer-please-briefly-describe-the-difference-between-JSX-and-template-engine" class="headerlink" title="Interview answer: please briefly describe the difference between JSX and template engine?"></a>Interview answer: please briefly describe the difference between JSX and template engine?</h2><p>The template engine is an independent template language, mainly used to bind data to static templates to generate HTML, logic and templates are separated, suitable for simple rendering and server-side scenes. JSX is a syntax extension of JavaScript, which highly integrates templates and logic to achieve efficient rendering through Virtual DOM, and is suitable for complex front-end interactive applications. JSX supports richer expressions and componentization, and has built-in security mechanisms.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>JSX and template engines represent two different View layer development paradigms. The template engine has a simple syntax and is suitable for static or simple dynamic pages, while JSX emphasizes declarative, componentized, and high-performance, and is suitable for modern complex front-end applications.</p>
+<p>Which technology to choose should be considered in combination with project requirements, team technology stack and maintenance costs. An in-depth understanding of the differences between the two will help developers make more scientific and reasonable technology selection based on actual scenarios and create high-quality Web applications.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
