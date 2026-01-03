@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="How does fiber achieve time slicingForewordas the complexity of Web applications increases, page rendering tasks become heavier and heavier, and tradi"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How does fiber achieve time slicing"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="How does fiber achieve time slicingForewordas the complexity of Web applications increases, page rendering tasks become heavier and heavier, and tradi"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How does fiber achieve time slicing - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How does fiber achieve time slicing</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-11-29
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="How-does-fiber-achieve-time-slicing"><a href="#How-does-fiber-achieve-time-slicing" class="headerlink" title="How does fiber achieve time slicing"></a>How does fiber achieve time slicing</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>as the complexity of Web applications increases, page rendering tasks become heavier and heavier, and traditional synchronous rendering often blocks the main thread, causing interface stutter and user interaction delay. React introduces the “Time Slicing” technology in the Fiber architecture, which uses the browser’s idle Time to split the rendering task into multiple small blocks and execute them in batches, thus improving the page response speed and smoothness.</p>
+<p>This article will analyze in detail the principle, core mechanism, and scheduling process of Fiber to implement time slicing, along with code examples and process descriptions, to help readers understand how Fiber makes React rendering more efficient and does not block the main thread.</p>
+<hr>
+<h2 id="What-is-time-slicing"><a href="#What-is-time-slicing" class="headerlink" title="What is time slicing?"></a>What is time slicing?</h2><p>Time slicing refers to dividing a large task into several small tasks. Each small task is executed within a certain time slice. After execution, it is suspended, giving the main thread to the browser to process high-priority tasks such as user input and animation, and then continuing to execute the remaining tasks when idle.</p>
+<p>Time slicing allows the browser to render large tasks while keeping the interface responsive and improving the user experience.</p>
+<hr>
+<h2 id="How-does-Fiber-support-time-slicing"><a href="#How-does-Fiber-support-time-slicing" class="headerlink" title="How does Fiber support time slicing?"></a>How does Fiber support time slicing?</h2><h3 id="1-Split-Fiber-tasks-into-Unit-of-Work"><a href="#1-Split-Fiber-tasks-into-Unit-of-Work" class="headerlink" title="1. Split Fiber tasks into Unit of Work"></a>1. Split Fiber tasks into Unit of Work</h3><p>the Fiber architecture breaks down the coordination of the entire virtual DOM tree into “unit tasks” corresponding to Fiber nodes “. Each unit task is responsible for updating the node and its child nodes.</p>
+<p>Unit task granularity is fine enough to ensure short execution time.</p>
+<h3 id="2-Use-your-browser’s-free-time-to-perform-tasks"><a href="#2-Use-your-browser’s-free-time-to-perform-tasks" class="headerlink" title="2. Use your browser’s free time to perform tasks"></a>2. Use your browser’s free time to perform tasks</h3><p>Fiber through the idle time scheduling API provided by the browser (such<code>requestIdleCallback </code>) Or, based on the timestamp and the remaining time of the task, execute the unit task when the main browser thread is idle.</p>
+<p>The scheduling logic will judge whether the current idle time is enough to execute the next unit task, and if the time is not enough, the execution will be suspended, and the remaining tasks will be suspended to wait for the next idle time.</p>
+<h3 id="3-Execution-can-be-interrupted-and-resumed"><a href="#3-Execution-can-be-interrupted-and-resumed" class="headerlink" title="3. Execution can be interrupted and resumed"></a>3. Execution can be interrupted and resumed</h3><p>Fiber saves the pointer of the unit task currently being executed through the linked list structure. After executing a small piece of task each time, the current execution state can be saved and the execution will continue when the idle time is restored next time.</p>
+<p>This mechanism of interrupting and resuming is the core of time slicing, which realizes the execution of tasks in slices.</p>
+<hr>
+<h2 id="Scheduling-Process-Analysis-of-Fiber-time-slicing"><a href="#Scheduling-Process-Analysis-of-Fiber-time-slicing" class="headerlink" title="Scheduling Process Analysis of Fiber time slicing"></a>Scheduling Process Analysis of Fiber time slicing</h2><p>the rendering process is mainly divided into two phases: the Render phase (coordination phase) and the Commit phase (Commit phase). Time slicing occurs primarily in the Render phase.</p>
+<ol>
+<li><strong>Schedule Start</strong> : React starts the schedule and obtains the initial unit task pointer.</li>
+<li><strong>Execute Unit Tasks</strong> : Call <code>performUnitOfWork </code>handles the coordination of the current Fiber node.</li>
+<li><strong>Check Idle Time</strong> : Use <code>deadline.timeRemaining() </code>determine if there is enough time to perform the next cell task.</li>
+<li><strong>Task Pause</strong> : If the idle time is insufficient, suspend the scheduling and save the remaining task status.</li>
+<li><strong>Wait Idle</strong> : through <code>requestIdleCallback </code>register the next idle callback and continue with the remaining tasks.</li>
+<li><strong>All done</strong> : after all Fiber nodes are coordinated, enter the Commit phase to update DOM synchronously.</li>
+</ol>
+<hr>
+<h2 id="Code-Sample"><a href="#Code-Sample" class="headerlink" title="Code Sample"></a>Code Sample</h2><p>the following is the core pseudo-code for Fiber time slice scheduling:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">let nextUnitOfWork = null;</span><br><span class="line"></span><br><span class="line">function workLoop(deadline) &#123;</span><br><span class="line">  // deadline.timeRemaining() 返回浏览器空闲时间，单位毫秒</span><br><span class="line">  while (nextUnitOfWork &amp;&amp; deadline.timeRemaining() &gt; 1) &#123;</span><br><span class="line">    nextUnitOfWork = performUnitOfWork(nextUnitOfWork);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  if (!nextUnitOfWork) &#123;</span><br><span class="line">    commitRoot();  // 所有协调完成，提交更新</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    // 任务未完成，继续利用浏览器空闲时间执行</span><br><span class="line">    requestIdleCallback(workLoop);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function performUnitOfWork(fiber) &#123;</span><br><span class="line">  beginWork(fiber); // 执行当前 fiber 的协调任务</span><br><span class="line"></span><br><span class="line">  if (fiber.child) &#123;</span><br><span class="line">    return fiber.child; // 进入子节点，继续任务</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  let nextFiber = fiber;</span><br><span class="line">  while (nextFiber) &#123;</span><br><span class="line">    completeWork(nextFiber); // 当前节点协调完成</span><br><span class="line"></span><br><span class="line">    if (nextFiber.sibling) &#123;</span><br><span class="line">      return nextFiber.sibling; // 兄弟节点继续</span><br><span class="line">    &#125;</span><br><span class="line">    nextFiber = nextFiber.return; // 返回父节点，寻找兄弟</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return null; // 所有节点协调完毕</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 启动调度</span><br><span class="line">requestIdleCallback(workLoop);</span><br></pre></td></tr></table></figure>
+
+<p>the scheduling cycle utilizes <code>requestIdleCallback </code>continuously obtain idle time slices, execute unit tasks, and judge whether to pause or continue based on idle time.</p>
+<hr>
+<h2 id="Relationship-between-Fiber-time-slicing-and-priority-scheduling"><a href="#Relationship-between-Fiber-time-slicing-and-priority-scheduling" class="headerlink" title="Relationship between Fiber time slicing and priority scheduling"></a>Relationship between Fiber time slicing and priority scheduling</h2><p>time slicing allows large tasks to be split up, but it also needs to ensure that important tasks are completed first. Fiber combines priority scheduling to assign different priorities to different tasks. For example, user input and animation tasks have the highest priority and are scheduled first.</p>
+<p>Time slicing ensures that even large low-priority tasks can be split into smaller segments to avoid blocking more important tasks and keep the UI flowing smoothly.</p>
+<hr>
+<h2 id="Advantages-of-Fiber-time-slicing"><a href="#Advantages-of-Fiber-time-slicing" class="headerlink" title="Advantages of Fiber time slicing"></a>Advantages of Fiber time slicing</h2><ul>
+<li>avoid occupying the main thread for a long time and improve page responsiveness.</li>
+<li>Support task can be interrupted and resumed, improve scheduling flexibility.</li>
+<li>Combined with priority scheduling, high priority tasks are executed first.</li>
+<li>Lay the foundation for advanced features such as React concurrency mode and Suspense.</li>
+</ul>
+<hr>
+<h2 id="Interview-answer-example"><a href="#Interview-answer-example" class="headerlink" title="Interview answer example"></a>Interview answer example</h2><p><strong>question: How does Fiber implement time slicing?</strong></p>
+<p>Example answer:</p>
+<p>the Fiber architecture splits coordination into many independent unit tasks, each corresponding to a Fiber node in the Virtual DOM. Take advantage of the browser idle time API (e. G. <code>requestIdleCallback </code>),React performs these unit tasks when the main thread is idle.</p>
+<p>During execution, the remaining idle time will be detected in real time. If the time is insufficient, the scheduling will be suspended, the current execution state will be saved, and the execution will resume after the next idle time, thus realizing the fragmented execution and interruption of the task. This mechanism avoids blocking the main thread for a long time and improves the response speed and user experience of the page.</p>
+<p>At the same time, Fiber combines task priority scheduling to ensure that key tasks are completed first. Incremental execution and non-blocking scheduling of rendering tasks are implemented as a whole.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Fiber implements time slicing by fine-grained splitting and coordinating tasks and combining with the browser idle time API. Time slicing makes React rendering no longer a single, long-blocking synchronization process, but is split into multiple small tasks that can be interrupted and recovered, which are executed step by step when idle, greatly improving the availability of the main thread and the UI response speed.</p>
+<p>This technology provides a solid foundation for React’s modern asynchronous rendering and Concurrency patterns, and is key to React’s performance optimization. Understanding the principle of Fiber time slicing helps developers to better optimize the performance and user experience of React applications.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What problems exist in the react15 architectureForewordReact is one of the current mainstream front-end libraries, and its architecture design is cons"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What problems exist in the react15 architecture"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What problems exist in the react15 architectureForewordReact is one of the current mainstream front-end libraries, and its architecture design is cons"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What problems exist in the react15 architecture - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What problems exist in the react15 architecture</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-04-29
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-problems-exist-in-the-react15-architecture"><a href="#What-problems-exist-in-the-react15-architecture" class="headerlink" title="What problems exist in the react15 architecture"></a>What problems exist in the react15 architecture</h1><h3 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h3><p>React is one of the current mainstream front-end libraries, and its architecture design is constantly evolving to meet complex application requirements. React 15 is an important early version of React, which lays the core foundation for React componentization and Virtual DOM. However, with the increasing complexity of application scenarios, the architecture of React 15 gradually exposes bottlenecks in performance and flexibility. This article will analyze the main problems of the React 15 architecture and lay the foundation for understanding the subsequent versions (such as the Fiber architecture of React 16).</p>
+<hr>
+<h3 id="React-15-Architecture-Review"><a href="#React-15-Architecture-Review" class="headerlink" title="React 15 Architecture Review"></a>React 15 Architecture Review</h3><p>React 15 uses a synchronous virtual DOM tree comparison algorithm (Diffing algorithm), and the entire update process is performed synchronously, that is, one update task completes DOM changes as quickly as possible. Its core processes are:</p>
+<ul>
+<li>when the state or property changes, the render method is triggered to recalculate the Virtual DOM.</li>
+<li>Recursively compare the old and new Virtual DOM to generate the smallest DOM update patch.</li>
+<li>These patches are executed synchronously to update the real DOM.</li>
+</ul>
+<p>Although this mechanism is simple and direct and suitable for most scenarios, its defects gradually appear in large-scale complex UI and applications with frequent interaction.</p>
+<hr>
+<h3 id="React-15-architecture-of-the-main-problems"><a href="#React-15-architecture-of-the-main-problems" class="headerlink" title="React 15 architecture of the main problems"></a>React 15 architecture of the main problems</h3><ol>
+<li><strong>synchronous rendering causes main thread to block</strong></li>
+</ol>
+<p>the update process of React 15 is synchronous and will not be actively interrupted during execution. If the Virtual DOM tree is large or changes a lot, the entire rendering process may cause the main thread to be occupied for a long time, affecting the page response and causing the stuck experience.</p>
+<ol>
+<li><strong>Cannot interrupt and priority scheduling</strong></li>
+</ol>
+<p>React 15 does not support task interruption or task priority scheduling. Even if the user triggers a high-priority interaction event, the current rendering task cannot be paused, affecting the user experience.</p>
+<ol>
+<li><strong>Long tasks cause page interaction to block</strong></li>
+</ol>
+<p>because the update process is not fragmented, complex updates will become long tasks, causing page jam and frame loss, affecting performance and user operation fluency.</p>
+<ol>
+<li><strong>Lifecycle method call order and consistency issues</strong></li>
+</ol>
+<p>the lifecycle hook design of React 15 has some flaws, such <code>componentWillMount </code>and <code>componentWillReceiveProps </code>asynchronous rendering can introduce inconsistencies, leading to unpredictable errors in state management and side-effect handling.</p>
+<ol>
+<li><strong>Missing error boundary</strong></li>
+</ol>
+<p>React 15 lacks an error boundary mechanism. When a subcomponent throws an exception, the entire component tree will crash, unable to catch the error locally and recover gracefully.</p>
+<ol>
+<li><strong>Complex component state management</strong></li>
+</ol>
+<p>due to the lack of Fiber architecture support, the component state update of React 15 is atomic and synchronous, which is not conducive to handling complex state chains and task splitting.</p>
+<hr>
+<h3 id="Comparison-Table-Main-Differences-between-React-15-and-React-16-Fiber-Architectures"><a href="#Comparison-Table-Main-Differences-between-React-15-and-React-16-Fiber-Architectures" class="headerlink" title="Comparison Table: Main Differences between React 15 and React 16 Fiber Architectures"></a>Comparison Table: Main Differences between React 15 and React 16 Fiber Architectures</h3><table>
+<thead>
+<tr>
+<th>characteristics</th>
+<th>React 15</th>
+<th>React 16 (Fiber)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Rendering Method</td>
+<td>synchronous rendering</td>
+<td>support for asynchronous rendering, interruptible tasks</td>
+</tr>
+<tr>
+<td>scheduling mechanism</td>
+<td>no priority scheduling</td>
+<td>support for task priority and slice rendering</td>
+</tr>
+<tr>
+<td>error handling</td>
+<td>no error boundary</td>
+<td>support for error boundary local capture</td>
+</tr>
+<tr>
+<td>life Cycle Approach</td>
+<td>there are inconsistencies and potential problems</td>
+<td>new security lifecycle replaces old approach</td>
+</tr>
+<tr>
+<td>performance</td>
+<td>large complex interface performance bottleneck is obvious</td>
+<td>improve performance and page responsiveness</td>
+</tr>
+<tr>
+<td>task Split</td>
+<td>not supported</td>
+<td>support, avoid long task blocking</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="Code-Example-Description"><a href="#Code-Example-Description" class="headerlink" title="Code Example Description"></a>Code Example Description</h3><p>in React 15, the status update is performed synchronously:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">this.setState(&#123; count: this.state.count + 1 &#125;);</span><br><span class="line">console.log(this.state.count); // 仍然是旧值，因为 setState 是同步批处理后的下一次更新才生效</span><br></pre></td></tr></table></figure>
+
+<p>the update process blocks the main thread, resulting in a non-smooth UI for complex operations.</p>
+<p>React 16 Fiber introduces asynchronous rendering, supports interrupt and priority, and improves user interaction experience.</p>
+<hr>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>The React 15 architecture lays the foundation for Virtual DOM and componentization. However, due to its synchronous rendering mechanism and lack of task scheduling capability, it is difficult to meet the performance and response speed requirements of large applications. It has problems such as main thread blocking, inability to interrupt updates, imperfect Lifecycle methods, and lack of error boundaries. By introducing the Fiber architecture, React 16 solves these bottlenecks, implements asynchronous rendering and priority scheduling, and greatly improves performance and stability. Understanding the shortcomings of React 15 helps to understand the design concept and technological evolution of React 16 and beyond.</p>
+<hr>
+<h3 id="The-interview-answer"><a href="#The-interview-answer" class="headerlink" title="The interview answer"></a>The interview answer</h3><p><strong>question: What is the problem with the React 15 architecture?</strong></p>
+<p>Answer:</p>
+<p>React 15 uses synchronous virtual DOM rendering, and the entire update process is completed at one time, causing the main thread to be blocked for a long time, affecting page response and interaction fluency. It does not support task interrupt and priority scheduling, and cannot handle the need for interrupt rendering. The design of life cycle method has the problem of inconsistency and the lack of error boundary mechanism, which makes it difficult to capture and recover errors locally. These problems are evident in complex large scale applications. React 16 implements asynchronous rendering and priority scheduling through the Fiber architecture, effectively solving these bottlenecks.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

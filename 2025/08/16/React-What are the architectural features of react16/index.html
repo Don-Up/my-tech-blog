@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What are the architectural features of react16Forewordreact, as one of the mainstream frontend libraries, has evolved since its inception to meet the "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What are the architectural features of react16"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What are the architectural features of react16Forewordreact, as one of the mainstream frontend libraries, has evolved since its inception to meet the "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What are the architectural features of react16 - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What are the architectural features of react16</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-08-16
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-are-the-architectural-features-of-react16"><a href="#What-are-the-architectural-features-of-react16" class="headerlink" title="What are the architectural features of react16"></a>What are the architectural features of react16</h1><h3 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h3><p>react, as one of the mainstream frontend libraries, has evolved since its inception to meet the performance and development needs of complex applications. React 16 is an important milestone version of React, and its bottom layer introduces a new architecture-Fiber.</p>
+<p>The Fiber architecture solves many shortcomings of React 15 and earlier versions in rendering performance, task scheduling, and error handling, making React perform better in complex interactions and large-scale applications. This article will provide an in-depth analysis of the architectural features of React16 to help understand the changes and advantages brought about by Fiber.</p>
+<hr>
+<h3 id="React16-Architecture-Core-Fiber"><a href="#React16-Architecture-Core-Fiber" class="headerlink" title="React16 Architecture Core: Fiber"></a>React16 Architecture Core: Fiber</h3><p>Fiber is a rewriting implementation of the reconciliation algorithm introduced by React16, which refines the update process of the Virtual DOM into multiple interruptible and recoverable task units. It is designed to improve rendering flexibility and responsiveness.</p>
+<h4 id="1-Asynchronous-interruptible-rendering"><a href="#1-Asynchronous-interruptible-rendering" class="headerlink" title="1. Asynchronous interruptible rendering"></a>1. Asynchronous interruptible rendering</h4><p>the Update In React 15 is blocked synchronously. The main thread is occupied during the update process, and the page is obviously stuck. The Fiber architecture splits updates into small task fragments, which can interrupt or switch priorities between tasks to ensure that high-priority tasks (such as user input) can respond in time, greatly improving user experience.</p>
+<h4 id="2-Support-task-priority-scheduling"><a href="#2-Support-task-priority-scheduling" class="headerlink" title="2. Support task priority scheduling"></a>2. Support task priority scheduling</h4><p>Fiber allows for more intelligent scheduling by prioritizing tasks based on their importance. High-priority tasks are executed first, and low-priority tasks can be delayed or merged to optimize the main thread resource allocation.</p>
+<h4 id="3-Recursive-calls-become-loops"><a href="#3-Recursive-calls-become-loops" class="headerlink" title="3. Recursive calls become loops."></a>3. Recursive calls become loops.</h4><p>React 15 uses recursion to compare and update the tree structure. If the recursion depth is large, it may cause stack overflow. Fiber replaces recursion with a linked list structure, and the bottom layer traverses the tree through loops and state machines, which is more stable and safe.</p>
+<h4 id="4-Fiber-node-structure"><a href="#4-Fiber-node-structure" class="headerlink" title="4. Fiber node structure"></a>4. Fiber node structure</h4><p>Fiber is not a simple virtual DOM object, but a unit of work that contains more scheduling information. The structure includes:</p>
+<table>
+<thead>
+<tr>
+<th>field Name</th>
+<th>description of role</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>type</td>
+<td>node type (element type or component type)</td>
+</tr>
+<tr>
+<td>pendingProps</td>
+<td>the New props</td>
+</tr>
+<tr>
+<td>memoizedProps</td>
+<td>last active props</td>
+</tr>
+<tr>
+<td>stateNode</td>
+<td>corresponding real DOM or class component instance</td>
+</tr>
+<tr>
+<td>return</td>
+<td>parent Fiber node</td>
+</tr>
+<tr>
+<td>child</td>
+<td>first child Fiber node</td>
+</tr>
+<tr>
+<td>sibling</td>
+<td>next Brother Fiber Node</td>
+</tr>
+<tr>
+<td>effectTag</td>
+<td>mark side-effect actions (e. G. Update, delete)</td>
+</tr>
+</tbody></table>
+<p>this design supports incremental execution, pause and resume of tasks by the scheduling algorithm.</p>
+<hr>
+<h3 id="Other-new-features-of-the-React16-architecture"><a href="#Other-new-features-of-the-React16-architecture" class="headerlink" title="Other new features of the React16 architecture"></a>Other new features of the React16 architecture</h3><ol>
+<li><strong>Error boundary</strong></li>
+</ol>
+<p>React16 introduces the error boundary component, which can capture errors in the life cycle and rendering process of sub-components, avoid the collapse of the entire component tree, and improve application stability.</p>
+<ol>
+<li><strong>Portal</strong></li>
+</ol>
+<p>supports rendering sub-components to nodes outside the DOM tree to improve UI flexibility.</p>
+<ol>
+<li><strong>Fragment</strong></li>
+</ol>
+<p>multiple elements can be returned without additional DOM containers, reducing the number of meaningless nodes.</p>
+<ol>
+<li><strong>New Lifecycle Approach</strong></li>
+</ol>
+<p>introduced <code>getDerivedStateFromProps </code>and <code>getSnapshotBeforeUpdate </code>to replace some unsafe lifecycle functions.</p>
+<hr>
+<h3 id="React16-architecture-comparison-React15"><a href="#React16-architecture-comparison-React15" class="headerlink" title="React16 architecture comparison React15"></a>React16 architecture comparison React15</h3><table>
+<thead>
+<tr>
+<th>characteristics</th>
+<th>React 15</th>
+<th>React 16 (Fiber)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>rendering Mode</td>
+<td>synchronous blocking</td>
+<td>asynchronous Interruptible, Incremental Update</td>
+</tr>
+<tr>
+<td>scheduling mechanism</td>
+<td>no priority scheduling</td>
+<td>support task priority scheduling</td>
+</tr>
+<tr>
+<td>tree structure traversal</td>
+<td>recursion</td>
+<td>implementation of Loop Based on Linked List</td>
+</tr>
+<tr>
+<td>Error handling</td>
+<td>no error boundary</td>
+<td>introduce error boundaries, catch errors locally</td>
+</tr>
+<tr>
+<td>component Rendering Flexibility</td>
+<td>limited</td>
+<td>support Portal and Fragment</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="Code-Examples"><a href="#Code-Examples" class="headerlink" title="Code Examples"></a>Code Examples</h3><p>the Fiber architecture promotes asynchronous update capabilities, such <code>setState </code>synchronization is no longer immediate, but batch scheduling:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">this.setState(&#123; count: this.state.count + 1 &#125;);</span><br><span class="line">console.log(this.state.count); // 仍是旧值，更新是异步批量执行的</span><br></pre></td></tr></table></figure>
+
+<p>combined with priority scheduling, high-priority interactions are rendered first to ensure smooth response.</p>
+<hr>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>React16 implements asynchronous interruptible rendering and task priority scheduling by introducing the Fiber architecture, which significantly improves rendering performance and user experience. At the same time, features such as error boundary, Fragment, and Portal are added to improve the robustness and flexibility of the application. The design of the Fiber architecture not only solves the performance bottleneck of React 15, but also lays the foundation for more complex functional extensions in the future. Understanding the architectural features of React16 helps developers write high-performance, maintainable React applications.</p>
+<hr>
+<h3 id="the-interview-answer"><a href="#the-interview-answer" class="headerlink" title="the interview answer"></a>the interview answer</h3><p><strong>question: What are the architectural features of React16?</strong></p>
+<p>Answer:</p>
+<p>React16 introduces a new Fiber architecture. The core is to split the Virtual DOM update into multiple interruptible task units, support asynchronous rendering and task priority scheduling, and avoid the main thread jam caused by synchronous blocking In React 15. Fiber with a list instead of recursive tree structure traversal, more stable security.</p>
+<p>React16 also adds error boundaries, improves error handling, and supports new features such as Fragment and Portal to enhance the flexibility of component rendering. These improvements have greatly improved React’s performance and user experience in complex applications.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

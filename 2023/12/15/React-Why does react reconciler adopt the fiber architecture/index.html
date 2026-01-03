@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Why does react reconciler adopt the fiber architectureForewordReact is one of the most popular front-end libraries, and its efficient update mechanism"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Why does react reconciler adopt the fiber architecture"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Why does react reconciler adopt the fiber architectureForewordReact is one of the most popular front-end libraries, and its efficient update mechanism"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Why does react reconciler adopt the fiber architecture - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Why does react reconciler adopt the fiber architecture</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-12-15
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Why-does-react-reconciler-adopt-the-fiber-architecture"><a href="#Why-does-react-reconciler-adopt-the-fiber-architecture" class="headerlink" title="Why does react reconciler adopt the fiber architecture"></a>Why does react reconciler adopt the fiber architecture</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>React is one of the most popular front-end libraries, and its efficient update mechanism is its core competitiveness. The rereconciler (coordinator) of React is responsible for comparing the old and new Virtual DOM trees, calculating the smallest change set, and applying it to the real DOM.</p>
+<p>However, the coordination mechanism before React 16 had performance bottlenecks, especially in the face of complex and large-scale UI updates, which showed the problems of interface lag and slow response.</p>
+<p>To overcome these limitations, the React team designed and introduced the Fiber architecture as the underlying implementation framework for the reciller. The Fiber architecture not only optimizes performance, but also lays the foundation for future asynchronous and concurrent rendering. This article will focus on the theme of “Why React Reconsoler Adopts Fiber Architecture” and analyze the design drivers and implementation advantages behind it in detail.</p>
+<hr>
+<h2 id="A-brief-description-of-the-working-principle-of-React-reciller"><a href="#A-brief-description-of-the-working-principle-of-React-reciller" class="headerlink" title="A brief description of the working principle of React reciller"></a>A brief description of the working principle of React reciller</h2><p>the core responsibility of React reciller is to compare two virtual DOM trees-the old tree and the new tree-to identify the differences, and to generate a set of operations (insert, delete, update), and finally map these operations to the real DOM.</p>
+<p>The traditional reciller workflow is synchronous and recursive: Starting at the root node, recursively traversing the subtree, calculating the difference, and finally committing all updates at once. This method is simple and intuitive, but the disadvantages are obvious:</p>
+<ul>
+<li><strong>blocking main thread</strong> : In complex trees or large-scale updates, the rendering task takes a long time, causing the browser to not respond to user input and animation in a timely manner.</li>
+<li><strong>Lack of disruption capability</strong>: Cannot pause or switch during task execution, affecting user experience.</li>
+<li><strong>Task priority scheduling is not supported</strong> the execution order cannot be flexibly adjusted according to the task importance.</li>
+</ul>
+<hr>
+<h2 id="Why-Does-Reconciler-Need-Fiber-Architecture"><a href="#Why-Does-Reconciler-Need-Fiber-Architecture" class="headerlink" title="Why Does Reconciler Need Fiber Architecture?"></a>Why Does Reconciler Need Fiber Architecture?</h2><h3 id="1-Solve-the-main-thread-blocking-problem"><a href="#1-Solve-the-main-thread-blocking-problem" class="headerlink" title="1. Solve the main thread blocking problem"></a>1. Solve the main thread blocking problem</h3><p>the traditional synchronization coordination mechanism will cause a large number of calculations to block the main thread of the browser, especially in the case of a large amount of data and a deep component level, the page stuck phenomenon is obvious.</p>
+<p>The Fiber architecture splits the rendering task into tiny units (Fiber units) that are incrementally executed using fragments of browser idle time. This incremental rendering strategy allows the main thread to handle high-priority user interaction events between task executions, significantly improving page responsiveness.</p>
+<h3 id="2-Achieve-an-interruptible-coordination-process"><a href="#2-Achieve-an-interruptible-coordination-process" class="headerlink" title="2. Achieve an interruptible coordination process"></a>2. Achieve an interruptible coordination process</h3><p>Fiber supports the suspension, resumption, and restart of task execution by constructing a linked list-like Fiber node structure, avoiding long-term thread occupation and ensuring the flexibility of the coordination process.</p>
+<p>This is especially important for mobile terminals and resource-constrained devices, which can effectively reduce interface stuck and user operation delay.</p>
+<h3 id="3-Support-priority-scheduling"><a href="#3-Support-priority-scheduling" class="headerlink" title="3. Support priority scheduling"></a>3. Support priority scheduling</h3><p>different update requests have different priorities in the application, such as user input and animation should take precedence over data loading.</p>
+<p>Fiber allows React to dynamically schedule rendering tasks based on updated priorities, improving the responsiveness and user experience of critical tasks.</p>
+<h3 id="4-Paving-the-way-for-asynchronous-and-concurrent-rendering"><a href="#4-Paving-the-way-for-asynchronous-and-concurrent-rendering" class="headerlink" title="4. Paving the way for asynchronous and concurrent rendering"></a>4. Paving the way for asynchronous and concurrent rendering</h3><p>Future versions of React introduce a Concurrent Mode, which allows UI rendering to occur asynchronously without blocking the main thread.</p>
+<p>The design of the Fiber architecture has good scalability and naturally supports the implementation of concurrent rendering, which is the basis for React to implement this complex function.</p>
+<hr>
+<h2 id="How-does-the-Fiber-architecture-help-reciller-achieve-the-above-goals"><a href="#How-does-the-Fiber-architecture-help-reciller-achieve-the-above-goals" class="headerlink" title="How does the Fiber architecture help reciller achieve the above goals?"></a>How does the Fiber architecture help reciller achieve the above goals?</h2><h3 id="Core-data-structure-Fiber-node"><a href="#Core-data-structure-Fiber-node" class="headerlink" title="Core data structure: Fiber node"></a>Core data structure: Fiber node</h3><p>Fiber is a lightweight linked list node object, each Fiber node corresponds to a node of the Virtual DOM, including node type, state, pointers to child nodes and sibling nodes, etc.</p>
+<p>This structure allows React to traverse and split jobs sequentially, facilitating incremental and interrupted implementations.</p>
+<h3 id="The-rendering-process-is-split-into-two-phases"><a href="#The-rendering-process-is-split-into-two-phases" class="headerlink" title="The rendering process is split into two phases"></a>The rendering process is split into two phases</h3><ul>
+<li><strong>Render (coordination) phase</strong> : Create a new Fiber tree and mark the nodes that need to be changed. This phase can be interrupted.</li>
+<li><strong>The Commit phase</strong> : Apply changes to the real DOM, performing side effects. This phase is executed synchronously to ensure that the UI is consistent.</li>
+</ul>
+<p>By processing in stages, React avoids long periods of synchronous blocking.</p>
+<h3 id="Using-Browser-Idle-Time-to-Schedule-Tasks"><a href="#Using-Browser-Idle-Time-to-Schedule-Tasks" class="headerlink" title="Using Browser Idle Time to Schedule Tasks"></a>Using Browser Idle Time to Schedule Tasks</h3><p>React is utilized <code>requestIdleCallback</code>Or a similar mechanism to execute the Fiber unit of work during the browser’s idle time to ensure that the main thread has enough time to process user events and animations.</p>
+<hr>
+<h2 id="Code-Sample-Fiber-Task-Split-Pseudo-Code"><a href="#Code-Sample-Fiber-Task-Split-Pseudo-Code" class="headerlink" title="Code Sample: Fiber Task Split Pseudo Code"></a>Code Sample: Fiber Task Split Pseudo Code</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">function workLoop(deadline) &#123;</span><br><span class="line">  while (nextUnitOfWork &amp;&amp; deadline.timeRemaining() &gt; 1) &#123;</span><br><span class="line">    nextUnitOfWork = performUnitOfWork(nextUnitOfWork);</span><br><span class="line">  &#125;</span><br><span class="line">  if (!nextUnitOfWork) &#123;</span><br><span class="line">    commitRoot(); // 提交所有变更</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    requestIdleCallback(workLoop); // 继续调度</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function performUnitOfWork(fiber) &#123;</span><br><span class="line">  beginWork(fiber);  // 构建子 Fiber</span><br><span class="line">  if (fiber.child) &#123;</span><br><span class="line">    return fiber.child;</span><br><span class="line">  &#125;</span><br><span class="line">  let nextFiber = fiber;</span><br><span class="line">  while (nextFiber) &#123;</span><br><span class="line">    completeWork(nextFiber);</span><br><span class="line">    if (nextFiber.sibling) &#123;</span><br><span class="line">      return nextFiber.sibling;</span><br><span class="line">    &#125;</span><br><span class="line">    nextFiber = nextFiber.return;</span><br><span class="line">  &#125;</span><br><span class="line">  return null;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>this example shows how Fiber breaks down coordination tasks and utilizes browser idle time fragments for scheduling.</p>
+<hr>
+<h2 id="Summary-of-the-advantages-of-the-Fiber-architecture-adopted-by-React-reciller"><a href="#Summary-of-the-advantages-of-the-Fiber-architecture-adopted-by-React-reciller" class="headerlink" title="Summary of the advantages of the Fiber architecture adopted by React reciller"></a>Summary of the advantages of the Fiber architecture adopted by React reciller</h2><table>
+<thead>
+<tr>
+<th>traditional recociler</th>
+<th>Fiber Architecture reciller</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>synchronize Rendering Tasks</td>
+<td>interruptible, incremental rendering tasks</td>
+</tr>
+<tr>
+<td>task priority is not supported</td>
+<td>support for priority-based task scheduling</td>
+</tr>
+<tr>
+<td>recursive execution, possibly blocking the main thread</td>
+<td>the task is split into linked lists, decentralized execution, to avoid blocking</td>
+</tr>
+<tr>
+<td>asynchronous concurrent rendering is not supported</td>
+<td>designed for asynchronous concurrent rendering with future scalability</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="interview-answer-example"><a href="#interview-answer-example" class="headerlink" title="interview answer example"></a>interview answer example</h2><p><strong>question: Why does React reconsoler adopt the Fiber architecture?</strong></p>
+<p>Example answer:</p>
+<p>the traditional coordination mechanism of React is to synchronously and recursively traverse the Virtual DOM tree. Once the update operation starts, the main thread will be blocked, resulting in interface jam and response delay. To address this bottleneck, React introduced the Fiber architecture.</p>
+<p>Fiber breaks down the rendering task into a finer-grained unit of work, uses a linked list structure to represent node relationships, supports incremental execution and interruption of tasks, and avoids blocking the main thread for a long time. At the same time, Fiber allows to schedule the execution order according to the task priority, improving the response speed of high-priority tasks. More importantly, the Fiber architecture lays the foundation for asynchronous and concurrent rendering, meeting the high performance and user experience requirements of modern complex interactive applications.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>React reconsoler uses the Fiber architecture to address the performance and user experience deficiencies of traditional synchronization and coordination mechanisms. Fiber significantly improves the rendering efficiency and response speed of React through task splitting, interruptible execution, priority scheduling, and phased rendering.</p>
+<p>This architecture not only optimizes current rendering performance, but also provides a solid foundation for future asynchronous concurrent rendering modes, enabling React to better cope with complex and dynamic modern Web applications. Understanding the original design and implementation of Fiber helps to deeply understand the internal update mechanism of React, and provides theoretical support for performance optimization and high-level function development.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

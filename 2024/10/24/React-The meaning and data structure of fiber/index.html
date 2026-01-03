@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="The meaning and data structure of fiberForewordin the modern front-end framework React, Fiber is the core architecture introduced by React16. It funda"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="The meaning and data structure of fiber"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="The meaning and data structure of fiberForewordin the modern front-end framework React, Fiber is the core architecture introduced by React16. It funda"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>The meaning and data structure of fiber - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>The meaning and data structure of fiber</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-10-24
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="The-meaning-and-data-structure-of-fiber"><a href="#The-meaning-and-data-structure-of-fiber" class="headerlink" title="The meaning and data structure of fiber"></a>The meaning and data structure of fiber</h1><h3 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h3><p>in the modern front-end framework React, Fiber is the core architecture introduced by React16. It fundamentally reconstructs the rendering and scheduling mechanism of React, greatly improving the flexibility and performance of rendering. Understanding the meaning of Fiber and its underlying data structure is essential for understanding the working principle of React, optimizing performance, and debugging complex applications. This article will detail the concept of Fiber, its design intent and its data structure to help readers build a systematic understanding.</p>
+<hr>
+<h3 id="The-meaning-of-Fiber"><a href="#The-meaning-of-Fiber" class="headerlink" title="The meaning of Fiber"></a>The meaning of Fiber</h3><p>A Fiber is a work unit in React that describes each node in the component tree. It carries the component’s state, properties, and scheduling information during rendering. A Fiber can be understood as an “enhanced version of a virtual DOM node”, which not only represents a component structure, but also includes support for scheduling.</p>
+<p>The core goal of the Fiber mechanism is to enable React’s rendering process to be “interruptible”, “recoverable”, and “task priority scheduling. Traditional React rendering is synchronous and blocking, and once you start rendering, you can’t respond to other tasks until you finish. Fiber achieves asynchronous rendering by subdividing tasks and maintaining state, enabling the browser to respond to user interactions in a timely manner, improving the response performance of the application.</p>
+<p>In simple terms, Fiber is a set of internal data structures and scheduling mechanisms designed by React to implement asynchronous incremental rendering.</p>
+<hr>
+<h3 id="the-original-design-intention-of-Fiber"><a href="#the-original-design-intention-of-Fiber" class="headerlink" title="the original design intention of Fiber"></a>the original design intention of Fiber</h3><p>In React15 and previous versions, the traversal and update of the component tree are performed recursively and synchronously. When the recursion depth is large, it is easy to cause stack overflow, and the rendering process blocks the main thread, and the user interaction experience is poor. To overcome these problems, The React team designed the Fiber architecture to meet the following requirements:</p>
+<ul>
+<li><strong>asynchronous Interruptible Rendering</strong> : Split the rendering task into multiple small fragments, and the browser main thread can interrupt the execution to ensure that high-priority tasks (such as user input) are executed first.</li>
+<li><strong>Task priority scheduling</strong> : Dynamically adjust the execution order according to the importance of the task.</li>
+<li><strong>Avoid recursive calls</strong> : Use a linked list data structure instead of recursive traversal to Reduce stack risk.</li>
+<li><strong>Track side effects and status changes</strong> : Clearly record which nodes need to be updated, inserted or deleted, which is convenient for batch processing.</li>
+</ul>
+<hr>
+<h3 id="Data-Structure-of-Fiber"><a href="#Data-Structure-of-Fiber" class="headerlink" title="Data Structure of Fiber"></a>Data Structure of Fiber</h3><p>A Fiber is essentially a node object in a linked list structure that represents the corresponding component or element in the component tree. Each Fiber node contains rich fields for storing the component’s type, properties, status, and scheduling and side effect information. A typical Fiber node structure is as follows:</p>
+<table>
+<thead>
+<tr>
+<th>field Name</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>type </code></td>
+<td>node type, such as DOM tag name or React component type</td>
+</tr>
+<tr>
+<td><code>key </code></td>
+<td>unique identifier, used to distinguish nodes in the list.</td>
+</tr>
+<tr>
+<td><code>stateNode</code></td>
+<td>Associated real DOM or component instance</td>
+</tr>
+<tr>
+<td><code>return </code></td>
+<td>point to parent Fiber node</td>
+</tr>
+<tr>
+<td><code>child </code></td>
+<td>pointing to the first child Fiber node</td>
+</tr>
+<tr>
+<td><code>sibling </code></td>
+<td>point to the next sibling Fiber node</td>
+</tr>
+<tr>
+<td><code>pendingProps </code></td>
+<td>new props that will be applied when rendering</td>
+</tr>
+<tr>
+<td><code>memoizedProps </code></td>
+<td>props currently in effect</td>
+</tr>
+<tr>
+<td><code>memoizedState </code></td>
+<td>current Effective Status</td>
+</tr>
+<tr>
+<td><code>updateQueue </code></td>
+<td>update queue, which stores pending status updates</td>
+</tr>
+<tr>
+<td><code>effectTag </code></td>
+<td>side effect tag, which identifies the operation (such as update, delete) that the node needs to perform</td>
+</tr>
+<tr>
+<td><code>nextEffect </code></td>
+<td>the next Fiber node with side effects in the linked list</td>
+</tr>
+</tbody></table>
+<p>between Fiber nodes through <code>child </code>, <code>sibling </code>and <code>return</code>The three pointers form a tree structure. Unlike the simple tree structure of traditional Virtual DOM, Fiber allows pause, resume, and priority scheduling during traversality.</p>
+<hr>
+<h3 id="Fiber-linked-list-diagram"><a href="#Fiber-linked-list-diagram" class="headerlink" title="Fiber linked list diagram"></a>Fiber linked list diagram</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Fiber A (parent)</span><br><span class="line">          |</span><br><span class="line">      -------------</span><br><span class="line">     |             |</span><br><span class="line">Fiber B (child)   Fiber C (sibling)</span><br><span class="line">     |                |</span><br><span class="line">Fiber D (child)    Fiber E (sibling)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>Fiber A </code>of <code>child </code>point <code>Fiber B </code>, <code>Fiber B </code>of <code>sibling </code>point <code>Fiber C </code>.</li>
+<li><code>Fiber B </code>of <code>child </code>point <code>Fiber D </code>, <code>Fiber C </code>of <code>sibling </code>point <code>Fiber E </code>.</li>
+<li>Each Fiber passed <code>return </code>pointer points to the parent node to implement a doubly linked list.</li>
+</ul>
+<hr>
+<h3 id="Brief-Description-of-Fiber-Workflow"><a href="#Brief-Description-of-Fiber-Workflow" class="headerlink" title="Brief Description of Fiber Workflow"></a>Brief Description of Fiber Workflow</h3><p>When React updates, a new Fiber tree (work-in-progress tree) is first built, and then the differences between the old and new Fiber nodes are compared one by one, marking the nodes that need to be updated (set <code>effectTag </code>), the final submission phase uniformly executes these side effects to update the real DOM.</p>
+<p>The linked list structure and task splitting of Fiber allow the update process to be interrupted or switched to support more complex task scheduling and better performance.</p>
+<hr>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Fiber is the core of the underlying architecture introduced by react16. it is the work unit of each node in the React component tree and combines component information and scheduling control. It implements incremental traversal of the tree through a linked list structure and supports asynchronous interruptible rendering and task priority scheduling. The design of Fiber not only solves the problems of recursive call depth and main thread blocking in previous versions, but also brings more flexible and efficient rendering capabilities to React. A thorough understanding of the data structure and working principle of Fiber helps you better understand the performance optimization and source code reading of React.</p>
+<hr>
+<h3 id="the-interview-answer"><a href="#the-interview-answer" class="headerlink" title="the interview answer"></a>the interview answer</h3><p><strong>question: What is the meaning and data structure of Fiber?</strong></p>
+<p>Answer:</p>
+<p>Fiber is a new coordination algorithm and data structure introduced by React16, which represents the “unit of work” of each node in the component tree “. It not only contains the type, properties, and state information of the component, but also carries the scheduling and side effect tags. Fiber is organized into a tree through a linked list structure (child, sibling, return pointer) to achieve interruptible and recoverable asynchronous incremental rendering. The design of Fiber solves the problem of blocking the main thread of React15 recursive rendering, supports task priority scheduling, and makes the rendering process more flexible and efficient. The key fields in the Fiber structure include <code>type </code>, <code>stateNode </code>, <code>pendingProps </code>, <code>memoizedState </code>, <code>effectTag </code>etc., it is convenient for React to track status changes and update DOM in batches.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
