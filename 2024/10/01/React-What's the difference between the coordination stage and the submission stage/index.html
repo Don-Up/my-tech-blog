@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What’s the difference between the coordination stage and the submission stageForewordthe rendering process of React is a complex and efficient process"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What&#39;s the difference between the coordination stage and the submission stage"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What’s the difference between the coordination stage and the submission stageForewordthe rendering process of React is a complex and efficient process"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What&#39;s the difference between the coordination stage and the submission stage - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What's the difference between the coordination stage and the submission stage</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-10-01
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What’s-the-difference-between-the-coordination-stage-and-the-submission-stage"><a href="#What’s-the-difference-between-the-coordination-stage-and-the-submission-stage" class="headerlink" title="What’s the difference between the coordination stage and the submission stage"></a>What’s the difference between the coordination stage and the submission stage</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>the rendering process of React is a complex and efficient process, especially after the introduction of the Fiber architecture, the entire update process is divided into two core phases: the coordination Phase (Render Phase) and the Commit Phase (Commit Phase). These two stages perform their own duties in the React update process, are responsible for different tasks, and complement each other to complete the efficient update of UI.</p>
+<p>Understanding the difference between the coordination phase and the commit phase is important for understanding the internal rendering mechanism of React, debugging performance issues, and writing efficient React code. This article will systematically explain the responsibilities, execution methods, performance impact and specific details of these two stages to help readers establish a clear understanding.</p>
+<hr>
+<h2 id="Render-Phase"><a href="#Render-Phase" class="headerlink" title="Render Phase"></a>Render Phase</h2><p>the main task of the coordination phase is to compare the old and new Virtual DOM trees, generate the description of the changes required for the update, and build a new Fiber tree, but this phase <strong>do not modify the real DOM</strong> .</p>
+<h3 id="Specific-Duties"><a href="#Specific-Duties" class="headerlink" title="Specific Duties"></a>Specific Duties</h3><p>the coordination phase will:</p>
+<ul>
+<li>recursively traverse the current Fiber tree and compare the old and new Fiber nodes to find out which nodes need to be created, updated or deleted.</li>
+<li>Generates an Effect List (side Effect List), marking the operations that need to be performed, such as INSERT, UPDATE, delete, etc.</li>
+<li>Calculating state updates for components, calling Lifecycle methods (e. G. <code>render </code>, <code>getDerivedStateFromProps</code>Etc.) to generate a new React element tree.</li>
+</ul>
+<h3 id="Key-Features"><a href="#Key-Features" class="headerlink" title="Key Features"></a>Key Features</h3><ul>
+<li><strong>interruptability</strong> : The coordination phase can be interrupted and resumed, using time slicing techniques to avoid blocking the main thread.</li>
+<li><strong>Pure calculation process</strong> : does not produce any side effects, does not operate DOM, does not trigger browser redraw.</li>
+<li><strong>Performance friendly</strong> : It can be completed by using the browser’s idle time to improve responsiveness.</li>
+<li><strong>Stage failure can be rolled back</strong> : If the coordination fails (such as an error is thrown), the real DOM will not be affected and you can try again.</li>
+</ul>
+<hr>
+<h2 id="The-Commit-Phase"><a href="#The-Commit-Phase" class="headerlink" title="The Commit Phase"></a>The Commit Phase</h2><p>the commit phase follows the reconciliation phase and is responsible for synchronizing the changes prepared by the reconciliation phase to the real DOM, as well as performing all side-effect operations.</p>
+<h3 id="Specific-Duties-1"><a href="#Specific-Duties-1" class="headerlink" title="Specific Duties"></a>Specific Duties</h3><p>the submission phase includes:</p>
+<ul>
+<li>according to the Effect List, insert, update, and delete the real DOM.</li>
+<li>Execute side effects in The React lifecycle hook, such <code>componentDidMount </code>, <code>componentDidUpdate </code>.</li>
+<li>Call <code>useEffect </code>and<code>useLayoutEffect </code>the callback function corresponding to the hook.</li>
+<li>Triggers browser repaint and reflow.</li>
+</ul>
+<h3 id="Key-Features-1"><a href="#Key-Features-1" class="headerlink" title="Key Features"></a>Key Features</h3><ul>
+<li><strong>synchronous execution, non-interruptible</strong> : once the commit phase starts, it will be executed synchronously to avoid inconsistent UI states.</li>
+<li><strong>Execution side effects</strong> : The only phase that allows modification of the real DOM and external environment.</li>
+<li><strong>Performance Key Points</strong> : The time-consuming submission phase will directly affect the page frame rate and user experience.</li>
+</ul>
+<hr>
+<h2 id="Summary-of-the-comparison-between-the-coordination-phase-and-the-submission-phase"><a href="#Summary-of-the-comparison-between-the-coordination-phase-and-the-submission-phase" class="headerlink" title="Summary of the comparison between the coordination phase and the submission phase"></a>Summary of the comparison between the coordination phase and the submission phase</h2><table>
+<thead>
+<tr>
+<th>dimension</th>
+<th>Render Phase</th>
+<th>the Commit Phase</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>main tasks</td>
+<td>build new Fiber tree, calculate changes</td>
+<td>apply Changes to real DOM</td>
+</tr>
+<tr>
+<td>whether to modify DOM</td>
+<td>no</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>whether to execute side effects</td>
+<td>no</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>interruptible</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>trigger timing</td>
+<td>idle time execution in task scheduling</td>
+<td>Immediately upon completion of the coordination phase</td>
+</tr>
+<tr>
+<td>lifecycle Hook</td>
+<td><code>render </code>, <code>getDerivedStateFromProps </code>wait</td>
+<td><code>componentDidMount </code>, <code>componentDidUpdate </code>, <code>useEffect </code>wait</td>
+</tr>
+<tr>
+<td>performance impact</td>
+<td>has a large impact on the response of the main thread and is designed to be interruptible</td>
+<td>directly affect interface rendering and interaction fluency</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="code-Schematic"><a href="#code-Schematic" class="headerlink" title="code Schematic"></a>code Schematic</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">function renderRoot() &#123;</span><br><span class="line">  // 协调阶段，计算变更，构建新 Fiber 树</span><br><span class="line">  nextUnitOfWork = beginWork(rootFiber);</span><br><span class="line">  while (nextUnitOfWork) &#123;</span><br><span class="line">    nextUnitOfWork = performUnitOfWork(nextUnitOfWork);</span><br><span class="line">    if (shouldYield()) break;  // 可中断</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  if (!nextUnitOfWork) &#123;</span><br><span class="line">    // 所有 Fiber 计算完成，进入提交阶段</span><br><span class="line">    commitRoot();</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    // 继续调度下次执行</span><br><span class="line">    scheduleWork();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function commitRoot() &#123;</span><br><span class="line">  // 提交阶段，同步更新 DOM</span><br><span class="line">  commitMutationEffects(rootFiber);</span><br><span class="line">  commitLayoutEffects(rootFiber);</span><br><span class="line">  commitPassiveEffects(rootFiber);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="interview-answer-example"><a href="#interview-answer-example" class="headerlink" title="interview answer example"></a>interview answer example</h2><p><strong>question: Please briefly describe the difference between the reconciliation phase and the commit phase in React.</strong></p>
+<p>Example answer:</p>
+<p>the React rendering update process is divided into a coordination phase and a commit phase. The coordination phase is responsible for traversing the old and new Fiber trees, calculating differences, and generating change descriptions, but does not operate the real DOM and is an interruptible asynchronous process. The commit phase is responsible for synchronizing these changes to the real DOM, executing lifecycle hooks and side effects, and is a synchronous and uninterruptible process.</p>
+<p>The coordination phase is mainly about calculation and preparation, focusing on performance and responsiveness. The submission phase is the final effective operation to ensure that the UI is consistent with the data.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>The coordination phase and the submission phase are the two core tasks of React rendering, and they are responsible for calculating and applying changes respectively. In the coordination phase, the construction and change marking of the Fiber tree are completed in an interruptible and purely computational manner, while in the commit phase, the real DOM is updated synchronously and side effects are executed to ensure the final consistency of the UI.</p>
+<p>Understanding the difference and coordination between the two stages helps to better understand the internal working principle of React, optimize performance, and make accurate judgments when debugging complex problems.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

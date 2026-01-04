@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="The execution process of the render stageForewordthe rendering process of React is subdivided into multiple phases under the Fiber architecture, of wh"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="The execution process of the render stage"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="The execution process of the render stageForewordthe rendering process of React is subdivided into multiple phases under the Fiber architecture, of wh"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>The execution process of the render stage - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>The execution process of the render stage</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-10-12
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="The-execution-process-of-the-render-stage"><a href="#The-execution-process-of-the-render-stage" class="headerlink" title="The execution process of the render stage"></a>The execution process of the render stage</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>the rendering process of React is subdivided into multiple phases under the Fiber architecture, of which the render phase (also known as the coordination phase) is one of the core phases. It is responsible for comparing the old and new Virtual DOM, building a new Fiber tree, and preparing the change information that needs to be updated, but it does not directly modify the real DOM at this stage.</p>
+<p>This article will analyze the execution process of the render phase in detail, including key steps such as task splitting, traversal sequence, status update, Diff calculation, etc., to help readers understand how React efficiently completes rendering preparations.</p>
+<hr>
+<h2 id="Core-objectives-of-the-render-phase"><a href="#Core-objectives-of-the-render-phase" class="headerlink" title="Core objectives of the render phase"></a>Core objectives of the render phase</h2><p>the primary responsibilities of the render phase are:</p>
+<ul>
+<li>constructs a new Fiber tree representing the latest UI state.</li>
+<li>Compare the old and new Fiber nodes to find out the parts that need to be inserted, updated and deleted.</li>
+<li>Generate a side Effect List to record all changes.</li>
+<li>Prepare all change data required for the commit phase.</li>
+</ul>
+<p>It is worth noting that the render phase does not operate the real DOM, which is a pure calculation process and supports interruptable and scheduling.</p>
+<hr>
+<h2 id="The-execution-process-of-the-render-phase"><a href="#The-execution-process-of-the-render-phase" class="headerlink" title="The execution process of the render phase"></a>The execution process of the render phase</h2><h3 id="1-Start-with-the-root-Fiber"><a href="#1-Start-with-the-root-Fiber" class="headerlink" title="1. Start with the root Fiber"></a>1. Start with the root Fiber</h3><p>the rendering task starts at the root Fiber node and enters the coordination process. The root node represents the portal of the entire application.</p>
+<h3 id="2-Depth-first-traversal-of-the-Fiber-tree"><a href="#2-Depth-first-traversal-of-the-Fiber-tree" class="headerlink" title="2. Depth-first traversal of the Fiber tree."></a>2. Depth-first traversal of the Fiber tree.</h3><p>React uses a depth-first traversal strategy<code>beginWork </code>and <code>completeWork </code>two processes, one by one Fiber node to complete the coordination.</p>
+<ul>
+<li><strong>beginWork</strong> : Computes the new state and child nodes of the current node, and builds or reuses the child Fiber.</li>
+<li><strong>completeWork</strong> : Complete the coordination of the current node and prepare the side effect chain.</li>
+</ul>
+<h3 id="3-Unit-task-split"><a href="#3-Unit-task-split" class="headerlink" title="3. Unit task split"></a>3. Unit task split</h3><p>each Fiber node represents a unit task. The render phase splits the task into multiple small units and executes them sequentially. After a unit task is completed, scheduling can be suspended to achieve time slicing.</p>
+<h3 id="4-Diff-calculation"><a href="#4-Diff-calculation" class="headerlink" title="4. Diff calculation"></a>4. Diff calculation</h3><p>compare the types and attributes of the old and new Fiber nodes, and mark the parts that need to be updated. Different types of nodes are replaced directly, and nodes of the same type update attributes and recursively Diff child nodes.</p>
+<h3 id="5-Side-effect-chain-list-construction"><a href="#5-Side-effect-chain-list-construction" class="headerlink" title="5. Side-effect chain list construction."></a>5. Side-effect chain list construction.</h3><p>During the coordination process, side effects, such as insert, delete, and update, are collected to form an Effect List for batch execution in the subsequent submission phase.</p>
+<hr>
+<h2 id="render-Phase-Schematic-Code"><a href="#render-Phase-Schematic-Code" class="headerlink" title="render Phase Schematic Code"></a>render Phase Schematic Code</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">function workLoop(deadline) &#123;</span><br><span class="line">  while (nextUnitOfWork &amp;&amp; deadline.timeRemaining() &gt; 1) &#123;</span><br><span class="line">    nextUnitOfWork = performUnitOfWork(nextUnitOfWork);</span><br><span class="line">    if (shouldYield()) break; // 可中断调度</span><br><span class="line">  &#125;</span><br><span class="line">  if (!nextUnitOfWork) &#123;</span><br><span class="line">    commitRoot(); // render 阶段结束，进入提交阶段</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    requestIdleCallback(workLoop);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function performUnitOfWork(fiber) &#123;</span><br><span class="line">  beginWork(fiber);</span><br><span class="line">  if (fiber.child) return fiber.child;</span><br><span class="line">  let node = fiber;</span><br><span class="line">  while (node) &#123;</span><br><span class="line">    completeWork(node);</span><br><span class="line">    if (node.sibling) return node.sibling;</span><br><span class="line">    node = node.return;</span><br><span class="line">  &#125;</span><br><span class="line">  return null;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>this code shows how the render phase splits cell tasks and supports interruptible execution.</p>
+<hr>
+<h2 id="Status-updates-in-the-render-phase"><a href="#Status-updates-in-the-render-phase" class="headerlink" title="Status updates in the render phase"></a>Status updates in the render phase</h2><p>the render phase is also responsible for handling status updates (e. G. <code>setState</code>Call), merge the update queue, calculate the latest state, and reflect it on the new Fiber node.</p>
+<hr>
+<h2 id="Difference-between-render-phase-and-commit-phase"><a href="#Difference-between-render-phase-and-commit-phase" class="headerlink" title="Difference between render phase and commit phase"></a>Difference between render phase and commit phase</h2><p>the render phase is the core of the coordination phase, which is responsible for preparation and supports suspension and recovery. The commit phase synchronously executes changes and updates the real DOM and life cycle.</p>
+<hr>
+<h2 id="Interview-answer-example"><a href="#Interview-answer-example" class="headerlink" title="Interview answer example"></a>Interview answer example</h2><p><strong>question: Please briefly describe the execution process of The React render phase.</strong></p>
+<p>Example answer:</p>
+<p>the render phase starts from the root Fiber node and adopts a depth-first traversal strategy to execute <code>beginWork </code>and <code>completeWork </code>to build a new Fiber tree. It compares the old and new Fiber, calculates the difference, and generates a list of side effects of the change.</p>
+<p>This phase splits the rendering task into multiple units to support interruptible execution and avoid long-term blocking of the main thread. The status update is merged into the Fiber, and the updated data is finally ready for the commit phase.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>the React render phase is a key part of the rendering process. It is responsible for building a new Fiber tree through depth-first traversal, completing Diff calculations, and collecting side effects. It supports task splitting and interruptible execution, ensuring that the update process is both efficient and responsive.</p>
+<p>In-depth understanding of the execution mechanism of the render phase helps developers to optimize performance and debug complex rendering issues, improving the overall quality of React applications.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

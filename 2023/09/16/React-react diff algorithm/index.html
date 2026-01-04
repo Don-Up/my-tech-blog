@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="react diff algorithmForewordreact’s efficient update performance is inseparable from its core algorithm-Diff algorithm. The Diff algorithm is responsi"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="react diff algorithm"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="react diff algorithmForewordreact’s efficient update performance is inseparable from its core algorithm-Diff algorithm. The Diff algorithm is responsi"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>react diff algorithm - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>react diff algorithm</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-09-16
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="react-diff-algorithm"><a href="#react-diff-algorithm" class="headerlink" title="react diff algorithm"></a>react diff algorithm</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>react’s efficient update performance is inseparable from its core algorithm-Diff algorithm. The Diff algorithm is responsible for comparing the differences between the old and new Virtual DOM trees, calculating the smallest set of changes, and finally applying these changes to the real DOM in batches to achieve high-performance UI updates.</p>
+<p>This article will analyze in detail the principles, core strategies, optimization points, and implementation details of the React Diff algorithm to help readers deeply understand how React efficiently implements differentiated updates of Virtual DOM, thereby improving application performance.</p>
+<hr>
+<h2 id="Basic-principle-of-React-Diff-algorithm"><a href="#Basic-principle-of-React-Diff-algorithm" class="headerlink" title="Basic principle of React Diff algorithm"></a>Basic principle of React Diff algorithm</h2><p>during the update process, React needs to compare the new Virtual DOM tree with the old Virtual DOM tree to calculate the difference. This process is called Diff.</p>
+<p>However, a direct comparison of all the nodes of the two trees, the time complexity is O(n), which is extremely costly. React uses a series of assumptions and optimization strategies to control the Diff process within the time complexity of O(n).</p>
+<hr>
+<h2 id="The-core-assumptions-and-optimization-strategies-of-React-Diff"><a href="#The-core-assumptions-and-optimization-strategies-of-React-Diff" class="headerlink" title="The core assumptions and optimization strategies of React Diff."></a>The core assumptions and optimization strategies of React Diff.</h2><h3 id="1-Same-layer-comparison"><a href="#1-Same-layer-comparison" class="headerlink" title="1. Same layer comparison"></a>1. Same layer comparison</h3><p>React only compares nodes at the same level, not across levels. If the child nodes are different, Diff is recursively called on the child nodes.</p>
+<h3 id="2-Different-types-of-nodes-will-be-replaced-as-a-whole"><a href="#2-Different-types-of-nodes-will-be-replaced-as-a-whole" class="headerlink" title="2. Different types of nodes will be replaced as a whole."></a>2. Different types of nodes will be replaced as a whole.</h3><p>If the type of two nodes ( <code>type </code>) Different, React will think that the entire node tree needs to be replaced instead of trying to compare in depth.</p>
+<h3 id="3-Nodes-of-the-same-type-perform-attribute-updates-and-child-nodes-Diff"><a href="#3-Nodes-of-the-same-type-perform-attribute-updates-and-child-nodes-Diff" class="headerlink" title="3. Nodes of the same type perform attribute updates and child nodes Diff."></a>3. Nodes of the same type perform attribute updates and child nodes Diff.</h3><p>For nodes of the same type, React reuses the node, updates its properties, and Diff the child nodes further.</p>
+<h3 id="4-Use-key-to-optimize-the-list-Diff"><a href="#4-Use-key-to-optimize-the-list-Diff" class="headerlink" title="4. Use key to optimize the list Diff."></a>4. Use key to optimize the list Diff.</h3><p>When the child node is a list, React uses <code>key </code>to identify unique nodes for efficient insertion, deletion, and movement identification.</p>
+<hr>
+<h2 id="Detailed-explanation-of-Diff-process"><a href="#Detailed-explanation-of-Diff-process" class="headerlink" title="Detailed explanation of Diff process"></a>Detailed explanation of Diff process</h2><p>the main process of React Diff can be split into the following steps:</p>
+<ul>
+<li><p><strong>determine the node type</strong> compares whether the old and new node types are the same.</p>
+</li>
+<li><p><strong>Update Properties</strong> : Compares and updates differential properties for nodes of the same type.</p>
+</li>
+<li><p><strong>Recursively Diff child nodes</strong> :</p>
+</li>
+<li><p>if it is a normal node, compare the child nodes in the corresponding position in order.</p>
+</li>
+<li><p>For the list, combined with the key to do complex move, insert, delete processing.</p>
+</li>
+<li><p><strong>Remove redundant nodes</strong> deletes nodes in the old tree that do not exist in the new tree.</p>
+</li>
+</ul>
+<hr>
+<h2 id="List-Diff-optimization-details"><a href="#List-Diff-optimization-details" class="headerlink" title="List Diff optimization details"></a>List Diff optimization details</h2><p>for lists without keys, React compares them one by one in index order, but this results in a large number of delete and reinsert operations during movement, resulting in poor performance.</p>
+<p>If there is a list of keys, React will first build a mapping table of keys to indexes of new and old nodes, and quickly locate nodes through hash lookup to achieve:</p>
+<ul>
+<li>Reuse nodes (reduced creation and destruction)</li>
+<li>efficient mobile nodes (reduce DOM operations by computing the longest incremental subsequence)</li>
+</ul>
+<p>schematic form:</p>
+<table>
+<thead>
+<tr>
+<th>operation Type</th>
+<th>description</th>
+<th>performance impact</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>insert</td>
+<td>the new node appears in the old list where it does not exist</td>
+<td>new Real DOM</td>
+</tr>
+<tr>
+<td>delete</td>
+<td>the old node does not exist in the new list</td>
+<td>delete real DOM</td>
+</tr>
+<tr>
+<td>move</td>
+<td>node Order Change</td>
+<td>adjust the real DOM position</td>
+</tr>
+<tr>
+<td>update</td>
+<td>node attribute or content changes</td>
+<td>modify real DOM properties</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="Diff-Algorithm-Pseudo-Code-Schematic"><a href="#Diff-Algorithm-Pseudo-Code-Schematic" class="headerlink" title="Diff Algorithm Pseudo Code Schematic"></a>Diff Algorithm Pseudo Code Schematic</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">function diff(oldNode, newNode) &#123;</span><br><span class="line">  if (!oldNode) &#123;</span><br><span class="line">    // 创建新节点</span><br><span class="line">    createElement(newNode);</span><br><span class="line">  &#125; else if (!newNode) &#123;</span><br><span class="line">    // 删除旧节点</span><br><span class="line">    removeElement(oldNode);</span><br><span class="line">  &#125; else if (oldNode.type !== newNode.type) &#123;</span><br><span class="line">    // 类型不同，替换</span><br><span class="line">    replaceElement(oldNode, newNode);</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    // 类型相同，更新属性</span><br><span class="line">    updateAttributes(oldNode, newNode);</span><br><span class="line">    // 递归对子节点 Diff</span><br><span class="line">    diffChildren(oldNode.children, newNode.children);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function diffChildren(oldChildren, newChildren) &#123;</span><br><span class="line">  // 简化版：按索引递归 Diff</span><br><span class="line">  const maxLen = Math.max(oldChildren.length, newChildren.length);</span><br><span class="line">  for (let i = 0; i &lt; maxLen; i++) &#123;</span><br><span class="line">    diff(oldChildren[i], newChildren[i]);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Diff-optimization-in-React-Fiber"><a href="#Diff-optimization-in-React-Fiber" class="headerlink" title="Diff optimization in React Fiber"></a>Diff optimization in React Fiber</h2><p>the Fiber architecture enables a more efficient and schedulable Diff by splitting the coordination process into incremental interruptible tasks.</p>
+<p>In addition, Fiber is more complicated for Diff of the list, combining key and priority, supporting interrupt and recovery, and avoiding blocking the main thread for a long time.</p>
+<hr>
+<h2 id="Interview-answer-example"><a href="#Interview-answer-example" class="headerlink" title="Interview answer example"></a>Interview answer example</h2><p><strong>question: Please briefly describe the principle and optimization strategy of The React Diff algorithm.</strong></p>
+<p>Example answer:</p>
+<p>The React Diff algorithm calculates the minimum difference between the old and new Virtual DOM trees to update the real DOM. In order to reduce the time complexity, React makes three core assumptions: only compare nodes of the same layer, replace nodes of different types as a whole, update attributes of nodes of the same type and recursively Diff child nodes.</p>
+<p>For lists, React uses keys to uniquely identify nodes, optimize insertion, deletion, and movement, and improve performance. The Fiber architecture further splits the Diff into interruptible tasks, improving scheduling flexibility and responsiveness.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>React Diff algorithm is the key to achieve high-performance UI update, combined with reasonable assumptions and strategies to control the complexity within an acceptable range. By using key to optimize the scheduling capabilities of list Diff and Fiber, React can achieve smooth and efficient interface rendering.</p>
+<p>Understanding The React Diff algorithm not only helps optimize component design, but also helps developers better debug and improve application performance.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

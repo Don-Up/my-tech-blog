@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Why is a double buffering mechanism neededForewordwhen We deeply understand React’s update mechanism, we will come into contact with a key concept: Do"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Why is a double buffering mechanism needed"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Why is a double buffering mechanism neededForewordwhen We deeply understand React’s update mechanism, we will come into contact with a key concept: Do"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Why is a double buffering mechanism needed - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Why is a double buffering mechanism needed</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-01-02
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Why-is-a-double-buffering-mechanism-needed"><a href="#Why-is-a-double-buffering-mechanism-needed" class="headerlink" title="Why is a double buffering mechanism needed"></a>Why is a double buffering mechanism needed</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>when We deeply understand React’s update mechanism, we will come into contact with a key concept: <strong>Double Buffering</strong> . This mechanism is one of the cores of the React Fiber Architecture. The purpose is to improve the update performance and user experience, and to ensure that the interface update process is smoother and uninterrupted.</p>
+<p>Double buffering mechanism exists in many fields, such as graphics rendering, video playback, game development, etc. React uses this idea to solve the problem of “long task blocking UI” in single-thread rendering.</p>
+<p>This article will start from the Fiber architecture, in-depth analysis of the realization of the double buffer mechanism in React principle, purpose and practical significance, to help you establish a complete understanding of the mechanism.</p>
+<hr>
+<h2 id="What-is-double-buffering-mechanism"><a href="#What-is-double-buffering-mechanism" class="headerlink" title="What is double buffering mechanism?"></a>What is double buffering mechanism?</h2><p>In graphics, double buffering means that there are two buffers: The front buffer is used for display, and the back buffer is used for drawing. When the drawing is complete, the two swap roles. In this way, the phenomenon such as picture tearing and flickering can be avoided during the drawing process.</p>
+<p>The idea of introducing double buffering in React is in its <strong>Fiber Architecture</strong> realized in. Each update creates a new Fiber tree as a <strong>work cell tree</strong> (Work-In-Progress Tree), which is two independent object trees from the currently rendered Fiber Tree (that is, displayed on the screen). Only after the update is completed and committed will the new Fiber tree replace the old one as the “current tree”.</p>
+<p>In other words:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">当前显示状态 —— 当前 Fiber 树（current）</span><br><span class="line">正在构建的新状态 —— 工作中的 Fiber 树（workInProgress）</span><br></pre></td></tr></table></figure>
+
+<p>The double buffering mechanism is to maintain the switching relationship between the two Fiber trees.</p>
+<hr>
+<h2 id="Double-buffering-role-In-React-update-process"><a href="#Double-buffering-role-In-React-update-process" class="headerlink" title="Double buffering role In React update process"></a>Double buffering role In React update process</h2><p>the React update process can be simplified into the following phases:</p>
+<ol>
+<li><strong>Schedule Phase (Scheduler)</strong><br>prioritize this update.</li>
+<li><strong>Rendering phase (Render &#x2F; Reconciliation)</strong><br>calculate the changes to the new state by building a workInProgress tree. This process can be interrupted.</li>
+<li><strong>Commit phase (Commit)</strong><br>once the workInProgress tree is built and confirmed to be correct, replace the current tree. This process cannot be interrupted.</li>
+</ol>
+<p>During the rendering phase, React applies the changes to the workInProgress tree, and the current Fiber tree is not affected in any way. The DOM is updated uniformly only during the commit phase.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 简化表示</span><br><span class="line">let current = fiberRoot.current</span><br><span class="line">let workInProgress = createWorkInProgress(current)</span><br><span class="line"></span><br><span class="line">// 构建中...</span><br><span class="line">// workInProgress 是独立构建的副本</span><br></pre></td></tr></table></figure>
+
+<p>Eventually:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fiberRoot.current = workInProgress</span><br></pre></td></tr></table></figure>
+
+<p>complete a replacement of the Fiber tree, which is the core action of the double buffering mechanism.</p>
+<hr>
+<h2 id="Why-does-React-need-a-double-buffering-mechanism"><a href="#Why-does-React-need-a-double-buffering-mechanism" class="headerlink" title="Why does React need a double buffering mechanism?"></a>Why does React need a double buffering mechanism?</h2><h3 id="Ensure-rendering-can-be-interrupted-resumed"><a href="#Ensure-rendering-can-be-interrupted-resumed" class="headerlink" title="Ensure rendering can be interrupted, resumed"></a>Ensure rendering can be interrupted, resumed</h3><p>without double buffering, if the current Fiber tree is directly operated during React update, once the task is interrupted, the component state may be in a “semi-Updated” intermediate state, resulting in inconsistent states and page exceptions.</p>
+<p>After double buffering is used, workInProgress can be discarded even if the intermediate task is interrupted, the current remains stable, and the UI is not affected.</p>
+<h3 id="Support-priority-scheduling-and-update-redo"><a href="#Support-priority-scheduling-and-update-redo" class="headerlink" title="Support priority scheduling and update redo"></a>Support priority scheduling and update redo</h3><p>React can restart the construction of the update tree after the interruption. As long as the current is retained, a new workInProgress can be copied again. Double buffering provides the basis for a retry mechanism.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">中断任务 → 丢弃 workInProgress → 再次生成 → 继续更新</span><br></pre></td></tr></table></figure>
+
+<p>This is especially important in scenarios where frequent user interaction results in intensive updates.</p>
+<h3 id="Improve-user-experience-and-reduce-Caton"><a href="#Improve-user-experience-and-reduce-Caton" class="headerlink" title="Improve user experience and reduce Caton"></a>Improve user experience and reduce Caton</h3><p>since the rendering phase can be split into small tasks (time slices), <code>requestIdleCallback </code>or The Scheduler controls the build timing, React can avoid long tasks blocking the main thread. The independent existence of workInProgress makes updates more controllable and smooth.</p>
+<h3 id="Reduced-risk-of-side-effect-transmission"><a href="#Reduced-risk-of-side-effect-transmission" class="headerlink" title="Reduced risk of side effect transmission"></a>Reduced risk of side effect transmission</h3><p>side effects such as useEffect, lifecycle functions, etc. are triggered uniformly during the commit phase. If there is no double buffering mechanism, side effects may be triggered early or at inconsistent timing. With the workInProgress tree, React can handle side effects at a safe time (after submission).</p>
+<hr>
+<h2 id="Code-assisted-understanding"><a href="#Code-assisted-understanding" class="headerlink" title="Code-assisted understanding"></a>Code-assisted understanding</h2><p>here is a simple process simulation:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">function performUnitOfWork(fiber) &#123;</span><br><span class="line">  // 更新当前 fiber 的子节点</span><br><span class="line">  beginWork(fiber)</span><br><span class="line"></span><br><span class="line">  if (fiber.child) return fiber.child</span><br><span class="line"></span><br><span class="line">  while (fiber) &#123;</span><br><span class="line">    completeUnitOfWork(fiber)</span><br><span class="line">    if (fiber.sibling) return fiber.sibling</span><br><span class="line">    fiber = fiber.return</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function workLoop() &#123;</span><br><span class="line">  let nextUnitOfWork = fiberRoot.workInProgress</span><br><span class="line"></span><br><span class="line">  while (nextUnitOfWork) &#123;</span><br><span class="line">    nextUnitOfWork = performUnitOfWork(nextUnitOfWork)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  // 构建完毕后提交</span><br><span class="line">  commitRoot()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>attention, <code>fiberRoot.workInProgress </code>with <code>fiberRoot.current</code>Is separated, which is the two trees in the double buffer mechanism.</p>
+<hr>
+<h2 id="Interview-answer-why-does-React-need-double-buffering-mechanism"><a href="#Interview-answer-why-does-React-need-double-buffering-mechanism" class="headerlink" title="Interview answer: why does React need double buffering mechanism?"></a>Interview answer: why does React need double buffering mechanism?</h2><p>Answer:</p>
+<p>the essence of the double buffering mechanism introduced by React is to avoid directly modifying the currently displayed state when building a new UI state. For each update, React creates a workInProgress tree based on the current Fiber tree. All calculations and updates are performed on this tree. The current tree is replaced only after the build is completed.</p>
+<p>The benefits of this are:</p>
+<ul>
+<li>avoid inconsistent state caused by Midway update</li>
+<li>support update interrupt and redo, improve interaction fluency</li>
+<li>provides the basis for scheduling mechanisms to implement priority updates</li>
+<li>ensure side effects are triggered at the right time</li>
+</ul>
+<p>this mechanism is the core of the Fiber architecture and one of the foundations for implementing concurrency.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>react’s double buffering mechanism is one of the key design ideas in the Fiber architecture. By maintaining two Fiber trees (current and workInProgress),React implements:</p>
+<ul>
+<li>interruptible Rendering Process</li>
+<li>secure status updates</li>
+<li>smooth UI response</li>
+<li>supports time slicing and task priority scheduling</li>
+</ul>
+<p>With the support of the double buffering mechanism, React can simulate concurrent behavior in a single-threaded environment, thus improving application performance and user experience. Understanding this mechanism helps you to have a deeper understanding of the underlying operating principles of React.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
