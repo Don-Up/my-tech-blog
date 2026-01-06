@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="How does react handle component updates and renderingForewordin modern front-end development, React is popular for its declarative, componentized prog"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How does react handle component updates and rendering"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="How does react handle component updates and renderingForewordin modern front-end development, React is popular for its declarative, componentized prog"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How does react handle component updates and rendering - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How does react handle component updates and rendering</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-01-22
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="How-does-react-handle-component-updates-and-rendering"><a href="#How-does-react-handle-component-updates-and-rendering" class="headerlink" title="How does react handle component updates and rendering"></a>How does react handle component updates and rendering</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in modern front-end development, React is popular for its declarative, componentized programming model. However, to truly understand the performance optimization mechanism and Operation Principle of React, one of the core issues that cannot be avoided is: <strong>when the state or props of the component changes, how does React update and re-render the component?</strong></p>
+<p>This problem not only affects the basic operation mechanism of React, but also affects how we write more efficient and maintainable code. This article will focus on the whole process of component update, from the trigger of data changes, the scheduling of the Fiber architecture, and the final change of DOM, to comprehensively analyze the update and rendering process of React.</p>
+<hr>
+<h2 id="First-the-update-trigger-the-state-or-attribute-changes"><a href="#First-the-update-trigger-the-state-or-attribute-changes" class="headerlink" title="First, the update trigger: the state or attribute changes."></a>First, the update trigger: the state or attribute changes.</h2><p>React updates are usually triggered by the following conditions:</p>
+<ul>
+<li><code>this.setState() </code>call (Class Component)</li>
+<li><code>useState() </code>the setter is called (function component)</li>
+<li>changes to the props passed in by the parent component</li>
+<li>change in context value</li>
+<li>force Update ( <code>forceUpdate() </code>)</li>
+</ul>
+<p>no matter which entry it is, it essentially notifies React that “the current component needs to be updated”.</p>
+<p>Take the function component as an example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Counter</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [count, setCount] = <span class="title function_">useState</span>(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> setCount(count + 1)&#125;&gt;&#123;count&#125;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>when the button is clicked, <code>setCount</code>Triggered, React starts scheduling the component update process.</p>
+<hr>
+<h2 id="Second-the-scheduling-phase-build-a-new-Fiber-tree"><a href="#Second-the-scheduling-phase-build-a-new-Fiber-tree" class="headerlink" title="Second, the scheduling phase: build a new Fiber tree."></a>Second, the scheduling phase: build a new Fiber tree.</h2><p>React 16 introduces the Fiber architecture, which transforms the original synchronous recursive update process into an interruptible and recoverable linked list update architecture. This phase is called <strong>render phase</strong> , is “virtual” and will not directly operate DOM.</p>
+<p>The whole process is as follows:</p>
+<ol>
+<li>mark the Fiber node to be updated (such as the current component)</li>
+<li>recursively traverse and build a new Fiber tree (beginWork stage)</li>
+<li>compare the difference between the old and new Fiber trees (diff algorithm)</li>
+<li>record the actions that need to be changed (called the effect list)</li>
+</ol>
+<p>this phase supports <strong>priority scheduling and task sharding</strong> , can be interrupted (such as responding to user interaction) to avoid page stuck.</p>
+<p>Schematic diagram:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[数据更新] → [Fiber 树构建] → [diff 比较] → [effectList 构建]</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="third-the-submission-phase-DOM-update"><a href="#third-the-submission-phase-DOM-update" class="headerlink" title="third, the submission phase: DOM update"></a>third, the submission phase: DOM update</h2><p>when the render phase is complete, React enters the commit phase, which is an uninterruptible phase that performs the following operations:</p>
+<ol>
+<li>perform DOM update (insert, delete, modify, etc.)</li>
+<li>call life cycle or side effects (such <code>useEffect </code>,<code>componentDidUpdate </code>)</li>
+<li>update pointer and state in Fiber linked list</li>
+</ol>
+<p>the entire process is executed synchronously, ensuring atomicity and consistency of updates.</p>
+<p>This means that in the same event loop, the update of a component contains:</p>
+<ul>
+<li>build and compare new virtual structures</li>
+<li>application update to real DOM</li>
+<li>calling side-effect Hook and Lifecycle methods</li>
+</ul>
+<hr>
+<h2 id="four-React-how-to-optimize-the-update-process"><a href="#four-React-how-to-optimize-the-update-process" class="headerlink" title="four, React how to optimize the update process"></a>four, React how to optimize the update process</h2><p>React improves update efficiency through the following mechanisms:</p>
+<h3 id="1-Virtual-DOM-Diff-algorithm"><a href="#1-Virtual-DOM-Diff-algorithm" class="headerlink" title="1. Virtual DOM + Diff algorithm"></a>1. Virtual DOM + Diff algorithm</h3><p>React does not directly modify the real DOM, but first compares the changed area by building a virtual DOM, and then <strong>minimize DOM operations</strong> .</p>
+<p>React’s diff algorithm has the following assumptions to improve efficiency:</p>
+<ul>
+<li>only nodes of the same level are compared.</li>
+<li>Only nodes of the same type compare attributes</li>
+<li>by <code>key </code>to optimize node reuse and rearrangement</li>
+</ul>
+<h3 id="2-Fiber-architecture-supports-Task-interruption-and-priority"><a href="#2-Fiber-architecture-supports-Task-interruption-and-priority" class="headerlink" title="2. Fiber architecture supports Task interruption and priority"></a>2. Fiber architecture supports Task interruption and priority</h3><p>React can assign different priorities according to the urgency of the task, and realize the rendering scheduling mechanism of response priority.</p>
+<p>For example:</p>
+<ul>
+<li>user input → high priority → Fast Response</li>
+<li>background data load → low priority → idle processing</li>
+</ul>
+<p>this keeps the page from blocking user interaction with a large number of low-priority tasks.</p>
+<h3 id="3-Batch-Update"><a href="#3-Batch-Update" class="headerlink" title="3. Batch Update"></a>3. Batch Update</h3><p>React automatically merges multiple setstates to reduce the performance overhead caused by multiple renders.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">setCount</span>(<span class="function"><span class="params">prev</span> =&gt;</span> prev + <span class="number">1</span>)</span><br><span class="line"><span class="title function_">setVisible</span>(<span class="literal">true</span>)</span><br></pre></td></tr></table></figure>
+
+<p>The above two updates will be processed together in one scheduling cycle instead of triggering two re-rendering.</p>
+<hr>
+<h2 id="Fifth-the-update-difference-between-class-components-and-function-components"><a href="#Fifth-the-update-difference-between-class-components-and-function-components" class="headerlink" title="Fifth, the update difference between class components and function components."></a>Fifth, the update difference between class components and function components.</h2><p>Both essentially follow the same Fiber update mechanism, but there are differences in triggering updates and side-effect calls:</p>
+<table>
+<thead>
+<tr>
+<th>project</th>
+<th>class Component</th>
+<th>function Component</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>status Update</td>
+<td><code>this.setState </code></td>
+<td><code>useState </code></td>
+</tr>
+<tr>
+<td>life Cycle</td>
+<td>clear Phasing</td>
+<td>uniform adoption <code>useEffect </code>&#x2F; <code>useLayoutEffect </code></td>
+</tr>
+<tr>
+<td>side effect control</td>
+<td>difficult to split, easy to mix</td>
+<td>Hook more modular, side effects separation</td>
+</tr>
+<tr>
+<td>Rendering Control</td>
+<td><code>shouldComponentUpdate </code>&#x2F; <code>PureComponent </code></td>
+<td><code>React.memo </code>, <code>useMemo </code>, <code>useCallback </code></td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="interview-answer-How-does-React-handle-component-updates-and-rendering"><a href="#interview-answer-How-does-React-handle-component-updates-and-rendering" class="headerlink" title="interview answer: How does React handle component updates and rendering?"></a>interview answer: How does React handle component updates and rendering?</h2><p>Answer:</p>
+<p>React is used. <strong>Data-driven + Fiber architecture</strong> the update mechanism. When the state or props of a component changes, the update process is triggered:</p>
+<ol>
+<li>React marks the current component as “dirty” and begins the render phase</li>
+<li>the render phase builds a new Fiber tree, performs diff comparisons, generates an effect list, and records all required change operations.</li>
+<li>Enter the commit phase, apply the change to the real DOM, and execute the side effect function</li>
+</ol>
+<p>the entire process is divided into an interruptible render phase and an uninterruptible commit phase to ensure fluency and consistency.</p>
+<p>React also improves performance and reduces unnecessary rendering operations through Virtual DOM, key matching, priority scheduling, batch update, and other means.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>The process of React handling component updates and rendering is essentially:</p>
+<ul>
+<li>data update triggers re-rendering</li>
+<li>the render phase builds a new virtual structure (Fiber tree)</li>
+<li>diff compares the old and new trees and records the parts that need to be updated</li>
+<li>the commit phase performs DOM updates synchronously with side effects.</li>
+</ul>
+<p>Understanding this mechanism not only helps you write more efficient components, but also provides a deeper understanding of important practices such as Hook execution timing, performance optimization strategies, and component packaging methods. React’s high performance and flexibility are due to its fine update scheduling and rendering control capabilities.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

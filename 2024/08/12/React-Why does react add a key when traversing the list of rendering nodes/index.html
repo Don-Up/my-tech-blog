@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Why does react add a key when traversing the list of rendering nodesForewordwhen using React to build a front-end interface, developers often need to "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Why does react add a key when traversing the list of rendering nodes"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Why does react add a key when traversing the list of rendering nodesForewordwhen using React to build a front-end interface, developers often need to "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Why does react add a key when traversing the list of rendering nodes - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Why does react add a key when traversing the list of rendering nodes</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-08-12
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Why-does-react-add-a-key-when-traversing-the-list-of-rendering-nodes"><a href="#Why-does-react-add-a-key-when-traversing-the-list-of-rendering-nodes" class="headerlink" title="Why does react add a key when traversing the list of rendering nodes"></a>Why does react add a key when traversing the list of rendering nodes</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>when using React to build a front-end interface, developers often need to batch render a list of components or elements by traversing the data. At this point, React requires the developer to provide a unique for each list item. <code>key </code>property. If omitted <code>key </code>or make improper choices, such as using array subscripts, React will prompt warnings and may cause rendering efficiency or status errors.</p>
+<p>Many beginners may wonder why React must be added. <code>key </code>what? What is the role of this property? This article will explain in depth <code>key </code>the essential meaning, the mechanism behind it, the correct way to use it and common misunderstandings.</p>
+<hr>
+<h2 id="key-the-essential-role-of-unique-identification-and-performance-optimization"><a href="#key-the-essential-role-of-unique-identification-and-performance-optimization" class="headerlink" title="key the essential role of: unique identification and performance optimization"></a><code>key </code>the essential role of: unique identification and performance optimization</h2><p>React uses the virtual DOM + diff algorithm to efficiently update the view. When the state changes, React determines which nodes need to be updated, reused, inserted, or deleted by comparing the differences between the new virtual DOM tree and the old virtual DOM tree.</p>
+<p>When comparing two node lists, if there is no <code>key </code>, React will use a <strong>sequence comparison</strong> the strategy of comparing each node by location from beginning to end. This strategy can easily lead to insertion, deletion, or reordering of list data:</p>
+<ul>
+<li>Nodes are not reused, resulting in unnecessary unloading and mounting operations</li>
+<li>too many DOM operations, reducing performance</li>
+<li>state dislocation, resulting in abnormal UI behavior</li>
+</ul>
+<p>in order to more accurately determine which nodes are “the same”, React requires developers to provide <code>key </code>as the unique identity of each node. <code>key </code>the existence of can significantly improve the accuracy of diff comparisons and avoid meaningless re-rendering or state confusion.</p>
+<hr>
+<h2 id="For-example-no-key-vs-correct-use-of-key"><a href="#For-example-no-key-vs-correct-use-of-key" class="headerlink" title="For example: no key vs correct use of key"></a>For example: no key vs correct use of key</h2><p>the following is a list of common render scenes.</p>
+<p>Do not use key (or use index):</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;items.<span class="title function_">map</span>(<span class="function">(<span class="params">item, index</span>) =&gt;</span> (</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">key</span>=<span class="string">&#123;index&#125;</span> <span class="attr">defaultValue</span>=<span class="string">&#123;item.name&#125;</span> /&gt;</span></span></span><br><span class="line">))&#125;</span><br></pre></td></tr></table></figure>
+
+<p>if the data sequence changes at this time, for example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">setItems(prev =&gt; &#123;</span><br><span class="line">  const newItems = [...prev]</span><br><span class="line">  newItems.splice(0, 0, &#123; name: &#x27;New&#x27; &#125;) // 向前插入</span><br><span class="line">  return newItems</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>because key uses index,React will “move backward” the old data after inserting the new data. The binding relationship between index and the previous component is disordered, resulting in the original value of the input box being reset and the content entered by the user being lost.</p>
+<p>If you use the unique id as the key:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;items.<span class="title function_">map</span>(<span class="function"><span class="params">item</span> =&gt;</span> (</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">key</span>=<span class="string">&#123;item.id&#125;</span> <span class="attr">defaultValue</span>=<span class="string">&#123;item.name&#125;</span> /&gt;</span></span></span><br><span class="line">))&#125;</span><br></pre></td></tr></table></figure>
+
+<p>even if the order changes, React can still pass <code>id </code>correctly match the corresponding node of each input, keeping the state not lost.</p>
+<hr>
+<h2 id="key-it-is-the-core-means-of-identifying-nodes-within-React"><a href="#key-it-is-the-core-means-of-identifying-nodes-within-React" class="headerlink" title="key it is the core means of identifying nodes within React."></a><code>key </code>it is the core means of identifying nodes within React.</h2><p>React’s diff process is essentially a one-to-one match between the nodes in the old Fiber tree and the new Fiber tree, and the matching strategy mainly depends on three points:</p>
+<ol>
+<li>is the node type consistent (for example, div and span are different types)</li>
+<li><code>key </code>whether the same</li>
+<li>if the above two are the same, they are considered “the same node” and can be reused and updated</li>
+</ol>
+<p>therefore, <code>key </code>directly determines the “identity” of the node “. If <code>key </code>React unmounts the old nodes and remounts the new nodes, even if their contents are exactly the same.</p>
+<p>Let’s look at a simple schematic table:</p>
+<table>
+<thead>
+<tr>
+<th>key</th>
+<th>node Type</th>
+<th>React processing method</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>same</td>
+<td>same</td>
+<td>node reuse, attribute update</td>
+</tr>
+<tr>
+<td>same</td>
+<td>different</td>
+<td>unmount the old node and mount the new node</td>
+</tr>
+<tr>
+<td>different</td>
+<td>arbitrary</td>
+<td>unmount the old node and mount the new node</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="common-Mistake-Using-Array-index-as-key"><a href="#common-Mistake-Using-Array-index-as-key" class="headerlink" title="common Mistake: Using Array index as key"></a>common Mistake: Using Array index as key</h2><p>although using index as the key will not report an error, it will cause problems in the following scenarios:</p>
+<ul>
+<li>The order of the list data changes (such as sorting, inserting, deleting)</li>
+<li>list items contain stateful components (such as input boxes, animations, etc.)</li>
+</ul>
+<p>this is because index is the identity of the location rather than the real identity of the node. Once the order changes, React’s diff algorithm will misjudge, resulting in reuse errors.</p>
+<hr>
+<h2 id="Interview-answer-Why-does-React-need-to-add-key-to-traverse-nodes"><a href="#Interview-answer-Why-does-React-need-to-add-key-to-traverse-nodes" class="headerlink" title="Interview answer: Why does React need to add key to traverse nodes?"></a>Interview answer: Why does React need to add key to traverse nodes?</h2><p>Answer:</p>
+<p>React needs to be added when rendering the node list. <code>key </code>is <strong>improving the efficiency and correctness of the diff algorithm</strong> . When React compares the old and new Virtual DOM, it will pass <code>key </code>determine which nodes can be reused and which need to be inserted or deleted.</p>
+<p>If not added <code>key </code>, or use unstable keys (such as array subscripts). When the list data changes, inserts or deletes in sequence, React may not be able to correctly identify nodes, resulting in incorrect reuse or destruction of components, resulting in performance problems and UI state disorder.</p>
+<p>The correct approach is to use a unique value (such as id) that can stably represent the identity of the item in the list. <code>key </code>in this way, React can accurately and efficiently handle node changes.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>add unique and stable for list render items in React<code>key </code>it is a fundamental requirement in the development process, but behind it lies a profound impact on the efficiency of the Virtual DOM diff and the consistency of the UI state.</p>
+<p>Reasonable Use <code>key </code>can:</p>
+<ul>
+<li>improve rendering performance and reduce DOM operations</li>
+<li>accurately preserve component state to prevent UI exceptions</li>
+<li>provides a stable node identity for React and supports a more efficient diff policy</li>
+</ul>
+<p>in actual development, avoid the use of index as the key, give priority to the use of business-related unique identifiers, in order to truly take advantage of the React architecture design. Understanding <code>key </code>the principle of helps you write more efficient and robust front-end applications.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

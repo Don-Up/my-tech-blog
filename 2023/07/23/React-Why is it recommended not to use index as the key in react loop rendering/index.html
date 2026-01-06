@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Why is it recommended not to use index as the key in react loop renderingForewordin React, list rendering is a common requirement when building dynami"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Why is it recommended not to use index as the key in react loop rendering"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Why is it recommended not to use index as the key in react loop renderingForewordin React, list rendering is a common requirement when building dynami"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Why is it recommended not to use index as the key in react loop rendering - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Why is it recommended not to use index as the key in react loop rendering</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-07-23
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Why-is-it-recommended-not-to-use-index-as-the-key-in-react-loop-rendering"><a href="#Why-is-it-recommended-not-to-use-index-as-the-key-in-react-loop-rendering" class="headerlink" title="Why is it recommended not to use index as the key in react loop rendering"></a>Why is it recommended not to use index as the key in react loop rendering</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in React, list rendering is a common requirement when building dynamic interfaces. In order to improve rendering efficiency and maintain component state, React requires a unique <code>key </code>property. Although many developers are used to using array indexes <code>index </code>as <code>key </code>however, there are many potential problems with this approach that affect performance and user experience.</p>
+<p>This article will elaborate on why it is not recommend to use <code>index </code>as <code>key </code>, what is the principle behind it, and provides correct practice suggestions and code examples to help readers write more robust and efficient React list components.</p>
+<hr>
+<h2 id="The-Role-of-key-in-React"><a href="#The-Role-of-key-in-React" class="headerlink" title="The Role of key in React"></a>The Role of key in React</h2><p><code>key </code>is the unique identifier used by React to identify elements. It helps React to quickly locate which elements have changed, added, or deleted, thus avoiding unnecessary DOM operations and improving rendering performance.</p>
+<p>When React re-renders the list, according <code>key </code>to match the old and new elements, if <code>key </code>ununique or unreasonable changes may cause React to incorrectly reuse or destroy components, resulting in side effects.</p>
+<hr>
+<h2 id="Why-don’t-you-recommend-use-index-as-a-key"><a href="#Why-don’t-you-recommend-use-index-as-a-key" class="headerlink" title="Why don’t you recommend use index as a key?"></a>Why don’t you recommend use index as a key?</h2><p>Use index <code>key </code>it is easy to cause problems in the following scenarios:</p>
+<h3 id="1-List-order-changes-lead-to-error-reuse"><a href="#1-List-order-changes-lead-to-error-reuse" class="headerlink" title="1. List order changes lead to error reuse."></a>1. List order changes lead to error reuse.</h3><p>When the list order changes (such as insert, delete, sort), the index-based <code>key </code>React mistakenly believes that the component has not changed and incorrectly reuses the component instance.</p>
+<p>For example:</p>
+<p>original list: <code>[A, B, C] </code>, corresponding to key <code>[0, 1, 2] </code></p>
+<p>new list after removing the first element: <code>[B, C] </code>, corresponding to key <code>[0,1] </code></p>
+<p>React will think that the key of the first element of the new list is still 0, and directly reuse the component (I .e. A) with the original key of 0 in the old list, resulting in the actual display of B as A state, resulting in confusion.</p>
+<h3 id="2-Component-State-disorder-and-side-effects"><a href="#2-Component-State-disorder-and-side-effects" class="headerlink" title="2. Component State disorder and side effects"></a>2. Component State disorder and side effects</h3><p>the reuse of errors leads to a mismatch between the internal state of the component and the DOM state, such as form input errors, animation exceptions, and so on.</p>
+<h3 id="3-Performance-waste"><a href="#3-Performance-waste" class="headerlink" title="3. Performance waste"></a>3. Performance waste</h3><p>wrong reuse may cause React to misjudge nodes that need to be updated, resulting in unnecessary redrawing or destruction of reconstruction.</p>
+<hr>
+<h2 id="Suitable-for-scenarios-where-index-is-used-as-key"><a href="#Suitable-for-scenarios-where-index-is-used-as-key" class="headerlink" title="Suitable for scenarios where index is used as key."></a>Suitable for scenarios where index is used as key.</h2><p>Use the index only when the list content is fixed and will not be added or deleted, or when the list is statically displayed. <code>key </code>is acceptable.</p>
+<hr>
+<h2 id="Recommend-practices"><a href="#Recommend-practices" class="headerlink" title="Recommend practices"></a>Recommend practices</h2><ul>
+<li>prioritize the unique identifier of the data, such as the database ID, UUID, and so on. <code>key </code>.</li>
+<li>If there is no unique ID, you can generate a stable unique identifier, such as string concatenation.</li>
+<li>Avoid using indexes in mutable lists <code>key </code>.</li>
+</ul>
+<hr>
+<h2 id="Code-sample-comparison"><a href="#Code-sample-comparison" class="headerlink" title="Code sample comparison"></a>Code sample comparison</h2><p>error demonstration:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;items.map((item, index) =&gt; (</span><br><span class="line">  &lt;ListItem key=&#123;index&#125; data=&#123;item&#125; /&gt;</span><br><span class="line">))&#125;</span><br></pre></td></tr></table></figure>
+
+<p>correct demonstration:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;items.map(item =&gt; (</span><br><span class="line">  &lt;ListItem key=&#123;item.id&#125; data=&#123;item&#125; /&gt;</span><br><span class="line">))&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="additional-Instructions"><a href="#additional-Instructions" class="headerlink" title="additional Instructions"></a>additional Instructions</h2><p>the official React documentation also makes it clear that indexes are used <code>key </code>is a last resort and only if the list is not reordered or filtered.</p>
+<hr>
+<h2 id="Interview-answer-example"><a href="#Interview-answer-example" class="headerlink" title="Interview answer example"></a>Interview answer example</h2><p><strong>question: Why is it not recommend to use index as key in React loop rendering?</strong></p>
+<p>Example answer:</p>
+<p>React dependency <code>key </code>to uniquely identify list elements for efficient computation of differences and reuse components. Use index <code>key</code>If the list order changes, React will incorrectly reuse components, resulting in State confusion and interface exceptions. Index <code>key </code>suitable only for scenarios where the list is static and unchanging. Recommend use unique and stable identifiers in the data <code>key </code>ensure rendering accuracy and performance optimization.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>in The React list rendering, <code>key </code>it is an important means to ensure the stability and performance of components. Use index <code>key </code>this can lead to potential reuse errors and State confusion, affecting the user experience. Understanding <code>key </code>the principle and reasonable selection of unique identifiers help build robust, high-performance React applications.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

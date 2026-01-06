@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="How does react achieve rapid page responseForewordReact is widely adopted in modern front-end development, thanks to its efficient UI update strategy "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How does react achieve rapid page response"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="How does react achieve rapid page responseForewordReact is widely adopted in modern front-end development, thanks to its efficient UI update strategy "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How does react achieve rapid page response - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How does react achieve rapid page response</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-04-12
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="How-does-react-achieve-rapid-page-response"><a href="#How-does-react-achieve-rapid-page-response" class="headerlink" title="How does react achieve rapid page response"></a>How does react achieve rapid page response</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>React is widely adopted in modern front-end development, thanks to its efficient UI update strategy and good response performance. We usually feel that the React application is “very silky” and “responsive”, but we don’t necessarily understand the principle behind it. In fact, React has introduced a series of designs to achieve rapid user interface response, including Virtual DOM, Fiber architecture, priority scheduling, batch update mechanism and concurrent rendering. Together, these technologies enable React to minimize blocking and keep pages interoperable.</p>
+<p>This article will systematically analyze how React ensures the fast response experience of the page through architecture design and runtime mechanism.</p>
+<hr>
+<h2 id="Virtual-DOM-abstract-UI-change-reduce-DOM-operation-cost"><a href="#Virtual-DOM-abstract-UI-change-reduce-DOM-operation-cost" class="headerlink" title="Virtual DOM: abstract UI change, reduce DOM operation cost"></a>Virtual DOM: abstract UI change, reduce DOM operation cost</h2><p>react’s earliest performance advantage came from the introduction of a Virtual DOM. It is essentially a lightweight JavaScript Object description of the actual DOM, structured as follows:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const element = &#123;</span><br><span class="line">  type: &#x27;div&#x27;,</span><br><span class="line">  props: &#123;</span><br><span class="line">    children: [</span><br><span class="line">      &#123; type: &#x27;span&#x27;, props: &#123; children: &#x27;Hello&#x27; &#125; &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>by building the virtual DOM in memory, React avoids frequent direct manipulation of the real DOM. Each time the state changes, React will rebuild a new virtual tree, then compare (diff) with the last tree to find the smallest difference, and then uniformly update to the real DOM.</p>
+<p>This mechanism greatly improves performance and avoids a large number of unnecessary DOM operations.</p>
+<hr>
+<h2 id="Fiber-architecture-supports-asynchronous-interrupt-rendering-process"><a href="#Fiber-architecture-supports-asynchronous-interrupt-rendering-process" class="headerlink" title="Fiber architecture: supports asynchronous interrupt rendering process"></a>Fiber architecture: supports asynchronous interrupt rendering process</h2><p>React 16 rewrites the internal rendering mechanism and introduces the Fiber architecture. Fiber is a data structure that converts the component tree into a linked list structure, allowing React to split the rendering process into multiple small tasks.</p>
+<p>In a traditional stack-based recursive update, once execution begins, it cannot be interrupted. If the component tree is too large, it may block the main thread and cause user operations to become unresponsive. The introduction of Fiber allows rendering tasks to be “interrupted” and “resumed”:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function workLoop(deadline) &#123;</span><br><span class="line">  while (nextUnitOfWork &amp;&amp; deadline.timeRemaining() &gt; 1) &#123;</span><br><span class="line">    nextUnitOfWork = performUnitOfWork(nextUnitOfWork)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  if (nextUnitOfWork) &#123;</span><br><span class="line">    requestIdleCallback(workLoop)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>the above is a simplified version of the task scheduling mechanism. By <code>requestIdleCallback </code>or scheduler, React can execute tasks in slices and complete rendering in idle time, thus avoiding blocking pages for long tasks.</p>
+<hr>
+<h2 id="priority-scheduling-priority-completion-of-important-tasks"><a href="#priority-scheduling-priority-completion-of-important-tasks" class="headerlink" title="priority scheduling: priority completion of important tasks"></a>priority scheduling: priority completion of important tasks</h2><p>React further builds a “scheduler” on the Fiber architecture to control the order in which tasks are executed. Different tasks are given different priorities, such:</p>
+<ul>
+<li>user input events (such as onClick): High priority</li>
+<li>update due to network request completion: medium priority</li>
+<li>non-critical updates (such as log escalation): Low priority</li>
+</ul>
+<p>React processes high-quality tasks first, and low-priority tasks are delayed or interrupted to ensure the user experience first:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">startTransition(() =&gt; &#123;</span><br><span class="line">  setSearchResults(filtered)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>use <code>startTransition </code>mark some updates as “non-urgent”, React will perform these tasks when idle, ensuring that the UI main thread responds to user actions first.</p>
+<hr>
+<h2 id="batch-update-mechanism-merge-multiple-updates-to-reduce-re-rendering"><a href="#batch-update-mechanism-merge-multiple-updates-to-reduce-re-rendering" class="headerlink" title="batch update mechanism: merge multiple updates to reduce re-rendering"></a>batch update mechanism: merge multiple updates to reduce re-rendering</h2><p>React automatically merges multiple status updates in the same event loop into one batch update. For example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">setCount</span>(count + <span class="number">1</span>)</span><br><span class="line"><span class="title function_">setValue</span>(<span class="string">&#x27;new&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>React does not perform these two updates immediately, but collects them and triggers the rendering at the end of the current event loop. This prevents the component from being rendered repeatedly, thus reducing the amount of computation and the number of DOM operations.</p>
+<p>Starting with React 18, all updates are batched by default (including asynchronous updates), further improving performance.</p>
+<hr>
+<h2 id="Concurrent-Rendering-The-Core-Mechanism-for-Moving-into-the-Future"><a href="#Concurrent-Rendering-The-Core-Mechanism-for-Moving-into-the-Future" class="headerlink" title="Concurrent Rendering: The Core Mechanism for Moving into the Future"></a>Concurrent Rendering: The Core Mechanism for Moving into the Future</h2><p>React 18 formally introduced “Concurrent Features” (Concurrent Features), such as Concurrent Rendering (Concurrent Rendering), Concurrent Mode (Concurrent Mode), to further improve page responsiveness.</p>
+<p>Concurrent rendering means that React no longer completes the rendering of the entire tree at once, but allows some updates to be paused, retried, or discarded at intermediate stages, as reflected in:</p>
+<ul>
+<li>rendering process can be interrupted and switched to higher priority tasks</li>
+<li>can pre-render multiple UI states and switch displays when needed</li>
+<li>avoid blocking the main thread for a long time and improve the response speed of operation</li>
+</ul>
+<p>cooperation <code>useTransition </code>, <code>Suspense </code>, <code>startTransition </code>such as API,React allows developers to use concurrency in a declarative manner to improve the interaction experience of complex pages.</p>
+<hr>
+<h2 id="React’s-response-performance-comparison-example"><a href="#React’s-response-performance-comparison-example" class="headerlink" title="React’s response performance comparison example"></a>React’s response performance comparison example</h2><p>The following table shows the comparison between traditional synchronous rendering and Fiber concurrent rendering when the user inputs:</p>
+<table>
+<thead>
+<tr>
+<th>scene</th>
+<th>synchronous rendering performance</th>
+<th>Fiber concurrent rendering performance</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>enter text box content</td>
+<td>interface stuck or input lag</td>
+<td>smooth input</td>
+</tr>
+<tr>
+<td>render a long list (such as 10,000 items)</td>
+<td>the page is unresponsive for a long time.</td>
+<td>Can be rendered in batches, the page is not stuck</td>
+</tr>
+<tr>
+<td>asynchronous Request Back Bulk Update</td>
+<td>instantly re-render the page</td>
+<td>non-urgent updates can be deferred</td>
+</tr>
+</tbody></table>
+<p>React significantly improves response performance by controlling task priority, sharding updates, and concurrent rendering.</p>
+<hr>
+<h2 id="Interview-answer-how-does-React-achieve-rapid-page-response"><a href="#Interview-answer-how-does-React-achieve-rapid-page-response" class="headerlink" title="Interview answer: how does React achieve rapid page response?"></a>Interview answer: how does React achieve rapid page response?</h2><p>Answer:</p>
+<p>React implements Rapid page response through the following mechanisms:</p>
+<p>first, the introduction of virtual DOM, to avoid frequent direct operation of the real DOM, through the diff algorithm to find the minimum update range.</p>
+<p>Second, the Fiber architecture will update the task list, support interruption and recovery, and avoid blocking pages for long tasks.</p>
+<p>Third, React provides a priority scheduling system. High-quality tasks (such as clicks and inputs) can preempt low-quality tasks to ensure that key interactions are executed first.</p>
+<p>Fourth, the batch update mechanism merges multiple state changes in the same time period into one update, reducing the number of rendering times.</p>
+<p>Fifth, concurrent rendering allows React to perform UI updates asynchronously, so that high-quality operations will not be delayed due to low-quality updates, further enhancing user interaction experience.</p>
+<p>The synergy of these mechanisms allows React to provide a fast and smooth response experience while maintaining rendering accuracy.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>React uses a number of modern front-end technologies to achieve rapid response to the page. From the early days of the Virtual DOM to the Fiber architecture to the scheduler and concurrent rendering, each iteration revolves around one goal: to keep the user’s actions flowing and responsive at all times.</p>
+<p>These mechanisms do not exist in isolation, but cooperate with each other to form a powerful rendering system. Understanding the underlying principles of React not only helps us write better-performing applications, but also takes the initiative in system optimization, troubleshooting, and advanced interviews.</p>
+<p>In the future, with the gradual popularization of concurrent functions, React’s advantages in response performance will be further enlarged. Developers need to master these mechanisms to better cope with complex interactive scenarios and large-scale data rendering requirements.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

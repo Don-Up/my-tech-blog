@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="How does react perform renderingForewordReact is a JavaScript library for building user interfaces. Its core idea is to achieve efficient and predicta"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How does react perform rendering"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="How does react perform renderingForewordReact is a JavaScript library for building user interfaces. Its core idea is to achieve efficient and predicta"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How does react perform rendering - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How does react perform rendering</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-07-24
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="How-does-react-perform-rendering"><a href="#How-does-react-perform-rendering" class="headerlink" title="How does react perform rendering"></a>How does react perform rendering</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>React is a JavaScript library for building user interfaces. Its core idea is to achieve efficient and predictable UI construction through componentization and state-driven methods. In the process of using React, developers often only focus on component writing and state management, but rarely understand how React completes the whole process from component code to page rendering.</p>
+<p>In fact, React’s rendering mechanism has undergone many evolutions, from the initial synchronous recursive rendering to the later Fiber architecture, which supports Task interruption, priority scheduling, and concurrent rendering. The design ideas and implementation details behind it are very worthy of in-depth study. This article will systematically explain the rendering mechanism of React, including the first rendering, update rendering, Fiber architecture, Virtual DOM, diff algorithm, commit phase and other key contents.</p>
+<hr>
+<h2 id="Overview-of-the-overall-process-of-React-rendering"><a href="#Overview-of-the-overall-process-of-React-rendering" class="headerlink" title="Overview of the overall process of React rendering"></a>Overview of the overall process of React rendering</h2><p>the rendering process of React is mainly divided into two stages:</p>
+<p><strong>Render phase</strong> : Build a new virtual UI structure, compare the differences between the old and new trees, and generate an update plan. This phase can be interrupted.</p>
+<p><strong>The Commit phase</strong> applies changes to the real DOM and triggers a lifecycle or side effect callback. This phase is synchronous and uninterruptible.</p>
+<p>These two phases are called “Reconciliation” and “Commit”.</p>
+<hr>
+<h2 id="Initial-rendering-First-build-from-component-to-DOM"><a href="#Initial-rendering-First-build-from-component-to-DOM" class="headerlink" title="Initial rendering: First build from component to DOM"></a>Initial rendering: First build from component to DOM</h2><p>using the function component as an example, assume the code is as follows:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">App</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [count, setCount] = <span class="title class_">React</span>.<span class="title function_">useState</span>(<span class="number">0</span>)</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;count&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> root = <span class="title class_">ReactDOM</span>.<span class="title function_">createRoot</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;root&#x27;</span>))</span><br><span class="line">root.<span class="title function_">render</span>(<span class="language-xml"><span class="tag">&lt;<span class="name">App</span> /&gt;</span></span>)</span><br></pre></td></tr></table></figure>
+
+<p>when calling<code>root.render ( &lt;App /&gt;) </code>React performs the following steps:</p>
+<ol>
+<li>will <code>&lt;App /&gt;</code>convert to the corresponding React element object</li>
+<li>build a Fiber tree (virtual structure) based on the object</li>
+<li>process function calls, Hooks execution, etc. of each component in turn</li>
+<li>construct an effect list that describes the contents of the update (such as creating a DOM node)</li>
+<li>in the commit phase, traverse the effect list and insert the corresponding DOM node into the page.</li>
+</ol>
+<p>During the first rendering, there is no diff operation, and React builds the entire tree from scratch.</p>
+<hr>
+<h2 id="update-rendering-how-state-changes-trigger-re-rendering"><a href="#update-rendering-how-state-changes-trigger-re-rendering" class="headerlink" title="update rendering: how state changes trigger re-rendering"></a>update rendering: how state changes trigger re-rendering</h2><p>when the internal state of the component changes (e. G. <code>setCount(count + 1) </code>) or props changes, React triggers a component update. The overall process is as follows:</p>
+<ol>
+<li>React marks the component as “needs to be updated”</li>
+<li>re-enter the render phase and generate a new virtual tree</li>
+<li>compare with the old tree to find changes (by diff algorithm)</li>
+<li>generate the update operations that need to be performed (insert, delete, update attributes, etc.)</li>
+<li>Enter the commit phase, actually operate DOM, and call side effects</li>
+</ol>
+<p>this process embodies React’s “declarative programming” philosophy: developers describe the UI state, and React automatically handles the update logic.</p>
+<hr>
+<h2 id="Fiber-Architecture-Supports-Interruptible-Rendering"><a href="#Fiber-Architecture-Supports-Interruptible-Rendering" class="headerlink" title="Fiber Architecture: Supports Interruptible Rendering"></a>Fiber Architecture: Supports Interruptible Rendering</h2><p>React 16 introduces the Fiber architecture to replace the previous synchronous recursive update model. A Fiber is a linked-list representation of a component tree that allows tasks to be broken, resumed, and sliced during rendering.</p>
+<p>Each component corresponds to a Fiber node, which contains the following information:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  type,           // 组件类型</span><br><span class="line">  key,            // 区分同一层节点</span><br><span class="line">  stateNode,      // 实际 DOM 或组件实例</span><br><span class="line">  child, sibling, return, // 构建成链表结构</span><br><span class="line">  effectTag,      // 需要执行的操作类型</span><br><span class="line">  alternate       // 对应的旧 Fiber 节点</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>the render phase of Fiber uses depth-first traversal, building child nodes first, and then sibling nodes. Because of its linked list structure, React can interrupt traversal at any time and return control to the browser for user interaction.</p>
+<hr>
+<h2 id="diff-algorithm-find-the-minimum-cost-of-change"><a href="#diff-algorithm-find-the-minimum-cost-of-change" class="headerlink" title="diff algorithm: find the minimum cost of change"></a>diff algorithm: find the minimum cost of change</h2><p>when the state or props changes, React rebuilds a new Fiber tree and compares it to the old tree. This comparison process is the diff algorithm, and the goal is to find the minimum amount of change.</p>
+<p>React’s diff algorithm has the following optimization strategies:</p>
+<ol>
+<li>same-layer comparison: only compares nodes at the same level to avoid cross-layer overhead.</li>
+<li>If the type is the same, reuse: only attribute differences are compared for nodes of the same type, and the original DOM is retained.</li>
+<li>Use key to optimize list rendering: help quickly locate additions, deletions and changes to improve performance</li>
+</ol>
+<p>for example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">  &#123;list.<span class="title function_">map</span>(<span class="function"><span class="params">item</span> =&gt;</span> <span class="language-xml"><span class="tag">&lt;<span class="name">li</span> <span class="attr">key</span>=<span class="string">&#123;item.id&#125;</span>&gt;</span>&#123;item.name&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span>)&#125;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+
+<p>if you use <code>index</code>As a key, it will cause the wrong judgment of React when the sequence changes, resulting in the reconstruction of the whole group, which affects the performance and user experience.</p>
+<hr>
+<h2 id="commit-phase-change-application-and-side-effect-execution"><a href="#commit-phase-change-application-and-side-effect-execution" class="headerlink" title="commit phase: change application and side effect execution"></a>commit phase: change application and side effect execution</h2><p>in the commit phase, React traverses the effect list generated in the render phase and performs the DOM operations marked in each effect:</p>
+<ol>
+<li>for nodes that need to be inserted, call <code>appendChild </code></li>
+<li>for nodes that update attributes, call the DOM API to update attributes</li>
+<li>for the node that needs to be deleted, call <code>removeChild </code></li>
+</ol>
+<p>it will also be implemented at this stage:</p>
+<ul>
+<li>lifecycle methods (such <code>componentDidMount </code>)</li>
+<li>side effects (such as Hook <code>useEffect </code>)</li>
+<li>update of Ref</li>
+</ul>
+<p>since This phase involves real DOM changes, it is synchronous and uninterruptible.</p>
+<hr>
+<h2 id="React-rendering-performance-optimization-means"><a href="#React-rendering-performance-optimization-means" class="headerlink" title="React rendering performance optimization means"></a>React rendering performance optimization means</h2><p>React provides several ways to optimize rendering performance:</p>
+<p><strong>memoization mechanism</strong> : Use <code>React.memo</code>, <code>useMemo </code>, <code>useCallback </code>cache components or functions to avoid repeated calculations or re-rendering</p>
+<p><strong>shouldComponentUpdate &#x2F; PureComponent</strong> : Manual or automatic shallow comparison in class components to avoid invalid updates</p>
+<p><strong>the correct use of key</strong> : Helps React compare nodes more efficiently and avoid unnecessary rebuilds.</p>
+<p><strong>Inert loading</strong> : Use <code>React.lazy </code>and <code>Suspense </code>reduce first-time load costs by enabling on-demand loading of components</p>
+<hr>
+<h2 id="interview-answer-how-does-React-render"><a href="#interview-answer-how-does-React-render" class="headerlink" title="interview answer: how does React render?"></a>interview answer: how does React render?</h2><p>Answer:</p>
+<p>the rendering process of React is divided into two stages:</p>
+<ol>
+<li><strong>Render phase</strong> : When the component state or props changes, React will build a new Fiber tree and compare it with the old tree to generate a series of update operations. This phase is asynchronous and can be interrupted.</li>
+<li><strong>The Commit phase</strong> : Apply the update to the real DOM and perform side effects (such as lifecycle functions or <code>useEffect</code>). This phase is synchronized.</li>
+</ol>
+<p>React uses the Fiber architecture to implement interruptible rendering and task scheduling, improving performance and responsiveness. At the same time, Virtual DOM and diff algorithms are used to optimize the minimum update path to ensure that only the necessary parts are updated.</p>
+<p>The whole process embodies the core concepts of React: declarative, responsive, and high-performance.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>react’s rendering mechanism is fundamental to its performance and responsiveness. It implements a controllable and interruptible update process through the Fiber architecture, and splits the rendering process into two stages: render and commit, thus ensuring high-performance rendering of complex UI.</p>
+<p>Understanding the rendering process of React not only helps to write correct code, but also helps to make more reasonable performance optimization, state management strategies, and component design choices in actual development. It has very important guiding significance for in-depth study of React, preparation for high-level interviews, and solving performance bottlenecks.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
