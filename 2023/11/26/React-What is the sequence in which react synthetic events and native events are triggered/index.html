@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What is the sequence in which react synthetic events and native events are triggeredForewordin React application development, understanding the event "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What is the sequence in which react synthetic events and native events are triggered"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What is the sequence in which react synthetic events and native events are triggeredForewordin React application development, understanding the event "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What is the sequence in which react synthetic events and native events are triggered - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What is the sequence in which react synthetic events and native events are triggered</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-11-26
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-is-the-sequence-in-which-react-synthetic-events-and-native-events-are-triggered"><a href="#What-is-the-sequence-in-which-react-synthetic-events-and-native-events-are-triggered" class="headerlink" title="What is the sequence in which react synthetic events and native events are triggered"></a>What is the sequence in which react synthetic events and native events are triggered</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in React application development, understanding the event mechanism is the key to improving code quality and troubleshooting. React introduces a Synthetic Event system, which encapsulates events through Event delegates and Event objects. However, in real projects, we often use both React synthetic events and browser-Native event listeners.</p>
+<p>At this time, it is particularly important to understand the trigger sequence of React synthetic events and native events. This article will systematically explain the triggering mechanism, chronology and impact of the two, helping you to understand and use events correctly, and avoid potential event conflicts and interactions that do not meet expectations.</p>
+<hr>
+<h2 id="Event-system-background-knowledge"><a href="#Event-system-background-knowledge" class="headerlink" title="Event system background knowledge"></a>Event system background knowledge</h2><h3 id="browser-Native-Events"><a href="#browser-Native-Events" class="headerlink" title="browser Native Events"></a>browser Native Events</h3><p>the browser’s event system is divided into three phases: the capture phase, the target phase, and the bubbling phase. Event listeners can be triggered during the capture phase or the bubbling phase, the default <code>addEventListener </code>bound is bubbling phase listening.</p>
+<h3 id="React-synthetic-event-system"><a href="#React-synthetic-event-system" class="headerlink" title="React synthetic event system"></a>React synthetic event system</h3><p>React composite events unify the representation of cross-browser events and adopt the event delegation mechanism. React will be in the root container of the application (such <code>document </code>or <code>root </code>node) uniformly binds a few native event listeners to listen for native events in the capture or bubble phase.</p>
+<p>When a native event is triggered, React captures the event in the root container, finds the corresponding component based on the event path, creates a synthetic event, and triggers an event callback on the corresponding component.</p>
+<hr>
+<h2 id="Triggering-sequence-of-React-synthetic-events-and-native-events"><a href="#Triggering-sequence-of-React-synthetic-events-and-native-events" class="headerlink" title="Triggering sequence of React synthetic events and native events"></a>Triggering sequence of React synthetic events and native events</h2><h3 id="1-The-location-and-timing-of-the-React-event-binding"><a href="#1-The-location-and-timing-of-the-React-event-binding" class="headerlink" title="1. The location and timing of the React event binding."></a>1. The location and timing of the React event binding.</h3><p>React 17 and later bind the native listener of all synthetic events to the root DOM node mounted by the React application (usually <code>root </code>), and the default binding in <strong>capture phase</strong> .</p>
+<p>This means that the React listener will be triggered during the native event capture phase.</p>
+<h3 id="2-The-binding-location-and-phase-of-the-native-event-listener"><a href="#2-The-binding-location-and-phase-of-the-native-event-listener" class="headerlink" title="2. The binding location and phase of the native event listener."></a>2. The binding location and phase of the native event listener.</h3><p>Native event listeners are typically passed through <code>addEventListener </code>add, you can specify the capture phase (the third parameter is. <code>true </code>) or the bubbling phase (default <code>false </code>) binding.</p>
+<h3 id="3-Rules-for-the-trigger-sequence"><a href="#3-Rules-for-the-trigger-sequence" class="headerlink" title="3. Rules for the trigger sequence"></a>3. Rules for the trigger sequence</h3><p>assume the following binding:</p>
+<ul>
+<li>React synthesized event listener, bound to the root node capture phase (React by default)</li>
+<li>native event listeners, bound to the capture or bubbling phase of a DOM element</li>
+</ul>
+<p>The order of triggering depends on three phases of event propagation:</p>
+<ul>
+<li>event propagation from document root node to target element as capture phase</li>
+<li>reach destination node</li>
+<li>return the root node from the target node to the bubbling phase</li>
+</ul>
+<p>the React composite event listener is bound to the root node capture phase and is triggered first, while the native event listener determines the trigger time based on the binding phase and node location.</p>
+<h3 id="Example-Trigger-Sequence"><a href="#Example-Trigger-Sequence" class="headerlink" title="Example Trigger Sequence"></a>Example Trigger Sequence</h3><table>
+<thead>
+<tr>
+<th>binding Type</th>
+<th>stage</th>
+<th>trigger sequence</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>React synthetic event listener</td>
+<td>root Node Capture Phase</td>
+<td>first trigger</td>
+</tr>
+<tr>
+<td>native Event Listener</td>
+<td>target Node Capture Phase</td>
+<td>React after the synthetic event (depending on the specific binding location)</td>
+</tr>
+<tr>
+<td>native Event Listener</td>
+<td>target node bubbling phase</td>
+<td>React after the synthetic event, and after the target event</td>
+</tr>
+<tr>
+<td>native Event Listener</td>
+<td>root node bubbling phase</td>
+<td>last Trigger</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="code-sample-analysis"><a href="#code-sample-analysis" class="headerlink" title="code sample analysis"></a>code sample analysis</h2><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span>, &#123; useEffect, useRef &#125; <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Demo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> divRef = <span class="title function_">useRef</span>(<span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">  <span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> div = divRef.<span class="property">current</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">nativeCaptureHandler</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Native capture on div&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">nativeBubbleHandler</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Native bubble on div&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    div.<span class="title function_">addEventListener</span>(<span class="string">&quot;click&quot;</span>, nativeCaptureHandler, <span class="literal">true</span>); <span class="comment">// 捕获阶段</span></span><br><span class="line">    div.<span class="title function_">addEventListener</span>(<span class="string">&quot;click&quot;</span>, nativeBubbleHandler, <span class="literal">false</span>); <span class="comment">// 冒泡阶段</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      div.<span class="title function_">removeEventListener</span>(<span class="string">&quot;click&quot;</span>, nativeCaptureHandler, <span class="literal">true</span>);</span><br><span class="line">      div.<span class="title function_">removeEventListener</span>(<span class="string">&quot;click&quot;</span>, nativeBubbleHandler, <span class="literal">false</span>);</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;, []);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">handleClick</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;React synthetic event&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">ref</span>=<span class="string">&#123;divRef&#125;</span> <span class="attr">onClick</span>=<span class="string">&#123;handleClick&#125;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      点击我</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title class_">Demo</span>;</span><br></pre></td></tr></table></figure>
+
+<p>run and click <code>div </code>, the console output order is usually:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">React synthetic event</span><br><span class="line">Native capture on div</span><br><span class="line">Native bubble on div</span><br></pre></td></tr></table></figure>
+
+<p>This is because the synthetic event listener bound by React 17 + in the capture phase of the root node fires before the Native event in the capture phase of the target node.</p>
+<p>If you change to React 16 or earlier (React bubbles the binding event on the document), the trigger order will be different, and the native event precedes the React event in the native capture phase.</p>
+<hr>
+<h2 id="Impact-and-Precautions"><a href="#Impact-and-Precautions" class="headerlink" title="Impact and Precautions"></a>Impact and Precautions</h2><ul>
+<li>the React event takes precedence over the target element’s native event capture listener, which means you can call <code>stopPropagation </code>preventing subsequent native capture event execution.</li>
+<li>Because The React event is bound to the root node, if the native event is bound to the child element capture phase, it is usually triggered later than the React composite event.</li>
+<li>When debugging event firing order and blocking event propagation, you must understand the binding nodes and phases of the event listener.</li>
+<li>The interrupt of The React event execution does not affect the triggering of the native event listener (browser mechanism limitation), but <code>stopImmediatePropagation </code>can prevent subsequent listener execution.</li>
+</ul>
+<hr>
+<h2 id="Interview-answer-What-is-the-trigger-sequence-of-React-synthetic-events-and-native-events"><a href="#Interview-answer-What-is-the-trigger-sequence-of-React-synthetic-events-and-native-events" class="headerlink" title="Interview answer: What is the trigger sequence of React synthetic events and native events?"></a>Interview answer: What is the trigger sequence of React synthetic events and native events?</h2><p>The synthesized event listener of React 17 and later versions is bound to the capture phase of the React root container, so the synthesized event will be triggered first. If the native event listener is bound to the capture or bubbling phase of the target element, it will be triggered after the React event, and the order of triggering depends on the binding phase and DOM level of the listener.</p>
+<p>In short, The React synthetic event listener executes in preference to the target element’s native event listener.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>the order in which React synthetic events and native events are triggered is mainly affected by the event propagation phase (capture&#x2F;bubble) and the location of the listener binding node. React 17 + binds the composite event listener to the root node capture phase, so that the composite event is triggered first.</p>
+<p>Understanding this can help us design event processing logic more rationally, avoid event conflicts, and improve application robustness and user experience.</p>
+<p>In-depth understanding of the interaction mechanism between React and native events is an important step to improve the frontend development capability.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

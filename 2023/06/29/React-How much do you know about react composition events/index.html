@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="How much do you know about react composition eventsForewordEvent handling is the foundation of Web front-end development. Although the native DOM even"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How much do you know about react composition events"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="How much do you know about react composition eventsForewordEvent handling is the foundation of Web front-end development. Although the native DOM even"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How much do you know about react composition events - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How much do you know about react composition events</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-06-29
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="How-much-do-you-know-about-react-composition-events"><a href="#How-much-do-you-know-about-react-composition-events" class="headerlink" title="How much do you know about react composition events"></a>How much do you know about react composition events</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>Event handling is the foundation of Web front-end development. Although the native DOM event has powerful functions, it has problems such as browser compatibility difference and high memory overhead. React introduces a Synthetic Event mechanism to improve cross-browser consistency and performance. Synthetic events not only encapsulate native events, but also incorporate optimization methods such as event delegation and event pooling, greatly simplifying the complexity of event management.</p>
+<p>This article will comprehensively analyze the design principles, implementation mechanisms, advantages and disadvantages of React synthetic events, and help readers deeply understand the underlying details and key points of this event system.</p>
+<hr>
+<h2 id="The-Design-Background-and-Purpose-of-React-Synthetic-Event"><a href="#The-Design-Background-and-Purpose-of-React-Synthetic-Event" class="headerlink" title="The Design Background and Purpose of React Synthetic Event"></a>The Design Background and Purpose of React Synthetic Event</h2><p>in traditional Web development, event processing is mostly in DOM nodes, directly through <code>addEventListener </code>binding events. A large number of event binding not only increases memory overhead, but also differences in event behavior and attribute naming among browsers, which increases the difficulty of development.</p>
+<p>React’s synthetic event system goals are:</p>
+<ol>
+<li><strong>cross-browser compatible</strong> , unifying event behavior and interfaces.</li>
+<li><strong>Performance optimization</strong> to reduce the number of event listeners through event delegates.</li>
+<li><strong>Memory optimization</strong> event object reuse reduces garbage collection pressure.</li>
+<li><strong>Enhance control ability</strong> to facilitate the integration of scheduling and batch mechanisms.</li>
+</ol>
+<hr>
+<h2 id="Implementation-Mechanism-of-Synthetic-Event"><a href="#Implementation-Mechanism-of-Synthetic-Event" class="headerlink" title="Implementation Mechanism of Synthetic Event"></a>Implementation Mechanism of Synthetic Event</h2><h3 id="1-Event-Delegation"><a href="#1-Event-Delegation" class="headerlink" title="1. Event Delegation"></a>1. Event Delegation</h3><p>React does not bind the event processor directly to each DOM node, but to the root container node (such <code>document </code>or the root node of the application mount) to register a small number of event listeners. Capture all events using the event bubbling mechanism.</p>
+<p>When an event is triggered, React maps the event source DOM node to the corresponding Fiber node, finds the registered event callback, and executes it.</p>
+<h3 id="2-The-SyntheticEvent-object"><a href="#2-The-SyntheticEvent-object" class="headerlink" title="2. The SyntheticEvent object"></a>2. The SyntheticEvent object</h3><p>React creates a synthetic event object after capturing the native event <code>SyntheticEvent </code>which encapsulates all the properties and methods of the native event and unifies the naming and behavior.</p>
+<p>The SyntheticEvent has the same interface as a native event, such:</p>
+<ul>
+<li><code>preventDefault() </code></li>
+<li><code>stopPropagation() </code></li>
+<li><code>target </code></li>
+<li><code>currentTarget </code></li>
+<li><code>type </code></li>
+</ul>
+<p>but it also provides additional features, such as event pooling (before React 17), which reduces the overhead of frequent event object creation.</p>
+<h3 id="3-Event-Pooling"><a href="#3-Event-Pooling" class="headerlink" title="3. Event Pooling"></a>3. Event Pooling</h3><p>before React 16, the SyntheticEvent object implemented the event pool. After the event is processed, the event object will be reused and the attribute will be reset. This reduces the GC stress caused by frequent creation of event objects.</p>
+<p>React 17 eliminates the event pool and instead creates a new event object each time, improving the security of asynchronous event processing.</p>
+<hr>
+<h2 id="Advantages-of-synthetic-events"><a href="#Advantages-of-synthetic-events" class="headerlink" title="Advantages of synthetic events"></a>Advantages of synthetic events</h2><p><strong>cross-browser compatible</strong></p>
+<p>the differences in event models and Event object attributes between different browsers are unified, and developers do not need to write redundant code for browsers.</p>
+<p><strong>Performance optimization</strong></p>
+<p>event delegation greatly reduces the number of event listeners on the page, avoids multiple binding and unbinding, and improves performance.</p>
+<p><strong>Unified Interface</strong></p>
+<p>all event types (click, keyboard, input, etc.) follow the same event processing flow and API to improve the development experience.</p>
+<p><strong>Easy scheduling and bulk update integration</strong></p>
+<p>React uses synthetic events to implement event scheduling and batch processing, properly arrange component updates when events are triggered, and optimize rendering performance.</p>
+<hr>
+<h2 id="Example-of-using-synthetic-events"><a href="#Example-of-using-synthetic-events" class="headerlink" title="Example of using synthetic events"></a>Example of using synthetic events</h2><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Demo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">handleClick</span>(<span class="params">event</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(event.<span class="property">type</span>) <span class="comment">// click</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(event.<span class="property">nativeEvent</span>) <span class="comment">// 原生事件对象</span></span><br><span class="line">    event.<span class="title function_">preventDefault</span>() <span class="comment">// 阻止默认行为</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://example.com&quot;</span> <span class="attr">onClick</span>=<span class="string">&#123;handleClick&#125;</span>&gt;</span>Click me<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>here’s <code>event </code>is SyntheticEvent, which encapsulates the native browser <code>MouseEvent </code>. Call <code>event.preventDefault() </code>will prevent the link from jumping.</p>
+<hr>
+<h2 id="Points-to-note"><a href="#Points-to-note" class="headerlink" title="Points to note"></a>Points to note</h2><ul>
+<li><strong>event Object Lifecycle</strong></li>
+</ul>
+<p>before React 16, the synthetic event object was recycled after the event handler ended, and asynchronous access could cause the property to be<code>null </code>. The solution is to call <code>event.persist() </code>to stop recycling. Cancel Event pool after React 17, no longer needed <code>persist() </code>.</p>
+<ul>
+<li><strong>Event Binding Method</strong></li>
+</ul>
+<p>React uses hump named binding events, such <code>onClick </code>instead of the lower case of the native DOM <code>onclick </code>.</p>
+<ul>
+<li><strong>Synthetic events only overwrite common events</strong></li>
+</ul>
+<p>for very special or custom events, you need to use native event listening directly.</p>
+<hr>
+<h2 id="Interview-answer-What-is-React-synthetic-event"><a href="#Interview-answer-What-is-React-synthetic-event" class="headerlink" title="Interview answer: What is React synthetic event?"></a>Interview answer: What is React synthetic event?</h2><p>React composite events are cross-browser encapsulation of browser native events. A small number of event listeners are bound to the root node through the event delegation mechanism, and a composite event object is constructed when the event is triggered. Synthetic events unify the event interface, solve browser compatibility issues, and optimize performance through the event pool (before React 16).</p>
+<p>This mechanism enables React to efficiently manage events, integrate scheduling and batch processing, and improve rendering performance and user experience.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>React composite events are an important part of the React framework event system, which achieves cross-browser unification, performance optimization, and scheduling integration by encapsulating native events and using event delegation and event pooling technologies.</p>
+<p>Understanding how synthetic events work helps developers control event behavior more precisely, avoid asynchronous event traps, and effectively solve event management problems in complex interactions.</p>
+<p>Mastering this mechanism is a key step in learning the internal architecture of React and writing high-quality React code.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

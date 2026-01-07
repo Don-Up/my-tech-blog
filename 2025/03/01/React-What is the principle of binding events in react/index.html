@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What is the principle of binding events in reactForewordevent binding is a very basic part of front-end development. Whether it’s clicking a button, t"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What is the principle of binding events in react"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What is the principle of binding events in reactForewordevent binding is a very basic part of front-end development. Whether it’s clicking a button, t"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What is the principle of binding events in react - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What is the principle of binding events in react</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-03-01
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-is-the-principle-of-binding-events-in-react"><a href="#What-is-the-principle-of-binding-events-in-react" class="headerlink" title="What is the principle of binding events in react"></a>What is the principle of binding events in react</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>event binding is a very basic part of front-end development. Whether it’s clicking a button, typing, or dragging an interaction, events play a key role. In Native JavaScript, we pass <code>addEventListener </code>bind the event directly to the DOM node. In React, event handling seems simple: just write in JSX. <code>onClick=&#123;handleClick&#125; </code>you can. But behind all this, there is actually a complex and efficient event system.</p>
+<p>This article will explain the principle of event binding in React in depth, including its design ideas, synthetic event mechanism, event delegation model, and changes in the new version of React. Understanding this helps us better debug event problems, optimize performance, and even build custom frameworks.</p>
+<hr>
+<h2 id="The-overall-mechanism-of-event-binding"><a href="#The-overall-mechanism-of-event-binding" class="headerlink" title="The overall mechanism of event binding"></a>The overall mechanism of event binding</h2><p>for cross-browser compatibility, performance optimization, and more control, React does not directly bind events to DOM nodes. Instead, it implements a set <strong>Synthetic Event System</strong> .</p>
+<p>A synthetic event is an encapsulation of a native DOM event. React will be unified in the root node (such <code>#root </code>) register an event listener (usually. <code>document </code>or <code>container</code>), and maintain the distribution process of the event itself when the event is triggered.</p>
+<p>For example, the following code:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">App</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">handleClick</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;clicked&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;handleClick&#125;</span>&gt;</span>Click Me<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>React does not actually bind the event directly to <code>&lt;button&gt;</code>element, but will <code>handleClick </code>such as events are recorded on an internal structure, and then a global <code>click </code>the listener hangs on the container node.</p>
+<p>When the button is clicked, the event bubbles to the container node. After React captures the native event, it will:</p>
+<ol>
+<li>create a synthetic event object (SyntheticEvent)</li>
+<li>find the event handler for the corresponding component</li>
+<li>execute registered callbacks in order of event bubbling&#x2F;capturing</li>
+</ol>
+<p>the biggest benefits of this are: <strong>unified control, cross-platform consistency, easy to implement event optimization and plug-in.</strong></p>
+<hr>
+<h2 id="Correspondence-between-event-delegate-and-Fiber"><a href="#Correspondence-between-event-delegate-and-Fiber" class="headerlink" title="Correspondence between event delegate and Fiber"></a>Correspondence between event delegate and Fiber</h2><p>React uses the idea of event delegation to delegate all events to the root node, avoiding the memory consumption and performance overhead caused by each component registering DOM events.</p>
+<p>React internally maps the component Tree to the DOM Tree. Each DOM node corresponds to a Fiber node, and each Fiber node records an event handler function. When the event is triggered, React starts from the event source node and traverses the corresponding Fiber node chain upward to simulate the bubbling or capturing process of DOM, thus executing the event handler function.</p>
+<hr>
+<h2 id="Structure-of-the-synthetic-event-object"><a href="#Structure-of-the-synthetic-event-object" class="headerlink" title="Structure of the synthetic event object"></a>Structure of the synthetic event object</h2><p>react. <code>SyntheticEvent </code>native DOM events are encapsulated, unifying the processing mechanism and behavior.</p>
+<p>For example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">handleClick</span>(<span class="params">e</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(e.<span class="property">nativeEvent</span>)   <span class="comment">// 原生事件</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(e.<span class="property">target</span>)        <span class="comment">// 当前目标</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(e.<span class="property">currentTarget</span>) <span class="comment">// 绑定元素</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>synthetic events provide event properties and methods that are consistent across browsers, such <code>stopPropagation </code>, <code>preventDefault </code>, <code>persist </code>wait. At the same time, it also has an event pooling mechanism to reduce the performance overhead of object creation.</p>
+<p>Note: In React 17 and later versions, the event pool mechanism has been abandoned, avoiding the problem of errors when developers use event objects asynchronously.</p>
+<hr>
+<h2 id="React-17-Event-System-Changes"><a href="#React-17-Event-System-Changes" class="headerlink" title="React 17 + Event System Changes"></a>React 17 + Event System Changes</h2><p>after React 17, important adjustments were made to the event system, mainly <strong>event listeners are no longer bound</strong> <code>**document**</code><strong>Instead, it is mounted on the application root node</strong> (E. G. <code>#root </code>).</p>
+<p>This allows React to work better with non-React-controlled code and avoids interference, such:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;root&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="function">() =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;body click&#x27;</span>))</span></span><br><span class="line"><span class="language-javascript">  </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>the old version of React will be in <code>document </code>capture all events, even if the event bubble does not pass through the React node. The new mechanism of React 17 + does not intercept events triggered by these non-React nodes, which improves the compatibility of the framework with third-party code.</p>
+<hr>
+<h2 id="Special-circumstances-and-precautions"><a href="#Special-circumstances-and-precautions" class="headerlink" title="Special circumstances and precautions"></a>Special circumstances and precautions</h2><p><strong>first, the event will not automatically bind this</strong></p>
+<p>React does not automatically bind <code>this </code>. In a class component, you must bind manually or use arrow functions:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">App</span> <span class="keyword">extends</span> <span class="title class_ inherited__">React.Component</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">super</span>()</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">handleClick</span> = <span class="variable language_">this</span>.<span class="property">handleClick</span>.<span class="title function_">bind</span>(<span class="variable language_">this</span>)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">handleClick</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>) <span class="comment">// 正确绑定</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">render</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;this.handleClick&#125;</span>&gt;</span>Click<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>function component, <code>this </code>is no longer a problem because event binding works directly on the function scope.</p>
+<hr>
+<p><strong>Second, the event bubble behavior is retained by default.</strong></p>
+<p>React’s synthetic events still follow the standard event bubbling rules. Can be used <code>stopPropagation() </code>or <code>preventDefault() </code>to control behavior.</p>
+<hr>
+<p><strong>Third, the event name is hump format</strong></p>
+<p>To use event binding in JSX, you must use hump naming, such <code>onClick </code>, <code>onChange </code>, cannot be written in HTML lowercase format <code>onclick </code>otherwise, it will not be triggered.</p>
+<hr>
+<h2 id="Interview-answer-What-is-the-principle-of-React-event-binding"><a href="#Interview-answer-What-is-the-principle-of-React-event-binding" class="headerlink" title="Interview answer: What is the principle of React event binding?"></a>Interview answer: What is the principle of React event binding?</h2><p>React does not bind events directly to each DOM node, but uses a synthetic event system to bind events. It will be in the root container (e. G. <code>#root </code>) Register event listeners uniformly, and use the event delegation mechanism to find and execute the event handler function of the corresponding component when the event is triggered. The whole process is to simulate the DOM event bubbling process, and through <code>SyntheticEvent </code>objects encapsulate native events, providing a consistent API interface and greater control.</p>
+<p>After React 17, the position of the event binding is changed from <code>document </code>change to the root node to improve compatibility with third-party code. Through this mechanism, React implements low-cost and high-efficiency event management.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>React’s event binding mechanism is one of its core designs, which embodies the idea of “taking Virtual DOM as the center. By synthesizing events and event delegates, React reduces actual DOM operations, improving performance and consistency. Understanding the principles behind event binding will not only help us write more efficient components, but also help us with debugging and optimization.</p>
+<p>Review of core points:</p>
+<ul>
+<li>bind events to container nodes using event delegates</li>
+<li>unified behavior and cross-browser support through synthetic events</li>
+<li>React 17 + moves event bindings to the root node to improve compatibility</li>
+<li>be careful to keep the event handler reference stable and avoid repeated rendering</li>
+</ul>
+<p>by mastering this underlying knowledge, you can more easily cope with the complex interaction logic in React applications.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
