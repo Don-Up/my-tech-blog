@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Let’s introduce HOC to reactForewordin React development, component reuse and logic abstraction are the keys to improving code quality and development"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Let&#39;s introduce HOC to react"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Let’s introduce HOC to reactForewordin React development, component reuse and logic abstraction are the keys to improving code quality and development"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Let&#39;s introduce HOC to react - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Let's introduce HOC to react</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-06-11
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Let’s-introduce-HOC-to-react"><a href="#Let’s-introduce-HOC-to-react" class="headerlink" title="Let’s introduce HOC to react"></a>Let’s introduce HOC to react</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in React development, component reuse and logic abstraction are the keys to improving code quality and development efficiency. As a design pattern, Higher-Order Component (HOC) provides an elegant solution for Component reuse and code decoupling. Understanding the Concept, implementation principles, and application scenarios of HOC is an important step in mastering the advanced skills of React.</p>
+<p>This article provides a comprehensive introduction to the high-level components in React, from definitions, implementation principles, advantages, and limitations to common examples and usage suggestions, to help developers master the HOC system.</p>
+<hr>
+<h2 id="What-is-a-high-level-component-HOC"><a href="#What-is-a-high-level-component-HOC" class="headerlink" title="What is a high-level component (HOC)?"></a>What is a high-level component (HOC)?</h2><p>A higher-order component is a function that accepts a component as a parameter and returns a new enhanced component. It is similar to higher-order functions in functional programming, extending the functionality of a component by wrapping it without modifying the original component itself.</p>
+<p>Formal expression:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const EnhancedComponent = higherOrderComponent(WrappedComponent);</span><br></pre></td></tr></table></figure>
+
+<p>HOC achieves separation of concerns and code sharing by combining and reusing logic.</p>
+<hr>
+<h2 id="Implementation-principle-of-HOC"><a href="#Implementation-principle-of-HOC" class="headerlink" title="Implementation principle of HOC"></a>Implementation principle of HOC</h2><p>A new component is usually defined inside the HOC, which renders the wrapped component when rendering and adds additional logic to it, such as state management, property injection, lifecycle processing, and so on.</p>
+<p>A simple HOC example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function withLogger(WrappedComponent) &#123;</span><br><span class="line">  return function Wrapper(props) &#123;</span><br><span class="line">    React.useEffect(() =&gt; &#123;</span><br><span class="line">      console.log(&#x27;组件挂载&#x27;);</span><br><span class="line">      return () =&gt; console.log(&#x27;组件卸载&#x27;);</span><br><span class="line">    &#125;, []);</span><br><span class="line">    return &lt;WrappedComponent &#123;...props&#125; /&gt;;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>call:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const EnhancedButton = withLogger(Button);</span><br></pre></td></tr></table></figure>
+
+<p>in this way, <code>EnhancedButton </code>inherited. <code>Button </code>while printing logs on Mount and Unmount.</p>
+<hr>
+<h2 id="The-advantages-of-HOC"><a href="#The-advantages-of-HOC" class="headerlink" title="The advantages of HOC"></a>The advantages of HOC</h2><ul>
+<li><strong>code reuse</strong> : Encapsulate general logic in HOC and reuse multiple components.</li>
+<li><strong>Separation of concerns</strong> : Decouple business logic from UI components, and enhance components to focus more on functions.</li>
+<li><strong>Enhancing Component Functionality</strong> : Inject functions such as props, status management, permission verification, and log statistics.</li>
+<li><strong>Flexible combination</strong> : Multiple HOCes can be combined in chains to achieve complex functional superposition.</li>
+</ul>
+<hr>
+<h2 id="Limitations-and-attention-points-of-HOC"><a href="#Limitations-and-attention-points-of-HOC" class="headerlink" title="Limitations and attention points of HOC"></a>Limitations and attention points of HOC</h2><ul>
+<li><strong>ref forwarding</strong> by default, HOC cannot directly manipulate the wrapped component’s <code>ref </code>, need to cooperate <code>React.forwardRef </code>resolve.</li>
+<li><strong>Static method missing</strong> : The static method of the wrapped component will not be passed automatically and needs to be copied manually.</li>
+<li><strong>Difficulty in debugging</strong> : Multi-layer HOC nesting will increase the level of the component tree, and you need to use tools to distinguish component names during debugging.</li>
+<li><strong>Not suitable for Hooks logic</strong> : React Hooks are more suitable for internal reuse logic of function components, while HOC is suitable for cross-component reuse.</li>
+</ul>
+<hr>
+<h2 id="Practical-Application-Example"><a href="#Practical-Application-Example" class="headerlink" title="Practical Application Example"></a>Practical Application Example</h2><p>to implement a permission check of the HOC:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function withPermission(WrappedComponent, requiredRole) &#123;</span><br><span class="line">  return function PermissionWrapper(props) &#123;</span><br><span class="line">    const userRole = useUserRole(); // 假设自定义 Hook 获取用户角色</span><br><span class="line">    if (userRole !== requiredRole) &#123;</span><br><span class="line">      return &lt;div&gt;无权限访问&lt;/div&gt;;</span><br><span class="line">    &#125;</span><br><span class="line">    return &lt;WrappedComponent &#123;...props&#125; /&gt;;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Use:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const AdminPanel = withPermission(Panel, &#x27;admin&#x27;);</span><br></pre></td></tr></table></figure>
+
+<p>only have <code>admin </code>role to access <code>AdminPanel </code>.</p>
+<hr>
+<h2 id="Comparison-of-HOC-and-other-multiplexing-modes"><a href="#Comparison-of-HOC-and-other-multiplexing-modes" class="headerlink" title="Comparison of HOC and other multiplexing modes"></a>Comparison of HOC and other multiplexing modes</h2><table>
+<thead>
+<tr>
+<th>multiplexing Mode</th>
+<th>advantage</th>
+<th>disadvantages</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>higher-order components (HOC)</td>
+<td>logic reuse, separation of concerns</td>
+<td>complex hierarchy, missing static methods, trouble passing ref</td>
+</tr>
+<tr>
+<td>Render Props</td>
+<td>flexible component reuse and clear logic</td>
+<td>increased nesting levels, slightly lengthy code</td>
+</tr>
+<tr>
+<td>Hooks</td>
+<td>flexible logic reuse and concise syntax</td>
+<td>can only be used for function components, not for class components</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="interview-answer-example"><a href="#interview-answer-example" class="headerlink" title="interview answer example"></a>interview answer example</h2><p><strong>question: What is the higher-order component (HOC) In React and what does it do?</strong></p>
+<p>Example answer:</p>
+<p>A higher-order component is a function that accepts a component and returns a new component for reuse of component logic. It achieves the purpose of separation of concerns and code reuse by packaging components to achieve functional enhancement, attribute injection, state management, etc. HOC is suitable for handling common logic across multiple components, but be aware of ref forwarding and static method passing issues. With the rise of Hooks, the frequency of use of HOC has decreased, but it is still an important pattern for understanding the design of React components.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>as a classic React reuse mode, high-level components enhance component functions and share code through function combinations. Mastering HOC can help developers better design and maintain large applications, improve component reuse and code clarity. Understanding its advantages and limitations, combined with modern technology such as Hooks, can create a more flexible and maintainable React code structure.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

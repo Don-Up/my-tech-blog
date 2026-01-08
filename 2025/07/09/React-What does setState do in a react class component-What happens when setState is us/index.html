@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What does setState do in a react class component-What happens when setState is usForewordin React’s class component, setState is the core API for upda"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What does setState do in a react class component-What happens when setState is us"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What does setState do in a react class component-What happens when setState is usForewordin React’s class component, setState is the core API for upda"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What does setState do in a react class component-What happens when setState is us - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What does setState do in a react class component-What happens when setState is us</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-07-09
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-does-setState-do-in-a-react-class-component-What-happens-when-setState-is-us"><a href="#What-does-setState-do-in-a-react-class-component-What-happens-when-setState-is-us" class="headerlink" title="What does setState do in a react class component-What happens when setState is us"></a>What does setState do in a react class component-What happens when setState is us</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in React’s class component, <code>setState </code>is the core API for updating component status. Although we are used to using it in function components. <code>useState </code>and other Hooks, but class components are still used in a large number of historical projects and in some specific scenarios. Therefore, in-depth understanding of class components. <code>setState </code>it is important for development, debugging and performance optimization.</p>
+<p>This article will explain the system <code>setState </code>the internal working mechanism, starting from the call, talks about the update queue, batch processing, scheduling rendering, life cycle call and other details, to help you build the overall understanding of the React status update process.</p>
+<hr>
+<h2 id="A-review-of-the-basic-usage-of-setState"><a href="#A-review-of-the-basic-usage-of-setState" class="headerlink" title="A review of the basic usage of setState"></a>A review of the basic usage of setState</h2><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Counter</span> <span class="keyword">extends</span> <span class="title class_ inherited__">React.Component</span> &#123;</span><br><span class="line">  state = &#123;</span><br><span class="line">    <span class="attr">count</span>: <span class="number">0</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  increment = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">setState</span>(&#123; <span class="attr">count</span>: <span class="variable language_">this</span>.<span class="property">state</span>.<span class="property">count</span> + <span class="number">1</span> &#125;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">render</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;this.increment&#125;</span>&gt;</span>&#123;this.state.count&#125;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>when we click the button, <code>setState </code>is called, seemingly simply modifying <code>state </code>, but there is actually a complex scheduling and optimization process behind it.</p>
+<hr>
+<h2 id="What-did-setState-do"><a href="#What-did-setState-do" class="headerlink" title="What did setState do?"></a>What did setState do?</h2><h3 id="First-add-the-Update-to-the-Queue-Update-Queue"><a href="#First-add-the-Update-to-the-Queue-Update-Queue" class="headerlink" title="First, add the Update to the Queue (Update Queue)"></a>First, add the Update to the Queue (Update Queue)</h3><p>the status Update in React is not executed immediately, but is put into an <strong>Update Queue</strong>:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.setState(&#123; count: this.state.count + 1 &#125;);</span><br></pre></td></tr></table></figure>
+
+<p>At this time, React will not be modified immediately. <code>this.state </code>instead, the update object is wrapped into a <strong>Update instance</strong> to the corresponding Fiber node of the current component <code>updateQueue </code>in.</p>
+<h3 id="Second-judge-whether-it-is-a-batch-scenario"><a href="#Second-judge-whether-it-is-a-batch-scenario" class="headerlink" title="Second, judge whether it is a batch scenario."></a>Second, judge whether it is a batch scenario.</h3><p>React determines whether the current update is in a batch environment (e. G. Event handler, lifecycle, synthetic event). If so, React delays execution; Otherwise, an update is triggered in the microtask.</p>
+<p>For example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">this.setState(&#123; count: 1 &#125;);</span><br><span class="line">this.setState(&#123; count: 2 &#125;);</span><br></pre></td></tr></table></figure>
+
+<p>in the synthetic event, the two updates are merged and updated together in one render.</p>
+<h3 id="Three-mark-the-component-as-dirty-trigger-scheduling"><a href="#Three-mark-the-component-as-dirty-trigger-scheduling" class="headerlink" title="Three, mark the component as dirty, trigger scheduling."></a>Three, mark the component as dirty, trigger scheduling.</h3><p>When the update is queued, React marks the current component <strong>need to update</strong> and add it to the scheduler. The scheduler starts a rendering process when the browser is idle or when appropriate.</p>
+<p>In the Fiber architecture, this phase is called <strong>Schedule (Schedule)</strong> its core goal is to find out which components need to be updated and build the update task.</p>
+<h3 id="Four-enter-the-update-process-of-Fiber-recocation"><a href="#Four-enter-the-update-process-of-Fiber-recocation" class="headerlink" title="Four, enter the update process of Fiber (recocation)"></a>Four, enter the update process of Fiber (recocation)</h3><p>the scheduler starts processing these components marked as updated, entering<strong>reconciliation</strong> phase. This process includes:</p>
+<ul>
+<li>traversing the Virtual DOM tree</li>
+<li>contrast old and new Fiber tree (Diff)</li>
+<li>create a new Fiber node</li>
+<li>prepare to generate updated DOM description</li>
+</ul>
+<p>at this stage, React does not directly manipulate DOM, but builds a new Fiber tree.</p>
+<h3 id="Five-enter-the-commit-phase-update-DOM-and-life-cycle"><a href="#Five-enter-the-commit-phase-update-DOM-and-life-cycle" class="headerlink" title="Five, enter the commit phase, update DOM and life cycle"></a>Five, enter the commit phase, update DOM and life cycle</h3><p>at the end of the coordination phase, React enters <strong>the commit phase</strong> this phase is divided into three sub-phases:</p>
+<ul>
+<li><code>beforeMutation </code>: such <code>getSnapshotBeforeUpdate </code></li>
+<li><code>mutation </code>: perform DOM updates (such <code>appendChild </code>, <code>setTextContent </code>etc.)</li>
+<li><code>layout </code>: such as calling <code>componentDidUpdate </code>, <code>componentDidMount</code></li>
+</ul>
+<p>This is when the page really changes.</p>
+<hr>
+<h2 id="Several-Writing-Methods-and-Differences-of-setState"><a href="#Several-Writing-Methods-and-Differences-of-setState" class="headerlink" title="Several Writing Methods and Differences of setState"></a>Several Writing Methods and Differences of setState</h2><h3 id="writing-Method-1-object-form"><a href="#writing-Method-1-object-form" class="headerlink" title="writing Method 1: object form"></a>writing Method 1: object form</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.setState(&#123; count: this.state.count + 1 &#125;);</span><br></pre></td></tr></table></figure>
+
+<p>disadvantages: <code>this.state </code>it is updated asynchronously. If it depends on the previous value, an error may occur.</p>
+<h3 id="Writing-Method-2-functional-form-recommend"><a href="#Writing-Method-2-functional-form-recommend" class="headerlink" title="Writing Method 2: functional form (recommend)"></a>Writing Method 2: functional form (recommend)</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">this.setState((prevState, props) =&gt; (&#123;</span><br><span class="line">  count: prevState.count + 1</span><br><span class="line">&#125;));</span><br></pre></td></tr></table></figure>
+
+<p>pros: Ensure you get the latest <code>state </code>suitable for use in continuous updates.</p>
+<h3 id="Writing-method-3-With-callback-function"><a href="#Writing-method-3-With-callback-function" class="headerlink" title="Writing method 3: With callback function"></a>Writing method 3: With callback function</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">this.setState(&#123; count: 1 &#125;, () =&gt; &#123;</span><br><span class="line">  console.log(&#x27;State updated&#x27;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>for scenarios where you want to execute some logic immediately after a state update.</p>
+<hr>
+<h2 id="Batch-mechanism"><a href="#Batch-mechanism" class="headerlink" title="Batch mechanism"></a>Batch mechanism</h2><p>react. <code>setState </code>in a certain environment. <strong>Asynchronous</strong> , which refers to “state updates and component re-rendering are done asynchronously”, not to setTimeout asynchronously.</p>
+<h3 id="Default-Batch-Environment"><a href="#Default-Batch-Environment" class="headerlink" title="Default Batch Environment"></a>Default Batch Environment</h3><ul>
+<li>React synthetic event</li>
+<li>life cycle function</li>
+<li><code>ReactDOM.unstable_batchedUpdates </code></li>
+</ul>
+<h3 id="non-Batch-Environment-status-takes-effect-immediately"><a href="#non-Batch-Environment-status-takes-effect-immediately" class="headerlink" title="non-Batch Environment (status takes effect immediately)"></a>non-Batch Environment (status takes effect immediately)</h3><ul>
+<li><code>setTimeout </code>,<code>setInterval </code>, Native Events</li>
+<li><code>Promise.then </code></li>
+</ul>
+<p>but starting with React 18, use <code>createRoot </code>when, <strong>batch processing is automatically enabled for all scenarios</strong> , even in promises, setTimeout.</p>
+<hr>
+<h2 id="illustration-setState-call-chain-simplified-version"><a href="#illustration-setState-call-chain-simplified-version" class="headerlink" title="illustration: setState call chain (simplified version)"></a>illustration: setState call chain (simplified version)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">setState() </span><br><span class="line">  ↓</span><br><span class="line">enqueueUpdate()</span><br><span class="line">  ↓</span><br><span class="line">markUpdate()</span><br><span class="line">  ↓</span><br><span class="line">scheduleUpdateOnFiber()</span><br><span class="line">  ↓</span><br><span class="line">performConcurrentWorkOnRoot()</span><br><span class="line">  ↓</span><br><span class="line">renderRoot() → reconcile → fiber diff</span><br><span class="line">  ↓</span><br><span class="line">commitRoot() → DOM 更新 + 生命周期</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="interview-answer-What-did-setState-In-React-class-component-do"><a href="#interview-answer-What-did-setState-In-React-class-component-do" class="headerlink" title="interview answer: What did setState In React class component do?"></a>interview answer: What did setState In React class component do?</h2><p>Class component call in React <code>setState </code>will trigger a series of processes. First, it puts the status update into the update queue and marks the current component as “pending update”. React determines whether batch processing is possible and schedules update tasks in the scheduler. After that, we enter the coordination stage, compare the old and new Virtual DOM by building a new Fiber tree, and find out the changed parts. Finally, it enters the commit phase, actually updates the DOM, and calls the lifecycle method.</p>
+<p>In addition, <code>setState </code>it is asynchronous in nature and merges multiple updates for performance optimization. It is recommended to use functional in scenarios that depend on the previous state. <code>setState </code>make sure the logic is correct.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>in The React class component<code>setState </code>although it looks like a simple state modification method, it hides a complex scheduling and update mechanism behind it. It not only updates the component state, but also pulls out the complete flow of Fiber scheduling, batch optimization, update queue management, Virtual DOM Diff, DOM update, and lifecycle hooks.</p>
+<p>Understanding these principles is critical to optimizing component performance, avoiding unnecessary re-rendering, and properly organizing state update logic. Although modern development prefers to use function components and Hooks, master class components. <code>setState </code>the principle is still the skill reserve that senior React engineers should have.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

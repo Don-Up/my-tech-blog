@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="How can function components avoid the closure trapForewordthe React function component implements state and side effect management through Hooks, whic"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How can function components avoid the closure trap"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="How can function components avoid the closure trapForewordthe React function component implements state and side effect management through Hooks, whic"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How can function components avoid the closure trap - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How can function components avoid the closure trap</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-06-16
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="How-can-function-components-avoid-the-closure-trap"><a href="#How-can-function-components-avoid-the-closure-trap" class="headerlink" title="How can function components avoid the closure trap"></a>How can function components avoid the closure trap</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>the React function component implements state and side effect management through Hooks, which greatly improves the flexibility and expression ability of the component. However, the closure feature in function components also brings about a common problem of “closure traps”, resulting in state or variable capture exceptions, data out of sync, event processors referencing outdated state, and other imperceptible bugs.</p>
+<p>This article will analyze the causes of closure traps in function components in detail, combine practical cases, explore a variety of effective ways to avoid closure traps, and help developers write more robust and maintainable function component code.</p>
+<hr>
+<h2 id="Cause-Analysis-of-Closure-Trap"><a href="#Cause-Analysis-of-Closure-Trap" class="headerlink" title="Cause Analysis of Closure Trap"></a>Cause Analysis of Closure Trap</h2><p>the JavaScript function forms a closure, and the variable referenced inside the function is a snapshot of the variable in the environment at the time of definition. In The React function component, the event handler or side effect function often captures a snapshot of the state at the time of rendering. If the reference in the closure is still the old value after the state update, it will cause a logical error.</p>
+<p>For example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">function Counter() &#123;</span><br><span class="line">  const [count, setCount] = React.useState(0);</span><br><span class="line"></span><br><span class="line">  function handleAlert() &#123;</span><br><span class="line">    setTimeout(() =&gt; &#123;</span><br><span class="line">      alert(count);</span><br><span class="line">    &#125;, 1000);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return (</span><br><span class="line">    &lt;&gt;</span><br><span class="line">      &lt;p&gt;&#123;count&#125;&lt;/p&gt;</span><br><span class="line">      &lt;button onClick=&#123;() =&gt; setCount(count + 1)&#125;&gt;增加&lt;/button&gt;</span><br><span class="line">      &lt;button onClick=&#123;handleAlert&#125;&gt;显示count&lt;/button&gt;</span><br><span class="line">    &lt;/&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>after clicking “Show count”, even if the user has clicked “Add” many times, the pop-up window still shows the old one when the button was clicked. <code>count </code>this is caused by the closure capturing the old state.</p>
+<hr>
+<h2 id="Common-ways-to-avoid-closure-traps"><a href="#Common-ways-to-avoid-closure-traps" class="headerlink" title="Common ways to avoid closure traps"></a>Common ways to avoid closure traps</h2><h3 id="1-Use-Functional-Updates"><a href="#1-Use-Functional-Updates" class="headerlink" title="1. Use Functional Updates"></a>1. Use Functional Updates</h3><p>pass in a function in the status update to ensure that the action is performed based on the latest status.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setCount(prevCount =&gt; prevCount + 1);</span><br></pre></td></tr></table></figure>
+
+<p>However, this method only solves the problem of closures in state updates and does not solve the problem of reading outdated state in asynchronous callbacks.</p>
+<h3 id="2-Use-useRefHold-Latest-Status"><a href="#2-Use-useRefHold-Latest-Status" class="headerlink" title="2. Use useRefHold Latest Status"></a>2. Use <code>useRef</code>Hold Latest Status</h3><p>by <code>useRef </code>create a variable reference container and update it in time. <code>.current </code>property, the callback function uses the reference when reading to avoid reading out-of-date state.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">const countRef = React.useRef(count);</span><br><span class="line">React.useEffect(() =&gt; &#123;</span><br><span class="line">  countRef.current = count;</span><br><span class="line">&#125;, [count]);</span><br><span class="line"></span><br><span class="line">function handleAlert() &#123;</span><br><span class="line">  setTimeout(() =&gt; &#123;</span><br><span class="line">    alert(countRef.current);</span><br><span class="line">  &#125;, 1000);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>In this way, even if the state changes, the callback function accesses the latest state.</p>
+<h3 id="3-In-useEffect-declaring-dependencies-in"><a href="#3-In-useEffect-declaring-dependencies-in" class="headerlink" title="3. In useEffect declaring dependencies in"></a>3. In <code>useEffect </code>declaring dependencies in</h3><p>side-effect functions must be declared as dependent if they depend on state or props, ensuring that the callback is updated every time it changes.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">React.useEffect(() =&gt; &#123;</span><br><span class="line">  function doSomething() &#123;</span><br><span class="line">    console.log(count);</span><br><span class="line">  &#125;</span><br><span class="line">  doSomething();</span><br><span class="line">&#125;, [count]);</span><br></pre></td></tr></table></figure>
+
+<p>Avoiding the omitted dependency causes the side effect that the closure captures the old value.</p>
+<h3 id="4-Use-useCallback-and-useMemo"><a href="#4-Use-useCallback-and-useMemo" class="headerlink" title="4. Use useCallback and useMemo "></a>4. Use <code>useCallback </code>and <code>useMemo </code></h3><p>these two hooks bind functions or compute values to control the update timing of function instances, avoiding unnecessary closures or performance overhead.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const handleClick = React.useCallback(() =&gt; &#123;</span><br><span class="line">  console.log(count);</span><br><span class="line">&#125;, [count]);</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-The-latest-state-is-referenced-within-the-event-handler"><a href="#5-The-latest-state-is-referenced-within-the-event-handler" class="headerlink" title="5. The latest state is referenced within the event handler."></a>5. The latest state is referenced within the event handler.</h3><p>Use the latest state or variable directly in the event handler, or in conjunction with the above method to ensure that the Accessed reference is up-to-date.</p>
+<hr>
+<h2 id="Code-comparison-example"><a href="#Code-comparison-example" class="headerlink" title="Code comparison example"></a>Code comparison example</h2><table>
+<thead>
+<tr>
+<th>example of a closure trap</th>
+<th>examples of Remediation Scenario</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>pop-up window shows old status</td>
+<td>use <code>useRef</code>Hold the latest status and access <code>countRef.current </code></td>
+</tr>
+<tr>
+<td>event Handler References Old State</td>
+<td>use <code>useCallback </code>binding a function that depends on the latest state</td>
+</tr>
+<tr>
+<td>side effect dependency not declared, closure references old variable</td>
+<td>in <code>useEffect </code>add related variables to the dependency array</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="interview-answer-example"><a href="#interview-answer-example" class="headerlink" title="interview answer example"></a>interview answer example</h2><p><strong>question: What are the closure traps in a function component? How to avoid?</strong></p>
+<p>Example answer:</p>
+<p>A closure trap is when a callback function or side-effect function in a function component captures the old state at the time of rendering, causing asynchronous logic to access outdated data and create a bug. Avoidance methods include: using functional updates to ensure that the state is incremented correctly; <code>useRef </code>hold and read the latest state; In <code>useEffect </code>declare all dependencies in the dependency array; <code>useCallback </code>cache callbacks with dependencies; Ensure that the latest state is accessed in the event handler. Combined use of these methods can effectively avoid the closure trap.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>closures are the basic mechanism of JavaScript and are a common source of pitfalls in React function components. Understand the characteristics of closure capture state and use it appropriately.<code>useRef </code>, functional updates, dependency declarations, and cached functions can help developers effectively avoid the state synchronization problem caused by closures. Mastering these techniques not only improves the robustness of the code, but also makes asynchronous and event logic clearer and more reliable.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
