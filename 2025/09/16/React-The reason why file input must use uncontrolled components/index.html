@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="The reason why file input must use uncontrolled componentsForewordwhen building Web applications, file upload is a very common requirement, such as us"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="The reason why file input must use uncontrolled components"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="The reason why file input must use uncontrolled componentsForewordwhen building Web applications, file upload is a very common requirement, such as us"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>The reason why file input must use uncontrolled components - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>The reason why file input must use uncontrolled components</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-09-16
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="The-reason-why-file-input-must-use-uncontrolled-components"><a href="#The-reason-why-file-input-must-use-uncontrolled-components" class="headerlink" title="The reason why file input must use uncontrolled components"></a>The reason why file input must use uncontrolled components</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>when building Web applications, file upload is a very common requirement, such as user avatar upload, document submission, image batch processing, etc. In React, we often face a question: why is the file uploaded <code>&lt;input type=&quot;file&quot;&gt;</code>be sure to use <strong>uncontrolled components</strong> without using controlled components like a normal input box?</p>
+<p>This article will analyze this issue from the perspective of the principle of HTML file input, React’s controlled component model, browser restrictions, etc., and combine code examples with actual development experience to give you a thorough understanding of “Why file input must use uncontrolled components”.</p>
+<hr>
+<h2 id="Particularity-of-file-input"><a href="#Particularity-of-file-input" class="headerlink" title="Particularity of file input"></a>Particularity of file input</h2><p>the file input element is different from ordinary text input in that it involves data from the local file system rather than pure string information. After the user selects the file, the browser will pass the file data through <code>FileList </code>object is mounted on the DOM element, but this part of the data is <strong>read-only</strong> , and <strong>cannot be directly modified by JavaScript</strong> .</p>
+<p>For example:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;file&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>after the user selects the file on the page, the following structure will be generated on the DOM element:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">input.files  // FileList &#123; 0: File, length: 1 &#125;</span><br></pre></td></tr></table></figure>
+
+<p>this is a read-only structure that the browser exposes to JavaScript.<strong>Cannot change file selection by setting value of input</strong> .</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">input.value = &#x27;C:\\fakepath\\file.png&#x27;  // 无效操作，浏览器会忽略此行为</span><br></pre></td></tr></table></figure>
+
+<p>From a security perspective, the browser strictly prohibits scripts from setting file paths to prevent malicious programs from accessing or uploading local files without the user’s knowledge.</p>
+<hr>
+<h2 id="Behavioral-models-of-controlled-components"><a href="#Behavioral-models-of-controlled-components" class="headerlink" title="Behavioral models of controlled components"></a>Behavioral models of controlled components</h2><p>in React, the core characteristics of the controlled component are: <strong>the state of the component is controlled by React, and the value of input is controlled by props or state.</strong> . Event is triggered every time the user enters, React uses <code>setState </code>update the value, then re-render the DOM and pass the new value into the input element.</p>
+<p>For a normal controlled input box:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [value, setValue] = <span class="title function_">useState</span>(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">&lt;input type=<span class="string">&quot;text&quot;</span> value=&#123;value&#125; onChange=&#123;<span class="function">(<span class="params">e</span>) =&gt;</span> <span class="title function_">setValue</span>(e.<span class="property">target</span>.<span class="property">value</span>)&#125; /&gt;</span><br></pre></td></tr></table></figure>
+
+<p>that’s no problem at all, because <code>value </code>is a string, React can be passed directly through <code>props.value </code>controls the contents of the DOM.</p>
+<p>But <code>&lt;input type=&quot;file&quot;&gt;</code>try to write this:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [file, setFile] = <span class="title function_">useState</span>(<span class="literal">null</span>)</span><br><span class="line"></span><br><span class="line">&lt;input type=<span class="string">&quot;file&quot;</span> value=&#123;file&#125; onChange=&#123;<span class="function">(<span class="params">e</span>) =&gt;</span> <span class="title function_">setFile</span>(e.<span class="property">target</span>.<span class="property">files</span>[<span class="number">0</span>])&#125; /&gt;</span><br></pre></td></tr></table></figure>
+
+<p>this results in an error because:</p>
+<ol>
+<li>React is trying <code>value=&#123;file&#125; </code>set to input.</li>
+<li>The browser does not allow JavaScript to set the file input box. <code>value </code>.</li>
+<li>The attempt to React to control the DOM fails, throwing a warning or ignoring the update.</li>
+</ol>
+<p>Therefore, <strong>file input cannot be a controlled component</strong> , React officials also explicitly recommend using <code>ref </code>handling file uploads in an uncontrolled manner.</p>
+<hr>
+<h2 id="Correct-Writing-of-Uncontrolled-Components"><a href="#Correct-Writing-of-Uncontrolled-Components" class="headerlink" title="Correct Writing of Uncontrolled Components"></a>Correct Writing of Uncontrolled Components</h2><p>since it cannot be controlled, we must use uncontrolled components to handle file input:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useRef &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">FileUploader</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> fileInputRef = <span class="title function_">useRef</span>(<span class="literal">null</span>)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">handleSubmit</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> file = fileInputRef.<span class="property">current</span>.<span class="property">files</span>[<span class="number">0</span>]</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;上传文件：&#x27;</span>, file)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;file&quot;</span> <span class="attr">ref</span>=<span class="string">&#123;fileInputRef&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;handleSubmit&#125;</span>&gt;</span>提交<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>the file here is directly accessed to DOM through ref. <code>files </code>property rather than through state binding. This is in line with the design philosophy of uncontrolled components and also avoids unnecessary intervention by React.</p>
+<hr>
+<h2 id="Constraints-of-Browser-Security-Mechanism"><a href="#Constraints-of-Browser-Security-Mechanism" class="headerlink" title="Constraints of Browser Security Mechanism"></a>Constraints of Browser Security Mechanism</h2><p>browser restrictions on file input are based on user privacy and security considerations. JavaScript scripts are not allowed to set the file path, mainly to prevent the following scenarios:</p>
+<ul>
+<li>the script secretly specifies to upload sensitive files.</li>
+<li>Users are forced to upload files without knowing</li>
+<li>third-party script injection attempts to access local system content</li>
+</ul>
+<p>therefore, the input[file] <code>value</code>It is completely controlled by the browser, and the developer can only passively read it, but cannot actively set it.</p>
+<hr>
+<h2 id="Interview-Answer-Why-can-only-be-uploaded-with-uncontrolled-components"><a href="#Interview-Answer-Why-can-only-be-uploaded-with-uncontrolled-components" class="headerlink" title="Interview Answer: Why can only be uploaded with uncontrolled components?"></a>Interview Answer: Why can only be uploaded with uncontrolled components?</h2><p>The controlled component in React essentially controls the state of the component through props, such as the value of input. But <code>&lt;input type=&quot;file&quot;&gt;</code>, value actually represents the file path selected by the user. This value is read-only for security reasons, and the browser prohibits JavaScript from setting it.</p>
+<p>Therefore, React cannot manage this DOM property in a controlled way, otherwise it will throw a warning or the behavior will be invalid. The correct way is to use uncontrolled components, that is, through. <code>ref </code>access the real DOM node, read <code>files </code>list to get the uploaded files.</p>
+<p>The summary is: <strong>the controlled nature of the controlled component conflicts with the browser’s restrictions on file input and must be handled in an uncontrolled manner instead</strong> .</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>React is processed. <code>&lt;input type=&quot;file&quot;&gt;</code>The reason why the controlled component cannot be used is that the browser prohibits the program from setting the file path for user safety. The controlled model of React requires that the input value be controlled through the value attribute, but this is not feasible for file input.</p>
+<p>Therefore, in actual development, we must use uncontrolled components with ref to obtain the uploaded file. Understanding the principles behind this can not only avoid code errors, but also enhance the understanding of React design principles and browser behavior mechanisms.</p>
+<p>With this knowledge, you can be more leisurely when building Upload modules or form functions, and write code that conforms to the specifications and is robust.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

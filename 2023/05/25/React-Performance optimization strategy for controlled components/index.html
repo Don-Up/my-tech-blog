@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Performance optimization strategy for controlled componentsForewordin The React, Controlled Components refers to those components whose input values ("/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Performance optimization strategy for controlled components"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Performance optimization strategy for controlled componentsForewordin The React, Controlled Components refers to those components whose input values ("/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Performance optimization strategy for controlled components - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Performance optimization strategy for controlled components</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-05-25
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Performance-optimization-strategy-for-controlled-components"><a href="#Performance-optimization-strategy-for-controlled-components" class="headerlink" title="Performance optimization strategy for controlled components"></a>Performance optimization strategy for controlled components</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in The React, <strong>Controlled Components</strong> <strong>refers to those components whose input values (such as the value of a form item) are maintained by the component’s own state. This model has strong advantages in terms of logical control and data consistency, but it also comes</strong> <strong>performance bottleneck</strong> , especially in scenarios with frequent input or complex component nesting.</p>
+<p>For example, the form input is bound to <code>state </code>, each key press will trigger a re-rendering. If the optimization strategy is not in place, it will cause problems such as page performance degradation and input delay.</p>
+<p>This article will delve into the causes of performance problems of controlled components and give corresponding optimization solutions, combining source code principles, practical techniques, and typical use cases to help you build a higher-performance form system.</p>
+<hr>
+<h2 id="Sources-of-performance-bottlenecks"><a href="#Sources-of-performance-bottlenecks" class="headerlink" title="Sources of performance bottlenecks"></a>Sources of performance bottlenecks</h2><p>controlled component performance issues arise from the following:</p>
+<p><strong>1. Re-rendering caused by frequent setState.</strong></p>
+<p>Controlled component triggers every user input <code>onChange </code>callback, modify the state, and then re-render the entire component tree, with high performance overhead.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">TextInput</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [value, setValue] = <span class="title function_">useState</span>(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">value</span>=<span class="string">&#123;value&#125;</span> <span class="attr">onChange</span>=<span class="string">&#123;(e)</span> =&gt;</span> setValue(e.target.value)&#125; /&gt;</span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>When input is frequent (e. G. The user types quickly on the keyboard), <code>setValue </code>triggers continuously, causing invalid updates to parent or sibling components.</p>
+<p><strong>2. Shallow comparison failure due to unreasonable data structure</strong></p>
+<p>if you put the entire form value into a large object:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [form, setForm] = <span class="title function_">useState</span>(&#123; <span class="attr">name</span>: <span class="string">&#x27;&#x27;</span>, <span class="attr">age</span>: <span class="string">&#x27;&#x27;</span> &#125;)</span><br></pre></td></tr></table></figure>
+
+<p>updating one of the fields will also trigger the entire object to be recreated, and React’s shallow comparison mechanism will think that props has changed, resulting in unnecessary rendering of subcomponents.</p>
+<p><strong>3. Subcomponents are not memoized.</strong></p>
+<p>When the parent component of the controlled component is updated, if the child component is not optimized for performance, it will all be re-rendered, even if the props does not change.</p>
+<hr>
+<h2 id="Detailed-explanation-of-optimization-strategy"><a href="#Detailed-explanation-of-optimization-strategy" class="headerlink" title="Detailed explanation of optimization strategy"></a>Detailed explanation of optimization strategy</h2><h3 id="use-React-memo-to-avoid-invalid-updates-of-subcomponents"><a href="#use-React-memo-to-avoid-invalid-updates-of-subcomponents" class="headerlink" title="use React.memo to avoid invalid updates of subcomponents"></a>use React.memo to avoid invalid updates of subcomponents</h3><p>use subcomponents <code>React.memo </code>wrap, let it skip rendering when props don’t change.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">Input</span> = <span class="title class_">React</span>.<span class="title function_">memo</span>(<span class="function">(<span class="params">&#123; value, onChange &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">value</span>=<span class="string">&#123;value&#125;</span> <span class="attr">onChange</span>=<span class="string">&#123;onChange&#125;</span> /&gt;</span></span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>Cooperation <code>useCallback </code>use:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> handleChange = <span class="title function_">useCallback</span>(<span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="title function_">setValue</span>(e.<span class="property">target</span>.<span class="property">value</span>)</span><br><span class="line">&#125;, [])</span><br></pre></td></tr></table></figure>
+
+<p>you can avoid memo invalidation caused by changes in function references.</p>
+<hr>
+<h3 id="Split-local-state-to-avoid-overall-update-of-large-objects"><a href="#Split-local-state-to-avoid-overall-update-of-large-objects" class="headerlink" title="Split local state to avoid overall update of large objects"></a>Split local state to avoid overall update of large objects</h3><p>instead of storing all input states in one object, split them into multiple independent states to reduce unnecessary merging and passing.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [name, setName] = <span class="title function_">useState</span>(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> [age, setAge] = <span class="title function_">useState</span>(<span class="string">&#x27;&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>When <code>name </code>when updating, does not throw <code>age </code>the rendering of the related component.</p>
+<hr>
+<h3 id="Reduce-rendering-frequency-Throttling-and-anti-shake"><a href="#Reduce-rendering-frequency-Throttling-and-anti-shake" class="headerlink" title="Reduce rendering frequency: Throttling and anti-shake"></a>Reduce rendering frequency: Throttling and anti-shake</h3><p>If the input frequency is extremely high, for example, the search box inputs linkage requests, you can optimize the user experience through debounce processing.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> handleChange = <span class="title function_">debounce</span>(<span class="function">(<span class="params">value</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="title function_">setSearch</span>(value)</span><br><span class="line">&#125;, <span class="number">300</span>)</span><br><span class="line"></span><br><span class="line">&lt;input onChange=&#123;<span class="function">(<span class="params">e</span>) =&gt;</span> <span class="title function_">handleChange</span>(e.<span class="property">target</span>.<span class="property">value</span>)&#125; /&gt;</span><br></pre></td></tr></table></figure>
+
+<p>Or use <code>useDeferredValue </code>(React 18+):</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> deferredValue = <span class="title function_">useDeferredValue</span>(value)</span><br></pre></td></tr></table></figure>
+
+<p>this API allows low-priority value updates to be executed in idle time, thus avoiding jamming caused by high-frequency updates.</p>
+<hr>
+<h3 id="Optimize-large-forms-or-long-lists-using-virtualization-technology"><a href="#Optimize-large-forms-or-long-lists-using-virtualization-technology" class="headerlink" title="Optimize large forms or long lists using virtualization technology"></a>Optimize large forms or long lists using virtualization technology</h3><p>if you need to display a large number of controlled components (e. G., dynamic form arrays), you can use virtual scrolling techniques (e. G. <code>react-window </code>or <code>react-virtualized </code>) Renders only the visible area of the input.</p>
+<p>This greatly reduces the number of controlled component renderings and improves performance at the root.</p>
+<hr>
+<h3 id="Asynchronous-updates-avoid-synchronous-blocking"><a href="#Asynchronous-updates-avoid-synchronous-blocking" class="headerlink" title="Asynchronous updates avoid synchronous blocking"></a>Asynchronous updates avoid synchronous blocking</h3><p>React 18 starts <code>startTransition </code>to mark low-priority updates (such as UI states that are not needed immediately) to avoid blocking critical interactions.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">startTransition</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="title function_">setValue</span>(inputValue)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="Early-initialization-delayed-rendering"><a href="#Early-initialization-delayed-rendering" class="headerlink" title="Early initialization, delayed rendering"></a>Early initialization, delayed rendering</h3><p>for some input items that do not appear immediately (such as tab pages and pop-up windows), you can delay their rendering or initialize their state in advance when idle.</p>
+<hr>
+<h2 id="Interview-answer-What-are-the-performance-optimization-strategies-for-controlled-components"><a href="#Interview-answer-What-are-the-performance-optimization-strategies-for-controlled-components" class="headerlink" title="Interview answer: What are the performance optimization strategies for controlled components?"></a>Interview answer: What are the performance optimization strategies for controlled components?</h2><p>The performance problem of the controlled component is mainly due to the component re-rendering caused by each input triggering setState. Optimization strategies include:</p>
+<ol>
+<li>use <code>React.memo </code>avoid repeated rendering of subcomponents</li>
+<li>cooperation <code>useCallback </code>and <code>useMemo </code>avoid function and object reference changes</li>
+<li>split local states to reduce the scope of state changes</li>
+<li>use debounce, throttle, or React <code>useDeferredValue </code></li>
+<li>use virtualization technologies for a large number of input items such <code>react-window </code></li>
+<li>used In React 18 <code>startTransition </code>control Update Priority</li>
+<li>delayed rendering for inputs that are not immediately needed</li>
+</ol>
+<p>these measures can help maintain smooth response and improve performance in large forms or high-frequency interaction scenarios.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>while controlled components make state management and data flow clearer, they also introduce performance challenges. Especially in the case of frequent form input and complex component nesting, if not optimized, it may cause obvious UI stuck.</p>
+<p>Reasonable use of React rendering optimization methods, such<code>memo </code>, <code>useCallback </code>, status split, delayed update, etc., can effectively relieve performance pressure. At the same time, master the new features of React 18, such <code>useDeferredValue </code>and <code>startTransition </code>it can also bring new ideas for performance optimization.</p>
+<p>Understanding and practicing these mechanisms will not only help you build a front-end system with a better user experience, but also demonstrate your deep mastery of React principles and performance control during the interview.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

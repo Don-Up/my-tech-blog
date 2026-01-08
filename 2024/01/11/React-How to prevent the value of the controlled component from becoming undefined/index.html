@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="How to prevent the value of the controlled component from becoming undefinedForewordin React, the controlled component is bound by value property and "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How to prevent the value of the controlled component from becoming undefined"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="How to prevent the value of the controlled component from becoming undefinedForewordin React, the controlled component is bound by value property and "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How to prevent the value of the controlled component from becoming undefined - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How to prevent the value of the controlled component from becoming undefined</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-01-11
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="How-to-prevent-the-value-of-the-controlled-component-from-becoming-undefined"><a href="#How-to-prevent-the-value-of-the-controlled-component-from-becoming-undefined" class="headerlink" title="How to prevent the value of the controlled component from becoming undefined"></a>How to prevent the value of the controlled component from becoming undefined</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in React, the controlled component is bound by <code>value </code>property and event handlers to implement state control over the form input. This method brings the advantages of one-way data flow and component state synchronization, but it also encounters some common problems, one of which is typical:</p>
+<p><strong>of controlled components</strong> <code>**value** </code><strong>into</strong> <code>**undefined** </code><strong>, causing the component to go to an “uncontrolled” state or an input exception.</strong></p>
+<p>This problem often confuses developers, especially when it comes to complex forms, asynchronous data loading, or state management confusion. This paper will systematically comb the lead <code>value </code>into <code>undefined </code>of the reasons, propose avoidance scenarios, and illustrate them with sample code to help you write robust controlled components.</p>
+<hr>
+<h2 id="Controlled-Components-value-into-undefined-analysis-of-the-causes"><a href="#Controlled-Components-value-into-undefined-analysis-of-the-causes" class="headerlink" title="Controlled Components value into undefined analysis of the causes"></a>Controlled Components <code>value </code>into <code>undefined </code>analysis of the causes</h2><p>React controlled components rely on <code>value </code>the explicit assignment. When <code>value </code>for <code>undefined</code>React will automatically treat the component as an uncontrolled component, resulting in control failure and abnormal input behavior. Cause <code>value </code>becomes <code>undefined </code>the common causes are:</p>
+<p><strong>1. State initial value is not defined</strong></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [inputValue, setInputValue] = <span class="title function_">useState</span>()</span><br><span class="line">&lt;input value=&#123;inputValue&#125; onChange=&#123;<span class="function"><span class="params">e</span> =&gt;</span> <span class="title function_">setInputValue</span>(e.<span class="property">target</span>.<span class="property">value</span>)&#125; /&gt;</span><br></pre></td></tr></table></figure>
+
+<p>at this time, the initial value is <code>undefined </code>, React reports a warning, and the input box behaves abnormally.</p>
+<p><strong>2. The value passed in from props is not initialized or the asynchronous load is not completed.</strong></p>
+<p>For example, the parent component passes in <code>props.value </code>when the initial <code>undefined </code>, default value processing is not done.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Input</span>(<span class="params">&#123; value &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">value</span>=<span class="string">&#123;value&#125;</span> /&gt;</span></span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 使用时：&lt;Input value=&#123;undefined&#125; /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>3. Object or array field access error.</strong></p>
+<p>If the form state is an object structure, it is not initialized correctly or the access path is wrong, resulting in a value <code>undefined </code>.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [form, setForm] = <span class="title function_">useState</span>(&#123;&#125;)</span><br><span class="line">&lt;input value=&#123;form.<span class="property">name</span>&#125; /&gt;  <span class="comment">// form.name 未定义</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>4. Event handler update logic error.</strong></p>
+<p>The state update is not assigned in the event, resulting in the next rendering. <code>value </code>into <code>undefined </code>.</p>
+<hr>
+<h2 id="Avoidvalue-into-undefined-the-strategy"><a href="#Avoidvalue-into-undefined-the-strategy" class="headerlink" title="Avoidvalue into undefined the strategy"></a>Avoid<code>value </code>into <code>undefined </code>the strategy</h2><h3 id="1-Explicitly-set-the-initial-value-for-state"><a href="#1-Explicitly-set-the-initial-value-for-state" class="headerlink" title="1. Explicitly set the initial value for state"></a>1. Explicitly set the initial value for state</h3><p>make sure that state initialization has reasonable default values.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [inputValue, setInputValue] = <span class="title function_">useState</span>(<span class="string">&#x27;&#x27;</span>)  <span class="comment">// 空字符串作为初始值</span></span><br></pre></td></tr></table></figure>
+
+<p>This way, when the component is first rendered,, <code>value </code>will never be <code>undefined </code>.</p>
+<h3 id="2-Process-asynchronous-data-and-set-default-values"><a href="#2-Process-asynchronous-data-and-set-default-values" class="headerlink" title="2. Process asynchronous data and set default values."></a>2. Process asynchronous data and set default values.</h3><p>For asynchronously loaded props, use default parameters or logical assignments to avoid undefined.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Input</span>(<span class="params">&#123; value = <span class="string">&#x27;&#x27;</span> &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">value</span>=<span class="string">&#123;value&#125;</span> /&gt;</span></span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Or the parent component uses</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="title class_">Input</span> value=&#123;userInput || <span class="string">&#x27;&#x27;</span>&#125; /&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-Secure-access-to-object-fields"><a href="#3-Secure-access-to-object-fields" class="headerlink" title="3. Secure access to object fields"></a>3. Secure access to object fields</h3><p>for form data stored with objects, initialize the complete structure first, or use an optional chain (? .) with the default value.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [form, setForm] = <span class="title function_">useState</span>(&#123; <span class="attr">name</span>: <span class="string">&#x27;&#x27;</span>, <span class="attr">age</span>: <span class="number">0</span> &#125;)</span><br><span class="line"></span><br><span class="line">&lt;input value=&#123;form.<span class="property">name</span> ?? <span class="string">&#x27;&#x27;</span>&#125; onChange=&#123;...&#125; /&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-The-assignment-is-guaranteed-to-be-valid-in-the-event-handler"><a href="#4-The-assignment-is-guaranteed-to-be-valid-in-the-event-handler" class="headerlink" title="4. The assignment is guaranteed to be valid in the event handler."></a>4. The assignment is guaranteed to be valid in the event handler.</h3><p>Avoid situations where a valid value is not passed in when updating.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">handleChange</span> = (<span class="params">e</span>) =&gt; &#123;</span><br><span class="line">  <span class="title function_">setInputValue</span>(e.<span class="property">target</span>.<span class="property">value</span> || <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-For-number-type-input-avoid-undefined-incoming"><a href="#5-For-number-type-input-avoid-undefined-incoming" class="headerlink" title="5. For number type input, avoid undefined incoming"></a>5. For number type input, avoid <code>undefined </code>incoming</h3><p><code>&lt;input type=&quot;number&quot; /&gt;</code>special attention is required because <code>value </code>can only be a string or an empty string.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [num, setNum] = <span class="title function_">useState</span>(<span class="string">&#x27;0&#x27;</span>)</span><br><span class="line"></span><br><span class="line">&lt;input</span><br><span class="line">  type=<span class="string">&quot;number&quot;</span></span><br><span class="line">  value=&#123;num&#125;</span><br><span class="line">  onChange=&#123;<span class="function"><span class="params">e</span> =&gt;</span> <span class="title function_">setNum</span>(e.<span class="property">target</span>.<span class="property">value</span> || <span class="string">&#x27;&#x27;</span>)&#125;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Code-sample-comprehensive-description"><a href="#Code-sample-comprehensive-description" class="headerlink" title="Code sample comprehensive description"></a>Code sample comprehensive description</h2><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span>, &#123; useState, useEffect &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">SafeInput</span>(<span class="params">&#123; initialValue &#125;</span>) &#123;</span><br><span class="line">  <span class="comment">// 明确初始化值为空字符串</span></span><br><span class="line">  <span class="keyword">const</span> [value, setValue] = <span class="title function_">useState</span>(initialValue ?? <span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">  <span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// props 更新时同步更新 state，且保证不为 undefined</span></span><br><span class="line">    <span class="title function_">setValue</span>(initialValue ?? <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">  &#125;, [initialValue])</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">handleChange</span> = (<span class="params">e</span>) =&gt; &#123;</span><br><span class="line">    <span class="comment">// 事件处理函数避免赋 undefined</span></span><br><span class="line">    <span class="title function_">setValue</span>(e.<span class="property">target</span>.<span class="property">value</span> ?? <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">value</span>=<span class="string">&#123;value&#125;</span> <span class="attr">onChange</span>=<span class="string">&#123;handleChange&#125;</span> /&gt;</span></span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>write like this, <code>value </code>will never be <code>undefined </code>, the component is stable and there will be no uncontrolled warnings.</p>
+<hr>
+<h2 id="Interview-answer-Why-can’t-the-value-of-a-controlled-component-be-undefined-How-to-avoid"><a href="#Interview-answer-Why-can’t-the-value-of-a-controlled-component-be-undefined-How-to-avoid" class="headerlink" title="Interview answer: Why can’t the value of a controlled component be undefined? How to avoid?"></a>Interview answer: Why can’t the value of a controlled component be undefined? How to avoid?</h2><p>Of controlled components <code>value </code>cannot be <code>undefined </code>because React will treat this as an uncontrolled component, causing a control failure and triggering a warning. To avoid this problem, you should ensure that the bound <code>value </code>always have a clear value (generally use empty strings. <code>&#39;&#39; </code>do the default value), whether it is the component’s own state or the props passed in by the parent component.</p>
+<p>Specific measures include:</p>
+<ul>
+<li>assign an initial value to the state variable (e. G. <code>useState(&#39;&#39;) </code>)</li>
+<li>default value processing for asynchronous or externally passed values (e. G. <code>value=&#123;props.value || &#39;&#39;&#125; </code>)</li>
+<li>avoid setting undefined values during event handling</li>
+</ul>
+<p>By these means, it is ensured that the input box is always in a controlled state and the robustness of the code is improved.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>in the controlled component <code>value </code>for <code>undefined </code>React is the source of common warnings and abnormal input problems, often caused by missing initial values, uninitialized asynchronous data, or state assignment errors. In order to avoid this problem, developers must develop the habit of assigning default initial values to state, safely handling external incoming data, and event handling to ensure valid assignments.</p>
+<p>Understanding and adhering to these principles can not only eliminate React warnings, but also improve the user input experience and component stability. In real projects, these details often determine the robustness and maintainability of the code.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

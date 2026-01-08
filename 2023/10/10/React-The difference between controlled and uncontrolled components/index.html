@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="The difference between controlled and uncontrolled componentsForewordwhen building forms in React, developers encounter two core concepts: Controlled "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="The difference between controlled and uncontrolled components"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="The difference between controlled and uncontrolled componentsForewordwhen building forms in React, developers encounter two core concepts: Controlled "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>The difference between controlled and uncontrolled components - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>The difference between controlled and uncontrolled components</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-10-10
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="The-difference-between-controlled-and-uncontrolled-components"><a href="#The-difference-between-controlled-and-uncontrolled-components" class="headerlink" title="The difference between controlled and uncontrolled components"></a>The difference between controlled and uncontrolled components</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>when building forms in React, developers encounter two core concepts: Controlled Components and Uncontrolled components. These terms refer to how components process user input and how data is stored. Understanding their essential differences not only helps to develop a more flexible UI, but also improves performance and maintainability by selecting a more appropriate implementation based on the scenario.</p>
+<p>This article will analyze in detail the definition, implementation, comparison of advantages and disadvantages, and usage scenarios of controlled and uncontrolled components to help you fully grasp the differences and application skills between the two.</p>
+<hr>
+<h2 id="What-is-a-Controlled-Component"><a href="#What-is-a-Controlled-Component" class="headerlink" title="What is a Controlled Component?"></a>What is a Controlled Component?</h2><p>The controlled component is passed by the React component. <code>state </code>component to have full control over its input values. Every time the user modifies the input box, an event is triggered. React synchronizes the new value to the state of the component through the event handler function, and then passes the updated value to the form control again through props.</p>
+<p>A typical controlled component is as follows:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useState &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">ControlledInput</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [value, setValue] = <span class="title function_">useState</span>(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">handleChange</span> = (<span class="params">e</span>) =&gt; &#123;</span><br><span class="line">    <span class="title function_">setValue</span>(e.<span class="property">target</span>.<span class="property">value</span>)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">value</span>=<span class="string">&#123;value&#125;</span> <span class="attr">onChange</span>=<span class="string">&#123;handleChange&#125;</span> /&gt;</span></span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>in this example, the value of input is <code>value </code>state control, any change in user input is passed through <code>onChange </code>the event is updated to the status tree of React. This pattern fully follows the “one-way data flow”, allowing the form behavior to be fully governed by React.</p>
+<hr>
+<h2 id="What-is-an-Uncontrolled-Component"><a href="#What-is-an-Uncontrolled-Component" class="headerlink" title="What is an Uncontrolled Component?"></a>What is an Uncontrolled Component?</h2><p>Uncontrolled components leave the management of input values to the DOM itself, rather than being controlled by React. React through <code>ref </code>to access the actual DOM node to get the value. It is more like a traditional HTML form, and the component itself does not interfere with the process of user input.</p>
+<p>Examples are as follows:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useRef &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">UncontrolledInput</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> inputRef = <span class="title function_">useRef</span>(<span class="literal">null</span>)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">handleSubmit</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="string">`输入值是：<span class="subst">$&#123;inputRef.current.value&#125;</span>`</span>)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">ref</span>=<span class="string">&#123;inputRef&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;handleSubmit&#125;</span>&gt;</span>提交<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>in this way, React does not track every change of the input, but only reads the actual DOM value when needed, which is especially suitable for some input scenarios with infrequent interaction.</p>
+<hr>
+<h2 id="Two-core-contrast"><a href="#Two-core-contrast" class="headerlink" title="Two core contrast"></a>Two core contrast</h2><table>
+<thead>
+<tr>
+<th>contrast dimension</th>
+<th>controlled Components</th>
+<th>uncontrolled components</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>state management mode</td>
+<td>with React state</td>
+<td>get the value by ref with the DOM’s own state</td>
+</tr>
+<tr>
+<td>data Flow</td>
+<td>unidirectional data flow</td>
+<td>data is maintained by DOM</td>
+</tr>
+<tr>
+<td>initialization mode</td>
+<td>initialize state with React</td>
+<td>default value with defaultValue or ref</td>
+</tr>
+<tr>
+<td>real-time control input value</td>
+<td>supported, onChange event synchronous triggering</td>
+<td>not supported, need to read manually after value change</td>
+</tr>
+<tr>
+<td>Coding complexity</td>
+<td>relatively High, maintenance condition required</td>
+<td>relatively lower, behavior closer to native HTML</td>
+</tr>
+<tr>
+<td>use Scenario</td>
+<td>form validation, dynamic validation, complex interaction</td>
+<td>file Upload, form with unchanged initial value, fast rendering scene</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="usage-recommendations-and-scenario-selection"><a href="#usage-recommendations-and-scenario-selection" class="headerlink" title="usage recommendations and scenario selection"></a>usage recommendations and scenario selection</h2><p>controlled components are suitable:</p>
+<ul>
+<li>need to dynamically verify input values</li>
+<li>there is associated logic between multiple form items</li>
+<li>form values need to be synchronized to other views or states in real time</li>
+<li>implement advanced interactions such as automatic form saving and rollback</li>
+</ul>
+<p>uncontrolled components are suitable:</p>
+<ul>
+<li>simple form or one-time input</li>
+<li>input values are not frequently externally dependent</li>
+<li>file Upload (input[type &#x3D; file] can only obtain the value through ref)</li>
+<li>performance-sensitive scenarios, avoid frequent setState</li>
+</ul>
+<hr>
+<h2 id="interview-answer-What-is-the-difference-between-controlled-and-uncontrolled-components"><a href="#interview-answer-What-is-the-difference-between-controlled-and-uncontrolled-components" class="headerlink" title="interview answer: What is the difference between controlled and uncontrolled components?"></a>interview answer: What is the difference between controlled and uncontrolled components?</h2><p>In React, a controlled component means that its input value is controlled by the state of the component. The user inputs the state to update the state through the onChange event, and then the state drives the value of input. This approach allows form behavior to be fully controlled by React, facilitating unified management, validation, and interactive control.</p>
+<p>The uncontrolled component manages the input state by DOM itself. React does not intervene in the change of value, but reads the value of DOM node through ref when needed. It is closer to the form behavior of native HTML.</p>
+<p>Controlled components are suitable for scenarios that require high control over data interaction, such as dynamic form validation or linkage logic, while uncontrolled components are suitable for scenarios with simple data and limited interaction, such as file uploads or forms that collect information at one time.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>controlled and uncontrolled components represent essentially two different state management strategies. In development, controlled components provide greater flexibility and control, but also bring higher code complexity; Uncontrolled components are lighter and closer to the native implementation. There are no absolute advantages and disadvantages, the key is to understand their principles and make reasonable choices according to the actual needs of the project.</p>
+<p>Mastering the differences between the two will make you more handy when building forms and lay the foundation for a deeper understanding of React’s design philosophy.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
