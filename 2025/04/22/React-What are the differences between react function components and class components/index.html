@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What are the differences between react function components and class componentsForewordreact, one of the most popular front-end frameworks, supports m"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What are the differences between react function components and class components"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What are the differences between react function components and class componentsForewordreact, one of the most popular front-end frameworks, supports m"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What are the differences between react function components and class components - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What are the differences between react function components and class components</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-04-22
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-are-the-differences-between-react-function-components-and-class-components"><a href="#What-are-the-differences-between-react-function-components-and-class-components" class="headerlink" title="What are the differences between react function components and class components"></a>What are the differences between react function components and class components</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>react, one of the most popular front-end frameworks, supports multiple component writing methods, of which function components and class components are the two main forms. Understanding the difference between them is essential for choosing the right component type, writing efficient code, and mastering how React works.</p>
+<p>This article analyzes the differences between function components and class components in syntax, lifecycle, state management, performance, etc., and combines code examples and comparison tables to help readers fully understand the characteristics and applicable scenarios of these two component forms.</p>
+<hr>
+<h2 id="Basic-Grammatical-Differences"><a href="#Basic-Grammatical-Differences" class="headerlink" title="Basic Grammatical Differences"></a>Basic Grammatical Differences</h2><h3 id="class-Component"><a href="#class-Component" class="headerlink" title="class Component"></a>class Component</h3><p>class components are defined based on the ES6 class syntax and must be inherited from <code>React.Component </code>, through <code>render </code>method returns JSX.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class MyComponent extends React.Component &#123;</span><br><span class="line">  constructor(props) &#123;</span><br><span class="line">    super(props);</span><br><span class="line">    this.state = &#123; count: 0 &#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    return &lt;div&gt;&#123;this.state.count&#125;&lt;/div&gt;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Function-Component"><a href="#Function-Component" class="headerlink" title="Function Component"></a>Function Component</h3><p>the function component is an ordinary JavaScript function that accepts <code>props </code>as an argument, return JSX. There is no need to inherit from any class.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function MyComponent(props) &#123;</span><br><span class="line">  return &lt;div&gt;&#123;props.count&#125;&lt;/div&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>With the advent of hooks, function components can also manage state and side effects.</p>
+<hr>
+<h2 id="Status-and-Side-Effect-Management"><a href="#Status-and-Side-Effect-Management" class="headerlink" title="Status and Side Effect Management"></a>Status and Side Effect Management</h2><p>the class component passes through <code>this.state </code>manage state, handle side effects through Lifecycle Functions (e. G. <code>componentDidMount </code>,<code>componentDidUpdate </code>etc.).</p>
+<p>Function components use hooks to achieve the same function, mainly:</p>
+<ul>
+<li><code>useState </code>management status.</li>
+<li><code>useEffect </code>dealing with side effects.</li>
+</ul>
+<p>Example comparison:</p>
+<p>class Component Management Status:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">this.state = &#123; count: 0 &#125;;</span><br><span class="line">this.setState(&#123; count: this.state.count + 1 &#125;);</span><br></pre></td></tr></table></figure>
+
+<p>function Component Management Status:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const [count, setCount] = useState(0);</span><br><span class="line">setCount(count + 1);</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="life-cycle-differences"><a href="#life-cycle-differences" class="headerlink" title="life cycle differences"></a>life cycle differences</h2><p>class components have a rich lifecycle, including multiple hook functions in the Mount, update, and unmount phases.</p>
+<p>The function component itself has no lifecycle function and depends on Hook (e. G. <code>useEffect </code>) Simulate lifecycle behavior, which is more flexible and combinable.</p>
+<hr>
+<h2 id="Code-simplicity-and-readability"><a href="#Code-simplicity-and-readability" class="headerlink" title="Code simplicity and readability"></a>Code simplicity and readability</h2><p>the function component syntax is more concise, reducing the boilerplate code in the class component (constructor, <code>this </code>binding, etc.). The emergence of hooks allows state and side-effect logic to be split into multiple reusable functions to improve code maintainability.</p>
+<hr>
+<h2 id="Performance-differences"><a href="#Performance-differences" class="headerlink" title="Performance differences"></a>Performance differences</h2><p>in earlier versions of React, function components do not have state and lifecycle, resulting in better performance. Class components have higher overhead due to state and lifecycle. In the modern React version, the performance difference between the two is very small, and the optimization depends more on the specific business logic and rendering strategy.</p>
+<hr>
+<h2 id="Advantages-and-limitations-of-Hooks"><a href="#Advantages-and-limitations-of-Hooks" class="headerlink" title="Advantages and limitations of Hooks"></a>Advantages and limitations of Hooks</h2><p>with Hook support, function components can implement functions such as state management, context subscription, and performance optimization, and are easier to test and reuse.</p>
+<p>However, Hooks have a learning curve, need to follow the rules (such as can only be called at the top level), and some old versions of the library rely on class components.</p>
+<hr>
+<h2 id="Comparison-table"><a href="#Comparison-table" class="headerlink" title="Comparison table"></a>Comparison table</h2><table>
+<thead>
+<tr>
+<th>dimension</th>
+<th>class Component</th>
+<th>function Component</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>definition mode</td>
+<td>inherit act.com Ponent, class</td>
+<td>ordinary function, function writing</td>
+</tr>
+<tr>
+<td>status Management</td>
+<td><code>this.state </code>and <code>this.setState </code></td>
+<td><code>useState </code>Hook</td>
+</tr>
+<tr>
+<td>treatment of side effects</td>
+<td>lifecycle methods (such as componentDidMount)</td>
+<td><code>useEffect </code>Hook</td>
+</tr>
+<tr>
+<td>lifecycle Support</td>
+<td>rich, explicit Lifecycle Functions</td>
+<td>no built-in lifecycle, dependent on Hook implementation</td>
+</tr>
+<tr>
+<td>grammatical complexity</td>
+<td>relatively complex, with constructor and <code>this</code></td>
+<td>Concise, less code</td>
+</tr>
+<tr>
+<td>code reuse</td>
+<td>through high-level components, render props, etc.</td>
+<td>More flexible reuse through custom hooks</td>
+</tr>
+<tr>
+<td>performance</td>
+<td>early is slightly worse, modern is not much different</td>
+<td>good performance in modern React</td>
+</tr>
+<tr>
+<td>cost of Learning</td>
+<td>need to understand the class and <code>this </code>mechanism</td>
+<td>Hook learning curve, with specific rules</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="interview-answer-example"><a href="#interview-answer-example" class="headerlink" title="interview answer example"></a>interview answer example</h2><p><strong>question: What is the difference between React function components and class components?</strong></p>
+<p>Example answer:</p>
+<p>the React component is based on the ES6 class and has rich Lifecycle methods and built-in state management, which is suitable for complex component logic. The Function component is a common function with simple syntax and relies on hooks to manage state and side effects. Function components are easier to combine and reuse, and modern React recommend use function components because they make code more concise and flexible. Class components need to handle <code>this </code>binding, the function component avoids these problems. In terms of performance, there is little difference between the two in modern React.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Function components and class components are two important components in React. Class components are suitable for scenarios familiar with object-oriented programming and have a clear life cycle. Function components have become the mainstream choice for modern React applications due to the powerful capabilities and simple syntax of hooks. Understanding the difference between the two components helps you choose the component type appropriately and write more efficient and maintainable React application code.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Usage scenarios of class componentsForewordwith the development of React, the rise of function components and hooks has made function components the m"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Usage scenarios of class components"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Usage scenarios of class componentsForewordwith the development of React, the rise of function components and hooks has made function components the m"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Usage scenarios of class components - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Usage scenarios of class components</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-12-03
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Usage-scenarios-of-class-components"><a href="#Usage-scenarios-of-class-components" class="headerlink" title="Usage scenarios of class components"></a>Usage scenarios of class components</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>with the development of React, the rise of function components and hooks has made function components the mainstream choice for modern development. However, class components, as the main component form in React’s early days, still exist in many projects and scenarios. Understanding usage scenarios for class components can help you make appropriate technical decisions when maintaining legacy projects, migrating code, or combining with third-party libraries.</p>
+<p>This article will analyze the scope of application of components from the perspective of historical background, functional characteristics, and specific application scenarios to help developers choose component types reasonably.</p>
+<hr>
+<h2 id="Core-features-of-class-components"><a href="#Core-features-of-class-components" class="headerlink" title="Core features of class components"></a>Core features of class components</h2><p>the class component is based on the class syntax of ES6 and has the following core features:</p>
+<ul>
+<li>have a full lifecycle hook (e. G. <code>componentDidMount </code>, <code>componentDidUpdate </code>etc.).</li>
+<li>By <code>this.state </code>and <code>this.setState </code>manage component internal state.</li>
+<li>Supports the use of class methods to encapsulate logic, suitable for object-oriented programming habits.</li>
+<li>Need to deal <code>this </code>binding issues.</li>
+<li>Does not rely on Hook syntax.</li>
+</ul>
+<p>These features make class components still have advantages in some specific scenarios.</p>
+<hr>
+<h2 id="Main-scenarios-applicable-to-class-components"><a href="#Main-scenarios-applicable-to-class-components" class="headerlink" title="Main scenarios applicable to class components"></a>Main scenarios applicable to class components</h2><h3 id="1-Maintain-or-upgrade-existing-projects"><a href="#1-Maintain-or-upgrade-existing-projects" class="headerlink" title="1. Maintain or upgrade existing projects"></a>1. Maintain or upgrade existing projects</h3><p>many older projects and third-party component libraries are still developed based on class components. For compatibility and progressive migration, it is necessary to understand the use of class components.</p>
+<h3 id="2-Complex-life-cycle-control"><a href="#2-Complex-life-cycle-control" class="headerlink" title="2. Complex life cycle control"></a>2. Complex life cycle control</h3><p>class components provide a complete and clear lifecycle method, which is suitable for fine-grained control of component mounting, updating, and unloading phases. For example:</p>
+<ul>
+<li>asynchronous requests need to be made at a specific lifecycle stage.</li>
+<li>Complex animation controls.</li>
+<li>Manually manage DOM or third-party library integrations.</li>
+</ul>
+<p>Although function components can also be implemented through hooks, the lifecycle structure of class components is clearer and easier to understand.</p>
+<h3 id="3-Team-collaboration-requiring-object-oriented-design"><a href="#3-Team-collaboration-requiring-object-oriented-design" class="headerlink" title="3. Team collaboration requiring object-oriented design"></a>3. Team collaboration requiring object-oriented design</h3><p>some teams are more accustomed to object-oriented programming ideas, and the encapsulation of class components is in line with their development habits, which is conducive to team collaboration and code specification.</p>
+<h3 id="4-Compatibility-requirements-for-third-party-libraries-or-tools"><a href="#4-Compatibility-requirements-for-third-party-libraries-or-tools" class="headerlink" title="4. Compatibility requirements for third-party libraries or tools"></a>4. Compatibility requirements for third-party libraries or tools</h3><p>some older third-party React libraries or tools may only support class components, and using class components can avoid compatibility issues.</p>
+<hr>
+<h2 id="Class-Component-Example"><a href="#Class-Component-Example" class="headerlink" title="Class Component Example"></a>Class Component Example</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">class Timer extends React.Component &#123;</span><br><span class="line">  constructor(props) &#123;</span><br><span class="line">    super(props);</span><br><span class="line">    this.state = &#123; seconds: 0 &#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  componentDidMount() &#123;</span><br><span class="line">    this.interval = setInterval(() =&gt; &#123;</span><br><span class="line">      this.setState(state =&gt; (&#123; seconds: state.seconds + 1 &#125;));</span><br><span class="line">    &#125;, 1000);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  componentWillUnmount() &#123;</span><br><span class="line">    clearInterval(this.interval);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    return &lt;div&gt;Seconds: &#123;this.state.seconds&#125;&lt;/div&gt;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>in this example, the class component lifecycle method is used to start and clean up the timer.</p>
+<hr>
+<h2 id="Comparison-table-for-selection-of-class-components-and-function-components"><a href="#Comparison-table-for-selection-of-class-components-and-function-components" class="headerlink" title="Comparison table for selection of class components and function components"></a>Comparison table for selection of class components and function components</h2><table>
+<thead>
+<tr>
+<th>dimension</th>
+<th>class Component</th>
+<th>function Component</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>lifecycle Management</td>
+<td>clear and complete</td>
+<td>Through Hook implementation, flexible but more decentralized</td>
+</tr>
+<tr>
+<td>grammatical style</td>
+<td>object-oriented, to be processed <code>this </code>binding</td>
+<td>functional, concise, avoid <code>this </code>binding</td>
+</tr>
+<tr>
+<td>compatibility</td>
+<td>compatible with old projects and libraries</td>
+<td>modern React mainstream, need React 16.8 + support</td>
+</tr>
+<tr>
+<td>code simplicity</td>
+<td>relatively cumbersome</td>
+<td>concise syntax, easy logic reuse</td>
+</tr>
+<tr>
+<td>status Management</td>
+<td>built-in <code>this.state </code>and <code>setState </code></td>
+<td>by <code>useState </code>and other Hook management States</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="interview-answer-example"><a href="#interview-answer-example" class="headerlink" title="interview answer example"></a>interview answer example</h2><p><strong>question: What are the typical usage scenarios for React class components?</strong></p>
+<p>Example answer:</p>
+<p>Class components are suitable for maintaining or upgrading older projects because much of the legacy code is developed based on class components. In scenarios that require fine-grained lifecycle control, such as complex animation and asynchronous request management, class components provide clear and complete lifecycle methods. Object-oriented programming teams also prefer to use class components. In addition, class components are still compatible scenarios when some third-party libraries have limited support for function components. Although function components and hooks are the modern mainstream, it is still important to understand class components.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>although function components and hooks have become the mainstream of React development, class components are still irreplaceable in specific scenarios due to their unique lifecycle advantages and compatibility. Reasonable identification of project requirements, team habits and compatibility requirements, and selection of appropriate component forms can ensure project stability and development efficiency. Being familiar with the usage scenarios of class components is the basis for becoming an all-around React developer.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

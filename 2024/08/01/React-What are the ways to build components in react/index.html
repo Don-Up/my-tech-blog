@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What are the ways to build components in reactForewordReact is a JavaScript library for building user interfaces, and one of its core concepts is “com"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What are the ways to build components in react"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What are the ways to build components in reactForewordReact is a JavaScript library for building user interfaces, and one of its core concepts is “com"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What are the ways to build components in react - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What are the ways to build components in react</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-08-01
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-are-the-ways-to-build-components-in-react"><a href="#What-are-the-ways-to-build-components-in-react" class="headerlink" title="What are the ways to build components in react"></a>What are the ways to build components in react</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>React is a JavaScript library for building user interfaces, and one of its core concepts is “componentized development”. The React component is the smallest unit for building a page UI and is highly reusable, combinatorial, and independent. In actual development, understanding and mastering different component construction methods is of great significance for building flexible, efficient and maintainable applications.</p>
+<p>This article systematically reviews the common component construction methods in React, from basic function components to complex high-order components and Hooks components, and analyzes their respective characteristics, applicable scenarios, and usage precautions.</p>
+<hr>
+<h2 id="Function-Component"><a href="#Function-Component" class="headerlink" title="Function Component"></a>Function Component</h2><p>this is the most common and recommend way, especially after the emergence of Hooks, function components can completely replace class components.</p>
+<h3 id="Basic-structure"><a href="#Basic-structure" class="headerlink" title="Basic structure"></a>Basic structure</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Greeting</span>(<span class="params">props</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, &#123;props.name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>or use the arrow function:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">Greeting</span> = (<span class="params">&#123; name &#125;</span>) =&gt; <span class="language-xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, &#123;name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="features"><a href="#features" class="headerlink" title="features"></a>features</h3><ul>
+<li>concise and easy to read</li>
+<li>supports Hooks (e. G. useState, useEffect)</li>
+<li>relatively better performance (no prototype chain, lifecycle binding)</li>
+<li>cannot be used <code>this </code></li>
+</ul>
+<p>suitable for most scenarios, especially when using Hooks combinatorial logic.</p>
+<hr>
+<h2 id="Class-Component-Class-Component"><a href="#Class-Component-Class-Component" class="headerlink" title="Class Component (Class Component)"></a>Class Component (Class Component)</h2><p>this was the standard component form of React in the early days, and was the only way to implement state and lifecycle before Hooks.</p>
+<h3 id="Basic-structure-1"><a href="#Basic-structure-1" class="headerlink" title="Basic structure"></a>Basic structure</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span>, &#123; <span class="title class_">Component</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Greeting</span> <span class="keyword">extends</span> <span class="title class_ inherited__">Component</span> &#123;</span><br><span class="line">  <span class="title function_">render</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, &#123;this.props.name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h3><ul>
+<li>use <code>this.state </code>management Status</li>
+<li>side effects are controlled through a lifecycle approach (e. G. <code>componentDidMount </code>)</li>
+<li>relatively lengthy structure</li>
+<li>does not support Hook (only use mode such as HOC or Render Props to encapsulate logic)</li>
+</ul>
+<p>although it is no longer recommend as the preferred method, it is still used in older projects or specific scenarios (such as Error Boundary).</p>
+<hr>
+<h2 id="Higher-Order-Component-HOC"><a href="#Higher-Order-Component-HOC" class="headerlink" title="Higher-Order Component, HOC"></a>Higher-Order Component, HOC</h2><p>A higher-order component is a function that accepts a component and returns a new component, often used in logic reuse.</p>
+<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">withLogger</span>(<span class="params">WrappedComponent</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> <span class="title function_">EnhancedComponent</span>(<span class="params">props</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Props:&#x27;</span>, props);</span><br><span class="line">    <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">WrappedComponent</span> &#123;<span class="attr">...props</span>&#125; /&gt;</span></span>;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>use:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">GreetingWithLogger</span> = <span class="title function_">withLogger</span>(<span class="title class_">Greeting</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="features-1"><a href="#features-1" class="headerlink" title="features"></a>features</h3><ul>
+<li>clear logic reuse</li>
+<li>do not change the original assembly structure</li>
+<li>multiple HOC can be combined</li>
+</ul>
+<p>however, it is easy to appear “Wrapper Hell” and it is difficult to debug.</p>
+<hr>
+<h2 id="Render-Props"><a href="#Render-Props" class="headerlink" title="Render Props"></a>Render Props</h2><p>Render Props is a pattern that implements reuse through functions as props.</p>
+<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example"></a>Example</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MouseTracker</span> <span class="keyword">extends</span> <span class="title class_ inherited__">React.Component</span> &#123;</span><br><span class="line">  state = &#123; <span class="attr">x</span>: <span class="number">0</span>, <span class="attr">y</span>: <span class="number">0</span> &#125;;</span><br><span class="line"></span><br><span class="line">  handleMouseMove = <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">setState</span>(&#123; <span class="attr">x</span>: e.<span class="property">clientX</span>, <span class="attr">y</span>: e.<span class="property">clientY</span> &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">render</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      <span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">onMouseMove</span>=<span class="string">&#123;this.handleMouseMove&#125;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        &#123;this.props.render(this.state)&#125;</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>use:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="title class_">MouseTracker</span> render=&#123;<span class="function">(<span class="params">&#123; x, y &#125;</span>) =&gt;</span> <span class="language-xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;x&#125;, &#123;y&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span>&#125; /&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="features-2"><a href="#features-2" class="headerlink" title="features"></a>features</h3><ul>
+<li>strong flexibility</li>
+<li>Can combine any UI and logic</li>
+<li>however, it increases the level of nesting and reduces readability.</li>
+</ul>
+<hr>
+<h2 id="Controlled-and-uncontrolled-components"><a href="#Controlled-and-uncontrolled-components" class="headerlink" title="Controlled and uncontrolled components"></a>Controlled and uncontrolled components</h2><p>these two are not component types, but rather usage, and are often used for form components.</p>
+<h3 id="Controlled-Components"><a href="#Controlled-Components" class="headerlink" title="Controlled Components"></a>Controlled Components</h3><p>the value of the component is controlled by the React state:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">Input</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> [value, setValue] = <span class="title function_">useState</span>(<span class="string">&#x27;&#x27;</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">value</span>=<span class="string">&#123;value&#125;</span> <span class="attr">onChange</span>=<span class="string">&#123;(e)</span> =&gt;</span> setValue(e.target.value)&#125; /&gt;</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="uncontrolled-components"><a href="#uncontrolled-components" class="headerlink" title="uncontrolled components"></a>uncontrolled components</h3><p>the internal state of the component is maintained by the DOM itself:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">Input</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> inputRef = <span class="title function_">useRef</span>();</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">handleClick</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="title function_">alert</span>(inputRef.<span class="property">current</span>.<span class="property">value</span>);</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">ref</span>=<span class="string">&#123;inputRef&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;handleClick&#125;</span>&gt;</span>Alert Value<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="custom-Hook-components-combinational-logic"><a href="#custom-Hook-components-combinational-logic" class="headerlink" title="custom Hook components (combinational logic)"></a>custom Hook components (combinational logic)</h2><p>in the function component, extract the reusable state logic through a custom Hook:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">useCounter</span>(<span class="params">initialValue = <span class="number">0</span></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [count, setCount] = <span class="title function_">useState</span>(initialValue);</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">increment</span> = (<span class="params"></span>) =&gt; <span class="title function_">setCount</span>(count + <span class="number">1</span>);</span><br><span class="line">  <span class="keyword">return</span> &#123; count, increment &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">Counter</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; count, increment &#125; = <span class="title function_">useCounter</span>();</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;increment&#125;</span>&gt;</span>&#123;count&#125;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="features-3"><a href="#features-3" class="headerlink" title="features"></a>features</h3><ul>
+<li>better logic reuse</li>
+<li>separation of concerns</li>
+<li>easy to test and maintain</li>
+</ul>
+<hr>
+<h2 id="table-Compare-various-component-build-methods"><a href="#table-Compare-various-component-build-methods" class="headerlink" title="table: Compare various component build methods"></a>table: Compare various component build methods</h2><table>
+<thead>
+<tr>
+<th>component Type</th>
+<th>support Hooks</th>
+<th>code simplicity</th>
+<th>degree of Recommend</th>
+<th>support status</th>
+<th>whether to support life cycle</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>function Component</td>
+<td>yes</td>
+<td>high</td>
+<td>very recommend</td>
+<td>yes</td>
+<td>yes (with Hooks)</td>
+</tr>
+<tr>
+<td>class Component</td>
+<td>no</td>
+<td>Low</td>
+<td>general</td>
+<td>yes</td>
+<td>yes (class method)</td>
+</tr>
+<tr>
+<td>HOC</td>
+<td>can be nested Hooks</td>
+<td>general</td>
+<td>have Limitations</td>
+<td>dependent on Internal Implementation</td>
+<td>encapsulable</td>
+</tr>
+<tr>
+<td>Render Props</td>
+<td>no</td>
+<td>general</td>
+<td>have Limitations</td>
+<td>dependent on Internal Implementation</td>
+<td>encapsulable</td>
+</tr>
+<tr>
+<td>custom Hook</td>
+<td>yes</td>
+<td>high</td>
+<td>very recommend</td>
+<td>yes</td>
+<td>yes (combined)</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="interview-answer-what-are-the-ways-React-builds-components"><a href="#interview-answer-what-are-the-ways-React-builds-components" class="headerlink" title="interview answer: what are the ways React builds components?"></a>interview answer: what are the ways React builds components?</h2><p>React build components mainly have two basic forms: function components and class components. Function components are currently the mainstream way to recommend, supporting the use of Hooks to manage state and side effects; <code>this.state </code>. In addition, there are logical reuse related methods such as high-level components (HOC), Render Props, custom hooks, etc. For state management, the use of controlled and uncontrolled components is also covered in the form.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>React provides a variety of component construction methods, ranging from the most basic function components and class components to more abstract HOC, Render Props, and custom Hooks. Each method has its own specific application scenarios and advantages. With the popularity of React Hooks, function components have become the most recommend construction method, while other technologies are more used as supplementary means of logic reuse.</p>
+<p>Mastering these component construction methods not only helps improve code organization capabilities, but also facilitates team collaboration and system architecture design, which is the core knowledge that React developers must master.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

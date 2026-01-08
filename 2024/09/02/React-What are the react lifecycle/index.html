@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What are the react lifecycleForewordReact The lifecycle of a component is key to understanding component state changes and behavior. Lifecycle hook fu"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What are the react lifecycle"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What are the react lifecycleForewordReact The lifecycle of a component is key to understanding component state changes and behavior. Lifecycle hook fu"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What are the react lifecycle - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What are the react lifecycle</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-09-02
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-are-the-react-lifecycle"><a href="#What-are-the-react-lifecycle" class="headerlink" title="What are the react lifecycle"></a>What are the react lifecycle</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>React The lifecycle of a component is key to understanding component state changes and behavior. Lifecycle hook functions help developers insert logic at different stages of a component to achieve state management, side effect handling, and performance optimization. With the development of React, lifecycle functions have undergone evolution, especially from class components to function components and the introduction of hooks.</p>
+<p>This article will comprehensively review the lifecycle of React, including the traditional lifecycle of class components, hooks in function components, and their respective execution timing and functions, to help readers systematically Master The React lifecycle mechanism.</p>
+<hr>
+<h2 id="Class-Component-Lifecycle"><a href="#Class-Component-Lifecycle" class="headerlink" title="Class Component Lifecycle"></a>Class Component Lifecycle</h2><p>the life cycle of a class component is divided into three main phases:</p>
+<ul>
+<li>Mounting phase (Mounting)</li>
+<li>update phase (Updating)</li>
+<li>unloading phase (Unmounting)</li>
+</ul>
+<h3 id="mount-phase"><a href="#mount-phase" class="headerlink" title="mount phase"></a>mount phase</h3><p>called in sequence when the component is first created and inserted into the DOM:</p>
+<ul>
+<li><code>constructor(props) </code>constructor, initialize state, and bind events.</li>
+<li><code>static getDerivedStateFromProps(props, state) </code>returns a new state or null based on the new props update state.</li>
+<li><code>render() </code>: Renders the UI and returns the React element.</li>
+<li><code>componentDidMount() </code>: Called after the component is mounted, commonly used for side-effect operations such as asynchronous requests and event subscription.</li>
+</ul>
+<h3 id="Update-phase"><a href="#Update-phase" class="headerlink" title="Update phase"></a>Update phase</h3><p>triggered when the component props or state changes, call sequence:</p>
+<ul>
+<li><code>static getDerivedStateFromProps(props, state) </code>updated pre-sync derived state.</li>
+<li><code>shouldComponentUpdate(nextProps, nextState) </code>: Determine whether to re-render, return a Boolean value, often used for performance optimization.</li>
+<li><code>render() </code>re-render the component.</li>
+<li><code>getSnapshotBeforeUpdate(prevProps, prevState) </code>: obtain snapshot information before the real DOM update.</li>
+<li><code>componentDidUpdate(prevProps, prevState, snapshot) </code>: Called after the update is complete, side effects can be performed according to the snapshot.</li>
+</ul>
+<h3 id="Unloading-phase"><a href="#Unloading-phase" class="headerlink" title="Unloading phase"></a>Unloading phase</h3><p>called when the component is removed from the DOM:</p>
+<ul>
+<li><code>componentWillUnmount() </code>: Clean up the timer, cancel the subscription and other resource release operations.</li>
+</ul>
+<hr>
+<h2 id="Lifecycle-in-a-function-component"><a href="#Lifecycle-in-a-function-component" class="headerlink" title="Lifecycle in a function component"></a>Lifecycle in a function component</h2><p>The function component itself has no Lifecycle methods, but side effects and state management are implemented through hooks.</p>
+<p>The main hooks include:</p>
+<ul>
+<li><code>useState </code>manage component status.</li>
+<li><code>useEffect </code>: Execute side effects, similar <code>componentDidMount </code>, <code>componentDidUpdate </code>and <code>componentWillUnmount </code>A combination. Pass in the dependency array to control the timing of execution.</li>
+<li><code>useLayoutEffect </code>: and <code>useEffect </code>similar, but executed synchronously after the DOM is updated and before the browser draws.</li>
+<li><code>useMemo </code>, <code>useCallback </code>optimize performance, cache calculation results or function references.</li>
+</ul>
+<hr>
+<h2 id="Life-Cycle-Comparison-Table"><a href="#Life-Cycle-Comparison-Table" class="headerlink" title="Life Cycle Comparison Table"></a>Life Cycle Comparison Table</h2><table>
+<thead>
+<tr>
+<th>stage</th>
+<th>class Component Lifecycle Function</th>
+<th>function component corresponding Hook</th>
+<th>main use</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>mount</td>
+<td>constructor, getDerivedStateFromProps, render, componentDidMount</td>
+<td>useState, useEffect</td>
+<td>initialization state, execution side effects</td>
+</tr>
+<tr>
+<td>update</td>
+<td>getDerivedStateFromProps, shouldComponentUpdate, render, getSnapshotBeforeUpdate, componentDidUpdate</td>
+<td>useState, useEffect, useLayoutEffect</td>
+<td>update and side effect handling when state&#x2F;property changes</td>
+</tr>
+<tr>
+<td>unload</td>
+<td>componentWillUnmount</td>
+<td>cleanup function for useEffect</td>
+<td>resource release and cleanup</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="code-Sample-Class-Component-Lifecycle"><a href="#code-Sample-Class-Component-Lifecycle" class="headerlink" title="code Sample: Class Component Lifecycle"></a>code Sample: Class Component Lifecycle</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">class Example extends React.Component &#123;</span><br><span class="line">  constructor(props) &#123;</span><br><span class="line">    super(props);</span><br><span class="line">    this.state = &#123; count: 0 &#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  static getDerivedStateFromProps(nextProps, prevState) &#123;</span><br><span class="line">    // 根据新 props 更新 state</span><br><span class="line">    return null;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  componentDidMount() &#123;</span><br><span class="line">    console.log(&#x27;组件已挂载&#x27;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  shouldComponentUpdate(nextProps, nextState) &#123;</span><br><span class="line">    return nextState.count !== this.state.count;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  getSnapshotBeforeUpdate(prevProps, prevState) &#123;</span><br><span class="line">    return null;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  componentDidUpdate(prevProps, prevState) &#123;</span><br><span class="line">    console.log(&#x27;组件更新完成&#x27;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  componentWillUnmount() &#123;</span><br><span class="line">    console.log(&#x27;组件将卸载&#x27;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    return &lt;div&gt;&#123;this.state.count&#125;&lt;/div&gt;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="code-Sample-Function-Component-Lifecycle-Hook"><a href="#code-Sample-Function-Component-Lifecycle-Hook" class="headerlink" title="code Sample: Function Component Lifecycle (Hook)"></a>code Sample: Function Component Lifecycle (Hook)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function Example() &#123;</span><br><span class="line">  const [count, setCount] = React.useState(0);</span><br><span class="line"></span><br><span class="line">  React.useEffect(() =&gt; &#123;</span><br><span class="line">    console.log(&#x27;组件挂载或更新&#x27;);</span><br><span class="line">    return () =&gt; &#123;</span><br><span class="line">      console.log(&#x27;组件卸载或更新前清理&#x27;);</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;, [count]);</span><br><span class="line"></span><br><span class="line">  return &lt;div&gt;&#123;count&#125;&lt;/div&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="interview-answer-example"><a href="#interview-answer-example" class="headerlink" title="interview answer example"></a>interview answer example</h2><p><strong>question: What is the React lifecycle? Please briefly describe the main life cycle functions and their roles in each phase.</strong></p>
+<p>Example answer:</p>
+<p>the lifecycle of a React component is divided into three phases: mounting, updating, and uninstalling. The Mount phase includes <code>constructor </code>,<code>getDerivedStateFromProps </code>, <code>render </code>and <code>componentDidMount </code>for initialization and side-effect operations. The update phase involves <code>getDerivedStateFromProps </code>, <code>shouldComponentUpdate </code>, <code>render </code>, <code>getSnapshotBeforeUpdate </code>and <code>componentDidUpdate </code>, responsible for responding to state and attribute changes. Of the unloading phase <code>componentWillUnmount </code>used to clean up resources.</p>
+<p>The function component implements the lifecycle function through Hook, mainly. <code>useEffect </code>to deal with the side effects and clean up, <code>useState </code>management status. The function component life cycle is more flexible and concise.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>React lifecycle is a full-process control mechanism for components from creation, update to destruction. Class component life cycle functions are rich and suitable for fine-grained control, and function components simplify life cycle management through hooks, in line with modern functional programming ideas.</p>
+<p>Mastering the React lifecycle can help developers organize their code reasonably, achieve efficient state management and side effect handling, and is the basis for writing robust React applications.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

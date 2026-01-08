@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="The this binding issue of class componentsForewordin The React class component development, this binding problems are a common problem for many beginn"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="The this binding issue of class components"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="The this binding issue of class componentsForewordin The React class component development, this binding problems are a common problem for many beginn"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>The this binding issue of class components - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>The this binding issue of class components</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-10-07
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="The-this-binding-issue-of-class-components"><a href="#The-this-binding-issue-of-class-components" class="headerlink" title="The this binding issue of class components"></a>The this binding issue of class components</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in The React class component development, <code>this </code>binding problems are a common problem for many beginners and some developers. Since the calling context of the function in JavaScript determines <code>this </code>and event handlers and callback functions in class components are often called as ordinary functions, resulting in <code>this </code>missing, which in turn affects state updates or method access.</p>
+<p>This article will analyze the class components in detail. <code>this </code>the root causes of binding, common error scenarios, various binding solutions, and code examples help developers thoroughly understand and avoid the problem.</p>
+<hr>
+<h2 id="Why-do-I-need-to-bind-this-in-a-class-component"><a href="#Why-do-I-need-to-bind-this-in-a-class-component" class="headerlink" title="Why do I need to bind this in a class component?"></a>Why do I need to bind this in a class component?</h2><p>In JavaScript, when a function is called <code>this </code>the pointing to is determined by the calling method. Event handlers in class components are usually called as ordinary functions, rather than being bound to component instances, resulting in <code>this </code>pointing is missing.</p>
+<p>For example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class MyComponent extends React.Component &#123;</span><br><span class="line">  constructor(props) &#123;</span><br><span class="line">    super(props);</span><br><span class="line">    this.state = &#123; count: 0 &#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  handleClick() &#123;</span><br><span class="line">    this.setState(&#123; count: this.state.count + 1 &#125;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    return &lt;button onClick=&#123;this.handleClick&#125;&gt;点击&lt;/button&gt;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>at this time, clicking the button will report an error because <code>handleClick </code>when called, <code>this </code>is not bound to a component instance, resulting in<code>this.setState </code>undefined.</p>
+<hr>
+<h2 id="Common-this-lost-scene"><a href="#Common-this-lost-scene" class="headerlink" title="Common this lost scene"></a>Common this lost scene</h2><ul>
+<li>the event callback function is not bound.</li>
+<li>Timer or asynchronous callback access <code>this </code>.</li>
+<li>When passing a method as a parameter to a subcomponent or other function.</li>
+<li>A normal function call (not an arrow function) results in a loss of context.</li>
+</ul>
+<hr>
+<h2 id="Solution-Comparison"><a href="#Solution-Comparison" class="headerlink" title="Solution Comparison"></a>Solution Comparison</h2><h3 id="1-Manual-binding-in-the-constructor"><a href="#1-Manual-binding-in-the-constructor" class="headerlink" title="1. Manual binding in the constructor."></a>1. Manual binding in the constructor.</h3><p>In the constructor <code>bind </code>explicit binding <code>this </code>:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">constructor(props) &#123;</span><br><span class="line">  super(props);</span><br><span class="line">  this.handleClick = this.handleClick.bind(this);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>advantages: good compatibility and stable performance.</p>
+<p>Disadvantages: lengthy code, bloated constructor.</p>
+<h3 id="2-Use-the-arrow-function-as-a-class-property"><a href="#2-Use-the-arrow-function-as-a-class-property" class="headerlink" title="2. Use the arrow function as a class property."></a>2. Use the arrow function as a class property.</h3><p>Define the method as an arrow function, the arrow function will not have its own <code>this </code>will bind the context at the time of definition:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">handleClick = () =&gt; &#123;</span><br><span class="line">  this.setState(&#123; count: this.state.count + 1 &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>advantages: concise writing, automatic binding.</p>
+<p>Disadvantages: Support class attribute syntax such as Babel is required, which may affect performance (create functions separately per instance).</p>
+<h3 id="3-Use-the-arrow-function-in-JSX"><a href="#3-Use-the-arrow-function-in-JSX" class="headerlink" title="3. Use the arrow function in JSX."></a>3. Use the arrow function in JSX.</h3><p>Use the arrow function directly in JSX:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button onClick=&#123;() =&gt; this.handleClick()&#125;&gt;点击&lt;/button&gt;</span><br></pre></td></tr></table></figure>
+
+<p>Pros: Simplicity, avoiding explicit binding.</p>
+<p>Cons: New functions are created with each rendering, which can lead to performance issues and unnecessary re-rendering of subcomponents.</p>
+<hr>
+<h2 id="Code-comparison-example"><a href="#Code-comparison-example" class="headerlink" title="Code comparison example"></a>Code comparison example</h2><table>
+<thead>
+<tr>
+<th>programme</th>
+<th>code Sample</th>
+<th>summary of advantages and disadvantages</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>constructor Binding</td>
+<td><code>this.handleClick = this.handleClick.bind(this); </code></td>
+<td>good compatibility, long-winded code</td>
+</tr>
+<tr>
+<td>class Property Arrow Function</td>
+<td><code>handleClick = () =&gt; &#123; this.setState(...);&#125; </code></td>
+<td>concise, automatic binding, but per-instance creation function</td>
+</tr>
+<tr>
+<td>arrow function in JSX</td>
+<td><code>&lt;button onClick=&#123;() =&gt;this.handleClick()&#125;&gt; </code></td>
+<td>easy, but performance may suffer</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="additional-considerations"><a href="#additional-considerations" class="headerlink" title="additional considerations"></a>additional considerations</h2><ul>
+<li>if you forget to bind, <code>this </code>will be <code>undefined </code>(Strict mode) or global objects, which can easily lead to errors.</li>
+<li>Avoid creating functions frequently in performance-sensitive scenarios, such as a large number of list events.</li>
+<li>React official recommend class attribute arrow function or constructor binding, avoid defining arrow function in render.</li>
+</ul>
+<hr>
+<h2 id="Interview-answer-example"><a href="#Interview-answer-example" class="headerlink" title="Interview answer example"></a>Interview answer example</h2><p><strong>problem: Please explain the cause and solution of this binding problem in React class component.</strong></p>
+<p>Example answer:</p>
+<p>class component, <code>this </code>the binding problem stems from the loss of context when the JavaScript function is called, and the event handler is not automatically bound to the component instance. Common solutions include using <code>bind </code>bindings, using class attributes to define arrow functions, and using arrow functions in JSX. Recommend constructor binding and class property arrow function, taking into account performance and code simplicity.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>class component’s <code>this </code>binding issues are key to understanding the JavaScript function invocation mechanism and React component design. Reasonable treatment <code>this </code>bindings not only avoid run-time errors, but also improve code readability and performance. Mastering multiple binding methods and selecting them in combination with specific scenarios is a necessary skill for writing robust React components.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
