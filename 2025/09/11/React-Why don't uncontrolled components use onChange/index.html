@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Why don’t uncontrolled components use onChangeForewordin React, the state management of form components is usually divided into two modes: Controlled "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Why don&#39;t uncontrolled components use onChange"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Why don’t uncontrolled components use onChangeForewordin React, the state management of form components is usually divided into two modes: Controlled "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Why don&#39;t uncontrolled components use onChange - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Why don't uncontrolled components use onChange</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-09-11
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Why-don’t-uncontrolled-components-use-onChange"><a href="#Why-don’t-uncontrolled-components-use-onChange" class="headerlink" title="Why don’t uncontrolled components use onChange"></a>Why don’t uncontrolled components use onChange</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in React, the state management of form components is usually divided into two modes: Controlled Components and uncontrolled components. The controlled components pass through React’s <code>state </code>to manage input values, data flow is unidirectional and easy to debug, while uncontrolled components rely directly on the state of the DOM element itself, using <code>ref </code>to access the input.</p>
+<p>One notable difference is that the controlled components typically bind <code>onChange </code>event to synchronize input content with React state, while uncontrolled components are rarely used or not recommended <code>onChange </code>. This article will focus on “why not use non-controlled components.” <code>onChange </code>」 This problem, in-depth analysis of the principles and design considerations.</p>
+<hr>
+<h2 id="Working-Mechanism-of-Uncontrolled-Components"><a href="#Working-Mechanism-of-Uncontrolled-Components" class="headerlink" title="Working Mechanism of Uncontrolled Components"></a>Working Mechanism of Uncontrolled Components</h2><p>the uncontrolled component does not rely on the state of React to control the input content, but directly uses the browser DOM node to save the input value. Developers through <code>ref </code>get the input element and read the current value when needed (such as submitting a form).</p>
+<p>Example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">UncontrolledInput</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> inputRef = <span class="title class_">React</span>.<span class="title function_">useRef</span>(<span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">handleSubmit</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="string">`输入内容是：<span class="subst">$&#123;inputRef.current.value&#125;</span>`</span>);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">ref</span>=<span class="string">&#123;inputRef&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;handleSubmit&#125;</span>&gt;</span>提交<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>at this time, the value of the input box is managed by DOM itself, and React does not interfere with the input state.</p>
+<hr>
+<h2 id="The-role-of-onChange-and-its-relationship-to-controlled-components"><a href="#The-role-of-onChange-and-its-relationship-to-controlled-components" class="headerlink" title="The role of onChange and its relationship to controlled components"></a>The role of onChange and its relationship to controlled components</h2><p><code>onChange</code>Events are used to capture changes in input content and are a key bridge between synchronized state and UI in controlled components. When the user enters, <code>onChange </code>this triggers an update to the React state, which drives the re-rendering of the input box content.</p>
+<p>Controlled components require frequent calls <code>onChange </code>to keep the React state consistent with the DOM display, forming a controlled state.</p>
+<hr>
+<h2 id="Why-not-use-onChange-for-non-controlled-components"><a href="#Why-not-use-onChange-for-non-controlled-components" class="headerlink" title="Why not use onChange for non-controlled components"></a>Why not use onChange for non-controlled components</h2><p>uncontrolled components not used <code>onChange </code>mainly for the following reasons:</p>
+<ol>
+<li><strong>no need to synchronize status in real time</strong></li>
+</ol>
+<p>uncontrolled components do not rely on React state control input values, <code>onChange </code>triggered frequent status updates are meaningless. It is simpler and more efficient to read the value of the DOM node directly.</p>
+<ol>
+<li><strong>Avoid Useless Rendering</strong></li>
+</ol>
+<p>if an uncontrolled component is bound to <code>onChange </code>and call in the event <code>setState </code>, will cause the React component to re-render frequently, losing the advantage of non-controlled components to avoid frequent rendering.</p>
+<ol>
+<li><strong>Reduce performance overhead</strong></li>
+</ol>
+<p>in large forms or frequent input scenarios, uncontrolled components eliminate the overhead of state synchronization and are suitable for scenarios with high performance requirements.</p>
+<ol>
+<li><strong>Code is concise and closer to native DOM operations</strong></li>
+</ol>
+<p>uncontrolled components are more like traditional HTML forms, using <code>ref </code>read the value directly, the code logic is simpler, and no additional state needs to be maintained.</p>
+<hr>
+<h2 id="Common-usage-scenarios-for-uncontrolled-components"><a href="#Common-usage-scenarios-for-uncontrolled-components" class="headerlink" title="Common usage scenarios for uncontrolled components"></a>Common usage scenarios for uncontrolled components</h2><ul>
+<li><strong>file Upload Component</strong> : The file type cannot be controlled and needs to be passed. <code>ref </code>gets the list of files.</li>
+<li><strong>Third-party UI library integration</strong> : Some Library components have their own state, and the use of uncontrolled can reduce conflicts.</li>
+<li><strong>Quick Form Collection</strong> : For scenarios that do not require real-time verification or linkage, just read the input when submitting.</li>
+<li><strong>Performance-sensitive scenarios</strong> avoid frequent state updates and rendering overhead.</li>
+</ul>
+<hr>
+<h2 id="Comparison-Summary-Table"><a href="#Comparison-Summary-Table" class="headerlink" title="Comparison Summary Table"></a>Comparison Summary Table</h2><table>
+<thead>
+<tr>
+<th>characteristics</th>
+<th>controlled Components</th>
+<th>uncontrolled components</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>status Management</td>
+<td>React <code>state </code></td>
+<td>browser DOM element</td>
+</tr>
+<tr>
+<td>event listening</td>
+<td>binding <code>onChange </code>synchronization Status</td>
+<td>usually not bound<code>onChange </code></td>
+</tr>
+<tr>
+<td>applicable Scenarios</td>
+<td>requires real-time verification, linkage, and complex logic</td>
+<td>simple forms or performance sensitive scenarios</td>
+</tr>
+<tr>
+<td>advantages</td>
+<td>easy to maintain, clear data flow</td>
+<td>simple code and low performance overhead</td>
+</tr>
+<tr>
+<td>disadvantages</td>
+<td>frequent rendering, slightly more complex code</td>
+<td>losing the control advantage of partial React</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="code-sample-comparison"><a href="#code-sample-comparison" class="headerlink" title="code sample comparison"></a>code sample comparison</h2><p>examples of controlled components:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">ControlledInput</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [value, setValue] = <span class="title class_">React</span>.<span class="title function_">useState</span>(<span class="string">&#x27;&#x27;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">input</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      <span class="attr">value</span>=<span class="string">&#123;value&#125;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      <span class="attr">onChange</span>=<span class="string">&#123;e</span> =&gt;</span> setValue(e.target.value)&#125;</span></span><br><span class="line"><span class="language-xml">    /&gt;</span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>example of Uncontrolled Components (None <code>onChange </code>):</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">UncontrolledInput</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> inputRef = <span class="title class_">React</span>.<span class="title function_">useRef</span>(<span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">handleSubmit</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="title function_">alert</span>(inputRef.<span class="property">current</span>.<span class="property">value</span>);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">ref</span>=<span class="string">&#123;inputRef&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;handleSubmit&#125;</span>&gt;</span>提交<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="interview-Answer-Why-is-onChange-usually-not-used-for-uncontrolled-components"><a href="#interview-Answer-Why-is-onChange-usually-not-used-for-uncontrolled-components" class="headerlink" title="interview Answer: Why is onChange usually not used for uncontrolled components?"></a>interview Answer: Why is onChange usually not used for uncontrolled components?</h2><p>Uncontrolled components do not use <code>onChange </code>because it does not need to synchronize the input value through The React state, <code>onChange </code>events are primarily used for controlled components to keep state synchronized with inputs.</p>
+<p>Binding <code>onChange </code>and call <code>setState </code>this will cause the component to render frequently, losing the advantages of the uncontrolled component to avoid frequent rendering and improve performance.</p>
+<p>Non-controlled components directly through<code>ref </code>access DOM element values, which is suitable for scenarios that do not require real-time monitoring of input changes, performance-sensitive, or third-party integration.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>the design idea of the uncontrolled component is to let the browser DOM element itself manage the input state, React only when needed. <code>ref </code>access data. Since no synchronization state is required, the binding <code>onChange </code>it loses its relevance and may instead impose a performance burden.</p>
+<p>Reasonable selection of controlled and uncontrolled components can balance code complexity and performance according to requirements, ensuring functional integrity and improving user experience. Understanding Uncontrolled Components <code>onChange </code>the reason is to help developers write more efficient and concise React form code.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

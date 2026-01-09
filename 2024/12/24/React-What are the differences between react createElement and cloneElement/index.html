@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What are the differences between react createElement and cloneElementForewordin React development, createElement and cloneElement are two commonly use"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What are the differences between react createElement and cloneElement"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What are the differences between react createElement and cloneElementForewordin React development, createElement and cloneElement are two commonly use"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What are the differences between react createElement and cloneElement - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What are the differences between react createElement and cloneElement</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-12-24
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-are-the-differences-between-react-createElement-and-cloneElement"><a href="#What-are-the-differences-between-react-createElement-and-cloneElement" class="headerlink" title="What are the differences between react createElement and cloneElement"></a>What are the differences between react createElement and cloneElement</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in React development, <code>createElement </code>and <code>cloneElement </code>are two commonly used APIs, both of which are closely related to creating and manipulating React elements. Understanding the differences between these two functions and their application scenarios helps developers build components more flexibly, achieve reuse, and enhance component functionality.</p>
+<p>This article will explore React’s <code>createElement </code>and <code>cloneElement </code>it helps you understand and use them better.</p>
+<hr>
+<h2 id="Function-and-Principle-of-React-createElement"><a href="#Function-and-Principle-of-React-createElement" class="headerlink" title="Function and Principle of React.createElement"></a>Function and Principle of React.createElement</h2><p><code>React.createElement </code>is the base method used inside React to create React elements, usually compiled by JSX <code>React.createElement </code>call.</p>
+<p>Its basic syntax is as follows:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">React.createElement(type, props, ...children)</span><br></pre></td></tr></table></figure>
+
+<p>parameter description:</p>
+<ul>
+<li><code>type </code>the element type, which can be a string (HTML tag) or a React component (function or class).</li>
+<li><code>props</code>The attribute object of the element.</li>
+<li><code>children </code>: The child nodes of the element, which can be single or multiple.</li>
+</ul>
+<p><code>createElement </code>returns A React element object that contains information such as the element type, attributes, and child elements for subsequent rendering by React.</p>
+<p>Example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const element = React.createElement(</span><br><span class="line">  &#x27;div&#x27;,</span><br><span class="line">  &#123; className: &#x27;container&#x27; &#125;,</span><br><span class="line">  React.createElement(&#x27;span&#x27;, null, &#x27;Hello React&#x27;)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>the above code is equivalent to JSX:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div className=<span class="string">&quot;container&quot;</span>&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">span</span>&gt;</span>Hello React<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="function-and-Principle-of-React-cloneElement"><a href="#function-and-Principle-of-React-cloneElement" class="headerlink" title="function and Principle of React.cloneElement"></a>function and Principle of React.cloneElement</h2><p><code>React.cloneElement </code>used to clone and return a new React element, while allowing you to modify the properties or child elements of the cloned element. Its syntax is as follows:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">React.cloneElement(element, [props], [...children])</span><br></pre></td></tr></table></figure>
+
+<p>parameter description:</p>
+<ul>
+<li><code>element </code>the React element that needs to be cloned.</li>
+<li><code>props </code>overwrites or extends the attributes of the original element.</li>
+<li><code>children </code>optional, to replace the child nodes of the cloned element.</li>
+</ul>
+<p><code>cloneElement </code>returns a new element object, retaining the original element’s <code>key </code>and <code>ref </code>and the incoming <code>props</code>Merge with the original attribute (the latter overwrites the former) and support replacing or appending child elements.</p>
+<p>Example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const oldElement = &lt;button className=&quot;btn&quot;&gt;Click&lt;/button&gt;;</span><br><span class="line">const newElement = React.cloneElement(oldElement, &#123; className: &#x27;btn primary&#x27; &#125;, &#x27;Click me&#x27;);</span><br></pre></td></tr></table></figure>
+
+<p>this way, the new element will have an updated class name and new child content.</p>
+<hr>
+<h2 id="Difference-between-createElement-and-cloneElement"><a href="#Difference-between-createElement-and-cloneElement" class="headerlink" title="Difference between createElement and cloneElement"></a>Difference between createElement and cloneElement</h2><table>
+<thead>
+<tr>
+<th>dimension</th>
+<th>React.createElement</th>
+<th>React.cloneElement</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>role</td>
+<td>create a new React element</td>
+<td>clone an existing React element and modify attributes and child elements</td>
+</tr>
+<tr>
+<td>input</td>
+<td>element type, attribute, child element</td>
+<td>existing React element, modified attributes, child elements</td>
+</tr>
+<tr>
+<td>return</td>
+<td>new React element object</td>
+<td>A new React element object based on the passed-in element</td>
+</tr>
+<tr>
+<td>attribute Merge</td>
+<td>direct assignment on creation</td>
+<td>merge the passed-in new attribute with the old attribute, and the new attribute overwrites the old attribute.</td>
+</tr>
+<tr>
+<td>Keep key&#x2F;ref</td>
+<td>none, need to be explicitly specified</td>
+<td>keep the key and ref of the original element</td>
+</tr>
+<tr>
+<td>typical Scene</td>
+<td>JSX compilation, dynamic element creation</td>
+<td>Modify sub-component properties and extend functionality to sub-components</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="use-Scenario-Comparison"><a href="#use-Scenario-Comparison" class="headerlink" title="use Scenario Comparison"></a>use Scenario Comparison</h2><p><code>createElement </code>it is more preferred to create elements for the first time, which is common in JSX compilation results or dynamically build React elements.</p>
+<p><code>cloneElement </code>it is often used to enhance or modify existing child elements, especially when high-level components (HOC), component reuse, dynamic slot rendering, and adding additional properties to incoming child elements.</p>
+<p>For example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Wrapper</span>(<span class="params">&#123; children &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="title class_">React</span>.<span class="property">Children</span>.<span class="title function_">map</span>(children, <span class="function"><span class="params">child</span> =&gt;</span> </span><br><span class="line">    <span class="title class_">React</span>.<span class="title function_">cloneElement</span>(child, &#123; <span class="attr">style</span>: &#123; <span class="attr">color</span>: <span class="string">&#x27;red&#x27;</span> &#125; &#125;)</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>the example adds a uniform style attribute after cloning all the child elements passed in.</p>
+<hr>
+<h2 id="Code-sample-comparison"><a href="#Code-sample-comparison" class="headerlink" title="Code sample comparison"></a>Code sample comparison</h2><p>use <code>createElement </code>:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> element = <span class="title class_">React</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;button&#x27;</span>, &#123; <span class="attr">onClick</span>: <span class="function">() =&gt;</span> <span class="title function_">alert</span>(<span class="string">&#x27;Clicked&#x27;</span>) &#125;, <span class="string">&#x27;Click me&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>equivalent to JSX:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button onClick=&#123;<span class="function">() =&gt;</span> <span class="title function_">alert</span>(<span class="string">&#x27;Clicked&#x27;</span>)&#125;&gt;<span class="title class_">Click</span> me&lt;/button&gt;</span><br></pre></td></tr></table></figure>
+
+<p>use <code>cloneElement </code>to modify an existing element:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> oldButton = <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">className</span>=<span class="string">&quot;btn&quot;</span>&gt;</span>Old<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span>;</span><br><span class="line"><span class="keyword">const</span> newButton = <span class="title class_">React</span>.<span class="title function_">cloneElement</span>(oldButton, &#123; <span class="attr">className</span>: <span class="string">&#x27;btn new&#x27;</span> &#125;, <span class="string">&#x27;New Label&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="interview-answer"><a href="#interview-answer" class="headerlink" title="interview answer"></a>interview answer</h2><p><code>React.createElement </code>React is the basic method for creating elements. It receives the element type, attributes, and child element parameters and returns a new React element object. It is usually called automatically by JSX compilation to create component elements for the first time.</p>
+<p><code>React.cloneElement </code>is a tool function used to clone an existing React element, returning a new element object. It will retain the original elements of<code>key </code>and <code>ref </code>and allows merging or overriding attributes, with support for replacing child elements. Often used to enhance or modify child elements.</p>
+<p>The difference between the two is: <code>createElement </code>it is “creating new”. <code>cloneElement </code>it is “changing the old”. <code>cloneElement </code>it is mostly used for high-level components and scenarios where additional properties need to be dynamically passed to sub-components.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>understanding <code>createElement </code>and <code>cloneElement </code>the difference can help developers choose the appropriate method when building the React component tree. <code>createElement </code>is the starting point for creating React elements, suitable for generating new components; <code>cloneElement </code>it focuses on reusing existing elements and modifying their attributes or sub-elements to facilitate the reuse and extension of components.</p>
+<p>The proper use of these APIs improves code flexibility and component reusability, and is an important foundation for advanced development of React.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

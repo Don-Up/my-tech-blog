@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="How does react ref obtain instances of function componentsForewordin The React, ref is a mechanism for accessing DOM node or class component instances"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How does react ref obtain instances of function components"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="How does react ref obtain instances of function componentsForewordin The React, ref is a mechanism for accessing DOM node or class component instances"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How does react ref obtain instances of function components - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How does react ref obtain instances of function components</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-05-09
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="How-does-react-ref-obtain-instances-of-function-components"><a href="#How-does-react-ref-obtain-instances-of-function-components" class="headerlink" title="How does react ref obtain instances of function components"></a>How does react ref obtain instances of function components</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in The React, <code>ref </code>is a mechanism for accessing DOM node or class component instances. For class components, <code>ref </code>you can directly reference a component instance to access the instance’s methods and properties. However, function components are essentially stateless pure functions with no instances, so the traditional <code>ref </code>you cannot get an “instance” of a function component directly “. So, how does React support the use of function components <code>ref </code>, and let the developer implement access to the function component inside?</p>
+<p>This article will systematically comb the React. <code>ref </code>the working principle of the, focusing on how the function component works through <code>ref </code>get an “instance” or similar functionality, including <code>forwardRef </code>and <code>useImperativeHandle </code>the implementation mechanism and usage of.</p>
+<hr>
+<h2 id="The-basic-principle-of-React-ref"><a href="#The-basic-principle-of-React-ref" class="headerlink" title="The basic principle of React ref"></a>The basic principle of React ref</h2><p>in The React, <code>ref </code>there are mainly the following kinds of usage:</p>
+<ol>
+<li><strong>DOM node reference</strong><br>by<code>ref </code>get the real DOM element node, such <code>&lt;input ref=&#123;inputRef&#125; /&gt;</code>, <code>inputRef.current </code>the corresponding DOM.</li>
+<li><strong>Class Component Instance Reference</strong><br>the class component passes through <code>ref </code>you can get a component instance directly, and thus access its instance methods and properties.</li>
+<li><strong>Special Support for Function Components</strong><br>since the function component itself has no instance, it cannot be used directly by default. <code>ref </code>gets the “instance” of the function component “. It needs to be implemented through the special API of React.</li>
+</ol>
+<p>React. <code>ref </code>it is essentially a reference to a specific node or instance maintained through the React Fiber tree. For class components, the Fiber node holds a reference to the component instance; For function components, the Fiber node is functional and no instance exists.</p>
+<hr>
+<h2 id="Why-the-function-component-has-no-instance"><a href="#Why-the-function-component-has-no-instance" class="headerlink" title="Why the function component has no instance"></a>Why the function component has no instance</h2><p>the function component is essentially a pure function that accepts <code>props </code>as a parameter, the React element to be rendered is returned, and the instance is not created or maintained (that is, there is no. <code>this</code>Binding). This is different from class components, which have a life cycle and state after instantiation, and React can pass. <code>ref </code>direct reference to this instance.</p>
+<p>The non-instantiation nature of function components brings benefits such as simplicity and superior performance, but it also makes it impossible to pass directly through <code>ref </code>access inside the component.</p>
+<hr>
+<h2 id="How-function-components-support-ref"><a href="#How-function-components-support-ref" class="headerlink" title="How function components support ref"></a>How function components support ref</h2><p>to solve the problem that function components cannot directly obtain instances, React provides two key APIs:</p>
+<ol>
+<li><code>**React.forwardRef** </code><br>for forwarding <code>ref </code>, so that the parent component passes in. <code>ref </code>can be received by some child node (usually a DOM node) within the function component.</li>
+<li><code>**useImperativeHandle** </code><br>cooperation <code>forwardRef </code>use to allow the function component to customize the instance values exposed to the parent component, thereby simulating the instance methods of the class component.</li>
+</ol>
+<h3 id="1-The-implementation-mechanism-of-forwardRef"><a href="#1-The-implementation-mechanism-of-forwardRef" class="headerlink" title="1. The implementation mechanism of forwardRef."></a>1. The implementation mechanism of forwardRef.</h3><p><code>forwardRef </code>essentially a higher-order function that receives a function component as an argument and returns a new component that accepts a second argument. <code>ref </code>:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const FancyInput = React.forwardRef((props, ref) =&gt; (</span><br><span class="line">  &lt;input ref=&#123;ref&#125; &#123;...props&#125; /&gt;</span><br><span class="line">));</span><br></pre></td></tr></table></figure>
+
+<p>Internally, React Fiber will <code>ref </code>is directly associated with the element returned by the function component, rather than the function component itself. That is to say, <code>ref </code>the child node (usually DOM) is actually pointed to, not the function component itself.</p>
+<h3 id="2-Implementation-mechanism-of-useImperativeHandle"><a href="#2-Implementation-mechanism-of-useImperativeHandle" class="headerlink" title="2. Implementation mechanism of useImperativeHandle"></a>2. Implementation mechanism of useImperativeHandle</h3><p>when you want a function component to expose a custom “instance” method, you can work <code>useImperativeHandle </code>use:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function FancyInput(props, ref) &#123;</span><br><span class="line">  const inputRef = React.useRef();</span><br><span class="line"></span><br><span class="line">  React.useImperativeHandle(ref, () =&gt; (&#123;</span><br><span class="line">    focus: () =&gt; &#123;</span><br><span class="line">      inputRef.current.focus();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;));</span><br><span class="line"></span><br><span class="line">  return &lt;input ref=&#123;inputRef&#125; /&gt;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">FancyInput = React.forwardRef(FancyInput);</span><br></pre></td></tr></table></figure>
+
+<p><code>useImperativeHandle </code>allows us to control the exposure to external <code>ref.current </code>content, enabling behavior similar to that of a class component instance.</p>
+<hr>
+<h2 id="Processing-logic-of-ref-in-React-Fiber"><a href="#Processing-logic-of-ref-in-React-Fiber" class="headerlink" title="Processing logic of ref in React Fiber"></a>Processing logic of ref in React Fiber</h2><p>under the Fiber architecture, <code>ref </code>saved in the Fiber node <code>ref </code>property. When updated, React will:</p>
+<ul>
+<li>for class components, assign the instance to <code>ref.current </code>.</li>
+<li>For function components (using <code>forwardRef</code>After packaging), the internal element’s <code>ref </code>assign to the incoming <code>ref </code>.</li>
+<li>For DOM elements, assign the DOM node directly to <code>ref.current </code>.</li>
+</ul>
+<p>This mechanism ensures <code>ref </code>always points to the correct instance or node.</p>
+<hr>
+<h2 id="Code-Sample-Summary"><a href="#Code-Sample-Summary" class="headerlink" title="Code Sample Summary"></a>Code Sample Summary</h2><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span>, &#123; useRef, forwardRef, useImperativeHandle &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">FancyButton</span> = <span class="title function_">forwardRef</span>(<span class="function">(<span class="params">props, ref</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> buttonRef = <span class="title function_">useRef</span>();</span><br><span class="line"></span><br><span class="line">  <span class="title function_">useImperativeHandle</span>(ref, <span class="function">() =&gt;</span> (&#123;</span><br><span class="line">    <span class="attr">click</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      buttonRef.<span class="property">current</span>.<span class="title function_">click</span>();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;));</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">ref</span>=<span class="string">&#123;buttonRef&#125;</span>&gt;</span>Click me<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Parent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> ref = <span class="title function_">useRef</span>();</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">FancyButton</span> <span class="attr">ref</span>=<span class="string">&#123;ref&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> ref.current.click()&#125;&gt;Trigger FancyButton Click<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="interview-answer"><a href="#interview-answer" class="headerlink" title="interview answer"></a>interview answer</h2><p>function components themselves have no instances because they are pure functions with no life cycle and state, and no <code>this </code>. So, <code>ref </code>you cannot directly reference a function component instance.</p>
+<p>React provides <code>forwardRef </code>to forward the parent component’s incoming <code>ref </code>to some child element (usually a DOM node) inside the function component. In addition, through <code>useImperativeHandle </code>, the function component can customize the instance value exposed to the parent component to realize the function similar to the class component instance.</p>
+<p>React Fiber will pass in <code>ref</code>Assign to the corresponding DOM node or instance, thus implementing <code>ref </code>visit. Function component using <code>forwardRef </code>and <code>useImperativeHandle </code>, is a “workable” solution to React design, which makes up for the defect that the function component has no instances.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>the function component in React has no instance, which makes it impossible to pass directly like a class component. <code>ref </code>gets the instance. For this reason, React is passed. <code>forwardRef </code>realized <code>ref </code>of forwarding, allowing the function component to put <code>ref </code>bind to an internal DOM element or subcomponent. Cooperation <code>useImperativeHandle </code>the function component can also customize the “instance” interface that is exposed to the outside world.</p>
+<p>This design not only maintains the simplicity and performance advantages of function components, but also meets the needs of developers to access the internal functions of components. It is a very important and practical mechanism in React component design. Mastering these APIs and principles can help developers use them better. <code>ref </code>manage and manipulate function components.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What is the function of react forwardsRef and what are its application scenariosForewordin React development, ref used to get a component instance or "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What is the function of react forwardsRef and what are its application scenarios"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What is the function of react forwardsRef and what are its application scenariosForewordin React development, ref used to get a component instance or "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What is the function of react forwardsRef and what are its application scenarios - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What is the function of react forwardsRef and what are its application scenarios</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-05-13
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-is-the-function-of-react-forwardsRef-and-what-are-its-application-scenarios"><a href="#What-is-the-function-of-react-forwardsRef-and-what-are-its-application-scenarios" class="headerlink" title="What is the function of react forwardsRef and what are its application scenarios"></a>What is the function of react forwardsRef and what are its application scenarios</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in React development, <code>ref </code>used to get a component instance or DOM element reference and thus manipulate them directly. However, function components have no instances by nature, so by default they cannot be <code>ref </code>visit. To address this limitation, React provides <code>forwardRef </code>API, allowing function components to “forward” <code>ref </code>to enable the parent component to access a DOM node or exposed interface inside the function component.</p>
+<p>This article will be in-depth analysis <code>forwardRef </code>and its common usage scenarios to help understand its value and usage in React component design.</p>
+<hr>
+<h2 id="1-forwardRef-the-role"><a href="#1-forwardRef-the-role" class="headerlink" title="1. forwardRef the role"></a>1. <code>forwardRef </code>the role</h2><p>in React, <code>forwardRef </code>is a higher-order function that wraps a function component so that it can receive a second argument <code>ref </code>. This causes the parent component to pass in <code>ref </code>it can be used by a node or object inside the function component to achieve the purpose of reference forwarding.</p>
+<p>Typically, a function component cannot be directly<code>ref </code>references because they have no instances. But through <code>forwardRef </code>, React will <code>ref </code>as the second parameter to the component function, the component internally assigns it to the child element, thus implementing a reference to the internal DOM or custom instance.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const FancyButton = React.forwardRef((props, ref) =&gt; &#123;</span><br><span class="line">  return &lt;button ref=&#123;ref&#125; &#123;...props&#125;&gt;Click me&lt;/button&gt;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>In the above example, the parent component can pass directly through <code>ref </code>get <code>FancyButton </code>in <code>&lt;button&gt;</code>the DOM node.</p>
+<hr>
+<h2 id="2-Brief-description-of-working-mechanism"><a href="#2-Brief-description-of-working-mechanism" class="headerlink" title="2. Brief description of working mechanism"></a>2. Brief description of working mechanism</h2><ul>
+<li><code>forwardRef </code>returns a React component type, which automatically receives <code>ref </code>.</li>
+<li>Incoming <code>ref </code>is provided as the second parameter to the function component, rather than being mounted on the component instance (the function component has no instance).</li>
+<li>The function component internally passes <code>ref </code>assign to the child node that needs to be exposed to implement forwarding.</li>
+<li>Binding <code>useImperativeHandle</code>Hooks, you can also customize the instance methods exposed to the parent component.</li>
+</ul>
+<hr>
+<h2 id="3-Typical-use-scenarios"><a href="#3-Typical-use-scenarios" class="headerlink" title="3. Typical use scenarios"></a>3. Typical use scenarios</h2><h3 id="3-1-to-get-sub-component-internal-DOM-nodes"><a href="#3-1-to-get-sub-component-internal-DOM-nodes" class="headerlink" title="3.1 to get sub-component internal DOM nodes"></a>3.1 to get sub-component internal DOM nodes</h3><p>the parent component needs to directly manipulate the DOM node inside the function component, such as focusing the input box and triggering the animation. At this time through <code>forwardRef </code>forwarding <code>ref </code>, the parent component can get the corresponding DOM.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">Input</span> = <span class="title class_">React</span>.<span class="title function_">forwardRef</span>(<span class="function">(<span class="params">props, ref</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">ref</span>=<span class="string">&#123;ref&#125;</span> &#123;<span class="attr">...props</span>&#125; /&gt;</span></span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Parent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> inputRef = <span class="title class_">React</span>.<span class="title function_">useRef</span>();</span><br><span class="line"></span><br><span class="line">  <span class="title class_">React</span>.<span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    inputRef.<span class="property">current</span>.<span class="title function_">focus</span>();</span><br><span class="line">  &#125;, []);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">Input</span> <span class="attr">ref</span>=<span class="string">&#123;inputRef&#125;</span> /&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-2-Exposing-Custom-Instance-Methods"><a href="#3-2-Exposing-Custom-Instance-Methods" class="headerlink" title="3.2 Exposing Custom Instance Methods"></a>3.2 Exposing Custom Instance Methods</h3><p>cooperation <code>useImperativeHandle </code>, the function component can not only forward <code>ref </code>, you can also define exposed instance methods that allow the parent component to call internal functions of the component.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">FancyInput</span> = <span class="title class_">React</span>.<span class="title function_">forwardRef</span>(<span class="function">(<span class="params">props, ref</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> inputRef = <span class="title class_">React</span>.<span class="title function_">useRef</span>();</span><br><span class="line"></span><br><span class="line">  <span class="title class_">React</span>.<span class="title function_">useImperativeHandle</span>(ref, <span class="function">() =&gt;</span> (&#123;</span><br><span class="line">    <span class="attr">focus</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      inputRef.<span class="property">current</span>.<span class="title function_">focus</span>();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;));</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">ref</span>=<span class="string">&#123;inputRef&#125;</span> &#123;<span class="attr">...props</span>&#125; /&gt;</span></span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Parent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> fancyRef = <span class="title class_">React</span>.<span class="title function_">useRef</span>();</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">FancyInput</span> <span class="attr">ref</span>=<span class="string">&#123;fancyRef&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> fancyRef.current.focus()&#125;&gt;聚焦<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-3-High-level-component-packaging-and-library-design"><a href="#3-3-High-level-component-packaging-and-library-design" class="headerlink" title="3.3 High-level component packaging and library design"></a>3.3 High-level component packaging and library design</h3><p>when encapsulating a higher-order component (HOC) for a function component,, <code>forwardRef </code>can ensure <code>ref </code>can pass through normally, avoid <code>ref </code>lost problem. Many UI component libraries and tool libraries use <code>forwardRef </code>to enhance the flexibility and scalability of components.</p>
+<hr>
+<h2 id="4-Code-sample-comparison"><a href="#4-Code-sample-comparison" class="headerlink" title="4. Code sample comparison"></a>4. Code sample comparison</h2><table>
+<thead>
+<tr>
+<th>Scene</th>
+<th>forwardRef not used</th>
+<th>using the forwardRef</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>access DOM node</td>
+<td>function component cannot get DOM directly by ref</td>
+<td>function component can get internal DOM through ref</td>
+</tr>
+<tr>
+<td>high-Level Component Package</td>
+<td><code>ref </code>no automatic transparent transmission, resulting in failure</td>
+<td><code>ref </code>can be passed normally, keep Access valid</td>
+</tr>
+<tr>
+<td>exposing custom methods</td>
+<td>not directly exposed</td>
+<td>use <code>useImperativeHandle </code>use together</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="interview-answer"><a href="#interview-answer" class="headerlink" title="interview answer"></a>interview answer</h2><p><code>forwardRef </code>is an API provided by React for function component forwarding <code>ref </code>to enable the parent component to access DOM nodes or custom instances inside the child component. The function component has no instance by default and cannot be bound directly. <code>ref </code>, <code>forwardRef </code>through <code>ref</code>Pass in the function component as the second parameter to implement reference forwarding. It is often used to access subcomponent DOM, expose custom methods, and maintain in higher-order components. <code>ref </code>pass.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p><code>forwardRef </code>is to solve the function component cannot be bound <code>ref </code>the key tool ensures flexible and efficient reference passing between React components. It enables the parent component to easily access the DOM or custom interface inside the child component, enhancing the operability and encapsulation capabilities of the component.</p>
+<p>In high-level component encapsulation, UI library design, and complex interaction scenarios, <code>forwardRef </code>it is almost an indispensable tool. Master and use reasonably <code>forwardRef </code>, can make your React component design more flexible, robust and easy to maintain.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

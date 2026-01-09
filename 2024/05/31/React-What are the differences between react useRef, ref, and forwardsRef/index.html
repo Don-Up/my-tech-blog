@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What are the differences between react useRef, ref, and forwardsRefForewordin React development, when operating on DOM or accessing component instance"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What are the differences between react useRef, ref, and forwardsRef"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What are the differences between react useRef, ref, and forwardsRefForewordin React development, when operating on DOM or accessing component instance"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What are the differences between react useRef, ref, and forwardsRef - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What are the differences between react useRef, ref, and forwardsRef</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-05-31
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-are-the-differences-between-react-useRef-ref-and-forwardsRef"><a href="#What-are-the-differences-between-react-useRef-ref-and-forwardsRef" class="headerlink" title="What are the differences between react useRef, ref, and forwardsRef"></a>What are the differences between react useRef, ref, and forwardsRef</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in React development, when operating on DOM or accessing component instances, <code>ref </code>mechanisms play an important role. At the same time, React provides multiple <code>ref </code>related APIs, such <code>useRef </code>, <code>ref </code>property and <code>forwardRef </code>. There are differences in usage scenarios, functions and implementation mechanisms, but they are often confused in actual development.</p>
+<p>This paper will explore in depth <code>useRef </code>, <code>ref </code>and <code>forwardRef </code>the concepts and differences, combined with specific code examples, help you clarify their role and application scenarios, so as to improve the understanding of the reference and communication between React components.</p>
+<hr>
+<h2 id="1-ref-the-basic-concept"><a href="#1-ref-the-basic-concept" class="headerlink" title="1. ref the basic concept"></a>1. <code>ref </code>the basic concept</h2><p><code>ref </code>is the mechanism that React uses to reference DOM elements or component instances. By adding to the React element <code>ref </code>property, you can get a reference to the element, easy to operate DOM or access class component instances.</p>
+<p>For example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyComponent</span> <span class="keyword">extends</span> <span class="title class_ inherited__">React.Component</span> &#123;</span><br><span class="line">  <span class="title function_">componentDidMount</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">myRef</span>); <span class="comment">// 访问 DOM 或组件实例</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">render</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">ref</span>=<span class="string">&#123;ref</span> =&gt;</span> this.myRef = ref&#125;&gt;Hello<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>the function component can also be passed. <code>useRef </code>to create <code>ref </code>, here we will introduce in detail later.</p>
+<hr>
+<h2 id="2-useRef-what-is-it"><a href="#2-useRef-what-is-it" class="headerlink" title="2. useRef what is it?"></a>2. <code>useRef </code>what is it?</h2><p><code>useRef </code>is an API in React Hooks that is used to create variable reference objects in function components. It returns a variable <code>.current </code>property, the component maintains the same reference across multiple renderings.</p>
+<p>Main purpose:</p>
+<ul>
+<li>hold a reference to the DOM element</li>
+<li>holding any variable data within the component without triggering component re-rendering</li>
+</ul>
+<p>example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span>, &#123; useRef, useEffect &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">MyFunctionComponent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> inputRef = <span class="title function_">useRef</span>(<span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">  <span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    inputRef.<span class="property">current</span>.<span class="title function_">focus</span>(); <span class="comment">// 访问真实 DOM</span></span><br><span class="line">  &#125;, []);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">ref</span>=<span class="string">&#123;inputRef&#125;</span> /&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>here. <code>useRef </code>the returned object is always the same and does not cause the component to re-render.</p>
+<hr>
+<h2 id="3-Direct-use-ref-property"><a href="#3-Direct-use-ref-property" class="headerlink" title="3. Direct use ref property"></a>3. Direct use <code>ref </code>property</h2><p><code>ref </code>the attribute is used to bind a reference to The React element, which assigns different values to <code>ref </code>.</p>
+<ul>
+<li>For<strong>DOM element</strong> , <code>ref </code>is the corresponding real DOM node.</li>
+<li>For <strong>class Component</strong> , <code>ref </code>is an instance of the component.</li>
+<li>For <strong>function Component</strong> , the default cannot be used directly. <code>ref </code>, need to cooperate <code>forwardRef </code>.</li>
+</ul>
+<p>Usually set for elements <code>ref </code>there are two ways:</p>
+<ul>
+<li><strong>callback function</strong> : <code>ref=&#123;el =&gt; this.input = el&#125; </code></li>
+<li><code>**createRef** </code><strong>or</strong> <code>**useRef** </code><strong>object Created</strong> : <code>ref=&#123;inputRef&#125; </code></li>
+</ul>
+<hr>
+<h2 id="4-forwardRef-what-is-it"><a href="#4-forwardRef-what-is-it" class="headerlink" title="4. forwardRef what is it?"></a>4. <code>forwardRef </code>what is it?</h2><p><code>forwardRef</code>Is a higher-order function provided by React for forwarding in function components. <code>ref </code>, let the parent component pass in. <code>ref </code>bind to a node or subcomponent inside a function component.</p>
+<p>The default function component has no instance and cannot be bound directly. <code>ref </code>. By <code>forwardRef </code>after wrapping the function component, React passes the parent component into <code>ref </code>is exposed to the component as the second parameter, thus implementing <code>ref </code>the forwarding.</p>
+<p>Example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span>, &#123; forwardRef, useRef, useImperativeHandle &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">FancyInput</span> = <span class="title function_">forwardRef</span>(<span class="function">(<span class="params">props, ref</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> inputRef = <span class="title function_">useRef</span>();</span><br><span class="line"></span><br><span class="line">  <span class="title function_">useImperativeHandle</span>(ref, <span class="function">() =&gt;</span> (&#123;</span><br><span class="line">    <span class="attr">focus</span>: <span class="function">() =&gt;</span> inputRef.<span class="property">current</span>.<span class="title function_">focus</span>()</span><br><span class="line">  &#125;));</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">ref</span>=<span class="string">&#123;inputRef&#125;</span> /&gt;</span></span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Parent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> ref = <span class="title function_">useRef</span>();</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">FancyInput</span> <span class="attr">ref</span>=<span class="string">&#123;ref&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> ref.current.focus()&#125;&gt;Focus<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="5-The-core-differences-and-connections-of-the-three"><a href="#5-The-core-differences-and-connections-of-the-three" class="headerlink" title="5. The core differences and connections of the three"></a>5. The core differences and connections of the three</h2><table>
+<thead>
+<tr>
+<th>name</th>
+<th>role</th>
+<th>action object</th>
+<th>applicable Scenarios</th>
+<th>remarks</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>useRef </code></td>
+<td>creating a mutable reference object in a function component</td>
+<td>function Component Internal State</td>
+<td>access DOM or storage variables and do not trigger rendering</td>
+<td>is Hook, return <code>&#123;current&#125; </code>object</td>
+</tr>
+<tr>
+<td><code>ref</code>Property</td>
+<td>bind a reference to The React element</td>
+<td>DOM element, class component instance, function component (need to cooperate <code>forwardRef </code>)</td>
+<td>access the corresponding DOM node or class component instance</td>
+<td>need to pass in <code>createRef </code>&#x2F; <code>useRef </code>or callback function</td>
+</tr>
+<tr>
+<td><code>forwardRef </code></td>
+<td>forwarding <code>ref </code>allowing function components to expose internal nodes or instances</td>
+<td>function Component</td>
+<td>the function component wants the external to pass. <code>ref </code>access internal nodes or custom instance methods</td>
+<td>higher-order components, which wrap function components to support <code>ref </code>forwarding</td>
+</tr>
+</tbody></table>
+<p>simple understanding:</p>
+<ul>
+<li><code>useRef </code>is a Hook that creates a reference, similar to a container for variables.</li>
+<li><code>ref </code>is the “reference” attribute of the React component&#x2F;element, pointing to the corresponding instance or DOM.</li>
+<li><code>forwardRef</code>Is to support function component forwarding <code>ref </code>technical means.</li>
+</ul>
+<hr>
+<h2 id="6-Code-sample-comparison"><a href="#6-Code-sample-comparison" class="headerlink" title="6. Code sample comparison."></a>6. Code sample comparison.</h2><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// useRef 获取 DOM 节点</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Input</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> inputRef = <span class="title class_">React</span>.<span class="title function_">useRef</span>();</span><br><span class="line">  <span class="title class_">React</span>.<span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    inputRef.<span class="property">current</span>.<span class="title function_">focus</span>();</span><br><span class="line">  &#125;, []);</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">ref</span>=<span class="string">&#123;inputRef&#125;</span> /&gt;</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ref 绑定类组件实例</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyButton</span> <span class="keyword">extends</span> <span class="title class_ inherited__">React.Component</span> &#123;</span><br><span class="line">  <span class="title function_">click</span>(<span class="params"></span>) &#123; <span class="title function_">alert</span>(<span class="string">&#x27;clicked&#x27;</span>); &#125;</span><br><span class="line">  <span class="title function_">render</span>(<span class="params"></span>) &#123; <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">button</span>&gt;</span>Click me<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span>; &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Parent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> btnRef = <span class="title class_">React</span>.<span class="title function_">useRef</span>();</span><br><span class="line">  <span class="title class_">React</span>.<span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    btnRef.<span class="property">current</span>.<span class="title function_">click</span>();</span><br><span class="line">  &#125;, []);</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">MyButton</span> <span class="attr">ref</span>=<span class="string">&#123;btnRef&#125;</span> /&gt;</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// forwardRef 转发函数组件的 ref</span></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">FancyInput</span> = <span class="title class_">React</span>.<span class="title function_">forwardRef</span>(<span class="function">(<span class="params">props, ref</span>) =&gt;</span> (</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">ref</span>=<span class="string">&#123;ref&#125;</span> &#123;<span class="attr">...props</span>&#125; /&gt;</span></span></span><br><span class="line">));</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p><code>useRef </code>is the React Hook, which is used to create a mutable reference object in the function component, usually used to hold DOM nodes or any mutable data that does not affect rendering. It does not trigger the component to re-render.</p>
+<p><code>ref </code>is a reference attribute provided by React to an element or component. It points to the real DOM when bound to a DOM element, and points to a component instance when bound to a class component. Function components cannot be bound directly by default <code>ref </code>.</p>
+<p><code>forwardRef </code>is a high-level component provided by React for function component forwarding <code>ref </code>, let the parent component’s <code>ref </code>can access the DOM or mock instance inside the function component. Through cooperation <code>useImperativeHandle </code>function components can also expose custom instance interfaces.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>React in <code>useRef </code>, <code>ref </code>and<code>forwardRef </code>are three key concepts around reference management. <code>useRef </code>is a Hook, creating a mutable reference; <code>ref </code>is the property of the binding reference for DOM and class component instances; <code>forwardRef </code>then the function component provides forwarding <code>ref </code>the ability. Master their differences and use together, can be more flexible and efficient operation of components and DOM, improve the reusability and interaction of components.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
