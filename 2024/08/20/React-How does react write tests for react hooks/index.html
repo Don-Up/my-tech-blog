@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="How does react write tests for react hooksForewordthe introduction of React Hooks has completely changed the state management and side effect handling"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How does react write tests for react hooks"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="How does react write tests for react hooksForewordthe introduction of React Hooks has completely changed the state management and side effect handling"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How does react write tests for react hooks - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How does react write tests for react hooks</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-08-20
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="How-does-react-write-tests-for-react-hooks"><a href="#How-does-react-write-tests-for-react-hooks" class="headerlink" title="How does react write tests for react hooks"></a>How does react write tests for react hooks</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>the introduction of React Hooks has completely changed the state management and side effect handling of function components, making the component logic more concise and reusable. With the popularity of the use of Hooks, how to effectively write unit tests for custom Hooks or Hooks used in function components has become an important skill that must be mastered in front-end development. This article will systematically explain the basic methods, common tools, testing techniques, and precautions of React Hooks single test to help developers write reliable and easy-to-maintain test code.</p>
+<hr>
+<h2 id="The-Basic-Idea-of-React-Hooks-Single-Test"><a href="#The-Basic-Idea-of-React-Hooks-Single-Test" class="headerlink" title="The Basic Idea of React Hooks Single Test"></a>The Basic Idea of React Hooks Single Test</h2><p>test React Hooks have two main goals:</p>
+<ol>
+<li><strong>verify that the Hook state logic is correct</strong><br>including initial state, state update, asynchronous operation and side effect execution.</li>
+<li><strong>Verify the correctness of Hook interaction with external</strong><br>for example, calling callback functions, event handling, data requests, etc.</li>
+</ol>
+<p>Since Hooks can only be called in function components or custom Hooks and cannot be used directly in ordinary functions, there are usually two ways to measure Hooks:</p>
+<ul>
+<li><strong>test Hooks indirectly through the test component</strong><br>create a test component, call the Hook in the component, and make the assertion through the result or state change of the component rendering.</li>
+<li><strong>Use</strong> <code>**renderHook** </code><strong>(From</strong><code>**@testing-library/react-hooks** </code><strong>1) Tools</strong><br>this tool is designed to test custom Hooks and simplifies the process of calling and testing Hooks.</li>
+</ul>
+<hr>
+<h2 id="Introduction-to-Common-Test-Tools"><a href="#Introduction-to-Common-Test-Tools" class="headerlink" title="Introduction to Common Test Tools"></a>Introduction to Common Test Tools</h2><h3 id="1-React-Testing-Library-RTL"><a href="#1-React-Testing-Library-RTL" class="headerlink" title="1. React Testing Library(RTL)"></a>1. React Testing Library(RTL)</h3><p>React Testing Library is a mainstream tool for modern React Testing, emphasizing Testing user behavior and interface interaction. It works with Jest to support rendering components, test component behavior, and DOM changes.</p>
+<h3 id="2-testing-library-react-hooks"><a href="#2-testing-library-react-hooks" class="headerlink" title="2. @testing-library/react-hooks "></a>2. <code>@testing-library/react-hooks </code></h3><p>dedicated to test Hooks, providing <code>renderHook </code>and <code>act </code>method to facilitate calling and updating hooks, simulating state changes and side effects.</p>
+<p>Installation:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install @testing-library/react-hooks --save-dev</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-Jest"><a href="#3-Jest" class="headerlink" title="3. Jest"></a>3. Jest</h3><p>as a test framework, Jest provides assertions, simulation functions, timer control and other functions, with the above tools to use excellent results.</p>
+<hr>
+<h2 id="Specific-examples-to-explain"><a href="#Specific-examples-to-explain" class="headerlink" title="Specific examples to explain"></a>Specific examples to explain</h2><h3 id="example-1-Test-a-simple-custom-Hook"><a href="#example-1-Test-a-simple-custom-Hook" class="headerlink" title="example 1: Test a simple custom Hook"></a>example 1: Test a simple custom Hook</h3><p>suppose there is a simple count Hook:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useState &#125; <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">useCounter</span>(<span class="params">initialValue = <span class="number">0</span></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [count, setCount] = <span class="title function_">useState</span>(initialValue);</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">increment</span> = (<span class="params"></span>) =&gt; <span class="title function_">setCount</span>(<span class="function"><span class="params">c</span> =&gt;</span> c + <span class="number">1</span>);</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">decrement</span> = (<span class="params"></span>) =&gt; <span class="title function_">setCount</span>(<span class="function"><span class="params">c</span> =&gt;</span> c - <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> &#123; count, increment, decrement &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> useCounter;</span><br></pre></td></tr></table></figure>
+
+<p>use<code>@testing-library/react-hooks </code>writing tests:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; renderHook, act &#125; <span class="keyword">from</span> <span class="string">&quot;@testing-library/react-hooks&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> useCounter <span class="keyword">from</span> <span class="string">&quot;./useCounter&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="title function_">test</span>(<span class="string">&quot;should initialize count with default value and update correctly&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; result &#125; = <span class="title function_">renderHook</span>(<span class="function">() =&gt;</span> <span class="title function_">useCounter</span>(<span class="number">5</span>));</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 初始状态断言</span></span><br><span class="line">  <span class="title function_">expect</span>(result.<span class="property">current</span>.<span class="property">count</span>).<span class="title function_">toBe</span>(<span class="number">5</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 调用 increment 更新状态</span></span><br><span class="line">  <span class="title function_">act</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    result.<span class="property">current</span>.<span class="title function_">increment</span>();</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="title function_">expect</span>(result.<span class="property">current</span>.<span class="property">count</span>).<span class="title function_">toBe</span>(<span class="number">6</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 调用 decrement 更新状态</span></span><br><span class="line">  <span class="title function_">act</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    result.<span class="property">current</span>.<span class="title function_">decrement</span>();</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="title function_">expect</span>(result.<span class="property">current</span>.<span class="property">count</span>).<span class="title function_">toBe</span>(<span class="number">5</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>among them, <code>act </code>used to wrap actions that trigger status updates and ensure that React handles updates and side effects correctly.</p>
+<hr>
+<h3 id="Example-2-Test-a-Hook-with-asynchronous-side-effects"><a href="#Example-2-Test-a-Hook-with-asynchronous-side-effects" class="headerlink" title="Example 2: Test a Hook with asynchronous side effects"></a>Example 2: Test a Hook with asynchronous side effects</h3><p>suppose you have a Hook that simulates getting data asynchronously:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useState, useEffect &#125; <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">useFetchData</span>(<span class="params">url</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [data, setData] = <span class="title function_">useState</span>(<span class="literal">null</span>);</span><br><span class="line">  <span class="keyword">const</span> [loading, setLoading] = <span class="title function_">useState</span>(<span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">  <span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> mounted = <span class="literal">true</span>;</span><br><span class="line">    <span class="title function_">fetch</span>(url)</span><br><span class="line">      .<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> res.<span class="title function_">json</span>())</span><br><span class="line">      .<span class="title function_">then</span>(<span class="function"><span class="params">json</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (mounted) &#123;</span><br><span class="line">          <span class="title function_">setData</span>(json);</span><br><span class="line">          <span class="title function_">setLoading</span>(<span class="literal">false</span>);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">    <span class="keyword">return</span> <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      mounted = <span class="literal">false</span>;</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;, [url]);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> &#123; data, loading &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> useFetchData;</span><br></pre></td></tr></table></figure>
+
+<p>the test needs to simulate a network request:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; renderHook &#125; <span class="keyword">from</span> <span class="string">&quot;@testing-library/react-hooks&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> useFetchData <span class="keyword">from</span> <span class="string">&quot;./useFetchData&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">global</span>.<span class="property">fetch</span> = jest.<span class="title function_">fn</span>(<span class="function">() =&gt;</span></span><br><span class="line">  <span class="title class_">Promise</span>.<span class="title function_">resolve</span>(&#123;</span><br><span class="line">    <span class="attr">json</span>: <span class="function">() =&gt;</span> <span class="title class_">Promise</span>.<span class="title function_">resolve</span>(&#123; <span class="attr">message</span>: <span class="string">&quot;hello&quot;</span> &#125;),</span><br><span class="line">  &#125;)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="title function_">test</span>(<span class="string">&quot;should fetch data and update state&quot;</span>, <span class="title function_">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; result, waitForNextUpdate &#125; = <span class="title function_">renderHook</span>(<span class="function">() =&gt;</span> <span class="title function_">useFetchData</span>(<span class="string">&quot;/api&quot;</span>));</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 初始状态 loading 为 true，data 为 null</span></span><br><span class="line">  <span class="title function_">expect</span>(result.<span class="property">current</span>.<span class="property">loading</span>).<span class="title function_">toBe</span>(<span class="literal">true</span>);</span><br><span class="line">  <span class="title function_">expect</span>(result.<span class="property">current</span>.<span class="property">data</span>).<span class="title function_">toBe</span>(<span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 等待异步更新完成</span></span><br><span class="line">  <span class="keyword">await</span> <span class="title function_">waitForNextUpdate</span>();</span><br><span class="line"></span><br><span class="line">  <span class="title function_">expect</span>(result.<span class="property">current</span>.<span class="property">loading</span>).<span class="title function_">toBe</span>(<span class="literal">false</span>);</span><br><span class="line">  <span class="title function_">expect</span>(result.<span class="property">current</span>.<span class="property">data</span>).<span class="title function_">toEqual</span>(&#123; <span class="attr">message</span>: <span class="string">&quot;hello&quot;</span> &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>use here <code>jest.fn </code>simulation <code>fetch </code>, <code>waitForNextUpdate </code>wait for the internal status update of the Hook.</p>
+<hr>
+<h2 id="Several-Key-Points-in-Hooks-Single-Test"><a href="#Several-Key-Points-in-Hooks-Single-Test" class="headerlink" title="Several Key Points in Hooks Single Test"></a>Several Key Points in Hooks Single Test</h2><ul>
+<li><strong>use</strong> <code>**act** </code><strong>package Trigger Status Update Action</strong> to prevent warnings and status out of sync.</li>
+<li><strong>Avoid direct access to state variable modifications in the test</strong> , shall be adopted <code>dispatch </code>or the method returned by Hook to update the state.</li>
+<li><strong>For asynchronous side effects, use</strong> <code>**waitFor** </code><strong>,</strong><code>**waitForNextUpdate** </code><strong>wait for the state to change.</strong></li>
+<li><strong>Encapsulate business logic into custom hooks as much as possible to reduce the complexity of component testing.</strong></li>
+</ul>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>the core of writing a single test for React Hooks is to understand the execution mechanism and status update process of Hooks. Use <code>@testing-library/react-hooks </code>of <code>renderHook </code>to test custom hooks efficiently and elegantly. Attention should be paid when testing <code>act </code>wrap update operations, handle asynchronous side effects of state changes, and simulate external dependencies in conjunction with Jest. This ensures the stability and correctness of the Hook in multiple states and scenarios, and improves code quality and maintenance efficiency.</p>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p>React Hooks can only be called in function components or custom Hooks and cannot be used directly in ordinary functions. Therefore, there are two main ways to test Hooks: indirectly test Hooks through test components, or use <code>@testing-library/react-hooks </code>provided <code>renderHook </code>the tool calls and tests hooks directly. You need to use <code>act</code>Wrap the state update operation to ensure state synchronization, and wait for the state update to complete for asynchronous side effects. In this way, the state logic and side-effect behavior of Hooks can be efficiently verified to ensure code robustness.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

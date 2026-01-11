@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="How to avoid useEffect from looping infinitelyForeworduseEffect it is the core Hook used to handle side effects in The React function component, but m"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How to avoid useEffect from looping infinitely"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="How to avoid useEffect from looping infinitelyForeworduseEffect it is the core Hook used to handle side effects in The React function component, but m"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How to avoid useEffect from looping infinitely - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How to avoid useEffect from looping infinitely</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-12-06
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="How-to-avoid-useEffect-from-looping-infinitely"><a href="#How-to-avoid-useEffect-from-looping-infinitely" class="headerlink" title="How to avoid useEffect from looping infinitely"></a>How to avoid useEffect from looping infinitely</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p><code>useEffect </code>it is the core Hook used to handle side effects in The React function component, but many developers encounter a common problem when using it-infinite loop execution. This situation not only causes performance issues, but may also cause the application to crash.</p>
+<p>Why is there an infinite loop? And how to avoid? This paper will System Analysis <code>useEffect </code>the roots of infinite loops, explore multiple solutions, and help you better grasp them with examples and tables. <code>useEffect </code>the correct way of use.</p>
+<hr>
+<h2 id="The-cause-of-the-use-effect-infinite-loop"><a href="#The-cause-of-the-use-effect-infinite-loop" class="headerlink" title="The cause of the use effect infinite loop"></a>The cause of the use effect infinite loop</h2><p><code>useEffect </code>receives two arguments: a side-effect function and an array of dependencies. React will compare whether each item in the dependency array is the same as the previous reference. As long as there is a dependency change, the side effect will be executed again.</p>
+<p>The core reason for the infinite loop is that the dependency generates a new reference or value each time it is rendered, triggering the side effect to execute again, which in turn causes a state update, which in turn triggers the component to re-render, and so on.</p>
+<p>Common situations that result in an infinite loop include:</p>
+<ul>
+<li>the dependency array contains objects, arrays, or functions that are created each time they are rendered.</li>
+<li>The side effect performs a status update internally ( <code>setState </code>), but the dependency is improperly managed, resulting in unlimited triggering.</li>
+<li>An incorrect or incomplete dependency array was used.</li>
+</ul>
+<hr>
+<h2 id="Several-ways-to-avoid-infinite-loops"><a href="#Several-ways-to-avoid-infinite-loops" class="headerlink" title="Several ways to avoid infinite loops"></a>Several ways to avoid infinite loops</h2><h3 id="1-Ensure-that-the-dependent-array-is-accurate-and-complete"><a href="#1-Ensure-that-the-dependent-array-is-accurate-and-complete" class="headerlink" title="1. Ensure that the dependent array is accurate and complete"></a>1. Ensure that the dependent array is accurate and complete</h3><p>the dependency array should contain all external variables used in side effects, and React official advice always guarantees that the dependency is complete. Missing dependencies can cause states to be out of sync, but redundant or frequently changing dependencies can cause loops.</p>
+<p>For example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// 使用了 prop 和 state，依赖必须包含</span></span><br><span class="line">&#125;, [prop, state]);</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-Avoid-generating-new-references-every-time-you-render"><a href="#2-Avoid-generating-new-references-every-time-you-render" class="headerlink" title="2. Avoid generating new references every time you render"></a>2. Avoid generating new references every time you render</h3><p>for dependent objects, arrays, and functions, use <code>useMemo </code>and <code>useCallback </code>cache to ensure reference stability.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> memoizedValue = <span class="title function_">useMemo</span>(<span class="function">() =&gt;</span> <span class="title function_">computeExpensiveValue</span>(a, b), [a, b]);</span><br><span class="line"><span class="keyword">const</span> memoizedCallback = <span class="title function_">useCallback</span>(<span class="function">() =&gt;</span> <span class="title function_">doSomething</span>(), []);</span><br></pre></td></tr></table></figure>
+
+<p>In this way, the reference in the dependent array will not change every time, thus avoiding repeated side effects.</p>
+<h3 id="3-Conditional-call-status-update"><a href="#3-Conditional-call-status-update" class="headerlink" title="3. Conditional call status update"></a>3. Conditional call status update</h3><p>when updating the state within the side effect, it is recommended to first determine whether the new value is the same as the old value to avoid re-rendering caused by meaningless state update.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (someCondition &amp;&amp; newValue !== oldValue) &#123;</span><br><span class="line">    <span class="title function_">setState</span>(newValue);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;, [someCondition, newValue, oldValue]);</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-Use-functional-updates-to-avoid-closure-problems"><a href="#4-Use-functional-updates-to-avoid-closure-problems" class="headerlink" title="4. Use functional updates to avoid closure problems."></a>4. Use functional updates to avoid closure problems.</h3><p>If the state update depends on the old state, use the functional update form to reduce the dependencies and avoid excessive or inaccurate dependencies.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">setState</span>(<span class="function"><span class="params">prev</span> =&gt;</span> <span class="title function_">computeNewState</span>(prev));</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-Minimize-the-side-effects-of-internal-complex-logic"><a href="#5-Minimize-the-side-effects-of-internal-complex-logic" class="headerlink" title="5. Minimize the side effects of internal complex logic."></a>5. Minimize the side effects of internal complex logic.</h3><p>Side effects should be kept as pure and simple as possible, complex logic can be split into multiple <code>useEffect </code>or use other state management schemes to reduce loops due to logic.</p>
+<hr>
+<h2 id="Code-sample-comparison"><a href="#Code-sample-comparison" class="headerlink" title="Code sample comparison"></a>Code sample comparison</h2><p>wrong writing (infinite loop):</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Component</span>(<span class="params">&#123; userId &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [userData, setUserData] = <span class="title function_">useState</span>(<span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">  <span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="title function_">fetchUser</span>(userId).<span class="title function_">then</span>(<span class="function"><span class="params">data</span> =&gt;</span> <span class="title function_">setUserData</span>(data));</span><br><span class="line">  &#125;, [userData]); <span class="comment">// 依赖写错，导致每次 setUserData 触发副作用</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Revised writing:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Component</span>(<span class="params">&#123; userId &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [userData, setUserData] = <span class="title function_">useState</span>(<span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">  <span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="title function_">fetchUser</span>(userId).<span class="title function_">then</span>(<span class="function"><span class="params">data</span> =&gt;</span> <span class="title function_">setUserData</span>(data));</span><br><span class="line">  &#125;, [userId]); <span class="comment">// 依赖仅为 userId，避免循环</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>use <code>useCallback </code>caching functions prevents function reference changes:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fetchUserData = <span class="title function_">useCallback</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="title function_">fetchUser</span>(userId).<span class="title function_">then</span>(setUserData);</span><br><span class="line">&#125;, [userId]);</span><br><span class="line"></span><br><span class="line"><span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="title function_">fetchUserData</span>();</span><br><span class="line">&#125;, [fetchUserData]);</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="table-summarizes-key-points-to-avoid-infinite-loops"><a href="#table-summarizes-key-points-to-avoid-infinite-loops" class="headerlink" title="table summarizes key points to avoid infinite loops"></a>table summarizes key points to avoid infinite loops</h2><table>
+<thead>
+<tr>
+<th>key Points</th>
+<th>description</th>
+<th>solution</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>dependent Array Accuracy</td>
+<td>missing or redundant dependencies can cause problems</td>
+<td>clearly list all side-effect dependencies</td>
+</tr>
+<tr>
+<td>reference stability</td>
+<td>objects, arrays, and function references trigger side effects every time a render changes</td>
+<td>use <code>useMemo </code>&#x2F; <code>useCallback </code>cache Reference</td>
+</tr>
+<tr>
+<td>status Update Condition Judgment</td>
+<td>unconditional call <code>setState </code>leads to an infinite loop</td>
+<td>first determine whether the state has really changed</td>
+</tr>
+<tr>
+<td>functional state update</td>
+<td>avoid closures traps and dependency issues</td>
+<td>use the functional update form</td>
+</tr>
+<tr>
+<td>side-effect logic complexity control</td>
+<td>complex side effects difficult to maintain, easy to trigger the cycle</td>
+<td>split side effects, simplify logic</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p><code>useEffect </code>infinite loops are usually caused by dependent arrays containing changing references, or by side-effects of internal unconditional state updates.</p>
+<p>To avoid infinite loops, ensure that the dependent array is accurate and complete, avoid using objects or functions that are created every time they are rendered in the dependency, and use <code>useMemo </code>and <code>useCallback </code>caching references to prevent invalid dependency changes. At the same time, when updating the state in the side effect, you should first judge whether the old and new states are the same to avoid meaningless state updates. Reasonable splitting of side-effect logic also helps avoid looping problems.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>avoid <code>useEffect </code>infinite loop is an important topic in the development of React function components. Understanding how dependent arrays work, reference stability, and side-effect triggers are key to preventing loops. Combining cache hooks, conditional updates, and reasonable splitting can effectively avoid side effects from falling into an infinite loop and improve application performance and stability. Mastering these skills can help developers write efficient and robust React components.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

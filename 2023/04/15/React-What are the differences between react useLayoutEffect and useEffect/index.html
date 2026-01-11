@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What are the differences between react useLayoutEffect and useEffectForewordthere are two main options for managing side effects in React: useEffect a"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What are the differences between react useLayoutEffect and useEffect"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What are the differences between react useLayoutEffect and useEffectForewordthere are two main options for managing side effects in React: useEffect a"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What are the differences between react useLayoutEffect and useEffect - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What are the differences between react useLayoutEffect and useEffect</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-04-15
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-are-the-differences-between-react-useLayoutEffect-and-useEffect"><a href="#What-are-the-differences-between-react-useLayoutEffect-and-useEffect" class="headerlink" title="What are the differences between react useLayoutEffect and useEffect"></a>What are the differences between react useLayoutEffect and useEffect</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>there are two main options for managing side effects in React: <code>useEffect </code>and <code>useLayoutEffect </code>. They both allow us to perform side-effect logic in function components, such as data fetching, DOM operations, event listening, etc., but there are significant differences in execution timing and scenarios. Understanding the difference between the two is critical to writing React components with good performance and stable behavior.</p>
+<hr>
+<h2 id="Timing-and-characteristics-of-useEffect"><a href="#Timing-and-characteristics-of-useEffect" class="headerlink" title="Timing and characteristics of useEffect"></a>Timing and characteristics of useEffect</h2><p><code>useEffect </code>is a side-effect Hook of the React recommend, which is used by default in most side-effect scenarios. Its side-effect function is executed asynchronously after the component is rendered and submitted to DOM, similar to the browser’s Macro task ( <code>setTimeout </code>) queue.</p>
+<ul>
+<li>The specific execution time is after the browser drawing is completed, so as not to block the rendering process of the browser.</li>
+<li>Applies to operations that do not depend on the state of the synchronous DOM, such as sending network requests, event monitoring, subscription, and timers.</li>
+<li>You can manage the cleanup of side effects by returning cleanup functions.</li>
+</ul>
+<p>This asynchronous execution helps improve page response speed and fluency.</p>
+<hr>
+<h2 id="Timing-and-characteristics-of-useLayoutEffect"><a href="#Timing-and-characteristics-of-useLayoutEffect" class="headerlink" title="Timing and characteristics of useLayoutEffect"></a>Timing and characteristics of useLayoutEffect</h2><p><code>useLayoutEffect </code>it is executed in React.<strong>Side effect Hook of synchronous execution after DOM update and Commit phase</strong> .</p>
+<ul>
+<li>It blocks the browser’s drawing until the execution of the side-effect function is finished.</li>
+<li>It is suitable for scenarios that need to read layout information (such as element size and position) or modify DOM synchronously.</li>
+<li>Usage scenarios include forced synchronous measurement, manipulation of DOM styles, animation initialization, etc.</li>
+<li>Return cleanup functions are also supported, but cleanup is also performed synchronously before the next execution.</li>
+</ul>
+<p>Because it executes earlier and synchronizes, improper use can cause performance issues or page stuck.</p>
+<hr>
+<h2 id="Comparison-of-the-timing-of-the-two"><a href="#Comparison-of-the-timing-of-the-two" class="headerlink" title="Comparison of the timing of the two"></a>Comparison of the timing of the two</h2><table>
+<thead>
+<tr>
+<th>characteristics</th>
+<th>useEffect</th>
+<th>useLayoutEffect</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>timing of execution</td>
+<td>after the browser draws (asynchronous)</td>
+<td>DOM update after browser draw before (Sync)</td>
+</tr>
+<tr>
+<td>whether to block drawing</td>
+<td>no</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>typical use</td>
+<td>data requests, event listeners, logs, subscriptions</td>
+<td>measure layout, modify DOM style, animate</td>
+</tr>
+<tr>
+<td>performance impact</td>
+<td>slight</td>
+<td>could cause Caton</td>
+</tr>
+<tr>
+<td>cleanse function execution timing</td>
+<td>Asynchronous, before next execution or unload</td>
+<td>synchronize, before next execution or unload</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="code-sample-comparison"><a href="#code-sample-comparison" class="headerlink" title="code sample comparison"></a>code sample comparison</h2><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Example</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> ref = <span class="title class_">React</span>.<span class="title function_">useRef</span>();</span><br><span class="line"></span><br><span class="line">  <span class="title class_">React</span>.<span class="title function_">useLayoutEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 同步测量元素宽度</span></span><br><span class="line">    <span class="keyword">const</span> width = ref.<span class="property">current</span>.<span class="title function_">getBoundingClientRect</span>().<span class="property">width</span>;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;useLayoutEffect width:&#x27;</span>, width);</span><br><span class="line">    <span class="comment">// 可能同步修改样式</span></span><br><span class="line">    ref.<span class="property">current</span>.<span class="property">style</span>.<span class="property">backgroundColor</span> = <span class="string">&#x27;lightblue&#x27;</span>;</span><br><span class="line">  &#125;, []);</span><br><span class="line"></span><br><span class="line">  <span class="title class_">React</span>.<span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 异步副作用，不影响首次绘制</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;useEffect 执行&#x27;</span>);</span><br><span class="line">  &#125;, []);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">ref</span>=<span class="string">&#123;ref&#125;</span>&gt;</span>Hello<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>in the above code, <code>useLayoutEffect </code>the code in blocks browser drawing until execution is complete, ensuring synchronization of measurement and style operations. And <code>useEffect </code>the code in is executed after the browser is drawn, which is suitable for side effects that do not need to synchronize DOM information.</p>
+<hr>
+<h2 id="Select-Use-Recommendations"><a href="#Select-Use-Recommendations" class="headerlink" title="Select Use Recommendations"></a>Select Use Recommendations</h2><p>in the vast majority of scenarios, recommend use <code>useEffect </code>, It does not block page rendering and has better performance.</p>
+<p>Consider using only if you really need to read or modify the DOM synchronously, and the side effects must be done before the browser draws <code>useLayoutEffect </code>.</p>
+<p>A reasonable distinction between the two can effectively avoid flicker, layout jitter and performance bottlenecks.</p>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p><code>useEffect </code>and <code>useLayoutEffect </code>they are all hooks used to execute side effects in React. The difference lies in the execution timing. <code>useEffect </code>execute asynchronously after the browser draw is complete, do not block rendering, suitable for most side effects;<code>useLayoutEffect </code>synchronously executed after DOM update, blocking browser drawing, suitable for scenarios where synchronous measurement or operation of DOM layout is required. General Priority Use <code>useEffect </code>, only used when you need to process DOM synchronously <code>useLayoutEffect </code>.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p><code>useEffect </code>and <code>useLayoutEffect </code>they are two sharp tools for managing side effects in The React function component. <code>useEffect </code>execute asynchronously to ensure fast response and smooth rendering of the page; And <code>useLayoutEffect </code>execute in a synchronous manner to ensure that side effects are completed before the browser draws, thus avoiding visual layout flickering. Understanding their execution timing and applicable scenarios can help developers make more appropriate choices when building complex interactions and performance optimization.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

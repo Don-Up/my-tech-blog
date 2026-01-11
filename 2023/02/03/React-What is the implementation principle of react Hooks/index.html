@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What is the implementation principle of react HooksForewordsince the launch of React 16.8, React Hooks have completely changed the development model o"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What is the implementation principle of react Hooks"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What is the implementation principle of react HooksForewordsince the launch of React 16.8, React Hooks have completely changed the development model o"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What is the implementation principle of react Hooks - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What is the implementation principle of react Hooks</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-02-03
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-is-the-implementation-principle-of-react-Hooks"><a href="#What-is-the-implementation-principle-of-react-Hooks" class="headerlink" title="What is the implementation principle of react Hooks"></a>What is the implementation principle of react Hooks</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>since the launch of React 16.8, React Hooks have completely changed the development model of function components, enabling function components to achieve the state management and side effect processing capabilities of class components. Hooks not only simplify component logic, but also greatly improve code reuse and maintainability. An in-depth understanding of the implementation principles of Hooks will help you better understand their use and avoid common pitfalls.</p>
+<p>This article will systematically analyze the underlying implementation principles of React Hooks, focusing on how to track status, manage side effects, and ensure the order of Hook calls, supplemented by code and tables to help readers fully understand this key technology.</p>
+<hr>
+<h2 id="The-core-problem-of-Hooks-implementation"><a href="#The-core-problem-of-Hooks-implementation" class="headerlink" title="The core problem of Hooks implementation"></a>The core problem of Hooks implementation</h2><p>function components are stateless, pure functions that are re-executed each time they are rendered. To achieve state persistence and side effect management, React needs to maintain the state and execution context of Hook calls between multiple renders. The key difficulties lie in:</p>
+<ol>
+<li><strong>storage and update of state</strong> : How to keep the Hook-related state in multiple renders.</li>
+<li><strong>Guarantee of call order</strong> : Ensure that the Hook call sequence remains unchanged to correctly correspond to the state.</li>
+<li><strong>Execution and cleanup of side effects</strong> manage side-effect execution timing and cleanup logic.</li>
+<li><strong>Coordinate multiple rendering and scheduling</strong> : Ensure that the state is correct and consistent during concurrent rendering.</li>
+</ol>
+<hr>
+<h2 id="Hook-state-storage-mechanism"><a href="#Hook-state-storage-mechanism" class="headerlink" title="Hook state storage mechanism"></a>Hook state storage mechanism</h2><p>React manages the rendering and updating of components through the Fiber architecture. Each function component corresponds to a Fiber node, and a linked list structure is maintained in the Fiber node to store all Hook states of the component.</p>
+<h3 id="Hook-linked-list-structure"><a href="#Hook-linked-list-structure" class="headerlink" title="Hook linked list structure"></a>Hook linked list structure</h3><p>each time you render, React passes a pointer <code>hookIndex </code>to traverse the Hook list and ensure that each Hook call corresponds to a unique state. The specific process is:</p>
+<ul>
+<li>when rendering for the first time, a linked list of hooks is created, and each Hook generates a linked list node that stores State and update functions.</li>
+<li>For subsequent updates, React traverses the linked list in sequence, fetching the corresponding status for each Hook.</li>
+<li><code>hookIndex </code>ensure that the order of Hook calls is fixed and that the states match correctly.</li>
+</ul>
+<p>Schematic table:</p>
+<table>
+<thead>
+<tr>
+<th>number of Renders</th>
+<th>hookIndex &#x3D; 0</th>
+<th>hookIndex &#x3D; 1</th>
+<th>it’s…</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Initial Render</td>
+<td>useState state node 1</td>
+<td>useEffect Side effect node 1</td>
+<td>it’s…</td>
+</tr>
+<tr>
+<td>2nd Render</td>
+<td>useState state node 1 (reuse)</td>
+<td>useEffect Side effect node 1 (reuse)</td>
+<td>it’s…</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="Implementation-principle-of-useState"><a href="#Implementation-principle-of-useState" class="headerlink" title="Implementation principle of useState"></a>Implementation principle of useState</h2><p><code>useState </code>the core of is to store the state value and its update queue through the linked list node. Call <code>setState </code>in effect, the update request is queued and the component is scheduled to re-render.</p>
+<p>Code simplification example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">function useState(initialState) &#123;</span><br><span class="line">  const hook = getHook(); // 获取当前 hook 节点</span><br><span class="line">  if (!hook) &#123;</span><br><span class="line">    hook = &#123;</span><br><span class="line">      state: initialState,</span><br><span class="line">      queue: []</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  function setState(action) &#123;</span><br><span class="line">    hook.queue.push(action);</span><br><span class="line">    scheduleUpdate(); // 调度组件更新</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  // 处理队列中的所有更新</span><br><span class="line">  hook.queue.forEach(action =&gt; &#123;</span><br><span class="line">    hook.state = typeof action === &#x27;function&#x27; ? action(hook.state) : action;</span><br><span class="line">  &#125;);</span><br><span class="line">  hook.queue = [];</span><br><span class="line"></span><br><span class="line">  return [hook.state, setState];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="implementation-principle-of-useEffect"><a href="#implementation-principle-of-useEffect" class="headerlink" title="implementation principle of useEffect"></a>implementation principle of useEffect</h2><p><code>useEffect </code>save the side-effect function and its dependent array through the linked list node. After rendering is completed, React will compare the dependency whether it changes and decide whether to execute side effects.</p>
+<p>Execution process:</p>
+<ul>
+<li>save side-effect functions and dependencies when rendering.</li>
+<li>When the dependency changes, the side-effect function is executed in the Commit phase.</li>
+<li>The returned cleanup function is called before the next side effect is executed or when it is unloaded.</li>
+</ul>
+<hr>
+<h2 id="Guarantee-of-Hook-call-order"><a href="#Guarantee-of-Hook-call-order" class="headerlink" title="Guarantee of Hook call order"></a>Guarantee of Hook call order</h2><p>React specifies that hooks must be called at the top level of the component and cannot be placed in conditional statements or loops to ensure that the order of Hook calls is consistent for each rendering.</p>
+<p>React through <code>hookIndex </code>the variable strictly tracks where the current Hook is called, and any change in order will result in a state disorder.</p>
+<hr>
+<h2 id="Other-important-implementation-details"><a href="#Other-important-implementation-details" class="headerlink" title="Other important implementation details"></a>Other important implementation details</h2><ul>
+<li><strong>Scheduling and Batching</strong> : Call <code>setState </code>will trigger scheduling, React will update the status in batches, reducing the number of rendering times.</li>
+<li><strong>Fiber multiplexing</strong> : The Hook state is stored in the Fiber node. When updating, the Fiber and Hook linked lists are reused to ensure performance.</li>
+<li><strong>Concurrent Mode compatible</strong> : React uses Fiber coordination and scheduling to ensure the safety of hooks in concurrent rendering.</li>
+</ul>
+<hr>
+<h2 id="Interview-answer-example"><a href="#Interview-answer-example" class="headerlink" title="Interview answer example"></a>Interview answer example</h2><p><strong>question: What is the implementation principle of React Hooks?</strong></p>
+<p>Example answer:</p>
+<p>React Hooks rely on the Fiber architecture and maintain a linked list structure in the Fiber node corresponding to each function component to store the Hook status. When Hook is called, React traverses the chain table nodes in the calling order to ensure that the status is corresponding. <code>useState </code>save state values and update queues through linked list nodes, <code>setState </code>will update the enqueue and trigger a scheduled re-render. <code>useEffect </code>holds an array of side-effect functions and dependencies to perform side-effects after rendering is complete. Hook must be called in the same order. <code>hookIndex</code>Strictly control the order of calls to prevent state disorder. The whole relies on the scheduling and coordination mechanism of Fiber to achieve efficient and safe state management.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>React Hooks solves the stateless limitation of function components through the clever linked list structure and Fiber coordination mechanism, and realizes the efficient management of state and side effects. Its core is to ensure the consistency of the Hook call sequence and state persistence, combined with scheduling and batch optimization performance. In-depth understanding of the implementation principle of Hooks not only helps to use Hooks correctly, but also improves the understanding of the internal operation mechanism of React, laying a solid foundation for writing high-quality React applications.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

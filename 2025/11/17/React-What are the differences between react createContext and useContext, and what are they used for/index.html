@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What are the differences between react createContext and useContext, and what are they used forForewordin React, Context provides a solution for trans"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What are the differences between react createContext and useContext, and what are they used for"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What are the differences between react createContext and useContext, and what are they used forForewordin React, Context provides a solution for trans"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What are the differences between react createContext and useContext, and what are they used for - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What are the differences between react createContext and useContext, and what are they used for</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-11-17
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-are-the-differences-between-react-createContext-and-useContext-and-what-are-they-used-for"><a href="#What-are-the-differences-between-react-createContext-and-useContext-and-what-are-they-used-for" class="headerlink" title="What are the differences between react createContext and useContext, and what are they used for"></a>What are the differences between react createContext and useContext, and what are they used for</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in React, Context provides a solution for transferring data across component levels, avoiding the cumbersome layer-by-layer transfer of props. <code>createContext </code>and <code>useContext </code>are the two core parts of the React Context API. They have different functions and usage scenarios, but are closely related. Understanding their differences and how they work together helps to share state between components correctly and efficiently. This article will be detailed analysis <code>createContext </code>and <code>useContext </code>the definition, difference, function and typical usage of help you master the core of React Context.</p>
+<hr>
+<h2 id="Definition-and-role-of-createContext-and-useContext"><a href="#Definition-and-role-of-createContext-and-useContext" class="headerlink" title="Definition and role of createContext and useContext"></a>Definition and role of createContext and useContext</h2><h3 id="React-createContext"><a href="#React-createContext" class="headerlink" title="React.createContext"></a>React.createContext</h3><p><code>createContext </code>is a function provided by React to create a Context object. Calling this function returns an object that contains two important components:</p>
+<ul>
+<li><code>Provider </code>: The component that provides the Context value, usually wrapped at the top of the component tree, passes shared data to descendant components.</li>
+<li><code>Consumer</code>: Subscribe to the Context component and get the value passed by Provider (after React 16.8 +, more use <code>useContext </code>replace Consumer).</li>
+</ul>
+<p>The purpose of creating a Context is to create a “shared state container” that enables data to be passed across levels in the component tree without having to pass props through layers.</p>
+<p><strong>Usage Example</strong> :</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">MyContext</span> = <span class="title class_">React</span>.<span class="title function_">createContext</span>(defaultValue);</span><br></pre></td></tr></table></figure>
+
+<p>here’s <code>defaultValue </code>is the default value used when there is no corresponding Provider in the component tree.</p>
+<hr>
+<h3 id="React-useContext"><a href="#React-useContext" class="headerlink" title="React.useContext"></a>React.useContext</h3><p><code>useContext </code>is a Hook introduced by the React 16.8 to access the Context value in the function component. Compared to the traditional Context Consumer component, <code>useContext </code>use more concise, more convenient.</p>
+<p><code>useContext </code>receiving a Context Object (I. E. <code>createContext </code>returned object), returns the current value of the Context. Component is calling <code>useContext</code>The component will be re-rendered when the Context value is updated.</p>
+<p><strong>Usage Example</strong> :</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> value = <span class="title class_">React</span>.<span class="title function_">useContext</span>(<span class="title class_">MyContext</span>);</span><br></pre></td></tr></table></figure>
+
+<p><code>value </code>is the most recent <code>&lt;MyContext.Provider&gt;</code>the value passed down.</p>
+<hr>
+<h2 id="Summary-of-the-difference-between-the-two"><a href="#Summary-of-the-difference-between-the-two" class="headerlink" title="Summary of the difference between the two"></a>Summary of the difference between the two</h2><table>
+<thead>
+<tr>
+<th>aspects</th>
+<th>createContext</th>
+<th>useContext</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>type</td>
+<td>the function that creates the Context object</td>
+<td>React Hook, used to consume the Context value</td>
+</tr>
+<tr>
+<td>role</td>
+<td>create a globally shared Context instance</td>
+<td>gets the current value of the specified Context.</td>
+</tr>
+<tr>
+<td>Role stage</td>
+<td>design and Provision Phase</td>
+<td>use and consumption phase</td>
+</tr>
+<tr>
+<td>return Value</td>
+<td>object containing Provider and Consumer components</td>
+<td>the current value of the Context</td>
+</tr>
+<tr>
+<td>applicable Component Type</td>
+<td>unrestricted, can be used in class components or function components</td>
+<td>can only be used in a function component</td>
+</tr>
+<tr>
+<td>frequency of use</td>
+<td>Generally, it is called only once, and the Context is usually created at the top level of the module.</td>
+<td>Called inside a function component that needs to access Context data</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="the-process-of-using-createContext-together-with-useContext"><a href="#the-process-of-using-createContext-together-with-useContext" class="headerlink" title="the process of using createContext together with useContext"></a>the process of using createContext together with useContext</h2><ol>
+<li>use first <code>createContext </code>create a Context instance (usually in a separate or top-level file).</li>
+<li>Use at the upper level of the component tree <code>&lt;Context.Provider value=&#123;...&#125;&gt;</code>package to provide shared data for descendant components.</li>
+<li>Called in a child component <code>useContext(Context) </code>obtain the value of the current Context to implement cross-component sharing.</li>
+</ol>
+<p>Example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span>, &#123; createContext, useContext, useState &#125; <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 1. 创建 Context</span></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">UserContext</span> = <span class="title function_">createContext</span>(<span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. Provider 组件包裹，提供数据</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">UserProvider</span>(<span class="params">&#123; children &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [user, setUser] = <span class="title function_">useState</span>(&#123; <span class="attr">name</span>: <span class="string">&quot;Alice&quot;</span> &#125;);</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">UserContext.Provider</span> <span class="attr">value</span>=<span class="string">&#123;&#123;</span> <span class="attr">user</span>, <span class="attr">setUser</span> &#125;&#125;&gt;</span>&#123;children&#125;<span class="tag">&lt;/<span class="name">UserContext.Provider</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3. 消费 Context 数据的子组件</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">UserProfile</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; user &#125; = <span class="title function_">useContext</span>(<span class="title class_">UserContext</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>用户名：&#123;user.name&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// App 组件</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">App</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">UserProvider</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">UserProfile</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">UserProvider</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="further-understanding"><a href="#further-understanding" class="headerlink" title="further understanding"></a>further understanding</h2><p><code>createContext </code>it is responsible for defining the structure and default values of the Context and is the “skeleton” of the Context system “. <code>useContext </code>as a Hook, it is the entrance to access the Context data, which is convenient for the function component to read and subscribe to data changes.</p>
+<p>These two functions usually appear in pairs: create first, then consume. Their combination allows the React component to implement data sharing and responsive updates in a declarative manner.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p><code>createContext </code>it is used to create a global shared Context object, including Provider and Consumer, and is the source of provided data; <code>useContext </code>it is a Hook that obtains and subscribes to Context data in the function component, simplifying the process of consuming Context data. The two collaborated to complete the core mechanism of React cross-component state transfer. Understanding their differences and working together helps build React applications with clear structure and good performance.</p>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p>React in <code>createContext </code>used to create a Context instance, including a Provider and a Consumer, which is responsible for providing shared data; <code>useContext </code>is a Hook, which is used in the function component to read and subscribe to the value of the Context. <code>createContext </code>defines and provides Context, <code>useContext </code>for consuming data. Usually called First <code>createContext </code>, use Provider wrap at the top of the component tree to pass data, and descendant components pass through <code>useContext </code>get and use. This enables state sharing and responsive updates across components.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What is the working principle of the react useEffect hookForewordin The React, useEffect is the core Hook for handling side effects in function compon"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What is the working principle of the react useEffect hook"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What is the working principle of the react useEffect hookForewordin The React, useEffect is the core Hook for handling side effects in function compon"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What is the working principle of the react useEffect hook - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What is the working principle of the react useEffect hook</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-02-12
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-is-the-working-principle-of-the-react-useEffect-hook"><a href="#What-is-the-working-principle-of-the-react-useEffect-hook" class="headerlink" title="What is the working principle of the react useEffect hook"></a>What is the working principle of the react useEffect hook</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in The React, <code>useEffect </code>is the core Hook for handling side effects in function components. It allows us to perform tasks such as data requests, event listening, DOM operations, subscriptions, etc. after the component is rendered. Understanding <code>useEffect </code>it helps developers use side effects correctly and avoid performance waste and potential memory leaks. This paper will introduce the system <code>useEffect </code>the execution process, dependency management mechanism, and how React schedules and cleans up side effects.</p>
+<hr>
+<h2 id="1-Basic-usage-of-useEffect"><a href="#1-Basic-usage-of-useEffect" class="headerlink" title="1. Basic usage of useEffect"></a>1. Basic usage of useEffect</h2><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Example</span>(<span class="params">&#123; count &#125;</span>) &#123;</span><br><span class="line">  <span class="title class_">React</span>.<span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="property">title</span> = <span class="string">`Count: <span class="subst">$&#123;count&#125;</span>`</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;清理副作用&#x27;</span>);</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;, [count]);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;count&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>useEffect </code>accepts a function as a side-effect callback, and the second argument is a dependent array. The side effects are executed after rendering is complete, and when the dependency changes, the cleanup function (if provided) is executed before the new side effects are executed.</p>
+<hr>
+<h2 id="2-Core-workflow-of-useEffect"><a href="#2-Core-workflow-of-useEffect" class="headerlink" title="2. Core workflow of useEffect"></a>2. Core workflow of useEffect</h2><h3 id="registration-of-2-1-side-effects-Mount-and-Update-phases"><a href="#registration-of-2-1-side-effects-Mount-and-Update-phases" class="headerlink" title="registration of 2.1 side effects (Mount and Update phases)"></a>registration of 2.1 side effects (Mount and Update phases)</h3><p>each time the function component executes, React calls <code>useEffect </code>. React will:</p>
+<ul>
+<li>create or reuse an Effect object on the Hook list of the Fiber node to store side-Effect functions, cleanup functions, and dependency arrays.</li>
+<li>Compare the current dependency with the previous dependency to determine whether side effects need to be re-executed.</li>
+<li>Labeling the Fiber node <code>Effect </code>identifies that the side-effect function is scheduled to execute during the render commit phase.</li>
+</ul>
+<h3 id="Timing-of-execution-of-2-2-side-effects"><a href="#Timing-of-execution-of-2-2-side-effects" class="headerlink" title="Timing of execution of 2.2 side effects"></a>Timing of execution of 2.2 side effects</h3><p><code>useEffect </code>the side-effect callback of is not executed synchronously, but in <strong>macro task queue after Commit phase</strong> is called asynchronously in. This can avoid blocking the browser’s drawing and ensure that the page responds quickly.</p>
+<h3 id="2-3-The-execution-of-cleanup-functions"><a href="#2-3-The-execution-of-cleanup-functions" class="headerlink" title="2.3 The execution of cleanup functions"></a>2.3 The execution of cleanup functions</h3><p>if the previous side effect returns the cleanup function and the dependency changes or the component is unloaded, React calls the cleanup function to release resources and cancel subscription before executing the new side effect.</p>
+<hr>
+<h2 id="3-Key-data-structures-and-scheduling-mechanisms"><a href="#3-Key-data-structures-and-scheduling-mechanisms" class="headerlink" title="3. Key data structures and scheduling mechanisms"></a>3. Key data structures and scheduling mechanisms</h2><h3 id="3-1-Effect-object-structure"><a href="#3-1-Effect-object-structure" class="headerlink" title="3.1 Effect object structure"></a>3.1 Effect object structure</h3><p>the Effect object primarily holds the following information:</p>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>tag </code></td>
+<td>Effect Type Identifier (such as useEffect)</td>
+</tr>
+<tr>
+<td><code>create </code></td>
+<td>side effect function (effect callback)</td>
+</tr>
+<tr>
+<td><code>destroy </code></td>
+<td>cleanup Functions</td>
+</tr>
+<tr>
+<td><code>deps</code></td>
+<td>Dependent array</td>
+</tr>
+<tr>
+<td><code>next </code></td>
+<td>linked List Pointer, pointing to the next Effect</td>
+</tr>
+</tbody></table>
+<h3 id="3-2-Hook-linked-list-and-Effect-linked-list"><a href="#3-2-Hook-linked-list-and-Effect-linked-list" class="headerlink" title="3.2 Hook linked list and Effect linked list"></a>3.2 Hook linked list and Effect linked list</h3><ul>
+<li>the Hook linked list is maintained on each function component Fiber, <code>useEffect </code>the Effect object is saved in the corresponding Hook node.</li>
+<li>These effects form an Effect linked list for traversal and execution in the Commit phase.</li>
+</ul>
+<h3 id="Schematic-diagram-of-3-3-scheduling-process"><a href="#Schematic-diagram-of-3-3-scheduling-process" class="headerlink" title="Schematic diagram of 3.3 scheduling process"></a>Schematic diagram of 3.3 scheduling process</h3><table>
+<thead>
+<tr>
+<th>stage</th>
+<th>main operations</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Render</td>
+<td>call <code>useEffect </code>registered Effect</td>
+</tr>
+<tr>
+<td>Commit</td>
+<td>browser completes DOM update</td>
+</tr>
+<tr>
+<td>macro task after Commit</td>
+<td>execute the side Effect function and cleanup function of Effect</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="4-Dependent-array-and-side-effect-optimization"><a href="#4-Dependent-array-and-side-effect-optimization" class="headerlink" title="4. Dependent array and side-effect optimization."></a>4. Dependent array and side-effect optimization.</h2><p>React determines whether to perform side effects by comparing the old and new dependency arrays in a shallow comparison:</p>
+<ul>
+<li>if dependent array is empty <code>[] </code>, the side effect is executed only once (equivalent <code>componentDidMount</code>).</li>
+<li>If the dependent array is omitted, the side effect is performed after each rendering.</li>
+<li>When the dependency changes, the cleanup function is executed, and then the side effects are executed.</li>
+</ul>
+<p>Reasonable setting of dependent arrays can avoid unnecessary side effects and improve performance.</p>
+<hr>
+<h2 id="5-Sample-process-parsing"><a href="#5-Sample-process-parsing" class="headerlink" title="5. Sample process parsing"></a>5. Sample process parsing</h2><p>take the following code as an example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Component</span>(<span class="params">&#123; prop &#125;</span>) &#123;</span><br><span class="line">  <span class="title class_">React</span>.<span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;副作用执行&#x27;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;清理函数执行&#x27;</span>);</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;, [prop]);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;prop&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>the execution process is:</p>
+<ul>
+<li>first render, execute side effect, print “side effect execute”.</li>
+<li>If <code>prop </code>change, first perform “clean function execution”, and then perform “side effect execution”.</li>
+<li>When the component is unloaded, a “clean function execution” is performed “.</li>
+</ul>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p><code>useEffect </code>side effect management is implemented in function components. The principle is to save the side Effect function and dependency information to the Effect linked list of Fiber in the Render phase. After the Render phase is completed, the Commit phase will call the side Effect function asynchronously. By relying on the array comparison, React determines whether a new side effect needs to be executed and calls the corresponding cleanup function. This ensures orderly execution of side effects, resource cleanup, and performance optimization.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p><code>useEffect</code>It is an important mechanism for React Hooks to handle side effects. It cleverly separates the registration and execution of side effects. It is managed by Fiber’s Effect linked list and executes side effects asynchronously in the Commit phase to ensure the efficiency and responsiveness of UI rendering. Understanding its inner workings helps you write high-performance, maintainable React components that avoid performance problems and potential bugs caused by side-effect abuse.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

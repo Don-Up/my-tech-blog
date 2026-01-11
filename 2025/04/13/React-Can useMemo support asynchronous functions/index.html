@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Can useMemo support asynchronous functionsForewordin The React, useMemo is a performance-optimized Hook that caches computation results to avoid repea"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Can useMemo support asynchronous functions"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Can useMemo support asynchronous functionsForewordin The React, useMemo is a performance-optimized Hook that caches computation results to avoid repea"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Can useMemo support asynchronous functions - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Can useMemo support asynchronous functions</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-04-13
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Can-useMemo-support-asynchronous-functions"><a href="#Can-useMemo-support-asynchronous-functions" class="headerlink" title="Can useMemo support asynchronous functions"></a>Can useMemo support asynchronous functions</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in The React, <code>useMemo </code>is a performance-optimized Hook that caches computation results to avoid repeating expensive computations every time you render. With the popularity of asynchronous programming, many developers are concerned about whether asynchronous functions can be used <code>useMemo </code>to cache the results of asynchronous operations to improve performance and experience. This paper will explore in depth <code>useMemo </code>the applicability, principles, and common misconceptions of asynchronous functions to help understand how to handle asynchronous logic reasonably.</p>
+<hr>
+<h2 id="1-The-basic-function-and-principle-of-useMemo"><a href="#1-The-basic-function-and-principle-of-useMemo" class="headerlink" title="1. The basic function and principle of useMemo"></a>1. The basic function and principle of useMemo</h2><p><code>useMemo </code>receives two parameters: a “Create function” and an array of dependencies, returns the execution result of the function, and reuses the cached result when the dependency is unchanged.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> memoizedValue = <span class="title function_">useMemo</span>(<span class="function">() =&gt;</span> <span class="title function_">computeExpensiveValue</span>(a, b), [a, b]);</span><br></pre></td></tr></table></figure>
+
+<p>Its core purpose is to cache the results of synchronous calculations to avoid unnecessary duplication of calculations and improve rendering performance.</p>
+<hr>
+<h2 id="2-Characteristics-of-asynchronous-functions"><a href="#2-Characteristics-of-asynchronous-functions" class="headerlink" title="2. Characteristics of asynchronous functions"></a>2. Characteristics of asynchronous functions</h2><p>asynchronous functions always return a <code>Promise </code>which represents the final completion of the asynchronous operation. Asynchronous functions need to pass <code>await </code>or <code>then </code>to get the result of its execution.</p>
+<p>For example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">fetchData</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> response = <span class="keyword">await</span> <span class="title function_">fetch</span>(<span class="string">&#x27;/api/data&#x27;</span>);</span><br><span class="line">  <span class="keyword">return</span> response.<span class="title function_">json</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="3-Can-useMemo-support-asynchronous-functions"><a href="#3-Can-useMemo-support-asynchronous-functions" class="headerlink" title="3. Can useMemo support asynchronous functions?"></a>3. Can useMemo support asynchronous functions?</h2><h3 id="3-1-Technical-support"><a href="#3-1-Technical-support" class="headerlink" title="3.1 Technical support?"></a>3.1 Technical support?</h3><p>From a grammatical point of view, <code>useMemo </code>the creation function of can indeed be an asynchronous function, because it is a normal function and the return value will be <code>Promise </code>.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> dataPromise = <span class="title function_">useMemo</span>(<span class="title function_">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> response = <span class="keyword">await</span> <span class="title function_">fetch</span>(<span class="string">&#x27;/api/data&#x27;</span>);</span><br><span class="line">  <span class="keyword">return</span> response.<span class="title function_">json</span>();</span><br><span class="line">&#125;, []);</span><br></pre></td></tr></table></figure>
+
+<p>At this point, <code>dataPromise </code>is a cached <code>Promise </code>object.</p>
+<h3 id="3-2-practical-effects-and-problems"><a href="#3-2-practical-effects-and-problems" class="headerlink" title="3.2 practical effects and problems"></a>3.2 practical effects and problems</h3><p>although <code>useMemo </code>can cache <code>Promise </code>, but React does not wait for the Promise to complete, nor does it manage the completion status of the Promise or trigger re-rendering. This poses the following problems:</p>
+<ul>
+<li><code>useMemo </code>the return is always <code>Promise </code>, Asynchronous results need to be processed when used in the component, and data cannot be obtained directly.</li>
+<li>Component does not block wait when rendering <code>Promise </code>parse, so the data cannot be obtained synchronously.</li>
+<li>Asynchronous state (load, error, data) cannot pass <code>useMemo</code>Direct management.</li>
+</ul>
+<p>Therefore, <code>useMemo </code>it is not suitable for dealing with the “result cache” of asynchronous functions, but is more suitable for caching synchronous calculations.</p>
+<hr>
+<h2 id="4-The-correct-approach-to-asynchronous-scenarios"><a href="#4-The-correct-approach-to-asynchronous-scenarios" class="headerlink" title="4. The correct approach to asynchronous scenarios."></a>4. The correct approach to asynchronous scenarios.</h2><p>When processing asynchronous data, you recommend use <code>useEffect </code>combined with state management:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">MyComponent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [data, setData] = <span class="title class_">React</span>.<span class="title function_">useState</span>(<span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">  <span class="title class_">React</span>.<span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> isMounted = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">fetchData</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="keyword">const</span> res = <span class="keyword">await</span> <span class="title function_">fetch</span>(<span class="string">&#x27;/api/data&#x27;</span>);</span><br><span class="line">      <span class="keyword">const</span> json = <span class="keyword">await</span> res.<span class="title function_">json</span>();</span><br><span class="line">      <span class="keyword">if</span> (isMounted) <span class="title function_">setData</span>(json);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">fetchData</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="function">() =&gt;</span> &#123; isMounted = <span class="literal">false</span>; &#125;;</span><br><span class="line">  &#125;, []);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (!data) <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Loading...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;JSON.stringify(data)&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>this approach separates asynchronous operations from component state management, correctly triggers updates, and renders asynchronous results.</p>
+<hr>
+<h2 id="5-When-will-the-useMemo-asynchronous-function-be-misused"><a href="#5-When-will-the-useMemo-asynchronous-function-be-misused" class="headerlink" title="5. When will the useMemo asynchronous function be misused?"></a>5. When will the useMemo asynchronous function be misused?</h2><p>Error example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> data = <span class="title function_">useMemo</span>(<span class="title function_">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> res = <span class="keyword">await</span> <span class="title function_">fetch</span>(<span class="string">&#x27;/api/data&#x27;</span>);</span><br><span class="line">  <span class="keyword">return</span> res.<span class="title function_">json</span>();</span><br><span class="line">&#125;, []);</span><br><span class="line"><span class="comment">// data 是 Promise，不能直接用于渲染</span></span><br></pre></td></tr></table></figure>
+
+<p>this results in complex rendering logic that cannot be used directly. <code>data </code>and the UI is not automatically updated.</p>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p><code>useMemo </code>the design purpose is to cache the results of synchronous calculations, which can cache the returns of asynchronous functions. <code>Promise </code>, but will not wait for asynchronous completion, nor will it trigger the component to re-render, so it is not suitable to directly cache the results of asynchronous operations. The loading and management of asynchronous data should be done through <code>useEffect </code>cooperation <code>useState </code>implementation. <code>useMemo</code>It is more suitable for pure synchronous calculation and avoids unnecessary performance overhead.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p><code>useMemo </code>it is not suitable for handling the result cache of asynchronous functions. While technically supporting asynchronous functions as parameters and caching the returned <code>Promise </code>, but this does not bring the expected asynchronous state management or data updates. Asynchronous operations should use <code>useEffect </code>and state management combined to complete. Reasonable understanding <code>useMemo </code>to avoid misuse and improve the robustness and performance of React applications.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

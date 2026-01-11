@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What are the differences between react.memo and useMemoForewordin the process of React performance optimization, react.memo and useMemo are two tools "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What are the differences between react.memo and useMemo"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What are the differences between react.memo and useMemoForewordin the process of React performance optimization, react.memo and useMemo are two tools "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What are the differences between react.memo and useMemo - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What are the differences between react.memo and useMemo</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-10-13
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-are-the-differences-between-react-memo-and-useMemo"><a href="#What-are-the-differences-between-react-memo-and-useMemo" class="headerlink" title="What are the differences between react.memo and useMemo"></a>What are the differences between react.memo and useMemo</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in the process of React performance optimization, <code>react.memo </code>and <code>useMemo </code>are two tools that are often mentioned. Although they have similar names and all involve “caching” and “avoiding unnecessary calculations or rendering”, their role scenarios, implementation mechanisms, and usage methods are significantly different.</p>
+<p>Understanding the difference between the two is of great significance for the rational use of React optimization methods and improving application performance. This article will be detailed analysis <code>react.memo </code>and <code>useMemo </code>, to help you distinguish their usage and applicable scenarios.</p>
+<hr>
+<h2 id="react-memo-and-useMemo-definitions-and-functions"><a href="#react-memo-and-useMemo-definitions-and-functions" class="headerlink" title="react.memo and useMemo definitions and functions"></a>react.memo and useMemo definitions and functions</h2><h3 id="react-memo"><a href="#react-memo" class="headerlink" title="react.memo"></a>react.memo</h3><p><code>react.memo </code>is a high-level component (HOC) provided by React, which is used to perform <strong>performance optimization</strong> its core role is to realize the “Memorization” of components “. When the props of a component does not change, React skips the re-rendering of the component and reuses the last rendering result to reduce unnecessary rendering overhead.</p>
+<p><strong>Example of usage:</strong></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">MyComponent</span> = <span class="title class_">React</span>.<span class="title function_">memo</span>(<span class="keyword">function</span> <span class="title function_">MyComponent</span>(<span class="params">props</span>) &#123;</span><br><span class="line">  <span class="comment">// 组件内容</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>you can also pass in a custom comparison function to decide whether to re-render:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">MyComponent</span> = <span class="title class_">React</span>.<span class="title function_">memo</span>(</span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">MyComponent</span>(<span class="params">props</span>) &#123; <span class="comment">/* 组件 */</span> &#125;,</span><br><span class="line">  <span class="function">(<span class="params">prevProps, nextProps</span>) =&gt;</span> prevProps.<span class="property">value</span> === nextProps.<span class="property">value</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>the main solution of react.memo is<strong>Optimization of component re-rendering</strong> .</p>
+<hr>
+<h3 id="useMemo"><a href="#useMemo" class="headerlink" title="useMemo"></a>useMemo</h3><p><code>useMemo </code>is a React Hook, used inside a function component <strong>cache calculation results</strong> to avoid performing expensive calculations every time you render. It receives a creation function and an array of dependencies, and only recalculates when the dependencies change, otherwise reuses the cached results.</p>
+<p><strong>Example of usage:</strong></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> computedValue = <span class="title class_">React</span>.<span class="title function_">useMemo</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// 复杂计算逻辑</span></span><br><span class="line">  <span class="keyword">return</span> <span class="title function_">expensiveComputation</span>(props.<span class="property">data</span>);</span><br><span class="line">&#125;, [props.<span class="property">data</span>]);</span><br></pre></td></tr></table></figure>
+
+<p><code>useMemo </code>the main objective of <strong>avoid double counting</strong> to improve the internal performance of the function component.</p>
+<hr>
+<h2 id="Summary-of-the-difference-between-the-two"><a href="#Summary-of-the-difference-between-the-two" class="headerlink" title="Summary of the difference between the two"></a>Summary of the difference between the two</h2><table>
+<thead>
+<tr>
+<th>aspects</th>
+<th>react.memo</th>
+<th>useMemo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>type</td>
+<td>higher-order components (HOC)</td>
+<td>Hook</td>
+</tr>
+<tr>
+<td>use</td>
+<td>optimize components to avoid repeated rendering due to unchanged props</td>
+<td>caching calculation results within a function component</td>
+</tr>
+<tr>
+<td>action object</td>
+<td>components</td>
+<td>calculation result (any type)</td>
+</tr>
+<tr>
+<td>working Mechanism</td>
+<td>compare props before and after to decide whether to skip rendering</td>
+<td>Recalculate when dependency changes, otherwise return cached value</td>
+</tr>
+<tr>
+<td>use Scenario</td>
+<td>optimize pure function components to reduce unnecessary rendering</td>
+<td>avoid complex calculations, avoid recreating objects&#x2F;functions</td>
+</tr>
+<tr>
+<td>role hierarchy</td>
+<td>component level</td>
+<td>inside the function component</td>
+</tr>
+<tr>
+<td>whether the component output is affected</td>
+<td>affects whether components are re-rendered</td>
+<td>does not affect whether the component is rendered, only the calculation cache is affected.</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="Specific-comparison-and-example"><a href="#Specific-comparison-and-example" class="headerlink" title="Specific comparison and example"></a>Specific comparison and example</h2><p>suppose there is a component that receives a list and displays its length, but the list is externally incoming and changes frequently.</p>
+<h3 id="Optimizing-Component-Rendering-with-react-memo"><a href="#Optimizing-Component-Rendering-with-react-memo" class="headerlink" title="Optimizing Component Rendering with react.memo"></a>Optimizing Component Rendering with react.memo</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">ListLength</span> = <span class="title class_">React</span>.<span class="title function_">memo</span>(<span class="function">(<span class="params">&#123; list &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;ListLength 渲染&quot;</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>列表长度：&#123;list.length&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>when the parent component re-renders <code>list </code>when there is no change, <code>ListLength </code>will not re-render.</p>
+<hr>
+<h3 id="Use-useMemo-to-cache-computing"><a href="#Use-useMemo-to-cache-computing" class="headerlink" title="Use useMemo to cache computing"></a>Use useMemo to cache computing</h3><p>if the list is large, do a complex conversion before calculating the length:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Parent</span>(<span class="params">&#123; list &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> processedList = <span class="title class_">React</span>.<span class="title function_">useMemo</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 假设复杂转换</span></span><br><span class="line">    <span class="keyword">return</span> list.<span class="title function_">filter</span>(<span class="function"><span class="params">item</span> =&gt;</span> item.<span class="property">active</span>);</span><br><span class="line">  &#125;, [list]);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">ListLength</span> <span class="attr">list</span>=<span class="string">&#123;processedList&#125;</span> /&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>here. <code>useMemo </code>cached <code>processedList </code>to avoid re-filtering the list every time you render.</p>
+<hr>
+<h2 id="Form-assisted-understanding"><a href="#Form-assisted-understanding" class="headerlink" title="Form-assisted understanding"></a>Form-assisted understanding</h2><table>
+<thead>
+<tr>
+<th>aspects</th>
+<th>react.memo</th>
+<th>useMemo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>cache Object</td>
+<td>component rendering results (React element tree)</td>
+<td>calculated value (any JS value, including objects, functions, etc.)</td>
+</tr>
+<tr>
+<td>trigger condition</td>
+<td>trigger re-rendering when component props changes</td>
+<td>trigger recalculation when dependent array changes</td>
+</tr>
+<tr>
+<td>scope of action</td>
+<td>component level, affecting re-rendering of the entire component</td>
+<td>within function components, caching Local Computations</td>
+</tr>
+<tr>
+<td>performance improvement points</td>
+<td>reduce invalid rendering of components and avoid meaningless reconstruction of component tree</td>
+<td>reduce repeated calculations and avoid re-rendering of sub-components due to the generation of new references.</td>
+</tr>
+<tr>
+<td>Typical use</td>
+<td>wrap pure function components to avoid repeated rendering</td>
+<td>cache calculation results to avoid performance-expensive calculations or cache function&#x2F;object references</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p><code>react.memo </code>it is a “memory” Optimization of components, mainly used to avoid re-rendering of function components when props does not change, and improve rendering performance. It is a performance optimization tool at the component level. <code>useMemo</code>It is a performance optimization method inside the function component, which caches the calculation results to avoid repeating complex calculations or generating new objects, thereby reducing unnecessary rendering triggers. The two scenarios are different, but they are often used together to improve the performance of React applications.</p>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p><code>react.memo </code>it is a high-level component provided by React to cache component rendering results to avoid repeating rendering components when props is unchanged and improve rendering performance; <code>useMemo </code>is a Hook, which is used to cache the calculation results inside the function component to avoid performing expensive calculations every time it is rendered.</p>
+<p>To put it simply, <code>react.memo </code>optimized is the component rendering level, <code>useMemo </code>the optimization is to compute the cache level. The two are often used in combination to help reduce performance loss at different levels.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

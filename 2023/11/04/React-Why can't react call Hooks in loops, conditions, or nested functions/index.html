@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Why can’t react call Hooks in loops, conditions, or nested functionsForewordas an important mechanism for component state management and side effect h"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Why can&#39;t react call Hooks in loops, conditions, or nested functions"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Why can’t react call Hooks in loops, conditions, or nested functionsForewordas an important mechanism for component state management and side effect h"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Why can&#39;t react call Hooks in loops, conditions, or nested functions - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Why can't react call Hooks in loops, conditions, or nested functions</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-11-04
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Why-can’t-react-call-Hooks-in-loops-conditions-or-nested-functions"><a href="#Why-can’t-react-call-Hooks-in-loops-conditions-or-nested-functions" class="headerlink" title="Why can’t react call Hooks in loops, conditions, or nested functions"></a>Why can’t react call Hooks in loops, conditions, or nested functions</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>as an important mechanism for component state management and side effect handling, React Hooks greatly simplify component logic and improve code readability and reusability. However, React explicitly states that Hooks cannot be called in loops, conditional statements, or nested functions. This restriction is confusing to many developers, especially when conditional execution is often required in complex logic.</p>
+<p>This article will analyze why React Hooks need to comply with this restriction, analyze the reasons from the perspective of the underlying implementation mechanism and call order, and combine code examples and comparisons to help understand, to avoid misuse caused by state confusion.</p>
+<hr>
+<h2 id="Hooks-invocation-rule-review"><a href="#Hooks-invocation-rule-review" class="headerlink" title="Hooks invocation rule review"></a>Hooks invocation rule review</h2><p>React specifies that Hooks must be called at the top level of function components or custom Hooks, and cannot be placed in:</p>
+<ul>
+<li>loop (for, while, etc.)</li>
+<li>in conditional judgment (if, switch, etc.)</li>
+<li>inside Nested Functions</li>
+</ul>
+<p>this is to ensure that the order and number of Hooks are called consistently for each rendering.</p>
+<hr>
+<h2 id="Why-is-it-forbidden-to-call-Hooks-in-loops-conditions-or-nested-functions"><a href="#Why-is-it-forbidden-to-call-Hooks-in-loops-conditions-or-nested-functions" class="headerlink" title="Why is it forbidden to call Hooks in loops, conditions, or nested functions?"></a>Why is it forbidden to call Hooks in loops, conditions, or nested functions?</h2><h3 id="1-React-Hooks-rely-on-the-call-sequence-management-state"><a href="#1-React-Hooks-rely-on-the-call-sequence-management-state" class="headerlink" title="1. React Hooks rely on the call sequence management state."></a>1. React Hooks rely on the call sequence management state.</h3><p>React uses a mechanism called “Hook index” to assign state slots to each Hook in sequence. Each time you render, React reads or updates the Hook state one-by-one according to the call order.</p>
+<p>If the number or order of calls to Hooks is not fixed, React cannot determine which state corresponds to which Hook, resulting in State disorder.</p>
+<h3 id="2-Conditional-statements-and-loops-cause-the-order-of-calls-to-be-uncertain"><a href="#2-Conditional-statements-and-loops-cause-the-order-of-calls-to-be-uncertain" class="headerlink" title="2. Conditional statements and loops cause the order of calls to be uncertain."></a>2. Conditional statements and loops cause the order of calls to be uncertain.</h3><p>In conditional judgment, some hooks may be skipped:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function MyComponent(&#123; flag &#125;) &#123;</span><br><span class="line">  if (flag) &#123;</span><br><span class="line">    React.useEffect(() =&gt; &#123;</span><br><span class="line">      console.log(&#x27;Flag is true&#x27;);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">  React.useState(0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>when <code>flag </code>for <code>true </code>two hooks are called; <code>false </code>only one is called. In this way, the second Hook is indexed differently in different renderings, causing confusion.</p>
+<p>Similarly, dynamically calling a Hook in a loop can result in an indeterminate number of calls.</p>
+<h3 id="3-Nested-functions-cause-Hook-calls-not-to-be-at-the-top-level"><a href="#3-Nested-functions-cause-Hook-calls-not-to-be-at-the-top-level" class="headerlink" title="3. Nested functions cause Hook calls not to be at the top level."></a>3. Nested functions cause Hook calls not to be at the top level.</h3><p>If a Hook is called in a nested function, the timing and number of Hook calls cannot be guaranteed to be fixed, which breaks React’s assumption on the order of Hook calls.</p>
+<hr>
+<h2 id="The-right-way-to-use"><a href="#The-right-way-to-use" class="headerlink" title="The right way to use"></a>The right way to use</h2><p>Hooks calls should be kept at the outermost layer of a function component or custom Hook, with unconditional, loop-free calls. Conditional logic should be placed inside the Hook control:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function MyComponent(&#123; flag &#125;) &#123;</span><br><span class="line">  React.useEffect(() =&gt; &#123;</span><br><span class="line">    if (flag) &#123;</span><br><span class="line">      // 条件逻辑放这里</span><br><span class="line">      console.log(&#x27;Flag is true&#x27;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;, [flag]);</span><br><span class="line"></span><br><span class="line">  const [count, setCount] = React.useState(0); // 始终调用</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>this writing ensures that the order and number of hooks are consistent for each rendering call.</p>
+<hr>
+<h2 id="Hooks-Call-Sequence-Schematic-Table"><a href="#Hooks-Call-Sequence-Schematic-Table" class="headerlink" title="Hooks Call Sequence Schematic Table"></a>Hooks Call Sequence Schematic Table</h2><table>
+<thead>
+<tr>
+<th>number of Renders</th>
+<th>Hook 1</th>
+<th>Hook 2</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>the first time</td>
+<td>call</td>
+<td>call</td>
+<td>fixed call order</td>
+</tr>
+<tr>
+<td>second time</td>
+<td>skip</td>
+<td>call</td>
+<td>call order is broken, State is out of order</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="related-warnings-and-tool-support"><a href="#related-warnings-and-tool-support" class="headerlink" title="related warnings and tool support"></a>related warnings and tool support</h2><p>React officially provides ESLint plug-in <code>eslint-plugin-react-hooks </code>, you can automatically detect irregularities in the use of hooks during development, and remind developers to avoid calling hooks in conditions and loops.</p>
+<hr>
+<h2 id="Interview-answer-example"><a href="#Interview-answer-example" class="headerlink" title="Interview answer example"></a>Interview answer example</h2><p><strong>question: Why can’t React Hooks be called in loops, conditions, or nested functions?</strong></p>
+<p>Example answer:</p>
+<p>React Hooks manage status based on the calling order. React uses an internal index to allocate status slots for each Hook in the calling order. Loops, conditions, or nested functions can cause the number and order of Hook calls to be variable, making the state index out of order, resulting in state errors. In order to ensure state consistency, Hooks must be called unconditionally at the top of the component to avoid changes in the order of calls.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>React restricts Hooks to be called only at the top level of function components or custom Hooks, and prohibits placing them in loops, conditions, or nested functions, mainly to ensure the consistency of the order and number of Hook calls. This mechanism ensures that React can correctly match state and side effects to avoid state confusion. Understanding and following this rule is the basis for using Hooks to write stable and efficient React applications. Combined with the official ESLint plug-in, it can help developers avoid related errors and improve code quality.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

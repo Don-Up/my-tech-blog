@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What is the principle of react useState and how is it executed behind the scenesForewordin The React function component, useState is the most commonly"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What is the principle of react useState and how is it executed behind the scenes"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What is the principle of react useState and how is it executed behind the scenesForewordin The React function component, useState is the most commonly"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What is the principle of react useState and how is it executed behind the scenes - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What is the principle of react useState and how is it executed behind the scenes</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-03-15
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-is-the-principle-of-react-useState-and-how-is-it-executed-behind-the-scenes"><a href="#What-is-the-principle-of-react-useState-and-how-is-it-executed-behind-the-scenes" class="headerlink" title="What is the principle of react useState and how is it executed behind the scenes"></a>What is the principle of react useState and how is it executed behind the scenes</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in The React function component, <code>useState </code>is the most commonly used Hook to declare and manage the state of a component. It enables function components to own state, solving the problem that state could only be managed through class components in the past. Understanding <code>useState </code>the principle of not only helps us to better use the React Hook, but also helps us to deeply understand the rendering and update mechanism of the React component.</p>
+<p>This article will be in-depth analysis <code>useState </code>the internal execution process of the Fiber architecture and Hook mechanism to explain how it implements state preservation, update, and scheduling.</p>
+<hr>
+<h2 id="1-Basic-usage-of-useState"><a href="#1-Basic-usage-of-useState" class="headerlink" title="1. Basic usage of useState"></a>1. Basic usage of useState</h2><p><code>useState </code>A function that receives an initial state, returns the current state value, and updates that state:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Counter</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [count, setCount] = <span class="title class_">React</span>.<span class="title function_">useState</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;count&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> setCount(count + 1)&#125;&gt;增加<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>call <code>setCount </code>triggers the component to re-render, updating the state value.</p>
+<hr>
+<h2 id="2-How-to-implement-useState-inside-React"><a href="#2-How-to-implement-useState-inside-React" class="headerlink" title="2. How to implement useState inside React."></a>2. How to implement useState inside React.</h2><h3 id="2-1-Fiber-and-Hook-linked-list-structure"><a href="#2-1-Fiber-and-Hook-linked-list-structure" class="headerlink" title="2.1 Fiber and Hook linked list structure"></a>2.1 Fiber and Hook linked list structure</h3><p>React manages the component tree based on the Fiber architecture, and the Hook status of the function component is stored in a linked list on the current Fiber node. Each time the component is rendered, React maintains a global hookIndex to ensure that the Hook call sequence is consistent, so that the Hook state can be read or created correctly.</p>
+<h3 id="Structure-of-2-2-Hook-node"><a href="#Structure-of-2-2-Hook-node" class="headerlink" title="Structure of 2.2 Hook node"></a>Structure of 2.2 Hook node</h3><p>the approximate structure of each Hook node is as follows:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  memoizedState, // 当前状态值或队列</span><br><span class="line">  queue,         // 更新队列</span><br><span class="line">  next           // 指向下一个 Hook 节点</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-3-The-useState-initialization-process"><a href="#2-3-The-useState-initialization-process" class="headerlink" title="2.3 The useState initialization process"></a>2.3 The useState initialization process</h3><p>when first rendered:</p>
+<ul>
+<li>React creates a Hook node, <code>memoizedState </code>initializes to the initial state (or the value obtained by executing a lazy initialization function).</li>
+<li>Create an update queue <code>queue </code>to save subsequent status updates.</li>
+</ul>
+<p>Schematic:</p>
+<table>
+<thead>
+<tr>
+<th>Hook node</th>
+<th>memoizedState</th>
+<th>queue</th>
+<th>next</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>useState</td>
+<td>0</td>
+<td>empty queue</td>
+<td>the Next Hook</td>
+</tr>
+</tbody></table>
+<h3 id="2-4-useState-update-process"><a href="#2-4-useState-update-process" class="headerlink" title="2.4 useState update process"></a>2.4 useState update process</h3><p>when calling <code>setState </code>(E. G.<code>setCount </code>) when:</p>
+<ul>
+<li>React wraps the incoming new state (or update function) into an update object and inserts it into the corresponding Hook’s <code>queue </code>in.</li>
+<li>React marks the Fiber node as needing to be updated.</li>
+<li>React dispatches re-rendering components.</li>
+</ul>
+<h3 id="Status-update-performed-when-2-5-component-re-renders"><a href="#Status-update-performed-when-2-5-component-re-renders" class="headerlink" title="Status update performed when 2.5 component re-renders"></a>Status update performed when 2.5 component re-renders</h3><ul>
+<li>React reads the Hook <code>queue </code>all updates in, executed sequentially, update the old state to the latest state in turn.</li>
+<li>Finally assigns the latest state to the Hook node’s <code>memoizedState </code>.</li>
+<li>Returns the latest status and the same <code>dispatch </code>function.</li>
+</ul>
+<hr>
+<h2 id="3-Key-data-structure-and-scheduling-schematic"><a href="#3-Key-data-structure-and-scheduling-schematic" class="headerlink" title="3. Key data structure and scheduling schematic"></a>3. Key data structure and scheduling schematic</h2><table>
+<thead>
+<tr>
+<th>stage</th>
+<th>operation</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>initialization</td>
+<td>create a Hook node, <code>memoizedState = initial state </code></td>
+<td>the initial state is executed only once</td>
+</tr>
+<tr>
+<td>update Trigger</td>
+<td><code>setState</code>Add updates to the Hook’s <code>queue </code></td>
+<td>the update object is a circular linked list and supports batch update.</td>
+</tr>
+<tr>
+<td>Re-render</td>
+<td>read <code>queue </code>and then apply the update to calculate the latest status</td>
+<td>cumulative update of status, support for functional update</td>
+</tr>
+<tr>
+<td>status Return</td>
+<td>returns the latest state that the component uses for rendering</td>
+<td>React ensures that the order of Hook calls is consistent.</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="4-Code-simplification-example-pseudo-code"><a href="#4-Code-simplification-example-pseudo-code" class="headerlink" title="4. Code simplification example (pseudo-code)"></a>4. Code simplification example (pseudo-code)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">function useState(initialState) &#123;</span><br><span class="line">  const hook = getCurrentHook();</span><br><span class="line"></span><br><span class="line">  if (!hook) &#123; // 首次渲染</span><br><span class="line">    const state = typeof initialState === &#x27;function&#x27; ? initialState() : initialState;</span><br><span class="line">    hook = &#123;</span><br><span class="line">      memoizedState: state,</span><br><span class="line">      queue: &#123; pending: null &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    appendHook(hook);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  function dispatchSetState(action) &#123;</span><br><span class="line">    const update = &#123; action, next: null &#125;;</span><br><span class="line"></span><br><span class="line">    // 插入更新队列（环形链表）</span><br><span class="line">    if (!hook.queue.pending) &#123;</span><br><span class="line">      update.next = update;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      update.next = hook.queue.pending.next;</span><br><span class="line">      hook.queue.pending.next = update;</span><br><span class="line">    &#125;</span><br><span class="line">    hook.queue.pending = update;</span><br><span class="line"></span><br><span class="line">    scheduleUpdateOnFiber();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  // 计算新状态</span><br><span class="line">  let baseState = hook.memoizedState;</span><br><span class="line">  if (hook.queue.pending) &#123;</span><br><span class="line">    let firstUpdate = hook.queue.pending.next;</span><br><span class="line">    let update = firstUpdate;</span><br><span class="line">    do &#123;</span><br><span class="line">      baseState = typeof update.action === &#x27;function&#x27; ? update.action(baseState) : update.action;</span><br><span class="line">      update = update.next;</span><br><span class="line">    &#125; while (update !== firstUpdate);</span><br><span class="line"></span><br><span class="line">    hook.queue.pending = null;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  hook.memoizedState = baseState;</span><br><span class="line"></span><br><span class="line">  return [baseState, dispatchSetState];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="5-Design-advantages-and-mechanism-summary"><a href="#5-Design-advantages-and-mechanism-summary" class="headerlink" title="5. Design advantages and mechanism summary"></a>5. Design advantages and mechanism summary</h2><ul>
+<li><strong>sequential call guarantees state correspondence</strong> : Through the Hook linked list and global index on Fiber, the order of Hook calls is guaranteed to remain unchanged and the corresponding state is correctly read and written.</li>
+<li><strong>Support for lazy initialization</strong> : The initial state can be a function to avoid unnecessary calculations.</li>
+<li><strong>Circular linked list update queue</strong> : <code>setState </code>the updates are put into a queue, which supports batch merging and sequential application.</li>
+<li><strong>Functional update</strong> : Supports incoming function updates to ensure that the state is calculated based on the latest state.</li>
+<li><strong>Phased update</strong>: The status update does not take effect immediately and waits for scheduling execution to avoid intermediate status rendering and improve performance.</li>
+</ul>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p><code>useState </code>the core principle of React is to manage the state through the Hook list on the Fiber node. When rendering for the first time, create a Hook node to save the initial state and update the queue; Call <code>setState </code>the updated object is added to the ring queue and the marker component needs to be re-rendered. During rendering, the update queue is traversed to calculate the latest status, update the Hook status, and return the latest status and the same dispatch function. This mechanism ensures state correspondence, supports batch updates and functional updates, while avoiding unnecessary repetitive rendering.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>React in <code>useState </code>the implementation of depends on the Fiber architecture and Hook linked list, and the management and update of the state is realized through the ingenious design of the ring update queue. It ensures stable correspondence between the call sequence and State of the Hook, and supports lazy initialization and batch state updates. Understanding these principles can help you use hooks more efficiently, avoid common pitfalls, and improve the performance and maintainability of React applications.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

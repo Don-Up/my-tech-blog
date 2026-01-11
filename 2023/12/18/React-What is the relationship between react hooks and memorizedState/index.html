@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What is the relationship between react hooks and memorizedStateForewordReact Hooks are an important feature introduced in React 16.8, which greatly ch"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What is the relationship between react hooks and memorizedState"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What is the relationship between react hooks and memorizedStateForewordReact Hooks are an important feature introduced in React 16.8, which greatly ch"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What is the relationship between react hooks and memorizedState - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What is the relationship between react hooks and memorizedState</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-12-18
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-is-the-relationship-between-react-hooks-and-memorizedState"><a href="#What-is-the-relationship-between-react-hooks-and-memorizedState" class="headerlink" title="What is the relationship between react hooks and memorizedState"></a>What is the relationship between react hooks and memorizedState</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>React Hooks are an important feature introduced in React 16.8, which greatly changes the way function components manage state and side effects. Hooks give function components the state management and lifecycle capabilities that class components can achieve. Inside React, the state management of Hooks relies on a core data structure– <code>memorizedState </code>. Understanding Hooks and <code>memorizedState </code>the relationship between the two mechanisms helps to deeply understand the rendering and status update mechanisms of React, laying a solid foundation for performance optimization and complex troubleshooting.</p>
+<hr>
+<h2 id="Basic-concepts-of-Hooks-and-memorizedState"><a href="#Basic-concepts-of-Hooks-and-memorizedState" class="headerlink" title="Basic concepts of Hooks and memorizedState"></a>Basic concepts of Hooks and memorizedState</h2><h3 id="React-Hooks"><a href="#React-Hooks" class="headerlink" title="React Hooks"></a>React Hooks</h3><p>Hooks are a set of functions provided by React, which are used to “hook” functions such as state and life cycle in function components. Commonly used Hooks include <code>useState </code>, <code>useEffect </code>, <code>useReducer </code>, <code>useMemo </code>wait. They enable function components to save state, perform side effects, and cache computation results.</p>
+<h3 id="memorizedState"><a href="#memorizedState" class="headerlink" title="memorizedState"></a>memorizedState</h3><p><code>memorizedState</code>Is the linked list structure used to store the state of Hooks in the React Fiber Architecture. In each Fiber node (corresponding to a component), React maintains a <code>memorizedState </code>linked list, used to store the status and related data of all Hooks in the component in sequence.</p>
+<p>To put it simply, <code>memorizedState </code>is the storage container for the Hooks-related state in the React Fiber object.</p>
+<hr>
+<h2 id="How-Hooks-use-memorizedState-to-achieve-state-management"><a href="#How-Hooks-use-memorizedState-to-achieve-state-management" class="headerlink" title="How Hooks use memorizedState to achieve state management"></a>How Hooks use memorizedState to achieve state management</h2><p>whenever the function component executes, React passes <code>memorizedState </code>property to “mount” and “update” the state of Hooks.</p>
+<p>The following are Hooks and <code>memorizedState </code>the core workflow:</p>
+<ol>
+<li><strong>initialization phase</strong></li>
+</ol>
+<p>when rendering the function component for the first time, React creates a Fiber object, which contains a pointer <code>memorizedState </code>pointer to, with an initial value <code>null </code>.</p>
+<ol>
+<li><strong>Execute Function Component</strong></li>
+</ol>
+<p>When the component executes, each call to a Hook (e. G. <code>useState </code>),React will go <code>memorizedState </code>A new node is added to the linked list to store the status data of the Hook, such as the current status value, the update queue, etc.</p>
+<ol>
+<li><strong>Maintain call order</strong></li>
+</ol>
+<p>React depends on the order in which the Hook is called and <code>memorizedState </code>node order one-to-one correspondence. This is also the fundamental reason why Hooks cannot be called in conditions or loops, ensuring that the order of linked list nodes is consistent with the order of Hook calls.</p>
+<ol>
+<li><strong>Update phase</strong></li>
+</ol>
+<p>when the status is updated, React passes <code>memorizedState </code>obtain the status and update queue of the corresponding Hook, calculate the new status value, and then trigger the component to re-render.</p>
+<ol>
+<li><strong>Read during rendering</strong></li>
+</ol>
+<p>in the next rendering pass, React passes <code>memorizedState </code>the node list accesses the state of each Hook in sequence, so as to ensure the continuity and correctness of the Hook state.</p>
+<hr>
+<h2 id="Structural-example-of-memorizedState-simplified"><a href="#Structural-example-of-memorizedState-simplified" class="headerlink" title="Structural example of memorizedState (simplified)"></a>Structural example of memorizedState (simplified)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 伪代码描述 Fiber 中的 memorizedState 链表节点</span><br><span class="line">const memorizedState = &#123;</span><br><span class="line">  memoizedState: currentState,     // 当前 Hook 的状态，比如 useState 的值</span><br><span class="line">  baseState: baseState,            // 基础状态，用于状态更新合并</span><br><span class="line">  queue: updateQueue,              // 更新队列，存放 setState 等更新动作</span><br><span class="line">  next: nextHookNode               // 指向下一个 Hook 的节点</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>of the Fiber object <code>memorizedState</code>Points to the first Hook node, and each Hook node passes through <code>next </code>the pointer points to the next Hook node, forming a linked list structure.</p>
+<hr>
+<h2 id="Summary-of-the-relationship-between-Hooks-and-memorizedState"><a href="#Summary-of-the-relationship-between-Hooks-and-memorizedState" class="headerlink" title="Summary of the relationship between Hooks and memorizedState"></a>Summary of the relationship between Hooks and memorizedState</h2><p>Hooks are mapped to <code>memorizedState </code>each node of the linked list realizes the reading, writing and updating of the state. Each time a Hook call is executed, React finds or creates the corresponding <code>memorizedState </code>node to ensure the correctness and isolation of the state.</p>
+<ul>
+<li><code>memorizedState </code>is the core data structure that manages the status of Hooks within React;</li>
+<li>the order in which Hooks are called determines <code>memorizedState </code>the order of the linked list nodes;</li>
+<li>React uses this linked list to store the status, update queue, and other related information of each Hook;</li>
+<li>this mechanism allows function components to have the same state and lifecycle management capabilities as class components.</li>
+</ul>
+<hr>
+<h2 id="Relationship-diagram-simplified"><a href="#Relationship-diagram-simplified" class="headerlink" title="Relationship diagram (simplified)"></a>Relationship diagram (simplified)</h2><table>
+<thead>
+<tr>
+<th>Hook call order in React component function</th>
+<th>the memorizedState linked list node in the corresponding Fiber node</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>The first call to useState()</td>
+<td>memorizedState node 1</td>
+</tr>
+<tr>
+<td>the second call to useEffect()</td>
+<td>memorizedState node 2</td>
+</tr>
+<tr>
+<td>the third call to useState()</td>
+<td>memorizedState Node 3</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>the core of the state management of React Hooks lies in <code>memorizedState </code>linked list. The call order of Hooks maps strictly to <code>memorizedState </code>node order, React uses this structure to store and manage state, update queues, and side effects. Understanding the relationship between the two is helpful to understand the working mechanism of the React function component, avoid state confusion caused by abuse of Hooks, and improve code quality and maintainability.</p>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p>the internal state management of React Hooks depends on <code>memorizedState </code>linked list. Each Hook call corresponds <code>memorizedState </code>A node in the linked list that stores the status and update queue of the Hook.</p>
+<p>React accesses the corresponding<code>memorizedState </code>to ensure the correct association and update of the state. <code>memorizedState </code>is the key data structure for Hooks to implement state isolation and sequence consistency within React.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

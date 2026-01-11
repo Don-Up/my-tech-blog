@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Let me introduce useReducerForewordin The React function component, state management is the key to building an interactive UI. In addition to the comm"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Let me introduce useReducer"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Let me introduce useReducerForewordin The React function component, state management is the key to building an interactive UI. In addition to the comm"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Let me introduce useReducer - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Let me introduce useReducer</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-12-09
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Let-me-introduce-useReducer"><a href="#Let-me-introduce-useReducer" class="headerlink" title="Let me introduce useReducer"></a>Let me introduce useReducer</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in The React function component, state management is the key to building an interactive UI. In addition to the commonly used <code>useState </code>, React also provides a more powerful Hook – <code>useReducer </code>. It is suitable for handling complex state logic, especially when multiple state values are related to each other or a new state is calculated depending on the previous state.</p>
+<p>This article will introduce in depth <code>useReducer </code>the basic concepts, usage, applicable scenarios and their advantages help readers master this powerful state management tool.</p>
+<hr>
+<h2 id="Uereducer-Basic-Concepts-and-Usage"><a href="#Uereducer-Basic-Concepts-and-Usage" class="headerlink" title="Uereducer Basic Concepts and Usage"></a>Uereducer Basic Concepts and Usage</h2><p><code>useReducer </code>it is a state management Hook based on the “Reducer” mode design, inspired by the core concept of Redux. It allows state changes to be driven by “action” by receiving a “reducer” function and an initial state, returning the current state and a dispatch function.</p>
+<p><code>useReducer </code>the format of the call is as follows:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [state, dispatch] = <span class="title function_">useReducer</span>(reducer, initialState);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>reducer </code>is a pure function that takes two arguments <code>state </code>and <code>action </code>, according <code>action</code>The type determines how the state is updated, returning the new state.</li>
+<li><code>initialState </code>is the initial value of the state.</li>
+<li>The return value is an array, the first element is the current state, and the second element is used to trigger the state change. <code>dispatch </code>function.</li>
+</ul>
+<h3 id="Sample-code"><a href="#Sample-code" class="headerlink" title="Sample code"></a>Sample code</h3><p>below is a classic counter example showing <code>useReducer </code>basic usage:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span>, &#123; useReducer &#125; <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> initialState = &#123; <span class="attr">count</span>: <span class="number">0</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">reducer</span>(<span class="params">state, action</span>) &#123;</span><br><span class="line">  <span class="keyword">switch</span>(action.<span class="property">type</span>) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&quot;increment&quot;</span>:</span><br><span class="line">      <span class="keyword">return</span> &#123; <span class="attr">count</span>: state.<span class="property">count</span> + <span class="number">1</span> &#125;;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&quot;decrement&quot;</span>:</span><br><span class="line">      <span class="keyword">return</span> &#123; <span class="attr">count</span>: state.<span class="property">count</span> - <span class="number">1</span> &#125;;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&quot;reset&quot;</span>:</span><br><span class="line">      <span class="keyword">return</span> initialState;</span><br><span class="line">    <span class="attr">default</span>:</span><br><span class="line">      <span class="keyword">return</span> state;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Counter</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [state, dispatch] = <span class="title function_">useReducer</span>(reducer, initialState);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>Count: &#123;state.count&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> dispatch(&#123; type: &quot;increment&quot; &#125;)&#125;&gt;+<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> dispatch(&#123; type: &quot;decrement&quot; &#125;)&#125;&gt;-<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> dispatch(&#123; type: &quot;reset&quot; &#125;)&#125;&gt;Reset<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>in this example, <code>dispatch </code>responsible for the distribution action, <code>reducer </code>the update logic of the state is determined according to the action type to ensure that the state change is controllable and predictable.</p>
+<hr>
+<h2 id="Advantages-and-application-scenarios-of-useReducer"><a href="#Advantages-and-application-scenarios-of-useReducer" class="headerlink" title="Advantages and application scenarios of useReducer"></a>Advantages and application scenarios of useReducer</h2><p><code>useReducer </code>is not used to replace <code>useState </code>, but when the state logic is complex or there is a correlation between states, it is more appropriate.</p>
+<h3 id="When-the-state-logic-is-complex"><a href="#When-the-state-logic-is-complex" class="headerlink" title="When the state logic is complex"></a>When the state logic is complex</h3><p>when a state update involves multiple sub-values or relies on previous state calculations, <code>useReducer </code>make state management clearer. Compared to multiple <code>useState</code>, it centrally manages the state change logic, and the code is more maintainable.</p>
+<h3 id="Multiple-status-update-dependencies"><a href="#Multiple-status-update-dependencies" class="headerlink" title="Multiple status update dependencies"></a>Multiple status update dependencies</h3><p>by <code>action </code>unified management of state changes makes it easier to debug, track, and extend state changes.</p>
+<h3 id="When-you-want-to-implement-a-Redux-like-mode"><a href="#When-you-want-to-implement-a-Redux-like-mode" class="headerlink" title="When you want to implement a Redux-like mode"></a>When you want to implement a Redux-like mode</h3><p><code>useReducer </code>React is a built-in lightweight state management solution similar to Redux, suitable for small and medium-sized projects or local complex states.</p>
+<h3 id="Global-state-management-with-useContext"><a href="#Global-state-management-with-useContext" class="headerlink" title="Global state management with useContext"></a>Global state management with useContext</h3><p>will <code>useReducer </code>with <code>useContext </code>combined, you can build a simple and efficient global state management system.</p>
+<hr>
+<h2 id="Comparison-between-useReducer-and-useState"><a href="#Comparison-between-useReducer-and-useState" class="headerlink" title="Comparison between useReducer and useState"></a>Comparison between useReducer and useState</h2><table>
+<thead>
+<tr>
+<th>characteristics</th>
+<th>useState</th>
+<th>useReducer</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>applicable Scenarios</td>
+<td>simple state management, single state value</td>
+<td>complex state logic, multiple state values or dependencies</td>
+</tr>
+<tr>
+<td>status Update Logic</td>
+<td>direct update, support for functional update</td>
+<td>handle actions through pure functions with reducer</td>
+</tr>
+<tr>
+<td>State change control</td>
+<td>scattered across components, multiple calls <code>setState </code></td>
+<td>centralized management, all state changes are determined by the reducer</td>
+</tr>
+<tr>
+<td>maintainability</td>
+<td>simple scenes are more intuitive</td>
+<td>clearer complex logic for easy expansion and testing</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="advanced-Usage"><a href="#advanced-Usage" class="headerlink" title="advanced Usage"></a>advanced Usage</h2><h3 id="using-Initialization-Functions"><a href="#using-Initialization-Functions" class="headerlink" title="using Initialization Functions"></a>using Initialization Functions</h3><p><code>useReducer </code>support for a third parameter for lazy initialization helps avoid double-counting of the initial state.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [state, dispatch] = <span class="title function_">useReducer</span>(reducer, initialArg, initFunction);</span><br></pre></td></tr></table></figure>
+
+<p><code>initFunction </code>receive <code>initialArg </code>return to the initial state.</p>
+<h3 id="Asynchronous-operations-combined"><a href="#Asynchronous-operations-combined" class="headerlink" title="Asynchronous operations combined"></a>Asynchronous operations combined</h3><p>although <code>useReducer </code>itself is synchronous, but can be combined <code>useEffect </code>to handle asynchronous logic, and then pass. <code>dispatch </code>update status.</p>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p><code>useReducer </code>it is a Hook used by React to manage the complex state of components. Based on the reducer mode, it concentrates the state update logic in a pure function.<code>dispatch </code>the transfer action drives the state change. Compared <code>useState </code>, It is more suitable for scenarios where multiple state values are managed and state changes are complex. <code>useReducer </code>improved state management maintainability, predictability, and ease of communication <code>useContext </code>cooperate to achieve cross-component state sharing. It supports lazy initialization and combined with asynchronous operations, making it a good choice for managing state in medium and large projects.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p><code>useReducer </code>it is an important tool for processing complex state logic in The React function component. It improves code clarity and maintainability by centralizing state update logic. Understanding its usage and advantages helps developers choose the right state management scheme and write high-quality, easily extensible components. Whether it’s a single complex component or global state management with context, <code>useReducer </code>they are all powerful tools that cannot be ignored. Master <code>useReducer </code>is an important step in the advanced development of React.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What are the functions of Portals and in what scenarios are they usedForewordin React application development, the rendering structure of components i"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What are the functions of Portals and in what scenarios are they used"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What are the functions of Portals and in what scenarios are they usedForewordin React application development, the rendering structure of components i"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What are the functions of Portals and in what scenarios are they used - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What are the functions of Portals and in what scenarios are they used</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-10-23
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-are-the-functions-of-Portals-and-in-what-scenarios-are-they-used"><a href="#What-are-the-functions-of-Portals-and-in-what-scenarios-are-they-used" class="headerlink" title="What are the functions of Portals and in what scenarios are they used"></a>What are the functions of Portals and in what scenarios are they used</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in React application development, the rendering structure of components is generally managed strictly according to the nested DOM tree at the parent-child level. However, in the actual UI design, there are cases where the DOM elements of a component need to be rendered to a location outside the parent component in the DOM tree, such as modal boxes, pop-up menus, tooltips, etc. React provides a powerful solution for this – Portals.</p>
+<p>This article describes in detail the functions, implementation principles, and typical usage scenarios of React Portals to help developers better understand and use this feature.</p>
+<hr>
+<h2 id="What-are-React-Portals"><a href="#What-are-React-Portals" class="headerlink" title="What are React Portals?"></a>What are React Portals?</h2><p>React Portals is a feature introduced in React 16 that allows us to “route” the rendered content of a child component to another DOM node outside the DOM hierarchy of the parent component. This means that although the component logic and state remains in the React tree, its rendering results can be placed in any given DOM node.</p>
+<p>The API provided by React is <code>ReactDOM.createPortal(children, container) </code>, the first parameter is the React node to be rendered, and the second parameter is the DOM container node.</p>
+<hr>
+<h2 id="The-role-and-principle-of-Portals"><a href="#The-role-and-principle-of-Portals" class="headerlink" title="The role and principle of Portals"></a>The role and principle of Portals</h2><ol>
+<li><strong>break the DOM level limit</strong><br>In React, components are usually rendered within the DOM structure of their parent component, which sometimes leads to limitations in style, layout, or event bubbling. Portals allow developers to render DOM nodes of child components to different DOM containers, thus breaking the hierarchy limit.</li>
+<li><strong>Maintain the integrity of the React component tree structure</strong><br>although the actual rendering is in different DOM locations, React still maintains the parent-child relationship between components, and events still bubble normally according to The React event system, which does not damage the event mechanism inside React.</li>
+<li><strong>Improve UI experience and layout control</strong><br>by rendering a modal box or pop-up layer on the outer DOM node (usually a div under the root node), you can avoid being restricted by the style of the parent container, such <code>overflow: hidden </code>or <code>z-index </code>occlusion problems caused.</li>
+</ol>
+<hr>
+<h2 id="Use-Scenario-Example"><a href="#Use-Scenario-Example" class="headerlink" title="Use Scenario Example"></a>Use Scenario Example</h2><h3 id="1-Modal-box-Modal"><a href="#1-Modal-box-Modal" class="headerlink" title="1. Modal box (Modal)"></a>1. Modal box (Modal)</h3><p>the modal box needs to cover the entire page or level above the root node. The modal box is rendered on a separate DOM node under the root node to avoid being constrained by local styles.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Modal</span>(<span class="params">&#123; children &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="title class_">ReactDOM</span>.<span class="title function_">createPortal</span>(</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&quot;modal-overlay&quot;</span>&gt;</span>&#123;children&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>,</span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;modal-root&quot;</span>)</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-Pop-up-menus-and-drop-down-lists-Dropdown"><a href="#2-Pop-up-menus-and-drop-down-lists-Dropdown" class="headerlink" title="2. Pop-up menus and drop-down lists (Dropdown)"></a>2. Pop-up menus and drop-down lists (Dropdown)</h3><p>the pop-up menu needs to be freely positioned on the page to avoid being cropped due to overflow hiding or positioning of the parent element.</p>
+<h3 id="3-Tooltip"><a href="#3-Tooltip" class="headerlink" title="3. Tooltip"></a>3. Tooltip</h3><p>Tooltips usually need to be positioned absolutely away from the current layout, and Portals can be placed at the top of the page to ensure that they are not restricted by the layout.</p>
+<h3 id="4-Global-Notification"><a href="#4-Global-Notification" class="headerlink" title="4. Global Notification"></a>4. Global Notification</h3><p>notification tips are usually rendered in the top-level area of the page and do not rely on the component tree level, making it easy to manage display and animation.</p>
+<hr>
+<h2 id="Portals-use-considerations"><a href="#Portals-use-considerations" class="headerlink" title="Portals use considerations"></a>Portals use considerations</h2><ul>
+<li><strong>event bubbling</strong><br>although the DOM structure is “transferred”, the event still bubbles from the child component to the parent component according to The React event system, and the developer can use Event Processing normally.</li>
+<li><strong>Style Isolation</strong><br>after rendering on different DOM nodes, additional style management may be required to ensure visual consistency.</li>
+<li><strong>DOM container node must exist</strong><br>the container node for creating the Portal must exist in the page DOM in advance, otherwise an error will be reported.</li>
+</ul>
+<hr>
+<h2 id="Code-Sample"><a href="#Code-Sample" class="headerlink" title="Code Sample"></a>Code Sample</h2><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span>, &#123; useState &#125; <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">ReactDOM</span> <span class="keyword">from</span> <span class="string">&quot;react-dom&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> modalRoot = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;modal-root&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Modal</span>(<span class="params">&#123; children &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="title class_">ReactDOM</span>.<span class="title function_">createPortal</span>(</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&#123;&#123;</span> <span class="attr">position:</span> &quot;<span class="attr">fixed</span>&quot;, <span class="attr">top:</span> <span class="attr">0</span>, <span class="attr">left:</span> <span class="attr">0</span>, <span class="attr">right:</span> <span class="attr">0</span>, <span class="attr">bottom:</span> <span class="attr">0</span>, <span class="attr">backgroundColor:</span> &quot;<span class="attr">rgba</span>(<span class="attr">0</span>,<span class="attr">0</span>,<span class="attr">0</span>,<span class="attr">0.5</span>)&quot; &#125;&#125;&gt;</span></span></span><br><span class="line"><span class="language-xml">      &#123;children&#125;</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>,</span><br><span class="line">    modalRoot</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">App</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [showModal, setShowModal] = <span class="title function_">useState</span>(<span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> setShowModal(true)&#125;&gt;打开模态框<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      &#123;showModal &amp;&amp; (</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Modal</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&#123;&#123;</span> <span class="attr">background:</span> &quot;#<span class="attr">fff</span>&quot;, <span class="attr">padding:</span> <span class="attr">20</span> &#125;&#125;&gt;</span></span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;<span class="name">h2</span>&gt;</span>这是一个模态框<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> setShowModal(false)&#125;&gt;关闭<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">Modal</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      )&#125;</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>here. <code>Modal </code>component through <code>createPortal </code>render content to the top of the page <code>modal-root </code>node to avoid being restricted by the parent container style.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>React Portals is an effective solution to the limitation of component rendering hierarchy, allowing developers to render child components to any node in the DOM tree other than the parent component. It ensures the normal operation of React event bubbling and facilitates the implementation of UI components that need to be free from layout restrictions, such as modal boxes, pop-up menus, and tool tips. The proper use of Portals helps improve component flexibility and user experience.</p>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p>React Portals allows us to render child components to a specified DOM node outside the DOM level of the parent component, which can break through the DOM level restrictions while keeping the React component tree structure and event mechanism unchanged. Typical usage scenarios include modal boxes, pop-up menus, tooltips, and global notifications, requiring UI components that are freely positioned and displayed away from the parent container constraints. Through Portals,React can better manage component rendering and event bubbling, improving the flexibility and maintainability of UI components.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

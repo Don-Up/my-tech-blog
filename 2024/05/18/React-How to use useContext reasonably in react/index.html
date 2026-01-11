@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="How to use useContext reasonably in reactForewordReact in useContext it is a convenient way to transfer data across components, avoiding the cumbersom"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How to use useContext reasonably in react"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="How to use useContext reasonably in reactForewordReact in useContext it is a convenient way to transfer data across components, avoiding the cumbersom"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How to use useContext reasonably in react - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How to use useContext reasonably in react</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-05-18
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="How-to-use-useContext-reasonably-in-react"><a href="#How-to-use-useContext-reasonably-in-react" class="headerlink" title="How to use useContext reasonably in react"></a>How to use useContext reasonably in react</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>React in <code>useContext </code>it is a convenient way to transfer data across components, avoiding the cumbersome layer-by-layer transfer of props. It allows developers to access shared context data at any level in the component tree. Although easy to use, but unreasonable <code>useContext </code>use can cause performance problems or code maintenance difficulties.</p>
+<p>This article will be from <code>useContext </code>the basic principles, rational use of methods, performance optimization strategies and typical examples to help you understand and use them efficiently. <code>useContext </code>.</p>
+<hr>
+<h2 id="Basic-principles-of-useContext"><a href="#Basic-principles-of-useContext" class="headerlink" title="Basic principles of useContext"></a>Basic principles of useContext</h2><p><code>useContext </code>is a Hook of React, which is used to subscribe to The React Context object. Context <code>React.createContext </code>create a Provider that wraps the component tree and passes shared data to its descendants. Use <code>useContext </code>after that, the component will subscribe to the Context. Once the value passed by Provider changes, all components using this Context will be re-rendered.</p>
+<p>Simplify the process:</p>
+<ol>
+<li>by<code>React.createContext(defaultValue) </code>create the Context object.</li>
+<li>Use <code>&lt;Context.Provider value=&#123;...&#125;&gt;</code>wrap the component tree and pass in the shared data.</li>
+<li>Called in a child component <code>const contextValue = useContext(Context) </code>gets the context value.</li>
+</ol>
+<hr>
+<h2 id="Key-Points-of-Reasonable-Use-of-useContext"><a href="#Key-Points-of-Reasonable-Use-of-useContext" class="headerlink" title="Key Points of Reasonable Use of useContext"></a>Key Points of Reasonable Use of useContext</h2><h3 id="1-Use-only-on-states-that-need-to-be-shared"><a href="#1-Use-only-on-states-that-need-to-be-shared" class="headerlink" title="1. Use only on states that need to be shared"></a>1. Use only on states that need to be shared</h3><p><code>useContext </code>ideal for managing state that is passed globally or across multiple layers, such as subject, user authentication information, language settings, and more. For local or single-layer data delivery, it is recommended to still use props to reduce the risk of unnecessary re-rendering.</p>
+<h3 id="2-Avoid-using-objects-that-are-too-large-or-change-frequently-as-Context-values"><a href="#2-Avoid-using-objects-that-are-too-large-or-change-frequently-as-Context-values" class="headerlink" title="2. Avoid using objects that are too large or change frequently as Context values."></a>2. Avoid using objects that are too large or change frequently as Context values.</h3><p>A change in the value of a Context causes all components that subscribe to that Context to be re-rendered. If the passed-in object is large or changes frequently, it can cause a performance bottleneck. It is recommended to split the Context or localize the state.</p>
+<p>Example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">ThemeContext</span> = <span class="title class_">React</span>.<span class="title function_">createContext</span>(&#123; <span class="attr">theme</span>: <span class="string">&quot;light&quot;</span> &#125;);</span><br><span class="line"><span class="comment">// 将主题信息单独作为 Context，避免与其他状态混合</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-Use-memoization-to-cache-Context-values"><a href="#3-Use-memoization-to-cache-Context-values" class="headerlink" title="3. Use memoization to cache Context values"></a>3. Use memoization to cache Context values</h3><p>avoid creating a new Context value object every time you render. By <code>useMemo</code>The cache ensures that it is updated only when the dependency changes.</p>
+<p>Example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> themeValue = <span class="title class_">React</span>.<span class="title function_">useMemo</span>(<span class="function">() =&gt;</span> (&#123; theme, toggleTheme &#125;), [theme]);</span><br><span class="line"><span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">ThemeContext.Provider</span> <span class="attr">value</span>=<span class="string">&#123;themeValue&#125;</span>&gt;</span>&#123;children&#125;<span class="tag">&lt;/<span class="name">ThemeContext.Provider</span>&gt;</span></span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="avoid-using-a-single-Context-in-a-large-component-tree"><a href="#avoid-using-a-single-Context-in-a-large-component-tree" class="headerlink" title="avoid using a single Context in a large component tree"></a>avoid using a single Context in a large component tree</h3><p>subdivide the Context into multiple small contexts and maintain them separately for different needs. This reduces repetitive rendering of unrelated components.</p>
+<hr>
+<h2 id="Performance-Optimization-Tips"><a href="#Performance-Optimization-Tips" class="headerlink" title="Performance Optimization Tips"></a>Performance Optimization Tips</h2><p>the Context mechanism of React is implemented based on reference comparison, only when Provider’s <code>value </code>subscribers will only be updated when there is a change. Common optimization methods include:</p>
+<ul>
+<li>split the Context to reduce the subscription scope.</li>
+<li>Use <code>React.memo </code>or <code>useMemo </code>cache components and Context values.</li>
+<li>Place infrequently changing Context values separately to avoid frequent updates.</li>
+<li>Use a selector library (such <code>use-context-selector </code>) for finer-grained subscriptions.</li>
+</ul>
+<hr>
+<h2 id="Code-Sample"><a href="#Code-Sample" class="headerlink" title="Code Sample"></a>Code Sample</h2><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span>, &#123; createContext, useState, useContext, useMemo &#125; <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">ThemeContext</span> = <span class="title function_">createContext</span>();</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">ThemeProvider</span>(<span class="params">&#123; children &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [theme, setTheme] = <span class="title function_">useState</span>(<span class="string">&quot;light&quot;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">toggleTheme</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="title function_">setTheme</span>(<span class="function">(<span class="params">prev</span>) =&gt;</span> (prev === <span class="string">&quot;light&quot;</span> ? <span class="string">&quot;dark&quot;</span> : <span class="string">&quot;light&quot;</span>));</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// useMemo 缓存 Context 值，避免不必要的更新</span></span><br><span class="line">  <span class="keyword">const</span> value = <span class="title function_">useMemo</span>(<span class="function">() =&gt;</span> (&#123; theme, toggleTheme &#125;), [theme]);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">ThemeContext.Provider</span> <span class="attr">value</span>=<span class="string">&#123;value&#125;</span>&gt;</span>&#123;children&#125;<span class="tag">&lt;/<span class="name">ThemeContext.Provider</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">ThemedButton</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; theme, toggleTheme &#125; = <span class="title function_">useContext</span>(<span class="title class_">ThemeContext</span>);</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">style</span>=<span class="string">&#123;&#123;</span> <span class="attr">background:</span> <span class="attr">theme</span> === <span class="string">&quot;light&quot;</span> ? &quot;#<span class="attr">fff</span>&quot; <span class="attr">:</span> &quot;#<span class="attr">333</span>&quot;, <span class="attr">color:</span> <span class="attr">theme</span> === <span class="string">&quot;light&quot;</span> ? &quot;#<span class="attr">000</span>&quot; <span class="attr">:</span> &quot;#<span class="attr">fff</span>&quot; &#125;&#125; <span class="attr">onClick</span>=<span class="string">&#123;toggleTheme&#125;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      切换主题</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">App</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">ThemeProvider</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">ThemedButton</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">ThemeProvider</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p><code>useContext </code>React provides an effective means to share state across components and is suitable for global or Cross-layer data transfer. Reasonable Use <code>useContext</code>The key is to control the Context granularity, avoid frequently changing objects as Context values, use caching mechanisms to optimize performance, and combine local state and component memoization to reduce unnecessary rendering. Mastering these principles can make your React application more efficient and easier to maintain.</p>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p>react. <code>useContext </code>used to share data in the component tree to avoid multiple layers of props. When used reasonably, the Context should be designed as an independent module with moderate granularity to avoid putting large or frequently changing objects into the Context to prevent large-scale component re-rendering. Binding <code>useMemo </code>cache Context values to avoid unnecessary updates due to reference changes. At the same time, cooperate <code>React.memo </code>optimize subcomponents to ensure performance.</p>
+<p><code>useContext </code>suitable for global state or data passed across multiple layers, while local state still recommend use props or local state for finer-grained rendering control.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
