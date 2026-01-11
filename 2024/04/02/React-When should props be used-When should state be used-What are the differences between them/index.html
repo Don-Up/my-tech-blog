@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="When should props be used-When should state be used-What are the differences between themForewordin React development, props and state are the two cor"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="When should props be used-When should state be used-What are the differences between them"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="When should props be used-When should state be used-What are the differences between themForewordin React development, props and state are the two cor"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>When should props be used-When should state be used-What are the differences between them - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>When should props be used-When should state be used-What are the differences between them</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-04-02
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="When-should-props-be-used-When-should-state-be-used-What-are-the-differences-between-them"><a href="#When-should-props-be-used-When-should-state-be-used-What-are-the-differences-between-them" class="headerlink" title="When should props be used-When should state be used-What are the differences between them"></a>When should props be used-When should state be used-What are the differences between them</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in React development, <code>props </code>and <code>state </code>are the two core concepts for building components. They are all used to manage the data and views of the component, but the responsibilities and usage scenarios are fundamentally different. Correct understanding of when to use <code>props </code>when to use <code>state </code>and the differences between them are the basis for writing robust, maintainable React components. This article will explain the system <code>props </code>and <code>state </code>the definitions, uses, and distinctions of help developers better master these two important tools.</p>
+<hr>
+<h2 id="First-the-definition-and-use-of-props"><a href="#First-the-definition-and-use-of-props" class="headerlink" title="First, the definition and use of props."></a>First, the definition and use of props.</h2><p><code>props </code>it is the data that is passed from outside the component and is passed to the child component by the parent component through properties. It is read-only and the component itself should not be modified <code>props </code>it should be treated as an unchanging source of data.</p>
+<p>Main features and uses:</p>
+<ul>
+<li>passed by the parent component and cannot be modified directly inside the component</li>
+<li>used for inter-component communication, passing data and callback functions</li>
+<li>for reusable and flexible configuration of components</li>
+<li>preserve the pure functional nature of the component and improve predictability</li>
+</ul>
+<p>Example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Greeting</span>(<span class="params">props</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, &#123;props.name&#125;!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&lt;<span class="title class_">Greeting</span> name=<span class="string">&quot;Alice&quot;</span> /&gt;</span><br></pre></td></tr></table></figure>
+
+<p>here, <code>name </code>is passed by the parent component to <code>Greeting </code>of <code>props </code>, <code>Greeting </code>the UI is rendered using this data.</p>
+<hr>
+<h2 id="II-Definition-and-use-of-state"><a href="#II-Definition-and-use-of-state" class="headerlink" title="II. Definition and use of state"></a>II. Definition and use of state</h2><p><code>state </code>is variable data managed internally by the component itself, which is modified by <code>state </code>to trigger re-rendering and realize dynamic changes of UI.</p>
+<p>Main features and uses:</p>
+<ul>
+<li>maintained and modified by the component itself</li>
+<li>used to save the internal state of the component, such as user input, UI switching, data loading results, etc.</li>
+<li>By calling <code>setState </code>(Class component) or <code>useState </code>(Function Component) Modifying</li>
+<li>the modification will trigger the component to re-render and update the view.</li>
+</ul>
+<p>Example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Counter</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [count, setCount] = <span class="title class_">React</span>.<span class="title function_">useState</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>计数：&#123;count&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> setCount(count + 1)&#125;&gt;增加<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>count </code>is the state of the component itself, modified when the button is clicked <code>count </code>the UI will be updated accordingly.</p>
+<hr>
+<h2 id="The-difference-between-props-and-state"><a href="#The-difference-between-props-and-state" class="headerlink" title="The difference between props and state"></a>The difference between props and state</h2><table>
+<thead>
+<tr>
+<th>dimension</th>
+<th>props</th>
+<th>state</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>data source</td>
+<td>parent Component Incoming</td>
+<td>component internal initialization</td>
+</tr>
+<tr>
+<td>can be modified</td>
+<td>not modifiable (read-only)</td>
+<td>can be modified</td>
+</tr>
+<tr>
+<td>use</td>
+<td>transfer data between components, configure components</td>
+<td>component internal dynamic data, reflecting state changes</td>
+</tr>
+<tr>
+<td>trigger Rendering</td>
+<td>the new props passed in by the parent component triggers the update of the child component.</td>
+<td>Modifying the state triggers the current component to re-render</td>
+</tr>
+<tr>
+<td>life Cycle</td>
+<td>controlled by parent component</td>
+<td>controlled by the component itself</td>
+</tr>
+<tr>
+<td>scope</td>
+<td>cross Component (Parent to Child)</td>
+<td>local component internal</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="four-when-to-use-props-when-to-use-state"><a href="#four-when-to-use-props-when-to-use-state" class="headerlink" title="four, when to use props, when to use state?"></a>four, when to use props, when to use state?</h2><p>Use <code>props </code>typical scenario:</p>
+<ul>
+<li>parent component wants to pass data or callback function to child component</li>
+<li>components need to be exposed to the interface to support configuration or customization.</li>
+<li>Reuse and combination of components needed</li>
+</ul>
+<p>Use <code>state </code>typical scenario:</p>
+<ul>
+<li>user interaction data needs to be saved inside the component, such as input box content, check status, etc.</li>
+<li>Asynchronous data load results need to be handled within the component</li>
+<li>need to respond to user actions to update the interface status</li>
+</ul>
+<hr>
+<h2 id="v-Comparison-of-Code-Examples"><a href="#v-Comparison-of-Code-Examples" class="headerlink" title="v. Comparison of Code Examples"></a>v. Comparison of Code Examples</h2><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用 props 控制组件</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Button</span>(<span class="params">props</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;props.onClick&#125;</span>&gt;</span>&#123;props.label&#125;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 state 管理组件内部状态</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Toggle</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [isOn, setIsOn] = <span class="title class_">React</span>.<span class="title function_">useState</span>(<span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> setIsOn(!isOn)&#125;&gt;</span></span><br><span class="line"><span class="language-xml">      &#123;isOn ? &quot;开&quot; : &quot;关&quot;&#125;</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>here. <code>Button </code>receive via props <code>label </code>and event callbacks for flexible configuration; <code>Toggle </code>the switch state is managed internally through state.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p><code>props </code>and <code>state </code>are the two main mechanisms for managing data in React. <code>props </code>used for inter-component transfer and configuration, is read-only; <code>state </code>used for component internal dynamic data management that can modify and trigger view updates. Mastering their differences and timing helps build React applications that are clear, flexible, and perform well.</p>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p><code>props</code>It is the data passed from the parent component to the child component and cannot be modified within the component. It is mainly used for data transfer and configuration between components. <code>state </code>is the state data maintained by the component itself, which can be obtained through <code>setState </code>or <code>useState </code>modifications to reflect dynamic changes in components. <code>props </code>make components reusable and customizable, <code>state </code>used to manage local interaction states. The biggest difference between the two is the source and variability of the data. Reasonable differentiation and use <code>props </code>with <code>state </code>is the basis of the React component design.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

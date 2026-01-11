@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What are the scenarios of component communication and how are they implementedForewordin front-end development, components are the basic units that bu"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What are the scenarios of component communication and how are they implemented"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What are the scenarios of component communication and how are they implementedForewordin front-end development, components are the basic units that bu"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What are the scenarios of component communication and how are they implemented - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What are the scenarios of component communication and how are they implemented</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-04-18
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-are-the-scenarios-of-component-communication-and-how-are-they-implemented"><a href="#What-are-the-scenarios-of-component-communication-and-how-are-they-implemented" class="headerlink" title="What are the scenarios of component communication and how are they implemented"></a>What are the scenarios of component communication and how are they implemented</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in front-end development, components are the basic units that build the user interface. As the complexity of applications increases, communication between components becomes a core issue. As a mainstream component-based framework, React provides a variety of component communication methods, which are suitable for different scenarios and requirements. Understanding the various scenarios of component communication and their implementation methods can help developers design a more reasonable and maintainable application architecture.</p>
+<hr>
+<h2 id="Typical-Scenarios-for-Component-Communication"><a href="#Typical-Scenarios-for-Component-Communication" class="headerlink" title="Typical Scenarios for Component Communication"></a>Typical Scenarios for Component Communication</h2><p>component communication is mainly divided into the following typical scenarios:</p>
+<p>parent-Child Component Communication brother Component Communication communicating across hierarchical components global state sharing non-parent-child relationship component communication</p>
+<hr>
+<h2 id="the-implementation-of-component-communication-is-detailed"><a href="#the-implementation-of-component-communication-is-detailed" class="headerlink" title="the implementation of component communication is detailed."></a>the implementation of component communication is detailed.</h2><h3 id="1-Parent-child-component-communication"><a href="#1-Parent-child-component-communication" class="headerlink" title="1. Parent-child component communication"></a>1. Parent-child component communication</h3><p>this is the most common and simplest form of communication. The parent component passes data to the child component through props, and the child component sends events or data to the parent component through callback functions.</p>
+<p>Code example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Parent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [count, setCount] = <span class="title class_">React</span>.<span class="title function_">useState</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">handleIncrement</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="title function_">setCount</span>(count + <span class="number">1</span>);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">Child</span> <span class="attr">count</span>=<span class="string">&#123;count&#125;</span> <span class="attr">onIncrement</span>=<span class="string">&#123;handleIncrement&#125;</span> /&gt;</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Child</span>(<span class="params">&#123; count, onIncrement &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>Count: &#123;count&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;onIncrement&#125;</span>&gt;</span>Increment<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>here, the parent component will state <code>count </code>and update functions <code>handleIncrement </code>passed to the child component, which is passed by calling <code>onIncrement </code>notifies the parent component.</p>
+<hr>
+<h3 id="2-Brother-Component-Communication"><a href="#2-Brother-Component-Communication" class="headerlink" title="2. Brother Component Communication"></a>2. Brother Component Communication</h3><p>Sibling components do not have a direct parent-child relationship and usually need to communicate with a common parent component.</p>
+<p>The method is to manage state in the common parent component, passing state and update functions to sibling components.</p>
+<p>Example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Parent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [message, setMessage] = <span class="title class_">React</span>.<span class="title function_">useState</span>(<span class="string">&#x27;&#x27;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Sibling1</span> <span class="attr">setMessage</span>=<span class="string">&#123;setMessage&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Sibling2</span> <span class="attr">message</span>=<span class="string">&#123;message&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Sibling1</span>(<span class="params">&#123; setMessage &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> setMessage(&#x27;Hello from Sibling1&#x27;)&#125;&gt;Send Message<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Sibling2</span>(<span class="params">&#123; message &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Received: &#123;message&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>here, <code>Sibling1 </code>by calling the parent component <code>setMessage </code>function to update the state, <code>Sibling2 </code>the status is obtained through props.</p>
+<hr>
+<h3 id="3-Communicating-across-hierarchical-components"><a href="#3-Communicating-across-hierarchical-components" class="headerlink" title="3. Communicating across hierarchical components"></a>3. Communicating across hierarchical components</h3><p>when components are at a deep level or at a long distance, layer-by-layer delivery of props becomes cumbersome. In this case, you can consider using React Context or other state management tools.</p>
+<p><strong>React Context</strong></p>
+<p>Context provides a way for multiple layers of components to share data without passing props layer by layer.</p>
+<p>Example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">ThemeContext</span> = <span class="title class_">React</span>.<span class="title function_">createContext</span>(<span class="string">&#x27;light&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Parent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">ThemeContext.Provider</span> <span class="attr">value</span>=<span class="string">&quot;dark&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">DeepChild</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">ThemeContext.Provider</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">DeepChild</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> theme = <span class="title class_">React</span>.<span class="title function_">useContext</span>(<span class="title class_">ThemeContext</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Theme is &#123;theme&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Context is suitable for sharing global data such as theme and language.</p>
+<hr>
+<h3 id="4-Global-State-Management"><a href="#4-Global-State-Management" class="headerlink" title="4. Global State Management"></a>4. Global State Management</h3><p>for large applications, the data and state shared between components is very complex, and the Context provided by React may be inflexible or cause performance problems. At this time, you can use the status management library such as Redux, MobX, and Recoil.</p>
+<p>These libraries centrally manage state through a unified state container, and components communicate by subscribing to state changes.</p>
+<hr>
+<h3 id="5-Non-parent-child-relationship-component-communication-event-bus"><a href="#5-Non-parent-child-relationship-component-communication-event-bus" class="headerlink" title="5. Non-parent-child relationship component communication (event bus)"></a>5. Non-parent-child relationship component communication (event bus)</h3><p>some components have no obvious parent-child or upper-lower relationship, or can use event bus mode when communicating across pages (such as using a third-party library EventEmitter or a Pub&#x2F;Sub-based scheme).</p>
+<p>Example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> mitt <span class="keyword">from</span> <span class="string">&#x27;mitt&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> emitter = <span class="title function_">mitt</span>();</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">ComponentA</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="title class_">React</span>.<span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    emitter.<span class="title function_">emit</span>(<span class="string">&#x27;event1&#x27;</span>, <span class="string">&#x27;data from A&#x27;</span>);</span><br><span class="line">  &#125;, []);</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Component A<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">ComponentB</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="title class_">React</span>.<span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    emitter.<span class="title function_">on</span>(<span class="string">&#x27;event1&#x27;</span>, <span class="function"><span class="params">data</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Component B received:&#x27;</span>, data);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;, []);</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Component B<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>event bus is suitable for decoupling communication between complex components.</p>
+<hr>
+<h2 id="Table-summarizes-how-components-communicate"><a href="#Table-summarizes-how-components-communicate" class="headerlink" title="Table summarizes how components communicate"></a>Table summarizes how components communicate</h2><table>
+<thead>
+<tr>
+<th>communication Scenarios</th>
+<th>way</th>
+<th>advantages</th>
+<th>disadvantages</th>
+<th>applicable Scenarios</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>father-child communication</td>
+<td>props + callback function</td>
+<td>simple, intuitive</td>
+<td>for parent-child relationships only</td>
+<td>most simple parent-child component communication</td>
+</tr>
+<tr>
+<td>brother Communication</td>
+<td>shared Parent Component State</td>
+<td>clear structure, centralized state management</td>
+<td>delivering trouble at deeper levels</td>
+<td>when interaction between sibling components is required</td>
+</tr>
+<tr>
+<td>cross-level communication</td>
+<td>React Context</td>
+<td>no layer-by-layer delivery, suitable for global sharing</td>
+<td>frequent updates can cause performance problems</td>
+<td>global status such as subject, language, user information</td>
+</tr>
+<tr>
+<td>global State Management</td>
+<td>Redux, MobX, etc.</td>
+<td>State centralized, powerful, easy to maintain</td>
+<td>higher Cost of Learning, increased complexity</td>
+<td>global State Management for Complex Applications</td>
+</tr>
+<tr>
+<td>non-parent-child relationship component communication</td>
+<td>event Bus (Pub&#x2F;Sub)</td>
+<td>component decoupling, flexible</td>
+<td>may lead to debugging difficulties and complex event tracing</td>
+<td>loosely coupled components, cross-page communication</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>component communication is an inevitable problem in React application design, and different scenarios are suitable for different communication schemes. Parent-child component communication is most direct with props and callback functions. Brother components share through parent component state. Cross-level communication recommend use Context. Large applications should rely on state management libraries such as Redux. Unrelated components can be decoupled by event bus. Understanding the advantages, disadvantages and application scenarios of various communication mechanisms allows us to design and maintain complex applications more efficiently.</p>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p>component communication mainly includes parent-child communication, brother communication, cross-level communication and global state management according to different relationships. The parent-child communication is implemented through props and callback functions, and the sibling component is implemented by promoting the state to the common parent component. The React Context is suitable for cross-level communication, while the global communication usually uses the state management library such as Redux and MobX. In addition, non-parent-child relationship components can be decoupled using an event bus. Choosing the appropriate communication method should be judged according to the specific scenario, component relationship and application scale.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
