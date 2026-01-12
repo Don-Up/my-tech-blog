@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Let’s simply implement the core source code of ReduxForewordRedux is one of the most popular state management libraries in JavaScript applications and"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Let&#39;s simply implement the core source code of Redux"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Let’s simply implement the core source code of ReduxForewordRedux is one of the most popular state management libraries in JavaScript applications and"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Let&#39;s simply implement the core source code of Redux - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Let's simply implement the core source code of Redux</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-07-03
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Let’s-simply-implement-the-core-source-code-of-Redux"><a href="#Let’s-simply-implement-the-core-source-code-of-Redux" class="headerlink" title="Let’s simply implement the core source code of Redux"></a>Let’s simply implement the core source code of Redux</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>Redux is one of the most popular state management libraries in JavaScript applications and is widely used in frameworks such as React. Although the API of Redux itself is simple and intuitive, its internal implementation is not complicated, and the core principle can be simulated with very little code. Understanding The Redux core source code not only helps you use it better, but also deepens your understanding of state management and the reactive programming model.</p>
+<p>This article will start from scratch and implement the core functions of Redux, including <code>createStore </code>, <code>dispatch </code>, <code>subscribe </code>and other basic functions, combined with the code to analyze the working mechanism behind it, and strive to be informative and clear in structure.</p>
+<hr>
+<h2 id="Core-features-of-Redux"><a href="#Core-features-of-Redux" class="headerlink" title="Core features of Redux"></a>Core features of Redux</h2><p>the core functions of Redux mainly include:</p>
+<ol>
+<li>create a store(createStore)</li>
+<li>dispatch action(dispatch)</li>
+<li>get current state (getState)</li>
+<li>subscribe and unsubscribe listeners (subscribe)</li>
+</ol>
+<p>we will implement these core competencies one by one.</p>
+<hr>
+<h2 id="Redux-core-source-code"><a href="#Redux-core-source-code" class="headerlink" title="Redux core source code"></a>Redux core source code</h2><h3 id="step-1-Create-a-createStore"><a href="#step-1-Create-a-createStore" class="headerlink" title="step 1: Create a createStore"></a>step 1: Create a createStore</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">function createStore(reducer, preloadedState) &#123;</span><br><span class="line">  let currentState = preloadedState;</span><br><span class="line">  let currentListeners = [];</span><br><span class="line"></span><br><span class="line">  function getState() &#123;</span><br><span class="line">    return currentState;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  function dispatch(action) &#123;</span><br><span class="line">    currentState = reducer(currentState, action);</span><br><span class="line">    currentListeners.forEach(listener =&gt; listener());</span><br><span class="line">    return action;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  function subscribe(listener) &#123;</span><br><span class="line">    currentListeners.push(listener);</span><br><span class="line">    return function unsubscribe() &#123;</span><br><span class="line">      const index = currentListeners.indexOf(listener);</span><br><span class="line">      if (index &gt; -1) &#123;</span><br><span class="line">        currentListeners.splice(index, 1);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  // 初始化一次 state</span><br><span class="line">  dispatch(&#123; type: &#x27;@@redux/INIT&#x27; &#125;);</span><br><span class="line"></span><br><span class="line">  return &#123;</span><br><span class="line">    getState,</span><br><span class="line">    dispatch,</span><br><span class="line">    subscribe</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>in this implementation, we did the following:</p>
+<ul>
+<li>Storage using closures <code>currentState </code>and <code>currentListeners </code></li>
+<li><code>getState() </code>allow external access to the latest status</li>
+<li><code>dispatch(action) </code>will call the reducer to update the state and notify all listeners</li>
+<li><code>subscribe(listener) </code>adds a listener and returns an unsubscribe function for removal</li>
+<li>when initializing through <code>dispatch(&#123; type: &#39;@@redux/INIT&#39; &#125;) </code>make sure the initial state is available</li>
+</ul>
+<hr>
+<h2 id="test-cases-and-examples"><a href="#test-cases-and-examples" class="headerlink" title="test cases and examples"></a>test cases and examples</h2><p>let’s build a simple reducer:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function counterReducer(state = &#123; count: 0 &#125;, action) &#123;</span><br><span class="line">  switch (action.type) &#123;</span><br><span class="line">    case &#x27;increment&#x27;:</span><br><span class="line">      return &#123; count: state.count + 1 &#125;;</span><br><span class="line">    case &#x27;decrement&#x27;:</span><br><span class="line">      return &#123; count: state.count - 1 &#125;;</span><br><span class="line">    default:</span><br><span class="line">      return state;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>using our Redux implementation:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">const store = createStore(counterReducer);</span><br><span class="line"></span><br><span class="line">const unsubscribe = store.subscribe(() =&gt; &#123;</span><br><span class="line">  console.log(&#x27;State changed:&#x27;, store.getState());</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">store.dispatch(&#123; type: &#x27;increment&#x27; &#125;); // State changed: &#123; count: 1 &#125;</span><br><span class="line">store.dispatch(&#123; type: &#x27;increment&#x27; &#125;); // State changed: &#123; count: 2 &#125;</span><br><span class="line">store.dispatch(&#123; type: &#x27;decrement&#x27; &#125;); // State changed: &#123; count: 1 &#125;</span><br><span class="line"></span><br><span class="line">unsubscribe();</span><br><span class="line">store.dispatch(&#123; type: &#x27;increment&#x27; &#125;); // 没有日志输出</span><br></pre></td></tr></table></figure>
+
+<p>this shows that our <code>subscribe </code>and <code>unsubscribe </code>the function is working properly.</p>
+<hr>
+<h2 id="Advanced-Support-for-middleware-and-enhancers"><a href="#Advanced-Support-for-middleware-and-enhancers" class="headerlink" title="Advanced: Support for middleware and enhancers"></a>Advanced: Support for middleware and enhancers</h2><p>although our core code can already meet the basic requirements of Redux, Redux itself also supports middleware and enhancers, such<code>applyMiddleware </code>. If we need to expand, we can <code>dispatch </code>it is separated into a middleware chain, but this part is advanced content and can be further expanded in the future.</p>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p><strong>question: How is Redux implemented?</strong></p>
+<p>The main points of the answer are as follows:</p>
+<p>the core implementation of Redux relies on a <code>createStore </code>function, which is responsible for creating and maintaining the state. It saves state and listeners through closures, exposing three core APIs:</p>
+<ul>
+<li><code>getState() </code>return to current state</li>
+<li><code>dispatch(action) </code>the reducer is called to update the status and notify all subscribers</li>
+<li><code>subscribe(listener) </code>add subscribers and return unsubscribe function</li>
+</ul>
+<p>all listeners are called synchronously during dispatch to implement a simple observer mode. The design idea of Redux is very pure. state is read-only. All state changes must go through action, and reducer determines how the state changes.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>As a proven state management library in the front-end field, Redux’s core implementation is actually very simple and clear: maintain a variable state and a set of listeners, and build a state update stream through reducer and dispatch.</p>
+<p>By manually implementing the core source code of Redux, we can have a deeper understanding of its internal mechanisms, which can be better applied or extended in real projects. Understanding the concepts behind its design, such as immutability, a single data source, and a centralized update mechanism, is also beneficial for front-end architecture design. Whether it is day-to-day development or systematic learning, reading and replying the source code of Redux is a valuable step.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

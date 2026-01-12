@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What are the differences between mobx and reduxForewordin modern React application development, state management is the core of building complex appli"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What are the differences between mobx and redux"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What are the differences between mobx and reduxForewordin modern React application development, state management is the core of building complex appli"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What are the differences between mobx and redux - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What are the differences between mobx and redux</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-06-26
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-are-the-differences-between-mobx-and-redux"><a href="#What-are-the-differences-between-mobx-and-redux" class="headerlink" title="What are the differences between mobx and redux"></a>What are the differences between mobx and redux</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in modern React application development, state management is the core of building complex applications. Redux and MobX are two of the most popular state management libraries, and they differ significantly in terms of design philosophy, usage, and performance optimization. Understanding the difference between the two will help developers choose the right solution according to project requirements and improve development efficiency and application performance.</p>
+<p>This article will systematically sort out the differences between MobX and Redux from the perspectives of design concepts, core principles, usage methods, advantages and disadvantages, and combine examples and tables to make detailed explanations.</p>
+<hr>
+<h2 id="Design-philosophy-and-core-principles"><a href="#Design-philosophy-and-core-principles" class="headerlink" title="Design philosophy and core principles"></a>Design philosophy and core principles</h2><h3 id="Redux"><a href="#Redux" class="headerlink" title="Redux"></a>Redux</h3><p>Redux follows <strong>functional Programming</strong> and <strong>immutable data</strong> principles, emphasizing that state is read-only, changing state through pure functions (reducers), supporting time travel debugging and predictable state changes. The state of Redux is stored in a global <strong>single state tree</strong> (single state tree).</p>
+<p>The core processes are: <strong>Action -&gt; Reducer -&gt; New State</strong> all state updates must be sent through the Action and a new state object generated by the Reducer.</p>
+<h3 id="MobX"><a href="#MobX" class="headerlink" title="MobX"></a>MobX</h3><p>MobX is based <strong>responsive Programming</strong> , by using<strong>observable data</strong> , Automatically notify dependent components to re-render when data changes. It adopts <strong>variable State</strong> , which allows direct modification of data objects, and the underlying layer uses the observer pattern to achieve automatic synchronization of state and view.</p>
+<p>The core mechanism is <strong>automatic tracking dependency</strong> , any reference to observable state will automatically subscribe to changes.</p>
+<hr>
+<h2 id="Comparison-of-ways-of-use"><a href="#Comparison-of-ways-of-use" class="headerlink" title="Comparison of ways of use"></a>Comparison of ways of use</h2><table>
+<thead>
+<tr>
+<th>aspects</th>
+<th>Redux</th>
+<th>MobX</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>state Management Mode</td>
+<td>single global state tree, managing state through pure functions (reducers)</td>
+<td>multiple observable state objects, modify state directly</td>
+</tr>
+<tr>
+<td>whether data is variable</td>
+<td>immutable, new state object must be returned</td>
+<td>variable, directly modify state data</td>
+</tr>
+<tr>
+<td>status Update Process</td>
+<td>dispatch Action -&gt; Reducer calculate new status-&gt; Update</td>
+<td>modify observable Status-&gt; Auto Notify Dependency Update</td>
+</tr>
+<tr>
+<td>code Complexity</td>
+<td>more Action, Reducer, and Store codes need to be written.</td>
+<td>The code is simple, you can directly manipulate the state object.</td>
+</tr>
+<tr>
+<td>Applicable Scenarios</td>
+<td>Suitable for large and complex projects, strict management of state changes</td>
+<td>suitable for small and medium-sized projects or rapid development, flexible state management</td>
+</tr>
+<tr>
+<td>learning curve</td>
+<td>steeper, need to understand functional programming and immutable data concepts</td>
+<td>gentler, more intuitive object-oriented programming</td>
+</tr>
+<tr>
+<td>dependency Tracking</td>
+<td>explicit management, need to connect components and states</td>
+<td>automatically track dependencies and automatically update related components</td>
+</tr>
+<tr>
+<td>ecology</td>
+<td>rich, powerful with Middleware (Thunk, Saga), DevTools</td>
+<td>small ecology, but active community, easy to use</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="code-sample-comparison"><a href="#code-sample-comparison" class="headerlink" title="code sample comparison"></a>code sample comparison</h2><h3 id="Redux-example"><a href="#Redux-example" class="headerlink" title="Redux example"></a>Redux example</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">// action.js</span><br><span class="line">export const increment = () =&gt; (&#123; type: &#x27;INCREMENT&#x27; &#125;)</span><br><span class="line"></span><br><span class="line">// reducer.js</span><br><span class="line">const initialState = &#123; count: 0 &#125;</span><br><span class="line">export default function counter(state = initialState, action) &#123;</span><br><span class="line">  switch(action.type) &#123;</span><br><span class="line">    case &#x27;INCREMENT&#x27;:</span><br><span class="line">      return &#123; ...state, count: state.count + 1 &#125;</span><br><span class="line">    default:</span><br><span class="line">      return state</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// store.js</span><br><span class="line">import &#123; createStore &#125; from &#x27;redux&#x27;</span><br><span class="line">import counter from &#x27;./reducer&#x27;</span><br><span class="line">const store = createStore(counter)</span><br><span class="line"></span><br><span class="line">// React 组件中使用</span><br><span class="line">import &#123; useSelector, useDispatch &#125; from &#x27;react-redux&#x27;</span><br><span class="line">function Counter() &#123;</span><br><span class="line">  const count = useSelector(state =&gt; state.count)</span><br><span class="line">  const dispatch = useDispatch()</span><br><span class="line">  return (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;span&gt;&#123;count&#125;&lt;/span&gt;</span><br><span class="line">      &lt;button onClick=&#123;() =&gt; dispatch(increment())&#125;&gt;+&lt;/button&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="MobX-example"><a href="#MobX-example" class="headerlink" title="MobX example"></a>MobX example</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">import &#123; makeAutoObservable &#125; from &#x27;mobx&#x27;</span><br><span class="line">import &#123; observer &#125; from &#x27;mobx-react-lite&#x27;</span><br><span class="line"></span><br><span class="line">class CounterStore &#123;</span><br><span class="line">  count = 0</span><br><span class="line">  constructor() &#123;</span><br><span class="line">    makeAutoObservable(this)</span><br><span class="line">  &#125;</span><br><span class="line">  increment() &#123;</span><br><span class="line">    this.count += 1</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const counterStore = new CounterStore()</span><br><span class="line"></span><br><span class="line">const Counter = observer(() =&gt; (</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;span&gt;&#123;counterStore.count&#125;&lt;/span&gt;</span><br><span class="line">    &lt;button onClick=&#123;() =&gt; counterStore.increment()&#125;&gt;+&lt;/button&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">))</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="comparison-of-advantages-and-disadvantages"><a href="#comparison-of-advantages-and-disadvantages" class="headerlink" title="comparison of advantages and disadvantages"></a>comparison of advantages and disadvantages</h2><table>
+<thead>
+<tr>
+<th>characteristics</th>
+<th>Redux</th>
+<th>MobX</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>transparent state management</td>
+<td>status changes are fully managed by the Reducer, and status updates are traceable</td>
+<td>the state is variable and implicit, and some operations may be difficult to track.</td>
+</tr>
+<tr>
+<td>Code amount</td>
+<td>more, more boilerplate code</td>
+<td>concise, fast development</td>
+</tr>
+<tr>
+<td>performance</td>
+<td>need manual optimization to avoid unnecessary rendering</td>
+<td>automatic tracking dependency, excellent performance</td>
+</tr>
+<tr>
+<td>Testability</td>
+<td>excellent, pure function easy to test</td>
+<td>side effects need extra attention and testing is relatively complex</td>
+</tr>
+<tr>
+<td>learning Difficulty</td>
+<td>need to understand immutable, pure functions and middleware</td>
+<td>easy to use, in line with intuitive thinking</td>
+</tr>
+<tr>
+<td>community ecology</td>
+<td>large community, rich tools and middleware support</td>
+<td>relatively small community, but fast iteration</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>Redux and MobX have their own advantages and disadvantages, and the key to choosing the right state Management Library is project requirements and team preferences. Redux is suitable for large-scale projects that have strict control over state management and require predictable state updates and rich debugging tools. MobX is more suitable for scenarios that pursue development efficiency and want simple code and fast response.</p>
+<p>Understanding the design concepts and working principles of the two systems helps us to better design and maintain the state management architecture of React applications.</p>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p><strong>question: What is the difference between MobX and Redux?</strong></p>
+<p>A: MobX and Redux are both React’s state management schemes, but their design concepts are different. Redux follows the principle of immutable state and pure function, and calculates the new state by dispatching Action and Reducer. The state is stored in a single global tree, which is suitable for large projects and strictly controls state changes. Based on responsive programming and observable data, MobX allows direct state modification, automatic View update through automatic dependency tracking, simpler code, and suitable for rapid development and small and medium-sized projects.</p>
+<p>The advantage of Redux is that state updates are transparent, predictable, and easy to debug. The disadvantage is that the amount of code is large and the learning curve is steep. The advantages of MobX are high development efficiency and automatic performance optimization. The disadvantage is that state changes are implicit and some operations are difficult to track. The choice should be weighed against project complexity and team habits.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

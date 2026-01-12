@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What is the role of the selectorFamily in Recoil-What’s the difference from selectorForewordwhen using React for complex application development, stat"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What is the role of the selectorFamily in Recoil-What&#39;s the difference from selector"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What is the role of the selectorFamily in Recoil-What’s the difference from selectorForewordwhen using React for complex application development, stat"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What is the role of the selectorFamily in Recoil-What&#39;s the difference from selector - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What is the role of the selectorFamily in Recoil-What's the difference from selector</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-03-02
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-is-the-role-of-the-selectorFamily-in-Recoil-What’s-the-difference-from-selector"><a href="#What-is-the-role-of-the-selectorFamily-in-Recoil-What’s-the-difference-from-selector" class="headerlink" title="What is the role of the selectorFamily in Recoil-What’s the difference from selector"></a>What is the role of the selectorFamily in Recoil-What’s the difference from selector</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>when using React for complex application development, state sharing and derived calculations between components often become very cumbersome. Recoil, as a state Management Library launched by Facebook, provides <code>atom </code>and <code>selector </code>two core state units to help developers implement responsive state management. Among them, <code>selector </code>used for multiple <code>atom </code>or other <code>selector </code>the value of is derived. But when we need to dynamically generate different derived states based on parameters, the ordinary <code>selector </code>is not competent. It needs to be used at this time. <code>selectorFamily </code>.</p>
+<p>This article will analyze the Recoil in depth. <code>selectorFamily </code>the role of it, make it clear and <code>selector </code>the difference, combined with examples to show its use and application scenarios, to help you use it flexibly in real projects.</p>
+<hr>
+<h2 id="Review-What-is-the-selector-in-Recoil"><a href="#Review-What-is-the-selector-in-Recoil" class="headerlink" title="Review: What is the selector in Recoil?"></a>Review: What is the selector in Recoil?</h2><p>In the Recoil,<code>selector </code>it is a purely functional state derivation tool that can be calculated based on the values of other atoms or selectors, and is usually used to combine multiple states or process states.</p>
+<p>The basic usage is as follows:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import &#123; atom, selector &#125; from &#x27;recoil&#x27;;</span><br><span class="line"></span><br><span class="line">const userIdState = atom(&#123;</span><br><span class="line">  key: &#x27;userIdState&#x27;,</span><br><span class="line">  default: 1,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">const userDataSelector = selector(&#123;</span><br><span class="line">  key: &#x27;userDataSelector&#x27;,</span><br><span class="line">  get: async (&#123; get &#125;) =&gt; &#123;</span><br><span class="line">    const userId = get(userIdState);</span><br><span class="line">    const response = await fetch(`/api/user/$&#123;userId&#125;`);</span><br><span class="line">    return response.json();</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>in the example above, <code>userDataSelector </code>will be based on <code>userIdState </code>the value of automatically derives the user data and caches the results.</p>
+<hr>
+<h2 id="Why-do-we-need-a-selectorFamily"><a href="#Why-do-we-need-a-selectorFamily" class="headerlink" title="Why do we need a selectorFamily?"></a>Why do we need a selectorFamily?</h2><p>Although <code>selector </code>very powerful, but it has one obvious limitation: <strong>cannot transfer parameters dynamically</strong> . That is, if we want to get different derived states based on different parameters (such as multiple user IDs), use the normal <code>selector </code>this can lead to bloated state structures or code duplication.</p>
+<p>At this time <code>selectorFamily </code>just come in handy. It allows us to dynamically create different selectors in a parametric way, and each selector’s parameters can be cached and responsively tracked separately.</p>
+<hr>
+<h2 id="Syntax-and-Usage-of-selectorFamily"><a href="#Syntax-and-Usage-of-selectorFamily" class="headerlink" title="Syntax and Usage of selectorFamily"></a>Syntax and Usage of selectorFamily</h2><p><code>selectorFamily</code>Is a factory function that returns a getter of a selector, which can generate different versions of the selector by passing parameters.</p>
+<p>Sample code:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import &#123; atom, selectorFamily &#125; from &#x27;recoil&#x27;;</span><br><span class="line"></span><br><span class="line">const userCache = atom(&#123;</span><br><span class="line">  key: &#x27;userCache&#x27;,</span><br><span class="line">  default: &#123;&#125;,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">const userInfoQuery = selectorFamily(&#123;</span><br><span class="line">  key: &#x27;userInfoQuery&#x27;,</span><br><span class="line">  get: (userId) =&gt; async (&#123; get &#125;) =&gt; &#123;</span><br><span class="line">    const response = await fetch(`/api/user/$&#123;userId&#125;`);</span><br><span class="line">    return response.json();</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>the components are used in the following ways:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import &#123; useRecoilValue &#125; from &#x27;recoil&#x27;;</span><br><span class="line"></span><br><span class="line">function UserInfo(&#123; userId &#125;) &#123;</span><br><span class="line">  const userInfo = useRecoilValue(userInfoQuery(userId));</span><br><span class="line">  return &lt;div&gt;&#123;userInfo.name&#125;&lt;/div&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>here we do this by calling <code>userInfoQuery(userId) </code>dynamically create a selector for each user, and each <code>userId </code>the corresponding selectors are independent and cached.</p>
+<hr>
+<h2 id="Comparison-of-selector-vs-selector-family"><a href="#Comparison-of-selector-vs-selector-family" class="headerlink" title="Comparison of selector vs selector family"></a>Comparison of selector vs selector family</h2><table>
+<thead>
+<tr>
+<th>characteristics</th>
+<th>selector</th>
+<th>selectorFamily</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>parameterizable</td>
+<td>no</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>usage</td>
+<td>fixed calculation logic when defining</td>
+<td>dynamically generate derivation logic from parameters</td>
+</tr>
+<tr>
+<td>caching and Responsiveness</td>
+<td>globally unique key, updated only after changes</td>
+<td>each parameter corresponds to a unique key and has an independent cache.</td>
+</tr>
+<tr>
+<td>Applicable Scenarios</td>
+<td>generic State derivation logic</td>
+<td>dynamic computing scenarios for specific IDs, indexes, and filtering conditions</td>
+</tr>
+<tr>
+<td>example</td>
+<td>Global user information calculation</td>
+<td>obtain different user information based on the passed userId.</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="Application-Scenario-Example"><a href="#Application-Scenario-Example" class="headerlink" title="Application Scenario Example"></a>Application Scenario Example</h2><ol>
+<li><strong>query data based on parameters</strong> : As per <code>productId </code>get product details, according <code>userId </code>obtain user information, etc.</li>
+<li><strong>Filter list by criteria</strong> : Filter the list of posts based on tags and paging parameters.</li>
+<li><strong>Cache multi-instance state</strong> : For example, each tab corresponds to a state set, distinguished by tabId.</li>
+</ol>
+<p>If you use <code>selector </code>implementing these features requires either hard-coding multiple selectors or manual management of the cache or state mapping. And <code>selectorFamily </code>can help us solve this problem gracefully.</p>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p>in the recovery <code>selector </code>it is used to derive the state based on other atoms or selectors, but its calculation logic is fixed at the time of definition and cannot be dynamically transferred. To address this limitation, Recoil provides <code>selectorFamily</code>, which is a factory function that can return a unique selector instance based on the parameters passed in. <code>selectorFamily </code>it is suitable for scenarios that require dynamic creation of multiple selectors, such as obtaining different user or product information based on ID, with better flexibility and performance. The core differences are whether parameterization is supported, and differences in caching strategies.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p><code>selectorFamily </code>is a very important advanced feature in Recoil, which is in <code>selector </code>on the basis of the introduction of parametric capabilities, to solve the dynamic derived state pain point. By creating a separate selector for each parameter value, <code>selectorFamily </code>achieve efficient state isolation, caching and dependency tracking.</p>
+<p>Understanding <code>selectorFamily </code>the purpose and difference of can not only improve our mastery of Recoil, but also write more scalable and performance-optimized code structure in actual projects. It is one of the indispensable tools when building large applications.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

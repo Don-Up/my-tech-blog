@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Which parameters are supported by selector in Recoil and how to use themForewordstate derivation is a very common requirement when building React appl"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Which parameters are supported by selector in Recoil and how to use them"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Which parameters are supported by selector in Recoil and how to use themForewordstate derivation is a very common requirement when building React appl"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Which parameters are supported by selector in Recoil and how to use them - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Which parameters are supported by selector in Recoil and how to use them</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-03-10
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Which-parameters-are-supported-by-selector-in-Recoil-and-how-to-use-them"><a href="#Which-parameters-are-supported-by-selector-in-Recoil-and-how-to-use-them" class="headerlink" title="Which parameters are supported by selector in Recoil and how to use them"></a>Which parameters are supported by selector in Recoil and how to use them</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>state derivation is a very common requirement when building React applications. As a modern React State Management Library, Recoil provides <code>atom </code>and <code>selector </code>two core concepts. Among them, <code>selector </code>is a functional tool for calculating derived states. Although <code>selector </code>the basic usage of looks simple, but it actually supports more complex parameter design, especially when defined. <code>get </code>and <code>set </code>function, the use of these parameters is directly related to our ability to manage state flexibly and efficiently.</p>
+<p>This article will parse the Recoil in detail. <code>selector </code>supported parameters and their usage, and combined with practical examples to help developers master <code>selector </code>advanced usage.</p>
+<hr>
+<h2 id="The-structure-and-basic-usage-of-selector"><a href="#The-structure-and-basic-usage-of-selector" class="headerlink" title="The structure and basic usage of selector"></a>The structure and basic usage of selector</h2><p>in the Recoil <code>selector </code>is through <code>selector() </code>the object created by the function has the following basic structure:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">const mySelector = selector(&#123;</span><br><span class="line">  key: &#x27;mySelector&#x27;, // 全局唯一 key</span><br><span class="line">  get: (&#123; get &#125;) =&gt; &#123;</span><br><span class="line">    // 用于读取依赖</span><br><span class="line">    const value = get(someAtom);</span><br><span class="line">    return value * 2;</span><br><span class="line">  &#125;,</span><br><span class="line">  set: (&#123; get, set, reset &#125;, newValue) =&gt; &#123;</span><br><span class="line">    // 可选，定义如何响应外部写入</span><br><span class="line">    set(someAtom, newValue / 2);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>In this structure, <code>get </code>and <code>set </code>both are functions that accept an object as an argument, which contains multiple available tool functions. Let’s analyze one by one.</p>
+<hr>
+<h2 id="Parameters-supported-by-the-get-function"><a href="#Parameters-supported-by-the-get-function" class="headerlink" title="Parameters supported by the get function"></a>Parameters supported by the get function</h2><p><code>get </code>function reads the dependency state of the current selector and returns a new derived value. It accepts an object as a parameter and contains the following fields:</p>
+<h3 id="get"><a href="#get" class="headerlink" title="get"></a>get</h3><p>this is <code>get </code>the core method of the function, which is used to read the value of another atom or selector. It is a lazy read function that triggers dependency tracing when it is actually accessed.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">get(someAtomOrSelector)</span><br></pre></td></tr></table></figure>
+
+<p>Example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const totalCount = selector(&#123;</span><br><span class="line">  key: &#x27;totalCount&#x27;,</span><br><span class="line">  get: (&#123; get &#125;) =&gt; &#123;</span><br><span class="line">    const a = get(countA);</span><br><span class="line">    const b = get(countB);</span><br><span class="line">    return a + b;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>you can pass <code>get </code>combine any number of atoms or selectors.</p>
+<hr>
+<h2 id="set-Function-Supported-Parameters"><a href="#set-Function-Supported-Parameters" class="headerlink" title="set Function Supported Parameters"></a>set Function Supported Parameters</h2><p>when selector is writable, you can add <code>set </code>function. This function also accepts a parameter object and contains the following tools:</p>
+<h3 id="get-1"><a href="#get-1" class="headerlink" title="get"></a>get</h3><p>ditto for reading dependencies.</p>
+<h3 id="set"><a href="#set" class="headerlink" title="set"></a>set</h3><p>used to modify the value of an atom or selector.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set(atomOrSelector, newValue)</span><br></pre></td></tr></table></figure>
+
+<p>Example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set(countA, 10)</span><br></pre></td></tr></table></figure>
+
+<h3 id="reset"><a href="#reset" class="headerlink" title="reset"></a>reset</h3><p>used to reset the atom to its initial state.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reset(atom)</span><br></pre></td></tr></table></figure>
+
+<p>Example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reset(countB)</span><br></pre></td></tr></table></figure>
+
+<p>A complete example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const doubleCount = selector(&#123;</span><br><span class="line">  key: &#x27;doubleCount&#x27;,</span><br><span class="line">  get: (&#123; get &#125;) =&gt; get(countState) * 2,</span><br><span class="line">  set: (&#123; set &#125;, newValue) =&gt; &#123;</span><br><span class="line">    set(countState, newValue / 2);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="tips-and-considerations-for-using-parameters"><a href="#tips-and-considerations-for-using-parameters" class="headerlink" title="tips and considerations for using parameters"></a>tips and considerations for using parameters</h2><h3 id="inert-calculation"><a href="#inert-calculation" class="headerlink" title="inert calculation"></a>inert calculation</h3><p>due <code>get </code>is called lazily, so the dependency is only established when an atom or selector value needs to be accessed. This is important for performance optimization.</p>
+<h3 id="Asynchronous-Support"><a href="#Asynchronous-Support" class="headerlink" title="Asynchronous Support"></a>Asynchronous Support</h3><p><code>get </code>can be <code>async </code>function, which supports asynchronous derived states:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const userData = selector(&#123;</span><br><span class="line">  key: &#x27;userData&#x27;,</span><br><span class="line">  get: async (&#123; get &#125;) =&gt; &#123;</span><br><span class="line">    const id = get(userIdState);</span><br><span class="line">    const response = await fetch(`/api/user/$&#123;id&#125;`);</span><br><span class="line">    return response.json();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="support-write-capability"><a href="#support-write-capability" class="headerlink" title="support write capability"></a>support write capability</h3><p>the default selector is read-only, but if you want to write state through the selector, you must implement <code>set </code>method and manually distribute the write logic.</p>
+<h3 id="Parameter-consistency"><a href="#Parameter-consistency" class="headerlink" title="Parameter consistency"></a>Parameter consistency</h3><p><code>get </code>and <code>set </code>the tool functions in the method share the context, so you can use <code>set </code>use in <code>get </code>reads the current state and implements write logic based on the old state.</p>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p>in the recovery <code>selector </code>is a tool for deriving states, and the parameters it supports are mainly reflected in <code>get </code>and <code>set </code>function. <code>get </code>the parameter object of contains a <code>get() </code>method to read the values of other atoms or selectors and establish dependencies. <code>set </code>the parameter object includes <code>get </code>, <code>set </code>and <code>reset </code>which can be used to read the current state, write a new state value, or reset the atom. In actual development, the rational use of these parameters can achieve flexible read-only or writable derived state, and support asynchronous logic and state linkage.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>in the Recoil <code>selector </code>it is the core tool of derivation logic, and its ability is far more than just reading state. By <code>get </code>function, you can easily combine multiple atoms or selectors for synchronous or asynchronous computation. And through<code>set </code>function, which allows the selector to respond to external updates, forming a more complete state link.</p>
+<p>Understanding <code>get </code>, <code>set </code>, <code>reset </code>the role of the three functions and the way they are used together are the key to a thorough grasp of Recoil. With these parameters, we can build a high-performance, maintainability state system. For the handling of complex inter-component State Dependencies, <code>selector </code>it provides great convenience and flexibility.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

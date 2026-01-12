@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="How to write a log plugin for recording state changes in redux with reactForewordas a state management tool commonly used in React applications, the c"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How to write a log plugin for recording state changes in redux with react"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="How to write a log plugin for recording state changes in redux with reactForewordas a state management tool commonly used in React applications, the c"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How to write a log plugin for recording state changes in redux with react - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How to write a log plugin for recording state changes in redux with react</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-02-28
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="How-to-write-a-log-plugin-for-recording-state-changes-in-redux-with-react"><a href="#How-to-write-a-log-plugin-for-recording-state-changes-in-redux-with-react" class="headerlink" title="How to write a log plugin for recording state changes in redux with react"></a>How to write a log plugin for recording state changes in redux with react</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>as a state management tool commonly used in React applications, the core idea of Redux is “predictable state container”. In order to improve the maintainability and debuggability of the application, we often want to be able to track the process of each state change. The log of recording state changes not only helps to debug and restore the problem site, but also provides an important basis for state analysis in the development phase.</p>
+<p>This article describes how to customize a logging plug-in (middleware) in Redux to record each state change information. You will understand the basic structure of middleware, how to capture old and new state, how to output logs, and help you understand this process in depth through complete code examples.</p>
+<hr>
+<h2 id="Redux-Middleware-Middleware-principle-brief"><a href="#Redux-Middleware-Middleware-principle-brief" class="headerlink" title="Redux Middleware (Middleware) principle brief"></a>Redux Middleware (Middleware) principle brief</h2><p>the middleware mechanism of Redux allows us to insert custom logic between dispatch action and reducer execution, which is suitable for the following tasks:</p>
+<ul>
+<li>asynchronous processing (such as redux-thunk)</li>
+<li>logging</li>
+<li>performance analysis</li>
+<li>error Capture</li>
+</ul>
+<p>its structure is as follows:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const middleware = store =&gt; next =&gt; action =&gt; &#123;</span><br><span class="line">  // 逻辑执行区域</span><br><span class="line">  return next(action)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>the middleware receives three parameters:</p>
+<ul>
+<li><code>store </code>: contains <code>getState </code>and <code>dispatch </code></li>
+<li><code>next </code>: Passed to the next middleware or final reducer</li>
+<li><code>action </code>the currently dispatched action object</li>
+</ul>
+<hr>
+<h2 id="writing-Logging-Middleware"><a href="#writing-Logging-Middleware" class="headerlink" title="writing Logging Middleware"></a>writing Logging Middleware</h2><p>we hope to achieve the following objectives:</p>
+<ol>
+<li>record the action type and payload</li>
+<li>record the state difference before and after the action is triggered.</li>
+<li>Formatting Output Log Contents</li>
+</ol>
+<p>the code is as follows:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">const loggerMiddleware = store =&gt; next =&gt; action =&gt; &#123;</span><br><span class="line">  console.group(`Action: $&#123;action.type&#125;`)</span><br><span class="line"></span><br><span class="line">  console.log(&#x27;%cPrevious State:&#x27;, &#x27;color: gray;&#x27;, store.getState())</span><br><span class="line">  console.log(&#x27;%cAction Payload:&#x27;, &#x27;color: blue;&#x27;, action)</span><br><span class="line"></span><br><span class="line">  const result = next(action) // 传递 action 给 reducer 执行</span><br><span class="line"></span><br><span class="line">  console.log(&#x27;%cNext State:&#x27;, &#x27;color: green;&#x27;, store.getState())</span><br><span class="line"></span><br><span class="line">  console.groupEnd()</span><br><span class="line"></span><br><span class="line">  return result</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>explanation:</p>
+<ul>
+<li><code>console.group() </code>and <code>console.groupEnd() </code>it is a grouping function of the browser console to facilitate clear log structure.</li>
+<li>Use different colors to distinguish between front and back states and action payload</li>
+<li><code>store.getState() </code>called twice, indicating the state before and after the reducer respectively</li>
+</ul>
+<hr>
+<h2 id="applying-log-middleware-in-Redux"><a href="#applying-log-middleware-in-Redux" class="headerlink" title="applying log middleware in Redux"></a>applying log middleware in Redux</h2><p>apply This middleware to The Redux store:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import &#123; createStore, applyMiddleware &#125; from &#x27;redux&#x27;</span><br><span class="line">import rootReducer from &#x27;./reducers&#x27;</span><br><span class="line">import loggerMiddleware from &#x27;./loggerMiddleware&#x27;</span><br><span class="line"></span><br><span class="line">const store = createStore(</span><br><span class="line">  rootReducer,</span><br><span class="line">  applyMiddleware(loggerMiddleware)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>now, every time you dispatch an action, the console will print a log in the following format:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Action: INCREMENT</span><br><span class="line">  Previous State: &#123; count: 0 &#125;</span><br><span class="line">  Action Payload: &#123; type: &quot;INCREMENT&quot; &#125;</span><br><span class="line">  Next State: &#123; count: 1 &#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="optimization-suggestion-Enable-logging-only-in-the-development-environment"><a href="#optimization-suggestion-Enable-logging-only-in-the-development-environment" class="headerlink" title="optimization suggestion: Enable logging only in the development environment"></a>optimization suggestion: Enable logging only in the development environment</h2><p>to avoid exposing sensitive information or causing performance overhead in the production environment, you can enable the logging middleware only in development mode:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">const middlewares = []</span><br><span class="line"></span><br><span class="line">if (process.env.NODE_ENV === &#x27;development&#x27;) &#123;</span><br><span class="line">  middlewares.push(loggerMiddleware)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const store = createStore(</span><br><span class="line">  rootReducer,</span><br><span class="line">  applyMiddleware(...middlewares)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Advanced-extensions-persistence-log-upload-and-filtering-actions"><a href="#Advanced-extensions-persistence-log-upload-and-filtering-actions" class="headerlink" title="Advanced extensions: persistence, log upload, and filtering actions"></a>Advanced extensions: persistence, log upload, and filtering actions</h2><ol>
+<li><strong>persistence Log</strong><br>you can log each state change to local storage:</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">localStorage.setItem(&#x27;redux-logs&#x27;, JSON.stringify(&#123;</span><br><span class="line">  prevState,</span><br><span class="line">  action,</span><br><span class="line">  nextState</span><br><span class="line">&#125;))</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><strong>filtering unimportant actions</strong><br>ignore some internal or high frequency actions by configuring:</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const ignoredActions = [&#x27;@@INIT&#x27;]</span><br><span class="line"></span><br><span class="line">if (!ignoredActions.includes(action.type)) &#123;</span><br><span class="line">  // 执行日志记录</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><strong>upload Remote Logs</strong><br>you can Upload log data to the backend in batches for Error tracking and statistics:</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fetch(&#x27;/api/logs&#x27;, &#123;</span><br><span class="line">  method: &#x27;POST&#x27;,</span><br><span class="line">  body: JSON.stringify(&#123; prevState, action, nextState &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="interview-answer"><a href="#interview-answer" class="headerlink" title="interview answer"></a>interview answer</h2><p><strong>how to record every state change in Redux?</strong></p>
+<p>A: We can implement a logging plug-in through Redux’s middleware mechanism. The middleware can capture the action of each dispatch and call it before and after the action is executed. <code>store.getState() </code>get the old state and the new state, and pass. <code>console.log </code>output. This process does not interfere with the pure functional logic of the reducer. By structuring, grouping, or color-marking the log output, each state change can be clearly displayed. In addition, we can also configure and enable in the development environment to avoid the impact on production performance.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>logging is a very valuable auxiliary tool for Redux applications, which can greatly improve debugging efficiency and transparency of status tracking. By customizing the Redux middleware, we can gracefully capture the state change process while keeping the code structure clear and consistent with the Redux design philosophy.</p>
+<p>This plug-in design is not only suitable for logging, but also can be further expanded into more advanced functions such as persistent storage, reporting system, development tool integration, etc. It is an indispensable part of the tool chain in large-scale applications. Understanding and mastering this mechanism will help developers write more robust and debuggable Redux applications.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

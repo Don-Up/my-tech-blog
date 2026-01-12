@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What does the concept of immutable data state in react objects meanForewordwhen using React to develop applications, component state management is a c"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What does the concept of immutable data state in react objects mean"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What does the concept of immutable data state in react objects meanForewordwhen using React to develop applications, component state management is a c"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What does the concept of immutable data state in react objects mean - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What does the concept of immutable data state in react objects mean</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-12-12
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-does-the-concept-of-immutable-data-state-in-react-objects-mean"><a href="#What-does-the-concept-of-immutable-data-state-in-react-objects-mean" class="headerlink" title="What does the concept of immutable data state in react objects mean"></a>What does the concept of immutable data state in react objects mean</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>when using React to develop applications, component state management is a critical part. And when it comes to status updates, there’s a concept that’s often mentioned– <strong>“Immutability”</strong> . Especially when manipulating reference type data such as objects or arrays, if immutability is ignored, it may lead to a series of problems such as component not being updated, performance degradation, and difficulty in debugging.</p>
+<p>This article will start from the basic concepts, in-depth discussion of the meaning of immutable data in React, why to do so, how to achieve the immutability of object data, as well as common misconceptions and solutions.</p>
+<hr>
+<h2 id="What-is-immutable-data"><a href="#What-is-immutable-data" class="headerlink" title="What is immutable data?"></a>What is immutable data?</h2><p>Immutable Data refers <strong>data structures that cannot be changed once created</strong> . Any “modification” to the data does not directly change the original data, but returns a <strong>new copy</strong> .</p>
+<p>For basic types such as strings and numbers, this immutability is natural. But for reference types such as objects and arrays, we must manually control their immutability.</p>
+<p>For example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const obj = &#123; name: &#x27;Alice&#x27; &#125;</span><br><span class="line">const newObj = &#123; ...obj, name: &#x27;Bob&#x27; &#125;</span><br></pre></td></tr></table></figure>
+
+<p>in the above code, <code>newObj </code>is a completely new object, the original <code>obj </code>not being changed, this is the “immutable” implementation.</p>
+<hr>
+<h2 id="Why-do-you-want-to-keep-state-immutable-in-React"><a href="#Why-do-you-want-to-keep-state-immutable-in-React" class="headerlink" title="Why do you want to keep state immutable in React?"></a>Why do you want to keep state immutable in React?</h2><h3 id="Reason-1-Improve-performance-rely-on-shallow-comparison"><a href="#Reason-1-Improve-performance-rely-on-shallow-comparison" class="headerlink" title="Reason 1: Improve performance, rely on shallow comparison"></a>Reason 1: Improve performance, rely on shallow comparison</h3><p>react’s core update mechanism includes <strong>diff comparison of Virtual DOM</strong> , React determines whether the component needs to be re-rendered by judging whether the state changes before and after.</p>
+<p>React is used. <strong>Shallow comparison</strong> , That is, only compare whether the reference address has changed. If we directly modify the internal properties of the object without replacing the reference address, React may think that the state has not changed and thus skip the update.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const obj = &#123; name: &#x27;Alice&#x27; &#125;</span><br><span class="line">obj.name = &#x27;Bob&#x27;</span><br><span class="line">// 如果 setState(obj)，React 会认为状态引用没变，不触发更新</span><br></pre></td></tr></table></figure>
+
+<h3 id="Reason-two-convenient-state-rollback-and-time-travel-debugging"><a href="#Reason-two-convenient-state-rollback-and-time-travel-debugging" class="headerlink" title="Reason two: convenient state rollback and time travel debugging"></a>Reason two: convenient state rollback and time travel debugging</h3><p>immutability means that we always keep a snapshot of the previous state, and we can easily implement the “time travel” function in Redux DevTools.</p>
+<h3 id="Reason-3-Enhanced-predictability-and-debugging"><a href="#Reason-3-Enhanced-predictability-and-debugging" class="headerlink" title="Reason 3: Enhanced predictability and debugging"></a>Reason 3: Enhanced predictability and debugging</h3><p>immutable data can avoid data side effects and state pollution, the code is more predictable, and debugging is more convenient.</p>
+<hr>
+<h2 id="How-to-achieve-object-state-immutable"><a href="#How-to-achieve-object-state-immutable" class="headerlink" title="How to achieve object state immutable?"></a>How to achieve object state immutable?</h2><h3 id="Using-Object-Extension-Operators-Spread"><a href="#Using-Object-Extension-Operators-Spread" class="headerlink" title="Using Object Extension Operators (Spread)"></a>Using Object Extension Operators (Spread)</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const state = &#123; name: &#x27;Alice&#x27;, age: 25 &#125;</span><br><span class="line">const newState = &#123; ...state, name: &#x27;Bob&#x27; &#125;</span><br></pre></td></tr></table></figure>
+
+<p>create a new object, copy the old data, and then modify the corresponding fields.</p>
+<h3 id="An-immutable-variant-using-the-array-method"><a href="#An-immutable-variant-using-the-array-method" class="headerlink" title="An immutable variant using the array method"></a>An immutable variant using the array method</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// 添加元素</span><br><span class="line">const arr = [1, 2, 3]</span><br><span class="line">const newArr = [...arr, 4]</span><br><span class="line"></span><br><span class="line">// 删除元素</span><br><span class="line">const filtered = arr.filter(i =&gt; i !== 2)</span><br><span class="line"></span><br><span class="line">// 替换元素</span><br><span class="line">const updated = arr.map(i =&gt; (i === 2 ? 99 : i))</span><br></pre></td></tr></table></figure>
+
+<p>be careful not to use <code>push </code>, <code>splice </code>, <code>sort</code>Methods such as directly changing the original array.</p>
+<h3 id="Use-immer-simplifying-immutable-logic"><a href="#Use-immer-simplifying-immutable-logic" class="headerlink" title="Use immer simplifying immutable logic"></a>Use <code>immer </code>simplifying immutable logic</h3><p>for deeply nested data structures, maintaining immutability manually is tedious. <code>immer </code>is a very popular library that allows you to write “mutable code” that actually treats it as immutable:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import produce from &#x27;immer&#x27;</span><br><span class="line"></span><br><span class="line">const nextState = produce(state, draft =&gt; &#123;</span><br><span class="line">  draft.user.name = &#x27;Charlie&#x27;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>the bottom layer is still immutable, but the writing is more intuitive.</p>
+<hr>
+<h2 id="Deep-Nested-Object-Update-Example-Comparison"><a href="#Deep-Nested-Object-Update-Example-Comparison" class="headerlink" title="Deep Nested Object Update Example Comparison"></a>Deep Nested Object Update Example Comparison</h2><p>manual implementation:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">const state = &#123;</span><br><span class="line">  user: &#123;</span><br><span class="line">    profile: &#123;</span><br><span class="line">      name: &#x27;Alice&#x27;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const newState = &#123;</span><br><span class="line">  ...state,</span><br><span class="line">  user: &#123;</span><br><span class="line">    ...state.user,</span><br><span class="line">    profile: &#123;</span><br><span class="line">      ...state.user.profile,</span><br><span class="line">      name: &#x27;Bob&#x27;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>use <code>immer </code>:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const newState = produce(state, draft =&gt; &#123;</span><br><span class="line">  draft.user.profile.name = &#x27;Bob&#x27;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>the former is more cumbersome but also more native; The latter code is more concise but requires the introduction of third-party libraries.</p>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p><strong>question: Why is the object state immutable in React? How did you achieve that?</strong></p>
+<p>Answer: React emphasizes that the state is immutable to ensure that the component update mechanism can work properly. React uses shallow comparison to determine whether the state changes before and after. Only changes in the state reference will trigger re-rendering. For reference types such as objects or arrays, if the original object is directly modified, React may not detect the change, resulting in UI not being updated.</p>
+<p>In implementation, we usually use the object extension operator ( <code>it&#39;s... </code>) or the immutable method of an array (e. G. <code>map </code>, <code>filter</code>) creates a new copy. Also, if I encounter a deep nested update, I would use <code>immer </code>to avoid manually deconstructing nested data and improve the readability and maintainability of the code.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>object data immutability is a core principle in React state management, which ensures the efficient and reliable update mechanism of React. By using extension operators, array pure function methods, or with the help <code>immer </code>and other tools, we can keep the code simple while following the principle of immutability.</p>
+<p>Understanding and mastering immutability is not only about “following the rules”, but also a key step in writing robust, maintainable, high-performance React applications. Whether used within the component <code>useState </code>, or combined with Redux, Recoil and other state libraries to develop complex applications, this principle always applies.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

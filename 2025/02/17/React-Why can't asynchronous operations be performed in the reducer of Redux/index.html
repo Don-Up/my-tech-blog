@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Why can’t asynchronous operations be performed in the reducer of ReduxForewordRedux is a JavaScript library that focuses on state management. Its core"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Why can&#39;t asynchronous operations be performed in the reducer of Redux"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Why can’t asynchronous operations be performed in the reducer of ReduxForewordRedux is a JavaScript library that focuses on state management. Its core"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Why can&#39;t asynchronous operations be performed in the reducer of Redux - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Why can't asynchronous operations be performed in the reducer of Redux</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-02-17
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Why-can’t-asynchronous-operations-be-performed-in-the-reducer-of-Redux"><a href="#Why-can’t-asynchronous-operations-be-performed-in-the-reducer-of-Redux" class="headerlink" title="Why can’t asynchronous operations be performed in the reducer of Redux"></a>Why can’t asynchronous operations be performed in the reducer of Redux</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>Redux is a JavaScript library that focuses on state management. Its core idea is to centrally manage all the state of the application and drive UI updates through predictable data flow. Among the Three Principles of Redux, a very key concept is that the reducer must be <strong>pure function</strong> .</p>
+<p>In actual development, many people will have such questions: <strong>why can’t I write asynchronous operations in reducer, such as calling API or using setTimeout?</strong> This article will explain why the reducer cannot perform asynchronous operations step by step from the design concept of Redux, the definition of pure functions, the responsibilities of reducer, and the handling of asynchronous side effects.</p>
+<hr>
+<h2 id="What-is-a-reducer-in-Redux"><a href="#What-is-a-reducer-in-Redux" class="headerlink" title="What is a reducer in Redux?"></a>What is a reducer in Redux?</h2><p>In Redux, reducer is a function used to generate a new state based on the current state and the action of dispatch. Its form is as follows:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function reducer(state, action) &#123;</span><br><span class="line">  switch(action.type) &#123;</span><br><span class="line">    case &#x27;INCREMENT&#x27;:</span><br><span class="line">      return &#123; count: state.count + 1 &#125;</span><br><span class="line">    default:</span><br><span class="line">      return state</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>the core constraints of this function are two:</p>
+<ul>
+<li>the input is the same, the output must be the same (pure function)</li>
+<li>should not have side effects (do not rely on or modify external state)</li>
+</ul>
+<hr>
+<h2 id="what-is-a-pure-function"><a href="#what-is-a-pure-function" class="headerlink" title="what is a pure function?"></a>what is a pure function?</h2><p>Pure Function means <strong>under the same input, always get the same output without any side effects</strong> . Side effects include, but are not limited to, the following:</p>
+<ul>
+<li>Asynchronous operations (such as setTimeout, fetch, Promise)</li>
+<li>modifying a variable or object outside a function</li>
+<li>access IO (such as DOM, localStorage, file system)</li>
+<li>log, print, alert</li>
+</ul>
+<p>Redux emphasizes that reducers must be pure functions to ensure their predictability, testability, and maintainability.</p>
+<hr>
+<h2 id="Why-can’t-there-be-asynchronous-operations-in-the-reducer"><a href="#Why-can’t-there-be-asynchronous-operations-in-the-reducer" class="headerlink" title="Why can’t there be asynchronous operations in the reducer?"></a>Why can’t there be asynchronous operations in the reducer?</h2><h3 id="1-Break-the-pure-function-principle"><a href="#1-Break-the-pure-function-principle" class="headerlink" title="1. Break the pure function principle"></a>1. Break the pure function principle</h3><p>asynchronous operations are essentially <strong>uncertainty behavior</strong> . It cannot immediately return a definite result when called, and the return value of the reducer must be the new state. If we write the following code in the reducer:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function reducer(state, action) &#123;</span><br><span class="line">  if (action.type === &#x27;FETCH_DATA&#x27;) &#123;</span><br><span class="line">    fetch(&#x27;/api/data&#x27;).then(res =&gt; res.json()).then(data =&gt; &#123;</span><br><span class="line">      // 更新 state？</span><br><span class="line">    &#125;)</span><br><span class="line">    return state // 无法返回新 state</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>this code fails to synchronously return the new state, causing state updates to fail and breaking the most central time travel debugging mechanism in Redux.</p>
+<h3 id="2-Unable-to-implement-Time-Travel-Time-Travel-debugging"><a href="#2-Unable-to-implement-Time-Travel-Time-Travel-debugging" class="headerlink" title="2. Unable to implement Time Travel (Time Travel debugging)"></a>2. Unable to implement Time Travel (Time Travel debugging)</h3><p>an important reason why Redux DevTools can implement time travel debugging is that reducers are synchronous and pure: the state at any point in time is determined by action. If the reducer becomes impure, such as relying on asynchronous data, then the same state cannot be reproduced when retracing the historical state.</p>
+<h3 id="3-Synchronous-data-flow-design"><a href="#3-Synchronous-data-flow-design" class="headerlink" title="3. Synchronous data flow design"></a>3. Synchronous data flow design</h3><p>The design of Redux is based on synchronous, unidirectional data flow. If asynchronous code appears in the reducer, the entire state flow will be interrupted or delayed, which will destroy the stability of the Redux architecture.</p>
+<h3 id="4-The-state-is-unpredictable-and-untestable"><a href="#4-The-state-is-unpredictable-and-untestable" class="headerlink" title="4. The state is unpredictable and untestable."></a>4. The state is unpredictable and untestable.</h3><p>Asynchronous operations mean that the output of the reducer no longer depends only on the input, but on external data sources, which makes testing difficult. For example, you cannot say:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">expect(reducer(state, action)).toEqual(expectedState)</span><br></pre></td></tr></table></figure>
+
+<p>because the results may take 1 second to come out, and may even fail.</p>
+<hr>
+<h2 id="The-correct-way-to-handle-asynchrony-Middleware"><a href="#The-correct-way-to-handle-asynchrony-Middleware" class="headerlink" title="The correct way to handle asynchrony: Middleware"></a>The correct way to handle asynchrony: Middleware</h2><p>Redux provides a middleware mechanism for handling side effects. Through middleware, we can intercept asynchronous logic during action dispatch, and then dispatch a pure action to the reducer after the logic is completed.</p>
+<p>Common asynchronous processing Middleware includes:</p>
+<h3 id="redux-thunk"><a href="#redux-thunk" class="headerlink" title="redux-thunk"></a>redux-thunk</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const fetchData = () =&gt; &#123;</span><br><span class="line">  return async (dispatch) =&gt; &#123;</span><br><span class="line">    const res = await fetch(&#x27;/api/data&#x27;)</span><br><span class="line">    const data = await res.json()</span><br><span class="line">    dispatch(&#123; type: &#x27;FETCH_DATA_SUCCESS&#x27;, payload: data &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="redux-saga"><a href="#redux-saga" class="headerlink" title="redux-saga"></a>redux-saga</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function* fetchDataSaga() &#123;</span><br><span class="line">  const response = yield call(fetch, &#x27;/api/data&#x27;)</span><br><span class="line">  const data = yield response.json()</span><br><span class="line">  yield put(&#123; type: &#x27;FETCH_DATA_SUCCESS&#x27;, payload: data &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>the core role of these middleware is to “pull” asynchronous logic from the reducer, thus maintaining the purity of the reducer.</p>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p><strong>question: Why can’t asynchronous operations be written in Redux’s reducer?</strong></p>
+<p>A: Redux’s reducer is a pure function that must be synchronous and side-effect-free so that Redux can guarantee the predictability of state updates. Asynchronous operations, such as fetch and setTimeout, break the pure function feature of the reducer, causing the reducer to fail to return the new state immediately, and also affecting the time travel debugging function of Redux DevTools. Therefore, Redux requires that asynchronous logic be moved into the middleware for processing, such as redux-thunk or redux-saga, while reducer only handles the final synchronous action.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>the design principle of Redux requires that the reducer must be a pure function, and it should not contain any asynchronous or side-effect operations. The benefits of this are:</p>
+<ul>
+<li>predictable status updates</li>
+<li>easy to debug and test</li>
+<li>support time travel debugging</li>
+<li>simplify data flow structure</li>
+</ul>
+<p>asynchronous operations should be handled in the Redux middleware, which is an important manifestation of the separation of functional responsibilities in the Redux architecture. Only by strictly following these design principles can Redux’s advantages and maintainability in large-scale applications be brought into play.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
