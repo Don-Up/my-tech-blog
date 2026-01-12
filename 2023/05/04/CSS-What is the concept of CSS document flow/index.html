@@ -13,6 +13,8 @@
     
 
     
+        <meta name="description" content="What is the concept of CSS document flowForewordin the layout of a web page, the browser needs a rule to determine the arrangement of elements, the sp"/>
+    
 
     <!--Author-->
     
@@ -21,10 +23,12 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Tech Blog"/>
+        <meta property="og:title" content="What is the concept of CSS document flow"/>
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What is the concept of CSS document flowForewordin the layout of a web page, the browser needs a rule to determine the arrangement of elements, the sp"/>
     
 
     <!--Open Graph Site Name-->
@@ -32,7 +36,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website"/>
+        <meta property="og:type" content="article"/>
     
 
     <!--Page Cover-->
@@ -51,7 +55,7 @@
 
     <!-- Title -->
     
-    <title>page - Archives - Tech Blog</title>
+    <title>What is the concept of CSS document flow - Tech Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -155,170 +159,85 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Archives</h1>
+                <div class="post-heading">
+                    <h1>What is the concept of CSS document flow</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-05-04
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/CSS/">#CSS</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/CSS/">CSS</a>
+
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/my-tech-blog/2023/04/13/JavaScript-Common array sorting algorithms and their characteristics/">
-        <h1 class="post-title archive">
-            Common array sorting algorithms and their characteristics
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-04-13
-    </p>
-</div>
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/my-tech-blog/2023/04/13/NEXT-Image Attributes/">
-        <h1 class="post-title archive">
-            Image Component Attributes in Next.js
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-04-13
-    </p>
-</div>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-is-the-concept-of-CSS-document-flow"><a href="#What-is-the-concept-of-CSS-document-flow" class="headerlink" title="What is the concept of CSS document flow"></a>What is the concept of CSS document flow</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in the layout of a web page, the browser needs a rule to determine the arrangement of elements, the space they occupy, and the relationship with other elements. CSS document Flow (Normal Flow) is the browser in the absence of special positioning or floating intervention, the default layout of elements. Understanding document flow helps you grasp how elements are arranged naturally and how to change it to achieve various layout effects. </p>
+<h2 id="Principles-of-Document-Flow"><a href="#Principles-of-Document-Flow" class="headerlink" title="Principles of Document Flow"></a>Principles of Document Flow</h2><p>document flow is the underlying mechanism by which the browser determines the placement of elements during the rendering phase, following the default display characteristics and writing order of HTML elements. Block-level elements occupy an exclusive line in the document flow, arranged from top to bottom, while in-line elements are arranged from left to right in a line, and do not wrap until the line width is insufficient. When the browser calculates the layout, it allocates space for each element according to the box model and handles the overlay of inner and outer margins. </p>
+<p>Document flow not only determines the arrangement of elements, but also affects the calculation of page height. The height of the parent element is stretched by the child elements in the document flow, because the browser recursively calculates the size and position of all child elements in the flow layout. </p>
+<h2 id="Out-of-document-flow"><a href="#Out-of-document-flow" class="headerlink" title="Out of document flow"></a>Out of document flow</h2><p>some layout styles leave elements out of the document flow and no longer affect the arrangement of other elements and the size of the parent element. For example, using <code>float </code>, <code>absolute </code>, <code>fixed </code>or <code>sticky</code>When positioned, the element is removed from the document flow. The removed elements no longer occupy the original space, and other elements are rearranged according to the remaining space. </p>
+<p>Elements that are out of the document flow rely on other rules for positioning. For example, an absolutely positioned element will be positioned relative to the nearest positioned ancestor, while a floating element will try to be as close as possible to the specified direction, but may still have a wrapping effect with some content in the document flow. </p>
+<h2 id="Boundary-conditions-and-considerations"><a href="#Boundary-conditions-and-considerations" class="headerlink" title="Boundary conditions and considerations"></a>Boundary conditions and considerations</h2><p>in layouts, it is sometimes necessary to deliberately leave certain elements out of the document flow, such as floating buttons, pop-up layers, or fixed-head navigation, but this can also cause problems with the height of the parent element. In this case, you need to manually clear the float for the parent element or use other layout techniques (such as Flexbox or Grid) to avoid the impact. It should be noted that, <code>sticky </code>although you can combine the advantages of streaming layout and positioning, its work relies on rolling containers and threshold conditions, which may be set in some parent containers. <code>overflow </code>failure. </p>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p>the CSS document flow is the browser’s default rule for arranging elements when no special positioning or floating is used. Block-level elements occupy a row exclusively from top to bottom, and elements within a row are arranged from left to right in a row and wrap as needed. Elements in the document flow affect and support the height of the parent element, and <code>float </code>, <code>absolute </code>, <code>fixed </code>or <code>sticky</code>Will take the element out of the document flow and no longer occupy the original space. </p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>CSS document flow is the basic rule of web page layout, and it helps to understand the arrangement order of elements, space allocation and height calculation. By switching between document flow and out of document flow, you can achieve a variety of layout effects, but you need to pay attention to side effects such as the collapse of the parent element height when you are out of the document flow, and optimize it with modern layout techniques.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
             
-                <div class="post-preview">
-    <a href="/my-tech-blog/2023/04/12/React-How does react achieve rapid page response/">
-        <h1 class="post-title archive">
-            How does react achieve rapid page response
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-04-12
-    </p>
-</div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
             
-                <div class="post-preview">
-    <a href="/my-tech-blog/2023/04/04/JavaScript-Difference between hasOwnProperty and instanceof/">
-        <h1 class="post-title archive">
-            Difference between hasOwnProperty and instanceof
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-04-04
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/my-tech-blog/2023/03/31/React-What's the difference between react constructor and getInitialState/">
-        <h1 class="post-title archive">
-            What's the difference between react constructor and getInitialState
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-03-31
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/my-tech-blog/2023/03/21/JavaScript-How to traverse the Map object in ES6/">
-        <h1 class="post-title archive">
-            How to traverse the Map object in ES6
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-03-21
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/my-tech-blog/2023/03/19/JavaScript-What does an iterator have to do with an array/">
-        <h1 class="post-title archive">
-            What does an iterator have to do with an array
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-03-19
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/my-tech-blog/2023/03/05/JavaScript-The class in JS is the syntactic sugar of the constructor. Is this correct/">
-        <h1 class="post-title archive">
-            The class in JS is the syntactic sugar of the constructor. Is this correct
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-03-05
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/my-tech-blog/2023/02/27/JavaScript-How to avoid stack overflow caused by recursion in JavaScript/">
-        <h1 class="post-title archive">
-            How to avoid stack overflow caused by recursion in JavaScript
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-02-27
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/my-tech-blog/2023/02/12/JavaScript-What is jsBridge-What is the working principle/">
-        <h1 class="post-title archive">
-            What is jsBridge-What is the working principle
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-02-12
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-        <li class="previous"><a href="/my-tech-blog/archives/page/24/">&larr;  Newer Posts</a></li>
-    
-    
-        <li class="next"><a href="/my-tech-blog/archives/page/26/">Older Posts  &rarr;</a></li>
-    
-</ul>
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />

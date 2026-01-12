@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What is the CSS box modelForewordthe CSS box model is a very basic and important concept in front-end development, which determines how the browser ca"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What is the CSS box model"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What is the CSS box modelForewordthe CSS box model is a very basic and important concept in front-end development, which determines how the browser ca"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What is the CSS box model - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What is the CSS box model</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-07-08
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/CSS/">#CSS</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/CSS/">CSS</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-is-the-CSS-box-model"><a href="#What-is-the-CSS-box-model" class="headerlink" title="What is the CSS box model"></a>What is the CSS box model</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>the CSS box model is a very basic and important concept in front-end development, which determines how the browser calculates the size, inner margin, border and outer margin of elements. In layout, style calculation, and element positioning, the box model directly affects the rendering results. Understanding the box model not only helps to precisely control the size and position of page elements, but also helps us to locate the cause faster when debugging style problems. </p>
+<h2 id="Composition-and-Principle-of-Box-Model"><a href="#Composition-and-Principle-of-Box-Model" class="headerlink" title="Composition and Principle of Box Model"></a>Composition and Principle of Box Model</h2><p>in CSS, each element is treated as a rectangular box. The core of the box model is to divide the space of the element into four parts, from the inside to the outside, which are the content area (content), the inner margin (padding), the border (border) and the outer margin (margin). </p>
+<p>The content area is the part used to display the actual content such as text and pictures, and its width and height are determined <code>width </code>and <code>height </code>property determines. Padding is the area of padding between the content and the border that increases the visible size of the element. The border is located outside the inner margin and is used to surround the element content and inner margin. Its thickness will continue to increase the overall size. The outer margin is the spacing between an element and other elements. It does not affect the visible size of the element itself, but it does affect the layout position. </p>
+<p>The browser calculates the total width and height of an element differently depending on the box model type. In the default standard box model (content-box), <code>width </code>and <code>height</code>Refers to the size of the content area only, the padding and border are added to the total size. In the alternative box model (border-box), <code>width </code>and <code>height </code>refers to the sum of content, padding, and borders, which makes it easier to control the actual space occupied by elements in complex layouts. </p>
+<h2 id="Types-and-switching-of-Box-Models"><a href="#Types-and-switching-of-Box-Models" class="headerlink" title="Types and switching of Box Models"></a>Types and switching of Box Models</h2><p>CSS supports two main box models: the standard box model (content-box) and the alternative box model (border-box). The standard box model is the default mode of the W3C specification, and in most cases the browser will render elements this way. The alternative box model is widely used in some UI frameworks because it can avoid adding additional margins and borders when calculating dimensions, reducing the complexity of layout calculations. </p>
+<p>Can Pass <code>box-sizing </code>property to switch the box model type. Will <code>box-sizing </code>set <code>content-box </code>when using the standard box model, set <code>border-box </code>when using the alternative box model. Many developers will use <code>box-sizing </code>set <code>border-box </code>for more intuitive control of element dimensions.</p>
+<h2 id="Boundary-conditions-and-considerations"><a href="#Boundary-conditions-and-considerations" class="headerlink" title="Boundary conditions and considerations"></a>Boundary conditions and considerations</h2><p>there are several details that need to be paid attention to when using the box model. First of all, different browsers have historical compatibility problems in rendering, especially when mixing the old version of IE Mode, it may trigger the weird box model (Quirks Mode). At this time <code>width </code>and <code>height </code>will be like <code>border-box </code>includes margins and borders as well. Second, the percentage width and height are calculated the same way under different box models, but the impact of parent element size and content overflow may produce unexpected scroll bars or layout misalignment. Finally, combine in the responsive layout. <code>border-box </code>you can avoid disrupting the overall layout when you increase the padding or border. </p>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p>the CSS box model is the browser’s mechanism for calculating and rendering element sizes and spacing. It treats each element as a rectangular box consisting of a content area, an inner margin, a border, and an outer margin. Under the standard box model, <code>width </code>and <code>height </code>refers only to the size of the content area, while under the alternative box model, they include the size of the padding and border. We can pass <code>box-sizing </code>property toggles between the two modes, generally recommend using <code>border-box</code>So that adjusting the padding or border does not change the total size of the element. </p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>mastering the CSS box model is the basic ability of front-end layout. It not only affects the size and position of elements on the page, but also directly relates to responsive design, cross-browser compatibility, and the stability of complex UI layouts. Be familiar with the differences between the standard box model and the alternative box model, and use it flexibly. <code>box-sizing </code>can significantly improve the controllability of the layout and development efficiency.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
