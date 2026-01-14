@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Introduce BFC, IFC, GFC and FFCForewordin the realm of CSS layout, it is important to understand the various Formatting contexts. BFC (block-level for"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Introduce BFC, IFC, GFC and FFC"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Introduce BFC, IFC, GFC and FFCForewordin the realm of CSS layout, it is important to understand the various Formatting contexts. BFC (block-level for"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Introduce BFC, IFC, GFC and FFC - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Introduce BFC, IFC, GFC and FFC</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-05-04
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/CSS/">#CSS</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/CSS/">CSS</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Introduce-BFC-IFC-GFC-and-FFC"><a href="#Introduce-BFC-IFC-GFC-and-FFC" class="headerlink" title="Introduce BFC, IFC, GFC and FFC"></a>Introduce BFC, IFC, GFC and FFC</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in the realm of CSS layout, it is important to understand the various Formatting contexts. BFC (block-level formatting context), IFC (in-line formatting context), GFC (table formatting context), and FFC (flexible box formatting context) correspond to different layout modes, which determine how elements are arranged, how other elements are affected, and how containment relationships are handled. Mastering them helps to solve layout problems and optimize page structure. </p>
+<h2 id="Introduction-to-various-formatting-contexts"><a href="#Introduction-to-various-formatting-contexts" class="headerlink" title="Introduction to various formatting contexts"></a>Introduction to various formatting contexts</h2><h3 id="BFC-Block-Formatting-Context"><a href="#BFC-Block-Formatting-Context" class="headerlink" title="BFC(Block Formatting Context)"></a>BFC(Block Formatting Context)</h3><p>BFC is a block-level layout environment in which block-level boxes are arranged according to specific rules. A common way to create a BFC is to set <code>float </code>not <code>none </code>, <code>position </code>for <code>absolute </code>or <code>fixed </code>, <code>display </code>for <code>flow-root </code>wait.</p>
+<p>The main feature of the BFC is that the internal element layout does not affect the external elements, and the BFC contains its internal floating elements to prevent height collapse. At the same time, BFC can prevent the outer margins from overlapping. </p>
+<h3 id="IFC-Inline-Formatting-Context"><a href="#IFC-Inline-Formatting-Context" class="headerlink" title="IFC(Inline Formatting Context)"></a>IFC(Inline Formatting Context)</h3><p>IFC is responsible for the layout of in-line elements, including text and in-line block elements. In IFC, elements are arranged from left to right (or the corresponding writing direction) according to the text flow, supporting line wrapping and text typesetting. IFC handles the arrangement of in-line elements such as text and pictures. </p>
+<h3 id="GFC-Table-Formatting-Context"><a href="#GFC-Table-Formatting-Context" class="headerlink" title="GFC(Table Formatting Context)"></a>GFC(Table Formatting Context)</h3><p>GFC is used for table layout to control the arrangement of rows, columns and cells of a table. Table elements such <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code>are in GFC, make sure the table is displayed correctly according to row and column rules. </p>
+<h3 id="FFC-Flex-Formatting-Context"><a href="#FFC-Flex-Formatting-Context" class="headerlink" title="FFC(Flex Formatting Context)"></a>FFC(Flex Formatting Context)</h3><p>FFC is the flexible box layout context. Elements are arranged according to the flexible box model and support flexible alignment, scaling, and space allocation. By setting the parent element’s <code>display: flex </code>or <code>inline-flex </code>created. FFC addresses the complex typesetting requirements that are difficult to achieve with traditional layouts. </p>
+<h2 id="Application-Value-of-Formatting-Context"><a href="#Application-Value-of-Formatting-Context" class="headerlink" title="Application Value of Formatting Context"></a>Application Value of Formatting Context</h2><p>Understanding the behavior of different formatting contexts helps developers use floating, positioning, and flexible box layouts reasonably, avoid layout conflicts, solve common problems such as height collapse and margin merging, and improve page stability and expressiveness. </p>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p>BFC, IFC, GFC, and FFC are block-level, inline, table, and flex-box formatting contexts, respectively. BFC creates a block-level layout environment to prevent overlapping margins and containing floats; IFC is responsible for the arrangement of elements in the row; GFC handles table row and column layout; FFC is a flexible box layout environment that supports flexible space allocation and alignment. Understanding them can help solve various layout problems. </p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>formatting context is the core mechanism of CSS layout. In-depth understanding of BFC, IFC, GFC and FFC can help developers more accurately control the layout of elements, avoid layout traps, and improve page compatibility and user experience. Mastering these concepts is an important step in advanced CSS layout.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
