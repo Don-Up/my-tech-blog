@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="How to achieve programmatic navigationForewordin modern single-page application (SPA) development, navigation is a core component of the user experien"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How to achieve programmatic navigation"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="How to achieve programmatic navigationForewordin modern single-page application (SPA) development, navigation is a core component of the user experien"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How to achieve programmatic navigation - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How to achieve programmatic navigation</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-05-13
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="How-to-achieve-programmatic-navigation"><a href="#How-to-achieve-programmatic-navigation" class="headerlink" title="How to achieve programmatic navigation"></a>How to achieve programmatic navigation</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in modern single-page application (SPA) development, navigation is a core component of the user experience. In addition to the traditional click link jump, sometimes business logic needs to actively trigger page jump according to conditions or events, then you need to use “programmatic navigation”. In React applications, especially when using React Router, programmatic navigation allows developers to dynamically control route jumps through code, thus realizing more flexible interaction process and navigation experience. </p>
+<p>This article focuses on “How to Implement Programmatic Navigation” and introduces in detail the core method of implementing programmatic navigation in React Router, with code examples and usage scenarios to help readers fully understand and apply it flexibly. </p>
+<hr>
+<h2 id="What-is-Programmed-Navigation"><a href="#What-is-Programmed-Navigation" class="headerlink" title="What is Programmed Navigation?"></a>What is Programmed Navigation?</h2><p>Programmatic navigation means that it does not depend on the user clicking <code>&lt;Link&gt;</code>or <code>&lt;a&gt;</code>label, but through the program code to control the way the browser routes jump. It is common in the following scenarios: </p>
+<ul>
+<li>after successful login, the user will automatically jump to the home page or personal homepage. </li>
+<li>Jump to the results page after form submission </li>
+<li>redirect to different pages based on permissions or conditions </li>
+<li>timed or event-triggered automatic jump</li>
+</ul>
+<p>with declarative navigation (using <code>&lt;Link to=&quot;...&quot;&gt;</code>), programmed navigation is more flexible and controllable. </p>
+<hr>
+<h2 id="II-Implementation-of-Programming-Navigation-In-React-Router"><a href="#II-Implementation-of-Programming-Navigation-In-React-Router" class="headerlink" title="II. Implementation of Programming Navigation In React Router"></a>II. Implementation of Programming Navigation In React Router</h2><h3 id="1-UseuseNavigate-hook-React-Router-v6"><a href="#1-UseuseNavigate-hook-React-Router-v6" class="headerlink" title="1. UseuseNavigate hook(React Router v6)"></a>1. Use<code>useNavigate </code>hook(React Router v6)</h3><p>in React Router v6, you recommend use <code>useNavigate </code>Hook to implement programmatic navigation. It returns a <code>navigate </code>function, call the function to trigger a route jump. </p>
+<h4 id="Code-Sample"><a href="#Code-Sample" class="headerlink" title="Code Sample"></a>Code Sample</h4><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useNavigate &#125; <span class="keyword">from</span> <span class="string">&#x27;react-router-dom&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">LoginPage</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> navigate = <span class="title function_">useNavigate</span>()</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">handleLogin</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="comment">// 登录逻辑</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 登录成功，跳转到首页</span></span><br><span class="line">    <span class="title function_">navigate</span>(<span class="string">&#x27;/&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;handleLogin&#125;</span>&gt;</span>登录<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>navigate </code>function supports the following usages: </p>
+<ul>
+<li><code>navigate(&#39;/path&#39;) </code>: Jump to a specified path </li>
+<li><code>navigate(-1) </code>rewind to previous page (equivalent to browser back) </li>
+<li><code>navigate(&#39;/path&#39;, &#123; replace: true &#125;) </code>: Replaces the current history without generating a new history.</li>
+</ul>
+<hr>
+<h3 id="2-Use-history-object-React-Router-v5-and-before"><a href="#2-Use-history-object-React-Router-v5-and-before" class="headerlink" title="2. Use history object (React Router v5 and before)"></a>2. Use <code>history </code>object (React Router v5 and before)</h3><p>in React Router v5, you can access <code>history </code>object to implement programmatic navigation. There are two common ways: </p>
+<ul>
+<li>by <code>withRouter</code>High-order component injection <code>history </code>and then call <code>history.push(&#39;/path&#39;) </code></li>
+<li>by <code>useHistory </code>Hook acquisition <code>history </code>object, calling <code>history.push </code>or <code>history.replace </code></li>
+</ul>
+<h4 id="code-Sample-v5"><a href="#code-Sample-v5" class="headerlink" title="code Sample (v5)"></a>code Sample (v5)</h4><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useHistory &#125; <span class="keyword">from</span> <span class="string">&#x27;react-router-dom&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Profile</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> history = <span class="title function_">useHistory</span>()</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">goToSettings</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    history.<span class="title function_">push</span>(<span class="string">&#x27;/settings&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;goToSettings&#125;</span>&gt;</span>设置<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="3-Adoption-component-performs-conditional-redirection"><a href="#3-Adoption-component-performs-conditional-redirection" class="headerlink" title="3. Adoption &lt;Navigate&gt;component performs conditional redirection"></a>3. Adoption <code>&lt;Navigate&gt;</code>component performs conditional redirection</h3><p>although not strictly “programmatic navigation”, in some scenarios, with state judgment, the use <code>&lt;Navigate&gt;</code>the component can also perform conditional rendering to achieve a jump. </p>
+<p>Example: </p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Navigate</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;react-router-dom&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">PrivateRoute</span>(<span class="params">&#123; isLoggedIn, children &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (!isLoggedIn) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">Navigate</span> <span class="attr">to</span>=<span class="string">&quot;/login&quot;</span> <span class="attr">replace</span> /&gt;</span></span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> children</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="third-the-use-of-programmed-navigation-attention-points"><a href="#third-the-use-of-programmed-navigation-attention-points" class="headerlink" title="third, the use of programmed navigation attention points"></a>third, the use of programmed navigation attention points</h2><ol>
+<li><strong>jump after asynchronous operation</strong><br>call The Jump after asynchronous logic such as login and form submission to ensure that the state has been updated during the jump to avoid race conditions. </li>
+<li><strong>Replace History and Append History</strong><br>use <code>replace</code>The option prevents the user from going back to an intermediate step when the user clicks “Back”, improving the user experience. </li>
+<li><strong>Prevent jump dead loop</strong><br>in conditional jumps, avoid infinite jumps because the state is not updated correctly. </li>
+<li><strong>Using relative and absolute paths</strong><br><code>navigate </code>relative paths are supported, and attention should be paid to parsing based on the current path.</li>
+</ol>
+<hr>
+<h2 id="IV-Summary-Form"><a href="#IV-Summary-Form" class="headerlink" title="IV. Summary Form"></a>IV. Summary Form</h2><table>
+<thead>
+<tr>
+<th>method</th>
+<th>React Router version</th>
+<th>description</th>
+<th>sample code</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>useNavigate </code></td>
+<td>v6</td>
+<td>get jump function through Hook, support path and number jump</td>
+<td><code>navigate(&#39;/home&#39;) </code></td>
+</tr>
+<tr>
+<td><code>useHistory </code></td>
+<td>v5</td>
+<td>Hook acquisition <code>history </code>object, calling <code>push </code>or <code>replace </code></td>
+<td><code>history.push(&#39;/home&#39;) </code></td>
+</tr>
+<tr>
+<td><code>withRouter </code></td>
+<td>v5 and before</td>
+<td>high-order component injection <code>history</code>, used in the class component.</td>
+<td><code>this.props.history.push() </code></td>
+</tr>
+<tr>
+<td><code>&lt;Navigate&gt;</code></td>
+<td>v6</td>
+<td>conditional redirection in the form of components for controlled jumps</td>
+<td><code>&lt;Navigate to=&quot;/login&quot; /&gt;</code></td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>programmatic navigation is a key technology for implementing flexible routing in React Router, which is applicable to a variety of dynamic scenarios. React Router v6 recommend to use <code>useNavigate </code>Hook implements jump concisely and efficiently, while v5 and previous versions pass <code>history </code>the object is complete. Understanding the implementation of each version and its details helps developers choose flexibly according to project requirements and improve the navigation experience and code maintainability of the application. </p>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p><strong>question: how to implement programmatic navigation In React project? What’s the way? Please give an example.</strong> </p>
+<p>Answer: </p>
+<p>in React Router v6, use <code>useNavigate </code>Hook implements programmatic navigation. Call <code>navigate(&#39;/path&#39;) </code>can jump to the page, support path jump and digital jump (such as fallback).</p>
+<p>In React Router v5 and before, often through <code>useHistory </code>Hook or <code>withRouter </code>high-order component acquisition <code>history </code>object, calling <code>history.push(&#39;/path&#39;) </code>or <code>history.replace(&#39;/path&#39;) </code>realize the jump. </p>
+<p>In addition, in conditional rendering, you can also use <code>&lt;Navigate&gt;</code>the component does the jump. </p>
+<p>Example: </p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> navigate = <span class="title function_">useNavigate</span>()</span><br><span class="line"><span class="title function_">navigate</span>(<span class="string">&#x27;/home&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>this method allows developers to flexibly control jumps in business logic instead of relying on users to click on links, which is suitable for scenarios such as login jumps and jumps after form submission.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

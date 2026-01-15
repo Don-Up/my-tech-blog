@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="How to achieve code splitting and lazy loading for routingForewordin modern front-end development, the application volume is getting larger and larger"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How to achieve code splitting and lazy loading for routing"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="How to achieve code splitting and lazy loading for routingForewordin modern front-end development, the application volume is getting larger and larger"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How to achieve code splitting and lazy loading for routing - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How to achieve code splitting and lazy loading for routing</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-06-26
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="How-to-achieve-code-splitting-and-lazy-loading-for-routing"><a href="#How-to-achieve-code-splitting-and-lazy-loading-for-routing" class="headerlink" title="How to achieve code splitting and lazy loading for routing"></a>How to achieve code splitting and lazy loading for routing</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in modern front-end development, the application volume is getting larger and larger, and the loading speed of the first screen has become one of the key factors affecting the user experience. To improve performance, Code Splitting and Lazy Loading techniques are widely used. React combines routing to implement code segmentation and lazy loading, which can dynamically load the corresponding page code according to the user’s actual access path, avoid loading all resources at one time, and significantly improve the application loading efficiency. </p>
+<p>This article will combine React Router to introduce in detail how to implement code segmentation and lazy loading at the routing level, analyze its principles and specific implementation methods, and give sample code to help understand. </p>
+<hr>
+<h2 id="what-is-Code-splitting-and-lazy-loading"><a href="#what-is-Code-splitting-and-lazy-loading" class="headerlink" title="what is Code splitting and lazy loading?"></a>what is Code splitting and lazy loading?</h2><p>Code segmentation is to split the application code into multiple independent code blocks (chunks) and load them on demand, thus avoiding packaging into a bulky file. </p>
+<p>Lazy loading is to load a part of the code when it is really needed, rather than loading it all at initialization. </p>
+<p>The combination of the two can effectively reduce the size of the first screen package and improve performance and user experience. </p>
+<hr>
+<h2 id="how-does-React-realize-routing-code-segmentation-and-lazy-loading"><a href="#how-does-React-realize-routing-code-segmentation-and-lazy-loading" class="headerlink" title="how does React realize routing code segmentation and lazy loading?"></a>how does React realize routing code segmentation and lazy loading?</h2><p>React is officially provided. <code>React.lazy </code>and <code>Suspense </code>component to implement lazy loading of code. Combined with React Router, you can Lazily load the components corresponding to the route. </p>
+<h3 id="1-React-lazy"><a href="#1-React-lazy" class="headerlink" title="1. React.lazy"></a>1. React.lazy</h3><p><code>React.lazy</code>Receive a dynamic <code>import() </code>function that returns a lazy-loaded React component. </p>
+<p>Example: </p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">Home</span> = <span class="title class_">React</span>.<span class="title function_">lazy</span>(<span class="function">() =&gt;</span> <span class="keyword">import</span>(<span class="string">&#x27;./Home&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-Suspense"><a href="#2-Suspense" class="headerlink" title="2. Suspense"></a>2. Suspense</h3><p><code>Suspense </code>used to wrap lazy loading components, specifying the loading fallback to display during loading. </p>
+<p>Example: </p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="title class_">Suspense</span> fallback=&#123;<span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Loading...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>&#125;&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">Home</span> /&gt;</span></span></span><br><span class="line">&lt;/<span class="title class_">Suspense</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-Combine-React-Router"><a href="#3-Combine-React-Router" class="headerlink" title="3. Combine React Router"></a>3. Combine React Router</h3><p>in the routing configuration, replace the routing component with a lazy load component, using <code>Suspense </code>wrap routing elements to complete the lazy loading of the routing level. </p>
+<p>Example: </p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span>, &#123; <span class="title class_">Suspense</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">BrowserRouter</span>, <span class="title class_">Routes</span>, <span class="title class_">Route</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;react-router-dom&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">Home</span> = <span class="title class_">React</span>.<span class="title function_">lazy</span>(<span class="function">() =&gt;</span> <span class="keyword">import</span>(<span class="string">&#x27;./pages/Home&#x27;</span>))</span><br><span class="line"><span class="keyword">const</span> <span class="title class_">About</span> = <span class="title class_">React</span>.<span class="title function_">lazy</span>(<span class="function">() =&gt;</span> <span class="keyword">import</span>(<span class="string">&#x27;./pages/About&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">App</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">BrowserRouter</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Suspense</span> <span class="attr">fallback</span>=<span class="string">&#123;</span>&lt;<span class="attr">div</span>&gt;</span>页面加载中...<span class="tag">&lt;/<span class="name">div</span>&gt;</span>&#125;&gt;</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Routes</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/&quot;</span> <span class="attr">element</span>=<span class="string">&#123;</span>&lt;<span class="attr">Home</span> /&gt;</span>&#125; /&gt;</span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/about&quot;</span> <span class="attr">element</span>=<span class="string">&#123;</span>&lt;<span class="attr">About</span> /&gt;</span>&#125; /&gt;</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">Routes</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">Suspense</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">BrowserRouter</span>&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Principle-Analysis"><a href="#Principle-Analysis" class="headerlink" title="Principle Analysis"></a>Principle Analysis</h2><ul>
+<li>React.lazy Internal Use Dynamic Import <code>import() </code>, Webpack generates independent code blocks based on this syntax. </li>
+<li>When a route is accessed, the request of the corresponding module is triggered. </li>
+<li><code>Suspense </code>monitor the loading status of the lazy loading component, render the fallback content when the component is not loaded, and render the real component after the load is successful.</li>
+</ul>
+<hr>
+<h2 id="Optimization-Suggestions-and-Advanced"><a href="#Optimization-Suggestions-and-Advanced" class="headerlink" title="Optimization Suggestions and Advanced"></a>Optimization Suggestions and Advanced</h2><ol>
+<li><strong>refine Route Split</strong><br>different routes can be split into multiple lazy load components according to business scenarios to reduce the size of each block.</li>
+<li><strong>Preload&#x2F;Prefetch</strong><br>magic annotation using Webpack <code>/* webpackPrefetch: true */ </code>preload the routing resource to be accessed. </li>
+<li><strong>Error boundary handling</strong><br>loading failures may occur during lazy loading, and The React error boundary component captures exceptions to provide user-friendly prompts. </li>
+<li><strong>Lazy loading of nested routes</strong><br>lazy loading can also be used for nested routing components to further optimize performance for large applications.</li>
+</ol>
+<hr>
+<h2 id="Table-Summary"><a href="#Table-Summary" class="headerlink" title="Table Summary"></a>Table Summary</h2><table>
+<thead>
+<tr>
+<th>key technology</th>
+<th>role</th>
+<th>method of use</th>
+<th>remarks</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>React.lazy</td>
+<td>implement lazy component loading</td>
+<td><code>const Comp = React.lazy(() =&gt; import(&#39;./Comp&#39;)) </code></td>
+<td>use with Suspense</td>
+</tr>
+<tr>
+<td>Suspense</td>
+<td>show alternate content during lazy loading</td>
+<td><code>&lt;Suspense fallback=&#123;&lt;Loading /&gt;&#125;&gt; &lt;Comp /&gt;&lt;/Suspense&gt;</code></td>
+<td>only lazy loading component packages are supported</td>
+</tr>
+<tr>
+<td>import()</td>
+<td>dynamically import code, trigger code splitting</td>
+<td><code>import(&#39;./Comp&#39;) </code></td>
+<td>Webpack generates a separate chunk</td>
+</tr>
+<tr>
+<td>webpackPrefetch</td>
+<td>resource prefetching to improve access speed</td>
+<td><code>import(/* webpackPrefetch: true */ &#39;./Comp&#39;) </code></td>
+<td>optimize the user experience</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>React.lazy and suspend, combined with React Router, can easily achieve code segmentation and lazy loading at the routing level, effectively improving the application loading speed and user experience. By properly splitting routing components, using preloading strategies, and improving error handling, high-performance and stable SPA applications can be built. </p>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p><strong>question: How do I implement code splitting and lazy loading of routes in React?</strong> </p>
+<p>Answer: </p>
+<p>React provides <code>React.lazy </code>and <code>Suspense </code>component to implement lazy loading. Combined with React Router, the components corresponding to the route can be used <code>React.lazy </code>package, to achieve dynamic import: </p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">Page</span> = <span class="title class_">React</span>.<span class="title function_">lazy</span>(<span class="function">() =&gt;</span> <span class="keyword">import</span>(<span class="string">&#x27;./Page&#x27;</span>))</span><br><span class="line"></span><br><span class="line">&lt;<span class="title class_">Suspense</span> fallback=&#123;<span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>加载中...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>&#125;&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">Page</span> /&gt;</span></span></span><br><span class="line">&lt;/<span class="title class_">Suspense</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>in this way, the components corresponding to the route will be split into independent code blocks and loaded only when accessed. Cooperation <code>Suspense</code>Specifies the display content of the loading state to ensure user experience. Dynamics of Webpack <code>import() </code>the syntax cooperates with React.lazy to implement code segmentation. For large applications, lazy loading routing is an important means to optimize the first screen and reduce resource waste.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

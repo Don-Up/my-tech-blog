@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="How does react implement route guardForewordin front-end single-page application (SPA) development, Route Guard (Route Guard) is an important mechanis"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How does react implement route guard"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="How does react implement route guardForewordin front-end single-page application (SPA) development, Route Guard (Route Guard) is an important mechanis"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How does react implement route guard - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How does react implement route guard</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-03-18
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="How-does-react-implement-route-guard"><a href="#How-does-react-implement-route-guard" class="headerlink" title="How does react implement route guard"></a>How does react implement route guard</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in front-end single-page application (SPA) development, Route Guard (Route Guard) is an important mechanism to ensure application security and good user experience. It can control user access rights and prevent unauthorized users from accessing sensitive pages, such as user Center, order page, etc. React itself does not have a built-in route guard mechanism, but with the help of React Router and some programming skills, you can flexibly implement the route guard function. </p>
+<p>This article will discuss in depth several common solutions for React to implement route guards, including component-based permission control, high-level components (HOC), hook functions, etc., combined with the features of React Router v6, supplemented by sample code, to help you understand and practice the implementation of route guards. </p>
+<hr>
+<h2 id="What-is-a-route-guard"><a href="#What-is-a-route-guard" class="headerlink" title="What is a route guard?"></a>What is a route guard?</h2><p>The route guard checks the permission of the target route or judges other conditions when the route is jumped, and only when the conditions are met can the corresponding page be entered. Otherwise, it is redirected to the login page or prompted that there is no permission. </p>
+<p>Common uses for route guards include: </p>
+<ul>
+<li>user authentication (login state verification) </li>
+<li>permission Role Control </li>
+<li>page Access Limit </li>
+<li>dynamic Routing Permission Filtering</li>
+</ul>
+<hr>
+<h2 id="React-Several-Ideas-for-Realizing-Route-Guard"><a href="#React-Several-Ideas-for-Realizing-Route-Guard" class="headerlink" title="React Several Ideas for Realizing Route Guard"></a>React Several Ideas for Realizing Route Guard</h2><h3 id="1-Component-based-packaging-guards-PrivateRoute"><a href="#1-Component-based-packaging-guards-PrivateRoute" class="headerlink" title="1. Component-based packaging guards (PrivateRoute)"></a>1. Component-based packaging guards (PrivateRoute)</h3><p>React Router can encapsulate a routing component <code>PrivateRoute </code>to determine whether access is allowed, and if the conditions are not met, redirect.</p>
+<p>Example (React Router v6): </p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Navigate</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;react-router-dom&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">PrivateRoute</span>(<span class="params">&#123; children, isAuthenticated &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (!isAuthenticated) &#123;</span><br><span class="line">    <span class="comment">// 未登录，跳转到登录页</span></span><br><span class="line">    <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">Navigate</span> <span class="attr">to</span>=<span class="string">&quot;/login&quot;</span> <span class="attr">replace</span> /&gt;</span></span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 已登录，渲染子组件</span></span><br><span class="line">  <span class="keyword">return</span> children</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>usage: </p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="title class_">Routes</span>&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/login&quot;</span> <span class="attr">element</span>=<span class="string">&#123;</span>&lt;<span class="attr">Login</span> /&gt;</span>&#125; /&gt;</span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">Route</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    <span class="attr">path</span>=<span class="string">&quot;/dashboard&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    <span class="attr">element</span>=<span class="string">&#123;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      &lt;<span class="attr">PrivateRoute</span> <span class="attr">isAuthenticated</span>=<span class="string">&#123;userLoggedIn&#125;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Dashboard</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">PrivateRoute</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    &#125;</span></span><br><span class="line"><span class="language-xml">  /&gt;</span></span><br><span class="line">&lt;/<span class="title class_">Routes</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>this mode is simple and intuitive, suitable for most permission verification needs. </p>
+<hr>
+<h3 id="Use-higher-level-components-HOC-to-encapsulate-permission-control"><a href="#Use-higher-level-components-HOC-to-encapsulate-permission-control" class="headerlink" title="Use higher-level components (HOC) to encapsulate permission control."></a>Use higher-level components (HOC) to encapsulate permission control.</h3><p>You can write a high-level component to wrap the page component that needs authentication, and internally determine the login state and redirect it. </p>
+<p>Example: </p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Navigate</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;react-router-dom&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">withAuth</span>(<span class="params">Component</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> <span class="title function_">WrappedComponent</span>(<span class="params">props</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> isAuthenticated = <span class="comment">/* 获取登录状态逻辑 */</span></span><br><span class="line">    <span class="keyword">if</span> (!isAuthenticated) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">Navigate</span> <span class="attr">to</span>=<span class="string">&quot;/login&quot;</span> <span class="attr">replace</span> /&gt;</span></span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">Component</span> &#123;<span class="attr">...props</span>&#125; /&gt;</span></span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">ProtectedDashboard</span> = <span class="title function_">withAuth</span>(<span class="title class_">Dashboard</span>)</span><br></pre></td></tr></table></figure>
+
+<p>then the route directly uses <code>ProtectedDashboard </code>, to achieve multiplexing and logical separation. </p>
+<hr>
+<h3 id="Use-React-Router-v6-useLocation-and-useNavigate"><a href="#Use-React-Router-v6-useLocation-and-useNavigate" class="headerlink" title="Use React Router v6 useLocation and useNavigate "></a>Use React Router v6 <code>useLocation </code>and <code>useNavigate </code></h3><p>combined with the hook of React Router, dynamic jump can be realized within the component based on the current route and status. </p>
+<p>Example: </p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useEffect &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; useLocation, useNavigate &#125; <span class="keyword">from</span> <span class="string">&#x27;react-router-dom&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Dashboard</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> isAuthenticated = <span class="comment">/* 判断登录状态 */</span></span><br><span class="line">  <span class="keyword">const</span> navigate = <span class="title function_">useNavigate</span>()</span><br><span class="line">  <span class="keyword">const</span> location = <span class="title function_">useLocation</span>()</span><br><span class="line"></span><br><span class="line">  <span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (!isAuthenticated) &#123;</span><br><span class="line">      <span class="comment">// 传递来源路径用于登录后重定向</span></span><br><span class="line">      <span class="title function_">navigate</span>(<span class="string">&#x27;/login&#x27;</span>, &#123; <span class="attr">state</span>: &#123; <span class="attr">from</span>: location &#125;, <span class="attr">replace</span>: <span class="literal">true</span> &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;, [isAuthenticated, navigate, location])</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> isAuthenticated ? <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>仪表盘内容<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span> : <span class="literal">null</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>this method is suitable for flexible control of route access and jump within the page component. </p>
+<hr>
+<h3 id="Unified-authority-judgment-at-routing-level"><a href="#Unified-authority-judgment-at-routing-level" class="headerlink" title="Unified authority judgment at routing level"></a>Unified authority judgment at routing level</h3><p>in some large projects, permissions will be managed uniformly at the routing configuration layer, for example, using the routing configuration object to add <code>meta </code>field, with the interceptor or guard function to judge. </p>
+<p>Example: </p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> routes = [</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">path</span>: <span class="string">&#x27;/dashboard&#x27;</span>,</span><br><span class="line">    <span class="attr">element</span>: <span class="language-xml"><span class="tag">&lt;<span class="name">Dashboard</span> /&gt;</span></span>,</span><br><span class="line">    <span class="attr">meta</span>: &#123; <span class="attr">requiresAuth</span>: <span class="literal">true</span> &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">path</span>: <span class="string">&#x27;/login&#x27;</span>,</span><br><span class="line">    <span class="attr">element</span>: <span class="language-xml"><span class="tag">&lt;<span class="name">Login</span> /&gt;</span></span></span><br><span class="line">  &#125;</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 自定义路由守卫函数</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">AuthGuard</span>(<span class="params">&#123; children &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> isAuthenticated = <span class="comment">/* 登录状态 */</span></span><br><span class="line">  <span class="keyword">const</span> location = <span class="title function_">useLocation</span>()</span><br><span class="line">  <span class="keyword">if</span> (children.<span class="property">props</span>.<span class="property">meta</span>?.<span class="property">requiresAuth</span> &amp;&amp; !isAuthenticated) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">Navigate</span> <span class="attr">to</span>=<span class="string">&quot;/login&quot;</span> <span class="attr">state</span>=<span class="string">&#123;&#123;</span> <span class="attr">from:</span> <span class="attr">location</span> &#125;&#125; <span class="attr">replace</span> /&gt;</span></span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> children</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 渲染时包裹守卫</span></span><br><span class="line">&lt;<span class="title class_">Routes</span>&gt;</span><br><span class="line">  &#123;routes.<span class="title function_">map</span>(<span class="function"><span class="params">route</span> =&gt;</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">Route</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      <span class="attr">key</span>=<span class="string">&#123;route.path&#125;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      <span class="attr">path</span>=<span class="string">&#123;route.path&#125;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      <span class="attr">element</span>=<span class="string">&#123;</span>&lt;<span class="attr">AuthGuard</span>&gt;</span>&#123;route.element&#125;<span class="tag">&lt;/<span class="name">AuthGuard</span>&gt;</span>&#125;</span></span><br><span class="line"><span class="language-xml">    /&gt;</span></span><br><span class="line">  ))&#125;</span><br><span class="line">&lt;/<span class="title class_">Routes</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>this model is suitable for projects with complex permissions and numerous routes, with clear logic and easy maintenance.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>React itself does not have a built-in route guard mechanism, but combined with the React Router and React component features, you can flexibly implement a variety of route guard solutions. The core idea is to determine whether to allow access to the target page or redirect to the login page based on the user’s login status or permissions, when the route matches or before the page is rendered. </p>
+<p>Different options for different project requirements: simple projects use component packaging. <code>PrivateRoute </code>, complex projects can be combined with routing configuration and guard components to achieve unified access control. At the same time, with React Router v6 New <code>&lt;Navigate&gt;</code>, <code>useNavigate </code>, <code>useLocation </code>such as API, guard implementation is more concise and powerful. </p>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p><strong>question: How to implement route guard In React project?</strong> </p>
+<p>Answer: </p>
+<p>React itself does not have built-in support for route guards, but can be implemented through React Router. Common practice is to encapsulate a higher-order component or a specialized <code>PrivateRoute </code>component to determine the user’s login status or permissions before rendering the target page, and if the conditions are not met, pass <code>&lt;Navigate&gt;</code>component redirects to a login page or other page.</p>
+<p>Alternatively, it can be used inside the page component <code>useEffect </code>binding <code>useNavigate </code>hook, Judge permissions and jump when the component is mounted. For large projects, permission meta information is usually added to the route declaration in combination with route configuration, and permission verification is centrally managed through unified Guard components or route interception logic. </p>
+<p>On the whole, the core is to judge whether to allow access to the current route according to the user’s state, and jump if not, to ensure page security and good experience.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

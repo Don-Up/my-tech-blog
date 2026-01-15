@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="How to implement route authenticationForewordin modern single-page application (SPA), route authentication is an important mechanism to ensure applica"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How to implement route authentication"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="How to implement route authenticationForewordin modern single-page application (SPA), route authentication is an important mechanism to ensure applica"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How to implement route authentication - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How to implement route authentication</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-04-22
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="How-to-implement-route-authentication"><a href="#How-to-implement-route-authentication" class="headerlink" title="How to implement route authentication"></a>How to implement route authentication</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in modern single-page application (SPA), route authentication is an important mechanism to ensure application security and user experience. Through route authentication, you can control user access permissions and prevent users who are not logged in or have insufficient permissions from accessing specific pages, such as user personal center and background management pages. In The React ecosystem, although React Router is responsible for route management, it does not contain authentication functions. Therefore, developers are required to design reasonable authentication solutions based on business requirements. </p>
+<p>This article details the concept, implementation, and common practices of routing authentication, supplemented by code examples and thought analysis, to help developers build secure and user-friendly routing access control. </p>
+<hr>
+<h2 id="what-is-routing-authentication"><a href="#what-is-routing-authentication" class="headerlink" title="what is routing authentication"></a>what is routing authentication</h2><p>route authentication refers to verifying the identity and permissions of a user before a route jump to determine whether the user has the right to access the target page. If the requirements are not met, a redirect (such as a jump to the login page) or a no-permission prompt is usually displayed. </p>
+<p>Authentication usually consists of two core elements: </p>
+<ol>
+<li><strong>identity (Authentication)</strong> : Determine whether the user is logged in. </li>
+<li><strong>Permission Authorization (Authorization)</strong> : Determine whether the user has permission to access a route.</li>
+</ol>
+<hr>
+<h2 id="Common-Ideas-for-Implementing-Routing-Authentication"><a href="#Common-Ideas-for-Implementing-Routing-Authentication" class="headerlink" title="Common Ideas for Implementing Routing Authentication"></a>Common Ideas for Implementing Routing Authentication</h2><h3 id="1-Encapsulate-the-PrivateRoute-component"><a href="#1-Encapsulate-the-PrivateRoute-component" class="headerlink" title="1. Encapsulate the PrivateRoute component"></a>1. Encapsulate the PrivateRoute component</h3><p>it is most common practice to create a wrapper component <code>PrivateRoute </code>, in which the authentication logic judgment is made. If not logged in, redirect to the login page, otherwise render the target component normally.</p>
+<p>Sample code (React Router v6): </p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Navigate</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;react-router-dom&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">PrivateRoute</span>(<span class="params">&#123; children, isAuthenticated &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (!isAuthenticated) &#123;</span><br><span class="line">    <span class="comment">// 未认证用户重定向登录页</span></span><br><span class="line">    <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">Navigate</span> <span class="attr">to</span>=<span class="string">&quot;/login&quot;</span> <span class="attr">replace</span> /&gt;</span></span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> children</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>routing configuration example: </p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="title class_">Routes</span>&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/login&quot;</span> <span class="attr">element</span>=<span class="string">&#123;</span>&lt;<span class="attr">Login</span> /&gt;</span>&#125; /&gt;</span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">Route</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    <span class="attr">path</span>=<span class="string">&quot;/dashboard&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    <span class="attr">element</span>=<span class="string">&#123;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      &lt;<span class="attr">PrivateRoute</span> <span class="attr">isAuthenticated</span>=<span class="string">&#123;userLoggedIn&#125;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Dashboard</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">PrivateRoute</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    &#125;</span></span><br><span class="line"><span class="language-xml">  /&gt;</span></span><br><span class="line">&lt;/<span class="title class_">Routes</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>this method is clear and easy to maintain, and is suitable for most authentication requirements. </p>
+<hr>
+<h3 id="High-level-components-HOC-to-achieve-authentication"><a href="#High-level-components-HOC-to-achieve-authentication" class="headerlink" title="High-level components (HOC) to achieve authentication"></a>High-level components (HOC) to achieve authentication</h3><p>the component that requires authentication is wrapped through the HOC to implement permission verification and redirection. </p>
+<p>Example: </p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Navigate</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;react-router-dom&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">withAuth</span>(<span class="params">Component</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> <span class="title function_">AuthenticatedComponent</span>(<span class="params">props</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> isAuthenticated = <span class="comment">/* 获取登录状态 */</span></span><br><span class="line">    <span class="keyword">if</span> (!isAuthenticated) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">Navigate</span> <span class="attr">to</span>=<span class="string">&quot;/login&quot;</span> <span class="attr">replace</span> /&gt;</span></span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">Component</span> &#123;<span class="attr">...props</span>&#125; /&gt;</span></span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">ProtectedDashboard</span> = <span class="title function_">withAuth</span>(<span class="title class_">Dashboard</span>)</span><br></pre></td></tr></table></figure>
+
+<p>when used, the route points directly to <code>ProtectedDashboard </code>. </p>
+<hr>
+<h3 id="Combine-the-useEffect-hook-to-authenticate-the-component"><a href="#Combine-the-useEffect-hook-to-authenticate-the-component" class="headerlink" title="Combine the useEffect hook to authenticate the component."></a>Combine the useEffect hook to authenticate the component.</h3><p>In some cases, it can be used inside the page component. <code>useEffect </code>dynamic control page jump based on authentication status. </p>
+<p>Example: </p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useEffect &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; useNavigate, useLocation &#125; <span class="keyword">from</span> <span class="string">&#x27;react-router-dom&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Dashboard</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> isAuthenticated = <span class="comment">/* 判断登录状态 */</span></span><br><span class="line">  <span class="keyword">const</span> navigate = <span class="title function_">useNavigate</span>()</span><br><span class="line">  <span class="keyword">const</span> location = <span class="title function_">useLocation</span>()</span><br><span class="line"></span><br><span class="line">  <span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (!isAuthenticated) &#123;</span><br><span class="line">      <span class="title function_">navigate</span>(<span class="string">&#x27;/login&#x27;</span>, &#123; <span class="attr">state</span>: &#123; <span class="attr">from</span>: location &#125;, <span class="attr">replace</span>: <span class="literal">true</span> &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;, [isAuthenticated, navigate, location])</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> isAuthenticated ? <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>仪表盘内容<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span> : <span class="literal">null</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>this method is flexible and can realize complex logic such as redirection after login. </p>
+<hr>
+<h3 id="Add-permission-fields-to-the-routing-configuration"><a href="#Add-permission-fields-to-the-routing-configuration" class="headerlink" title="Add permission fields to the routing configuration"></a>Add permission fields to the routing configuration</h3><p>in complex projects, you can add permission fields to the routing configuration object <code>meta </code>, Judge access rights through unified Guard components or interception logic. </p>
+<p>Example: </p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> routes = [</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">path</span>: <span class="string">&#x27;/dashboard&#x27;</span>,</span><br><span class="line">    <span class="attr">element</span>: <span class="language-xml"><span class="tag">&lt;<span class="name">Dashboard</span> /&gt;</span></span>,</span><br><span class="line">    <span class="attr">meta</span>: &#123; <span class="attr">requiresAuth</span>: <span class="literal">true</span>, <span class="attr">roles</span>: [<span class="string">&#x27;admin&#x27;</span>, <span class="string">&#x27;user&#x27;</span>] &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">path</span>: <span class="string">&#x27;/login&#x27;</span>,</span><br><span class="line">    <span class="attr">element</span>: <span class="language-xml"><span class="tag">&lt;<span class="name">Login</span> /&gt;</span></span></span><br><span class="line">  &#125;</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">AuthGuard</span>(<span class="params">&#123; children &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> isAuthenticated = <span class="comment">/* 登录状态 */</span></span><br><span class="line">  <span class="keyword">const</span> userRole = <span class="comment">/* 用户角色 */</span></span><br><span class="line">  <span class="keyword">const</span> location = <span class="title function_">useLocation</span>()</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (children.<span class="property">props</span>.<span class="property">meta</span>?.<span class="property">requiresAuth</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!isAuthenticated) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">Navigate</span> <span class="attr">to</span>=<span class="string">&quot;/login&quot;</span> <span class="attr">state</span>=<span class="string">&#123;&#123;</span> <span class="attr">from:</span> <span class="attr">location</span> &#125;&#125; <span class="attr">replace</span> /&gt;</span></span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (</span><br><span class="line">      children.<span class="property">props</span>.<span class="property">meta</span>.<span class="property">roles</span> &amp;&amp;</span><br><span class="line">      !children.<span class="property">props</span>.<span class="property">meta</span>.<span class="property">roles</span>.<span class="title function_">includes</span>(userRole)</span><br><span class="line">    ) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>无权限访问<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> children</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用时包裹路由元素</span></span><br><span class="line">&lt;<span class="title class_">Routes</span>&gt;</span><br><span class="line">  &#123;routes.<span class="title function_">map</span>(<span class="function"><span class="params">route</span> =&gt;</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">Route</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      <span class="attr">key</span>=<span class="string">&#123;route.path&#125;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      <span class="attr">path</span>=<span class="string">&#123;route.path&#125;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      <span class="attr">element</span>=<span class="string">&#123;</span>&lt;<span class="attr">AuthGuard</span>&gt;</span>&#123;route.element&#125;<span class="tag">&lt;/<span class="name">AuthGuard</span>&gt;</span>&#125;</span></span><br><span class="line"><span class="language-xml">    /&gt;</span></span><br><span class="line">  ))&#125;</span><br><span class="line">&lt;/<span class="title class_">Routes</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>the scheme is suitable for applications that require fine-grained permission control and role management. </p>
+<hr>
+<h2 id="Technical-Points-of-Authentication"><a href="#Technical-Points-of-Authentication" class="headerlink" title="Technical Points of Authentication"></a>Technical Points of Authentication</h2><table>
+<thead>
+<tr>
+<th>key Points</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Authentication Data Source</td>
+<td>usually obtained from Global state (such as Redux, Context) or local storage (such as cookie, localStorage)</td>
+</tr>
+<tr>
+<td>redirect implementation</td>
+<td>using React Router <code>&lt;Navigate&gt;</code>component or <code>useNavigate </code>hook implementation</td>
+</tr>
+<tr>
+<td>redirect after login</td>
+<td>pass the previous page path through the routing State to realize jumping back to the original page after successful login</td>
+</tr>
+<tr>
+<td>asynchronous authentication</td>
+<td>if the request interface is required for authentication, make sure that the authentication status is determined before rendering the route to avoid flickering or erroneous jump.</td>
+</tr>
+<tr>
+<td>Role Permission Breakdown</td>
+<td>support multi-level authentication based on role or permission point to achieve more fine-grained access control</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>routing authentication is a key link to protect application security and user experience. In The React project, authentication logic can be implemented by encapsulating private routing components, high-level components, routing configurations, and hooks. The core is to determine whether to allow access to a specific route based on user identity and permissions, and to redirect or prompt permissions in due course. </p>
+<p>The selection of an appropriate authentication scheme should take into account the complexity of the project, business requirements and team maintenance capabilities. Through the reasonable design of authentication mechanism, to ensure that the application is both safe and friendly. </p>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p><strong>question: how to implement route authentication in The React project?</strong> </p>
+<p>Answer:</p>
+<p>The implementation of route authentication is mainly based on whether the user is logged in and permission to determine whether to allow access to a page before the route matches. A common way is to encapsulate a <code>PrivateRoute </code>component, internal through the authentication state judgment, failed to use <code>&lt;Navigate&gt;</code>jump to the login page; Pass the render target component. </p>
+<p>You can also wrap the page with high-level components to achieve reuse and logical separation. For complex permissions, permission fields are often added to the routing configuration and managed centrally with the unified guard component. </p>
+<p>Within the component, it is also available <code>useEffect </code>hook and <code>useNavigate </code>realize the redirection after authentication and login. In general, the core is authentication judgment and redirection control to ensure safe access and good experience.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
