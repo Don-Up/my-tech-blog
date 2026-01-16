@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="The difference and function of pseudo-element and pseudo-class in CSSforewordpseudo-classes (pseudo-classes) and pseudo-elements (pseudo-elements) are"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="The difference and function of pseudo-element and pseudo-class in CSS"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="The difference and function of pseudo-element and pseudo-class in CSSforewordpseudo-classes (pseudo-classes) and pseudo-elements (pseudo-elements) are"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>The difference and function of pseudo-element and pseudo-class in CSS - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>The difference and function of pseudo-element and pseudo-class in CSS</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-08-05
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/CSS/">#CSS</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/CSS/">CSS</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="The-difference-and-function-of-pseudo-element-and-pseudo-class-in-CSS"><a href="#The-difference-and-function-of-pseudo-element-and-pseudo-class-in-CSS" class="headerlink" title="The difference and function of pseudo-element and pseudo-class in CSS"></a>The difference and function of pseudo-element and pseudo-class in CSS</h1><h2 id="foreword"><a href="#foreword" class="headerlink" title="foreword"></a>foreword</h2><p>pseudo-classes (pseudo-classes) and pseudo-elements (pseudo-elements) are two special selectors in CSS that select a particular state of an element or a part of an element. They extend the functionality of selectors, allowing developers to fine-grained style control for different states or details of an element. Understanding their differences and roles is important for writing efficient and precise styles. </p>
+<h2 id="Definition-and-Function-of-Pseudo-Class"><a href="#Definition-and-Function-of-Pseudo-Class" class="headerlink" title="Definition and Function of Pseudo Class"></a>Definition and Function of Pseudo Class</h2><p>pseudo-classes are used to describe special states of elements, such as mouse over, focus, visited links, and so on. It does not create new elements directly, but applies styles when matching elements. Common pseudo-classes include <code>:hover </code>(Mouse over), <code>:focus </code>(Get focus), <code>: nth-child() </code>(Which child element), <code>:active </code>(When activated) and so on. </p>
+<p>Pseudo-classes are mainly used for style control of dynamic state and selection based on the position or structural relationship of elements in the document. </p>
+<h2 id="Definition-and-Function-of-Pseudo-element"><a href="#Definition-and-Function-of-Pseudo-element" class="headerlink" title="Definition and Function of Pseudo-element"></a>Definition and Function of Pseudo-element</h2><p>pseudo-elements are used to create virtual subparts of elements, allowing you to add styles to specific parts of the element without changing the HTML structure. They are represented by a double-colon syntax, such <code>::before </code>, <code>::after</code>, <code>::first-letter </code>, <code>::first-line </code>. </p>
+<p>The pseudo-element actually generates a virtual element, either before or after the content of the target element (e. G. <code>::before </code>and <code>::after </code>), you can insert content, set decorations, adjust typesetting, etc., expanding the expressive power of the page. </p>
+<h2 id="Main-differences-between-pseudo-classes-and-pseudo-elements"><a href="#Main-differences-between-pseudo-classes-and-pseudo-elements" class="headerlink" title="Main differences between pseudo-classes and pseudo-elements"></a>Main differences between pseudo-classes and pseudo-elements</h2><p>first, the pseudo-class selects the state or relationship of an existing element, and the pseudo-element creates a virtual element. Second, the pseudo-class uses a single colon <code>: </code>(Before CSS3), pseudo-elements with double colons <code>:: </code>to distinguish, modern browsers support double-colon syntax for compatibility, and single-colon is also compatible with pseudo-elements. </p>
+<p>Furthermore, the pseudo-class does not affect the document structure, does not produce additional elements, and the pseudo-element is equivalent to adding a child node. </p>
+<h2 id="Application-Scenarios"><a href="#Application-Scenarios" class="headerlink" title="Application Scenarios"></a>Application Scenarios</h2><p>pseudo-classes are mostly used for interactive styles, such as button hover discoloration, form element focus style, etc. Pseudo-elements are mostly used for decorative content, such as adding icons, backgrounds or text before and after elements, and making underlines. </p>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p>pseudo-classes are selectors used by CSS to select a particular state of an element, such <code>:hover </code>,<code>: nth-child() </code>they do not generate new elements, but only apply styles to existing elements under certain conditions. Pseudo elements are used to create virtual child elements of an element, such <code>::before </code>and <code>::after </code>you can insert content and decorate elements. The pseudo-class is represented by a single colon, and the pseudo-element is represented by a double colon, with different functions and uses. </p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>pseudo-classes and pseudo-elements are important additions to CSS selectors for state selection and content decoration, respectively. Mastering their differences and usage can help developers achieve richer and more flexible page effects, and enhance user experience and visual expression.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
