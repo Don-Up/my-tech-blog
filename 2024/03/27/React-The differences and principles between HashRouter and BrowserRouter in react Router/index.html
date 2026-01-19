@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="The differences and principles between HashRouter and BrowserRouter in react RouterForewordin The React single-page application, the implementation of"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="The differences and principles between HashRouter and BrowserRouter in react Router"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="The differences and principles between HashRouter and BrowserRouter in react RouterForewordin The React single-page application, the implementation of"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>The differences and principles between HashRouter and BrowserRouter in react Router - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>The differences and principles between HashRouter and BrowserRouter in react Router</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-03-27
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="The-differences-and-principles-between-HashRouter-and-BrowserRouter-in-react-Router"><a href="#The-differences-and-principles-between-HashRouter-and-BrowserRouter-in-react-Router" class="headerlink" title="The differences and principles between HashRouter and BrowserRouter in react Router"></a>The differences and principles between HashRouter and BrowserRouter in react Router</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in The React single-page application, the implementation of routing is the key to building a good user experience. As the most mainstream routing library in the React ecosystem, React Router provides a variety of routing containers. <code>BrowserRouter </code>and <code>HashRouter </code>. Understanding the differences between the two and the principles behind them will help developers choose the appropriate routing scheme according to the project requirements, thereby improving the stability and compatibility of the application. </p>
+<p>This paper will analyze in depth <code>BrowserRouter </code>and <code>HashRouter </code>the core differences, implementation principles, and applicable scenarios, combined with code examples and tables to help understand. </p>
+<hr>
+<h2 id="The-difference-between-HashRouter-and-BrowserRouter"><a href="#The-difference-between-HashRouter-and-BrowserRouter" class="headerlink" title="The difference between HashRouter and BrowserRouter"></a>The difference between HashRouter and BrowserRouter</h2><table>
+<thead>
+<tr>
+<th>characteristics</th>
+<th>BrowserRouter</th>
+<th>HashRouter</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>URL form</td>
+<td>using the HTML5 History API, the path is as follows: <code>/home </code></td>
+<td>example path using URL hash: <code>/#/home </code></td>
+</tr>
+<tr>
+<td>route matching method</td>
+<td>match according to the pathname of the browser address bar</td>
+<td>According to the URL <code># </code>the latter part is matched</td>
+</tr>
+<tr>
+<td>browser Support</td>
+<td>modern browser support, relying on History API</td>
+<td>almost all browsers support it, because hash changes do not trigger a page refresh</td>
+</tr>
+<tr>
+<td>server Configuration Requirements</td>
+<td>requires server configuration redirection, all paths return index.html</td>
+<td>no special server configuration is required, the hash is not sent to the server</td>
+</tr>
+<tr>
+<td>page Refresh Behavior</td>
+<td>directly request the path, when refreshing, the corresponding path will be requested from the server.</td>
+<td>When refreshing, the root path is still Accessed. The hash is processed by the browser and does not request the server.</td>
+</tr>
+<tr>
+<td>SEO friendly degree</td>
+<td>more friendly because the path is a normal URL</td>
+<td>poor because search engines usually ignore the hash part</td>
+</tr>
+<tr>
+<td>applicable Scenarios</td>
+<td>production environment, server configurable SPA routing redirection</td>
+<td>when it is not convenient to configure the server, or when browser compatibility requirements are high.</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="The-Principle-of-HashRouter"><a href="#The-Principle-of-HashRouter" class="headerlink" title="The Principle of HashRouter"></a>The Principle of HashRouter</h2><p><code>HashRouter </code>browser-based URL <code>hash </code>changes implement routing. In the URL. <code>#</code>The part after the number is called a “hash fragment”, which is not sent to the server by the browser and therefore does not cause the page to refresh. </p>
+<p><code>HashRouter </code>the working principle is to listen to the browser. <code>hashchange </code>event, when <code>window.location.hash </code>when the change is made, The React Router matches the corresponding component according to the new hash path and renders it. </p>
+<p>Schematic: </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http://example.com/#/about</span><br><span class="line">                 ↑ 监听并读取 hash 部分进行路由匹配</span><br></pre></td></tr></table></figure>
+
+<p>code example: </p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">HashRouter</span>, <span class="title class_">Routes</span>, <span class="title class_">Route</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;react-router-dom&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">App</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">HashRouter</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Routes</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/&quot;</span> <span class="attr">element</span>=<span class="string">&#123;</span>&lt;<span class="attr">Home</span> /&gt;</span>&#125; /&gt;</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/about&quot;</span> <span class="attr">element</span>=<span class="string">&#123;</span>&lt;<span class="attr">About</span> /&gt;</span>&#125; /&gt;</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">Routes</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">HashRouter</span>&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>the advantage is that the routing can be realized without server support, and the compatibility is good. The disadvantage is that the URL has <code># </code>symbol, not friendly to SEO, and URL is not beautiful enough. </p>
+<hr>
+<h2 id="Third-the-principle-of-BrowserRouter"><a href="#Third-the-principle-of-BrowserRouter" class="headerlink" title="Third, the principle of BrowserRouter"></a>Third, the principle of BrowserRouter</h2><p><code>BrowserRouter </code>take advantage of HTML5’s History API (including <code>pushState </code>, <code>replaceState </code>and <code>popstate </code>event) to manipulate the browser history to implement route jumps without refreshing the page. </p>
+<p>It is based on the path name of the browser ( <code>window.location.pathname</code>) to match, when the user switches pages, <code>BrowserRouter </code>will call <code>history.pushState </code>modify the address bar path, but do not trigger a page refresh, and trigger the React Router internal listening event to render the corresponding page. </p>
+<p>Schematic: </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http://example.com/about</span><br><span class="line">↑ 浏览器路径名用于路由匹配</span><br></pre></td></tr></table></figure>
+
+<p>code example: </p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">BrowserRouter</span>, <span class="title class_">Routes</span>, <span class="title class_">Route</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;react-router-dom&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">App</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">BrowserRouter</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Routes</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/&quot;</span> <span class="attr">element</span>=<span class="string">&#123;</span>&lt;<span class="attr">Home</span> /&gt;</span>&#125; /&gt;</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/about&quot;</span> <span class="attr">element</span>=<span class="string">&#123;</span>&lt;<span class="attr">About</span> /&gt;</span>&#125; /&gt;</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">Routes</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">BrowserRouter</span>&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>it is important to note that refreshing or directly accessing non-root paths (such <code>/about </code>), the browser requests the corresponding path file from the server. If the server is not configured with redirection, 404 may be returned. Therefore, the production environment uses <code>BrowserRouter </code>in conjunction with the server configuration, all paths are redirected to the portal HTML. </p>
+<hr>
+<h2 id="Fourth-the-choice-of-the-two-and-the-applicable-scenario"><a href="#Fourth-the-choice-of-the-two-and-the-applicable-scenario" class="headerlink" title="Fourth, the choice of the two and the applicable scenario."></a>Fourth, the choice of the two and the applicable scenario.</h2><p>Which router to choose, mainly according to the project needs and server environment: </p>
+<ul>
+<li><p><strong>scenarios using BrowserRouter</strong> </p>
+</li>
+<li><p>the server can configure SPA route redirection (for example, nginx configures all paths to redirect <code>index.html </code>). </p>
+</li>
+<li><p>Need beautiful URL, No. <code># </code>symbol. </p>
+</li>
+<li><p>Focus on SEO and browser history management.</p>
+</li>
+<li><p><strong>Scenarios using HashRouter</strong> </p>
+</li>
+<li><p>the server cannot configure redirection, or the access path causes a 404. </p>
+</li>
+<li><p>Compatible with older browsers or specific environments (for example, GitHub Pages only supports static file hosting). </p>
+</li>
+<li><p>The project does not pay attention to SEO, and the URL contains <code># </code>does not affect the user experience.</p>
+</li>
+</ul>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p><code>BrowserRouter </code>and <code>HashRouter </code>are two common routing containers in React Router. The core difference lies in the path management mechanism. <code>BrowserRouter </code>relying on HTML5 History API, the path is beautiful but requires the server to support redirection; <code>HashRouter </code>using the hash part of the URL has good compatibility and does not require server support, but the URL is not beautiful and SEO is poor. </p>
+<p>Understanding the principles and advantages and disadvantages of the two is helpful to select the appropriate routing strategy for the specific project environment and achieve stable and efficient front-end routing management. </p>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p><strong>question: What is the difference between HashRouter and BrowserRouter In React Router? What is their principle?</strong> </p>
+<p>Answer: <code>BrowserRouter</code>Use the HTML5 History API to operate the browser’s <code>pushState </code>and <code>replaceState </code>to manage the URL path and switch routes without refresh. Its URL is in the normal path format, which is suitable for production environments with server configuration support. However, when refreshing the non-root path, the server needs to be redirected to the entry file, otherwise 404 will occur. </p>
+<p><code>HashRouter </code>browser-based URL hash ( <code># </code>) Change to achieve routing, will not send requests to the server, so no server configuration is required, and compatibility is good. The URL has <code># </code>not friendly to SEO. </p>
+<p>In general, if the server is configurable with redirection, you recommend use <code>BrowserRouter </code>; If the server has more restrictions or high compatibility requirements, you can use <code>HashRouter </code>.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

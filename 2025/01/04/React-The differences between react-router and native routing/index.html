@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="The differences between react-router and native routingForewordwhen building a single-page application (SPA), the management of front-end routing beco"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="The differences between react-router and native routing"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="The differences between react-router and native routingForewordwhen building a single-page application (SPA), the management of front-end routing beco"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>The differences between react-router and native routing - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>The differences between react-router and native routing</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-01-04
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="The-differences-between-react-router-and-native-routing"><a href="#The-differences-between-react-router-and-native-routing" class="headerlink" title="The differences between react-router and native routing"></a>The differences between react-router and native routing</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>when building a single-page application (SPA), the management of front-end routing becomes a key link. React-Router is the most commonly used routing Library in The React ecosystem, helping developers easily implement client-side routing. Native routing is the browser’s own routing mechanism, which loads different pages based on URL changes. Understanding the difference between React-Router and native routing helps us to better design page navigation logic and improve user experience and development efficiency. </p>
+<p>This article will systematically compare React-Router and native routes in terms of routing mechanisms, page loading methods, state management, code examples, and usage scenarios, and analyze their similarities and differences in depth. </p>
+<hr>
+<h2 id="Comparison-of-routing-mechanisms"><a href="#Comparison-of-routing-mechanisms" class="headerlink" title="Comparison of routing mechanisms"></a>Comparison of routing mechanisms</h2><h3 id="native-Routing"><a href="#native-Routing" class="headerlink" title="native Routing"></a>native Routing</h3><p>the native route of the browser depends on the change of the URL address bar to load different pages. Usually, the browser requests the server to obtain the complete HTML document to realize page jump and refresh. Key features include: </p>
+<ul>
+<li>A change in the address bar causes the browser to initiate a request to the server. </li>
+<li>Each jump reloads the entire page. </li>
+<li>The page state cannot be preserved, all states are refreshed. </li>
+<li>Rely on backend routing cooperation.</li>
+</ul>
+<h3 id="React-Router"><a href="#React-Router" class="headerlink" title="React-Router"></a>React-Router</h3><p>React-Router implements client-side routing management, using the browser’s History API or Hash mechanism to switch the React component when the URL changes without refreshing the page. Features include: </p>
+<ul>
+<li>the URL changes but does not trigger a page refresh.</li>
+<li>According to the URL dynamic rendering of different components, realize SPA. </li>
+<li>Page status retention to improve user experience. </li>
+<li>Unified management of navigation logic through the routing component.</li>
+</ul>
+<hr>
+<h2 id="Page-Load-and-Performance"><a href="#Page-Load-and-Performance" class="headerlink" title="Page Load and Performance"></a>Page Load and Performance</h2><table>
+<thead>
+<tr>
+<th>characteristics</th>
+<th>native Routing</th>
+<th>React-Router</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>page Refresh</td>
+<td>full refresh, re-request resources</td>
+<td>no refresh, component partial re-rendering</td>
+</tr>
+<tr>
+<td>network Request</td>
+<td>initiate a new request for each route jump</td>
+<td>load page resources only once, no subsequent network requests</td>
+</tr>
+<tr>
+<td>status hold</td>
+<td>no hold, jump causes loss of state</td>
+<td>state retention, using React state management</td>
+</tr>
+<tr>
+<td>loading speed</td>
+<td>slow, impacted by network and server response</td>
+<td>fast, switching affects component rendering only</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="route-matching-and-navigation-control"><a href="#route-matching-and-navigation-control" class="headerlink" title="route matching and navigation control"></a>route matching and navigation control</h2><h3 id="native-Routing-1"><a href="#native-Routing-1" class="headerlink" title="native Routing"></a>native Routing</h3><p>enter through the browser address bar or <code>&lt;a&gt;</code>tag jump, the browser requests server resources according to the address, and the backend decides which page to return. The front end can listen through <code>window.location </code>changes or<code>popstate </code>event to do simple processing. </p>
+<h3 id="React-Router-1"><a href="#React-Router-1" class="headerlink" title="React-Router"></a>React-Router</h3><p>provide <code>&lt;BrowserRouter&gt;</code>, <code>&lt;HashRouter&gt;</code>, <code>&lt;Route&gt;</code>, <code>&lt;Link&gt;</code>rich components and APIs for declaratively defining routing and navigation. Route matching is based on path pattern matching and supports complex scenarios such as nested routes, route parameters, redirection, and route guard. </p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">BrowserRouter</span>, <span class="title class_">Routes</span>, <span class="title class_">Route</span>, <span class="title class_">Link</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;react-router-dom&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">App</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">BrowserRouter</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">nav</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Link</span> <span class="attr">to</span>=<span class="string">&quot;/&quot;</span>&gt;</span>首页<span class="tag">&lt;/<span class="name">Link</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Link</span> <span class="attr">to</span>=<span class="string">&quot;/about&quot;</span>&gt;</span>关于<span class="tag">&lt;/<span class="name">Link</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Routes</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/&quot;</span> <span class="attr">element</span>=<span class="string">&#123;</span>&lt;<span class="attr">Home</span> /&gt;</span>&#125; /&gt;</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/about&quot;</span> <span class="attr">element</span>=<span class="string">&#123;</span>&lt;<span class="attr">About</span> /&gt;</span>&#125; /&gt;</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">Routes</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">BrowserRouter</span>&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="State-management-and-user-experience"><a href="#State-management-and-user-experience" class="headerlink" title="State management and user experience"></a>State management and user experience</h2><p>React-Router combined with React state management, you can achieve state persistence and component-level updates to avoid flicker and State loss caused by page refresh. User operation is more smooth, better experience. </p>
+<p>However, each jump of the native route will cause page refresh, State loss, and affect the interactive experience. </p>
+<hr>
+<h2 id="Code-sample-comparison"><a href="#Code-sample-comparison" class="headerlink" title="Code sample comparison"></a>Code sample comparison</h2><h3 id="native-Routing-Example"><a href="#native-Routing-Example" class="headerlink" title="native Routing Example"></a>native Routing Example</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- index.html --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;/about.html&quot;</span>&gt;</span>关于<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>browser Access <code>/about.html </code>the server returns the full about.html page, which is completely refreshed. </p>
+<h3 id="React-Router-example"><a href="#React-Router-example" class="headerlink" title="React-Router example"></a>React-Router example</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">BrowserRouter</span>, <span class="title class_">Routes</span>, <span class="title class_">Route</span>, <span class="title class_">Link</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;react-router-dom&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Home</span>(<span class="params"></span>) &#123; <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>首页<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span> &#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">About</span>(<span class="params"></span>) &#123; <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>关于<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span> &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">App</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">BrowserRouter</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">nav</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Link</span> <span class="attr">to</span>=<span class="string">&quot;/&quot;</span>&gt;</span>首页<span class="tag">&lt;/<span class="name">Link</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Link</span> <span class="attr">to</span>=<span class="string">&quot;/about&quot;</span>&gt;</span>关于<span class="tag">&lt;/<span class="name">Link</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Routes</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/&quot;</span> <span class="attr">element</span>=<span class="string">&#123;</span>&lt;<span class="attr">Home</span> /&gt;</span>&#125; /&gt;</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/about&quot;</span> <span class="attr">element</span>=<span class="string">&#123;</span>&lt;<span class="attr">About</span> /&gt;</span>&#125; /&gt;</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">Routes</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">BrowserRouter</span>&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>when the link is clicked, the URL is updated, and React is responsible for rendering the corresponding component without refreshing the switch.</p>
+<hr>
+<h2 id="Use-Scenario"><a href="#Use-Scenario" class="headerlink" title="Use Scenario"></a>Use Scenario</h2><p>native routing is suitable for traditional multi-page applications (MPAs), back-end rendering websites, or pages that do not rely on complex client-side interactions. </p>
+<p>React-Router is more suitable for SPA applications, complex interaction logic, componentized structure, and scenarios that require no-refresh route switching and state management. </p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>the core difference between React-Router and native routing is where the routing controls and how the page loads. The React-Router is client-based route management, which supports page switching and state maintenance without refresh, improving user experience and development flexibility. Native routes rely on browsers and servers, and the page will be refreshed every time you jump. The state is not persistent. </p>
+<p>Which routing scheme is selected depends on the architecture and business requirements of the application. For SPA applications, React-Router is a better choice; Traditional websites still apply native routing. </p>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p><strong>question: What is the difference between React-Router and native routing?</strong> </p>
+<p>Answer: React-Router is a library used to manage client routing in The React ecosystem. By monitoring URL changes and dynamically rendering the React component, the single-page application can switch routes without refreshing. It supports complex functions such as nested routing, routing parameters, and redirection to improve user experience and development flexibility. </p>
+<p>Native routing is the browser’s own routing mechanism, relying on URL changes to request the server, the page will refresh every time it jumps, and the status will not be retained. It is suitable for traditional multi-page applications. </p>
+<p>In simple terms, React-Router implements client-side routing without page switching, while native routing relies on server responses and page refreshes. SPA applications generally recommend the use of React-Router.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
