@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="When a react-router page jumps, how are the parameters of the next page passedForewordin a single-page application (SPA), the jump and data transfer b"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="When a react-router page jumps, how are the parameters of the next page passed"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="When a react-router page jumps, how are the parameters of the next page passedForewordin a single-page application (SPA), the jump and data transfer b"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>When a react-router page jumps, how are the parameters of the next page passed - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>When a react-router page jumps, how are the parameters of the next page passed</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-06-16
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="When-a-react-router-page-jumps-how-are-the-parameters-of-the-next-page-passed"><a href="#When-a-react-router-page-jumps-how-are-the-parameters-of-the-next-page-passed" class="headerlink" title="When a react-router page jumps, how are the parameters of the next page passed"></a>When a react-router page jumps, how are the parameters of the next page passed</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in a single-page application (SPA), the jump and data transfer between pages is an important part of front-end development. In the React ecosystem, <code>react-router </code>it is a mainstream routing management library that provides flexible routing and parameter transfer solutions. Understanding how react-router pass parameters when a page jumps is critical to building dynamic, interactive applications. </p>
+<p>This article will analyze in detail the various ways to pass parameters when react-router page jumps, including URL parameters (path parameters, query parameters) and routing state (state) parameters, combined with code examples and principles to help you fully grasp the inter-page parameter transfer method. </p>
+<hr>
+<h2 id="URL-parameter-transfer-method"><a href="#URL-parameter-transfer-method" class="headerlink" title="URL parameter transfer method"></a>URL parameter transfer method</h2><h3 id="1-Path-parameters-Path-Params"><a href="#1-Path-parameters-Path-Params" class="headerlink" title="1. Path parameters (Path Params)"></a>1. Path parameters (Path Params)</h3><p>path parameters are the dynamic part of the URL path and are often used for resource identification. For example: </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/user/123</span><br></pre></td></tr></table></figure>
+
+<p>among them <code>123 </code>is the user ID, which can be passed as a parameter. </p>
+<h4 id="Routing-Configuration-Example"><a href="#Routing-Configuration-Example" class="headerlink" title="Routing Configuration Example"></a>Routing Configuration Example</h4><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">BrowserRouter</span>, <span class="title class_">Routes</span>, <span class="title class_">Route</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;react-router-dom&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">UserPage</span> <span class="keyword">from</span> <span class="string">&#x27;./UserPage&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">App</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">BrowserRouter</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Routes</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/user/:userId&quot;</span> <span class="attr">element</span>=<span class="string">&#123;</span>&lt;<span class="attr">UserPage</span> /&gt;</span>&#125; /&gt;</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">Routes</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">BrowserRouter</span>&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="jump-example"><a href="#jump-example" class="headerlink" title="jump example"></a>jump example</h4><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useNavigate &#125; <span class="keyword">from</span> <span class="string">&#x27;react-router-dom&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">HomePage</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> navigate = <span class="title function_">useNavigate</span>()</span><br><span class="line"></span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">goToUser</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="title function_">navigate</span>(<span class="string">&#x27;/user/123&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;goToUser&#125;</span>&gt;</span>跳转到用户页面<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="read-parameter-example"><a href="#read-parameter-example" class="headerlink" title="read parameter example"></a>read parameter example</h4><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useParams &#125; <span class="keyword">from</span> <span class="string">&#x27;react-router-dom&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">UserPage</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; userId &#125; = <span class="title function_">useParams</span>()</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>用户ID: &#123;userId&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-Query-Params"><a href="#2-Query-Params" class="headerlink" title="2. Query Params"></a>2. Query Params</h3><p>query parameters are in the URL <code>what? </code>After the key-value pair, suitable for passing non-identifying filtering, sorting, search and other data. For example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/products?category=books&amp;sort=asc</span><br></pre></td></tr></table></figure>
+
+<p>React Router does not directly provide a Hook for parsing query parameters, but it can be <code>useLocation </code>get the current URL and use it again <code>URLSearchParams </code>parse. </p>
+<h4 id="Jump-example"><a href="#Jump-example" class="headerlink" title="Jump example"></a>Jump example</h4><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">navigate</span>(<span class="string">&#x27;/products?category=books&amp;sort=asc&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="read-Query-Parameter-Example"><a href="#read-Query-Parameter-Example" class="headerlink" title="read Query Parameter Example"></a>read Query Parameter Example</h4><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useLocation &#125; <span class="keyword">from</span> <span class="string">&#x27;react-router-dom&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">ProductsPage</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> location = <span class="title function_">useLocation</span>()</span><br><span class="line">  <span class="keyword">const</span> queryParams = <span class="keyword">new</span> <span class="title class_">URLSearchParams</span>(location.<span class="property">search</span>)</span><br><span class="line">  <span class="keyword">const</span> category = queryParams.<span class="title function_">get</span>(<span class="string">&#x27;category&#x27;</span>)</span><br><span class="line">  <span class="keyword">const</span> sort = queryParams.<span class="title function_">get</span>(<span class="string">&#x27;sort&#x27;</span>)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>分类: &#123;category&#125;, 排序: &#123;sort&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Routing-state-state-Transmission"><a href="#Routing-state-state-Transmission" class="headerlink" title="Routing state (state) Transmission"></a>Routing state (state) Transmission</h2><p>in addition to passing parameters through URL, React Router supports <code>navigate </code>the second parameter of passes state data, which is not exposed to the URL and is more suitable for passing temporary data or sensitive information. </p>
+<h3 id="Pass-state-when-jumping"><a href="#Pass-state-when-jumping" class="headerlink" title="Pass state when jumping"></a>Pass state when jumping</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">navigate</span>(<span class="string">&#x27;/profile&#x27;</span>, &#123; <span class="attr">state</span>: &#123; <span class="attr">from</span>: <span class="string">&#x27;home&#x27;</span>, <span class="attr">timestamp</span>: <span class="title class_">Date</span>.<span class="title function_">now</span>() &#125; &#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="read-the-passed-state"><a href="#read-the-passed-state" class="headerlink" title="read the passed state"></a>read the passed state</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useLocation &#125; <span class="keyword">from</span> <span class="string">&#x27;react-router-dom&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">ProfilePage</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> location = <span class="title function_">useLocation</span>()</span><br><span class="line">  <span class="keyword">const</span> state = location.<span class="property">state</span> || &#123;&#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>来自: &#123;state.from&#125;, 时间戳: &#123;state.timestamp&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>routing state data exists only in memory and is lost when the page is refreshed. </p>
+<hr>
+<h2 id="Summary-and-Comparison"><a href="#Summary-and-Comparison" class="headerlink" title="Summary and Comparison"></a>Summary and Comparison</h2><table>
+<thead>
+<tr>
+<th>delivery mode</th>
+<th>location</th>
+<th>read Mode</th>
+<th>URL visible</th>
+<th>applicable Scenarios</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>path Parameters</td>
+<td>URL path part</td>
+<td><code>useParams </code></td>
+<td>yes</td>
+<td>identifying resources, such as user ID and Article ID</td>
+</tr>
+<tr>
+<td>query Parameters</td>
+<td>URL’s query string (? Back)</td>
+<td><code>useLocation + URLSearchParams </code></td>
+<td>yes</td>
+<td>optional parameters such as filtering, sorting, and paging</td>
+</tr>
+<tr>
+<td>routing state</td>
+<td><code>navigate </code>the second parameter, saved in memory.</td>
+<td><code>useLocation.state </code></td>
+<td>no</td>
+<td>temporarily pass data, not suitable for URL display or refresh to keep</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="Code-Sample-Summary"><a href="#Code-Sample-Summary" class="headerlink" title="Code Sample Summary"></a>Code Sample Summary</h2><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">BrowserRouter</span>, <span class="title class_">Routes</span>, <span class="title class_">Route</span>, useNavigate, useParams, useLocation &#125; <span class="keyword">from</span> <span class="string">&#x27;react-router-dom&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Home</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> navigate = <span class="title function_">useNavigate</span>()</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> navigate(&#x27;/user/42&#x27;)&#125;&gt;路径参数跳转<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> navigate(&#x27;/products?category=books&amp;sort=asc&#x27;)&#125;&gt;查询参数跳转<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> navigate(&#x27;/profile&#x27;, &#123; state: &#123; from: &#x27;home&#x27; &#125; &#125;)&#125;&gt;state 参数跳转<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">UserPage</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; userId &#125; = <span class="title function_">useParams</span>()</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>用户 ID：&#123;userId&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">ProductsPage</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> location = <span class="title function_">useLocation</span>()</span><br><span class="line">  <span class="keyword">const</span> params = <span class="keyword">new</span> <span class="title class_">URLSearchParams</span>(location.<span class="property">search</span>)</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>分类：&#123;params.get(&#x27;category&#x27;)&#125;, 排序：&#123;params.get(&#x27;sort&#x27;)&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">ProfilePage</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> location = <span class="title function_">useLocation</span>()</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>来自：&#123;location.state?.from || &#x27;未知&#x27;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">App</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">BrowserRouter</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Routes</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/&quot;</span> <span class="attr">element</span>=<span class="string">&#123;</span>&lt;<span class="attr">Home</span> /&gt;</span>&#125; /&gt;</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/user/:userId&quot;</span> <span class="attr">element</span>=<span class="string">&#123;</span>&lt;<span class="attr">UserPage</span> /&gt;</span>&#125; /&gt;</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/products&quot;</span> <span class="attr">element</span>=<span class="string">&#123;</span>&lt;<span class="attr">ProductsPage</span> /&gt;</span>&#125; /&gt;</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/profile&quot;</span> <span class="attr">element</span>=<span class="string">&#123;</span>&lt;<span class="attr">ProfilePage</span> /&gt;</span>&#125; /&gt;</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">Routes</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">BrowserRouter</span>&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>there are three main ways to pass parameters when redirecting the React Router page: </p>
+<ol>
+<li><strong>Path parameters (Path Params)</strong> : suitable for Resource Identification, parameters are directly embedded in the URL path; </li>
+<li><strong>Query Params</strong> suitable for optional parameters and filter conditions, appended to the URL query string; </li>
+<li><strong>routing state</strong> : Not displayed in URL, suitable for passing temporary or sensitive data, but refresh will be lost.</li>
+</ol>
+<p>Understanding the differences and usage scenarios of these parameter transfer methods can help us design page jump and parameter transfer schemes more reasonably and flexibly, and improve the maintainability and user experience of the application. </p>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p><strong>Question: How to pass parameters when React Router page jump? What are the ways?</strong> </p>
+<p>Answer: </p>
+<p>React Router supports multiple parameter passing methods: </p>
+<ol>
+<li>Path parameters (Path Params), passed through dynamic segments in the URL Path, such <code>/user/:id </code>, through <code>useParams </code>read; </li>
+<li>Query parameters (Query Params), passed through the Query string in the URL, such <code>/products? category=books </code>, through <code>useLocation </code>get and use <code>URLSearchParams </code>analysis; </li>
+<li>routing state, <code>navigate </code>the second parameter is passed, the data will not be displayed in the URL, through. <code>useLocation.state </code>get, suitable for passing temporary or sensitive data.</li>
+</ol>
+<p>Select the appropriate method according to the requirements, the path parameter is suitable for the required identification, the query parameter is suitable for filtering and sorting, and the state is suitable for non-URL display data.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

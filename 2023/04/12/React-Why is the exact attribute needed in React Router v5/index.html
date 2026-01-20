@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Why is the exact attribute needed in React Router v5ForewordReact Router is the most commonly used routing management library in React applications, w"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Why is the exact attribute needed in React Router v5"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Why is the exact attribute needed in React Router v5ForewordReact Router is the most commonly used routing management library in React applications, w"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Why is the exact attribute needed in React Router v5 - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Why is the exact attribute needed in React Router v5</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-04-12
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Why-is-the-exact-attribute-needed-in-React-Router-v5"><a href="#Why-is-the-exact-attribute-needed-in-React-Router-v5" class="headerlink" title="Why is the exact attribute needed in React Router v5"></a>Why is the exact attribute needed in React Router v5</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>React Router is the most commonly used routing management library in React applications, which helps us realize page navigation and view switching. In React Router v5, <code>exact </code>property is <code>&lt;Route&gt;</code>A very important configuration item on the component. Many beginners are often confused about its role and necessity, leading to routing matching problems. </p>
+<p>This article will be a detailed analysis of the React Router v5 <code>exact </code>the role of the property and how it works, together with examples of why it is necessary to use <code>exact </code>and discuss how to use it properly in different scenarios. </p>
+<hr>
+<h2 id="React-Router-routing-matching-Foundation"><a href="#React-Router-routing-matching-Foundation" class="headerlink" title="React Router routing matching Foundation"></a>React Router routing matching Foundation</h2><p>React Router v5 <code>&lt;Route&gt;</code>components <code>path </code>property matches the current browser’s URL to determine whether to render the corresponding component. </p>
+<p>By default, The React Router uses partial matching, that is, as long as the current URL is routed <code>path </code>at the beginning, it is considered that the match was successful. </p>
+<p>For example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="title class_">Route</span> path=<span class="string">&quot;/home&quot;</span> component=&#123;<span class="title class_">HomePage</span>&#125; /&gt;</span><br></pre></td></tr></table></figure>
+
+<p>For URL <code>/home </code>, <code>/home/profile </code>, <code>/home/about </code>both match successfully and the routing components are rendered. </p>
+<hr>
+<h2 id="the-role-of-the-exact-attribute"><a href="#the-role-of-the-exact-attribute" class="headerlink" title="the role of the exact attribute"></a>the role of the exact attribute</h2><p><code>exact </code>is a Boolean type property used to tell the router to “exactly match” the current path, I .e. only if the browser address bar path <strong>exactly equal</strong> <code>path </code>is matched successfully. </p>
+<p>Usage example: </p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="title class_">Route</span> exact path=<span class="string">&quot;/home&quot;</span> component=&#123;<span class="title class_">HomePage</span>&#125; /&gt;</span><br></pre></td></tr></table></figure>
+
+<p>at this point, only if the path is <code>/home </code>when, <code>HomePage </code>will be rendered; Paths such <code>/home/profile </code>does not match. </p>
+<hr>
+<h2 id="Why-do-you-need-the-exact-attribute"><a href="#Why-do-you-need-the-exact-attribute" class="headerlink" title="Why do you need the exact attribute?"></a>Why do you need the exact attribute?</h2><p>Because the React Router is fuzzy matching by default, multiple routes may be matched successfully, resulting in multiple routing components rendering at the same time on the page, resulting in UI confusion. </p>
+<p>Examples: </p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="title class_">Switch</span>&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/&quot;</span> <span class="attr">component</span>=<span class="string">&#123;Home&#125;</span> /&gt;</span></span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/about&quot;</span> <span class="attr">component</span>=<span class="string">&#123;About&#125;</span> /&gt;</span></span></span><br><span class="line">&lt;/<span class="title class_">Switch</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>visit <code>/about </code>when, due<code>/about </code>to <code>/ </code>at the beginning, both routes will match successfully, resulting in simultaneous rendering. <code>Home </code>and <code>About </code>. To avoid this, add to the root path <code>exact </code>is necessary: </p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="title class_">Switch</span>&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">Route</span> <span class="attr">exact</span> <span class="attr">path</span>=<span class="string">&quot;/&quot;</span> <span class="attr">component</span>=<span class="string">&#123;Home&#125;</span> /&gt;</span></span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/about&quot;</span> <span class="attr">component</span>=<span class="string">&#123;About&#125;</span> /&gt;</span></span></span><br><span class="line">&lt;/<span class="title class_">Switch</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>this way only the path is strictly equal <code>/ </code>only match when <code>Home </code>. </p>
+<hr>
+<h2 id="The-relationship-between-Switch-and-exact"><a href="#The-relationship-between-Switch-and-exact" class="headerlink" title="The relationship between Switch and exact"></a>The relationship between Switch and exact</h2><p><code>&lt;Switch&gt;</code>component is to render only the first matching <code>&lt;Route&gt;</code>, but due to the nature of fuzzy matching, if the front-most route is not used. <code>exact </code>, it may “preemptively match”, causing subsequent routes to fail to match. </p>
+<p>Therefore, in <code>&lt;Switch&gt;</code>, usually set to the root path or other paths. <code>exact </code>to ensure that components are rendered only if the paths match exactly. </p>
+<hr>
+<h2 id="Code-Examples"><a href="#Code-Examples" class="headerlink" title="Code Examples"></a>Code Examples</h2><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span> <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">BrowserRouter</span> <span class="keyword">as</span> <span class="title class_">Router</span>, <span class="title class_">Route</span>, <span class="title class_">Switch</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;react-router-dom&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Home</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>首页<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">About</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>关于我们<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">App</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">Router</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Switch</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Route</span> <span class="attr">exact</span> <span class="attr">path</span>=<span class="string">&quot;/&quot;</span> <span class="attr">component</span>=<span class="string">&#123;Home&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/about&quot;</span> <span class="attr">component</span>=<span class="string">&#123;About&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">Switch</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">Router</span>&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>visit<code>/ </code>only render Home; Access <code>/about </code>when, only About is rendered, avoiding the situation where both routes are rendered. </p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>React Router v5 default path matching uses fuzzy matching mechanism, resulting in path <code>/about </code>will match at the same time <code>/ </code>and <code>/about </code>two routes, which in turn causes multiple routing components to render simultaneously. <code>exact </code>attribute is used to enable exact matching, ensuring that the routing component is rendered only when the path exactly matches, avoiding page rendering conflicts. </p>
+<p>Binding <code>&lt;Switch&gt;</code>when used, <code>exact </code>it can help us accurately control the routing matching sequence and rendering behavior, and is an important means to ensure that the routing logic is clear and the page is displayed correctly. </p>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p><strong>question: Why is it needed in React Router v5</strong> <code>**exact** </code><strong>attributes?</strong> </p>
+<p>Answer: </p>
+<p>React Router v5 uses fuzzy matching by default, that is, as long as the current URL is routed.<code>path </code>at the beginning, it is considered that the match was successful. This will cause multiple routes to match at the same time, multiple components will be rendered, resulting in page conflicts. </p>
+<p><code>exact </code>property turns on exact matching only if the path is exactly equal <code>path </code>is matched successfully. This avoids the root path <code>/ </code>this generic path matches the case of all pages. </p>
+<p>Binding <code>&lt;Switch&gt;</code>when used, <code>exact </code>ensure that only the first exactly matched route is rendered, thus ensuring the correctness and clarity of the route rendering.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
