@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="In performance tuning, how to determine which data change causes component renderingForewordin React applications, the re-rendering of components is t"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="In performance tuning, how to determine which data change causes component rendering"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="In performance tuning, how to determine which data change causes component renderingForewordin React applications, the re-rendering of components is t"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>In performance tuning, how to determine which data change causes component rendering - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>In performance tuning, how to determine which data change causes component rendering</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-04-08
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="In-performance-tuning-how-to-determine-which-data-change-causes-component-rendering"><a href="#In-performance-tuning-how-to-determine-which-data-change-causes-component-rendering" class="headerlink" title="In performance tuning, how to determine which data change causes component rendering"></a>In performance tuning, how to determine which data change causes component rendering</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in React applications, the re-rendering of components is the result of data changes. With the increase of application complexity, frequent and unnecessary component rendering will bring performance overhead and affect user experience. Locating which part of the data changes caused the component rendering is a crucial part of performance tuning.</p>
+<p>This article details how to accurately determine whether a data change has led to a re-rendering of a component at the tool, code level, and development practice, helping developers quickly locate performance bottlenecks and implement targeted optimizations.</p>
+<hr>
+<h2 id="why-do-you-need-to-determine-the-rendering-caused-by-data-changes"><a href="#why-do-you-need-to-determine-the-rendering-caused-by-data-changes" class="headerlink" title="why do you need to determine the rendering caused by data changes"></a>why do you need to determine the rendering caused by data changes</h2><p>React uses a responsive data-driven rendering mechanism, and any changes that affect the state or properties (props) of the component will trigger component updates. However, in actual business scenarios, data changes may be very complex:</p>
+<ul>
+<li>state management level multi-data source change</li>
+<li>the props passed by the parent component are complex and may change frequently.</li>
+<li>Unnecessary data changes may also trigger subcomponent rendering</li>
+</ul>
+<p>inaccurately identifying the data that caused the rendering can lead to false positives and invalid optimizations, and even miss key performance bottlenecks. Therefore, defining the “cause” of rendering is the basis for performance tuning.</p>
+<hr>
+<h2 id="the-common-method-of-component-rendering-caused-by-positioning-data-changes"><a href="#the-common-method-of-component-rendering-caused-by-positioning-data-changes" class="headerlink" title="the common method of component rendering caused by positioning data changes."></a>the common method of component rendering caused by positioning data changes.</h2><h3 id="1-React-DevTools-Profiler-monitor-rendering"><a href="#1-React-DevTools-Profiler-monitor-rendering" class="headerlink" title="1. React DevTools Profiler monitor rendering"></a>1. React DevTools Profiler monitor rendering</h3><p>Profiler can record component rendering duration, times, and rendering reasons (such as props and state changes). By looking in the Profiler panel, developers can see why a component is being re-rendered.</p>
+<p>Example:</p>
+<p>Turn on The Profiler, click a rendered component after recording the operation, and the reason for triggering the rendering will be displayed, such as the change of props or state, or even the specific attribute.</p>
+<h3 id="2-Use-log-output-within-the-component-to-compare-the-data-before-and-after"><a href="#2-Use-log-output-within-the-component-to-compare-the-data-before-and-after" class="headerlink" title="2. Use log output within the component to compare the data before and after."></a>2. Use log output within the component to compare the data before and after.</h3><p>Use within a function component <code>useEffect </code>listen for props or state, combined <code>console.log </code>print comparison to assist in determining which data has changed.</p>
+<p>Example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">MyComponent</span>(<span class="params">&#123; data &#125;</span>) &#123;</span><br><span class="line">  <span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;data changed:&#x27;</span>, data)</span><br><span class="line">  &#125;, [data])</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;data.value&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>or use <code>usePrevious </code>the custom Hook stores the previous value and makes a deep comparison with the current value.</p>
+<h3 id="3-Use-custom-hooks-to-monitor-rendering-and-data-changes"><a href="#3-Use-custom-hooks-to-monitor-rendering-and-data-changes" class="headerlink" title="3. Use custom hooks to monitor rendering and data changes"></a>3. Use custom hooks to monitor rendering and data changes</h3><p>define a <code>useWhyDidYouUpdate </code>hook, which can print the difference between the props before and after each rendering of the component in the console, accurately indicating the changed data fields.</p>
+<p>Example simplified implementation:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useRef, useEffect &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">useWhyDidYouUpdate</span>(<span class="params">name, props</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> previousProps = <span class="title function_">useRef</span>()</span><br><span class="line"></span><br><span class="line">  <span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (previousProps.<span class="property">current</span>) &#123;</span><br><span class="line">      <span class="keyword">const</span> changes = &#123;&#125;</span><br><span class="line">      <span class="title class_">Object</span>.<span class="title function_">keys</span>(props).<span class="title function_">forEach</span>(<span class="function"><span class="params">key</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (props[key] !== previousProps.<span class="property">current</span>[key]) &#123;</span><br><span class="line">          changes[key] = &#123;</span><br><span class="line">            <span class="attr">from</span>: previousProps.<span class="property">current</span>[key],</span><br><span class="line">            <span class="attr">to</span>: props[key]</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">      <span class="keyword">if</span> (<span class="title class_">Object</span>.<span class="title function_">keys</span>(changes).<span class="property">length</span>) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;[why-did-you-update]&#x27;</span>, name, changes)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    previousProps.<span class="property">current</span> = props</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>called in the component <code>useWhyDidYouUpdate(&#39;MyComponent&#39;, props) </code>you can.</p>
+<h3 id="4-Compare-the-State-Snapshots-rendered-before-and-after"><a href="#4-Compare-the-State-Snapshots-rendered-before-and-after" class="headerlink" title="4. Compare the State Snapshots rendered before and after."></a>4. Compare the State Snapshots rendered before and after.</h3><p>Compare the internal state of the React component before and after, combined with developer tools or logs, to determine which part of the state changes triggered the rendering.</p>
+<h3 id="5-Use-React-memo-and-React-Profiler-of-onRender-callback"><a href="#5-Use-React-memo-and-React-Profiler-of-onRender-callback" class="headerlink" title="5. Use React.memo and React.Profiler of onRender callback"></a>5. Use React.memo and <code>React.Profiler </code>of <code>onRender </code>callback</h3><p><code>React.memo </code>you can prevent components from rendering due to irrelevant data changes. By gradually splitting and wrapping components, you can determine which props changes will cause rendering.</p>
+<p><code>Profiler </code>of <code>onRender </code>the callback can also print the rendering stage and time consumption, and cooperate with data monitoring to assist in positioning.</p>
+<hr>
+<h2 id="Examples-of-Actual-Combat"><a href="#Examples-of-Actual-Combat" class="headerlink" title="Examples of Actual Combat"></a>Examples of Actual Combat</h2><p>assume the following components:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">Child</span> = <span class="title class_">React</span>.<span class="title function_">memo</span>(<span class="function">(<span class="params">&#123; user, count &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Child 渲染&#x27;</span>)</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;user.name&#125; - &#123;count&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Parent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [count, setCount] = <span class="title class_">React</span>.<span class="title function_">useState</span>(<span class="number">0</span>)</span><br><span class="line">  <span class="keyword">const</span> [user, setUser] = <span class="title class_">React</span>.<span class="title function_">useState</span>(&#123; <span class="attr">name</span>: <span class="string">&#x27;张三&#x27;</span> &#125;)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">increment</span> = (<span class="params"></span>) =&gt; <span class="title function_">setCount</span>(<span class="function"><span class="params">c</span> =&gt;</span> c + <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;increment&#125;</span>&gt;</span>加一<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Child</span> <span class="attr">user</span>=<span class="string">&#123;user&#125;</span> <span class="attr">count</span>=<span class="string">&#123;count&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>observations:</p>
+<ul>
+<li><code>Child </code>be <code>React.memo </code>wrap and avoid unnecessary rendering.</li>
+<li>Clicking the button results in <code>count </code>changes, <code>Child </code>rendering.</li>
+<li>If <code>user </code>each time a new object is passed in, it will cause rendering even if the content is unchanged.</li>
+</ul>
+<p>You can use the previously mentioned <code>useWhyDidYouUpdate </code>to detect:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Child</span>(<span class="params">props</span>) &#123;</span><br><span class="line">  <span class="title function_">useWhyDidYouUpdate</span>(<span class="string">&#x27;Child&#x27;</span>, props)</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;props.user.name&#125; - &#123;props.count&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> <span class="title class_">MemoChild</span> = <span class="title class_">React</span>.<span class="title function_">memo</span>(<span class="title class_">Child</span>)</span><br></pre></td></tr></table></figure>
+
+<p>the console will output the specific props changes that cause rendering to help locate performance bottlenecks.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>determining which data changes cause component rendering is a key step in React performance tuning. The main methods are:</p>
+<ul>
+<li>use The React DevTools Profiler to locate render components and render causes.</li>
+<li>Print the difference between props and state in the component to assist troubleshooting.</li>
+<li>Use a custom Hook (such <code>useWhyDidYouUpdate </code>) Track data changes automatically.</li>
+<li>Binding <code>React.memo </code>and split components to check unnecessary rendering.</li>
+</ul>
+<p>By using these methods, developers can accurately find performance bottlenecks and formulate reasonable optimization solutions to improve the performance of React applications.</p>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p><strong>question: In React performance tuning, how do you determine which data change caused the component to render?</strong></p>
+<p>Answer:</p>
+<p>you can use the React DevTools Profiler tool to view the rendering times, time consumption, and rendering reasons of the component. The Profiler displays which props or state changes trigger the rendering.</p>
+<p>In addition, you can compare the values of props and state through logs inside the component to determine the specific change data. You can also use a custom Hook, such <code>useWhyDidYouUpdate </code>, automatically print the details of the data changes at each render.</p>
+<p>Binding <code>React.memo </code>package components and gradually check which data changes cause re-rendering, which can more accurately locate performance bottlenecks and assist optimization.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

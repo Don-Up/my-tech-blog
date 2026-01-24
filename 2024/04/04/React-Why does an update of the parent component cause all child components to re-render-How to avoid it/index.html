@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Why does an update of the parent component cause all child components to re-render-How to avoid itForewordin React, the rendering of a component is dr"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Why does an update of the parent component cause all child components to re-render-How to avoid it"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Why does an update of the parent component cause all child components to re-render-How to avoid itForewordin React, the rendering of a component is dr"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Why does an update of the parent component cause all child components to re-render-How to avoid it - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Why does an update of the parent component cause all child components to re-render-How to avoid it</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-04-04
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Why-does-an-update-of-the-parent-component-cause-all-child-components-to-re-render-How-to-avoid-it"><a href="#Why-does-an-update-of-the-parent-component-cause-all-child-components-to-re-render-How-to-avoid-it" class="headerlink" title="Why does an update of the parent component cause all child components to re-render-How to avoid it"></a>Why does an update of the parent component cause all child components to re-render-How to avoid it</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in React, the rendering of a component is driven by changes in state and props. When a parent component is updated, many beginners will find that all its child components are also re-rendered, which not only affects performance, but may also cause unnecessary visual flicker. Understanding why the parent component update causes all child components to be re-rendered and mastering effective avoidance strategies are key to improving the performance of React applications.</p>
+<p>This article will analyze the render mechanism of the React component in depth, discuss why the update of the parent component causes all child components to be re-rendered, and introduce a variety of practical optimization schemes to help developers avoid unnecessary rendering.</p>
+<hr>
+<h2 id="why-the-parent-component-update-will-cause-the-child-component-to-re-render"><a href="#why-the-parent-component-update-will-cause-the-child-component-to-re-render" class="headerlink" title="why the parent component update will cause the child component to re-render"></a>why the parent component update will cause the child component to re-render</h2><p>react’s rendering mechanism follows a top-down tree structure. Each time the parent component is updated, React calls the parent component’s function to generate a new Virtual DOM. According to the default behavior of React, all child components will be re-rendered, even if their props have not actually changed.</p>
+<p>Specific reasons are the following:</p>
+<ol>
+<li><strong>each execution of a function component regenerates the child component element</strong><br>the function component is essentially a pure function. When the parent component is updated, the function is re-invoked to generate a new child component React element tree. These elements are considered new references by default when compared to the last time.</li>
+<li><strong>React default shallow comparison of child component’s props</strong><br>React makes a shallow comparison of props by default when deciding whether to update subcomponents. If the props passed in by the parent component is a newly created object or function (even if the content is unchanged), it will cause the child component to re-render.</li>
+<li><strong>Child components are executed by default when the parent component is re-rendered.</strong><br>React does not automatically prevent subcomponents from rendering unless you use <code>React.memo </code>, <code>PureComponent </code>or other means for explicit optimization.</li>
+</ol>
+<hr>
+<h2 id="Examples-of-Specific-Performance"><a href="#Examples-of-Specific-Performance" class="headerlink" title="Examples of Specific Performance"></a>Examples of Specific Performance</h2><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Parent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [count, setCount] = <span class="title class_">React</span>.<span class="title function_">useState</span>(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> data = &#123; <span class="attr">name</span>: <span class="string">&#x27;张三&#x27;</span> &#125;  <span class="comment">// 每次渲染都会创建新对象</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> setCount(count + 1)&#125;&gt;增加<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Child</span> <span class="attr">data</span>=<span class="string">&#123;data&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">Child</span> = <span class="title class_">React</span>.<span class="title function_">memo</span>(<span class="function">(<span class="params">&#123; data &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Child 渲染&#x27;</span>)</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;data.name&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>even here <code>Child </code>component used <code>React.memo </code>because the parent component creates a new <code>data </code>object, resulting in <code>data </code>citation changes, <code>Child </code>it will still be re-rendered.</p>
+<hr>
+<h2 id="how-to-avoid-unnecessary-rendering-of-child-components-caused-by-parent-component-update"><a href="#how-to-avoid-unnecessary-rendering-of-child-components-caused-by-parent-component-update" class="headerlink" title="how to avoid unnecessary rendering of child components caused by parent component update"></a>how to avoid unnecessary rendering of child components caused by parent component update</h2><h3 id="1-Use-React-memo-wrap-Sub-Assembly"><a href="#1-Use-React-memo-wrap-Sub-Assembly" class="headerlink" title="1. Use React.memo wrap Sub-Assembly"></a>1. Use <code>React.memo </code>wrap Sub-Assembly</h3><p><code>React.memo </code>preventing unnecessary rendering of subcomponents by shallow comparing props. The sub-component is re-rendered only if a shallow change occurs to the props.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">Child</span> = <span class="title class_">React</span>.<span class="title function_">memo</span>(<span class="function">(<span class="params">&#123; data &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Child 渲染&#x27;</span>)</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;data.name&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>However, it should be noted that if props is a reference type (object, function), it is necessary to ensure that the reference remains unchanged in order to be effective.</p>
+<h3 id="2-UseuseMemo-or-useCallback-caching-reference-type-data-and-functions"><a href="#2-UseuseMemo-or-useCallback-caching-reference-type-data-and-functions" class="headerlink" title="2. UseuseMemo or useCallback caching reference type data and functions"></a>2. Use<code>useMemo </code>or <code>useCallback </code>caching reference type data and functions</h3><p>avoid repeatedly creating new objects or functions while the parent component is rendering, causing the child component to receive new references.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Parent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [count, setCount] = <span class="title class_">React</span>.<span class="title function_">useState</span>(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> data = <span class="title class_">React</span>.<span class="title function_">useMemo</span>(<span class="function">() =&gt;</span> (&#123; <span class="attr">name</span>: <span class="string">&#x27;张三&#x27;</span> &#125;), [])</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> handleClick = <span class="title class_">React</span>.<span class="title function_">useCallback</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="title function_">setCount</span>(<span class="function"><span class="params">c</span> =&gt;</span> c + <span class="number">1</span>)</span><br><span class="line">  &#125;, [])</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;handleClick&#125;</span>&gt;</span>增加<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Child</span> <span class="attr">data</span>=<span class="string">&#123;data&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>In this way, <code>data </code>and <code>handleClick </code>the reference to remains unchanged, <code>Child </code>no re-rendering due to reference changes.</p>
+<h3 id="3-Split-components-to-reduce-the-rendering-range-of-parent-components"><a href="#3-Split-components-to-reduce-the-rendering-range-of-parent-components" class="headerlink" title="3. Split components to reduce the rendering range of parent components"></a>3. Split components to reduce the rendering range of parent components</h3><p>split a complex component into smaller components to avoid all child components being updated because the parent component is updated as a whole.</p>
+<h3 id="4-Use-the-class-component-PureComponent"><a href="#4-Use-the-class-component-PureComponent" class="headerlink" title="4. Use the class component. PureComponent "></a>4. Use the class component. <code>PureComponent </code></h3><p>for class components, <code>PureComponent </code>automatically achieve shallow comparison props and state, reduce unnecessary rendering.</p>
+<h3 id="5-Use-state-promotion-and-state-separation"><a href="#5-Use-state-promotion-and-state-separation" class="headerlink" title="5. Use state promotion and state separation."></a>5. Use state promotion and state separation.</h3><p>Manage the state reasonably to avoid placing irrelevant states in the same parent component and reduce the impact of parent component updates.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>The update of the parent component causes all child components to be re-rendered, which is determined by the React default rendering mechanism. The core reason is that each time the parent component executes a function, a new child component element is generated, and React defaults to a shallow comparison of props. The key to avoiding unnecessary rendering is to ensure that the props reference passed to the child component is stable and passed. <code>React.memo </code>, <code>useMemo </code>, <code>useCallback </code>and other means to do caching and optimization.</p>
+<p>Understanding these principles and applying them flexibly can effectively improve the rendering performance of React applications, reduce unnecessary redrawing and calculation, and ensure smooth interface and response speed.</p>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p><strong>question: Why does a parent component update cause all child components to re-render? How to avoid this?</strong></p>
+<p>Answer:</p>
+<p>the React component tree is rendered from top to bottom. When the parent component is updated, the function component is re-executed to generate new child component elements, causing all child components to be re-rendered by default. React only makes shallow comparison props by default. If the props passed by the parent component is a new reference (object, function), the child component will also be re-rendered.</p>
+<p>The main ways to avoid unnecessary rendering include:</p>
+<ul>
+<li>use <code>React.memo </code>wrap sub-components to prevent rendering when props is unchanged;</li>
+<li>use <code>useMemo </code>and<code>useCallback </code>cache reference type data and functions, keep props reference unchanged;</li>
+<li>split components to reduce the update range of parent components;</li>
+<li>used in the class component <code>PureComponent </code>;</li>
+<li>reasonable design of state management to avoid excessive state promotion.</li>
+</ul>
+<p>Through these methods, you can effectively reduce the re-rendering of all child components caused by the update of the parent component, and improve application performance.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

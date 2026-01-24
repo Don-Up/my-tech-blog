@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="How to troubleshoot performance issues in reactForewordwith the growth of application scale and business complexity, the performance of React applicat"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How to troubleshoot performance issues in react"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="How to troubleshoot performance issues in reactForewordwith the growth of application scale and business complexity, the performance of React applicat"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How to troubleshoot performance issues in react - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How to troubleshoot performance issues in react</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-01-29
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="How-to-troubleshoot-performance-issues-in-react"><a href="#How-to-troubleshoot-performance-issues-in-react" class="headerlink" title="How to troubleshoot performance issues in react"></a>How to troubleshoot performance issues in react</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>with the growth of application scale and business complexity, the performance of React applications has become the focus of developers. Performance bottlenecks not only degrade user experience, but may also affect application stability and resource consumption. Therefore, it is essential to master the skills of effectively troubleshooting and optimizing performance problems in React to improve development efficiency and application quality.</p>
+<p>This article describes in detail the types of common performance problems, troubleshooting tools, and methods in React projects, and combines practical examples to explain how to locate and solve performance bottlenecks to help developers build high-performance React applications.</p>
+<hr>
+<h2 id="Common-Manifests-of-React-Performance-Problems"><a href="#Common-Manifests-of-React-Performance-Problems" class="headerlink" title="Common Manifests of React Performance Problems"></a>Common Manifests of React Performance Problems</h2><p>performance issues in React applications are usually manifested in the following aspects:</p>
+<ul>
+<li>page Catton, Slow Response</li>
+<li>unnecessary repeated rendering of components</li>
+<li>A large number of meaningless DOM operations</li>
+<li>long first screen time due to slow resource loading</li>
+<li>memory leaks and increasing memory footprint</li>
+</ul>
+<p>identifying these manifestations is the first step in locating performance issues.</p>
+<hr>
+<h2 id="Tools-and-Methods-for-Troubleshooting-Performance-Problems"><a href="#Tools-and-Methods-for-Troubleshooting-Performance-Problems" class="headerlink" title="Tools and Methods for Troubleshooting Performance Problems"></a>Tools and Methods for Troubleshooting Performance Problems</h2><h3 id="1-React-developer-tool-Profiler"><a href="#1-React-developer-tool-Profiler" class="headerlink" title="1. React developer tool Profiler"></a>1. React developer tool Profiler</h3><p>the Profiler function of React DevTools can accurately record the time and frequency of component rendering. It helps developers identify which components are frequently or time-consuming to render.</p>
+<p>Use steps:</p>
+<ul>
+<li>open the browser React DevTools and switch to the Profiler panel.</li>
+<li>Record an operation.</li>
+<li>Observe how long each component takes to render and what triggers the rendering.</li>
+</ul>
+<p>Example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在 Profiler 上可查看如下信息</span></span><br><span class="line">&lt;<span class="title class_">Profiler</span> id=<span class="string">&quot;MyComponent&quot;</span> onRender=&#123;<span class="function">(<span class="params">id, phase, actualDuration</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(&#123; id, phase, actualDuration &#125;);</span><br><span class="line">&#125;&#125; /&gt;</span><br></pre></td></tr></table></figure>
+
+<p>the Profiler can find components that take too long to render by monitoring the “commit” phase.</p>
+<h3 id="2-Browser-performance-analysis-tool"><a href="#2-Browser-performance-analysis-tool" class="headerlink" title="2. Browser performance analysis tool"></a>2. Browser performance analysis tool</h3><p>the Performance panel of Chrome DevTools can capture multi-dimensional data such as CPU, memory, and frame rate. By recording a performance snapshot, you can locate functions that occupy the main thread for a long time, frequent layout reflows, and draws.</p>
+<p>Analyze the call stack through the Flame Chart to find the bottleneck code segment.</p>
+<h3 id="3-Use-React-memo-and-useMemo-optimize-Rendering"><a href="#3-Use-React-memo-and-useMemo-optimize-Rendering" class="headerlink" title="3. Use React.memo and useMemo optimize Rendering"></a>3. Use <code>React.memo </code>and <code>useMemo </code>optimize Rendering</h3><p>when the component is found to be rendered unnecessarily through troubleshooting, you can use <code>React.memo </code>wrap a function component, or use <code>useMemo </code>cache complex calculations to reduce rendering times and computational overhead.</p>
+<p>Example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">MemoizedComponent</span> = <span class="title class_">React</span>.<span class="title function_">memo</span>(<span class="function">(<span class="params">&#123; data &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// 组件内容</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-Check-unreasonable-state-management"><a href="#4-Check-unreasonable-state-management" class="headerlink" title="4. Check unreasonable state management"></a>4. Check unreasonable state management</h3><p>frequent updates to the parent component state cause the child component to render repeatedly. Reduce the range of influence by separating states or using local states.</p>
+<hr>
+<h2 id="the-specific-investigation-steps-and-practice"><a href="#the-specific-investigation-steps-and-practice" class="headerlink" title="the specific investigation steps and practice"></a>the specific investigation steps and practice</h2><h3 id="1-Identify-performance-bottlenecks"><a href="#1-Identify-performance-bottlenecks" class="headerlink" title="1. Identify performance bottlenecks"></a>1. Identify performance bottlenecks</h3><p>Combined with user feedback or performance monitoring indicators, target specific pages or functions.</p>
+<h3 id="2-Use-Profiler-to-view-rendering-performance"><a href="#2-Use-Profiler-to-view-rendering-performance" class="headerlink" title="2. Use Profiler to view rendering performance"></a>2. Use Profiler to view rendering performance</h3><p>open the Profiler and operate the interface to locate components that take a long time and render frequently.</p>
+<h3 id="3-Analyze-the-causes-of-repeated-rendering"><a href="#3-Analyze-the-causes-of-repeated-rendering" class="headerlink" title="3. Analyze the causes of repeated rendering"></a>3. Analyze the causes of repeated rendering</h3><p>it may be caused by props changes, frequent state updates, and re-rendering of parent components.</p>
+<h3 id="4-Gradual-optimization"><a href="#4-Gradual-optimization" class="headerlink" title="4. Gradual optimization"></a>4. Gradual optimization</h3><ul>
+<li>use <code>React.memo </code>wrap pure display components to avoid unnecessary rendering.</li>
+<li>Use <code>useCallback </code>cache callback functions to avoid new functions passed into child components causing rendering.</li>
+<li>Use <code>useMemo </code>cache compute-intensive variables.</li>
+<li>Segmentation of components to reduce the complexity of individual components.</li>
+<li>Virtual List technology is used to handle long list rendering.</li>
+</ul>
+<h3 id="5-Optimize-resource-loading"><a href="#5-Optimize-resource-loading" class="headerlink" title="5. Optimize resource loading"></a>5. Optimize resource loading</h3><p>analyze network requests, compress and split static resources, use lazy loading and code splitting.</p>
+<hr>
+<h2 id="common-performance-problem-example-analysis"><a href="#common-performance-problem-example-analysis" class="headerlink" title="common performance problem example analysis."></a>common performance problem example analysis.</h2><h3 id="Example-Component-Repeat-Rendering"><a href="#Example-Component-Repeat-Rendering" class="headerlink" title="Example: Component Repeat Rendering"></a>Example: Component Repeat Rendering</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Parent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [count, setCount] = <span class="title function_">useState</span>(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">handleClick</span> = (<span class="params"></span>) =&gt; <span class="title function_">setCount</span>(count + <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;handleClick&#125;</span>&gt;</span>点击<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Child</span> <span class="attr">data</span>=<span class="string">&#123;&#123;</span> <span class="attr">name:</span> &#x27;<span class="attr">张三</span>&#x27; &#125;&#125; /&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Child</span>(<span class="params">&#123; data &#125;</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Child 渲染&#x27;</span>)</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;data.name&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>every parent component <code>Parent </code>when rendering, <code>Child</code>Will also re-render, even if <code>data </code>it hasn’t changed. The reason is the object literal <code>data </code>new quotes every time.</p>
+<p>Optimization:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> memoData = <span class="title function_">useMemo</span>(<span class="function">() =&gt;</span> (&#123; <span class="attr">name</span>: <span class="string">&#x27;张三&#x27;</span> &#125;), [])</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">MemoChild</span> = <span class="title class_">React</span>.<span class="title function_">memo</span>(<span class="title class_">Child</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Parent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [count, setCount] = <span class="title function_">useState</span>(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">handleClick</span> = (<span class="params"></span>) =&gt; <span class="title function_">setCount</span>(count + <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;handleClick&#125;</span>&gt;</span>点击<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">MemoChild</span> <span class="attr">data</span>=<span class="string">&#123;memoData&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>by <code>useMemo </code>cache object, <code>React.memo </code>avoid unnecessary rendering.</p>
+<hr>
+<h2 id="pay-attention-to-memory-leaks-and-asynchronous-operations"><a href="#pay-attention-to-memory-leaks-and-asynchronous-operations" class="headerlink" title="pay attention to memory leaks and asynchronous operations."></a>pay attention to memory leaks and asynchronous operations.</h2><p>If asynchronous requests are not canceled or event listeners are not cleared, memory leaks may occur and performance may be affected. Use <code>useEffect </code>returns the cleanup function to clean up side effects and ensure that resources are released when the component is unloaded.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> id = <span class="built_in">setInterval</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125;, <span class="number">1000</span>)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="function">() =&gt;</span> <span class="built_in">clearInterval</span>(id)</span><br><span class="line">&#125;, [])</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>the core of React performance troubleshooting is to accurately locate rendering bottlenecks and invalid rendering. Common tools include React Profiler and browser performance panel. Optimization means include <code>React.memo </code>, <code>useMemo </code>, reasonably split components and manage state, avoid memory leaks, etc.</p>
+<p>The combination of systematic troubleshooting and gradual optimization can effectively improve the performance of React applications and bring a smoother user experience.</p>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p><strong>question: How do I troubleshoot performance issues in React projects?</strong></p>
+<p>Answer:</p>
+<p>Troubleshooting React performance problems usually starts with observing page jam and frequent rendering. You can use the React devtools’ Profiler to detect which components take longer or take longer to render. Analyze CPU usage and redraw in conjunction with the browser performance panel.</p>
+<p>Common causes include frequent updates of the parent component that cause the child component to render unnecessarily, new reference objects or functions passed to the child component, and complex operations that are computationally intensive and not cached.</p>
+<p>Optimization scenarios include the use <code>React.memo </code>avoid unnecessary rendering, <code>useMemo </code>and <code>useCallback </code>cache computing and callback functions, reasonable splitting of components and state management, and timely cleaning of side effects to prevent memory leaks.</p>
+<p>The systematic use of these tools and methods helps to quickly locate and resolve React performance bottlenecks.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

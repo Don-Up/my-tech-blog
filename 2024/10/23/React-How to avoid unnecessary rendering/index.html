@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="How to avoid unnecessary renderingForewordin React development, component rendering efficiency directly affects application performance and user exper"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How to avoid unnecessary rendering"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="How to avoid unnecessary renderingForewordin React development, component rendering efficiency directly affects application performance and user exper"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How to avoid unnecessary rendering - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How to avoid unnecessary rendering</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-10-23
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="How-to-avoid-unnecessary-rendering"><a href="#How-to-avoid-unnecessary-rendering" class="headerlink" title="How to avoid unnecessary rendering"></a>How to avoid unnecessary rendering</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in React development, component rendering efficiency directly affects application performance and user experience. Unnecessary rendering not only wastes computing resources, but also may cause interface stun and reduce response speed. Therefore, reasonably controlling and avoiding unnecessary rendering is an important part of optimizing the performance of React applications.</p>
+<p>This article will start with the rendering mechanism, discuss in detail the causes of unnecessary rendering, analyze common problems, and explain how to effectively avoid unnecessary rendering and improve the performance of React applications with specific technical means.</p>
+<hr>
+<h2 id="Basic-Mechanism-of-React-Rendering-and-Rendering-Trigger-Conditions"><a href="#Basic-Mechanism-of-React-Rendering-and-Rendering-Trigger-Conditions" class="headerlink" title="Basic Mechanism of React Rendering and Rendering Trigger Conditions"></a>Basic Mechanism of React Rendering and Rendering Trigger Conditions</h2><p>the rendering of the React component is driven by changes in state or properties (props). React triggers the re-rendering process whenever the state or props of a component changes. The rendering process includes the execution of a function component or a class component. <code>render </code>method call to generate a new virtual DOM, then compare it with the old Virtual DOM (Diff algorithm), and finally update the real DOM.</p>
+<p>Unnecessary rendering usually occurs when the state&#x2F;props of the component itself does not actually change, or even if the change does not affect the content displayed by the component, it still triggers re-rendering.</p>
+<hr>
+<h2 id="common-scenes-that-lead-to-unnecessary-rendering"><a href="#common-scenes-that-lead-to-unnecessary-rendering" class="headerlink" title="common scenes that lead to unnecessary rendering"></a>common scenes that lead to unnecessary rendering</h2><ol>
+<li><strong>parent component update causes all child components to re-render</strong><br>when the parent component state changes, all child components are re-rendered by default, even if the child component props does not change.</li>
+<li><strong>The function component creates a new function every time it renders, and passing it to the subcomponent causes the subcomponent to render repeatedly.</strong><br>Because the function reference changes, the child component sees the props change.</li>
+<li><strong>Object or array as props, re-creating new references with each rendering</strong><br>for example:</li>
+</ol>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="title class_">Child</span> items=&#123;[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]&#125; /&gt;</span><br></pre></td></tr></table></figure>
+
+<p>this code generates a new array each time it renders, causing the subcomponent to render repeatedly.</p>
+<ol>
+<li><strong>Lack of proper memo optimization</strong><br>for display-only components, not used <code>React.memo </code>or <code>PureComponent </code>you cannot avoid repeated rendering.</li>
+</ol>
+<hr>
+<h2 id="How-to-Avoid-Unnecessary-Rendering"><a href="#How-to-Avoid-Unnecessary-Rendering" class="headerlink" title="How to Avoid Unnecessary Rendering"></a>How to Avoid Unnecessary Rendering</h2><h3 id="1-Use-React-memo-to-optimize-the-function-component"><a href="#1-Use-React-memo-to-optimize-the-function-component" class="headerlink" title="1. Use React.memo to optimize the function component."></a>1. Use React.memo to optimize the function component.</h3><p><code>React.memo </code>it is a high-order component. You can compare function components with shallow props to avoid re-rendering when props does not change.</p>
+<p>Example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">Child</span> = <span class="title class_">React</span>.<span class="title function_">memo</span>(<span class="function">(<span class="params">&#123; name &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Child 渲染&#x27;</span>)</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;name&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>combined with stable props, deadweight rendering can be significantly reduced.</p>
+<h3 id="2-Use-PureComponent-to-optimize-class-components"><a href="#2-Use-PureComponent-to-optimize-class-components" class="headerlink" title="2. Use PureComponent to optimize class components"></a>2. Use PureComponent to optimize class components</h3><p>for class components, you can inherit <code>React.PureComponent </code>, automatically realize shallow comparison optimization.</p>
+<h3 id="3-Cache-function-references-to-avoid-creating-new-functions-every-time-you-render"><a href="#3-Cache-function-references-to-avoid-creating-new-functions-every-time-you-render" class="headerlink" title="3. Cache function references to avoid creating new functions every time you render."></a>3. Cache function references to avoid creating new functions every time you render.</h3><p>Use <code>useCallback</code>Cache functions to avoid re-rendering of subcomponents due to reference changes when the function is passed as props.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> handleClick = <span class="title class_">React</span>.<span class="title function_">useCallback</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;clicked&#x27;</span>)</span><br><span class="line">&#125;, [])</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-Cache-objects-and-arrays-to-avoid-reference-changes"><a href="#4-Cache-objects-and-arrays-to-avoid-reference-changes" class="headerlink" title="4. Cache objects and arrays to avoid reference changes."></a>4. Cache objects and arrays to avoid reference changes.</h3><p>Use <code>useMemo </code>cache complex objects or arrays to ensure reference stability.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> items = <span class="title class_">React</span>.<span class="title function_">useMemo</span>(<span class="function">() =&gt;</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [])</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-Appropriate-split-components-to-reduce-the-rendering-range"><a href="#5-Appropriate-split-components-to-reduce-the-rendering-range" class="headerlink" title="5. Appropriate split components to reduce the rendering range"></a>5. Appropriate split components to reduce the rendering range</h3><p>by reasonably splitting the component, the entire large component is prevented from being re-rendered due to partial state changes.</p>
+<h3 id="6-Control-status-granularity-to-avoid-unnecessary-status-updates"><a href="#6-Control-status-granularity-to-avoid-unnecessary-status-updates" class="headerlink" title="6. Control status granularity to avoid unnecessary status updates"></a>6. Control status granularity to avoid unnecessary status updates</h3><p>avoid putting multiple unrelated data into the same state, split the state, and reduce the scope of triggering rendering.</p>
+<h3 id="7-Use-key-identify-list-components-correctly-to-avoid-repeated-rendering-and-remounting"><a href="#7-Use-key-identify-list-components-correctly-to-avoid-repeated-rendering-and-remounting" class="headerlink" title="7. Use key identify list components correctly to avoid repeated rendering and remounting"></a>7. Use <code>key </code>identify list components correctly to avoid repeated rendering and remounting</h3><hr>
+<h2 id="Comparison-of-Code-Examples"><a href="#Comparison-of-Code-Examples" class="headerlink" title="Comparison of Code Examples"></a>Comparison of Code Examples</h2><table>
+<thead>
+<tr>
+<th>programme</th>
+<th>advantages</th>
+<th>applicable Scenarios</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>common Components</td>
+<td>simple and easy to write</td>
+<td>small projects with low performance requirements</td>
+</tr>
+<tr>
+<td>React.memo + useCallback + useMemo</td>
+<td>avoid unnecessary rendering, performance improvement is obvious</td>
+<td>complex component tree, used when performance bottleneck is obvious</td>
+</tr>
+<tr>
+<td>PureComponent</td>
+<td>automatic optimization for shallow comparison of class components</td>
+<td>Traditional Class Component Project</td>
+</tr>
+<tr>
+<td>component Split</td>
+<td>decrease Rendering Range</td>
+<td>complex pages with frequent changes in local state</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>avoiding unnecessary rendering is the core means to optimize React performance. The key is to understand the React rendering mechanism, manage state and props reasonably, and use <code>React.memo </code>, <code>PureComponent </code>, <code>useCallback </code>and <code>useMemo </code>and other optimization tools to ensure the stability of props passed to subcomponents and avoid reference changes. In addition, component splitting and state granularity control are also important strategies. The comprehensive application of these methods can effectively reduce the repeated rendering and improve the application response speed and user experience.</p>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p><strong>question: How to avoid unnecessary component rendering in React?</strong></p>
+<p>Answer:</p>
+<p>React component rendering is usually triggered by a state or props change. The core of avoiding unnecessary rendering is to ensure that props and states are updated only when they actually change. Can Pass <code>React.memo </code>or <code>PureComponent</code>Realize shallow comparison optimization to prevent props from rendering when they are unchanged. Use <code>useCallback </code>and <code>useMemo </code>cache function and object references to avoid triggering rendering due to reference changes. Reasonable splitting of components and control of state granularity can also reduce the rendering range. These methods can effectively avoid repeated rendering and improve performance.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

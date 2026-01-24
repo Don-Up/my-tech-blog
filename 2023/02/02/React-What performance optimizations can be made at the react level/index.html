@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What performance optimizations can be made at the react levelForewordas the scale of front-end applications continues to expand, the performance optim"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What performance optimizations can be made at the react level"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What performance optimizations can be made at the react levelForewordas the scale of front-end applications continues to expand, the performance optim"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What performance optimizations can be made at the react level - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What performance optimizations can be made at the react level</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-02-02
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-performance-optimizations-can-be-made-at-the-react-level"><a href="#What-performance-optimizations-can-be-made-at-the-react-level" class="headerlink" title="What performance optimizations can be made at the react level"></a>What performance optimizations can be made at the react level</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>as the scale of front-end applications continues to expand, the performance optimization of React applications becomes particularly important. Performance optimization can not only improve the user experience, reduce page jam, but also improve the response speed and fluency of the application. Although performance bottlenecks may occur in multiple links such as the network, backend, or browser rendering, starting from the React level, through reasonable design and optimization of components and state management, performance can still be significantly improved.</p>
+<p>This article will systematically sort out the performance optimization methods that can be adopted at the React level, and combine specific mechanisms and examples to help developers understand and apply these optimization methods.</p>
+<hr>
+<h2 id="Avoid-unnecessary-rendering"><a href="#Avoid-unnecessary-rendering" class="headerlink" title="Avoid unnecessary rendering."></a>Avoid unnecessary rendering.</h2><p>React component rendering is an important source of performance consumption. Reducing unnecessary rendering is the most direct and effective optimization method.</p>
+<p>Avoid duplicate rendering of components:</p>
+<ul>
+<li>use <code>React.memo </code>the function component is cached for shallow props comparison to prevent repeated rendering when there is no change.</li>
+<li>Class component using <code>PureComponent </code>, automatically achieve shallow comparison.</li>
+<li>Use <code>useCallback </code>cache functions to avoid re-rendering of subcomponents due to changes in function references.</li>
+<li>Use <code>useMemo </code>cache complex objects or calculations to reduce reference changes.</li>
+<li>Split the component reasonably to avoid the overall rendering of large components.</li>
+<li>Control state granularity, split state, and reduce unnecessary updates.</li>
+</ul>
+<p>Example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">Child</span> = <span class="title class_">React</span>.<span class="title function_">memo</span>(<span class="function">(<span class="params">&#123; onClick, data &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Child 渲染&#x27;</span>)</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;onClick&#125;</span>&gt;</span>&#123;data.text&#125;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Parent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [count, setCount] = <span class="title class_">React</span>.<span class="title function_">useState</span>(<span class="number">0</span>)</span><br><span class="line">  <span class="keyword">const</span> data = <span class="title class_">React</span>.<span class="title function_">useMemo</span>(<span class="function">() =&gt;</span> (&#123; <span class="attr">text</span>: <span class="string">&#x27;按钮&#x27;</span> &#125;), [])</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> handleClick = <span class="title class_">React</span>.<span class="title function_">useCallback</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="title function_">setCount</span>(<span class="function"><span class="params">c</span> =&gt;</span> c + <span class="number">1</span>)</span><br><span class="line">  &#125;, [])</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">Child</span> <span class="attr">onClick</span>=<span class="string">&#123;handleClick&#125;</span> <span class="attr">data</span>=<span class="string">&#123;data&#125;</span> /&gt;</span></span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="code-segmentation-and-lazy-loading"><a href="#code-segmentation-and-lazy-loading" class="headerlink" title="code segmentation and lazy loading."></a>code segmentation and lazy loading.</h2><p>By dynamically loading routing pages or components, avoid loading too much code at one time and improve the loading speed of the first screen.</p>
+<p>React supports dynamic <code>import() </code>, combined <code>React.lazy </code>and <code>Suspense </code>to achieve lazy loading:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">LazyComponent</span> = <span class="title class_">React</span>.<span class="title function_">lazy</span>(<span class="function">() =&gt;</span> <span class="keyword">import</span>(<span class="string">&#x27;./HeavyComponent&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">App</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">React.Suspense</span> <span class="attr">fallback</span>=<span class="string">&#123;</span>&lt;<span class="attr">div</span>&gt;</span>Loading...<span class="tag">&lt;/<span class="name">div</span>&gt;</span>&#125;&gt;</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">LazyComponent</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">React.Suspense</span>&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>combined with routing lazy loading, the initial packet size can be significantly reduced.</p>
+<hr>
+<h2 id="Avoid-anonymous-functions-and-Inline-objects-arrays-as-props"><a href="#Avoid-anonymous-functions-and-Inline-objects-arrays-as-props" class="headerlink" title="Avoid anonymous functions and Inline objects&#x2F;arrays as props"></a>Avoid anonymous functions and Inline objects&#x2F;arrays as props</h2><p>creating a new function or object each time you render causes the child component to receive a new reference, triggering repeated rendering. Should be cached or fetched to outer layer.</p>
+<hr>
+<h2 id="Rational-Use-of-key"><a href="#Rational-Use-of-key" class="headerlink" title="Rational Use of key"></a>Rational Use of key</h2><p><code>key </code>used to identify a unique element in a list and help React update efficiently. Avoid using an array index as a key, especially when the order of the elements may change.</p>
+<hr>
+<h2 id="Event-delegation-and-synthetic-event-optimization"><a href="#Event-delegation-and-synthetic-event-optimization" class="headerlink" title="Event delegation and synthetic event optimization"></a>Event delegation and synthetic event optimization</h2><p>the React event system is based on synthetic events to avoid performance problems caused by multi-element event binding. Reasonable design of event processing logic to avoid excessive event binding.</p>
+<hr>
+<h2 id="Avoid-large-scale-DOM-operations"><a href="#Avoid-large-scale-DOM-operations" class="headerlink" title="Avoid large-scale DOM operations"></a>Avoid large-scale DOM operations</h2><p>React Virtual DOM can reduce direct DOM operations, but the rendering of complex and large number of elements is still performance-consuming. Available through list virtualization (e. G. <code>react-window </code>, <code>react-virtualized </code>) Improve long list rendering performance.</p>
+<hr>
+<h2 id="avoid-unnecessary-state-promotion-and-excessive-use-of-Context"><a href="#avoid-unnecessary-state-promotion-and-excessive-use-of-Context" class="headerlink" title="avoid unnecessary state promotion and excessive use of Context."></a>avoid unnecessary state promotion and excessive use of Context.</h2><p>Frequently updated state should not be placed in the top-level Context, otherwise all subscribed components will be re-rendered. Split the state, or use other state management tools to optimize.</p>
+<hr>
+<h2 id="using-Profiler-to-analyze-performance-bottlenecks"><a href="#using-Profiler-to-analyze-performance-bottlenecks" class="headerlink" title="using Profiler to analyze performance bottlenecks"></a>using Profiler to analyze performance bottlenecks</h2><p>react’s built-in Profiler component can measure component rendering time to help locate performance issues.</p>
+<p>Example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="title class_">Profiler</span> id=<span class="string">&quot;App&quot;</span> onRender=&#123;<span class="function">(<span class="params">id, phase, actualDuration</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`<span class="subst">$&#123;id&#125;</span> <span class="subst">$&#123;phase&#125;</span>耗时：<span class="subst">$&#123;actualDuration&#125;</span>ms`</span>)</span><br><span class="line">&#125;&#125;&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">App</span> /&gt;</span></span></span><br><span class="line">&lt;/<span class="title class_">Profiler</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="avoid-complex-calculations-that-block-the-main-thread"><a href="#avoid-complex-calculations-that-block-the-main-thread" class="headerlink" title="avoid complex calculations that block the main thread."></a>avoid complex calculations that block the main thread.</h2><p>Split complex calculations, execute them asynchronously, or use a Web Worker to avoid blocking the React rendering thread.</p>
+<hr>
+<h2 id="avoid-memory-leaks-and-clean-up-side-effects"><a href="#avoid-memory-leaks-and-clean-up-side-effects" class="headerlink" title="avoid memory leaks and clean-up side effects."></a>avoid memory leaks and clean-up side effects.</h2><p>Timer cleaning, event monitoring, and subscription in a timely manner to prevent performance problems caused by unwanted components.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>react-level performance optimization involves reducing unnecessary rendering, properly splitting components, using lazy loading, optimizing event and state management, and using Profiler. Through Scientific use <code>React.memo </code>,<code>useCallback </code>, <code>useMemo </code>, code segmentation and lazy loading, as well as virtualization of long lists and reasonable management state, can significantly improve application performance. Combined with performance monitoring and positioning tools, continuous optimization for a smoother and more efficient user experience.</p>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p><strong>question: What performance optimization can be done at The React level?</strong></p>
+<p>Answer:</p>
+<p>it mainly includes the following aspects: First, avoid unnecessary rendering and use <code>React.memo </code>, <code>PureComponent </code>, <code>useCallback </code>and <code>useMemo </code>caching props and function references; Secondly, reducing the initial package size through code segmentation and lazy loading to improve the first screen performance; Thirdly, avoiding inline functions and objects as props to prevent repeated rendering of subcomponents; <code>key </code>, optimize list rendering; Use virtualization technology to reduce DOM operations for long lists; Reasonably divide the state range to avoid excessive Context updates; Use React Profiler for performance analysis; Avoid blocking of the main thread and clean up side effects in time. These methods can significantly improve the performance and user experience of React applications.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What is the principle of implementing lazy loading with react lazy importForewordin modern front-end development, with the increasing application volu"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What is the principle of implementing lazy loading with react lazy import"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What is the principle of implementing lazy loading with react lazy importForewordin modern front-end development, with the increasing application volu"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What is the principle of implementing lazy loading with react lazy import - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What is the principle of implementing lazy loading with react lazy import</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-09-29
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-is-the-principle-of-implementing-lazy-loading-with-react-lazy-import"><a href="#What-is-the-principle-of-implementing-lazy-loading-with-react-lazy-import" class="headerlink" title="What is the principle of implementing lazy loading with react lazy import"></a>What is the principle of implementing lazy loading with react lazy import</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in modern front-end development, with the increasing application volume, how to optimize the first screen loading time and improve the user experience has become an important issue. React provides a built-in <code>React.lazy </code>API, with dynamic <code>import() </code>implement lazy loading of components. By loading on demand, the initial packaging volume can be significantly reduced, achieving faster loading speed and better performance.</p>
+<p>This article will analyze React from the principle level. <code>lazy </code>how to achieve lazy loading, including its internal mechanism, coordination <code>Suspense </code>workflow, as well as practical application should pay attention to the key points, to help developers in-depth understanding and correct use of this feature.</p>
+<hr>
+<h2 id="Basic-Usage-of-React-lazy"><a href="#Basic-Usage-of-React-lazy" class="headerlink" title="Basic Usage of React.lazy"></a>Basic Usage of React.lazy</h2><p>React.lazy receives a dynamically Imported function that returns a lazily loaded component:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span>, &#123; <span class="title class_">Suspense</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">LazyComponent</span> = <span class="title class_">React</span>.<span class="title function_">lazy</span>(<span class="function">() =&gt;</span> <span class="keyword">import</span>(<span class="string">&#x27;./HeavyComponent&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">App</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">Suspense</span> <span class="attr">fallback</span>=<span class="string">&#123;</span>&lt;<span class="attr">div</span>&gt;</span>Loading...<span class="tag">&lt;/<span class="name">div</span>&gt;</span>&#125;&gt;</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">LazyComponent</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">Suspense</span>&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>in this way, <code>HeavyComponent </code>components are loaded only when they are actually rendered, improving first-screen performance.</p>
+<hr>
+<h2 id="the-core-implementation-principle-of-React-lazy"><a href="#the-core-implementation-principle-of-React-lazy" class="headerlink" title="the core implementation principle of React.lazy"></a>the core implementation principle of React.lazy</h2><h3 id="1-Dynamic-import"><a href="#1-Dynamic-import" class="headerlink" title="1. Dynamic import()"></a>1. Dynamic import()</h3><p><code>React.lazy </code>the lazy loading ability depends on the JavaScript dynamic <code>import()</code>Syntax. Dynamic import returns a Promise that represents the asynchronous loading of the module.</p>
+<p>When React renders a lazy load component, the passed-in function is executed ( <code>() =&gt; import(&#39;./HeavyComponent&#39;) </code>), triggering the module asynchronous request.</p>
+<h3 id="2-The-component-state-is-“asynchronous”"><a href="#2-The-component-state-is-“asynchronous”" class="headerlink" title="2. The component state is “asynchronous”"></a>2. The component state is “asynchronous”</h3><p>React.lazy returns a special React component, which initiates a module load request during the first rendering and returns a Promise. React will “suspend” the rendering process of the component until the Promise is resolved (module loading is complete).</p>
+<h3 id="3-React-Suspense"><a href="#3-React-Suspense" class="headerlink" title="3. React Suspense"></a>3. React Suspense</h3><p><code>Suspense </code>the component is used to wrap lazy loading components and provides a placeholder UI(fallback) during loading. When the Promise of the lazy loading component is not completed, React renders fallback; When the loading is completed, the real component is rendered.</p>
+<p>React coordinates asynchronous loading and rendering to make the asynchronous component loading experience natural and smooth.</p>
+<hr>
+<h2 id="III-React-lazy-Internal-Workflow-Simplified-Version"><a href="#III-React-lazy-Internal-Workflow-Simplified-Version" class="headerlink" title="III. React.lazy Internal Workflow (Simplified Version)"></a>III. React.lazy Internal Workflow (Simplified Version)</h2><table>
+<thead>
+<tr>
+<th>stage</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>when the component is rendering</td>
+<td>call dynamic import, return Promise</td>
+</tr>
+<tr>
+<td>React Detection Promise Status</td>
+<td>If an uncompleted Promise is found, fallback of Suspense is triggered.</td>
+</tr>
+<tr>
+<td>Promise to resolve</td>
+<td>the module is loaded successfully, React obtains the default export of the component.</td>
+</tr>
+<tr>
+<td>Component re-render</td>
+<td>render the React component corresponding to the lazy loading module</td>
+</tr>
+</tbody></table>
+<p>React internally tracks the Promise and its status, and suspends the rendering process until the module is loaded to ensure the correct rendering of asynchronous components.</p>
+<hr>
+<h2 id="React-lazy’s-Limitations-and-Points-for-Attention"><a href="#React-lazy’s-Limitations-and-Points-for-Attention" class="headerlink" title="React.lazy’s Limitations and Points for Attention"></a>React.lazy’s Limitations and Points for Attention</h2><ul>
+<li><strong>can only be used for default export</strong> : The dynamic import module requires the default export component and cannot be used for named export, otherwise an error will be reported.</li>
+<li><strong>Use with Suspense</strong> : Suspense is responsible for handling the loading state, otherwise an exception will be thrown when rendering.</li>
+<li><strong>Server-side rendering (SSR) is not supported</strong> : React.lazy is only suitable for clients, SSR requires other schemes.</li>
+<li><strong>Code splitting depends on packaging tool support</strong> : Packaging tools such as webpack need to support dynamic import to generate on-demand split code.</li>
+</ul>
+<hr>
+<h2 id="Practical-Application-Examples"><a href="#Practical-Application-Examples" class="headerlink" title="Practical Application Examples"></a>Practical Application Examples</h2><p>combined with routing lazy loading implementation:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span>, &#123; <span class="title class_">Suspense</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">BrowserRouter</span> <span class="keyword">as</span> <span class="title class_">Router</span>, <span class="title class_">Routes</span>, <span class="title class_">Route</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;react-router-dom&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">Home</span> = <span class="title class_">React</span>.<span class="title function_">lazy</span>(<span class="function">() =&gt;</span> <span class="keyword">import</span>(<span class="string">&#x27;./Home&#x27;</span>))</span><br><span class="line"><span class="keyword">const</span> <span class="title class_">About</span> = <span class="title class_">React</span>.<span class="title function_">lazy</span>(<span class="function">() =&gt;</span> <span class="keyword">import</span>(<span class="string">&#x27;./About&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">App</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">Router</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Suspense</span> <span class="attr">fallback</span>=<span class="string">&#123;</span>&lt;<span class="attr">div</span>&gt;</span>Loading page...<span class="tag">&lt;/<span class="name">div</span>&gt;</span>&#125;&gt;</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Routes</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/&quot;</span> <span class="attr">element</span>=<span class="string">&#123;</span>&lt;<span class="attr">Home</span> /&gt;</span>&#125; /&gt;</span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/about&quot;</span> <span class="attr">element</span>=<span class="string">&#123;</span>&lt;<span class="attr">About</span> /&gt;</span>&#125; /&gt;</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">Routes</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">Suspense</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">Router</span>&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>this scheme effectively splits the page code corresponding to each route, and loads the corresponding code only when accessing the corresponding path, reducing the initial package size.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>React.lazy uses the JavaScript dynamic import feature and React suspend to load components asynchronously on demand. Its principle is to return a Promise through the dynamic loading module, React suspends the component during rendering, and waits for the Promise to resolve before continuing rendering. This ensures both the code segmentation effect and the loading experience. Reasonable use of React.lazy can significantly improve application performance, especially for SPA with large volume and many pages.</p>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p><strong>question: What is the principle of lazy loading in React.lazy import?</strong></p>
+<p>Answer:</p>
+<p>React.lazy is a lazy loading based on JavaScript dynamic import implementation. Dynamic import returns a Promise that represents the asynchronous loading of the module. React.lazy receives a function that, when executed, triggers the module to load and returns a Promise. React tracks this Promise through an internal mechanism and suspends the current component rendering when the load is not completed. You need to cooperate with the suspend component to display the loading status. After the Promise is resolved, React obtains the default export component of the module and re-renders it to realize asynchronous loading. This enables on-demand loading, reduces the initial package size, and improves performance. However, React.lazy only supports the default export component and must be used with suspend.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

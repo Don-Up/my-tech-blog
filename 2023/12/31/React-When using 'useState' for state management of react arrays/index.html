@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="When using ‘useState’ for state management of react arraysForewordin React development, state management is the core content, especially through useSt"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="When using &#39;useState&#39; for state management of react arrays"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="When using ‘useState’ for state management of react arraysForewordin React development, state management is the core content, especially through useSt"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>When using &#39;useState&#39; for state management of react arrays - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>When using 'useState' for state management of react arrays</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-12-31
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="When-using-‘useState’-for-state-management-of-react-arrays"><a href="#When-using-‘useState’-for-state-management-of-react-arrays" class="headerlink" title="When using ‘useState’ for state management of react arrays"></a>When using ‘useState’ for state management of react arrays</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in React development, state management is the core content, especially through <code>useState </code>when managing the local state of a component, it is very common to have an array as state. Many beginners are used to calling the native methods of arrays directly, such <code>push </code>, <code>pop </code>, <code>splice </code>to modify the array, but does this practice trigger the React component to re-render? This article will delve into the React <code>useState </code>when managing the state of the array, whether the method of directly modifying the array will cause the page to update, and analyze the mechanism and best practices behind it.</p>
+<h2 id="React-state-management-rendering-mechanism"><a href="#React-state-management-rendering-mechanism" class="headerlink" title="React state management rendering mechanism"></a>React state management rendering mechanism</h2><p>the re-rendering of the React component is triggered by a state or property (props) change. For function components, call <code>useState </code>the update function returned (such <code>setState </code>), React will determine whether to trigger re-rendering according to whether the old and new state values change.</p>
+<p>The state comparison of React is based on reference comparison, that is:</p>
+<ul>
+<li>if the new state is a different reference to the old state, React will assume that the state is updated, triggering a re-rendering.</li>
+<li>If the new state and the old state are the same reference (that is, the memory address is the same),React will consider that the state has not changed and will not trigger re-rendering.</li>
+</ul>
+<p>And that means, <strong>directly modify the reference of the state without returning a new reference. React cannot detect changes and the page will not be re-rendered.</strong> .</p>
+<h2 id="The-effect-of-the-native-method-of-an-array-on-the-state"><a href="#The-effect-of-the-native-method-of-an-array-on-the-state" class="headerlink" title="The effect of the native method of an array on the state"></a>The effect of the native method of an array on the state</h2><p>in the common methods of JavaScript arrays, some of them will directly modify the original array (called “mutation method”), for example:</p>
+<ul>
+<li><code>push </code>: Adds elements to the end of the original array</li>
+<li><code>pop </code>: Remove the element at the end of the original array</li>
+<li><code>splice </code>: Modify the contents of the original array (add&#x2F;delete&#x2F;replace)</li>
+</ul>
+<p>these methods <strong>does not return a new array reference</strong> , but directly modify the current array. If you are in React <code>useState </code>use these methods directly in:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [arr, setArr] = <span class="title function_">useState</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]);</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">addItem</span>(<span class="params">item</span>) &#123;</span><br><span class="line">  arr.<span class="title function_">push</span>(item);</span><br><span class="line">  <span class="title function_">setArr</span>(arr);  <span class="comment">// 传入的是同一个引用</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>here. <code>arr </code>or the original reference, call <code>setArr(arr) </code>the old reference is still passed. React will make a shallow comparison and judge that the state has not changed, so <strong>does not trigger component re-rendering</strong> .</p>
+<p>Similarly, <code>pop </code>and <code>splice </code>directly manipulate the original array, then call <code>setArr </code>passing the same reference also does not trigger rendering.</p>
+<h2 id="Code-Sample-Description"><a href="#Code-Sample-Description" class="headerlink" title="Code Sample Description"></a>Code Sample Description</h2><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span>, &#123; useState &#125; <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Demo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [list, setList] = <span class="title function_">useState</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">pushItem</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    list.<span class="title function_">push</span>(<span class="number">4</span>);</span><br><span class="line">    <span class="title function_">setList</span>(list);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">addNewItem</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="title function_">setList</span>([...list, <span class="number">4</span>]);  <span class="comment">// 返回新数组引用</span></span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;list.join(&quot;, &quot;)&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;pushItem&#125;</span>&gt;</span>push 4<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;addNewItem&#125;</span>&gt;</span>add 4 (new array)<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title class_">Demo</span>;</span><br></pre></td></tr></table></figure>
+
+<p>after clicking the “push 4” button, the contents of the array actually change, but the page will not update the display because React thinks the status has not changed. Click the “add 4 (new array)” button and the page will update the display because a new array reference is passed in.</p>
+<h2 id="How-to-Correctly-Modify-Array-State"><a href="#How-to-Correctly-Modify-Array-State" class="headerlink" title="How to Correctly Modify Array State"></a>How to Correctly Modify Array State</h2><p>to ensure that React can correctly detect state changes and trigger rendering, you must <strong>returns a new array reference</strong> . Common practices include:</p>
+<ul>
+<li>use the extension operator to generate a new array, such <code>[...oldArray, newItem] </code></li>
+<li>use the immutable method of an array, such <code>slice </code>instead <code>splice </code></li>
+<li>use <code>filter </code>, <code>map </code>and other methods that return a new array</li>
+<li>do not directly call the mutation method that will modify the original array, or copy a new array after the call.<code>setState </code></li>
+</ul>
+<p>example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 添加元素</span></span><br><span class="line"><span class="title function_">setList</span>(<span class="function"><span class="params">prev</span> =&gt;</span> [...prev, newItem]);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 删除元素（使用 filter）</span></span><br><span class="line"><span class="title function_">setList</span>(<span class="function"><span class="params">prev</span> =&gt;</span> prev.<span class="title function_">filter</span>(<span class="function"><span class="params">item</span> =&gt;</span> item !== target));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 替换元素（使用 map）</span></span><br><span class="line"><span class="title function_">setList</span>(<span class="function"><span class="params">prev</span> =&gt;</span> prev.<span class="title function_">map</span>(<span class="function"><span class="params">item</span> =&gt;</span> item === oldVal ? newVal : item));</span><br></pre></td></tr></table></figure>
+
+<p>this approach ensures that the state reference changes, React can correctly perceive, trigger rendering.</p>
+<h2 id="Summary-Comparison-Table"><a href="#Summary-Comparison-Table" class="headerlink" title="Summary Comparison Table"></a>Summary Comparison Table</h2><table>
+<thead>
+<tr>
+<th>operation mode</th>
+<th>whether the reference passed to setState is changed</th>
+<th>whether to trigger rendering</th>
+<th>remarks</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>directly call push&#x2F;pop&#x2F;splice to modify the array and pass in the original array</td>
+<td>no</td>
+<td>no</td>
+<td>React is considered state unchanged and does not render</td>
+</tr>
+<tr>
+<td>generate a new array by expanding the operator or immutable method passed in.</td>
+<td>Yes</td>
+<td>yes</td>
+<td>React detects reference change and re-renders</td>
+</tr>
+<tr>
+<td>do not call setState only modify the array</td>
+<td>-</td>
+<td>no</td>
+<td>React cannot detect state change</td>
+</tr>
+</tbody></table>
+<h2 id="interview-answer"><a href="#interview-answer" class="headerlink" title="interview answer"></a>interview answer</h2><p>q: Use in React <code>useState </code>when managing the array state, if you use <code>push </code>, <code>pop </code>,<code>splice </code>will modifying the array by other methods cause page rendering?</p>
+<p>A: No. Because React’s status update is based on shallow comparison, if the contents of the array are directly modified, but the reference address of the array itself has not changed, call <code>setState </code>the passed-in is still the old reference, and React thinks that the state has not changed, so it will not trigger re-rendering. The correct approach is to return a new array reference, such as with the extension operator. <code>[...arr, newItem] </code>called after creating a new array <code>setState </code>so that React can detect the state change and render the update.</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>React <code>useState </code>the state update depends on the reference change, using the array variation method directly as in. <code>push </code>, <code>pop </code>, <code>splice </code>modify the original array and pass the same array reference <code>setState </code>, does not trigger the component to re-render.</p>
+<p>To ensure page updates, you must follow the immutable data principle and always return a new array reference. You can use the extension operator, <code>slice</code>, <code>filter </code>, <code>map </code>and other methods to generate a new array, and then call <code>setState </code>. This ensures that state changes are detected by React, avoids potential state management traps, and improves the maintainability and stability of the application.</p>
+<p>Mastering this is critical to writing efficient and predictable React applications.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

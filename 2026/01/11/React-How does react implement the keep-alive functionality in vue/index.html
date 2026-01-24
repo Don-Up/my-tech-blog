@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="How does react implement the keep-alive functionality in vueForewordin modern front-end development, maintaining the state of pages and components is "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How does react implement the keep-alive functionality in vue"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="How does react implement the keep-alive functionality in vueForewordin modern front-end development, maintaining the state of pages and components is "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How does react implement the keep-alive functionality in vue - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How does react implement the keep-alive functionality in vue</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2026-01-11
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="How-does-react-implement-the-keep-alive-functionality-in-vue"><a href="#How-does-react-implement-the-keep-alive-functionality-in-vue" class="headerlink" title="How does react implement the keep-alive functionality in vue"></a>How does react implement the keep-alive functionality in vue</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in modern front-end development, maintaining the state of pages and components is an important means to improve the user experience. Vue provides <code>keep-alive </code>components, which can cache wrapped component instances to avoid components being destroyed and re-rendered when switching, greatly improving performance and user experience. React itself has no direct equivalent <code>keep-alive </code>components, but through certain technical means and design, can also achieve similar functions. This article will parse Vue in detail <code>keep-alive </code>the principle of, explore React to achieve similar functions, and give sample code to help you better understand and apply.</p>
+<h2 id="Function-and-principle-of-keep-alive-in-Vue"><a href="#Function-and-principle-of-keep-alive-in-Vue" class="headerlink" title="Function and principle of keep-alive in Vue"></a>Function and principle of keep-alive in Vue</h2><p>vue’s <code>keep-alive </code>is an abstract component used to cache dynamic components. Its main functions are:</p>
+<ol>
+<li><strong>cache Component Instance</strong> to avoid losing state and DOM when the component is destroyed.</li>
+<li><strong>Control component activation and deactivation</strong> after the component is cached by keep-alive, it will not be unloaded when switching, but will trigger the lifecycle hook. <code>activated </code>and <code>deactivated </code>.</li>
+</ol>
+<p>Brief description of working principle:</p>
+<ul>
+<li><code>keep-alive </code>after the wrapped component is created, the instance and DOM are cached in memory.</li>
+<li>When the components are switched, the inactive components are hidden (not unloaded) and the active components are displayed.</li>
+<li>Lifecycle hooks ensure that developers can capture component switch activation and deactivation events.</li>
+</ul>
+<p><code>keep-alive </code>typical usage:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;keep-alive&gt;</span><br><span class="line">  &lt;component :is=&quot;currentView&quot; /&gt;</span><br><span class="line">&lt;/keep-alive&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="challenges-in-React"><a href="#challenges-in-React" class="headerlink" title="challenges in React"></a>challenges in React</h2><p>the destruction and creation of React components are controlled by the Virtual DOM mechanism. When switching components, the previous component is generally destroyed and a new component is created, instead of caching component instances by default. This leads:</p>
+<ul>
+<li>component state (not global state) is missing.</li>
+<li>Component internal side effects are re-executed.</li>
+<li>The DOM is completely rebuilt, affecting performance and experience.</li>
+</ul>
+<p>React has no official <code>keep-alive </code>solution, the developer needs a custom implementation.</p>
+<h2 id="React-to-Realize-keep-alive-Function"><a href="#React-to-Realize-keep-alive-Function" class="headerlink" title="React to Realize keep-alive Function"></a>React to Realize keep-alive Function</h2><p>the implementation goal is: when switching components, keep the instance and DOM of inactive components, avoid destruction, and support state maintenance and fast switching.</p>
+<p>The main ideas include:</p>
+<h3 id="1-Conditional-rendering-and-hiding"><a href="#1-Conditional-rendering-and-hiding" class="headerlink" title="1. Conditional rendering and hiding"></a>1. Conditional rendering and hiding</h3><p>set CSS by rendering all components, but inactive components <code>display: none</code>To hide and thus avoid destruction.</p>
+<p>Advantages:</p>
+<ul>
+<li>simple and straightforward, component state retention.</li>
+</ul>
+<p>Disadvantages:</p>
+<ul>
+<li>all components are rendered in the DOM, which may consume memory and affect performance.</li>
+</ul>
+<p>Example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">KeepAlive</span>(<span class="params">&#123; activeKey, children &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      &#123;React.Children.map(children, (child) =&gt; &#123;</span></span><br><span class="line"><span class="language-xml">        const isActive = child.key === activeKey;</span></span><br><span class="line"><span class="language-xml">        return (</span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&#123;&#123;</span> <span class="attr">display:</span> <span class="attr">isActive</span> ? &#x27;<span class="attr">block</span>&#x27; <span class="attr">:</span> &#x27;<span class="attr">none</span>&#x27; &#125;&#125;&gt;</span></span></span><br><span class="line"><span class="language-xml">            &#123;child&#125;</span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        );</span></span><br><span class="line"><span class="language-xml">      &#125;)&#125;</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>use:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="title class_">KeepAlive</span> activeKey=&#123;currentKey&#125;&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">ComponentA</span> <span class="attr">key</span>=<span class="string">&quot;A&quot;</span> /&gt;</span></span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">ComponentB</span> <span class="attr">key</span>=<span class="string">&quot;B&quot;</span> /&gt;</span></span></span><br><span class="line">&lt;/<span class="title class_">KeepAlive</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-Cache-component-instance-cache-Virtual-DOM"><a href="#2-Cache-component-instance-cache-Virtual-DOM" class="headerlink" title="2. Cache component instance (cache Virtual DOM)"></a>2. Cache component instance (cache Virtual DOM)</h3><p>React itself does not support direct caching of component instances, but it can cache the rendered component tree and control the display through state management.</p>
+<p>Technical points:</p>
+<ul>
+<li>use <code>React.createElement </code>component elements are created dynamically and stored in a cache object.</li>
+<li>When switching, read from the cache and render, avoiding re-creation.</li>
+<li>With Conditional rendering and hiding implementations.</li>
+</ul>
+<p>The implementation complexity is high.</p>
+<h3 id="3-Use-third-party-libraries"><a href="#3-Use-third-party-libraries" class="headerlink" title="3. Use third-party libraries"></a>3. Use third-party libraries</h3><p>libraries with similar functions have emerged in the community, such <code>react-activation </code>, specially implemented similar Vue <code>keep-alive </code>features that support component caching and activation hooks.</p>
+<p>Using this type of library can be quickly integrated, but additional dependencies need to be introduced.</p>
+<h3 id="4-Caching-scheme-using-React-Router"><a href="#4-Caching-scheme-using-React-Router" class="headerlink" title="4. Caching scheme using React Router"></a>4. Caching scheme using React Router</h3><p>Sometimes through routing schemes <code>Outlet </code>and cache component state (such <code>react-router </code>of <code>useLocation </code>, <code>key </code>management) can achieve a similar effect.</p>
+<p>However, this only applies to routing component switching scenarios.</p>
+<h2 id="React-keep-alive-Simple-Implementation-Example"><a href="#React-keep-alive-Simple-Implementation-Example" class="headerlink" title="React keep-alive Simple Implementation Example"></a>React keep-alive Simple Implementation Example</h2><p>the following example uses the first approach, caching multiple components with hidden control, preserving component state and DOM.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span>, &#123; useState &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">KeepAlive</span>(<span class="params">&#123; activeKey, children &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      &#123;React.Children.map(children, (child) =&gt; &#123;</span></span><br><span class="line"><span class="language-xml">        const isActive = child.key === activeKey;</span></span><br><span class="line"><span class="language-xml">        return (</span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&#123;&#123;</span> <span class="attr">display:</span> <span class="attr">isActive</span> ? &#x27;<span class="attr">block</span>&#x27; <span class="attr">:</span> &#x27;<span class="attr">none</span>&#x27; &#125;&#125;&gt;</span></span></span><br><span class="line"><span class="language-xml">            &#123;child&#125;</span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        );</span></span><br><span class="line"><span class="language-xml">      &#125;)&#125;</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Counter</span>(<span class="params">&#123; label &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [count, setCount] = <span class="title class_">React</span>.<span class="title function_">useState</span>(<span class="number">0</span>);</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">h3</span>&gt;</span>&#123;label&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>Count: &#123;count&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> setCount(count + 1)&#125;&gt;Increment<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">App</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [activeTab, setActiveTab] = <span class="title function_">useState</span>(<span class="string">&#x27;A&#x27;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> setActiveTab(&#x27;A&#x27;)&#125;&gt;Show A<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> setActiveTab(&#x27;B&#x27;)&#125;&gt;Show B<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">KeepAlive</span> <span class="attr">activeKey</span>=<span class="string">&#123;activeTab&#125;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Counter</span> <span class="attr">key</span>=<span class="string">&quot;A&quot;</span> <span class="attr">label</span>=<span class="string">&quot;Counter A&quot;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Counter</span> <span class="attr">key</span>=<span class="string">&quot;B&quot;</span> <span class="attr">label</span>=<span class="string">&quot;Counter B&quot;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">KeepAlive</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Operation effect:</p>
+<ul>
+<li>the toggle button toggles the two counters.</li>
+<li>The state of each counter is preserved and not reinitialized.</li>
+<li>Components are only hidden, not unloaded.</li>
+</ul>
+<h2 id="Comparison-of-the-advantages-and-disadvantages-of-React-to-achieve-keep-alive"><a href="#Comparison-of-the-advantages-and-disadvantages-of-React-to-achieve-keep-alive" class="headerlink" title="Comparison of the advantages and disadvantages of React to achieve keep-alive"></a>Comparison of the advantages and disadvantages of React to achieve keep-alive</h2><table>
+<thead>
+<tr>
+<th>programme</th>
+<th>advantages</th>
+<th>disadvantages</th>
+<th>applicable Scenarios</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>conditional rendering + hide</td>
+<td>simple, state retention, easy to implement</td>
+<td>memory usage, all components mounted</td>
+<td>small number of components, high status requirements</td>
+</tr>
+<tr>
+<td>cache Virtual DOM</td>
+<td>good performance, fine control</td>
+<td>Complex implementation and high maintenance costs</td>
+<td>complex applications, need to optimize performance</td>
+</tr>
+<tr>
+<td>third-party libraries</td>
+<td>fast integration, perfect function</td>
+<td>reliance on third parties, cost of learning</td>
+<td>want fast implementation and feature-rich</td>
+</tr>
+<tr>
+<td>route cache</td>
+<td>convenient route switching cache</td>
+<td>only suitable for route switching scenarios</td>
+<td>multi-Page Application Routing Component Cache</td>
+</tr>
+</tbody></table>
+<h2 id="interview-answer"><a href="#interview-answer" class="headerlink" title="interview answer"></a>interview answer</h2><p>q: How does React implement Vue <code>keep-alive </code>function?</p>
+<p>A: React itself has no built-in <code>keep-alive </code>component, but you can use Conditional rendering and CSS hiding to keep multiple component instances mounted at the same time, so as to maintain the component state and switch quickly. In this way, the previous component is not destroyed when switching components, but simply hidden. The disadvantage is that all components exist in the DOM, which may take up more memory.</p>
+<p>Alternatively, you can combine techniques for caching Virtual DOM or use third-party libraries (such <code>react-activation </code>) for more efficient cache and activation management. For routing scenarios, similar functionality can also be achieved by caching routing component state.</p>
+<p>In General, implementing keep-alive requires designing caching and display control schemes to avoid component offloading, ensure state and DOM preservation, and improve performance and user experience.</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>vue’s <code>keep-alive </code>it is an official built-in state cache component that is simple to use and has perfect functions. React does not directly correspond to components, but you can achieve similar effects through custom components combined with conditional rendering and CSS control, or through community solutions.</p>
+<p>The core difficulty of React’s implementation of keep-alive is how to cache component instances and DOM to avoid destruction. A simple implementation is to mount multiple components at the same time, hiding only inactive components, but incurring memory overhead. Complex solutions need to maintain a cached Virtual DOM to improve performance.</p>
+<p>The choice of solution depends on the actual project complexity, performance requirements and development cycle. Understanding these implementation principles will help you design component state management and performance optimization solutions in real projects.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
