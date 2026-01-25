@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What are the performance optimization features of the concurrent mode in React 18+Forewordwith the increasing complexity of front-end applications and"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What are the performance optimization features of the concurrent mode in React 18+"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What are the performance optimization features of the concurrent mode in React 18+Forewordwith the increasing complexity of front-end applications and"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What are the performance optimization features of the concurrent mode in React 18+ - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What are the performance optimization features of the concurrent mode in React 18+</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-04-08
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-are-the-performance-optimization-features-of-the-concurrent-mode-in-React-18"><a href="#What-are-the-performance-optimization-features-of-the-concurrent-mode-in-React-18" class="headerlink" title="What are the performance optimization features of the concurrent mode in React 18+"></a>What are the performance optimization features of the concurrent mode in React 18+</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>with the increasing complexity of front-end applications and user interaction requirements, page rendering performance has become a key factor in improving user experience. The Concurrent Mode introduced by React 18 brings revolutionary improvements to performance optimization, allowing React to more intelligently schedule rendering tasks and achieve high responsiveness and smoothness of the interface. Understanding the performance optimization features of concurrent mode can help developers take full advantage of the new capabilities of React 18 and later versions to build efficient modern applications. This article will deeply discuss the performance optimization mechanism and practice in React 18 + concurrent mode.</p>
+<h2 id="React-18-Introduction-to-Concurrency-Mode"><a href="#React-18-Introduction-to-Concurrency-Mode" class="headerlink" title="React 18 + Introduction to Concurrency Mode"></a>React 18 + Introduction to Concurrency Mode</h2><p>the concurrency mode is not a single API, but a set of mechanisms and capabilities that allow React to split rendering tasks into interruptible and recoverable work units, optimize the load of the main thread, and improve the interface response speed. Its core idea is to avoid the main thread being blocked for a long time, so that user interaction and animation can be prioritized.</p>
+<p>React 18 via the new root API <code>createRoot </code>enables concurrency and provides a new set of hooks and APIs to enable developers to take advantage of this feature.</p>
+<h2 id="Performance-Optimization-Features-of-Concurrency-Mode"><a href="#Performance-Optimization-Features-of-Concurrency-Mode" class="headerlink" title="Performance Optimization Features of Concurrency Mode"></a>Performance Optimization Features of Concurrency Mode</h2><h3 id="1-Task-scheduling-and-interruption"><a href="#1-Task-scheduling-and-interruption" class="headerlink" title="1. Task scheduling and interruption"></a>1. Task scheduling and interruption</h3><p>in traditional synchronous rendering, once the rendering task starts, React blocks the main thread until it is completed, resulting in UI stuck. In the concurrent mode, rendering is divided into small work units. React can interrupt the current task according to the priority, and preferentially process high-priority user interactions to improve the smoothness of the interface.</p>
+<h3 id="2-Priority-scheduling"><a href="#2-Priority-scheduling" class="headerlink" title="2. Priority scheduling"></a>2. Priority scheduling</h3><p>The React concurrency mode gives different priorities to different types of tasks. For example:</p>
+<ul>
+<li>user input and interaction tasks have the highest priority</li>
+<li>render update task is medium priority</li>
+<li>low priority tasks such as data preloading can be deferred</li>
+</ul>
+<p>this ensures that the user-perceived response is timely, and the background rendering task does not block User Operations.</p>
+<h3 id="3-Automatic-Batching"><a href="#3-Automatic-Batching" class="headerlink" title="3. Automatic Batching"></a>3. Automatic Batching</h3><p>React 18 extends the batch processing scope of status updates and supports multiple status updates in asynchronous contexts (such as Promise and setTimeout) to be merged into one rendering, reducing unnecessary repeated rendering and saving performance overhead.</p>
+<h3 id="4-Suspense-and-resource-scheduling"><a href="#4-Suspense-and-resource-scheduling" class="headerlink" title="4. Suspense and resource scheduling."></a>4. Suspense and resource scheduling.</h3><p>The concurrency mode is combined with the suspend mode to delay rendering components that rely on asynchronous data and preferentially render other displayable content to avoid loading stuck and white screens. React implements intelligent resource scheduling by coordinating the Suspense boundary.</p>
+<h3 id="5-Transition-state-management"><a href="#5-Transition-state-management" class="headerlink" title="5. Transition state management"></a>5. Transition state management</h3><p>by <code>startTransition </code>API, developers can mark non-emergency updates as “transition”, React will be executed asynchronously at a lower priority, to ensure that emergency interaction priority response, while avoiding the interface freeze.</p>
+<p>Example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; startTransition &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">handleSearchChange</span>(<span class="params">value</span>) &#123;</span><br><span class="line">  <span class="title function_">startTransition</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="title function_">setSearchQuery</span>(value);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-Reduce-blocking-the-main-thread-and-optimize-the-smoothness-of-animation"><a href="#6-Reduce-blocking-the-main-thread-and-optimize-the-smoothness-of-animation" class="headerlink" title="6. Reduce blocking the main thread and optimize the smoothness of animation."></a>6. Reduce blocking the main thread and optimize the smoothness of animation.</h3><p>Concurrent mode can make better use of the browser’s idle time, avoid long task blocking, make the interaction such as animation and scrolling smoother, and significantly improve the user experience.</p>
+<h3 id="7-More-fine-grained-rendering-updates"><a href="#7-More-fine-grained-rendering-updates" class="headerlink" title="7. More fine-grained rendering updates."></a>7. More fine-grained rendering updates.</h3><p>The concurrency mode supports Time Slicing, allowing React to perform updates based on priority slices, enabling finer-grained rendering control and reducing unnecessary DOM operations and reordering.</p>
+<h2 id="Concurrent-mode-and-traditional-rendering-comparison"><a href="#Concurrent-mode-and-traditional-rendering-comparison" class="headerlink" title="Concurrent mode and traditional rendering comparison"></a>Concurrent mode and traditional rendering comparison</h2><table>
+<thead>
+<tr>
+<th>characteristics</th>
+<th>traditional synchronous rendering</th>
+<th>React 18 + concurrency mode</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>rendering process</td>
+<td>non-interruptible, main thread is blocked</td>
+<td>interruptible and resumable, task sharded execution</td>
+</tr>
+<tr>
+<td>task Priority</td>
+<td>none, task serial execution</td>
+<td>support multi-priority scheduling</td>
+</tr>
+<tr>
+<td>status Update Batch</td>
+<td>automatic batching in event handling functions only</td>
+<td>extend to asynchronous context automatic batching</td>
+</tr>
+<tr>
+<td>user interaction response</td>
+<td>blocked while rendering, response may be delayed</td>
+<td>user interaction is prioritized for more timely response</td>
+</tr>
+<tr>
+<td>asynchronous data processing</td>
+<td>Suspense deferred rendering is not supported</td>
+<td>support Suspense asynchronous data coordinated rendering</td>
+</tr>
+<tr>
+<td>performance</td>
+<td>Catton and interface freeze may occur</td>
+<td>the UI is smoother, and the Caton is significantly reduced.</td>
+</tr>
+</tbody></table>
+<h2 id="Advice-on-the-Application-of-Concurrency-Mode"><a href="#Advice-on-the-Application-of-Concurrency-Mode" class="headerlink" title="Advice on the Application of Concurrency Mode"></a>Advice on the Application of Concurrency Mode</h2><ul>
+<li>enable concurrency root API ( <code>createRoot </code>) enables the application to support concurrent rendering</li>
+<li>use <code>startTransition </code>flag non-critical state updates to avoid blocking critical operations</li>
+<li>leverage the Suspense component to handle asynchronous data and lazy loading, improving the loading experience</li>
+<li>reduce unnecessary rendering times with automatic batch processing</li>
+<li>avoid long tasks and blocking operations, keep rendering unit granularity small</li>
+</ul>
+<h2 id="interview-answer"><a href="#interview-answer" class="headerlink" title="interview answer"></a>interview answer</h2><p>q: What are the performance optimization features of React 18 + concurrent mode?</p>
+<p>A: React 18 concurrent mode realizes task scheduling and priority management by splitting the rendering task into small interruptible tasks, avoiding the main thread from being blocked for a long time, thus improving the interface response speed. It extends automatic batching, incorporates more status updates, and reduces repetitive rendering. Combined with Suspense, asynchronous data loading can be coordinated to improve the loading experience. <code>startTransition </code>allows marking non-urgent updates as transitions to ensure user interaction takes precedence. Overall, the concurrency mode improves the rendering flexibility and performance, making the UI smoother and more responsive.</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>The React 18 + concurrency mode significantly optimizes rendering performance and user experience through mechanisms such as task interruption, priority scheduling, automatic batch processing, and Suspense coordinated asynchronous loading. It enables React applications to better respond to user actions, avoid interface stuck and long-term freezing, and adapt to the needs of modern complex interactions. Mastering and properly using the features of the concurrency mode is a key path to improve the performance of React applications.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

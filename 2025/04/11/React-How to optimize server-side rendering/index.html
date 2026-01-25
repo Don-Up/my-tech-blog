@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="How to optimize server-side renderingForewordserver-side rendering (SSR) is widely used in modern Web development as a technical solution to improve t"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How to optimize server-side rendering"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="How to optimize server-side renderingForewordserver-side rendering (SSR) is widely used in modern Web development as a technical solution to improve t"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How to optimize server-side rendering - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How to optimize server-side rendering</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-04-11
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="How-to-optimize-server-side-rendering"><a href="#How-to-optimize-server-side-rendering" class="headerlink" title="How to optimize server-side rendering"></a>How to optimize server-side rendering</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>server-side rendering (SSR) is widely used in modern Web development as a technical solution to improve the loading speed of the first screen of Web pages and SEO-friendly. However, SSR introduces additional computational overhead and complexity on the server side, which, if not optimized, may lead to response delays and increased server pressure.</p>
+<p>To address these challenges, a reasonable SSR optimization strategy is the key to ensure application performance and user experience. This article systematically sorts out common SSR optimization methods to help developers effectively improve rendering efficiency and system stability in actual projects.</p>
+<h2 id="SSR-performance-bottleneck-analysis"><a href="#SSR-performance-bottleneck-analysis" class="headerlink" title="SSR performance bottleneck analysis"></a>SSR performance bottleneck analysis</h2><p>before discussing optimization methods, it is necessary to understand the performance bottlenecks that may occur in SSR. Mainly reflected in the following aspects:</p>
+<p>the server is under heavy computing pressure and blocks requests for a long time. Network transmission delay leads to slow response of the first screen improper asynchronous data loading, blocking rendering client hydration Performance Bottlenecks unreasonable style loading and resource management</p>
+<h2 id="main-optimization-methods-for-server-side-rendering"><a href="#main-optimization-methods-for-server-side-rendering" class="headerlink" title="main optimization methods for server-side rendering"></a>main optimization methods for server-side rendering</h2><h3 id="1-Stream-rendering-Streaming"><a href="#1-Stream-rendering-Streaming" class="headerlink" title="1. Stream rendering (Streaming)"></a>1. Stream rendering (Streaming)</h3><p>traditional SSR usage <code>renderToString </code>generate complete HTML and then send, resulting in a delay in the first screen response. Streaming rendering (such as React’s <code>renderToNodeStream</code>) Allow the server to send HTML while generating, improve the first byte time (TTFB) of the page, and improve user perception performance.</p>
+<p>Sample code:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import &#123; renderToNodeStream &#125; from &#x27;react-dom/server&#x27;;</span><br><span class="line"></span><br><span class="line">app.get(&#x27;*&#x27;, (req, res) =&gt; &#123;</span><br><span class="line">  const stream = renderToNodeStream(&lt;App /&gt;);</span><br><span class="line">  res.write(&#x27;&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;SSR&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;div id=&quot;root&quot;&gt;&#x27;);</span><br><span class="line">  stream.pipe(res, &#123; end: false &#125;);</span><br><span class="line">  stream.on(&#x27;end&#x27;, () =&gt; &#123;</span><br><span class="line">    res.end(&#x27;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;&#x27;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-Server-side-caching"><a href="#2-Server-side-caching" class="headerlink" title="2. Server-side caching"></a>2. Server-side caching</h3><p>caching render results can significantly reduce server load for the same request or stateless page. Cache strategy can be divided into page cache and component cache. Cached data can be stored in memory, Redis and other cache layers.</p>
+<p>Set cache expiration time reasonably and adjust flexibly according to business requirements.</p>
+<h3 id="3-Data-prefetching-and-asynchronous-optimization"><a href="#3-Data-prefetching-and-asynchronous-optimization" class="headerlink" title="3. Data prefetching and asynchronous optimization"></a>3. Data prefetching and asynchronous optimization</h3><p>asynchronous data request is the key bottleneck of SSR. Obtain the necessary data on the server in advance and ensure that the data is synchronized with the client. Avoid unnecessary repeated requests and blocking operations.</p>
+<p>Cooperate with mechanisms such as Suspense to implement progressive loading of data and reduce blocking time.</p>
+<h3 id="4-Code-splitting-and-lazy-loading"><a href="#4-Code-splitting-and-lazy-loading" class="headerlink" title="4. Code splitting and lazy loading"></a>4. Code splitting and lazy loading</h3><p>split the application into multiple independent modules, load on demand, reduce the size of the first screen package, and speed up the transmission speed.</p>
+<p>With SSR, critical code is loaded first and non-critical components are loaded late to improve overall performance.</p>
+<h3 id="5-Style-optimization"><a href="#5-Style-optimization" class="headerlink" title="5. Style optimization"></a>5. Style optimization</h3><p>ensure that styles are generated synchronously during server-side rendering to avoid flickering (FOUC). Server styles can be extracted and inserted into HTML using CSS-in-JS schemes.</p>
+<p>Critical CSS is loaded first, non-critical styles are loaded later, reducing blocking rendering.</p>
+<h3 id="6-Reduce-unnecessary-rendering-and-calculation"><a href="#6-Reduce-unnecessary-rendering-and-calculation" class="headerlink" title="6. Reduce unnecessary rendering and calculation"></a>6. Reduce unnecessary rendering and calculation</h3><p>Avoid useless component rendering, reasonable split component level. Reduce repeated rendering by PureComponent, React.memo and other means.</p>
+<p>Use caching (memoization) optimization for complex computing logic to reduce server pressure.</p>
+<h3 id="7-Server-side-resource-monitoring-and-flow-limiting"><a href="#7-Server-side-resource-monitoring-and-flow-limiting" class="headerlink" title="7. Server-side resource monitoring and flow limiting"></a>7. Server-side resource monitoring and flow limiting</h3><p>real-time monitoring of server CPU, memory and other indicators to find performance bottlenecks. Implement current limiting and degradation strategies for hot interfaces to ensure system stability.</p>
+<h3 id="8-Rational-use-of-CDN-and-network-optimization"><a href="#8-Rational-use-of-CDN-and-network-optimization" class="headerlink" title="8. Rational use of CDN and network optimization"></a>8. Rational use of CDN and network optimization</h3><p>static resources are distributed through CDN to reduce server pressure and speed up resource loading. Enable network optimization technologies such as HTTP&#x2F;2 multiplexing and compression.</p>
+<h2 id="SSR-optimization-Summary-table"><a href="#SSR-optimization-Summary-table" class="headerlink" title="SSR optimization Summary table"></a>SSR optimization Summary table</h2><table>
+<thead>
+<tr>
+<th>optimization mode</th>
+<th>role description</th>
+<th>key techniques&#x2F;methods</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>streaming rendering</td>
+<td>rendering while sending, reducing the first screen delay</td>
+<td>React renderToNodeStream</td>
+</tr>
+<tr>
+<td>server-side caching</td>
+<td>reduce duplicate rendering, reduce server load</td>
+<td>memory cache, Redis Cache</td>
+</tr>
+<tr>
+<td>data prefetching</td>
+<td>the server prepares data in advance to avoid blocking</td>
+<td>getserversidedrops, Suspense</td>
+</tr>
+<tr>
+<td>code splitting and lazy loading</td>
+<td>reduce the volume of the first screen package and speed up loading</td>
+<td>Dynamic import, React.lazy</td>
+</tr>
+<tr>
+<td>style optimization</td>
+<td>avoid flicker and ensure consistent style</td>
+<td>CSS-in-JS SSR, critical CSS</td>
+</tr>
+<tr>
+<td>reduce duplicate rendering</td>
+<td>improve rendering efficiency and reduce computing overhead</td>
+<td>react.memo, PureComponent</td>
+</tr>
+<tr>
+<td>server Monitoring and Current Limiting</td>
+<td>ensure stability and avoid server overload</td>
+<td>monitoring tools, flow limiting middleware</td>
+</tr>
+<tr>
+<td>CDN and network optimization</td>
+<td>accelerate static resource loading and reduce network latency</td>
+<td>CDN, HTTP&#x2F;2, multiplexing, compression</td>
+</tr>
+</tbody></table>
+<h2 id="interview-answer"><a href="#interview-answer" class="headerlink" title="interview answer"></a>interview answer</h2><p>q: Please introduce several optimization methods for server-side rendering?</p>
+<p>A: The optimization of server-side rendering mainly includes streaming rendering, using React’s <code>renderToNodeStream </code>you can send HTML while rendering, reducing the first screen response time. Server-side cache can store rendering results, reducing computing pressure. Data prefetching and asynchronous processing are reasonably designed to ensure that the server side gets the required data first and avoids blocking. Code segmentation and lazy loading reduce the volume of the first screen package and speed up loading. Styles are generated synchronously to avoid flickering. Improve rendering efficiency by reducing repetitive rendering and complex calculations. Combined with server monitoring and current limiting to ensure system stability. Finally, CDN and network optimization are used to speed up resource loading.</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Server-side rendering optimization involves multiple aspects, from the streaming output of the rendering process itself, to caching strategies, asynchronous data management, to resource distribution and server stability assurance. For specific business scenarios, a reasonable combination of these optimization methods can effectively improve the response speed and system availability of SSR applications. Deep understanding and flexible use of these optimization methods is the key to building high-performance SSR applications.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

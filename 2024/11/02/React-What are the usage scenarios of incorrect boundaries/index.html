@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What are the usage scenarios of incorrect boundariesForewordin a complex React application, the component tree may be very large and complex, and the "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What are the usage scenarios of incorrect boundaries"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What are the usage scenarios of incorrect boundariesForewordin a complex React application, the component tree may be very large and complex, and the "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What are the usage scenarios of incorrect boundaries - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What are the usage scenarios of incorrect boundaries</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-11-02
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-are-the-usage-scenarios-of-incorrect-boundaries"><a href="#What-are-the-usage-scenarios-of-incorrect-boundaries" class="headerlink" title="What are the usage scenarios of incorrect boundaries"></a>What are the usage scenarios of incorrect boundaries</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in a complex React application, the component tree may be very large and complex, and the dependencies between components are close. The runtime error of any one component may cause the entire application to crash. As an error handling mechanism of React, error boundary can catch the exception of subcomponents and gracefully perform degradation processing to ensure the stable operation of the application. Understanding the usage scenarios of error boundaries is essential for designing robust and user-friendly applications. This article will analyze the typical usage scenarios of error boundaries to help you understand exactly when and how to use error boundaries.</p>
+<h2 id="Typical-scenarios-where-error-boundaries-apply"><a href="#Typical-scenarios-where-error-boundaries-apply" class="headerlink" title="Typical scenarios where error boundaries apply"></a>Typical scenarios where error boundaries apply</h2><h3 id="1-Error-isolation-of-critical-area-components"><a href="#1-Error-isolation-of-critical-area-components" class="headerlink" title="1. Error isolation of critical area components"></a>1. Error isolation of critical area components</h3><p>in large applications, some modules or areas are relatively independent and complex, such as dashboards, form areas, third-party integration modules, etc. These areas may be more prone to errors due to complex logic, network requests, or data anomalies. At this time, you can set an error boundary for each important region to limit the error to that region to avoid global impact.</p>
+<p>Example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="title class_">ErrorBoundary</span>&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">Dashboard</span> /&gt;</span></span></span><br><span class="line">&lt;/<span class="title class_">ErrorBoundary</span>&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">ErrorBoundary</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;<span class="name">UserProfile</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">ErrorBoundary</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>if <code>Dashboard </code>an error occurs in a component that only affects the dashboard part, <code>UserProfile </code>normal display.</p>
+<h3 id="2-Wrapping-of-third-party-components-or-unstable-modules"><a href="#2-Wrapping-of-third-party-components-or-unstable-modules" class="headerlink" title="2. Wrapping of third-party components or unstable modules"></a>2. Wrapping of third-party components or unstable modules</h3><p>when using third-party libraries or custom complex components, errors may be thrown due to their internal control. To avoid affecting the overall application, these unstable components are usually wrapped with error boundaries.</p>
+<p>Example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="title class_">ErrorBoundary</span>&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">ThirdPartyWidget</span> /&gt;</span></span></span><br><span class="line">&lt;/<span class="title class_">ErrorBoundary</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>show the standby UI when an error occurs to avoid application crashes.</p>
+<h3 id="3-Error-capture-in-route-switching"><a href="#3-Error-capture-in-route-switching" class="headerlink" title="3. Error capture in route switching."></a>3. Error capture in route switching.</h3><p>The page component is loaded dynamically when the route is switched. If a page component fails, the error boundary can catch the error and display a friendly prompt instead of a white screen.</p>
+<p>Example (React Router):</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="title class_">ErrorBoundary</span>&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">Routes</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/&quot;</span> <span class="attr">element</span>=<span class="string">&#123;</span>&lt;<span class="attr">HomePage</span> /&gt;</span>&#125; /&gt;</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/profile&quot;</span> <span class="attr">element</span>=<span class="string">&#123;</span>&lt;<span class="attr">ProfilePage</span> /&gt;</span>&#125; /&gt;</span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">Routes</span>&gt;</span></span></span><br><span class="line">&lt;/<span class="title class_">ErrorBoundary</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-Error-protection-during-the-component-lifecycle-and-rendering"><a href="#4-Error-protection-during-the-component-lifecycle-and-rendering" class="headerlink" title="4. Error protection during the component lifecycle and rendering."></a>4. Error protection during the component lifecycle and rendering.</h3><p>Error boundaries capture errors in rendering and Lifecycle methods. For components that may have complex rendering logic and rely on asynchronous data, use error boundaries to avoid abnormal page rendering.</p>
+<h3 id="5-Global-error-handling-in-large-applications"><a href="#5-Global-error-handling-in-large-applications" class="headerlink" title="5. Global error handling in large applications."></a>5. Global error handling in large applications.</h3><p>The use of a global error boundary at the application root component catches errors that are not caught locally, providing a last line of defense to ensure that the application does not crash due to unhandled errors.</p>
+<p>Example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="title class_">ErrorBoundary</span>&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">App</span> /&gt;</span></span></span><br><span class="line">&lt;/<span class="title class_">ErrorBoundary</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>cooperate with the log reporting system to realize error monitoring and recovery.</p>
+<h3 id="6-Error-recovery-interactions-in-business-scenarios"><a href="#6-Error-recovery-interactions-in-business-scenarios" class="headerlink" title="6. Error recovery interactions in business scenarios."></a>6. Error recovery interactions in business scenarios.</h3><p>The error boundary is not only used to display the error UI, but also to realize error recovery, such as providing a “retry” button, refreshing the current module or resetting the state, improving the user experience.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ErrorBoundary</span> <span class="keyword">extends</span> <span class="title class_ inherited__">React.Component</span> &#123;</span><br><span class="line">  <span class="comment">// ...省略错误捕获代码...</span></span><br><span class="line"></span><br><span class="line">  handleRetry = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">setState</span>(&#123; <span class="attr">hasError</span>: <span class="literal">false</span> &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">render</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">state</span>.<span class="property">hasError</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> (</span><br><span class="line">        <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;<span class="name">p</span>&gt;</span>发生错误了！<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;this.handleRetry&#125;</span>&gt;</span>重试<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">      );</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">props</span>.<span class="property">children</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Combining-practical-error-boundary-hierarchy-design"><a href="#Combining-practical-error-boundary-hierarchy-design" class="headerlink" title="Combining practical error boundary hierarchy design"></a>Combining practical error boundary hierarchy design</h2><p>the rational design of error boundaries is usually multi-tiered:</p>
+<ul>
+<li><strong>global Error Boundary</strong> wrap the entire app and catch unhandled errors.</li>
+<li><strong>Page-level error boundary</strong> : For routing pages, avoid a single page fault affecting the whole.</li>
+<li><strong>Module-Level Error Boundaries</strong>: Critical areas or complex modules are individually wrapped to isolate errors.</li>
+<li><strong>Third-party component boundaries</strong> : Independently wrap third-party components to reduce risk transmission.</li>
+</ul>
+<p>Reasonable layering can limit the error effect to the minimum range and improve the application stability.</p>
+<h2 id="Error-boundary-usage-scenario-Summary-table"><a href="#Error-boundary-usage-scenario-Summary-table" class="headerlink" title="Error boundary usage scenario Summary table"></a>Error boundary usage scenario Summary table</h2><table>
+<thead>
+<tr>
+<th>scenario Description</th>
+<th>role</th>
+<th>remarks</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>business Critical Modules</td>
+<td>error isolation to prevent global impact</td>
+<td>such as dashboards, forms, editors, etc.</td>
+</tr>
+<tr>
+<td>Third-party components or unstable modules</td>
+<td>reduce the impact of third-party errors</td>
+<td>independent package, show spare UI</td>
+</tr>
+<tr>
+<td>routing Page Switch</td>
+<td>capture page rendering errors</td>
+<td>prevent white screen</td>
+</tr>
+<tr>
+<td>rendering Complex Components</td>
+<td>avoid Rendering Exception Crash</td>
+<td>ensure the stability of core functions</td>
+</tr>
+<tr>
+<td>application Root Component</td>
+<td>global Last Line of Defense</td>
+<td>monitoring log and Error Reporting</td>
+</tr>
+<tr>
+<td>error Recovery in Business Interaction</td>
+<td>provide interaction such as retry and refresh</td>
+<td>improve user experience</td>
+</tr>
+</tbody></table>
+<h2 id="interview-answer"><a href="#interview-answer" class="headerlink" title="interview answer"></a>interview answer</h2><p>q: What are the usage scenarios for error boundaries?</p>
+<p>Answer: Error boundaries are primarily used to catch rendering and lifecycle errors in the child component tree and prevent the application from crashing as a whole. It is commonly used for fault isolation of critical business modules, third-party unstable components, and routing pages to achieve local degradation. Large applications often set error boundaries at the root component and page level as multiple layers of protection. In addition, error boundaries are also suitable for implementing error recovery interactions to improve the user experience. Reasonable hierarchical use of error boundaries can effectively improve application stability and robustness.</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>the error boundary is an indispensable means of ensuring stability in React applications. It is suitable for multiple scenarios, such as key business areas, third-party components, route switching, and global error capture. By locally isolating errors and providing elegant downgraded UI, the application can still run stably even when exceptions occur. Multi-level and sub-regional use of error boundaries, combined with error logging and recovery interactions, can significantly improve user experience and system robustness. Understanding the typical usage scenarios of error boundaries helps to design and build high-quality React applications.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

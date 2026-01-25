@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What are the limitations of error boundaries in capturing errorsForewordthe Error Boundary is an important mechanism provided by React to catch JavaSc"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What are the limitations of error boundaries in capturing errors"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What are the limitations of error boundaries in capturing errorsForewordthe Error Boundary is an important mechanism provided by React to catch JavaSc"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What are the limitations of error boundaries in capturing errors - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What are the limitations of error boundaries in capturing errors</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-02-23
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/React/">#React</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/React/">React</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-are-the-limitations-of-error-boundaries-in-capturing-errors"><a href="#What-are-the-limitations-of-error-boundaries-in-capturing-errors" class="headerlink" title="What are the limitations of error boundaries in capturing errors"></a>What are the limitations of error boundaries in capturing errors</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>the Error Boundary is an important mechanism provided by React to catch JavaScript errors in its sub-component tree to prevent the entire application from crashing and improve the user experience. Although the error boundary is powerful and practical, it also has certain limitations in its ability to catch errors. Understanding these limitations will help developers design error handling solutions to prevent errors from being missed or misused. This article will analyze the scope and limitations of error boundary capture errors in detail to help you fully grasp their applicable boundaries.</p>
+<h2 id="The-range-of-errors-that-the-error-boundary-can-capture"><a href="#The-range-of-errors-that-the-error-boundary-can-capture" class="headerlink" title="The range of errors that the error boundary can capture"></a>The range of errors that the error boundary can capture</h2><p>error boundaries are designed to catch synchronization errors in rendering, Lifecycle methods, and constructors, including:</p>
+<ul>
+<li>errors during rendering of subcomponents</li>
+<li>errors in the lifecycle methods of the subcomponents (e. G. <code>componentDidMount </code>, <code>render </code>)</li>
+<li>constructor error for child component</li>
+</ul>
+<p>when these errors occur, the error boundary is passed through the lifecycle method. <code>static getDerivedStateFromError </code>and <code>componentDidCatch </code>capture, and show the alternate UI.</p>
+<h2 id="Limitations-of-Error-Boundary-Capture-Error"><a href="#Limitations-of-Error-Boundary-Capture-Error" class="headerlink" title="Limitations of Error Boundary Capture Error"></a>Limitations of Error Boundary Capture Error</h2><h3 id="1-Errors-in-the-event-handler-could-not-be-caught"><a href="#1-Errors-in-the-event-handler-could-not-be-caught" class="headerlink" title="1. Errors in the event handler could not be caught."></a>1. Errors in the event handler could not be caught.</h3><p>Errors In React event handlers (such as button click callbacks) are not caught by error boundaries. Because event handling is an asynchronous call outside the React synthetic event system, the error boundary is only for errors in the rendering phase.</p>
+<p>If you need to catch errors in an event, you must explicitly use <code>try...catch </code>:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Button</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">handleClick</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      <span class="comment">// 可能抛出错误的代码</span></span><br><span class="line">    &#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">      <span class="comment">// 处理错误</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;handleClick&#125;</span>&gt;</span>Click me<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-Errors-in-asynchronous-code-are-not-caught"><a href="#2-Errors-in-asynchronous-code-are-not-caught" class="headerlink" title="2. Errors in asynchronous code are not caught."></a>2. Errors in asynchronous code are not caught.</h3><p>Error boundaries cannot capture things such <code>setTimeout </code>, <code>Promise </code>error in asynchronous callback. For example:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&quot;异步错误&quot;</span>);</span><br><span class="line">  &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;, []);</span><br></pre></td></tr></table></figure>
+
+<p>the above errors are not caught by error boundaries and need to be caught on their own in asynchronous logic or monitored globally (e. G. <code>window.onerror </code>).</p>
+<h3 id="3-Errors-in-service-side-rendering-are-not-captured"><a href="#3-Errors-in-service-side-rendering-are-not-captured" class="headerlink" title="3. Errors in service-side rendering are not captured."></a>3. Errors in service-side rendering are not captured.</h3><p>The error boundary mechanism only applies to client-side rendering. Errors during server-side rendering (SSR) are not captured by error boundaries and require SSR-related error handling.</p>
+<h3 id="4-Do-not-catch-errors-outside-of-React"><a href="#4-Do-not-catch-errors-outside-of-React" class="headerlink" title="4. Do not catch errors outside of React."></a>4. Do not catch errors outside of React.</h3><p>Errors thrown in, for example, DOM event listeners and third-party library callbacks are not automatically caught by the error boundary and need to be handled separately.</p>
+<h3 id="5-Function-components-cannot-be-used-as-error-boundaries"><a href="#5-Function-components-cannot-be-used-as-error-boundaries" class="headerlink" title="5. Function components cannot be used as error boundaries."></a>5. Function components cannot be used as error boundaries.</h3><p>Currently (React 18 and earlier), the error boundary must be a class component. Function components cannot directly implement error boundaries, and need to be wrapped by external class components or React experimental API (such <code>useErrorBoundary </code>).</p>
+<h3 id="6-Some-states-may-be-lost-in-case-of-exception"><a href="#6-Some-states-may-be-lost-in-case-of-exception" class="headerlink" title="6. Some states may be lost in case of exception"></a>6. Some states may be lost in case of exception</h3><p>after an error boundary is caught, the system generally switches to a downgraded UI, and the component state may be lost, resulting in an incomplete user interaction experience. Need to cooperate with the error recovery mechanism.</p>
+<h2 id="Error-Capture-Capacity-Limits-Summary-Table"><a href="#Error-Capture-Capacity-Limits-Summary-Table" class="headerlink" title="Error Capture Capacity Limits Summary Table"></a>Error Capture Capacity Limits Summary Table</h2><table>
+<thead>
+<tr>
+<th>restricted Scenarios</th>
+<th>is caught by error boundary</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>rendering, synchronization errors in the lifecycle</td>
+<td>yes</td>
+<td>the main capture range of error boundary design</td>
+</tr>
+<tr>
+<td>React event handler function error</td>
+<td>no</td>
+<td>requires manual <code>try-catch </code>capture</td>
+</tr>
+<tr>
+<td>asynchronous code (setTimeout, Promise) error</td>
+<td>no</td>
+<td>you need to capture or listen globally in asynchronous logic.</td>
+</tr>
+<tr>
+<td>Server-side rendering error</td>
+<td>no</td>
+<td>SSR needs to be handled independently</td>
+</tr>
+<tr>
+<td>errors outside of React</td>
+<td>no</td>
+<td>For example, native DOM events and third-party library errors need to be additionally captured.</td>
+</tr>
+<tr>
+<td>Function Component</td>
+<td>not supported as error boundary</td>
+<td>requires a class component implementation, or use an experimental Hook.</td>
+</tr>
+</tbody></table>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p>q: What are the limitations of error boundary capture errors?</p>
+<p>Answer: Error boundaries can only capture synchronous errors in subcomponent rendering and Lifecycle methods, cannot capture errors in event handlers, and cannot capture asynchronous code (such <code>setTimeout </code>or <code>Promise </code>error in). In addition, error boundaries do not apply to errors in server-side rendering, nor do they catch errors outside of React, such as exceptions in native DOM event listeners. At the same time, the error boundary can only be implemented with class components, and function components cannot be directly used as error boundaries.</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>error boundary is an important mechanism for improving stability and fault tolerance in React applications. It can effectively capture rendering and lifecycle synchronization errors, prevent application crashes, and display degraded UI. However, it has limitations on event handler errors, asynchronous errors, and server-side rendering errors, which need to be complemented by other error capture methods and design solutions. Understanding the limits of error boundaries and properly designing error handling strategies are key to building robust React applications.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
