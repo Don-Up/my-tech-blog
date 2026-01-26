@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What is the difference between nextTick and setTimeout in NodeForewordin Node.js, nextTick and setTimeout are both mechanisms for Scheduling asynchron"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What is the difference between nextTick and setTimeout in Node"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What is the difference between nextTick and setTimeout in NodeForewordin Node.js, nextTick and setTimeout are both mechanisms for Scheduling asynchron"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What is the difference between nextTick and setTimeout in Node - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What is the difference between nextTick and setTimeout in Node</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-06-17
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/NodeJS/">#NodeJS</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/NodeJS/">NodeJS</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-is-the-difference-between-nextTick-and-setTimeout-in-Node"><a href="#What-is-the-difference-between-nextTick-and-setTimeout-in-Node" class="headerlink" title="What is the difference between nextTick and setTimeout in Node"></a>What is the difference between nextTick and setTimeout in Node</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in Node.js, nextTick and setTimeout are both mechanisms for Scheduling asynchronous operations, but they have significant differences in execution timing, queue priority, and applicable scenarios. Mastering the differences between the two will help you write more efficient and stable asynchronous code and avoid common performance bottlenecks and execution order issues. This article will analyze the execution mechanism, differences and applications of nextTick and setTimeout in detail.</p>
+<h2 id="The-Execution-Mechanism-and-Characteristics-of-nextTick"><a href="#The-Execution-Mechanism-and-Characteristics-of-nextTick" class="headerlink" title="The Execution Mechanism and Characteristics of nextTick"></a>The Execution Mechanism and Characteristics of nextTick</h2><p>process.nextTick is a special asynchronous interface provided by Node.js, which inserts the callback function into the “microtask queue” (microtask queue) after the current operation is completed and before the event loop enters the next stage. This means that the nextTick callback will execute as soon as the current function execution stack is cleared, faster than any asynchronous operation based on an event loop.</p>
+<p>The execution process is as follows: after the code execution in the current stage is completed, Node.js will process all callbacks in the nextTick queue before proceeding to the next stage of the event loop.</p>
+<p>Because the callback priority of nextTick is extremely high, if new nextTick is continuously added to the callback, it will cause “starvation” and other phases of the event loop cannot be executed, resulting in performance risks.</p>
+<h2 id="Execution-Mechanism-and-Characteristics-of-setTimeout"><a href="#Execution-Mechanism-and-Characteristics-of-setTimeout" class="headerlink" title="Execution Mechanism and Characteristics of setTimeout"></a>Execution Mechanism and Characteristics of setTimeout</h2><p>setTimeout is a timer function common to browsers and Node.js, which is used to delay the execution of callback functions. Even if the delay is set to 0,setTimeout inserts the callback into the timer phase queue of the event loop.</p>
+<p>Each round of the event loop checks all the timer queues and executes the expired callback. Since setTimeout belongs to the macro task queue, its execution time is relatively late and is limited by the minimum delay (Node.js defaults to 1ms, and browsers have a minimum delay of 4ms).</p>
+<p>The callback execution of setTimeout does not guarantee the precise delay, and the actual execution time will be affected by other tasks of the event loop and system scheduling.</p>
+<h2 id="The-difference-between-the-two"><a href="#The-difference-between-the-two" class="headerlink" title="The difference between the two"></a>The difference between the two</h2><ol>
+<li>execution timing: nextTick executes immediately after the current operation is completed and takes precedence over any phase of the event loop; setTimeout enters the timer phase of the event loop and executes later.</li>
+<li>Priority: nextTick has a high priority and is executed before all timers and I&#x2F;O events. setTimeout has a low priority and depends on event cycle scheduling.</li>
+<li>Application scenario: nextTick is suitable for microtasks that need to be executed immediately after the current operation is completed, such as subsequent processing of asynchronous operations and recursive calls. setTimeout is used to schedule delayed tasks, avoid blocking event loops, or perform scheduled execution.</li>
+<li>Recursive call risk: nextTick if recursive calls may cause the event loop to “starve”, while setTimeout does not have this risk because it must wait for the next event loop.</li>
+</ol>
+<h2 id="Application-Scenario-Example"><a href="#Application-Scenario-Example" class="headerlink" title="Application Scenario Example"></a>Application Scenario Example</h2><p>When it is necessary to ensure that some callbacks are executed immediately after the current function call stack is cleared, to ensure that the subsequent logic is not interrupted, using process.nextTick is the appropriate choice.</p>
+<p>If you need to delay the execution of a piece of code or disperse tasks to avoid blocking the main thread, it is more reasonable to use setTimeout.</p>
+<p>In complex asynchronous control, proper use of nextTick and setTimeout can avoid “callback hell” and ensure code execution order and performance.</p>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p>process.nextTick and setTimeout are the mechanisms used by Node.js to schedule asynchronous callbacks, but the execution timing and priority are different. nextTick will put the callback into the microtask queue after the current operation is completed and before the next phase of the event loop starts. The priority is very high to ensure that the callback is executed as soon as possible. The setTimeout is to put the callback into the timer phase of the event loop, and execute it after a delay of at least 1 millisecond, with a lower priority. nextTick is suitable for immediate execution of subsequent logic for asynchronous operations, but recursive calls can cause the event loop to be blocked. setTimeout is suitable for delaying the execution of tasks and preventing blocking the main thread. Understanding the differences between them helps to rationalize asynchronous code and improve performance and stability.</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>although nextTick and setTimeout in Node.js both implement asynchronous callback mechanisms, the essential difference lies in the execution timing and priority. nextTick runs in the microtask queue before the end of the current event loop phase, with high speed and high priority. setTimeout is a macro task and is affected by event Loop scheduling. Proper use of both enables fine-grained control of asynchronous processes, avoiding performance issues and logic errors. Mastering the differences is key to a deep understanding of the Node.js asynchronous model and the event loop.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="How much does the node process knowForewordNode.js itself is single-threaded, but many practical applications need to use multi-core CPU or perform ti"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How much does the node process know"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="How much does the node process knowForewordNode.js itself is single-threaded, but many practical applications need to use multi-core CPU or perform ti"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How much does the node process know - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How much does the node process know</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-12-15
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/NodeJS/">#NodeJS</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/NodeJS/">NodeJS</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="How-much-does-the-node-process-know"><a href="#How-much-does-the-node-process-know" class="headerlink" title="How much does the node process know"></a>How much does the node process know</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>Node.js itself is single-threaded, but many practical applications need to use multi-core CPU or perform time-consuming tasks, when the sub-process becomes an important means. Through child processes, Node.js can create independent processes to execute tasks, realizing parallel computing and resource isolation. Understanding the principles, types, and communication methods of Node.js child processes helps you design a high-performance and stable service architecture.</p>
+<h2 id="Basic-concepts-and-types-of-sub-processes"><a href="#Basic-concepts-and-types-of-sub-processes" class="headerlink" title="Basic concepts and types of sub-processes"></a>Basic concepts and types of sub-processes</h2><p>A child process is an independent process created by the main process through the operating system call, with its own memory space and operating environment. Node.js provides the child_process module, which supports several ways to create child processes:</p>
+<p>spawn: starts a new process, runs a specified command, supports streaming data interaction, and is suitable for processing large amounts of data.</p>
+<p>exec: starts a new process to execute a command, caches the output to the callback function, and is suitable for executing short commands.</p>
+<p>execFile: Similar to exec, but directly executes files without shell, which is more efficient.</p>
+<p>fork: specifically for creating Node.js child processes, based on spawn, but with an IPC (inter-process communication) channel to the parent process for easy messaging.</p>
+<p>Each method is suitable for different scenarios. fork is commonly used for two-way communication between the main process and sub-processes, spawn is suitable for processing data streams, and exec is suitable for simple command execution.</p>
+<h2 id="Working-mechanism-of-sub-process"><a href="#Working-mechanism-of-sub-process" class="headerlink" title="Working mechanism of sub-process"></a>Working mechanism of sub-process</h2><p>the child process and the main process are independent of each other, resource isolation, non-interference. They transmit data via standard input, standard output, and standard error streams.</p>
+<p>The fork child process provides a dedicated IPC channel, and the parent-child process implements message delivery through process.send and process.on(‘message’) to support complex object delivery.</p>
+<p>Since the sub-process is an independent operating system process, the startup cost is relatively high, but the multi-core CPU can be used to execute computing tasks in parallel to avoid blocking the main thread.</p>
+<p>The abnormal exit of the child process will not directly affect the main process, which is convenient for error isolation and recovery.</p>
+<h2 id="Application-Scenarios-for-Sub-Processes"><a href="#Application-Scenarios-for-Sub-Processes" class="headerlink" title="Application Scenarios for Sub-Processes"></a>Application Scenarios for Sub-Processes</h2><ol>
+<li>compute-intensive tasks, such as image processing, data analysis, and encryption operations, distribute tasks to child processes to avoid blocking the main thread.</li>
+<li>Execute external commands or scripts, such as calling shell scripts, executing system commands, and processing heterogeneous tasks.</li>
+<li>Multi-core utilization: combined with the cluster module to achieve multi-core load balancing, each worker is actually a fork out of the sub-process.</li>
+<li>Task isolation: Sensitive operations or unstable code are placed in sub-processes to improve the stability of the main process.</li>
+</ol>
+<h2 id="Subprocess-Boundaries-and-Considerations"><a href="#Subprocess-Boundaries-and-Considerations" class="headerlink" title="Subprocess Boundaries and Considerations"></a>Subprocess Boundaries and Considerations</h2><p>memory between child processes is not shared, data exchange must be through IPC or stream, the communication cost is high, not frequent interaction.</p>
+<p>There is a startup delay in creating child processes, which is not suitable for frequent creation and destruction in a short period of time.</p>
+<p>You need to manage the lifecycle of child processes, such as exception capture, restart, and exit processing, to prevent zombie processes.</p>
+<p>The resource overhead of sub-processes is larger than that of threads, so the number of processes needs to be reasonably planned to avoid exhaustion of system resources.</p>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p>The child process of Node.js is an independent operating system process created by the child_process module. Common methods include spawn, exec, execFile, and fork. fork is specifically used to create Node.js child processes with IPC communication channels between parent and child processes to facilitate two-way message delivery. Sub-process resource isolation enables parallel execution of compute-intensive tasks to avoid blocking the main thread. They interact with data through standard input and output streams and message events. Sub-processes are suitable for multi-core utilization, task isolation, and execution of external commands, but the startup overhead is high, the communication cost is high, and the life cycle and resources need to be reasonably managed. Understanding the subprocess mechanism is critical to designing high-performance, stable Node.js applications.</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Node.js uses the sub-process mechanism to break the single-thread limit and achieve multi-core parallelism and task isolation. Being familiar with the child_process module and its different creation methods, and mastering the communication between parent and child processes are the basis for improving the performance and stability of Node.js applications. Reasonable use of sub-processes can effectively handle CPU-intensive tasks and heterogeneous system calls, ensuring smooth response of the main process and system robustness. Sub-process technology is an indispensable tool in Node.js server development.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

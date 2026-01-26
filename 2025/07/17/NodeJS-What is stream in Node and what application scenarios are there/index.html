@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What is stream in Node and what application scenarios are thereForewordin Node.js, stream is the core mechanism for processing streaming data. It is w"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What is stream in Node and what application scenarios are there"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What is stream in Node and what application scenarios are thereForewordin Node.js, stream is the core mechanism for processing streaming data. It is w"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What is stream in Node and what application scenarios are there - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What is stream in Node and what application scenarios are there</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-07-17
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/NodeJS/">#NodeJS</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/NodeJS/">NodeJS</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-is-stream-in-Node-and-what-application-scenarios-are-there"><a href="#What-is-stream-in-Node-and-what-application-scenarios-are-there" class="headerlink" title="What is stream in Node and what application scenarios are there"></a>What is stream in Node and what application scenarios are there</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>in Node.js, stream is the core mechanism for processing streaming data. It is widely used in scenarios such as file reading and writing, network communication, and data compression. Understanding the principles and applications of stream can not only improve development efficiency, but also optimize system performance, especially when dealing with large amounts of data or high concurrency. This topic describes the concept, type, and working mechanism of stream in Node.js, as well as typical application scenarios and boundary conditions.</p>
+<h2 id="Basic-concepts-and-types-of-Stream"><a href="#Basic-concepts-and-types-of-Stream" class="headerlink" title="Basic concepts and types of Stream"></a>Basic concepts and types of Stream</h2><p>A Stream is an abstract interface for processing a continuous Stream of data. It avoids the traditional practice of reading data into memory all at once and supports block reading or writing data, thereby significantly reducing memory usage and latency. There are four main types of streams in Node.js:</p>
+<p>readable: used to read data from the data source, such as reading files and HTTP response bodies.</p>
+<p>Writable: used to write data to the target, such as writing files and HTTP request bodies.</p>
+<p>Duplex: Supports both reads and writes, such as TCP sockets.</p>
+<p>Transform: A special duplex stream in which the input is processed and then output, such as data compression and encryption.</p>
+<p>Each stream inherits from EventEmitter, exposing events such as data, end, and error to facilitate event-driven programming.</p>
+<h2 id="Working-mechanism-and-core-principle-of-Stream"><a href="#Working-mechanism-and-core-principle-of-Stream" class="headerlink" title="Working mechanism and core principle of Stream"></a>Working mechanism and core principle of Stream</h2><p>The core mechanism of streams is based on buffers and event-driven. The readable stream continuously fills the buffer from the underlying data source and pushes the data block by triggering the data event. Consumers can choose to listen to data events to actively read data (flow mode) or read on demand by calling the read method (pause mode). The writable stream writes the received data to the underlying target, and feeds back the idle state of the write buffer through the drain event to control the write rate and prevent memory overflow.</p>
+<p>Backpressure mechanism is the key in the flow design, to ensure that the data transfer speed between producers and consumers match, to avoid the data production too fast and lead to buffer full. Node.js uses the highWaterMark parameter to control the buffer size. When the write stream returns false, the producer should pause the write and continue after the drain event is triggered.</p>
+<p>The transformation stream implements real-time processing of data streams by inheriting Duplex and rewriting the_transform method. Typical applications include gzip compression, encryption and decryption.</p>
+<h2 id="Typical-application-scenarios"><a href="#Typical-application-scenarios" class="headerlink" title="Typical application scenarios"></a>Typical application scenarios</h2><p>Node.js streams are widely used for file operations. When reading large files, use readable stream block read to avoid memory explosion, and use writable stream to ensure write efficiency when writing large files.</p>
+<p>In network programming, HTTP requests and response bodies are streams, and the use of streams ensures efficient data transmission and real-time processing.</p>
+<p>Streams are also used in data processing pipelines (pipeline) to realize the concatenation of multiple streams, and the output of one stream is directly used as the input of the next stream, such as file compression, video transcoding, etc.</p>
+<p>In addition, stream mechanisms are also commonly used to process real-time data, such as log systems, message queues, and large data stream processing to ensure low latency and high throughput.</p>
+<h2 id="Boundary-conditions-and-considerations"><a href="#Boundary-conditions-and-considerations" class="headerlink" title="Boundary conditions and considerations"></a>Boundary conditions and considerations</h2><p>the use of streams requires attention to error handling, especially in network and file operations, and must listen for error events to avoid abnormal process exits.</p>
+<p>The buffer size configuration (highWaterMark) needs to be adjusted according to the application scenario. An unreasonable buffer size will affect performance or memory usage.</p>
+<p>The asynchronous nature of stream operations requires developers to pay attention to sequence control to avoid callback hell or race conditions.</p>
+<p>For stream pipeline operations, Node.js has provided a pipeline method since v10, which automatically manages the errors and shutdown of streams and is recommend used.</p>
+<p>Streaming may not be applicable in some scenarios, such as random access to data or complex state management, which should be combined with other technical solutions.</p>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p>stream in Node.js is an abstract interface for processing continuous data streams. It supports block read and write to reduce memory usage and improve efficiency. It includes readable streams, writable streams, duplex streams, and conversion streams, corresponding to read, write, read and write, and real-time conversion scenarios, respectively. stream uses an event-driven mechanism to push data through events such as data, end, and error. At the same time, it implements a backpressure mechanism to ensure the rate matching between producers and consumers and avoid buffer overflow. Typical applications include large file reading and writing, HTTP network data transmission, data compression processing, and real-time stream data processing. Pay attention to error monitoring and buffer tuning when using streams, and recommend use the pipeline method provided by Node.js to perform safe and efficient stream operations.</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>The stream of Node.js is a key tool for processing large-scale data streams, which can improve performance and reduce resource consumption. Understand the types, working mechanisms, and backpressure principles of streams, and be able to effectively cope with file operations, network communications, and other application scenarios. Mastering the use of error handling and streaming pipelines can make development more robust and efficient. stream is an indispensable part of the Node.js ecosystem, which is worthy of in-depth study and practice.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

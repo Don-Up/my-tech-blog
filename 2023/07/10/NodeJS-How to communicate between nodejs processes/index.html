@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="How to communicate between nodejs processesforewordIn the Node.js multi-Process model, Inter-Process Communication (IPC) is a key mechanism for coordi"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How to communicate between nodejs processes"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="How to communicate between nodejs processesforewordIn the Node.js multi-Process model, Inter-Process Communication (IPC) is a key mechanism for coordi"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How to communicate between nodejs processes - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How to communicate between nodejs processes</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-07-10
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/NodeJS/">#NodeJS</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/NodeJS/">NodeJS</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="How-to-communicate-between-nodejs-processes"><a href="#How-to-communicate-between-nodejs-processes" class="headerlink" title="How to communicate between nodejs processes"></a>How to communicate between nodejs processes</h1><h2 id="foreword"><a href="#foreword" class="headerlink" title="foreword"></a>foreword</h2><p>In the Node.js multi-Process model, Inter-Process Communication (IPC) is a key mechanism for coordination and data exchange, especially between child processes created using the cluster or child_process modules. Because different processes have independent memory space, data sharing must be implemented in a specific way. Understanding the principles, methods, and application scenarios of inter-process communication in Node.js helps build an efficient and stable multi-process system.</p>
+<h2 id="Node-js-Basic-principles-of-inter-process-communication"><a href="#Node-js-Basic-principles-of-inter-process-communication" class="headerlink" title="Node.js Basic principles of inter-process communication"></a>Node.js Basic principles of inter-process communication</h2><p>Node.js inter-process communication is based on the IPC mechanism provided by the operating system, mainly through the pipe (pipe) implementation. An IPC channel is established between the parent process and the child process to support bidirectional asynchronous messaging. Communication data is serialized into a string or buffer, piped, and then deserialized for use by the receiving process.</p>
+<p>This communication method is message-driven. The process receives messages by listening to specific events and actively sends data through the sending function. Because the message transmission is asynchronous, it is ensured that the process will not be blocked and wait, and the parallel efficiency is improved.</p>
+<h2 id="Main-means-of-communication"><a href="#Main-means-of-communication" class="headerlink" title="Main means of communication"></a>Main means of communication</h2><ol>
+<li><strong>the message event and the send method</strong></li>
+</ol>
+<p>the child process created by fork will automatically establish an IPC channel. The main process and the child process send messages through the send method of the process object, and the other party receives them by listening to the ‘message’ event. The message content supports JSON serializable data types, such as objects, arrays, and strings.</p>
+<ol>
+<li><strong>Standard Input Output Stream</strong></li>
+</ol>
+<p>The child processes created by spawn and exec communicate through the standard input (stdin), standard output (stdout), and standard error (stderr) streams. The main process can write data to the stdin of the child process, listen to stdout and stderr read data, suitable for processing text or binary stream data.</p>
+<ol>
+<li><strong>Shared memory (not built-in)</strong></li>
+</ol>
+<p>Node.js does not support shared memory natively, but it can use third-party libraries or underlying extensions to achieve more efficient memory sharing. It is often used in scenarios with extremely high performance requirements.</p>
+<h2 id="Communication-flow-and-examples"><a href="#Communication-flow-and-examples" class="headerlink" title="Communication flow and examples"></a>Communication flow and examples</h2><p>after the fork process is created, the main process calls child.send(data) to send messages, and the child process listens to process.on(‘message’, callback) to receive messages. The same applies to reverse communication. This method is simple and easy to use, suitable for structured data exchange.</p>
+<p>spawn and exec are more used to run external commands, communication is read or written through streams, and is suitable for processing input and output of command-line tools.</p>
+<h2 id="Application-Scenarios-for-Inter-Process-Communication"><a href="#Application-Scenarios-for-Inter-Process-Communication" class="headerlink" title="Application Scenarios for Inter-Process Communication"></a>Application Scenarios for Inter-Process Communication</h2><p>when multi-process load balancing is performed, the main process listens to the port, the sub-process processes the request, and passes the task and result through IPC.</p>
+<p>In the task scheduling system, the main process allocates task data to sub-processes, and reports the results after the sub-processes are completed.</p>
+<p>When heterogeneous systems are integrated, external programs are called through sub-processes, and data exchange is realized through standard stream communication.</p>
+<p>During real-time data processing, the child process continuously sends processing status or results to the main process.</p>
+<h2 id="Boundaries-and-considerations-for-inter-process-communication"><a href="#Boundaries-and-considerations-for-inter-process-communication" class="headerlink" title="Boundaries and considerations for inter-process communication"></a>Boundaries and considerations for inter-process communication</h2><p>Message delivery is asynchronous and orderly, but real-time is not guaranteed and there may be delays.</p>
+<p>The communication content must be serializable data and cannot be passed complex functions or circular reference objects.</p>
+<p>Frequent transmission of large amounts of data will incur performance overhead, and streaming or other sharing schemes are recommended.</p>
+<p>Need to do a good job of exception handling, to prevent abnormal process exit caused by communication interruption.</p>
+<p>Reasonable design of the message protocol to ensure the robustness of the communication and easy maintenance.</p>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p>in Node.js, inter-process communication is mainly implemented through IPC channels. Child processes created by fork have bidirectional message channels by default. The main process and sub-processes send messages through the send method and receive messages by listening to the ‘message’ event. The messages support JSON serialized data. The child processes created by spawn and exec communicate through the standard input and output streams. Inter-process communication is asynchronous, ensuring that processes run independently and exchange data efficiently, and is commonly used for multi-process load balancing, task distribution, and external command execution. Reasonable design of message structure and error handling is the key to ensure the stability of communication.</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Node.js implements flexible and efficient communication between multiple processes through the built-in IPC channel and standard stream mechanism. Mastering the use of message events, the send method, and standard streams enables developers to build complex multi-process architectures and improve system concurrency and stability. A well-designed inter-process communication scheme is an important cornerstone for multi-core utilization and high-performance Node.js application development.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
