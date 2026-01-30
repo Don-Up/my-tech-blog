@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="How to optimize node memoryForewordNode.js is a single-threaded, high-performance server-side JavaScript runtime environment. Memory management direct"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How to optimize node memory"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="How to optimize node memoryForewordNode.js is a single-threaded, high-performance server-side JavaScript runtime environment. Memory management direct"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How to optimize node memory - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How to optimize node memory</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-01-25
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/NodeJS/">#NodeJS</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/NodeJS/">NodeJS</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="How-to-optimize-node-memory"><a href="#How-to-optimize-node-memory" class="headerlink" title="How to optimize node memory"></a>How to optimize node memory</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>Node.js is a single-threaded, high-performance server-side JavaScript runtime environment. Memory management directly affects the stability and performance of applications. Due to the garbage collection mechanism of JavaScript and the memory allocation characteristics of the V8 engine, a reasonable memory optimization strategy can effectively prevent memory leaks, reduce memory usage, and improve system response speed and concurrent processing capabilities. This article will explain in detail the Node.js memory management mechanism, common memory problems, and optimization methods.</p>
+<h2 id="Node-js-Memory-Management-Basics"><a href="#Node-js-Memory-Management-Basics" class="headerlink" title="Node.js Memory Management Basics"></a>Node.js Memory Management Basics</h2><p>Node.js is based on the V8 engine and uses an automatic garbage collection mechanism to manage memory.</p>
+<p>V8 divides memory into the new generation and the old generation. The new generation is suitable for short-life objects and the old generation is suitable for long-life objects.</p>
+<p>Garbage collection is divided into two methods: Scavenge (New Generation) and Mark-Sweep (old generation). The data structure is reasonably designed to reduce garbage generation and improve recycling efficiency.</p>
+<p>By default, Node.js has a memory limit (for example, about 1.5GB), which can be adjusted by starting parameters.</p>
+<h2 id="Common-Memory-Issues"><a href="#Common-Memory-Issues" class="headerlink" title="Common Memory Issues"></a>Common Memory Issues</h2><p>memory leaks: Objects that are no longer in use are not freed during long runs, causing memory to grow continuously.</p>
+<p>Memory fragmentation: Frequent allocation and release lead to scattered memory space and reduced utilization.</p>
+<p>High memory peak: The instantaneous memory footprint is large, which may cause the system to crash.</p>
+<h2 id="Memory-optimization-method"><a href="#Memory-optimization-method" class="headerlink" title="Memory optimization method"></a>Memory optimization method</h2><ol>
+<li><strong>monitoring and Analysis</strong></li>
+</ol>
+<p>Use process.memoryUsage() of Node.js or third-party tools such as Chrome DevTools and clinic.js to monitor memory usage.</p>
+<p>Generate heap snapshots to analyze memory allocations and leak points.</p>
+<ol>
+<li><strong>Avoid memory leaks</strong></li>
+</ol>
+<p>reduce the use of global variables and avoid closures holding large amounts of data.</p>
+<p>Timers, event listeners, and caches are cleaned up in a timely manner.</p>
+<p>Use weak references (WeakMap, WeakSet) to manage recyclable objects.</p>
+<ol>
+<li><strong>Reasonable data structure</strong></li>
+</ol>
+<p>avoid using large objects or arrays, split complex data, and reduce the object hierarchy.</p>
+<p>Instead of loading large amounts of data at once, streaming is employed.</p>
+<ol>
+<li><strong>Optimize garbage collection</strong></li>
+</ol>
+<p>adjust V8 parameters, such as – max-old-space-size to control the size of the old generation.</p>
+<p>Avoid frequent creation of temporary objects and reduce the number of GC triggers.</p>
+<ol>
+<li><strong>Batch processing and current limiting</strong></li>
+</ol>
+<p>batch execution of high-volume data processing to avoid memory spikes.</p>
+<p>Control the number of concurrent requests to avoid instantaneous memory surge.</p>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p>Node.js memory optimization begins with understanding V8’s memory management and garbage collection mechanisms. Find out memory leaks or unreasonable usage by monitoring memory usage and analyzing heap snapshots. The key to avoiding memory leaks is to reduce the amount of data held by global variables and closures, and to clean up event snoops and caches in a timely manner. Stream processing is used instead of loading big data at one time, and V8 memory parameters are reasonably adjusted. Control memory spikes through batching and current limiting. The overall goal is to reduce memory usage, avoid leaks, and ensure long-term stable operation of the application.</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Node.js memory optimization involves monitoring, leak detection, proper data structure design, and garbage collection tuning. Understanding V8 memory generation and garbage collection mechanism helps to locate and solve memory problems. Combining streaming and batch execution strategies can effectively reduce memory peaks and improve application performance and stability. Systematic memory optimization is a necessary skill for Node.js large-scale application development.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
