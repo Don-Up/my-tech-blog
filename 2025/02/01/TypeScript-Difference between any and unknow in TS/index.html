@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Difference between any and unknow in TSForewordTypeScript provides static typing support for JavaScript, improving code security and maintainability. "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Difference between any and unknow in TS"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Difference between any and unknow in TSForewordTypeScript provides static typing support for JavaScript, improving code security and maintainability. "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Difference between any and unknow in TS - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Difference between any and unknow in TS</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-02-01
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/TypeScript/">#TypeScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/TypeScript/">TypeScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Difference-between-any-and-unknow-in-TS"><a href="#Difference-between-any-and-unknow-in-TS" class="headerlink" title="Difference between any and unknow in TS"></a>Difference between any and unknow in TS</h1><h3 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h3><p>TypeScript provides static typing support for JavaScript, improving code security and maintainability. Among the many types, <code>any </code>and <code>unknown </code>are two top-level types that are often discussed, both representing “any type”, but there are significant differences in type safety and usage constraints. Understanding the difference between the two types is especially important for writing code that is type-robust and maintainable. This article will be around <code>any </code>with <code>unknown </code>the definition, behavior, usage scenarios, and differences are analyzed in detail, supplemented by examples to help understand.</p>
+<hr>
+<h3 id="Basic-Definitions-and-Characteristics-of-any-and-unknown"><a href="#Basic-Definitions-and-Characteristics-of-any-and-unknown" class="headerlink" title="Basic Definitions and Characteristics of any and unknown"></a>Basic Definitions and Characteristics of any and unknown</h3><p><code>any </code>type can be assigned to a value of any type, or <code>any </code>A value of type is assigned to any other type. It actually turns off TypeScript’s type checking, and the compiler does not place any restrictions on its use.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let a: any = 5;</span><br><span class="line">a = &quot;string&quot;;  // 不报错</span><br><span class="line">let b: number = a;  // 不报错，即使 a 可能不是 number</span><br></pre></td></tr></table></figure>
+
+<p><code>unknown </code>types can also be assigned to values of any type, but they cannot be assigned to other types at will, nor can they call their properties or methods directly, and must be type-checked or asserted first.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">let u: unknown = 5;</span><br><span class="line">u = &quot;string&quot;; // 合法</span><br><span class="line">// let c: number = u; // 报错，不能直接赋值</span><br><span class="line"></span><br><span class="line">if (typeof u === &quot;string&quot;) &#123;</span><br><span class="line">  console.log(u.length); // 合法，经过类型保护</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="The-difference-between-any-and-unknown-analysis"><a href="#The-difference-between-any-and-unknown-analysis" class="headerlink" title="The difference between any and unknown analysis"></a>The difference between any and unknown analysis</h3><table>
+<thead>
+<tr>
+<th>aspects</th>
+<th>any</th>
+<th>unknown</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>assignment Permissions</td>
+<td>any type can be assigned <code>any </code></td>
+<td>any type can be assigned <code>unknown </code></td>
+</tr>
+<tr>
+<td>restrictions on use</td>
+<td>accessing properties and calling methods are not restricted.</td>
+<td>To access properties, call methods must first do type assertion or narrowing</td>
+</tr>
+<tr>
+<td>constraints assigned to other types</td>
+<td>can be assigned to any type</td>
+<td>cannot assign directly to another type, must first be asserted or reduced</td>
+</tr>
+<tr>
+<td>type Safety</td>
+<td>completely close type check, high risk</td>
+<td>type-safe top-level types, mandatory type validation</td>
+</tr>
+<tr>
+<td>applicable Scenarios</td>
+<td>rapid development when compatible with old code or uncertain type</td>
+<td>safely receive unknown types of data, force follow-up checks</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="TTThe-use-of-scene-comparison"><a href="#TTThe-use-of-scene-comparison" class="headerlink" title="TTThe use of scene comparison"></a>TTThe use of scene comparison</h3><ul>
+<li><code>any </code>it is commonly used to temporarily disable type checking when migrating JavaScript projects to TypeScript or rapid development. But it’s easy to cover up potential mistakes.</li>
+<li><code>unknown </code>then the recommend is used for function parameters or third-party interface return values and other uncertain types of data, forcing developers to check the type before using, enhance security.</li>
+</ul>
+<hr>
+<h3 id="Code-Examples"><a href="#Code-Examples" class="headerlink" title="Code Examples"></a>Code Examples</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function processAny(value: any) &#123;</span><br><span class="line">  console.log(value.foo);  // 不报错，但运行时可能失败</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function processUnknown(value: unknown) &#123;</span><br><span class="line">  // console.log(value.foo); // 报错，必须先类型检查</span><br><span class="line"></span><br><span class="line">  if (typeof value === &quot;object&quot; &amp;&amp; value !== null &amp;&amp; &quot;foo&quot; in value) &#123;</span><br><span class="line">    console.log((value as any).foo); // 类型断言后可访问</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="The-interview-answer"><a href="#The-interview-answer" class="headerlink" title="The interview answer"></a>The interview answer</h3><p><strong>question: Please briefly describe the TypeScript</strong> <code>**any** </code><strong>and</strong> <code>**unknown** </code><strong>type of difference?</strong></p>
+<p>Answer: <code>any </code>the type represents any type, the compiler does not perform type checking, allows access to any property and calls any method, assignment and use are very flexible but risky, and can easily lead to runtime errors. <code>unknown </code>it also represents any type, but it is safer. It cannot directly access properties or assign values to other types. Type protection or assertion must be performed first to ensure type safety. General recommend use <code>unknown </code>substitute <code>any </code>to make the code more robust.</p>
+<hr>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>although <code>any </code>and <code>unknown </code>both represent arbitrary types, but the two are designed for type safety in very different ways. <code>any </code>it is a “master key” to close type checking, suitable for temporary or compatible scenarios, but easy to bring hidden dangers. <code>unknown</code>As the top-level type of security, it forces developers to explicitly deal with unknown types, improving the robustness and maintainability of the code. The right choice of both helps to take advantage of the TypeScript type system and avoid potential runtime errors.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

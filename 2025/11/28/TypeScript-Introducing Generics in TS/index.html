@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Introducing Generics in TSForewordgenerics are one of the most important features in TypeScript, providing a way to write reusable code while maintain"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Introducing Generics in TS"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Introducing Generics in TSForewordgenerics are one of the most important features in TypeScript, providing a way to write reusable code while maintain"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Introducing Generics in TS - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Introducing Generics in TS</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-11-28
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/TypeScript/">#TypeScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/TypeScript/">TypeScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Introducing-Generics-in-TS"><a href="#Introducing-Generics-in-TS" class="headerlink" title="Introducing Generics in TS"></a>Introducing Generics in TS</h1><h3 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h3><p>generics are one of the most important features in TypeScript, providing a way to write reusable code while maintaining type safety. With generics, functions, interfaces, and classes can be defined without specifying a concrete type, but instead pass in concrete type parameters when they are used. This makes the code flexible and type-safe, greatly improving the reusability and maintainability of the code. This article will detail the basic concepts, usage, constraints, and practical techniques of TypeScript generics to help developers understand and master generic applications in depth.</p>
+<hr>
+<h3 id="Basic-concepts-of-generics"><a href="#Basic-concepts-of-generics" class="headerlink" title="Basic concepts of generics"></a>Basic concepts of generics</h3><p>Generics can be understood as templates with type parameters. Through generics, we can make functions, interfaces, and classes support multiple types instead of a single type, avoiding repeated definitions of multiple copies of similar code.</p>
+<p>For example, a simple generic function:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function identity&lt;T&gt;(arg: T): T &#123;</span><br><span class="line">  return arg;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>here’s <code>&lt;T&gt;</code>is a type parameter, you can specify a specific type when you call:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let output = identity&lt;string&gt;(&quot;hello&quot;);</span><br><span class="line">let numberOutput = identity&lt;number&gt;(123);</span><br></pre></td></tr></table></figure>
+
+<p>if you don’t explicitly specify a type, TypeScript can also infer the type automatically through type inference.</p>
+<hr>
+<h3 id="The-application-of-generics-in-functions-interfaces-and-classes"><a href="#The-application-of-generics-in-functions-interfaces-and-classes" class="headerlink" title="The application of generics in functions, interfaces and classes."></a>The application of generics in functions, interfaces and classes.</h3><h4 id="1-Generic-functions"><a href="#1-Generic-functions" class="headerlink" title="1. Generic functions"></a>1. Generic functions</h4><p>generic functions are the most common application scenario. It can handle various types of data while ensuring that the return value and input value are of the same type.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function getArray&lt;T&gt;(items: T[]): T[] &#123;</span><br><span class="line">  return new Array().concat(items);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const numArray = getArray&lt;number&gt;([1, 2, 3]);</span><br><span class="line">const strArray = getArray&lt;string&gt;([&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]);</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-Generic-interface"><a href="#2-Generic-interface" class="headerlink" title="2. Generic interface"></a>2. Generic interface</h4><p>interfaces can also use generics to improve flexibility by using type parameters when defining properties or methods.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">interface KeyValuePair&lt;K, V&gt; &#123;</span><br><span class="line">  key: K;</span><br><span class="line">  value: V;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const kvp: KeyValuePair&lt;number, string&gt; = &#123; key: 1, value: &quot;one&quot; &#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-Generic-classes"><a href="#3-Generic-classes" class="headerlink" title="3. Generic classes"></a>3. Generic classes</h4><p>generic classes control the type of a property or method in an instance through type parameters.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class GenericNumber&lt;T&gt; &#123;</span><br><span class="line">  zeroValue: T;</span><br><span class="line">  add: (x: T, y: T) =&gt; T;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const myGenericNumber = new GenericNumber&lt;number&gt;();</span><br><span class="line">myGenericNumber.zeroValue = 0;</span><br><span class="line">myGenericNumber.add = (x, y) =&gt; x + y;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="Generic-Constraints"><a href="#Generic-Constraints" class="headerlink" title="Generic Constraints"></a>Generic Constraints</h3><p>generics can accept any type by default, and sometimes we need to restrict generic parameters to a certain structure or interface, using <code>extends </code>keyword to implement constraints.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">interface Lengthwise &#123;</span><br><span class="line">  length: number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function loggingIdentity&lt;T extends Lengthwise&gt;(arg: T): T &#123;</span><br><span class="line">  console.log(arg.length);</span><br><span class="line">  return arg;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">loggingIdentity([1, 2, 3]);   // 合法，数组有 length 属性</span><br><span class="line">// loggingIdentity(10);      // 报错，数字没有 length 属性</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="Default-Type-Parameters-and-Multiple-Type-Parameters"><a href="#Default-Type-Parameters-and-Multiple-Type-Parameters" class="headerlink" title="Default Type Parameters and Multiple Type Parameters"></a>Default Type Parameters and Multiple Type Parameters</h3><p>generics support default type parameters, making it easy for callers to use the default type when omitting parameters:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function createArray&lt;T = string&gt;(length: number, value: T): T[] &#123;</span><br><span class="line">  return new Array(length).fill(value);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const arr = createArray(3, &quot;x&quot;);  // 类型为 string[]</span><br></pre></td></tr></table></figure>
+
+<p>generics also support multiple type parameters:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function merge&lt;U, V&gt;(obj1: U, obj2: V): U &amp; V &#123;</span><br><span class="line">  return &#123; ...obj1, ...obj2 &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const merged = merge(&#123; name: &quot;Alice&quot; &#125;, &#123; age: 30 &#125;);</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="Advanced-Applications-of-Generics"><a href="#Advanced-Applications-of-Generics" class="headerlink" title="Advanced Applications of Generics"></a>Advanced Applications of Generics</h3><p>generics also support complex scenarios such as conditional types, mapping types, and recursive types to meet the needs of large-scale projects for type systems and improve code type expression.</p>
+<hr>
+<h3 id="The-interview-answer-T"><a href="#The-interview-answer-T" class="headerlink" title="The interview answer T"></a>The interview answer T</h3><p><strong>question: Please briefly describe the role and usage of generics in TypeScript.</strong></p>
+<p>A: Generics are a tool in TypeScript for writing reusable and type-safe code that allows you to define a type without specifying a specific type, but instead pass in type parameters when you use it. Generics are commonly used in functions, interfaces, and classes to maintain input and output consistency through type parameters. Generics also support constrained type parameters to limit the incoming type structure, enhancing flexibility and security. The use of generics improves code reusability, maintainability, and type accuracy.</p>
+<hr>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>TypeScript generics are a great way to enhance code flexibility and type safety. Through generics, developers can write highly reusable functions, interfaces, and classes, avoid redefining multiple copies of similar code, and ensure type consistency and security. Mastering the basic usage, constraints, and advanced features of generics is an important step in improving TypeScript programming capabilities. Reasonable use of generics can significantly improve the code quality and development efficiency of the project.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

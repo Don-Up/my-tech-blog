@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What is the difference between any, never, unknown, null amp; undefined and void in TypeScriptForewordas a superset of JavaScript, TypeScript brings a"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What is the difference between any, never, unknown, null amp; undefined and void in TypeScript"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What is the difference between any, never, unknown, null amp; undefined and void in TypeScriptForewordas a superset of JavaScript, TypeScript brings a"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What is the difference between any, never, unknown, null amp; undefined and void in TypeScript - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What is the difference between any, never, unknown, null amp; undefined and void in TypeScript</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-09-09
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/TypeScript/">#TypeScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/TypeScript/">TypeScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-is-the-difference-between-any-never-unknown-null-amp-undefined-and-void-in-TypeScript"><a href="#What-is-the-difference-between-any-never-unknown-null-amp-undefined-and-void-in-TypeScript" class="headerlink" title="What is the difference between any, never, unknown, null amp; undefined and void in TypeScript"></a>What is the difference between any, never, unknown, null amp; undefined and void in TypeScript</h1><h3 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h3><p>as a superset of JavaScript, TypeScript brings a powerful type system. Among them, <code>any </code>, <code>never </code>, <code>unknown </code>, <code>null </code>, <code>undefined </code>and <code>void </code>it is a special type that is often used and easily confused. Understanding their differences and usage scenarios helps to write more rigorous and robust code and reduce potential type errors. This article will explain in detail the meaning of these types, applicable scenarios and differences, and combined with examples to help you better grasp.</p>
+<hr>
+<h3 id="Type-Details-and-Differences"><a href="#Type-Details-and-Differences" class="headerlink" title="Type Details and Differences"></a>Type Details and Differences</h3><h4 id="1-any"><a href="#1-any" class="headerlink" title="1. any"></a>1. any</h4><p><code>any </code>represents an arbitrary type, that is, a type with type checking turned off. Use <code>any </code>after that, the variable can be assigned any value, and there is no error when accessing the property and calling the method. While flexible, it also poses type safety risks.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let x: any = 5;</span><br><span class="line">x = &quot;hello&quot;;  // 不报错</span><br><span class="line">x.foo.bar();  // 编译通过，运行时报错风险存在</span><br></pre></td></tr></table></figure>
+
+<p><strong>Summary</strong> : <code>any</code>Is a “universal type” that evades type checking and should be used with caution.</p>
+<h4 id="2-never"><a href="#2-never" class="headerlink" title="2. never"></a>2. never</h4><p><code>never </code>A type that represents a value that never appears, and is often used in scenarios where a function does not return normally (such as throwing an exception or an infinite loop), or an empty set when the type converges.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function error(msg: string): never &#123;</span><br><span class="line">  throw new Error(msg);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function infiniteLoop(): never &#123;</span><br><span class="line">  while(true) &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Summary</strong> : <code>never </code>indicates a type that cannot have a value, used to express a function that “never returns” or a branch with a type mismatch.</p>
+<h4 id="3-unknown"><a href="#3-unknown" class="headerlink" title="3. unknown"></a>3. unknown</h4><p><code>unknown </code>is a type-safe top-level type, <code>any </code>safer. Variable is declared <code>unknown </code>after that, it cannot be operated at will, and the type reduction check must be performed first.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">let value: unknown = 30;</span><br><span class="line">value = &quot;hello&quot;;</span><br><span class="line"></span><br><span class="line">// 不能直接调用属性或方法</span><br><span class="line">// value.foo(); // 报错</span><br><span class="line"></span><br><span class="line">if (typeof value === &quot;string&quot;) &#123;</span><br><span class="line">  console.log(value.length);  // 合法</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Summary</strong> : <code>unknown </code>indicates an unknown type, forcing type checking to be safe <code>any </code>substitutes.</p>
+<h4 id="4-null-and-undefined"><a href="#4-null-and-undefined" class="headerlink" title="4. null and undefined"></a>4. null and undefined</h4><p><code>null </code>represents a “null value”, <code>undefined</code>It means “undefined”, both of which have special meanings in JavaScript and TypeScript.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let a: null = null;</span><br><span class="line">let b: undefined = undefined;</span><br></pre></td></tr></table></figure>
+
+<p>They are often used to indicate that a variable is uninitialized or has no value. In strict mode, <code>null </code>and <code>undefined </code>is a different type and needs to be explicitly declared.</p>
+<h4 id="5-void"><a href="#5-void" class="headerlink" title="5. void"></a>5. void</h4><p><code>void </code>used to indicate that the function does not return a value ( <code>undefined </code>), cannot be assigned to non-empty variables.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function log(msg: string): void &#123;</span><br><span class="line">  console.log(msg);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let x: void = undefined;  // 合法</span><br><span class="line">// let y: void = 1; // 报错</span><br></pre></td></tr></table></figure>
+
+<p><code>void </code>it can also be used in generic functions to represent a type with no return value.</p>
+<hr>
+<h3 id="Comparison-Table"><a href="#Comparison-Table" class="headerlink" title="Comparison Table"></a>Comparison Table</h3><table>
+<thead>
+<tr>
+<th>type</th>
+<th>meaning</th>
+<th>allow assignment</th>
+<th>use Scenario</th>
+<th>type Safety</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>any</td>
+<td>any type, turn off type checking</td>
+<td>any type</td>
+<td>escape type checking, compatible with JS code</td>
+<td>the most insecure</td>
+</tr>
+<tr>
+<td>never</td>
+<td>there will never be a type</td>
+<td>no value</td>
+<td>throw exception, infinite loop function</td>
+<td>totally safe</td>
+</tr>
+<tr>
+<td>unknown</td>
+<td>uncertain type</td>
+<td>assignment of any type, but the operation requires type determination first.</td>
+<td>Type-safe arbitrary type</td>
+<td>safer than any</td>
+</tr>
+<tr>
+<td>null</td>
+<td>null value</td>
+<td>only null can be assigned</td>
+<td>represents a null object reference</td>
+<td>strict type judgment is required</td>
+</tr>
+<tr>
+<td>undefined</td>
+<td>undefined</td>
+<td>only undefined can be assigned</td>
+<td>indicates that the variable is not initialized</td>
+<td>strict type judgment is required</td>
+</tr>
+<tr>
+<td>void</td>
+<td>no return value</td>
+<td>only undefined can be assigned</td>
+<td>function has no return value declaration</td>
+<td>type safety</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="Summary-of-Code-Examples"><a href="#Summary-of-Code-Examples" class="headerlink" title="Summary of Code Examples"></a>Summary of Code Examples</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">let a: any = 123;</span><br><span class="line">a = &quot;string&quot;;  // 不报错，随意操作风险大</span><br><span class="line"></span><br><span class="line">function fail(): never &#123;</span><br><span class="line">  throw new Error(&quot;失败&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let val: unknown = 10;</span><br><span class="line">val = &quot;hello&quot;;</span><br><span class="line">// val.toUpperCase(); // 报错，必须类型保护后才可操作</span><br><span class="line">if (typeof val === &quot;string&quot;) &#123;</span><br><span class="line">  console.log(val.toUpperCase());</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let n: null = null;</span><br><span class="line">let u: undefined = undefined;</span><br><span class="line"></span><br><span class="line">function print(msg: string): void &#123;</span><br><span class="line">  console.log(msg);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="The-interview-answer"><a href="#The-interview-answer" class="headerlink" title="The interview answer"></a>The interview answer</h3><p><strong>question: Please briefly describe the differences between any, never, unknown, null &amp; undefined, and void in TypeScript and the usage scenarios.</strong></p>
+<p>Answer: <code>any </code>indicates any type, turns off type checking, flexible but unsafe; <code>never</code>Represents a type that never appears, often used in functions that throw exceptions or dead loops; <code>unknown </code>it is a safe arbitrary type and is allowed during assignment, but type checking is required before operation; <code>null </code>and <code>undefined </code>represents null and undefined, respectively, and is usually used to indicate that a variable is uninitialized or has no value; <code>void </code>used in scenarios where the function does not return a value, the value is usually <code>undefined </code>. Understanding the differences between these types helps you write type-safe and robust code.</p>
+<hr>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>in TypeScript <code>any </code>, <code>never </code>, <code>unknown </code>, <code>null </code>, <code>undefined </code>and <code>void </code>it is an important tool for expressing different types of meaning. Proper use of these types can improve the type safety and readability of your code and avoid potential run-time errors. Especially <code>unknown </code>substitute<code>any </code>, Open strict type check, and reasonable use. <code>never </code>represents a function that does not return, enabling a more robust type system to be built. An in-depth understanding of these types of differences and applicable scenarios is an important part of mastering TypeScript.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
