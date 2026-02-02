@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="TypeScript built-in type methods and tool typesForewordthe power of TypeScript lies not only in its static type system, but also in the rich built-in "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="TypeScript built-in type methods and tool types"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="TypeScript built-in type methods and tool typesForewordthe power of TypeScript lies not only in its static type system, but also in the rich built-in "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>TypeScript built-in type methods and tool types - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>TypeScript built-in type methods and tool types</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-05-16
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/TypeScript/">#TypeScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/TypeScript/">TypeScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="TypeScript-built-in-type-methods-and-tool-types"><a href="#TypeScript-built-in-type-methods-and-tool-types" class="headerlink" title="TypeScript built-in type methods and tool types"></a>TypeScript built-in type methods and tool types</h1><h3 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h3><p>the power of TypeScript lies not only in its static type system, but also in the rich built-in type methods and tool types it provides. These tool types greatly simplify the handling of complex types and improve the maintainability and reusability of the code. They can help us easily implement type conversion, extraction, merging, etc., and avoid redundant handwritten type definitions. This article systematically combs the built-in type methods and tool types commonly used by TypeScript, and analyzes their functions and usage in combination with code examples to help you use TypeScript’s type system more efficiently.</p>
+<hr>
+<h3 id="Overview-of-TypeScript-Built-in-Type-Methods"><a href="#Overview-of-TypeScript-Built-in-Type-Methods" class="headerlink" title="Overview of TypeScript Built-in Type Methods"></a>Overview of TypeScript Built-in Type Methods</h3><p>built-in type methods are generic types provided by TypeScript to convert, filter, or combine existing types. Common methods include:</p>
+<ul>
+<li><code>Partial &lt;T&gt;</code></li>
+<li><code>Required &lt;T&gt;</code></li>
+<li><code>Readonly &lt;T&gt;</code></li>
+<li><code>Pick &lt;T, K&gt;</code></li>
+<li><code>Omit &lt;T, K&gt;</code></li>
+<li><code>Record &lt;K, T&gt;</code></li>
+<li><code>Exclude &lt;T, U&gt;</code></li>
+<li><code>Extract &lt;T, U&gt;</code></li>
+<li><code>NonNullable &lt;T&gt;</code></li>
+<li><code>ReturnType &lt;T&gt;</code></li>
+<li><code>Parameters &lt;T&gt;</code></li>
+</ul>
+<hr>
+<h3 id="Detailed-Explanation-of-Common-Tool-Types"><a href="#Detailed-Explanation-of-Common-Tool-Types" class="headerlink" title="Detailed Explanation of Common Tool Types"></a>Detailed Explanation of Common Tool Types</h3><h4 id="1-Partial"><a href="#1-Partial" class="headerlink" title="1. Partial"></a>1. Partial</h4><p>will be of type<code>T</code>all properties of become optional, suitable for local update scenarios.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">interface User &#123;</span><br><span class="line">  name: string;</span><br><span class="line">  age: number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const partialUser: Partial&lt;User&gt; = &#123; name: &quot;Alice&quot; &#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-Required"><a href="#2-Required" class="headerlink" title="2. Required"></a>2. Required</h4><p>will be of type<code>T</code>all properties of become required, commonly used to change from optional to required.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">interface UserPartial &#123;</span><br><span class="line">  name?: string;</span><br><span class="line">  age?: number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const user: Required&lt;UserPartial&gt; = &#123; name: &quot;Bob&quot;, age: 25 &#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-Readonly"><a href="#3-Readonly" class="headerlink" title="3. Readonly"></a>3. Readonly</h4><p>will be of type<code>T</code>all properties of become read-only and cannot be modified.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const readonlyUser: Readonly&lt;User&gt; = &#123; name: &quot;Cathy&quot;, age: 30 &#125;;</span><br><span class="line">// readonlyUser.age = 31; // 报错</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-Pick"><a href="#4-Pick" class="headerlink" title="4. Pick &lt;T, K&gt;"></a>4. Pick &lt;T, K&gt;</h4><p>from Type<code>T</code>select some properties in<code>K</code>composition of new types.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">type UserName = Pick&lt;User, &quot;name&quot;&gt;;</span><br><span class="line">const userName: UserName = &#123; name: &quot;David&quot; &#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-Omit"><a href="#5-Omit" class="headerlink" title="5. Omit &lt;T, K&gt;"></a>5. Omit &lt;T, K&gt;</h4><p>from Type<code>T</code>cull attribute in<code>K</code>, the remaining properties make up the new type.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">type UserWithoutAge = Omit&lt;User, &quot;age&quot;&gt;;</span><br><span class="line">const userWithoutAge: UserWithoutAge = &#123; name: &quot;Eva&quot; &#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-Record"><a href="#6-Record" class="headerlink" title="6. Record &lt;K, T&gt;"></a>6. Record &lt;K, T&gt;</h4><p>construct a type whose property key is<code>K</code>and the value type is<code>T</code>, suitable for mapping relations.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">type Role = &quot;admin&quot; | &quot;user&quot;;</span><br><span class="line">const permissions: Record&lt;Role, string[]&gt; = &#123;</span><br><span class="line">  admin: [&quot;read&quot;, &quot;write&quot;, &quot;delete&quot;],</span><br><span class="line">  user: [&quot;read&quot;]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-Exclude"><a href="#7-Exclude" class="headerlink" title="7. Exclude&lt;T, U&gt;"></a>7. Exclude&lt;T, U&gt;</h4><p>From union type <code>T </code>exclude <code>U </code>, get the remaining types.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type T1 = Exclude&lt;&quot;a&quot; | &quot;b&quot; | &quot;c&quot;, &quot;a&quot; | &quot;b&quot;&gt;; // 结果是 &quot;c&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="8-Extract"><a href="#8-Extract" class="headerlink" title="8. Extract&lt;T, U&gt;"></a>8. Extract&lt;T, U&gt;</h4><p>From union type <code>T </code>extraction and <code>U </code>the assignable type.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type T2 = Extract&lt;&quot;a&quot; | &quot;b&quot; | &quot;c&quot;, &quot;a&quot; | &quot;f&quot;&gt;; // 结果是 &quot;a&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="9-NonNullable"><a href="#9-NonNullable" class="headerlink" title="9. NonNullable"></a>9. NonNullable</h4><p>From Type <code>T </code>exclude <code>null </code>and <code>undefined </code>.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type T3 = NonNullable&lt;string | number | null | undefined&gt;; // 结果是 string | number</span><br></pre></td></tr></table></figure>
+
+<h4 id="10-ReturnType"><a href="#10-ReturnType" class="headerlink" title="10. ReturnType"></a>10. ReturnType</h4><p>Get Function Type <code>T </code>the return type.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function getUser() &#123;</span><br><span class="line">  return &#123; name: &quot;Frank&quot;, age: 40 &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">type UserReturn = ReturnType&lt;typeof getUser&gt;; // &#123; name: string; age: number; &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="11-Parameters"><a href="#11-Parameters" class="headerlink" title="11. Parameters"></a>11. Parameters</h4><p>Get Function Type <code>T </code>A tuple of parameter types.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type FuncParams = Parameters&lt;(name: string, age: number) =&gt; void&gt;; // [string, number]</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="Summary-table"><a href="#Summary-table" class="headerlink" title="Summary table"></a>Summary table</h3><table>
+<thead>
+<tr>
+<th>Utility Type</th>
+<th>Description</th>
+<th>Example Result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Partial</td>
+<td>Make all properties optional</td>
+<td><code>&#123; name?: string; age?: number &#125;</code></td>
+</tr>
+<tr>
+<td>Required</td>
+<td>Make all properties required</td>
+<td><code>&#123; name: string; age: number &#125;</code></td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>Make all properties readonly</td>
+<td>Cannot modify property values</td>
+</tr>
+<tr>
+<td>Pick&lt;T, K&gt;</td>
+<td>Select specific properties</td>
+<td>Select <code>name</code> property</td>
+</tr>
+<tr>
+<td>Omit&lt;T, K&gt;</td>
+<td>Omit specific properties</td>
+<td>Remove <code>age</code> property</td>
+</tr>
+<tr>
+<td>Record&lt;K, T&gt;</td>
+<td>Construct a mapping type</td>
+<td><code>&#123; admin: string[]; user: string[] &#125;</code></td>
+</tr>
+<tr>
+<td>Exclude&lt;T, U&gt;</td>
+<td>Exclude certain members from a union</td>
+<td><code>&quot;c&quot;</code></td>
+</tr>
+<tr>
+<td>Extract&lt;T, U&gt;</td>
+<td>Extract matching members from a union</td>
+<td><code>&quot;a&quot;</code></td>
+</tr>
+<tr>
+<td>NonNullable</td>
+<td>Exclude <code>null</code> and <code>undefined</code></td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td>ReturnType</td>
+<td>Get the return type of a function</td>
+<td><code>&#123; name: string; age: number &#125;</code></td>
+</tr>
+<tr>
+<td>Parameters</td>
+<td>Get the tuple of function parameter types</td>
+<td><code>[string, number]</code></td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="The-interview-answer"><a href="#The-interview-answer" class="headerlink" title="The interview answer"></a>The interview answer</h3><p><strong>question: Please briefly describe the types of built-in tools commonly used in TypeScript and their functions.</strong></p>
+<p>A: TypeScript provides several built-in tool types to assist with type manipulation.<code>Partial &lt;T&gt;</code>make all properties optional, suitable for partial update;<code>Required &lt;T&gt;</code>set all attributes as required;<code>Readonly &lt;T&gt;</code>make the property read-only;<code>Pick &lt;T, K&gt;</code>and<code>Omit &lt;T, K&gt;</code>used to select or reject attributes;<code>Record &lt;K, T&gt;</code>constructing key-value maps;<code>Exclude&lt;T, U&gt;</code>And<code>Extract &lt;T, U&gt;</code>exclusion and extraction for union types;<code>NonNullable &lt;T&gt;</code>remove null and undefined;<code>ReturnType &lt;T&gt;</code>and<code>Parameters &lt;T&gt;</code>gets the function return value and parameter types. These tool types increase the flexibility of type manipulation and code reusability.</p>
+<hr>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>typeScript’s built-in type methods and tool types are the foundation for building a powerful and flexible type system. They simplify operations such as type conversion, attribute selection, Union type filtering, and function type inference, greatly improving the expressiveness and security of the code. Mastering the use of these tool types allows developers to write more concise, efficient and maintainable type code, which is a key step in proficient TypeScript.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
