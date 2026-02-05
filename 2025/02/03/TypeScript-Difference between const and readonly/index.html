@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Difference between const and readonlyForewordin TypeScript and JavaScript, const and readonly are used to prevent variables or properties from being m"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Difference between const and readonly"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Difference between const and readonlyForewordin TypeScript and JavaScript, const and readonly are used to prevent variables or properties from being m"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Difference between const and readonly - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Difference between const and readonly</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-02-03
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/TypeScript/">#TypeScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/TypeScript/">TypeScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Difference-between-const-and-readonly"><a href="#Difference-between-const-and-readonly" class="headerlink" title="Difference between const and readonly"></a>Difference between const and readonly</h1><h3 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h3><p>in TypeScript and JavaScript, <code>const </code>and <code>readonly </code>are used to prevent variables or properties from being modified, but their scenarios and limitations are different. Understanding the difference between the two helps to design the immutability of variables and data structures more rationally, thereby improving the stability and maintainability of the code. This article will be detailed analysis <code>const </code>and <code>readonly </code>the definition, scope, scope of application and differences, supplemented by examples, help you fully grasp the similarities and differences between the two.</p>
+<hr>
+<h3 id="const-definition-and-characteristics"><a href="#const-definition-and-characteristics" class="headerlink" title="const definition and characteristics"></a><code>const </code>definition and characteristics</h3><p><code>const </code>is a way of declaring a variable in JavaScript, indicating that the reference to the variable cannot be reassigned.</p>
+<p>Key features:</p>
+<ul>
+<li>variables must be initialized at declaration;</li>
+<li>variable references cannot be changed, but the contents of the object pointed to by the reference are variable (shallow immutable);</li>
+<li>acting on variable binding (binding), limiting variable identifier re-assignment;</li>
+<li>the scope is a block-level scope.</li>
+</ul>
+<p>Example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const a = 10;</span><br><span class="line">// a = 20; // 错误，const 变量不可重新赋值</span><br><span class="line"></span><br><span class="line">const obj = &#123; x: 1 &#125;;</span><br><span class="line">obj.x = 2; // 合法，对象内容可变</span><br><span class="line">// obj = &#123;&#125;; // 错误，引用不可变</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="readonly-definition-and-characteristics"><a href="#readonly-definition-and-characteristics" class="headerlink" title="readonly definition and characteristics"></a><code>readonly </code>definition and characteristics</h3><p><code>readonly </code>is a modifier used in TypeScript to modify an attribute or an array element, indicating that the attribute or element cannot be modified.</p>
+<p>Key features:</p>
+<ul>
+<li>acts on an object property or array element, limiting its contents to be unmodifiable;</li>
+<li>it does not affect whether the reference itself is variable, but restricts the write operation of the content;</li>
+<li>applicable to property definitions in class properties, interfaces, and type aliases;</li>
+<li>there is no real impact at runtime, and the type level is guaranteed to be read-only.</li>
+</ul>
+<p>Example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">interface Point &#123;</span><br><span class="line">  readonly x: number;</span><br><span class="line">  readonly y: number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const p: Point = &#123; x: 1, y: 2 &#125;;</span><br><span class="line">// p.x = 3; // 错误，readonly 属性不可赋值</span><br><span class="line"></span><br><span class="line">const arr: readonly number[] = [1, 2, 3];</span><br><span class="line">// arr[0] = 10; // 错误，readonly 数组元素不可修改</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="const-and-readonly-the-key-difference"><a href="#const-and-readonly-the-key-difference" class="headerlink" title="const and readonly the key difference"></a><code>const </code>and <code>readonly </code>the key difference</h3><table>
+<thead>
+<tr>
+<th>aspects</th>
+<th>const</th>
+<th>readonly</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>action object</td>
+<td>variable binding (variable name)</td>
+<td>object property or array element</td>
+</tr>
+<tr>
+<td>assignment timing</td>
+<td>must be initialized when declared</td>
+<td>properties can be initialized in the constructor or at declaration</td>
+</tr>
+<tr>
+<td>allow reference changes</td>
+<td>variable reference reassignment not allowed</td>
+<td>allows reference changes, but restricts content from being writable</td>
+</tr>
+<tr>
+<td>Scope of action</td>
+<td>runtime Constraints</td>
+<td>type Level Constraints</td>
+</tr>
+<tr>
+<td>applicable Scenarios</td>
+<td>prevent variable rebinding</td>
+<td>prevent object properties or array elements from being modified</td>
+</tr>
+<tr>
+<td>influence depth</td>
+<td>shallow Restricted References, Variable Content</td>
+<td>attributes or elements are not modifiable and can be implemented recursively at a deep level.</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="Comparison-of-Examples"><a href="#Comparison-of-Examples" class="headerlink" title="Comparison of Examples"></a>Comparison of Examples</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">const arr1 = [1, 2, 3];</span><br><span class="line">arr1.push(4);   // 合法，内容可变</span><br><span class="line">// arr1 = [];   // 错误，引用不可变</span><br><span class="line"></span><br><span class="line">const arr2: readonly number[] = [1, 2, 3];</span><br><span class="line">// arr2.push(4); // 错误，readonly 数组不可变</span><br><span class="line">// arr2[0] = 10; // 错误</span><br><span class="line"></span><br><span class="line">interface Person &#123;</span><br><span class="line">  readonly name: string;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const person: Person = &#123; name: &quot;Alice&quot; &#125;;</span><br><span class="line">// person.name = &quot;Bob&quot;; // 错误，readonly 属性不可改</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p><code>const </code>used to declare variable bindings that cannot be reassigned, with the restriction that the reference address of the variable name remains unchanged; And <code>readonly </code>used to restrict the write operation of object properties or array elements to ensure that the contents are not modified. Although both embody the concept of “immutable”, the application level and the restricted object are different. Reasonable combined use <code>const </code>and <code>readonly </code>, can effectively improve the security and maintainability of the code, to prevent accidental modification of variables or object state.</p>
+<hr>
+<h3 id="The-interview-answer"><a href="#The-interview-answer" class="headerlink" title="The interview answer"></a>The interview answer</h3><p><strong>question: Please brief</strong> <code>**const** </code><strong>and</strong> <code>**readonly** </code><strong>the difference.</strong></p>
+<p>Answer: <code>const</code>It is a way of declaring variables in JavaScript, indicating that the reference to the variable binding is immutable, must be initialized at the time of declaration, and cannot be reassigned, but the content of the object pointed to by the reference is variable. <code>readonly </code>it is a modifier used to modify object properties or array elements in TypeScript, restricting properties or elements from being modified to ensure content immutability. <code>const </code>acting at the variable level, <code>readonly </code>acting on the attribute level. The combination of the two can ensure the immutability and security of code data at different levels.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

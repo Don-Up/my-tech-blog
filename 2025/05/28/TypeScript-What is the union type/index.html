@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What is the union typeForewordin TypeScript, Union Types are an important tool for enhancing type flexibility and expressive power. It allows a variab"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What is the union type"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What is the union typeForewordin TypeScript, Union Types are an important tool for enhancing type flexibility and expressive power. It allows a variab"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What is the union type - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What is the union type</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-05-28
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/TypeScript/">#TypeScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/TypeScript/">TypeScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-is-the-union-type"><a href="#What-is-the-union-type" class="headerlink" title="What is the union type"></a>What is the union type</h1><h3 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h3><p>in TypeScript, Union Types are an important tool for enhancing type flexibility and expressive power. It allows a variable or parameter to be any of a variety of types, thus better describing a variety of data and business scenarios in the real world. Understanding the definition, usage, and type narrowing mechanisms of union types is critical to writing robust and flexible code. This article will elaborate on the basic concepts, usage, and typical examples of union types to help developers better grasp this powerful feature.</p>
+<hr>
+<h3 id="Definition-and-basic-concepts-of-union-types"><a href="#Definition-and-basic-concepts-of-union-types" class="headerlink" title="Definition and basic concepts of union types"></a>Definition and basic concepts of union types</h3><p>vertical Line Symbols for Union Types <code>| </code>concatenates multiple types, indicating that the variable can be any of these types. Its syntax is as follows:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type A = Type1 | Type2 | Type3;</span><br></pre></td></tr></table></figure>
+
+<p>this means that the variable <code>A </code>can be assigned <code>Type1 </code>, <code>Type2 </code>or <code>Type3 </code>any of.</p>
+<p>Example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let value: string | number;</span><br><span class="line">value = &quot;hello&quot;;  // 合法</span><br><span class="line">value = 123;      // 合法</span><br><span class="line">// value = true;  // 报错，不能赋值为 boolean</span><br></pre></td></tr></table></figure>
+
+<p>the joint type makes the types of function parameters, variables, and return values more flexible and more suitable for actual business needs.</p>
+<hr>
+<h3 id="Operation-and-Access-Restrictions-of-the-Joint-Type"><a href="#Operation-and-Access-Restrictions-of-the-Joint-Type" class="headerlink" title="Operation and Access Restrictions of the Joint Type"></a>Operation and Access Restrictions of the Joint Type</h3><p>when a variable is defined as a union type, you can access the public members of these types, but you cannot directly access the unique members.</p>
+<p>For example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">interface Cat &#123;</span><br><span class="line">  meow(): void;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">interface Dog &#123;</span><br><span class="line">  bark(): void;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function petSound(pet: Cat | Dog) &#123;</span><br><span class="line">  // pet.meow();  // 报错，不能直接访问</span><br><span class="line">  if (&quot;meow&quot; in pet) &#123;</span><br><span class="line">    pet.meow();  // 类型缩小后安全访问</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    pet.bark();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>This is because the compiler can only guarantee that variables have properties common to all union members, and specific members need to be accessed after type protection.</p>
+<hr>
+<h3 id="Type-Narrowing-in-the-Union-Type"><a href="#Type-Narrowing-in-the-Union-Type" class="headerlink" title="Type Narrowing in the Union Type"></a>Type Narrowing in the Union Type</h3><p>one of the most important concepts in union types is type narrowing. Through control flow analysis, TypeScript automatically narrows down the specific types of variables in scenarios such as condition determination and type protection, thus safely accessing the corresponding members.</p>
+<p>Common ways to shrink:</p>
+<ul>
+<li><code>typeof </code>judgment of foundation type</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function format(value: string | number) &#123;</span><br><span class="line">  if (typeof value === &quot;string&quot;) &#123;</span><br><span class="line">    return value.toUpperCase();</span><br><span class="line">  &#125;</span><br><span class="line">  return value.toFixed(2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>in </code>determine the existence of object attributes</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if (&quot;meow&quot; in pet) &#123;</span><br><span class="line">  pet.meow();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>custom type protection functions combined <code>is </code>keyword</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function isCat(pet: Cat | Dog): pet is Cat &#123;</span><br><span class="line">  return (pet as Cat).meow !== undefined;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="Application-Scenarios-of-Joint-Types"><a href="#Application-Scenarios-of-Joint-Types" class="headerlink" title="Application Scenarios of Joint Types"></a>Application Scenarios of Joint Types</h3><p>the union type is widely used:</p>
+<ul>
+<li>handle multiple input parameter types</li>
+<li>indicates the possible types of return values of an interface or function.</li>
+<li>Handling optional parameters or polymorphic data</li>
+<li>flexible logical branching with type protection</li>
+</ul>
+<p>example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">type Response = SuccessResponse | ErrorResponse;</span><br><span class="line"></span><br><span class="line">function handleResponse(res: Response) &#123;</span><br><span class="line">  if (&quot;data&quot; in res) &#123;</span><br><span class="line">    // 处理成功响应</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    // 处理错误响应</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="Comparison-of-Joint-and-Cross-Types"><a href="#Comparison-of-Joint-and-Cross-Types" class="headerlink" title="Comparison of Joint and Cross Types"></a>Comparison of Joint and Cross Types</h3><table>
+<thead>
+<tr>
+<th>type</th>
+<th>role description</th>
+<th>typical Grammar</th>
+<th>feature Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Union type (Union)</td>
+<td>one type can be</td>
+<td>‘A</td>
+<td>b’</td>
+</tr>
+<tr>
+<td>type of Intersection (Intersection)</td>
+<td>multiple types simultaneously satisfy</td>
+<td><code>A &amp; B </code></td>
+<td>indicates that the value must satisfy all conditions of multiple types at the same time</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="The-interview-answer"><a href="#The-interview-answer" class="headerlink" title="The interview answer"></a>The interview answer</h3><p><strong>question: Please briefly describe the definition and usage scenarios of union types in TypeScript.</strong></p>
+<p>A: The union type is to use vertical lines <code>| </code>concatenates multiple types, indicating that the variable can be any of these types. It provides type flexibility, allowing function parameters and variables to accept multiple types of input. When Accessing members in a Union type, only public attributes can be accessed, and unique attributes need to be reduced by type protection. Common types of narrowing methods include <code>typeof </code>, <code>in </code>judgment and custom type protection. The union type is widely used in scenarios such as processing polymorphic input and multiple possibilities of interface return results, and is an important part of the TypeScript type system.</p>
+<hr>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>the union type is a key feature of the TypeScript type system, which greatly enhances the flexibility and adaptability of type expression by allowing variables to take multiple types. With the type reduction mechanism, the joint type not only ensures type safety, but also supports polymorphic programming. Understanding the definition and usage of union types, and understanding their restrictions and the type protection methods used in conjunction with them, is particularly important for writing robust and flexible front-end code.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

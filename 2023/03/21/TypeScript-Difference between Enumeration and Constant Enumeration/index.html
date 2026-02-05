@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Difference between Enumeration and Constant EnumerationForewordenumerations in TypeScript ( enum ) is a structure used to define a set of named consta"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Difference between Enumeration and Constant Enumeration"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Difference between Enumeration and Constant EnumerationForewordenumerations in TypeScript ( enum ) is a structure used to define a set of named consta"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Difference between Enumeration and Constant Enumeration - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Difference between Enumeration and Constant Enumeration</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-03-21
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/TypeScript/">#TypeScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/TypeScript/">TypeScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Difference-between-Enumeration-and-Constant-Enumeration"><a href="#Difference-between-Enumeration-and-Constant-Enumeration" class="headerlink" title="Difference between Enumeration and Constant Enumeration"></a>Difference between Enumeration and Constant Enumeration</h1><h3 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h3><p>enumerations in TypeScript ( <code>enum </code>) is a structure used to define a set of named constants for code readability and maintainability. In addition to ordinary enumerations, TypeScript also provides constant enumerations ( <code>const enum </code>), there are obvious differences between the two in terms of compilation results and usage. Understanding the difference between them helps to make rational choices and improve code performance and maintainability. This article will detail the definition, compilation mechanism, usage characteristics and differences of common enumeration and constant enumeration to help you grasp these two concepts in depth.</p>
+<hr>
+<h3 id="Common-Enumeration-enum"><a href="#Common-Enumeration-enum" class="headerlink" title="Common Enumeration (enum)"></a>Common Enumeration (enum)</h3><p>an ordinary enumeration is generated at compile time as a real JavaScript object that contains key values and reverse mappings to support runtime access and dynamic operations.</p>
+<p>Example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">enum Direction &#123;</span><br><span class="line">  Up = 1,</span><br><span class="line">  Down,</span><br><span class="line">  Left,</span><br><span class="line">  Right</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(Direction.Up);       // 输出 1</span><br><span class="line">console.log(Direction[1]);       // 输出 &quot;Up&quot;</span><br></pre></td></tr></table></figure>
+
+<p>compilation results are similar:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var Direction;</span><br><span class="line">(function (Direction) &#123;</span><br><span class="line">    Direction[Direction[&quot;Up&quot;] = 1] = &quot;Up&quot;;</span><br><span class="line">    Direction[Direction[&quot;Down&quot;] = 2] = &quot;Down&quot;;</span><br><span class="line">    Direction[Direction[&quot;Left&quot;] = 3] = &quot;Left&quot;;</span><br><span class="line">    Direction[Direction[&quot;Right&quot;] = 4] = &quot;Right&quot;;</span><br><span class="line">&#125;)(Direction || (Direction = &#123;&#125;));</span><br></pre></td></tr></table></figure>
+
+<p>normal enumerations support run-time reverse mapping, where names can be looked up by value.</p>
+<hr>
+<h3 id="const-enum-const-enum"><a href="#const-enum-const-enum" class="headerlink" title="const enum (const enum)"></a>const enum (const enum)</h3><p>constant enumeration through <code>const </code>modifier, which is a compile-time constant replacement and does not generate JavaScript code. When used, the compiler will directly replace the enumeration member with the corresponding value, avoiding the overhead of the runtime object.</p>
+<p>Example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const enum Direction &#123;</span><br><span class="line">  Up = 1,</span><br><span class="line">  Down,</span><br><span class="line">  Left,</span><br><span class="line">  Right</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(Direction.Up);  // 编译后直接替换为 1</span><br></pre></td></tr></table></figure>
+
+<p>compilation results are similar:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(1);</span><br></pre></td></tr></table></figure>
+
+<p>Constant enumerations do not have access to runtime reverse maps, nor can they be used as objects at runtime.</p>
+<hr>
+<h3 id="The-key-difference-between-ordinary-enumeration-and-constant-enumeration"><a href="#The-key-difference-between-ordinary-enumeration-and-constant-enumeration" class="headerlink" title="The key difference between ordinary enumeration and constant enumeration."></a>The key difference between ordinary enumeration and constant enumeration.</h3><table>
+<thead>
+<tr>
+<th>Characteristics</th>
+<th>normal enumeration (enum)</th>
+<th>constant enumeration (const enum)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>generate code</td>
+<td>generate real JS object</td>
+<td>no code generation, direct inline constant values</td>
+</tr>
+<tr>
+<td>runtime Performance</td>
+<td>support for runtime access and reverse mapping</td>
+<td>no runtime representation, complete elimination of enumeration objects</td>
+</tr>
+<tr>
+<td>reverse mapping support</td>
+<td>support</td>
+<td>not supported</td>
+</tr>
+<tr>
+<td>restrictions on use</td>
+<td>no special restrictions</td>
+<td>runtime operations such as access through indexes are not supported</td>
+</tr>
+<tr>
+<td>compile Product Size</td>
+<td>larger, containing enumeration objects and mappings</td>
+<td>smaller, code size optimized</td>
+</tr>
+<tr>
+<td>applicable Scenarios</td>
+<td>need runtime access, dynamic use of enumeration when</td>
+<td>the enumeration value is fixed, when pursuing performance and code volume optimization</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="Use-Suggestions-and-Precautions"><a href="#Use-Suggestions-and-Precautions" class="headerlink" title="Use Suggestions and Precautions"></a>Use Suggestions and Precautions</h3><ul>
+<li>if the enumeration values need to be accessed dynamically at run time (e. G. Reverse mapping, traversal), a normal enumeration should be used.</li>
+<li>If the enumeration value is only used at compile time, you do not need to retain the runtime object, recommend use a constant enumeration to improve performance.</li>
+<li>Take care to avoid confusing runtime code when using constant enumerations, especially when interacting with modules or third-party libraries.</li>
+<li>Constant enumerations do not support non-literal calculations or use as objects at run time.</li>
+</ul>
+<hr>
+<h3 id="Example-Comparison"><a href="#Example-Comparison" class="headerlink" title="Example Comparison"></a>Example Comparison</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">enum Status &#123;</span><br><span class="line">  Ready,</span><br><span class="line">  Waiting</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const enum Color &#123;</span><br><span class="line">  Red,</span><br><span class="line">  Green,</span><br><span class="line">  Blue</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(Status.Ready);  // 输出 0，且生成枚举对象</span><br><span class="line">console.log(Color.Red);     // 编译后直接替换为 0，无枚举对象生成</span><br></pre></td></tr></table></figure>
+
+<p>after compilation, the corresponding code is:</p>
+<p>normal enumeration:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var Status;</span><br><span class="line">(function (Status) &#123;</span><br><span class="line">  Status[Status[&quot;Ready&quot;] = 0] = &quot;Ready&quot;;</span><br><span class="line">  Status[Status[&quot;Waiting&quot;] = 1] = &quot;Waiting&quot;;</span><br><span class="line">&#125;)(Status || (Status = &#123;&#125;));</span><br><span class="line"></span><br><span class="line">console.log(Status.Ready);</span><br></pre></td></tr></table></figure>
+
+<p>constant Enum:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(0);</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="The-interview-answer"><a href="#The-interview-answer" class="headerlink" title="The interview answer"></a>The interview answer</h3><p><strong>question: Please briefly describe the difference between ordinary enumeration and constant enumeration in TypeScript.</strong></p>
+<p>Answer: Ordinary enumerations generate real JavaScript enumeration objects at compile time, support runtime access and reverse mapping, and are suitable for scenarios that require dynamic access to enumeration values. Constant enumeration through <code>const </code>modifications, compile-time directly inline enumeration members into corresponding constant values, do not generate enumeration objects, thereby reducing runtime code size and overhead, suitable for enumeration values are fixed and do not require runtime access. Both should be used to select the appropriate enumeration type based on performance requirements and whether runtime access is required.</p>
+<hr>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>normal enumerations and constant enumerations are two different implementations of enumerations in TypeScript. Normal enumeration supports complete runtime functions, generating enumeration objects and reverse maps; Constant enumeration achieves performance optimization through compile-time inlining, does not generate code, and reduces size. Understanding the difference between them helps to be flexible in the project according to actual needs, taking into account code maintainability and performance.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
