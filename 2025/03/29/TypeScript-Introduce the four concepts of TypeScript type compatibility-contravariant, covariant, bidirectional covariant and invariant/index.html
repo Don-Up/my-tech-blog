@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Introduce the four concepts of TypeScript type compatibility-contravariant, covariant, bidirectional covariant and invariantForewordone of the importa"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Introduce the four concepts of TypeScript type compatibility-contravariant, covariant, bidirectional covariant and invariant"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Introduce the four concepts of TypeScript type compatibility-contravariant, covariant, bidirectional covariant and invariantForewordone of the importa"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Introduce the four concepts of TypeScript type compatibility-contravariant, covariant, bidirectional covariant and invariant - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Introduce the four concepts of TypeScript type compatibility-contravariant, covariant, bidirectional covariant and invariant</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2025-03-29
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/TypeScript/">#TypeScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/TypeScript/">TypeScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Introduce-the-four-concepts-of-TypeScript-type-compatibility-contravariant-covariant-bidirectional-covariant-and-invariant"><a href="#Introduce-the-four-concepts-of-TypeScript-type-compatibility-contravariant-covariant-bidirectional-covariant-and-invariant" class="headerlink" title="Introduce the four concepts of TypeScript type compatibility-contravariant, covariant, bidirectional covariant and invariant"></a>Introduce the four concepts of TypeScript type compatibility-contravariant, covariant, bidirectional covariant and invariant</h1><h3 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h3><p>one of the important features of TypeScript as a statically typed language is the type compatibility system. Type compatibility determines whether a type can be assigned to another type. Understanding the nature of type compatibility is essential for writing robust type definitions and avoiding type errors. In type compatibility, the four concepts of Contravariance, Covariance, Bivariance, and Invariance are key to understanding the behavior of the TypeScript type system. This article will combine definitions and examples to systematically explain these four concepts to help you understand the details of TypeScript type compatibility.</p>
+<hr>
+<h3 id="Basis-of-Type-Compatibility"><a href="#Basis-of-Type-Compatibility" class="headerlink" title="Basis of Type Compatibility"></a>Basis of Type Compatibility</h3><p>the essence of type compatibility is to see whether the structure between two types satisfies the assignment relationship. TypeScript uses a structured type system, also known as “duck type”, that is, as long as the structure is compatible, the type is compatible.</p>
+<p>Assignment rules vary by location and context, and the type compatibility of function parameters and return values introduces concepts such as covariance and contravariance.</p>
+<hr>
+<h3 id="Covariance-Covariance"><a href="#Covariance-Covariance" class="headerlink" title="Covariance (Covariance)"></a>Covariance (Covariance)</h3><p>covariant means that the compatibility of the type changes consistently with the “direction” of the type parameter. Simply put, if Type S is a subtype of type T, then some struct with parameters of that type <code>F &lt;S&gt;</code>also <code>F &lt;T&gt;</code>the subtype.</p>
+<p>A common example is that the return type of a function is covariant.</p>
+<p>Example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">interface Animal &#123; name: string &#125;</span><br><span class="line">interface Dog extends Animal &#123; breed: string &#125;</span><br><span class="line"></span><br><span class="line">type Func1 = () =&gt; Animal;</span><br><span class="line">type Func2 = () =&gt; Dog;</span><br><span class="line"></span><br><span class="line">let f1: Func1;</span><br><span class="line">let f2: Func2;</span><br><span class="line"></span><br><span class="line">f1 = f2;  // 合法，返回值是协变的</span><br><span class="line">// f2 = f1; // 错误，返回值不能逆变</span><br></pre></td></tr></table></figure>
+
+<p>here. <code>Func2 </code>return to more specific <code>Dog </code>, assign to return more extensive <code>Animal </code>it is safe and therefore allowed.</p>
+<hr>
+<h3 id="Contravariance-Contravariance"><a href="#Contravariance-Contravariance" class="headerlink" title="Contravariance (Contravariance)"></a>Contravariance (Contravariance)</h3><p>inverse means that the direction of the type parameter is opposite, that is, if S is a subtype of T, then the function parameter type is inverse, and it is safe for the function to receive a larger parameter type.</p>
+<p>The type of the function argument is contravariant.</p>
+<p>Example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">type Func3 = (a: Animal) =&gt; void;</span><br><span class="line">type Func4 = (a: Dog) =&gt; void;</span><br><span class="line"></span><br><span class="line">let f3: Func3;</span><br><span class="line">let f4: Func4;</span><br><span class="line"></span><br><span class="line">f4 = f3;  // 合法，参数逆变</span><br><span class="line">// f3 = f4; // 错误，参数逆变不满足</span><br></pre></td></tr></table></figure>
+
+<p>here. <code>f4 </code>expect parameters to be more specific <code>Dog </code>, assigned to the expected parameter more general. <code>Animal </code>is unsafe and therefore not allowed.</p>
+<hr>
+<h3 id="Bivariance"><a href="#Bivariance" class="headerlink" title="Bivariance"></a>Bivariance</h3><p>by default, in order to be compatible with the flexibility of JavaScript, TypeScript uses a “two-way covariance” strategy for function parameters, that is, parameters allow both covariance and contravariance. This strategy reduces the severity of type checking.</p>
+<p>Example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">type Func5 = (a: Animal) =&gt; void;</span><br><span class="line">type Func6 = (a: Dog) =&gt; void;</span><br><span class="line"></span><br><span class="line">let f5: Func5;</span><br><span class="line">let f6: Func6;</span><br><span class="line"></span><br><span class="line">f5 = f6;  // 合法</span><br><span class="line">f6 = f5;  // 也合法（双向协变）</span><br></pre></td></tr></table></figure>
+
+<p>this practice, while convenient, may introduce type safety risks. Can Pass <code>--strictFunctionTypes</code>The compilation option turns on strict checking, disables bidirectional covariance, and changes the parameter type to contravariant.</p>
+<hr>
+<h3 id="Invariant"><a href="#Invariant" class="headerlink" title="Invariant"></a>Invariant</h3><p>invariant means that the type cannot be covariant or contravariant, I .e. the type parameters must be identical to be compatible. Certain generic containers or type parameters behave invariant when an exact match is required.</p>
+<p>For example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">interface Box&lt;T&gt; &#123;</span><br><span class="line">  value: T;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let box1: Box&lt;Animal&gt;;</span><br><span class="line">let box2: Box&lt;Dog&gt;;</span><br><span class="line"></span><br><span class="line">// box1 = box2; // 错误，不变类型</span><br><span class="line">// box2 = box1; // 错误</span><br></pre></td></tr></table></figure>
+
+<p>here. <code>Box &lt;Dog&gt;</code>cannot be given <code>Box &lt;Animal&gt;</code>, also can’t reverse assignment, type parameter incompatibility leads to unchanged.</p>
+<hr>
+<h3 id="Summary-and-Comparison-Table"><a href="#Summary-and-Comparison-Table" class="headerlink" title="Summary and Comparison Table"></a>Summary and Comparison Table</h3><table>
+<thead>
+<tr>
+<th>concept</th>
+<th>description</th>
+<th>example applies</th>
+<th>typical performance in TypeScript</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>covariant</td>
+<td>subtypes can be assigned to supertypes</td>
+<td>function return value</td>
+<td>function return type is covariant</td>
+</tr>
+<tr>
+<td>inverter</td>
+<td>parent types can be assigned to subtypes</td>
+<td>function Parameters</td>
+<td>function argument is contravariant</td>
+</tr>
+<tr>
+<td>two-way covariation</td>
+<td>parameters allow both covariance and contravariance</td>
+<td>default function parameters</td>
+<td>default loose mode, enable strict mode to become inverse</td>
+</tr>
+<tr>
+<td>unchanged</td>
+<td>Types must match exactly</td>
+<td>generic container</td>
+<td>generic parameters default to unchanged</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="The-interview-answer"><a href="#The-interview-answer" class="headerlink" title="The interview answer"></a>The interview answer</h3><p><strong>question: Please explain the concepts of covariance, contravariance, bidirectional covariance, and invariance in TypeScript, and give examples.</strong></p>
+<p>A: Covariant means that when Type S is a subtype of type T, <code>F &lt;S&gt;</code>also <code>F &lt;T&gt;</code>the function return value type behaves as a covariant. Inverse means that the function parameter type is opposite, that is, the parameter type is more general when the assignment is safe. By default, TypeScript allows two-way covariation of function parameters, allowing both covariation and inversion, which is convenient for JS compatibility, but can be passed <code>--strictFunctionTypes </code>close. The last invariant indicates that the type parameter must match exactly, as in the generic container. <code>Box &lt;Dog&gt;</code>cannot be given <code>Box &lt;Animal&gt;</code>. These four concepts explain the different scenarios and rules for type compatibility in TypeScript.</p>
+<hr>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>understanding the four core concepts of type compatibility, covariant, contravariant, bidirectional covariant, and invariant, is essential to properly design function types, generics, and interfaces. TypeScript takes into account type safety and development experience through flexible compatibility rules, and uses bidirectional covariation in default mode to simplify development, but also provides strict options to ensure safer type checking. Mastering these concepts helps you better understand type system behavior, avoid implicit errors, and improve code quality.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

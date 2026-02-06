@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="How to migrate JS project to TS project step by stepForewordwith the increase of project scale and business complexity, JavaScript projects face chall"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How to migrate JS project to TS project step by step"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="How to migrate JS project to TS project step by stepForewordwith the increase of project scale and business complexity, JavaScript projects face chall"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How to migrate JS project to TS project step by step - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How to migrate JS project to TS project step by step</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-09-09
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/TypeScript/">#TypeScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/TypeScript/">TypeScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="How-to-migrate-JS-project-to-TS-project-step-by-step"><a href="#How-to-migrate-JS-project-to-TS-project-step-by-step" class="headerlink" title="How to migrate JS project to TS project step by step"></a>How to migrate JS project to TS project step by step</h1><h3 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h3><p>with the increase of project scale and business complexity, JavaScript projects face challenges such as maintenance difficulty and insufficient type safety. TypeScript(TS) has become an important tool for improving code quality and development efficiency with static type checking, intelligent hints, and a rich type system. Gradually migrating existing JavaScript projects to TypeScript is a challenge for many teams. This article will combine practical experience to systematically explain the ideas, steps and Points for Attention of JS project migration to TS to help the team complete the migration smoothly and efficiently.</p>
+<hr>
+<h3 id="The-overall-idea-of-migration"><a href="#The-overall-idea-of-migration" class="headerlink" title="The overall idea of migration"></a>The overall idea of migration</h3><p>the migration process should be phased to avoid the risks associated with a one-size-fits-all approach. The general idea is to gradually introduce TS while keeping the project running, first configure the environment and basic support, and then gradually move in type definition and code refactoring.</p>
+<p>Migration can be broadly divided into the following phases:</p>
+<ul>
+<li>environmental Preparation</li>
+<li>configure the TypeScript compilation environment</li>
+<li>enable loose type checking</li>
+<li>gradually rename JS file to TS&#x2F;TSX</li>
+<li>supplemental type definition and elimination of type errors</li>
+<li>code structure and type design optimization</li>
+<li>continuous integration and team training</li>
+</ul>
+<hr>
+<h3 id="Detailed-Migration-Steps"><a href="#Detailed-Migration-Steps" class="headerlink" title="Detailed Migration Steps"></a>Detailed Migration Steps</h3><ol>
+<li><strong>environmental Preparation</strong></li>
+</ol>
+<p>first make sure that the project uses modern build tools (such as Webpack, Vite) to support TS and install the necessary dependencies:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev typescript @types/node</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><strong>Added tsconfig.json</strong></li>
+</ol>
+<p>create in the project Root Directory <code>tsconfig.json </code>, the configuration base option:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;compilerOptions&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;target&quot;</span><span class="punctuation">:</span> <span class="string">&quot;es6&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;module&quot;</span><span class="punctuation">:</span> <span class="string">&quot;esnext&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;allowJs&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;checkJs&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;jsx&quot;</span><span class="punctuation">:</span> <span class="string">&quot;preserve&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;strict&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;noEmit&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;esModuleInterop&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;skipLibCheck&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;include&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;src/**/*&quot;</span><span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>among them <code>allowJs: true </code>allows the compiler to recognize JS files, facilitating progressive migration.</p>
+<ol>
+<li><strong>Stepwise Move-In Type Check</strong></li>
+</ol>
+<p>initial can be maintained <code>strict </code>is false, first ensure that the project can compile and run; <code>noImplicitAny </code>, <code>strictNullChecks </code>such as strict options.</p>
+<ol>
+<li><strong>Change name to. ts &#x2F; .tsx</strong></li>
+</ol>
+<p>preferential choice of low-coupling or new development modules, the file suffix from <code>.js </code>change <code>.ts </code>(Or <code>.tsx </code>, for React components), which facilitates the introduction of the type system.</p>
+<ol>
+<li><strong>Introducing Type Declarations</strong></li>
+</ol>
+<ul>
+<li>take advantage of DefinitelyTyped <code>@types </code>package to install the type declaration of the corresponding Library.</li>
+<li>For third-party libraries with missing types, create a custom declaration file ( <code>*.d.ts </code>).</li>
+<li>For business code, supplementary interface and type definition, gradually eliminate <code>any </code>.</li>
+</ul>
+<ol>
+<li><strong>Refactoring code step by step</strong></li>
+</ol>
+<ul>
+<li>data structures are specified using interfaces and type aliases.</li>
+<li>Use advanced TS features such as generics, union types, and conditional types to improve type safety.</li>
+<li>Use type guards to optimize runtime judgment.</li>
+</ul>
+<ol>
+<li><strong>Integrated tool chain</strong></li>
+</ol>
+<ul>
+<li>configure the ESLint + TypeScript plug-in to ensure code specification and type safety.</li>
+<li>Type checking is added to CI&#x2F;CD to prevent type errors from entering production.</li>
+</ul>
+<ol>
+<li><strong>Team Collaboration and Training</strong></li>
+</ol>
+<ul>
+<li>carry out TS training and unify code specifications.</li>
+<li>Develop type writing specifications and migration processes.</li>
+<li>Enhance type applications through code review.</li>
+</ul>
+<hr>
+<h3 id="Common-Problems-and-Solutions-in-Migration"><a href="#Common-Problems-and-Solutions-in-Migration" class="headerlink" title="Common Problems and Solutions in Migration"></a>Common Problems and Solutions in Migration</h3><ul>
+<li><strong>missing type definition</strong> : <code>@types </code>or custom declaration; Temporary use <code>any </code>avoid blocking.</li>
+<li><strong>Third-party libraries do not support TS</strong> : Use<code>declare module </code>declare the module, which encapsulates the call.</li>
+<li><strong>Large code base migration resistance</strong> : Adopt phased migration, migrate core modules first, and then expand to edge functions.</li>
+<li><strong>Runtime error not found</strong> : Combine unit tests to ensure consistent code behavior.</li>
+</ul>
+<hr>
+<h3 id="Comparison-of-Migration-Sample-Code"><a href="#Comparison-of-Migration-Sample-Code" class="headerlink" title="Comparison of Migration Sample Code"></a>Comparison of Migration Sample Code</h3><p>JS code:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function greet(user) &#123;</span><br><span class="line">  return &quot;Hello, &quot; + user.name;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>migration to TS:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">interface User &#123;</span><br><span class="line">  name: string;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function greet(user: User): string &#123;</span><br><span class="line">  return `Hello, $&#123;user.name&#125;`;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>through Interface Definition <code>User </code>to avoid incoming structure errors and improve code maintainability.</p>
+<hr>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>the gradual migration of the JS project to TS is a systematic project that requires scientific planning and gradual advancement. Through the five stages of environment construction, configuration adjustment, file renaming, type supplement and code refactoring, combined with team training and specification, not only ensure the stability of migration, but also improve the type safety and code quality of the project. The right migration strategy will help the project better adapt to complex business needs and long-term maintenance challenges.</p>
+<hr>
+<h3 id="The-interview-answer"><a href="#The-interview-answer" class="headerlink" title="The interview answer"></a>The interview answer</h3><p><strong>question: How to gradually migrate a JavaScript project to TypeScript?</strong></p>
+<p>A: The key to migration is the incremental introduction of TS. First, configure the TS environment and enable <code>allowJs</code>Allow JS and TS to mix in the project. Then gradually change some JS files to TS, install and introduce type declarations, and close strict mode first to ensure that the project can compile and run normally. Then gradually improve the type definition, open more strict type checking, refactoring code to use interfaces and generics and other features. Combine CI and team training during the migration process to ensure type safety and code quality are steadily improved.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="How do I use alias path in a pure TS projectForewordin large TypeScript projects, importing code using relative paths tends to become lengthy and diff"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="How do I use alias path in a pure TS project"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="How do I use alias path in a pure TS projectForewordin large TypeScript projects, importing code using relative paths tends to become lengthy and diff"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>How do I use alias path in a pure TS project - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>How do I use alias path in a pure TS project</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-01-16
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/TypeScript/">#TypeScript</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/TypeScript/">TypeScript</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="How-do-I-use-alias-path-in-a-pure-TS-project"><a href="#How-do-I-use-alias-path-in-a-pure-TS-project" class="headerlink" title="How do I use alias path in a pure TS project"></a>How do I use alias path in a pure TS project</h1><h3 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h3><p>in large TypeScript projects, importing code using relative paths tends to become lengthy and difficult to maintain as the number of files and modules grows. For example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &#123; utils &#125; from &quot;../../../utils&quot;;</span><br></pre></td></tr></table></figure>
+
+<p>this nested relative path is not only difficult to read, but also error-prone. To solve this problem, TypeScript supports the configuration of path aliases (alias path), which can improve code readability and development efficiency by defining simple aliases instead of complex relative paths. This article describes in detail how to configure and use the alias path in a pure TS project, including the configuration method, the adjustment of supporting tools, and the handling of common problems.</p>
+<hr>
+<h3 id="Role-and-Advantages-of-alias-path"><a href="#Role-and-Advantages-of-alias-path" class="headerlink" title="Role and Advantages of alias path"></a>Role and Advantages of alias path</h3><p>path aliases map deeply nested directory structures into simple aliases, such:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &#123; fetchData &#125; from &quot;@/services/api&quot;;</span><br></pre></td></tr></table></figure>
+
+<p>among them <code>@ </code>on behalf of the project <code>src </code>directory. The advantages are reflected in:</p>
+<ul>
+<li>avoid tedious relative path writing</li>
+<li>enhance code readability and Maintainability</li>
+<li>reduce the workload of modifying the import path when reconstructing the directory structure.</li>
+<li>Improve team collaboration efficiency</li>
+</ul>
+<hr>
+<h3 id="How-to-configure-alias-path-in-a-pure-TS-project"><a href="#How-to-configure-alias-path-in-a-pure-TS-project" class="headerlink" title="How to configure alias path in a pure TS project"></a>How to configure alias path in a pure TS project</h3><p>configure the main dependency of alias path <code>tsconfig.json </code>in the file<code>compilerOptions.paths </code>and <code>baseUrl </code>option.</p>
+<ol>
+<li><strong>Set baseUrl</strong></li>
+</ol>
+<p><code>baseUrl </code>specifies the base directory for resolving non-relative modules, typically set <code>./src </code>.</p>
+<ol>
+<li><strong>Configure paths</strong></li>
+</ol>
+<p><code>paths </code>map module aliases to specific paths. Wildcards are supported.</p>
+<p>Examples are as follows:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;compilerOptions&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;baseUrl&quot;</span><span class="punctuation">:</span> <span class="string">&quot;./src&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;paths&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;@/*&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;*&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;@components/*&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;components/*&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;@utils/*&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;utils/*&quot;</span><span class="punctuation">]</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>explanation:</p>
+<ul>
+<li><code>@/* </code>map <code>src </code>all files in the directory</li>
+<li><code>@components/* </code>map <code>src/components </code>directory</li>
+<li><code>@utils/* </code>map <code>src/utils </code>directory</li>
+</ul>
+<hr>
+<h3 id="Configuration-Examples-and-Use"><a href="#Configuration-Examples-and-Use" class="headerlink" title="Configuration Examples and Use"></a>Configuration Examples and Use</h3><p>suppose the project structure is as follows:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">/project</span><br><span class="line">  /src</span><br><span class="line">    /components</span><br><span class="line">      Button.ts</span><br><span class="line">    /utils</span><br><span class="line">      helper.ts</span><br><span class="line">    index.ts</span><br><span class="line">  tsconfig.json</span><br></pre></td></tr></table></figure>
+
+<p><strong>tsconfig.json configuration:</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;compilerOptions&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;target&quot;</span><span class="punctuation">:</span> <span class="string">&quot;es6&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;module&quot;</span><span class="punctuation">:</span> <span class="string">&quot;commonjs&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;baseUrl&quot;</span><span class="punctuation">:</span> <span class="string">&quot;./src&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;paths&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;@components/*&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;components/*&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;@utils/*&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;utils/*&quot;</span><span class="punctuation">]</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>code example:</strong></p>
+<p>In <code>index.ts </code>import in:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Button &#125; from &quot;@components/Button&quot;;</span><br><span class="line">import &#123; helperFunc &#125; from &quot;@utils/helper&quot;;</span><br></pre></td></tr></table></figure>
+
+<p>this avoids the use of relative paths such <code>../components/Button </code>.</p>
+<hr>
+<h3 id="Matters-needing-attention-and-supporting-tools-configuration"><a href="#Matters-needing-attention-and-supporting-tools-configuration" class="headerlink" title="Matters needing attention and supporting tools configuration"></a>Matters needing attention and supporting tools configuration</h3><ol>
+<li><strong>editor support</strong></li>
+</ol>
+<p>mainstream editors such as VSCode will automatically recognize <code>tsconfig.json </code>path configuration, support code jump and automatic completion. But sometimes you need to restart the editor to refresh the configuration.</p>
+<ol>
+<li><strong>Compilation Tool Compatibility</strong></li>
+</ol>
+<p>if the project uses build tools such as Webpack and Vite, you need to configure the corresponding alias resolution synchronously:</p>
+<ul>
+<li><strong>Webpack</strong> (webpack.config.js):</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">const path = require(&quot;path&quot;);</span><br><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line">  // ...</span><br><span class="line">  resolve: &#123;</span><br><span class="line">    alias: &#123;</span><br><span class="line">      &quot;@components&quot;: path.resolve(__dirname, &quot;src/components&quot;),</span><br><span class="line">      &quot;@utils&quot;: path.resolve(__dirname, &quot;src/utils&quot;)</span><br><span class="line">    &#125;,</span><br><span class="line">    extensions: [&quot;.ts&quot;, &quot;.js&quot;]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>Vite</strong> (vite.config.ts):</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import &#123; defineConfig &#125; from &quot;vite&quot;;</span><br><span class="line">import path from &quot;path&quot;;</span><br><span class="line"></span><br><span class="line">export default defineConfig(&#123;</span><br><span class="line">  resolve: &#123;</span><br><span class="line">    alias: &#123;</span><br><span class="line">      &quot;@components&quot;: path.resolve(__dirname, &quot;src/components&quot;),</span><br><span class="line">      &quot;@utils&quot;: path.resolve(__dirname, &quot;src/utils&quot;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><strong>test Tool Configuration</strong></li>
+</ol>
+<p>if you use Jest for testing, you also need to configure <code>moduleNameMapper </code>corresponding alias:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">  // ...</span><br><span class="line">  moduleNameMapper: &#123;</span><br><span class="line">    &quot;^@components/(.*)$&quot;: &quot;&lt;rootDir&gt;/src/components/$1&quot;,</span><br><span class="line">    &quot;^@utils/(.*)$&quot;: &quot;&lt;rootDir&gt;/src/utils/$1&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><strong>path matching must be accurate</strong></li>
+</ol>
+<p><code>paths </code>wildcards in Configuration <code>*</code>Be consistent with the mapped path to avoid matching failures.</p>
+<hr>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>the proper use of alias path in a pure TypeScript project can significantly improve the clarity of the code structure and development efficiency. Through <code>tsconfig.json </code>configuration in <code>baseUrl </code>and <code>paths </code>, combined with the alias synchronization configuration of the build tool and the test tool, to ensure that the project in the development, compilation and testing phase of the path resolution is consistent. A good path alias strategy is particularly important for the maintenance and expansion of medium and large projects, and is one of the important practices of front-end engineering.</p>
+<hr>
+<h3 id="The-interview-answer"><a href="#The-interview-answer" class="headerlink" title="The interview answer"></a>The interview answer</h3><p><strong>question: In a pure TypeScript project, how to use alias path?</strong></p>
+<p>Answer: The alias path is used in the TS project, mainly through <code>tsconfig.json </code>of <code>compilerOptions </code>in the configuration <code>baseUrl </code>and <code>paths </code>implementation. <code>baseUrl </code>usually set <code>src </code>catalogue,<code>paths </code>used to define the mapping of module aliases to actual paths.</p>
+<p>After configuration, the code can import modules with simple aliases to avoid complex relative paths. In addition, project building tools such as Webpack and Vite and testing tools such as Jest also need to configure the corresponding alias resolution synchronously to ensure that the compilation and runtime path resolution are correct. Doing so can improve code readability and maintenance efficiency, suitable for large project engineering management.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
