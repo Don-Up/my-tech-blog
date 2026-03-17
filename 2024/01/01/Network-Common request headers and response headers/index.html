@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Common request headers and response headersForewordin modern Web development, the data interaction between the front end and the back end cannot be se"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Common request headers and response headers"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Common request headers and response headersForewordin modern Web development, the data interaction between the front end and the back end cannot be se"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>Common request headers and response headers - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Common request headers and response headers</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-01-01
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/Network/">#Network</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/Network/">Network</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Common-request-headers-and-response-headers"><a href="#Common-request-headers-and-response-headers" class="headerlink" title="Common request headers and response headers"></a>Common request headers and response headers</h1><h3 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h3><p>in modern Web development, the data interaction between the front end and the back end cannot be separated from the HTTP protocol. The core part of the HTTP message, in addition to the actual request or response content, is the header information (Headers). The HTTP header field carries meta information between the client and the server, such as identity authentication, content format, cache control, and cross-domain policies. Mastering these common request header and response header fields is essential for interface debugging, performance optimization, and security control.</p>
+<p>This article provides a systematic explanation of common Request Headers and Response Headers, combining examples and tables to help you understand the purpose and usage scenarios of each field.</p>
+<hr>
+<h3 id="Common-Request-Header-Field-Details"><a href="#Common-Request-Header-Field-Details" class="headerlink" title="Common Request Header Field Details"></a>Common Request Header Field Details</h3><p>the HTTP request header is metadata attached when the client initiates a request. The server can use this information to determine the requirements and capabilities of the client.</p>
+<h4 id="1-Host"><a href="#1-Host" class="headerlink" title="1. Host"></a>1. Host</h4><p>specify the domain name and port of the server, especially when multiple sites are deployed on a server.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Host: www.example.com</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-User-Agent"><a href="#2-User-Agent" class="headerlink" title="2. User-Agent"></a>2. User-Agent</h4><p>identifies the client type and is often used to determine device and browser information.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-Accept"><a href="#3-Accept" class="headerlink" title="3. Accept"></a>3. Accept</h4><p>tells the server what type of response content the client can accept.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Accept: text/html,application/json</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-Accept-Encoding"><a href="#4-Accept-Encoding" class="headerlink" title="4. Accept-Encoding"></a>4. Accept-Encoding</h4><p>declares the supported compression methods, such as gzip and br, to speed up the transmission efficiency.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Accept-Encoding: gzip, deflate, br</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-Accept-Language"><a href="#5-Accept-Language" class="headerlink" title="5. Accept-Language"></a>5. Accept-Language</h4><p>Declare the languages that the client can accept.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Accept-Language: zh-CN,zh;q=0.9,en;q=0.8</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-Authorization"><a href="#6-Authorization" class="headerlink" title="6. Authorization"></a>6. Authorization</h4><p>used for identity authentication, including token or basic authentication information.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Authorization: Bearer eyJhbGciOiJIUzI1...</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-Content-Type"><a href="#7-Content-Type" class="headerlink" title="7. Content-Type"></a>7. Content-Type</h4><p>indicates the content format of the request body, which is commonly used in POST and PUT requests.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Content-Type: application/json</span><br></pre></td></tr></table></figure>
+
+<h4 id="8-Content-Length"><a href="#8-Content-Length" class="headerlink" title="8. Content-Length"></a>8. Content-Length</h4><p>indicates the length of the request body in bytes.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Content-Length: 120</span><br></pre></td></tr></table></figure>
+
+<h4 id="9-Cookie"><a href="#9-Cookie" class="headerlink" title="9. Cookie"></a>9. Cookie</h4><p>the Cookie data of the carrying client is sent to the server.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cookie: sessionId=abc123; theme=dark</span><br></pre></td></tr></table></figure>
+
+<h4 id="10-Referer"><a href="#10-Referer" class="headerlink" title="10. Referer"></a>10. Referer</h4><p>indicates the Request source page to help prevent CSRF attacks.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Referer: https://www.example.com/form</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="Common-Response-Header-Field-Details"><a href="#Common-Response-Header-Field-Details" class="headerlink" title="Common Response Header Field Details"></a>Common Response Header Field Details</h3><p>when the server returns the response, the header information included is used to describe the nature, cache policy, security policy, etc. of the returned data.</p>
+<h4 id="1-Content-Type"><a href="#1-Content-Type" class="headerlink" title="1. Content-Type"></a>1. Content-Type</h4><p>describes the content format of the response body, such as HTML, JSON, image, and so on.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Content-Type: application/json</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-Content-Length"><a href="#2-Content-Length" class="headerlink" title="2. Content-Length"></a>2. Content-Length</h4><p>represents the length of the response body in bytes.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Content-Length: 256</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-Set-Cookie"><a href="#3-Set-Cookie" class="headerlink" title="3. Set-Cookie"></a>3. Set-Cookie</h4><p>the server sets the Cookie to the client through this field.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Set-Cookie: sessionId=abc123; HttpOnly; Secure</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-Cache-Control"><a href="#4-Cache-Control" class="headerlink" title="4. Cache-Control"></a>4. Cache-Control</h4><p>control the cache policy, such as whether to cache, cache duration, and so on.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Cache-Control: no-cache</span><br><span class="line">Cache-Control: max-age=3600</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-Expires"><a href="#5-Expires" class="headerlink" title="5. Expires"></a>5. Expires</h4><p>set the expiration time of the response resource (HTTP&#x2F;1.0).</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Expires: Wed, 21 Oct 2025 07:28:00 GMT</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-ETag"><a href="#6-ETag" class="headerlink" title="6. ETag"></a>6. ETag</h4><p>unique identifier of the resource, used for cache negotiation.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ETag: &quot;abc123etag&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-Last-Modified"><a href="#7-Last-Modified" class="headerlink" title="7. Last-Modified"></a>7. Last-Modified</h4><p>indicates the last modification time of the resource, used for cache control.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Last-Modified: Wed, 21 Oct 2025 07:00:00 GMT</span><br></pre></td></tr></table></figure>
+
+<h4 id="8-Location"><a href="#8-Location" class="headerlink" title="8. Location"></a>8. Location</h4><p>used to redirect responses and use with 301 and 302 status codes.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Location: https://new.example.com/page</span><br></pre></td></tr></table></figure>
+
+<h4 id="9-Access-Control-Allow-Origin"><a href="#9-Access-Control-Allow-Origin" class="headerlink" title="9. Access-Control-Allow-Origin"></a>9. Access-Control-Allow-Origin</h4><p>A core field for cross-domain resource sharing that specifies which sources are allowed to cross domains.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Access-Control-Allow-Origin: https://www.example.com</span><br></pre></td></tr></table></figure>
+
+<h4 id="10-Server"><a href="#10-Server" class="headerlink" title="10. Server"></a>10. Server</h4><p>returns type information for the server.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Server: nginx/1.18.0</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="Common-Request-Header-and-Response-Header-Comparison-Table"><a href="#Common-Request-Header-and-Response-Header-Comparison-Table" class="headerlink" title="Common Request Header and Response Header Comparison Table"></a>Common Request Header and Response Header Comparison Table</h3><table>
+<thead>
+<tr>
+<th>category</th>
+<th>field Name</th>
+<th>description of use</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>request Header</td>
+<td>Host</td>
+<td>specify the requested host name</td>
+</tr>
+<tr>
+<td>request Header</td>
+<td>User-Agent</td>
+<td>identify client device information</td>
+</tr>
+<tr>
+<td>request Header</td>
+<td>Accept &#x2F; Accept-Language</td>
+<td>declare acceptable data formats and languages</td>
+</tr>
+<tr>
+<td>request Header</td>
+<td>Content-Type &#x2F; Content-Length</td>
+<td>describe the data format and size of the request body</td>
+</tr>
+<tr>
+<td>request Header</td>
+<td>Authorization &#x2F; Cookie</td>
+<td>authentication and status management</td>
+</tr>
+<tr>
+<td>response Header</td>
+<td>Content-Type &#x2F; Content-Length</td>
+<td>returns content format and size</td>
+</tr>
+<tr>
+<td>response Header</td>
+<td>Set-Cookie</td>
+<td>set client-side cookies</td>
+</tr>
+<tr>
+<td>response Header</td>
+<td>Cache-Control &#x2F; Expires</td>
+<td>control client or intermediate cache behavior</td>
+</tr>
+<tr>
+<td>response Header</td>
+<td>Access-Control-Allow-Origin</td>
+<td>controlling cross-domain resource access</td>
+</tr>
+<tr>
+<td>response Header</td>
+<td>Location</td>
+<td>for redirection</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="interview-answer"><a href="#interview-answer" class="headerlink" title="interview answer"></a>interview answer</h3><p><strong>question: What are the common request headers and response headers in HTTP?</strong></p>
+<p>A: the HTTP request header is used to provide the server with the client’s capabilities, request parameter format, and authentication information. For example:</p>
+<ul>
+<li><code>User-Agent</code>Identifies the client type;</li>
+<li><code>Accept </code>: Declares the acceptable return format;</li>
+<li><code>Authorization </code>: Carrying authentication information;</li>
+<li><code>Content-Type </code>: the format of the request body, such as JSON;</li>
+<li><code>Cookie </code>sends locally stored cookies.</li>
+</ul>
+<p>The HTTP response header is returned by the server and is used to inform the client of the type, cache policy, and cross-origin permissions of the returned data. For example:</p>
+<ul>
+<li><code>Content-Type </code>: the format of the returned data;</li>
+<li><code>Set-Cookie </code>set the client Cookie;</li>
+<li><code>Cache-Control </code>: Specify cache behavior;</li>
+<li><code>Access-Control-Allow-Origin </code>: Set the sources that are allowed to cross domains;</li>
+<li><code>Location </code>: The redirect address.</li>
+</ul>
+<p>Familiarity with these fields can help you debug the interface more accurately, configure cross-domain, and implement cache control during development.</p>
+<hr>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>HTTP request headers and response headers are an important part of Web communication and carry rich context information. By mastering the use of these fields, you can:</p>
+<ul>
+<li>More precise control of the communication between the client and the server;</li>
+<li>achieve security authentication and status maintenance;</li>
+<li>configure caching and cross-domain policies to optimize performance and user experience;</li>
+<li>quickly troubleshoot interface exceptions or cross-domain problems.</li>
+</ul>
+<p>In daily development, it is recommended to cooperate with browser developer tools, Postman and other tools to practice more, in-depth understanding of the meaning and application scenarios behind each Header field, to build a high-quality, stable and maintainable Web system to lay a solid foundation.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
