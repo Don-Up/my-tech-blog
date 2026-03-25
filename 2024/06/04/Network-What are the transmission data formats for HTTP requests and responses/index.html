@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What are the transmission data formats for HTTP requests and responsesForewordHTTP(HyperText Transfer Protocol) is the core Protocol of Web communicat"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What are the transmission data formats for HTTP requests and responses"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What are the transmission data formats for HTTP requests and responsesForewordHTTP(HyperText Transfer Protocol) is the core Protocol of Web communicat"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What are the transmission data formats for HTTP requests and responses - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What are the transmission data formats for HTTP requests and responses</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2024-06-04
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/Network/">#Network</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/Network/">Network</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-are-the-transmission-data-formats-for-HTTP-requests-and-responses"><a href="#What-are-the-transmission-data-formats-for-HTTP-requests-and-responses" class="headerlink" title="What are the transmission data formats for HTTP requests and responses"></a>What are the transmission data formats for HTTP requests and responses</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>HTTP(HyperText Transfer Protocol) is the core Protocol of Web communication. In the front-end and back-end interaction, the client sends data to the server through HTTP requests, and the server returns the processing results through HTTP responses. In this process, the data format of the request and response plays a key role, which directly determines the data parsing method, communication efficiency and system compatibility.</p>
+<p>Developers must understand the common data transmission formats in HTTP requests and responses, and how to select the appropriate format according to actual needs, so as to ensure efficient and reliable data transmission at the front and back ends.</p>
+<hr>
+<h2 id="The-definition-of-the-data-format-of-the-request-and-response"><a href="#The-definition-of-the-data-format-of-the-request-and-response" class="headerlink" title="The definition of the data format of the request and response."></a>The definition of the data format of the request and response.</h2><p>In the HTTP protocol, the client uses the request header <code>Content-Type </code>field indicates the data format of the request body; <code>Content-Type </code>the field describes the data format of the response body.</p>
+<p>In addition, the client can also request the header. <code>Accept </code>field tells the server the format of the data it expects to receive.</p>
+<p>For example:</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">POST</span> <span class="string">/api/user</span> <span class="meta">HTTP/1.1</span></span><br><span class="line"><span class="attribute">Host</span><span class="punctuation">: </span>example.com</span><br><span class="line"><span class="attribute">Content-Type</span><span class="punctuation">: </span>application/json</span><br><span class="line"><span class="attribute">Accept</span><span class="punctuation">: </span>application/json</span><br><span class="line"></span><br><span class="line"><span class="language-json"><span class="punctuation">&#123;</span></span></span><br><span class="line"><span class="language-json">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Alice&quot;</span><span class="punctuation">,</span></span></span><br><span class="line"><span class="language-json">  <span class="attr">&quot;age&quot;</span><span class="punctuation">:</span> <span class="number">25</span></span></span><br><span class="line"><span class="language-json"><span class="punctuation">&#125;</span></span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="common-Request-and-Response-Data-Formats"><a href="#common-Request-and-Response-Data-Formats" class="headerlink" title="common Request and Response Data Formats"></a>common Request and Response Data Formats</h2><h3 id="1-application-x-www-form-urlencoded"><a href="#1-application-x-www-form-urlencoded" class="headerlink" title="1. application/x-www-form-urlencoded "></a>1. <code>application/x-www-form-urlencoded </code></h3><p>this is the traditional form submission format, encoding key-value pairs into URL query parameter format, using <code>&amp;</code>Concatenated fields, <code>= </code>concatenate key values, spaces are replaced <code>+ </code>, special characters for URL encoding.</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name=Alice&amp;age=25</span><br></pre></td></tr></table></figure>
+
+<p>Features:</p>
+<ul>
+<li>browser native forms use this format by default</li>
+<li>suitable for simple text data</li>
+<li>broad back-end parsing support</li>
+</ul>
+<p>applicable to: form submission and simple data interaction scenarios</p>
+<hr>
+<h3 id="2-multipart-form-data"><a href="#2-multipart-form-data" class="headerlink" title="2. multipart/form-data "></a>2. <code>multipart/form-data </code></h3><p>used to upload files or binary data. The data is split into multiple parts, and each field is set separately. <code>Content-Disposition </code>and boundary strings.</p>
+<p>Example:</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Content-Type</span><span class="punctuation">: </span>multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW</span><br><span class="line"></span><br><span class="line">------WebKitFormBoundary7MA4YWxkTrZu0gW</span><br><span class="line"><span class="attribute">Content-Disposition</span><span class="punctuation">: </span>form-data; name=&quot;username&quot;</span><br><span class="line"></span><br><span class="line">Alice</span><br><span class="line">------WebKitFormBoundary7MA4YWxkTrZu0gW</span><br><span class="line"><span class="attribute">Content-Disposition</span><span class="punctuation">: </span>form-data; name=&quot;avatar&quot;; filename=&quot;avatar.png&quot;</span><br><span class="line"><span class="attribute">Content-Type</span><span class="punctuation">: </span>image/png</span><br><span class="line"></span><br><span class="line">(binary data)</span><br><span class="line">------WebKitFormBoundary7MA4YWxkTrZu0gW--</span><br></pre></td></tr></table></figure>
+
+<p>features:</p>
+<ul>
+<li>support mixed text and file Upload</li>
+<li>large amounts of data are not suitable for direct parsing and require special library processing.</li>
+</ul>
+<p>Applicable to: picture, video, attachment Upload scene</p>
+<hr>
+<h3 id="3-application-json"><a href="#3-application-json" class="headerlink" title="3. application/json "></a>3. <code>application/json </code></h3><p>JSON is the most commonly used data format on the modern Web, with a clear structure and easy front-end and back-end parsing.</p>
+<p>Request body example:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Alice&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;age&quot;</span><span class="punctuation">:</span> <span class="number">25</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>features:</p>
+<ul>
+<li>passable complex structures (nested arrays, objects)</li>
+<li>Highly compatible with JavaScript</li>
+<li>readability, Easy debugging</li>
+</ul>
+<p>applicable to: REST API, GraphQL, front-end and back-end separation development</p>
+<hr>
+<h3 id="4-text-plain"><a href="#4-text-plain" class="headerlink" title="4. text/plain "></a>4. <code>text/plain </code></h3><p>in plain text format, the data is not encoded. Although the structure is simple, it lacks semantic identification, which is not conducive to Structured data analysis.</p>
+<p>Request body example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello, world!</span><br></pre></td></tr></table></figure>
+
+<p>applicable to scenarios such as simple logging, debugging, and text document uploading, but the actual usage frequency is relatively low.</p>
+<hr>
+<h3 id="5-application-xml"><a href="#5-application-xml" class="headerlink" title="5. application/xml "></a>5. <code>application/xml </code></h3><p>XML is a data format commonly used in enterprise-level systems in the early days. It has a structure similar to HTML, with clear tags and strict parsing rules.</p>
+<p>Example:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">user</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">name</span>&gt;</span>Alice<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">age</span>&gt;</span>25<span class="tag">&lt;/<span class="name">age</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">user</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>features:</p>
+<ul>
+<li>can describe complex structures</li>
+<li>Schema can be defined for format constraints</li>
+<li>large volume, complex analysis</li>
+</ul>
+<p>applicable to: docking with old systems, enterprise middleware communication</p>
+<hr>
+<h3 id="6-application-octet-stream"><a href="#6-application-octet-stream" class="headerlink" title="6. application/octet-stream "></a>6. <code>application/octet-stream </code></h3><p>represents arbitrary binary data, with no restrictions on the content format. The server or client needs to parse itself according to conventions or file headers.</p>
+<p>Features:</p>
+<ul>
+<li>completely unstructured, unreadable</li>
+<li>Commonly used to download or transmit compressed packages, videos, encrypted data, etc.</li>
+</ul>
+<hr>
+<h2 id="Request-and-response-common-format-comparison-table"><a href="#Request-and-response-common-format-comparison-table" class="headerlink" title="Request and response common format comparison table"></a>Request and response common format comparison table</h2><table>
+<thead>
+<tr>
+<th>format Type</th>
+<th>description</th>
+<th>whether readable</th>
+<th>structured support</th>
+<th>file Upload support</th>
+<th>typical Scene</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>application&#x2F;x-www-form-urlencoded</td>
+<td>form format, key-value pairs</td>
+<td>yes</td>
+<td>weak</td>
+<td>no</td>
+<td>form submission, login registration</td>
+</tr>
+<tr>
+<td>multipart&#x2F;form-data</td>
+<td>form + File Format</td>
+<td>yes</td>
+<td>strong</td>
+<td>yes</td>
+<td>file Upload, form mixed data</td>
+</tr>
+<tr>
+<td>application&#x2F;json</td>
+<td>JSON format</td>
+<td>yes</td>
+<td>strong</td>
+<td>no</td>
+<td>API interface</td>
+</tr>
+<tr>
+<td>text&#x2F;plain</td>
+<td>plain Text Format</td>
+<td>yes</td>
+<td>no</td>
+<td>no</td>
+<td>Log, simple data</td>
+</tr>
+<tr>
+<td>application&#x2F;xml</td>
+<td>XML format</td>
+<td>yes</td>
+<td>strong</td>
+<td>no</td>
+<td>enterprise System, SOAP communication</td>
+</tr>
+<tr>
+<td>application&#x2F;octet-stream</td>
+<td>arbitrary binary data</td>
+<td>no</td>
+<td>no</td>
+<td>yes</td>
+<td>download, compress files</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="interview-answer"><a href="#interview-answer" class="headerlink" title="interview answer"></a>interview answer</h2><p><strong>the interviewer asked: What are the common data transfer formats in HTTP requests and responses? What would you choose?</strong></p>
+<p>A: Common data transfer formats include:</p>
+<ul>
+<li><code>application/x-www-form-urlencoded </code>suitable for simple form data submission</li>
+<li><code>multipart/form-data </code>, mainly used for file Upload</li>
+<li><code>application/json </code>, commonly used in modern Web, supports complex nested structures</li>
+<li><code>text/plain </code>for text debugging or simple logging</li>
+<li><code>application/xml </code>commonly used by early systems or middleware</li>
+<li><code>application/octet-stream </code>, transfer arbitrary binary data</li>
+</ul>
+<p>the choice needs to consider the complexity of the data structure, security, transmission volume and front-end and back-end compatibility. API development is usually recommend to use <code>application/json </code>, and when it comes to documents. <code>multipart/form-data </code>.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>the data format of HTTP requests and responses determines the efficiency and correctness of front-end and back-end communication. In actual development, developers need to flexibly select the appropriate transmission format according to business requirements, data structure, and system compatibility.</p>
+<p>Understanding the essential characteristics and applicable scenarios of each format not only helps to optimize the interface design, but also provides great help in debugging and troubleshooting. With the development of modern Web applications, <code>application/json </code>become the mainstream choice, but other formats still play an important role in specific areas, the right combination of use will make the system more robust and efficient.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What is the difference between GET and POST in http requestsForewordIn Web development, GET and POST are the two most frequently used HTTP request met"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What is the difference between GET and POST in http requests"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What is the difference between GET and POST in http requestsForewordIn Web development, GET and POST are the two most frequently used HTTP request met"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What is the difference between GET and POST in http requests - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What is the difference between GET and POST in http requests</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2026-03-19
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/Network/">#Network</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/Network/">Network</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-is-the-difference-between-GET-and-POST-in-http-requests"><a href="#What-is-the-difference-between-GET-and-POST-in-http-requests" class="headerlink" title="What is the difference between GET and POST in http requests"></a>What is the difference between GET and POST in http requests</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>In Web development, GET and POST are the two most frequently used HTTP request methods. They are all used for data interaction between the client and the server, but there are significant differences in purpose, transmission, security, and semantics. Many developers at the beginning only know that “GET is used for acquisition and POST is used for submission”, but actually use them reasonably in the production environment, involving a deeper understanding of the protocol.</p>
+<p>This article will explain the differences between GET and POST in detail in terms of transmission mechanism, semantics, caching, idempotency, security, performance, etc., and enhance your understanding through sample code and comparison tables to help you choose the right method for development, debugging, and system design.</p>
+<hr>
+<h2 id="The-core-difference-between-GET-and-POST-is-explained-in-detail"><a href="#The-core-difference-between-GET-and-POST-is-explained-in-detail" class="headerlink" title="The core difference between GET and POST is explained in detail."></a>The core difference between GET and POST is explained in detail.</h2><h3 id="1-Request-Semantics"><a href="#1-Request-Semantics" class="headerlink" title="1. Request Semantics"></a>1. Request Semantics</h3><p>GET stands for “GET resource” and is usually used to request data from the server and should not produce side effects. It is idempotent and repeated requests should not change the server state.</p>
+<p>POST indicates “submit resource”, which is used to submit data to the server. It is commonly used for form submission, data addition, and other operations. It usually changes the state of server-side resources, so it is not idempotent.</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">GET /api/user?id=123</span><br><span class="line"></span><br><span class="line">POST /api/user</span><br><span class="line"><span class="attribute">Body</span><span class="punctuation">: </span>&#123; &quot;name&quot;: &quot;张三&quot;, &quot;age&quot;: 18 &#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="2-Data-transmission-location-and-length-restrictions"><a href="#2-Data-transmission-location-and-length-restrictions" class="headerlink" title="2. Data transmission location and length restrictions"></a>2. Data transmission location and length restrictions</h3><p>the request parameter of GET passes through the query string of URL (? key &#x3D; value) is passed, reflected in the URL, and the data length is limited by the URL length of the browser or server (usually within 2048 characters).</p>
+<p>The data of the POST is placed in the request body, which is theoretically unlimited in size and is constrained by the server configuration.</p>
+<p>Example:</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">GET /search?q=react&amp;page=1</span><br><span class="line">POST /submit</span><br><span class="line"><span class="attribute">Content-Type</span><span class="punctuation">: </span>application/json</span><br><span class="line"><span class="attribute">Body</span><span class="punctuation">: </span>&#123; &quot;username&quot;: &quot;admin&quot;, &quot;password&quot;: &quot;123456&quot; &#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="3-Safety-comparison"><a href="#3-Safety-comparison" class="headerlink" title="3. Safety comparison"></a>3. Safety comparison</h3><p>From the protocol point of view, GET and POST are not encrypted. HTTPS is used to encrypt data transmission.</p>
+<p>From usage habits:</p>
+<ul>
+<li>the GET parameter is exposed in the URL and is easily cached, recorded in the history, or exposed in the Referer, so it is not suitable for transmitting sensitive information (such as passwords).</li>
+<li>The POST parameter is placed in the request body and is not recorded by the browser, which is slightly more secure.</li>
+</ul>
+<hr>
+<h3 id="4-Caching-and-bookmark-support"><a href="#4-Caching-and-bookmark-support" class="headerlink" title="4. Caching and bookmark support"></a>4. Caching and bookmark support</h3><p>GET requests can be cached by the browser and can also be collected as bookmarks (because the parameters are reflected in the URL), which is suitable for data acquisition without side effects.</p>
+<p>POST requests cannot be cached or written to browser bookmarks, which is not conducive to backtracking.</p>
+<hr>
+<h3 id="5-Idempotence-and-repeatability"><a href="#5-Idempotence-and-repeatability" class="headerlink" title="5. Idempotence and repeatability"></a>5. Idempotence and repeatability</h3><p>idempotence means that executing the same request multiple times has the same effect as executing it once.</p>
+<p>GET is naturally idempotent, for example, repeatedly obtaining user data will not affect the data.</p>
+<p>POST is not idempotent, for example, continuous submission of payment requests will result in repeated deductions.</p>
+<hr>
+<h3 id="6-Performance-impact"><a href="#6-Performance-impact" class="headerlink" title="6. Performance impact"></a>6. Performance impact</h3><p>the GET request has better performance due to its small parameters and easy caching, and is often used for static resources or querying data.</p>
+<p>The transmission and parsing of POST requests is relatively complex, which is suitable for data submission with complex structure or large volume.</p>
+<hr>
+<h2 id="Summary-of-comparison-between-GET-and-POST"><a href="#Summary-of-comparison-between-GET-and-POST" class="headerlink" title="Summary of comparison between GET and POST"></a>Summary of comparison between GET and POST</h2><table>
+<thead>
+<tr>
+<th>comparison Item</th>
+<th>GET</th>
+<th>POST</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Request semantics</td>
+<td>get Resources</td>
+<td>submit Resources</td>
+</tr>
+<tr>
+<td>parameter Location</td>
+<td>URL query string</td>
+<td>request body (body)</td>
+</tr>
+<tr>
+<td>data size limit</td>
+<td>limited (URL length limit)</td>
+<td>theoretical Infinity (limited by server)</td>
+</tr>
+<tr>
+<td>whether idempotent</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>cacheable</td>
+<td>yes (default cacheable)</td>
+<td>no (non-cacheable by default)</td>
+</tr>
+<tr>
+<td>security</td>
+<td>low, the parameter is exposed in the URL</td>
+<td>relatively high, the parameters are in the body</td>
+</tr>
+<tr>
+<td>whether bookmarks can be saved</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>common Uses</td>
+<td>query and obtain data</td>
+<td>form submission, upload data</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="sample-code-comparison-using-fetch"><a href="#sample-code-comparison-using-fetch" class="headerlink" title="sample code comparison (using fetch)"></a>sample code comparison (using fetch)</h2><p>GET request:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fetch(&#x27;/api/user?id=123&#x27;, &#123;</span><br><span class="line">  method: &#x27;GET&#x27;</span><br><span class="line">&#125;).then(res =&gt; res.json()).then(console.log)</span><br></pre></td></tr></table></figure>
+
+<p>POST Request:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fetch(&#x27;/api/user&#x27;, &#123;</span><br><span class="line">  method: &#x27;POST&#x27;,</span><br><span class="line">  headers: &#123; &#x27;Content-Type&#x27;: &#x27;application/json&#x27; &#125;,</span><br><span class="line">  body: JSON.stringify(&#123; name: &#x27;张三&#x27;, age: 18 &#125;)</span><br><span class="line">&#125;).then(res =&gt; res.json()).then(console.log)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="interview-answer"><a href="#interview-answer" class="headerlink" title="interview answer"></a>interview answer</h2><p><strong>the interviewer asked: What is the difference between GET and POST? How would you choose?</strong></p>
+<p>A: GET and POST are the two most commonly used HTTP request methods.</p>
+<p>GET is used to obtain resources. Parameters are passed through URL. It supports caching, bookmarks, and idempotence. It is suitable for querying class interfaces. However, the data length is limited and the parameters exposed in URL are not suitable for transmitting sensitive information.</p>
+<p>POST is used to submit data. Parameters are placed in the request body. Theoretically, POST has no length limit, cannot be cached, is not idempotent, and is suitable for creating resources or submitting forms. Security is slightly higher than GET.</p>
+<p>The choice should be based on the interface design semantics: GET the class to use GET, modify or create the class to use POST.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Although both GET and POST are the basic methods of HTTP, they have essential differences in semantics, data transmission, security, idempotence, caching, and so on. In actual development, choosing the appropriate request mode is not only the embodiment of technical specifications, but also directly affects the security, performance and maintainability of the system.</p>
+<p>Understanding its underlying behavior and protocol standards will help you write more reliable, predictable, and business logic interface call code. Especially in interface design, front-end and back-end collaboration, performance optimization, interface security, etc., the rational use of GET and POST is a core skill that Web engineers must master.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
