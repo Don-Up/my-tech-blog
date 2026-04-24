@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="The main differences between HTTP1.0 HTTP1.1 HTTP2 and HTTP3ForewordHTTP(HyperText Transfer Protocol) is the cornerstone of modern Web communication. "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="The main differences between HTTP1.0 HTTP1.1 HTTP2 and HTTP3"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="The main differences between HTTP1.0 HTTP1.1 HTTP2 and HTTP3ForewordHTTP(HyperText Transfer Protocol) is the cornerstone of modern Web communication. "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>The main differences between HTTP1.0 HTTP1.1 HTTP2 and HTTP3 - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>The main differences between HTTP1.0 HTTP1.1 HTTP2 and HTTP3</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2026-04-24
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/Network/">#Network</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/Network/">Network</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="The-main-differences-between-HTTP1-0-HTTP1-1-HTTP2-and-HTTP3"><a href="#The-main-differences-between-HTTP1-0-HTTP1-1-HTTP2-and-HTTP3" class="headerlink" title="The main differences between HTTP1.0 HTTP1.1 HTTP2 and HTTP3"></a>The main differences between HTTP1.0 HTTP1.1 HTTP2 and HTTP3</h1><h3 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h3><p>HTTP(HyperText Transfer Protocol) is the cornerstone of modern Web communication. Since its release in 1991, the HTTP protocol has undergone multiple versions of iteration. Each upgrade aims to solve the shortcomings of the previous version in terms of performance, security, and concurrency to meet the growing needs of the Internet.</p>
+<p>This article will compare HTTP&#x2F;1.0, HTTP&#x2F;1.1, HTTP&#x2F;2 and the latest HTTP&#x2F;3 in depth, and analyze the disassembly from the perspectives of connection reuse, data transmission mechanism, header compression, sequential blocking, and security to help you fully understand the key differences between each version.</p>
+<hr>
+<h3 id="Detailed-Explanation-of-Version-Evolution"><a href="#Detailed-Explanation-of-Version-Evolution" class="headerlink" title="Detailed Explanation of Version Evolution"></a>Detailed Explanation of Version Evolution</h3><h4 id="HTTP-1-0-The-earliest-standardized-version"><a href="#HTTP-1-0-The-earliest-standardized-version" class="headerlink" title="HTTP&#x2F;1.0: The earliest standardized version"></a>HTTP&#x2F;1.0: The earliest standardized version</h4><p>HTTP&#x2F;1.0 was officially standardized in 1996 and is the first public version of the HTTP protocol. It has the following characteristics:</p>
+<ul>
+<li>each request establishes a new TCP connection, resulting in wasted resources and delays.</li>
+<li>Connection multiplexing is not supported.</li>
+<li>The response has no cache control capability and lacks a flexible Cache mechanism.</li>
+<li>Only the most basic GET and POST methods are supported, and the scalability is poor.</li>
+</ul>
+<p>Example request:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GET /index.html HTTP/1.0</span><br><span class="line">Host: www.example.com</span><br></pre></td></tr></table></figure>
+
+<h4 id="HTTP-1-1-widely-used-upgrade"><a href="#HTTP-1-1-widely-used-upgrade" class="headerlink" title="HTTP&#x2F;1.1: widely used upgrade"></a>HTTP&#x2F;1.1: widely used upgrade</h4><p>HTTP&#x2F;1.1 was released in 1997 and addresses multiple performance and scaling issues with HTTP&#x2F;1.0.</p>
+<p>Key improvements:</p>
+<ul>
+<li>introduction<strong>Connection: keep-alive</strong> realize connection multiplexing, multiple requests can reuse the same TCP connection.</li>
+<li>Support <strong>Pipelining</strong> , multiple requests can be sent at the same time, but the responses must be returned sequentially.</li>
+<li>Added <strong>cache Control</strong> (Cache-Control, ETag, Last-Modified).</li>
+<li>Introduction <strong>Host</strong> the header supports virtual hosts.</li>
+<li>Added more Request methods such as PUT, DELETE, OPTIONS.</li>
+</ul>
+<p>Question:</p>
+<ul>
+<li>although keep-alive is supported, Head-of-line blocking still exists.</li>
+<li>The application of pipeline is less in practice, and the browser support is limited.</li>
+</ul>
+<h4 id="HTTP-2-Performance-Optimization"><a href="#HTTP-2-Performance-Optimization" class="headerlink" title="HTTP&#x2F;2: Performance Optimization"></a>HTTP&#x2F;2: Performance Optimization</h4><p>HTTP&#x2F;2 was officially released in 2015. It evolved from the SPDY protocol and completely changed the data transmission model.</p>
+<p>Core features:</p>
+<ul>
+<li>all communication takes place in one TCP connection, supporting <strong>true Multiplexing</strong> no head blocking occurs.</li>
+<li>Introduction **Frame (Frame)**And <strong>Stream (Stream)</strong> concept, request and response are split into non-interfering frames.</li>
+<li>Support <strong>head compression (HPACK)</strong> , which greatly reduces the transmission of duplicate head Information.</li>
+<li>Support <strong>Server Push</strong> , the server can actively push resources.</li>
+<li>The binary protocol replaces the text protocol of HTTP&#x2F;1.x to improve the parsing efficiency.</li>
+</ul>
+<p>Question:</p>
+<ul>
+<li>multiple requests share a TCP connection, and TCP-level queue head blocking still exists.</li>
+<li>You must rely on the underlying TCP transport layer, which cannot solve the overall blocking problem caused by connection packet loss.</li>
+</ul>
+<p>Example structure:</p>
+<p>HTTP&#x2F;2 is not a traditional text format, but organizes data in the form of frames and cannot be viewed directly through telnet or curl.</p>
+<h4 id="HTTP-3-QUIC-based-modern-protocols"><a href="#HTTP-3-QUIC-based-modern-protocols" class="headerlink" title="HTTP&#x2F;3: QUIC-based modern protocols"></a>HTTP&#x2F;3: QUIC-based modern protocols</h4><p>HTTP&#x2F;3 is a protocol version based on Google’s QUIC protocol. Its goal is to completely solve the problem of TCP team head blocking and improve mobile terminal performance.</p>
+<p>Main improvements:</p>
+<ul>
+<li>no longer using TCP, but based on <strong>UDP + QUIC</strong> protocol transmission.</li>
+<li><strong>Each request has a separate stream</strong> , Really achieve non-blocking multiplexing.</li>
+<li>Built-in <strong>TLS 1.3 Encryption</strong> simplify the handshake process, improve security and connection speed.</li>
+<li>Fast connection recovery, especially suitable for mobile network scenarios.</li>
+</ul>
+<p>Advantages:</p>
+<ul>
+<li>faster connection establishment: With 0-RTT, zero latency recovery is possible after the first connection.</li>
+<li>Packet loss only affects the current stream, which solves the transmission bottleneck of TCP under the shared connection.</li>
+<li>Better mobile network compatibility (e. G. Continuous connection when IP changes).</li>
+</ul>
+<p>Deficiencies:</p>
+<ul>
+<li>UDP-based implementations may be blocked or not supported in some intermediate devices (e. G. Firewalls, proxies).</li>
+<li>The implementation complexity is higher and the deployment cost is slightly higher.</li>
+</ul>
+<hr>
+<h3 id="Core-comparison-table"><a href="#Core-comparison-table" class="headerlink" title="Core comparison table"></a>Core comparison table</h3><table>
+<thead>
+<tr>
+<th>characteristics</th>
+<th>HTTP&#x2F;1.0</th>
+<th>HTTP&#x2F;1.1</th>
+<th>HTTP&#x2F;2</th>
+<th>HTTP&#x2F;3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>whether to multiplex connection</td>
+<td>no</td>
+<td>yes (keep-alive)</td>
+<td>yes (Multiplex)</td>
+<td>yes (based on QUIC multiplexing)</td>
+</tr>
+<tr>
+<td>team head blocking problem</td>
+<td>Yes</td>
+<td>yes</td>
+<td>yes (TCP layer)</td>
+<td>no</td>
+</tr>
+<tr>
+<td>request Response Method</td>
+<td>serial</td>
+<td>pipeline (Sequential Return)</td>
+<td>concurrent frame stream</td>
+<td>concurrent independent streams</td>
+</tr>
+<tr>
+<td>encrypted transport (default)</td>
+<td>no</td>
+<td>no</td>
+<td>yes (mostly through TLS)</td>
+<td>yes (based on TLS 1.3)</td>
+</tr>
+<tr>
+<td>protocol Structure</td>
+<td>text</td>
+<td>text</td>
+<td>binary Frame</td>
+<td>binary Frame</td>
+</tr>
+<tr>
+<td>head compression</td>
+<td>none</td>
+<td>none</td>
+<td>yes (HPACK)</td>
+<td>there is (QPACK)</td>
+</tr>
+<tr>
+<td>server Push</td>
+<td>not supported</td>
+<td>not supported</td>
+<td>support</td>
+<td>support</td>
+</tr>
+<tr>
+<td>underlying protocol</td>
+<td>TCP</td>
+<td>TCP</td>
+<td>TCP</td>
+<td>UDP + QUIC</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="interview-answer"><a href="#interview-answer" class="headerlink" title="interview answer"></a>interview answer</h3><p><strong>Question: Can you talk about the main changes and differences from HTTP&#x2F;1.0 to HTTP&#x2F;3?</strong></p>
+<p>Answer:</p>
+<p>the evolution of HTTP from 1.0 to 3 is mainly to solve performance bottlenecks, concurrency restrictions, and security issues:</p>
+<ul>
+<li><strong>HTTP&#x2F;1.0</strong> : A TCP connection is established for each request, which cannot be reused and is inefficient.</li>
+<li><strong>HTTP&#x2F;1.1</strong> : The keep-alive and cache mechanisms are introduced to support piping, but are still limited by queue head blocking.</li>
+<li><strong>HTTP&#x2F;2</strong> : uses binary frame transmission, real multiplexing, header compression and server push to greatly optimize performance, but because it is still based on TCP, packet loss is still limited.</li>
+<li><strong>HTTP&#x2F;3</strong> : completely abandon TCP, use QUIC (based on UDP), and stream each request independently, truly realizing low latency, anti-packet loss, and high concurrent data transmission, especially suitable for modern Web scenarios.</li>
+</ul>
+<hr>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>the evolution of the HTTP protocol is a constant response to the needs of real-world Internet applications. From the initial serial text communication, to the high-performance transmission of multiplexing, to the QUIC-based low-latency encryption channel, HTTP is constantly breaking through its own bottleneck.</p>
+<p>Understanding the features of each version not only helps us write higher performance and more secure applications, but also shows stronger professional ability in network tuning, architecture design and interview answering. In the face of the rapid development of modern browsers and service environment, the gradual landing of HTTP&#x2F;3 will also become the front-end and full stack developers need to focus on the direction.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

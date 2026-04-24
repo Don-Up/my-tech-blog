@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What is the difference between http1.1 keep-alive and http2 multiplexingForewordThe HTTP protocol is the basis of data transmission on the World Wide "/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What is the difference between http1.1 keep-alive and http2 multiplexing"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What is the difference between http1.1 keep-alive and http2 multiplexingForewordThe HTTP protocol is the basis of data transmission on the World Wide "/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What is the difference between http1.1 keep-alive and http2 multiplexing - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What is the difference between http1.1 keep-alive and http2 multiplexing</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2026-04-24
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/Network/">#Network</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/Network/">Network</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-is-the-difference-between-http1-1-keep-alive-and-http2-multiplexing"><a href="#What-is-the-difference-between-http1-1-keep-alive-and-http2-multiplexing" class="headerlink" title="What is the difference between http1.1 keep-alive and http2 multiplexing"></a>What is the difference between http1.1 keep-alive and http2 multiplexing</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>The HTTP protocol is the basis of data transmission on the World Wide Web, and with the improvement of the complexity and performance requirements of Internet applications, the HTTP protocol is also evolving. The Keep-Alive technology introduced by HTTP&#x2F;1.1 greatly improves the connection reuse problem and reduces the overhead of frequently establishing TCP connections. In HTTP&#x2F;2, Multiplexing is a core feature that further revolutionizes data transmission, enabling more efficient network utilization and lower latency.</p>
+<p>This article will deeply analyze the working mechanism of Keep-Alive of HTTP&#x2F;1.1 and multiplexing of HTTP&#x2F;2, compare the differences between the two in detail, and help understand the evolution process of HTTP protocol performance optimization.</p>
+<hr>
+<h2 id="The-working-mechanism-of-HTTP-1-1-Keep-Alive"><a href="#The-working-mechanism-of-HTTP-1-1-Keep-Alive" class="headerlink" title="The working mechanism of HTTP&#x2F;1.1 Keep-Alive"></a>The working mechanism of HTTP&#x2F;1.1 Keep-Alive</h2><p>HTTP&#x2F;1.0 is a short connection by default, that is, the TCP connection is closed immediately after a request response. The HTTP&#x2F;1.1 standard introduces the default persistent connection mechanism – Keep-Alive, which allows the same TCP connection to be reused to send multiple requests and responses, avoiding repeated connection establishment and closure overheads.</p>
+<h3 id="Key-Points"><a href="#Key-Points" class="headerlink" title="Key Points"></a>Key Points</h3><ul>
+<li>in the request or response header <code>Connection: keep-alive </code>(HTTP&#x2F;1.1 default persistent connection, some servers still explicitly use this header).</li>
+<li>The client and server send multiple requests and receive responses sequentially over the same TCP connection.</li>
+<li><strong>But the request is serial</strong> , You must wait for the previous response to finish before sending the next request.</li>
+<li>The server or client can set a timeout or maximum number of requests, and close the connection after a timeout or limit is reached.</li>
+</ul>
+<h3 id="Advantage"><a href="#Advantage" class="headerlink" title="Advantage"></a>Advantage</h3><ul>
+<li>reduce the overhead of TCP handshaking and hand waving.</li>
+<li>Reduce latency and improve network efficiency.</li>
+</ul>
+<h3 id="Limitations"><a href="#Limitations" class="headerlink" title="Limitations"></a>Limitations</h3><ul>
+<li>due to serial requests, there is a Head-of-Line Blocking problem: when a request response is blocked, subsequent requests must wait.</li>
+</ul>
+<hr>
+<h2 id="The-working-mechanism-of-HTTP-2-Multiplexing"><a href="#The-working-mechanism-of-HTTP-2-Multiplexing" class="headerlink" title="The working mechanism of HTTP&#x2F;2 Multiplexing"></a>The working mechanism of HTTP&#x2F;2 Multiplexing</h2><p>HTTP&#x2F;2 uses a single TCP connection at the transport layer, but allows multiple requests and responses to be multiplexed at the same time, known as multiplexing.</p>
+<h3 id="Key-Points-1"><a href="#Key-Points-1" class="headerlink" title="Key Points"></a>Key Points</h3><ul>
+<li>over a TCP connection, transmissions are interleaved by splitting requests and responses into smaller frames.</li>
+<li>Using streams to identify frames of different requests supports data exchange in parallel without blocking.</li>
+<li>Request and response frames can be interleaved and sent simultaneously, greatly improving network utilization.</li>
+<li>Resolved the problem of HTTP&#x2F;1.x queue head blocking.</li>
+</ul>
+<h3 id="Advantage-1"><a href="#Advantage-1" class="headerlink" title="Advantage"></a>Advantage</h3><ul>
+<li>dramatically reduce the number of connections and improve the resource utilization of servers and clients.</li>
+<li>Reduce latency and improve loading speed.</li>
+<li>Optimize the order of request processing through priority and dependency mechanisms.</li>
+</ul>
+<hr>
+<h2 id="HTTP-1-1-Keep-Alive-vs-HTTP-2-Multiplexing"><a href="#HTTP-1-1-Keep-Alive-vs-HTTP-2-Multiplexing" class="headerlink" title="HTTP&#x2F;1.1 Keep-Alive vs. HTTP&#x2F;2 Multiplexing"></a>HTTP&#x2F;1.1 Keep-Alive vs. HTTP&#x2F;2 Multiplexing</h2><table>
+<thead>
+<tr>
+<th>characteristics</th>
+<th>HTTP&#x2F;1.1 Keep-Alive</th>
+<th>HTTP&#x2F;2 Multiplexing</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>number of connections</td>
+<td>multiple TCP connections (typically browsers limit 6 concurrent connections)</td>
+<td>single TCP connection</td>
+</tr>
+<tr>
+<td>request sending method</td>
+<td>serial (the request corresponds to the response one by one, and the next one must be sent after the response is completed)</td>
+<td>parallel (multiple request frames sent interleaved, non-blocking)</td>
+</tr>
+<tr>
+<td>team head blocking problem</td>
+<td>existence, severely affecting performance</td>
+<td>solve, improve the overall transmission efficiency</td>
+</tr>
+<tr>
+<td>connection establishment and maintenance costs</td>
+<td>frequent connection establishment and closure, high resource overhead</td>
+<td>establish only one connection, reducing resource consumption</td>
+</tr>
+<tr>
+<td>transport Layer Protocol</td>
+<td>plain text, based on TCP</td>
+<td>binary frame, based on TCP</td>
+</tr>
+<tr>
+<td>supported Functions</td>
+<td>persistent connection</td>
+<td>multiplexing, header compression (HPACK), server push, etc.</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="Impact-in-practical-applications"><a href="#Impact-in-practical-applications" class="headerlink" title="Impact in practical applications"></a>Impact in practical applications</h2><p>after HTTP&#x2F;1.1 uses Keep-Alive, the performance is significantly improved, but it is still limited by the number of TCP connections and queue head blocking. To bypass the restriction, browsers typically open multiple TCP connections to request resources in parallel.</p>
+<p>HTTP&#x2F;2 Multiplexing allows multiple concurrent requests and responses on a TCP connection, greatly reducing the number of connections and network latency, and has significant advantages for complex page loads.</p>
+<hr>
+<h2 id="Sample-code-HTTP-1-1-Keep-Alive-request-header"><a href="#Sample-code-HTTP-1-1-Keep-Alive-request-header" class="headerlink" title="Sample code: HTTP&#x2F;1.1 Keep-Alive request header"></a>Sample code: HTTP&#x2F;1.1 Keep-Alive request header</h2><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">GET</span> <span class="string">/index.html</span> <span class="meta">HTTP/1.1</span></span><br><span class="line"><span class="attribute">Host</span><span class="punctuation">: </span>example.com</span><br><span class="line"><span class="attribute">Connection</span><span class="punctuation">: </span>keep-alive</span><br></pre></td></tr></table></figure>
+
+<p>response Header:</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">HTTP/1.1</span> <span class="number">200</span> OK</span><br><span class="line"><span class="attribute">Content-Type</span><span class="punctuation">: </span>text/html</span><br><span class="line"><span class="attribute">Connection</span><span class="punctuation">: </span>keep-alive</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="interview-answer"><a href="#interview-answer" class="headerlink" title="interview answer"></a>interview answer</h2><p><strong>the interviewer asked</strong> : What is the difference between HTTP&#x2F;1.1 Keep-Alive and HTTP&#x2F;2 multiplexing?</p>
+<p>Answer:</p>
+<p>the Keep-Alive of HTTP&#x2F;1.1 allows the same TCP connection to multiplex multiple requests and responses, reducing the overhead of connection establishment and closure. However, requests are processed serially, resulting in queue header blocking. Browsers typically open multiple TCP connections to load resources in parallel.</p>
+<p>While HTTP&#x2F;2 allows multiple request and response frames to be interleaved and transmitted in parallel on a single TCP connection through a multiplexing mechanism, which solves the problem of queue head blocking, reduces the number of connections, and improves the network utilization efficiency and response speed. At the same time, HTTP&#x2F;2 uses binary frame and header compression, and the overall performance is better.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>HTTP&#x2F;1.1 Keep-Alive is the implementation of persistent connection, which reduces the performance overhead caused by frequent connection establishment, but it still faces the limit of queue head blocking Because requests must be processed serially.</p>
+<p>The multiplexing of HTTP&#x2F;2 splits the request and response into independent frames to realize parallel transmission within the same connection, greatly improving the transmission efficiency and solving the bottleneck of HTTP&#x2F;1.x.</p>
+<p>Understanding the differences between the two will help us better understand the performance optimization brought about by the evolution of the HTTP protocol, and guide the front-end and back-end development to select appropriate technical solutions to improve the user experience.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

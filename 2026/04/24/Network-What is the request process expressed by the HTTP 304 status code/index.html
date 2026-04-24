@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="What is the request process expressed by the HTTP 304 status codeForewordIn the HTTP protocol, the 304 status code (Not Modified) is an important part"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Don Ye"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="What is the request process expressed by the HTTP 304 status code"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="What is the request process expressed by the HTTP 304 status codeForewordIn the HTTP protocol, the 304 status code (Not Modified) is an important part"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Tech Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://don-up.github.io/my-tech-blogimg/home-bg1.png"/>
+    
+
+    <!-- Title -->
+    
+    <title>What is the request process expressed by the HTTP 304 status code - Tech Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/my-tech-blog/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/my-tech-blog/">Tech Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/my-tech-blog/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/my-tech-blog/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/Don-Up">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/my-tech-blog/img/home-bg1.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>What is the request process expressed by the HTTP 304 status code</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2026-04-24
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/my-tech-blog/tags/Network/">#Network</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/my-tech-blog/categories/Network/">Network</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="What-is-the-request-process-expressed-by-the-HTTP-304-status-code"><a href="#What-is-the-request-process-expressed-by-the-HTTP-304-status-code" class="headerlink" title="What is the request process expressed by the HTTP 304 status code"></a>What is the request process expressed by the HTTP 304 status code</h1><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>In the HTTP protocol, the 304 status code (Not Modified) is an important part of the caching mechanism. It embodies the negotiation cache process between the client and the server, effectively reduces duplicate data transmission, and improves network performance and user experience. Understanding the request process expressed by the 304 status code will help us gain insight into how browser caching works and how to optimize front-end performance.</p>
+<p>This article analyzes the expression of HTTP 304 status codes in the request process in detail, introduces the request and response headers involved, explains the actual request process with examples, and analyzes its advantages and precautions.</p>
+<hr>
+<h2 id="The-role-of-HTTP-304-status-codes"><a href="#The-role-of-HTTP-304-status-codes" class="headerlink" title="The role of HTTP 304 status codes"></a>The role of HTTP 304 status codes</h2><p>the main purpose of the 304 status code is to tell the client that the requested resource has not been modified since the last access and that the locally cached data can continue to be used. When the server returns the 304, it does not contain the response body, but only returns the necessary response headers, thus avoiding repeated downloading of complete resources.</p>
+<hr>
+<h2 id="Detailed-explanation-of-request-process-involved-in-304-status-code"><a href="#Detailed-explanation-of-request-process-involved-in-304-status-code" class="headerlink" title="Detailed explanation of request process involved in 304 status code"></a>Detailed explanation of request process involved in 304 status code</h2><h3 id="1-Request-resources-for-the-first-time"><a href="#1-Request-resources-for-the-first-time" class="headerlink" title="1. Request resources for the first time"></a>1. Request resources for the first time</h3><p>when a client (such as a browser) accesses a resource for the first time, it directly initiates a normal GET request to the server:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GET /style.css HTTP/1.1</span><br><span class="line">Host: example.com</span><br></pre></td></tr></table></figure>
+
+<p>the server returns resource and response headers that contain cache-related information, such:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">HTTP/1.1 200 OK</span><br><span class="line">Cache-Control: max-age=3600</span><br><span class="line">Last-Modified: Tue, 01 Aug 2023 10:00:00 GMT</span><br><span class="line">ETag: &quot;abc123&quot;</span><br><span class="line">Content-Type: text/css</span><br><span class="line">Content-Length: 1024</span><br><span class="line"></span><br><span class="line">[资源内容]</span><br></pre></td></tr></table></figure>
+
+<p>the client caches this resource and related header information ( <code>Last-Modified </code>, <code>ETag </code>etc.).</p>
+<h3 id="2-Conditional-requests-for-subsequent-requests"><a href="#2-Conditional-requests-for-subsequent-requests" class="headerlink" title="2. Conditional requests for subsequent requests"></a>2. Conditional requests for subsequent requests</h3><p>When the client requests the same resource again, it will bring a conditional request header and ask the server whether the resource is updated.</p>
+<p>Two typical conditional request headers:</p>
+<ul>
+<li><code>If-Modified-Since </code>: Carry Last Return <code>Last-Modified </code>time</li>
+<li><code>If-None-Match </code>: Carry Last Return <code>ETag </code>identification</li>
+</ul>
+<p>example request:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">GET /style.css HTTP/1.1</span><br><span class="line">Host: example.com</span><br><span class="line">If-Modified-Since: Tue, 01 Aug 2023 10:00:00 GMT</span><br><span class="line">If-None-Match: &quot;abc123&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-The-server-judges-the-resource-status"><a href="#3-The-server-judges-the-resource-status" class="headerlink" title="3. The server judges the resource status"></a>3. The server judges the resource status</h3><p>after receiving the request, the server determines whether the current resource changes according to the request header.</p>
+<ul>
+<li>If the resource has not changed (the time has not been updated, or the ETag is consistent), return <strong>304 Not Modified</strong> response.</li>
+<li>If the resource has changed, return to the normal 200 status code and the latest resource content.</li>
+</ul>
+<h3 id="4-The-server-returns-a-304-response"><a href="#4-The-server-returns-a-304-response" class="headerlink" title="4. The server returns a 304 response"></a>4. The server returns a 304 response</h3><p>sample response:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">HTTP/1.1 304 Not Modified</span><br><span class="line">Cache-Control: max-age=3600</span><br><span class="line">Last-Modified: Tue, 01 Aug 2023 10:00:00 GMT</span><br><span class="line">ETag: &quot;abc123&quot;</span><br></pre></td></tr></table></figure>
+
+<p>note: The message body is not included in the response.</p>
+<h3 id="5-The-client-uses-a-local-cache"><a href="#5-The-client-uses-a-local-cache" class="headerlink" title="5. The client uses a local cache."></a>5. The client uses a local cache.</h3><p>After receiving the 304, the browser determines that the locally cached resources are still valid, and directly uses the cached data to complete rendering without downloading the resources again, thus improving performance.</p>
+<hr>
+<h2 id="Detailed-text-flow-of-the-304-request-process"><a href="#Detailed-text-flow-of-the-304-request-process" class="headerlink" title="Detailed text flow of the 304 request process"></a>Detailed text flow of the 304 request process</h2><ol>
+<li><strong>Request a resource for the first time</strong></li>
+</ol>
+<ul>
+<li>the first time the browser requests a resource (such as an image, CSS, JS file), it sends a normal GET request to the server.</li>
+<li>The server returns the full contents of the resource with cache-related response headers, such <code>Last-Modified </code>(When the resource was last modified) and&#x2F;or <code>ETag </code>(Resource unique identifier).</li>
+<li>The browser saves the resource content and this cache information to a local cache.</li>
+</ul>
+<ol>
+<li><strong>Subsequent Initiate Conditional Requests</strong></li>
+</ol>
+<ul>
+<li><p>when the browser needs to request the same resource next time, it will initiate a conditional request based on the cache information.</p>
+</li>
+<li><p>The browser carries in the request header:</p>
+</li>
+<li><p><code>If-Modified-Since </code>, the value is returned by the server before <code>Last-Modified </code>time;</p>
+</li>
+<li><p>or <code>If-None-Match </code>, the value is returned by the server before <code>ETag </code>.</p>
+</li>
+<li><p>This means that the browser asks the server to verify that the resource has been modified since it was last acquired.</p>
+</li>
+</ul>
+<ol>
+<li><strong>Server Verify Resource Status</strong></li>
+</ol>
+<ul>
+<li><p>after the server receives the conditional request, check the status of the current resource:</p>
+</li>
+<li><p>if resources from<code>Last-Modified </code>time or corresponding <code>ETag </code>if there has been no change since then, it is judged that the resource has not been modified.</p>
+</li>
+<li><p>If a resource has been modified, it is considered a new resource.</p>
+</li>
+</ul>
+<ol>
+<li><strong>Server returns response</strong></li>
+</ol>
+<ul>
+<li><p><strong>when resources are not modified</strong> :</p>
+</li>
+<li><p>the server returns the status code 304 Not Modified.</p>
+</li>
+<li><p>The response does not contain resource content and only returns the necessary header information (e. G. <code>Cache-Control </code>, <code>Expires </code>, <code>Last-Modified </code>, <code>ETag </code>etc.).</p>
+</li>
+<li><p><strong>When a resource is modified</strong> :</p>
+</li>
+<li><p>the server returns a complete 200 OK response with the latest resource content and the latest cache header.</p>
+</li>
+</ul>
+<ol>
+<li><strong>Browser processing response</strong></li>
+</ol>
+<ul>
+<li>after receiving the 304 response, the browser determines that the cached resources are still valid, and reads the resources directly from the local cache to complete page rendering without downloading the resources again.</li>
+<li>After receiving the 200 response, the browser replaces the cache with the new resource content and updates the cache-related header information.</li>
+</ul>
+<ol>
+<li><strong>Cache strategy collaboration</strong></li>
+</ol>
+<ul>
+<li>304 mechanisms versus strong caching mechanisms (e. G. <code>Cache-Control: max-age </code>) Work together.</li>
+<li>The preceding conditional request and 304 response processes are triggered only after the strong cache fails.</li>
+</ul>
+<hr>
+<h2 id="Advantages-and-considerations"><a href="#Advantages-and-considerations" class="headerlink" title="Advantages and considerations"></a>Advantages and considerations</h2><h3 id="advantage"><a href="#advantage" class="headerlink" title="advantage"></a>advantage</h3><ul>
+<li>reduce duplicate downloads and save bandwidth</li>
+<li>speed up page loading and improve user experience</li>
+<li>reduce server load</li>
+</ul>
+<h3 id="precautions"><a href="#precautions" class="headerlink" title="precautions"></a>precautions</h3><ul>
+<li>304 only the “unmodified” state, the browser still needs a complete request and response process</li>
+<li>whether the resource hits the cache depends on the exact <code>Last-Modified </code>and <code>ETag </code>generate</li>
+<li>incorrectly configured cache policies can result in cache invalidation or inconsistent data</li>
+<li>for dynamic content or frequently changing resources, the cache time should be reasonably controlled to avoid misuse of expired data.</li>
+</ul>
+<hr>
+<h2 id="Interview-answer"><a href="#Interview-answer" class="headerlink" title="Interview answer"></a>Interview answer</h2><p>interviewer: What is the request process expressed by the HTTP 304 status code?</p>
+<p>Answer:</p>
+<p>the HTTP 304 status code indicates that the server notifies the client that the requested resource has not changed since the last access, and the client can continue to use the locally cached version. On the first request, the client normally obtains the resource and cache header (e. G.<code>Last-Modified </code>and <code>ETag </code>). For subsequent requests, the client carries the conditional request header. <code>If-Modified-Since </code>or <code>If-None-Match </code>to ask the server if the resource is updated. The server determines whether the resource has changed, and if not, returns a 304 response without a response body. After receiving the 304, the client directly uses the cached resources to avoid re-downloading.</p>
+<p>This process, called negotiation caching, is an important part of the HTTP caching mechanism, reducing bandwidth usage and improving page loading performance.</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>the HTTP 304 status code reflects a cache verification process of conditional requests, which effectively reduces the repeated transmission of network resources through the negotiation Cache mechanism. It relies on the condition header in the request and the cache header in the response to work together to achieve intelligent communication between the client and the server.</p>
+<p>Understanding the 304 request process is of great significance for optimizing the performance of Web applications and setting a reasonable cache strategy. In the actual project, should be combined <code>Cache-Control </code>, <code>Expires </code>, <code>ETag </code>and <code>Last-Modified </code>and other cache control headers to create a flexible and efficient cache system.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/Don-Up" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:yexudong188@gmail.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2026 Don Ye<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
